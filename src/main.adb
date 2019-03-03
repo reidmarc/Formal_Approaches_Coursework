@@ -11,25 +11,25 @@ is
    -- Outer AirLock Door
    procedure closeOuterAirLockDoor is
    begin
-      outerAirLockDoorClosed := True;
+      outerAirLockDoorClosed := TRUE;
    end closeOuterAirLockDoor;
 
    procedure openOuterAirLockDoor is
    begin
-      outerAirLockDoorClosed := False;
+      outerAirLockDoorClosed := FALSE;
    end openOuterAirLockDoor;
 
 
    -- Inner Air Lock Door
    procedure closeInnerAirLockDoor is
    begin
-      innerAirLockDoorClosed := True;
+      innerAirLockDoorClosed := TRUE;
    end closeInnerAirLockDoor;
 
 
    procedure openInnerAirLockDoor is
    begin
-      innerAirLockDoorClosed := False;
+      innerAirLockDoorClosed := FALSE;
    end openInnerAirLockDoor;
 
 
@@ -41,50 +41,60 @@ is
    -- Lock Inner Air Lock Door
    procedure lockInnerAirLockDoor is
    begin
-      innerAirLockDoorLocked := True;
+      innerAirLockDoorLocked := TRUE;
    end lockInnerAirLockDoor;
 
 
    -- Lock Outer Air Lock Door
    procedure lockOuterAirLockDoor is
    begin
-      outerAirLockDoorLocked := True;
+      outerAirLockDoorLocked := TRUE;
    end lockOuterAirLockDoor;
 
 
    -- Unlock Inner Air Lock Door
    procedure unlockInnerAirLockDoor is
    begin
-      innerAirLockDoorLocked := False;
+      innerAirLockDoorLocked := FALSE;
    end unlockInnerAirLockDoor;
 
 
    -- Unlock Outer Air Lock Door
    procedure unlockOuterAirLockDoor is
    begin
-      outerAirLockDoorLocked := False;
+      outerAirLockDoorLocked := FALSE;
    end unlockOuterAirLockDoor;
 
 
    -- Allows Operations
    procedure canPerformOperations is
    begin
-      bothAirLockDoorsLocked := True;
+      canPerformOperation := TRUE;
    end canPerformOperations;
 
-
+   -----------------------------------------------------
+   -- If the oxygen runs low, a warning must be shown --
+   -----------------------------------------------------
 
    ----------------------------------------------------------
    -- If the oxygen runs out, the submarine has to surface --
    ----------------------------------------------------------
 
+   -- Surfaces the submarine when the oxygen tank is empty
+   procedure noOxygenLeftAction is
+   begin
+      emergencyOperation := TRUE;
+   end noOxygenLeftAction;
+
    ------------------------------------------------------------
    -- If the reactor overheats, the submarine has to surface --
    ------------------------------------------------------------
 
-   -----------------------------------------------------
-   -- If the oxygen runs low, a warning must be shown --
-   -----------------------------------------------------
+    -- Surfaces the submarine when the reactor is overheating
+   procedure reactorOverheatingAction is
+   begin
+      emergencyOperation := TRUE;
+   end reactorOverheatingAction;
 
    -------------------------------------------------------
    -- The submarine cannot dive beneath a certain depth --

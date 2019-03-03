@@ -1637,91 +1637,277 @@ module Standard__universal_integer__rep
  meta "inline : no" function to_rep
 
 end
-(* Module for defining a ref holding the value of variable "innerairlockdoorclosed" defined at main.ads:6, created in Gnat2Why.Decls.Translate_Variable *)
+
+(* Module for axiomatizing type "statusB" defined at main.ads:16, created in Gnat2Why.Types.Translate_Type *)
+module Main__statusB
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type statusB 
+ 
+ function first 
+   : int =
+  0
+ 
+ function last 
+   : int =
+  1
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = statusB, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type statusB__ref =
+  { mutable statusB__content "model_trace:" "name:" : statusB }
+ 
+ function statusB__ref___projection 
+   (a : statusB__ref) : statusB =
+  a.statusB__content
+ 
+ meta "model_projection" function statusB__ref___projection
+ 
+ meta "inline : no" function statusB__ref___projection
+ 
+ val statusB__havoc 
+   (x : statusB__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "statusB" defined at main.ads:16, created in Gnat2Why.Types.Translate_Type *)
+module Main__statusB__rep
+ use        Main__statusB
+ use import "_gnatprove_standard".Main
+
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Main__statusB.statusB, 
+ predicate in_range = Main__statusB.in_range
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "status" defined at main.ads:16, created in Gnat2Why.Types.Translate_Type *)
+module Main__status
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type status 
+ 
+ function first 
+   : int =
+  0
+ 
+ function last 
+   : int =
+  1
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = status, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type status__ref =
+  { mutable status__content "model_trace:" "name:" : status }
+ 
+ function status__ref___projection 
+   (a : status__ref) : status =
+  a.status__content
+ 
+ meta "model_projection" function status__ref___projection
+ 
+ meta "inline : no" function status__ref___projection
+ 
+ val status__havoc 
+   (x : status__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "status" defined at main.ads:16, created in Gnat2Why.Types.Translate_Type *)
+module Main__status__rep
+ use        Main__status
+ use import "_gnatprove_standard".Main
+
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Main__status.status, 
+ predicate in_range = Main__status.in_range
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+(* Module for defining a ref holding the value of variable "innerairlockdoorclosed" defined at main.ads:18, created in Gnat2Why.Decls.Translate_Variable *)
 module Main__innerairlockdoorclosed
  use import "_gnatprove_standard".Main
 
- val innerairlockdoorclosed #"main.ads" 6 0 0#"model_projected" "model_trace:2454" "name:innerAirLockDoorClosed"  : bool__ref 
+ val innerairlockdoorclosed #"main.ads" 18 0 0#"model_projected" "model_trace:2491" "name:innerAirLockDoorClosed"  : int__ref 
  
  function attr__ATTRIBUTE_ADDRESS 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "innerairlockdoorclosed" defined at main.ads:6, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "innerairlockdoorclosed" defined at main.ads:18, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Main__innerairlockdoorclosed___axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining a ref holding the value of variable "outerairlockdoorclosed" defined at main.ads:7, created in Gnat2Why.Decls.Translate_Variable *)
+(* Module for defining a ref holding the value of variable "outerairlockdoorclosed" defined at main.ads:19, created in Gnat2Why.Decls.Translate_Variable *)
 module Main__outerairlockdoorclosed
  use import "_gnatprove_standard".Main
 
- val outerairlockdoorclosed #"main.ads" 7 0 0#"model_projected" "model_trace:2464" "name:outerAirLockDoorClosed"  : bool__ref 
+ val outerairlockdoorclosed #"main.ads" 19 0 0#"model_projected" "model_trace:2501" "name:outerAirLockDoorClosed"  : int__ref 
  
  function attr__ATTRIBUTE_ADDRESS 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "outerairlockdoorclosed" defined at main.ads:7, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "outerairlockdoorclosed" defined at main.ads:19, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Main__outerairlockdoorclosed___axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining a ref holding the value of variable "innerairlockdoorlocked" defined at main.ads:9, created in Gnat2Why.Decls.Translate_Variable *)
+(* Module for defining a ref holding the value of variable "innerairlockdoorlocked" defined at main.ads:21, created in Gnat2Why.Decls.Translate_Variable *)
 module Main__innerairlockdoorlocked
  use import "_gnatprove_standard".Main
 
- val innerairlockdoorlocked #"main.ads" 9 0 0#"model_projected" "model_trace:2474" "name:innerAirLockDoorLocked"  : bool__ref 
+ val innerairlockdoorlocked #"main.ads" 21 0 0#"model_projected" "model_trace:2511" "name:innerAirLockDoorLocked"  : int__ref 
  
  function attr__ATTRIBUTE_ADDRESS 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "innerairlockdoorlocked" defined at main.ads:9, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "innerairlockdoorlocked" defined at main.ads:21, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Main__innerairlockdoorlocked___axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining a ref holding the value of variable "outerairlockdoorlocked" defined at main.ads:10, created in Gnat2Why.Decls.Translate_Variable *)
+(* Module for defining a ref holding the value of variable "outerairlockdoorlocked" defined at main.ads:22, created in Gnat2Why.Decls.Translate_Variable *)
 module Main__outerairlockdoorlocked
  use import "_gnatprove_standard".Main
 
- val outerairlockdoorlocked #"main.ads" 10 0 0#"model_projected" "model_trace:2484" "name:outerAirLockDoorLocked"  : bool__ref 
+ val outerairlockdoorlocked #"main.ads" 22 0 0#"model_projected" "model_trace:2521" "name:outerAirLockDoorLocked"  : int__ref 
  
  function attr__ATTRIBUTE_ADDRESS 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "outerairlockdoorlocked" defined at main.ads:10, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "outerairlockdoorlocked" defined at main.ads:22, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Main__outerairlockdoorlocked___axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining a ref holding the value of variable "bothairlockdoorslocked" defined at main.ads:13, created in Gnat2Why.Decls.Translate_Variable *)
-module Main__bothairlockdoorslocked
+(* Module for defining a ref holding the value of variable "canperformoperation" defined at main.ads:24, created in Gnat2Why.Decls.Translate_Variable *)
+module Main__canperformoperation
  use import "_gnatprove_standard".Main
 
- val bothairlockdoorslocked #"main.ads" 13 0 0#"model_projected" "model_trace:2494" "name:bothAirLockDoorsLocked"  : bool__ref 
+ val canperformoperation #"main.ads" 24 0 0#"model_projected" "model_trace:2531" "name:canPerformOperation"  : int__ref 
  
  function attr__ATTRIBUTE_ADDRESS 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "bothairlockdoorslocked" defined at main.ads:13, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
-module Main__bothairlockdoorslocked___axiom
+(* Module giving an empty axiom for the entity "canperformoperation" defined at main.ads:24, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Main__canperformoperation___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining a ref holding the value of variable "oxygenlowwarning" defined at main.ads:26, created in Gnat2Why.Decls.Translate_Variable *)
+module Main__oxygenlowwarning
+ use import "_gnatprove_standard".Main
+
+ val oxygenlowwarning #"main.ads" 26 0 0#"model_projected" "model_trace:2541" "name:oxygenLowWarning"  : int__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "oxygenlowwarning" defined at main.ads:26, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Main__oxygenlowwarning___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining a ref holding the value of variable "oxygenemptywarning" defined at main.ads:27, created in Gnat2Why.Decls.Translate_Variable *)
+module Main__oxygenemptywarning
+ use import "_gnatprove_standard".Main
+
+ val oxygenemptywarning #"main.ads" 27 0 0#"model_projected" "model_trace:2551" "name:oxygenEmptyWarning"  : int__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "oxygenemptywarning" defined at main.ads:27, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Main__oxygenemptywarning___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining a ref holding the value of variable "reactoroverheating" defined at main.ads:29, created in Gnat2Why.Decls.Translate_Variable *)
+module Main__reactoroverheating
+ use import "_gnatprove_standard".Main
+
+ val reactoroverheating #"main.ads" 29 0 0#"model_projected" "model_trace:2561" "name:reactorOverheating"  : int__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "reactoroverheating" defined at main.ads:29, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Main__reactoroverheating___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining a ref holding the value of variable "emergencyoperation" defined at main.ads:32, created in Gnat2Why.Decls.Translate_Variable *)
+module Main__emergencyoperation
+ use import "_gnatprove_standard".Main
+
+ val emergencyoperation #"main.ads" 32 0 0#"model_projected" "model_trace:2571" "name:emergencyOperation"  : int__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "emergencyoperation" defined at main.ads:32, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Main__emergencyoperation___axiom
  use import "_gnatprove_standard".Main
 
 
@@ -2089,216 +2275,332 @@ module Standard__universal_integer___axiom
 
 end
 
-(* Module for possibly declaring a logic function for "closeouterairlockdoor" defined at main.ads:20, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "closeouterairlockdoor" defined at main.ads:40, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Main__closeouterairlockdoor
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "openouterairlockdoor" defined at main.ads:25, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "openouterairlockdoor" defined at main.ads:45, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Main__openouterairlockdoor
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "closeinnerairlockdoor" defined at main.ads:32, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "closeinnerairlockdoor" defined at main.ads:52, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Main__closeinnerairlockdoor
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "openinnerairlockdoor" defined at main.ads:37, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "openinnerairlockdoor" defined at main.ads:57, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Main__openinnerairlockdoor
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "lockinnerairlockdoor" defined at main.ads:49, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "lockinnerairlockdoor" defined at main.ads:69, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Main__lockinnerairlockdoor
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "lockouterairlockdoor" defined at main.ads:56, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "lockouterairlockdoor" defined at main.ads:76, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Main__lockouterairlockdoor
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "unlockinnerairlockdoor" defined at main.ads:63, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "unlockinnerairlockdoor" defined at main.ads:83, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Main__unlockinnerairlockdoor
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "unlockouterairlockdoor" defined at main.ads:70, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "unlockouterairlockdoor" defined at main.ads:90, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Main__unlockouterairlockdoor
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "canperformoperations" defined at main.ads:77, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "canperformoperations" defined at main.ads:97, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Main__canperformoperations
  use import "_gnatprove_standard".Main
 
 
 end
-(* Module for declaring a program function (and possibly an axiom) for "closeouterairlockdoor" defined at main.ads:20, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+
+(* Module for possibly declaring a logic function for "nooxygenleftaction" defined at main.ads:112, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Main__nooxygenleftaction
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for possibly declaring a logic function for "reactoroverheatingaction" defined at main.ads:122, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Main__reactoroverheatingaction
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module giving axioms for type "statusB" defined at main.ads:16, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Main__statusB___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Main__statusB
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_158 : int) (temp___is_init_154 : bool) (temp___skip_constant_155 : bool) (temp___do_toplevel_156 : bool) (temp___do_typ_inv_157 : bool)  =
+  (if (( temp___is_init_154 \/ (Main__statusB.first <= Main__statusB.last) )) then (
+   (Main__statusB.dynamic_property Main__statusB.first Main__statusB.last temp___expr_158)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_159 : int) (temp___skip_top_level_160 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "status" defined at main.ads:16, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Main__status___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Main__status
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_165 : int) (temp___is_init_161 : bool) (temp___skip_constant_162 : bool) (temp___do_toplevel_163 : bool) (temp___do_typ_inv_164 : bool)  =
+  (if (( temp___is_init_161 \/ (Main__status.first <= Main__status.last) )) then (
+   (Main__status.dynamic_property Main__status.first Main__status.last temp___expr_165)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_166 : int) (temp___skip_top_level_167 : bool)  =
+  true
+
+end
+(* Module for declaring a program function (and possibly an axiom) for "closeouterairlockdoor" defined at main.ads:40, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Main__closeouterairlockdoor___axiom
  use        Main__innerairlockdoorclosed
  use        Main__outerairlockdoorclosed
  use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Main__status___axiom
  use        Main__innerairlockdoorclosed
  use        Main__outerairlockdoorclosed
 
  val closeouterairlockdoor 
    (__void_param : unit) : unit
-  requires {  ( ( (Main__outerairlockdoorclosed.outerairlockdoorclosed.bool__content = True) <-> false ) /\ ( (Main__innerairlockdoorclosed.innerairlockdoorclosed.bool__content = True) <-> true ) ) }
-  ensures {  ( (Main__outerairlockdoorclosed.outerairlockdoorclosed.bool__content = True) <-> true ) }
+  requires {  ( (Main__outerairlockdoorclosed.outerairlockdoorclosed.int__content = 0) /\ (Main__innerairlockdoorclosed.innerairlockdoorclosed.int__content = 1) ) }
+  ensures {  ( (Main__outerairlockdoorclosed.outerairlockdoorclosed.int__content = 1) /\ (Main__status___axiom.dynamic_invariant Main__outerairlockdoorclosed.outerairlockdoorclosed.int__content True True True True) ) }
   reads {Main__innerairlockdoorclosed.innerairlockdoorclosed, Main__outerairlockdoorclosed.outerairlockdoorclosed}
   writes {Main__outerairlockdoorclosed.outerairlockdoorclosed}
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "openouterairlockdoor" defined at main.ads:25, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "openouterairlockdoor" defined at main.ads:45, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Main__openouterairlockdoor___axiom
  use        Main__innerairlockdoorclosed
  use        Main__outerairlockdoorclosed
+ use        Main__emergencyoperation
  use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Main__status___axiom
  use        Main__innerairlockdoorclosed
  use        Main__outerairlockdoorclosed
+ use        Main__emergencyoperation
 
  val openouterairlockdoor 
    (__void_param : unit) : unit
-  requires {  ( ( (Main__outerairlockdoorclosed.outerairlockdoorclosed.bool__content = True) <-> true ) /\ ( (Main__innerairlockdoorclosed.innerairlockdoorclosed.bool__content = True) <-> true ) ) }
-  ensures {  ( (Main__outerairlockdoorclosed.outerairlockdoorclosed.bool__content = True) <-> false ) }
-  reads {Main__innerairlockdoorclosed.innerairlockdoorclosed, Main__outerairlockdoorclosed.outerairlockdoorclosed}
+  requires {  ( (Main__outerairlockdoorclosed.outerairlockdoorclosed.int__content = 1) /\ ( (Main__innerairlockdoorclosed.innerairlockdoorclosed.int__content = 1) /\ (Main__emergencyoperation.emergencyoperation.int__content = 0) ) ) }
+  ensures {  ( (Main__outerairlockdoorclosed.outerairlockdoorclosed.int__content = 0) /\ (Main__status___axiom.dynamic_invariant Main__outerairlockdoorclosed.outerairlockdoorclosed.int__content True True True True) ) }
+  reads {Main__innerairlockdoorclosed.innerairlockdoorclosed, Main__outerairlockdoorclosed.outerairlockdoorclosed, Main__emergencyoperation.emergencyoperation}
   writes {Main__outerairlockdoorclosed.outerairlockdoorclosed}
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "closeinnerairlockdoor" defined at main.ads:32, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "closeinnerairlockdoor" defined at main.ads:52, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Main__closeinnerairlockdoor___axiom
  use        Main__innerairlockdoorclosed
  use        Main__outerairlockdoorclosed
  use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Main__status___axiom
  use        Main__innerairlockdoorclosed
  use        Main__outerairlockdoorclosed
 
  val closeinnerairlockdoor 
    (__void_param : unit) : unit
-  requires {  ( ( (Main__innerairlockdoorclosed.innerairlockdoorclosed.bool__content = True) <-> false ) /\ ( (Main__outerairlockdoorclosed.outerairlockdoorclosed.bool__content = True) <-> true ) ) }
-  ensures {  ( (Main__innerairlockdoorclosed.innerairlockdoorclosed.bool__content = True) <-> true ) }
+  requires {  ( (Main__innerairlockdoorclosed.innerairlockdoorclosed.int__content = 0) /\ (Main__outerairlockdoorclosed.outerairlockdoorclosed.int__content = 1) ) }
+  ensures {  ( (Main__innerairlockdoorclosed.innerairlockdoorclosed.int__content = 1) /\ (Main__status___axiom.dynamic_invariant Main__innerairlockdoorclosed.innerairlockdoorclosed.int__content True True True True) ) }
   reads {Main__innerairlockdoorclosed.innerairlockdoorclosed, Main__outerairlockdoorclosed.outerairlockdoorclosed}
   writes {Main__innerairlockdoorclosed.innerairlockdoorclosed}
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "openinnerairlockdoor" defined at main.ads:37, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "openinnerairlockdoor" defined at main.ads:57, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Main__openinnerairlockdoor___axiom
  use        Main__innerairlockdoorclosed
  use        Main__outerairlockdoorclosed
+ use        Main__emergencyoperation
  use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Main__status___axiom
  use        Main__innerairlockdoorclosed
  use        Main__outerairlockdoorclosed
+ use        Main__emergencyoperation
 
  val openinnerairlockdoor 
    (__void_param : unit) : unit
-  requires {  ( ( (Main__innerairlockdoorclosed.innerairlockdoorclosed.bool__content = True) <-> true ) /\ ( (Main__outerairlockdoorclosed.outerairlockdoorclosed.bool__content = True) <-> true ) ) }
-  ensures {  ( (Main__innerairlockdoorclosed.innerairlockdoorclosed.bool__content = True) <-> false ) }
-  reads {Main__innerairlockdoorclosed.innerairlockdoorclosed, Main__outerairlockdoorclosed.outerairlockdoorclosed}
+  requires {  ( (Main__innerairlockdoorclosed.innerairlockdoorclosed.int__content = 1) /\ ( (Main__outerairlockdoorclosed.outerairlockdoorclosed.int__content = 1) /\ (Main__emergencyoperation.emergencyoperation.int__content = 0) ) ) }
+  ensures {  ( (Main__innerairlockdoorclosed.innerairlockdoorclosed.int__content = 0) /\ (Main__status___axiom.dynamic_invariant Main__innerairlockdoorclosed.innerairlockdoorclosed.int__content True True True True) ) }
+  reads {Main__innerairlockdoorclosed.innerairlockdoorclosed, Main__outerairlockdoorclosed.outerairlockdoorclosed, Main__emergencyoperation.emergencyoperation}
   writes {Main__innerairlockdoorclosed.innerairlockdoorclosed}
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "lockinnerairlockdoor" defined at main.ads:49, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "lockinnerairlockdoor" defined at main.ads:69, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Main__lockinnerairlockdoor___axiom
  use        Main__innerairlockdoorclosed
  use        Main__innerairlockdoorlocked
  use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Main__status___axiom
  use        Main__innerairlockdoorclosed
  use        Main__innerairlockdoorlocked
 
  val lockinnerairlockdoor 
    (__void_param : unit) : unit
-  requires {  ( ( (Main__innerairlockdoorlocked.innerairlockdoorlocked.bool__content = True) <-> false ) /\ ( (Main__innerairlockdoorclosed.innerairlockdoorclosed.bool__content = True) <-> true ) ) }
-  ensures {  ( (Main__innerairlockdoorlocked.innerairlockdoorlocked.bool__content = True) <-> true ) }
+  requires {  ( (Main__innerairlockdoorlocked.innerairlockdoorlocked.int__content = 0) /\ (Main__innerairlockdoorclosed.innerairlockdoorclosed.int__content = 1) ) }
+  ensures {  ( (Main__innerairlockdoorlocked.innerairlockdoorlocked.int__content = 1) /\ (Main__status___axiom.dynamic_invariant Main__innerairlockdoorlocked.innerairlockdoorlocked.int__content True True True True) ) }
   reads {Main__innerairlockdoorclosed.innerairlockdoorclosed, Main__innerairlockdoorlocked.innerairlockdoorlocked}
   writes {Main__innerairlockdoorlocked.innerairlockdoorlocked}
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "lockouterairlockdoor" defined at main.ads:56, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "lockouterairlockdoor" defined at main.ads:76, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Main__lockouterairlockdoor___axiom
  use        Main__outerairlockdoorclosed
  use        Main__outerairlockdoorlocked
  use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Main__status___axiom
  use        Main__outerairlockdoorclosed
  use        Main__outerairlockdoorlocked
 
  val lockouterairlockdoor 
    (__void_param : unit) : unit
-  requires {  ( ( (Main__outerairlockdoorlocked.outerairlockdoorlocked.bool__content = True) <-> false ) /\ ( (Main__outerairlockdoorclosed.outerairlockdoorclosed.bool__content = True) <-> true ) ) }
-  ensures {  ( (Main__outerairlockdoorlocked.outerairlockdoorlocked.bool__content = True) <-> true ) }
+  requires {  ( (Main__outerairlockdoorlocked.outerairlockdoorlocked.int__content = 0) /\ (Main__outerairlockdoorclosed.outerairlockdoorclosed.int__content = 1) ) }
+  ensures {  ( (Main__outerairlockdoorlocked.outerairlockdoorlocked.int__content = 1) /\ (Main__status___axiom.dynamic_invariant Main__outerairlockdoorlocked.outerairlockdoorlocked.int__content True True True True) ) }
   reads {Main__outerairlockdoorclosed.outerairlockdoorclosed, Main__outerairlockdoorlocked.outerairlockdoorlocked}
   writes {Main__outerairlockdoorlocked.outerairlockdoorlocked}
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "unlockinnerairlockdoor" defined at main.ads:63, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "unlockinnerairlockdoor" defined at main.ads:83, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Main__unlockinnerairlockdoor___axiom
  use        Main__innerairlockdoorlocked
+ use        Main__emergencyoperation
  use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Main__status___axiom
  use        Main__innerairlockdoorlocked
+ use        Main__emergencyoperation
 
  val unlockinnerairlockdoor 
    (__void_param : unit) : unit
-  requires {  ( (Main__innerairlockdoorlocked.innerairlockdoorlocked.bool__content = True) <-> true ) }
-  ensures {  ( (Main__innerairlockdoorlocked.innerairlockdoorlocked.bool__content = True) <-> false ) }
-  reads {Main__innerairlockdoorlocked.innerairlockdoorlocked}
+  requires {  ( (Main__innerairlockdoorlocked.innerairlockdoorlocked.int__content = 1) /\ (Main__emergencyoperation.emergencyoperation.int__content = 0) ) }
+  ensures {  ( (Main__innerairlockdoorlocked.innerairlockdoorlocked.int__content = 0) /\ (Main__status___axiom.dynamic_invariant Main__innerairlockdoorlocked.innerairlockdoorlocked.int__content True True True True) ) }
+  reads {Main__innerairlockdoorlocked.innerairlockdoorlocked, Main__emergencyoperation.emergencyoperation}
   writes {Main__innerairlockdoorlocked.innerairlockdoorlocked}
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "unlockouterairlockdoor" defined at main.ads:70, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "unlockouterairlockdoor" defined at main.ads:90, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Main__unlockouterairlockdoor___axiom
+ use        Main__emergencyoperation
  use        Main__outerairlockdoorlocked
  use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Main__status___axiom
  use        Main__outerairlockdoorlocked
+ use        Main__emergencyoperation
 
  val unlockouterairlockdoor 
    (__void_param : unit) : unit
-  requires {  ( (Main__outerairlockdoorlocked.outerairlockdoorlocked.bool__content = True) <-> true ) }
-  ensures {  ( (Main__outerairlockdoorlocked.outerairlockdoorlocked.bool__content = True) <-> false ) }
-  reads {Main__outerairlockdoorlocked.outerairlockdoorlocked}
+  requires {  ( (Main__outerairlockdoorlocked.outerairlockdoorlocked.int__content = 1) /\ (Main__emergencyoperation.emergencyoperation.int__content = 0) ) }
+  ensures {  ( (Main__outerairlockdoorlocked.outerairlockdoorlocked.int__content = 0) /\ (Main__status___axiom.dynamic_invariant Main__outerairlockdoorlocked.outerairlockdoorlocked.int__content True True True True) ) }
+  reads {Main__outerairlockdoorlocked.outerairlockdoorlocked, Main__emergencyoperation.emergencyoperation}
   writes {Main__outerairlockdoorlocked.outerairlockdoorlocked}
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "canperformoperations" defined at main.ads:77, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "canperformoperations" defined at main.ads:97, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Main__canperformoperations___axiom
- use        Main__bothairlockdoorslocked
  use        Main__innerairlockdoorlocked
  use        Main__outerairlockdoorlocked
+ use        Main__canperformoperation
  use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Main__status___axiom
  use        Main__innerairlockdoorlocked
  use        Main__outerairlockdoorlocked
- use        Main__bothairlockdoorslocked
+ use        Main__canperformoperation
 
  val canperformoperations 
    (__void_param : unit) : unit
-  requires {  ( ( (Main__bothairlockdoorslocked.bothairlockdoorslocked.bool__content = True) <-> false ) /\ ( ( (Main__innerairlockdoorlocked.innerairlockdoorlocked.bool__content = True) <-> true ) /\ ( (Main__outerairlockdoorlocked.outerairlockdoorlocked.bool__content = True) <-> true ) ) ) }
-  ensures {  ( (Main__bothairlockdoorslocked.bothairlockdoorslocked.bool__content = True) <-> true ) }
-  reads {Main__innerairlockdoorlocked.innerairlockdoorlocked, Main__outerairlockdoorlocked.outerairlockdoorlocked, Main__bothairlockdoorslocked.bothairlockdoorslocked}
-  writes {Main__bothairlockdoorslocked.bothairlockdoorslocked}
+  requires {  ( (Main__canperformoperation.canperformoperation.int__content = 0) /\ ( (Main__innerairlockdoorlocked.innerairlockdoorlocked.int__content = 1) /\ (Main__outerairlockdoorlocked.outerairlockdoorlocked.int__content = 1) ) ) }
+  ensures {  ( (Main__canperformoperation.canperformoperation.int__content = 1) /\ (Main__status___axiom.dynamic_invariant Main__canperformoperation.canperformoperation.int__content True True True True) ) }
+  reads {Main__innerairlockdoorlocked.innerairlockdoorlocked, Main__outerairlockdoorlocked.outerairlockdoorlocked, Main__canperformoperation.canperformoperation}
+  writes {Main__canperformoperation.canperformoperation}
+
+end
+
+(* Module for declaring a program function (and possibly an axiom) for "nooxygenleftaction" defined at main.ads:112, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Main__nooxygenleftaction___axiom
+ use        Main__oxygenemptywarning
+ use        Main__emergencyoperation
+ use        Main__canperformoperation
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Main__status___axiom
+ use        Main__canperformoperation
+ use        Main__oxygenemptywarning
+ use        Main__emergencyoperation
+
+ val nooxygenleftaction 
+   (__void_param : unit) : unit
+  requires {  ( (Main__emergencyoperation.emergencyoperation.int__content = 0) /\ ( (Main__oxygenemptywarning.oxygenemptywarning.int__content = 1) /\ (Main__canperformoperation.canperformoperation.int__content = 1) ) ) }
+  ensures {  ( (Main__emergencyoperation.emergencyoperation.int__content = 1) /\ (Main__status___axiom.dynamic_invariant Main__emergencyoperation.emergencyoperation.int__content True True True True) ) }
+  reads {Main__canperformoperation.canperformoperation, Main__oxygenemptywarning.oxygenemptywarning, Main__emergencyoperation.emergencyoperation}
+  writes {Main__emergencyoperation.emergencyoperation}
+
+end
+
+(* Module for declaring a program function (and possibly an axiom) for "reactoroverheatingaction" defined at main.ads:122, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Main__reactoroverheatingaction___axiom
+ use        Main__reactoroverheating
+ use        Main__emergencyoperation
+ use        Main__canperformoperation
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Main__status___axiom
+ use        Main__canperformoperation
+ use        Main__reactoroverheating
+ use        Main__emergencyoperation
+
+ val reactoroverheatingaction 
+   (__void_param : unit) : unit
+  requires {  ( (Main__emergencyoperation.emergencyoperation.int__content = 0) /\ ( (Main__reactoroverheating.reactoroverheating.int__content = 1) /\ (Main__canperformoperation.canperformoperation.int__content = 1) ) ) }
+  ensures {  ( (Main__emergencyoperation.emergencyoperation.int__content = 1) /\ (Main__status___axiom.dynamic_invariant Main__emergencyoperation.emergencyoperation.int__content True True True True) ) }
+  reads {Main__canperformoperation.canperformoperation, Main__reactoroverheating.reactoroverheating, Main__emergencyoperation.emergencyoperation}
+  writes {Main__emergencyoperation.emergencyoperation}
 
 end
 
@@ -2306,17 +2608,26 @@ end
 module Main__package_def
  use import "_gnatprove_standard".Main
  use import "int".Int
- use        "_gnatprove_standard".Boolean
+ use        Main__status___axiom
  use        Main__innerairlockdoorclosed
  use        Main__outerairlockdoorclosed
  use        Main__innerairlockdoorlocked
  use        Main__outerairlockdoorlocked
- use        Main__bothairlockdoorslocked
+ use        Main__canperformoperation
+ use        Main__oxygenlowwarning
+ use        Main__oxygenemptywarning
+ use        Main__reactoroverheating
+ use        Main__emergencyoperation
+ use        Main__status___axiom
  use        Main__innerairlockdoorclosed___axiom
  use        Main__outerairlockdoorclosed___axiom
  use        Main__innerairlockdoorlocked___axiom
  use        Main__outerairlockdoorlocked___axiom
- use        Main__bothairlockdoorslocked___axiom
+ use        Main__canperformoperation___axiom
+ use        Main__oxygenlowwarning___axiom
+ use        Main__oxygenemptywarning___axiom
+ use        Main__reactoroverheating___axiom
+ use        Main__emergencyoperation___axiom
 
  let def #"main.ads" 1 0 0#"GP_Subp:main.ads:1" "W:diverges:N" 
    (__void_param : unit)
@@ -2324,55 +2635,88 @@ module Main__package_def
   ensures { #"main.ads" 1 0 0# true }
    =
   ( (#"main.ads" 2 0 0# ());
-  (#"main.ads" 6 0 0# #"main.ads" 6 0 0# Main__innerairlockdoorclosed.innerairlockdoorclosed.bool__content <- ( (Boolean.of_int(0)) ));
-  (#"main.ads" 7 0 0# #"main.ads" 7 0 0# Main__outerairlockdoorclosed.outerairlockdoorclosed.bool__content <- ( (Boolean.of_int(1)) ));
-  (#"main.ads" 9 0 0# #"main.ads" 9 0 0# Main__innerairlockdoorlocked.innerairlockdoorlocked.bool__content <- ( (Boolean.of_int(0)) ));
-  (#"main.ads" 10 0 0# #"main.ads" 10 0 0# Main__outerairlockdoorlocked.outerairlockdoorlocked.bool__content <- ( (Boolean.of_int(0)) ));
-  (#"main.ads" 13 0 0# #"main.ads" 13 0 0# Main__bothairlockdoorslocked.bothairlockdoorslocked.bool__content <- ( (Boolean.of_int(0)) ));
-  (#"main.ads" 20 0 0# ());
-  (#"main.ads" 23 0 0# ());
-  (#"main.ads" 22 0 0# ());
-  (#"main.ads" 22 0 0# ());
-  (#"main.ads" 21 0 0# ());
-  (#"main.ads" 25 0 0# ());
-  (#"main.ads" 28 0 0# ());
-  (#"main.ads" 27 0 0# ());
-  (#"main.ads" 27 0 0# ());
-  (#"main.ads" 26 0 0# ());
-  (#"main.ads" 32 0 0# ());
-  (#"main.ads" 35 0 0# ());
-  (#"main.ads" 34 0 0# ());
-  (#"main.ads" 34 0 0# ());
-  (#"main.ads" 33 0 0# ());
-  (#"main.ads" 37 0 0# ());
+  (#"main.ads" 16 0 0# ());
+  (#"main.ads" 16 0 0# ());
+  (#"main.ads" 18 0 0# ());
+  (#"main.ads" 18 0 0# ());
+  (#"main.ads" 18 0 0# ( #"main.ads" 18 0 0# Main__innerairlockdoorclosed.innerairlockdoorclosed.int__content <- ( 0 );
+  #"main.ads" 18 0 0# assume { #"main.ads" 18 0 0# (Main__status___axiom.dynamic_invariant Main__innerairlockdoorclosed.innerairlockdoorclosed.int__content True False True True) } ));
+  (#"main.ads" 19 0 0# ( #"main.ads" 19 0 0# Main__outerairlockdoorclosed.outerairlockdoorclosed.int__content <- ( 1 );
+  #"main.ads" 19 0 0# assume { #"main.ads" 19 0 0# (Main__status___axiom.dynamic_invariant Main__outerairlockdoorclosed.outerairlockdoorclosed.int__content True False True True) } ));
+  (#"main.ads" 21 0 0# ( #"main.ads" 21 0 0# Main__innerairlockdoorlocked.innerairlockdoorlocked.int__content <- ( 0 );
+  #"main.ads" 21 0 0# assume { #"main.ads" 21 0 0# (Main__status___axiom.dynamic_invariant Main__innerairlockdoorlocked.innerairlockdoorlocked.int__content True False True True) } ));
+  (#"main.ads" 22 0 0# ( #"main.ads" 22 0 0# Main__outerairlockdoorlocked.outerairlockdoorlocked.int__content <- ( 0 );
+  #"main.ads" 22 0 0# assume { #"main.ads" 22 0 0# (Main__status___axiom.dynamic_invariant Main__outerairlockdoorlocked.outerairlockdoorlocked.int__content True False True True) } ));
+  (#"main.ads" 24 0 0# ( #"main.ads" 24 0 0# Main__canperformoperation.canperformoperation.int__content <- ( 0 );
+  #"main.ads" 24 0 0# assume { #"main.ads" 24 0 0# (Main__status___axiom.dynamic_invariant Main__canperformoperation.canperformoperation.int__content True False True True) } ));
+  (#"main.ads" 26 0 0# ( #"main.ads" 26 0 0# Main__oxygenlowwarning.oxygenlowwarning.int__content <- ( 1 );
+  #"main.ads" 26 0 0# assume { #"main.ads" 26 0 0# (Main__status___axiom.dynamic_invariant Main__oxygenlowwarning.oxygenlowwarning.int__content True False True True) } ));
+  (#"main.ads" 27 0 0# ( #"main.ads" 27 0 0# Main__oxygenemptywarning.oxygenemptywarning.int__content <- ( 1 );
+  #"main.ads" 27 0 0# assume { #"main.ads" 27 0 0# (Main__status___axiom.dynamic_invariant Main__oxygenemptywarning.oxygenemptywarning.int__content True False True True) } ));
+  (#"main.ads" 29 0 0# ( #"main.ads" 29 0 0# Main__reactoroverheating.reactoroverheating.int__content <- ( 1 );
+  #"main.ads" 29 0 0# assume { #"main.ads" 29 0 0# (Main__status___axiom.dynamic_invariant Main__reactoroverheating.reactoroverheating.int__content True False True True) } ));
+  (#"main.ads" 32 0 0# ( #"main.ads" 32 0 0# Main__emergencyoperation.emergencyoperation.int__content <- ( 0 );
+  #"main.ads" 32 0 0# assume { #"main.ads" 32 0 0# (Main__status___axiom.dynamic_invariant Main__emergencyoperation.emergencyoperation.int__content True False True True) } ));
   (#"main.ads" 40 0 0# ());
-  (#"main.ads" 39 0 0# ());
-  (#"main.ads" 39 0 0# ());
-  (#"main.ads" 38 0 0# ());
-  (#"main.ads" 49 0 0# ());
+  (#"main.ads" 43 0 0# ());
+  (#"main.ads" 42 0 0# ());
+  (#"main.ads" 42 0 0# ());
+  (#"main.ads" 41 0 0# ());
+  (#"main.ads" 45 0 0# ());
+  (#"main.ads" 48 0 0# ());
+  (#"main.ads" 47 0 0# ());
+  (#"main.ads" 47 0 0# ());
+  (#"main.ads" 47 0 0# ());
+  (#"main.ads" 46 0 0# ());
   (#"main.ads" 52 0 0# ());
-  (#"main.ads" 51 0 0# ());
-  (#"main.ads" 51 0 0# ());
-  (#"main.ads" 50 0 0# ());
-  (#"main.ads" 56 0 0# ());
+  (#"main.ads" 55 0 0# ());
+  (#"main.ads" 54 0 0# ());
+  (#"main.ads" 54 0 0# ());
+  (#"main.ads" 53 0 0# ());
+  (#"main.ads" 57 0 0# ());
+  (#"main.ads" 60 0 0# ());
+  (#"main.ads" 59 0 0# ());
+  (#"main.ads" 59 0 0# ());
   (#"main.ads" 59 0 0# ());
   (#"main.ads" 58 0 0# ());
-  (#"main.ads" 58 0 0# ());
-  (#"main.ads" 57 0 0# ());
-  (#"main.ads" 63 0 0# ());
-  (#"main.ads" 66 0 0# ());
-  (#"main.ads" 65 0 0# ());
-  (#"main.ads" 64 0 0# ());
-  (#"main.ads" 70 0 0# ());
-  (#"main.ads" 73 0 0# ());
+  (#"main.ads" 69 0 0# ());
   (#"main.ads" 72 0 0# ());
   (#"main.ads" 71 0 0# ());
-  (#"main.ads" 77 0 0# ());
-  (#"main.ads" 80 0 0# ());
-  (#"main.ads" 79 0 0# ());
-  (#"main.ads" 79 0 0# ());
+  (#"main.ads" 71 0 0# ());
+  (#"main.ads" 70 0 0# ());
+  (#"main.ads" 76 0 0# ());
   (#"main.ads" 79 0 0# ());
   (#"main.ads" 78 0 0# ());
+  (#"main.ads" 78 0 0# ());
+  (#"main.ads" 77 0 0# ());
+  (#"main.ads" 83 0 0# ());
+  (#"main.ads" 86 0 0# ());
+  (#"main.ads" 85 0 0# ());
+  (#"main.ads" 85 0 0# ());
+  (#"main.ads" 84 0 0# ());
+  (#"main.ads" 90 0 0# ());
+  (#"main.ads" 93 0 0# ());
+  (#"main.ads" 92 0 0# ());
+  (#"main.ads" 92 0 0# ());
+  (#"main.ads" 91 0 0# ());
+  (#"main.ads" 97 0 0# ());
+  (#"main.ads" 100 0 0# ());
+  (#"main.ads" 99 0 0# ());
+  (#"main.ads" 99 0 0# ());
+  (#"main.ads" 99 0 0# ());
+  (#"main.ads" 98 0 0# ());
+  (#"main.ads" 112 0 0# ());
+  (#"main.ads" 115 0 0# ());
+  (#"main.ads" 114 0 0# ());
+  (#"main.ads" 114 0 0# ());
+  (#"main.ads" 114 0 0# ());
+  (#"main.ads" 113 0 0# ());
+  (#"main.ads" 122 0 0# ());
+  (#"main.ads" 125 0 0# ());
+  (#"main.ads" 124 0 0# ());
+  (#"main.ads" 124 0 0# ());
+  (#"main.ads" 124 0 0# ());
+  (#"main.ads" 123 0 0# ());
   (#"main.adb" 2 0 0# ());
   (#"main.adb" 12 0 0# ());
   (#"main.adb" 17 0 0# ());
@@ -2383,372 +2727,506 @@ module Main__package_def
   (#"main.adb" 56 0 0# ());
   (#"main.adb" 63 0 0# ());
   (#"main.adb" 70 0 0# ());
-  ( "GP_Sloc:main.adb:98:1" (#"main.adb" 98 0 0# ()) ) )
+  (#"main.adb" 84 0 0# ());
+  (#"main.adb" 94 0 0# ());
+  ( "GP_Sloc:main.adb:108:1" (#"main.adb" 108 0 0# ()) ) )
 end
 
-(* Module for checking contracts and absence of run-time errors in subprogram "closeouterairlockdoor" defined at main.ads:20, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+(* Module for checking contracts and absence of run-time errors in subprogram "closeouterairlockdoor" defined at main.ads:40, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
 module Main__closeouterairlockdoor__subprogram_def
  use import "_gnatprove_standard".Main
  use import "int".Int
- use        "_gnatprove_standard".Boolean
+ use        Main__status___axiom
  use        Main__innerairlockdoorclosed
  use        Main__outerairlockdoorclosed
+ use        Main__status___axiom
  use        Main__innerairlockdoorclosed___axiom
  use        Main__outerairlockdoorclosed___axiom
 
- let def #"main.ads" 20 0 0#"W:diverges:N" "GP_Subp:main.ads:20" 
+ let def #"main.ads" 40 0 0#"W:diverges:N" "GP_Subp:main.ads:40" 
    (__void_param : unit)
-  requires { #"main.ads" 20 0 0# true }
-  ensures { #"main.ads" 20 0 0# (#"main.ads" 23 0 0# ( "model_vc_post" "keep_on_simp" "GP_Sloc:main.ads:23:14" "GP_Reason:VC_POSTCONDITION" "GP_Id:0" "comment:     Post => outerAirLockDoorClosed = True;
-             ^ main.ads:23:14:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" ( "GP_Pretty_Ada:2860" "GP_Sloc:main.ads:23:14" ( (Main__outerairlockdoorclosed.outerairlockdoorclosed.bool__content = True) <-> true ) ) )) }
+  requires { #"main.ads" 40 0 0# true }
+  ensures { #"main.ads" 40 0 0# (#"main.ads" 43 0 0# ( "model_vc_post" "keep_on_simp" "GP_Sloc:main.ads:43:14" "GP_Reason:VC_POSTCONDITION" "GP_Id:0" "comment:     Post => outerAirLockDoorClosed = TRUE;
+             ^ main.ads:43:14:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" ( "GP_Pretty_Ada:3102" "GP_Sloc:main.ads:43:14" (Main__outerairlockdoorclosed.outerairlockdoorclosed.int__content = 1) ) )) }
    =
-  ( () (* Assume dynamic invariants of inputs of the subprogram main.ads:20 *)
+  ( () (* Assume dynamic invariants of inputs of the subprogram main.ads:40 *)
   ;
+   assume {  (Main__status___axiom.dynamic_invariant Main__innerairlockdoorclosed.innerairlockdoorclosed.int__content True False True True) };
+   assume {  (Main__status___axiom.dynamic_invariant Main__outerairlockdoorclosed.outerairlockdoorclosed.int__content True False True True) };
    assume {  true };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram main.ads:20 *)
+  () (* Declarations introduced by the compiler at the beginning of the subprogram main.ads:40 *)
   ;
-  () (* Check for RTE in the Pre of the subprogram main.ads:20 *)
+  () (* Check for RTE in the Pre of the subprogram main.ads:40 *)
   ;
-   abstract ensures {true}(let _ = ( ((Boolean.to_int(Main__outerairlockdoorclosed.outerairlockdoorclosed.bool__content)) = (Boolean.to_int((Boolean.of_int(0))))) && ((Boolean.to_int(Main__innerairlockdoorclosed.innerairlockdoorclosed.bool__content)) = (Boolean.to_int((Boolean.of_int(1))))) ) in (
+   abstract ensures {true}(let _ = ( (Main__outerairlockdoorclosed.outerairlockdoorclosed.int__content = 0) && (Main__innerairlockdoorclosed.innerairlockdoorclosed.int__content = 1) ) in (
    ()))
    end ;
-  () (* Assume Pre of the subprogram main.ads:20 *)
+  () (* Assume Pre of the subprogram main.ads:40 *)
   ;
-   assume {  ( ( (Main__outerairlockdoorclosed.outerairlockdoorclosed.bool__content = True) <-> false ) /\ ( (Main__innerairlockdoorclosed.innerairlockdoorclosed.bool__content = True) <-> true ) ) };
+   assume {  ( (Main__outerairlockdoorclosed.outerairlockdoorclosed.int__content = 0) /\ (Main__innerairlockdoorclosed.innerairlockdoorclosed.int__content = 1) ) };
    try
    ( ( "GP_Sloc:main.adb:14:7" (#"main.adb" 14 0 0# ()) );
-   ( "GP_Sloc:main.adb:14:30" (#"main.adb" 14 0 0# #"main.adb" 14 0 0# Main__outerairlockdoorclosed.outerairlockdoorclosed.bool__content <- ( (Boolean.of_int(1)) )) );
+   ( "GP_Sloc:main.adb:14:30" (#"main.adb" 14 0 0# #"main.adb" 14 0 0# Main__outerairlockdoorclosed.outerairlockdoorclosed.int__content <- ( 1 )) );
     raise Return__exc )
   with
    Return__exc -> ()
   end;
-   abstract ensures {true}(let _ = ((Boolean.to_int(Main__outerairlockdoorclosed.outerairlockdoorclosed.bool__content)) = (Boolean.to_int((Boolean.of_int(1))))) in (
+   abstract ensures {true}(let _ = (Main__outerairlockdoorclosed.outerairlockdoorclosed.int__content = 1) in (
    ()))
    end  )
 end
 
-(* Module for checking contracts and absence of run-time errors in subprogram "openouterairlockdoor" defined at main.ads:25, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+(* Module for checking contracts and absence of run-time errors in subprogram "openouterairlockdoor" defined at main.ads:45, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
 module Main__openouterairlockdoor__subprogram_def
  use import "_gnatprove_standard".Main
  use import "int".Int
- use        "_gnatprove_standard".Boolean
+ use        Main__status___axiom
  use        Main__innerairlockdoorclosed
  use        Main__outerairlockdoorclosed
+ use        Main__emergencyoperation
+ use        Main__status___axiom
  use        Main__innerairlockdoorclosed___axiom
  use        Main__outerairlockdoorclosed___axiom
+ use        Main__emergencyoperation___axiom
 
- let def #"main.ads" 25 0 0#"W:diverges:N" "GP_Subp:main.ads:25" 
+ let def #"main.ads" 45 0 0#"W:diverges:N" "GP_Subp:main.ads:45" 
    (__void_param : unit)
-  requires { #"main.ads" 25 0 0# true }
-  ensures { #"main.ads" 25 0 0# (#"main.ads" 28 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:main.ads:28:14" "GP_Id:1" "comment:     Post => outerAirLockDoorClosed = False;
-             ^ main.ads:28:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:2932" "GP_Sloc:main.ads:28:14" ( (Main__outerairlockdoorclosed.outerairlockdoorclosed.bool__content = True) <-> false ) ) )) }
+  requires { #"main.ads" 45 0 0# true }
+  ensures { #"main.ads" 45 0 0# (#"main.ads" 48 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:main.ads:48:14" "GP_Id:1" "comment:     Post => outerAirLockDoorClosed = FALSE;
+             ^ main.ads:48:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:3198" "GP_Sloc:main.ads:48:14" (Main__outerairlockdoorclosed.outerairlockdoorclosed.int__content = 0) ) )) }
    =
-  ( () (* Assume dynamic invariants of inputs of the subprogram main.ads:25 *)
+  ( () (* Assume dynamic invariants of inputs of the subprogram main.ads:45 *)
   ;
+   assume {  (Main__status___axiom.dynamic_invariant Main__innerairlockdoorclosed.innerairlockdoorclosed.int__content True False True True) };
+   assume {  (Main__status___axiom.dynamic_invariant Main__outerairlockdoorclosed.outerairlockdoorclosed.int__content True False True True) };
+   assume {  (Main__status___axiom.dynamic_invariant Main__emergencyoperation.emergencyoperation.int__content True False True True) };
    assume {  true };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram main.ads:25 *)
+  () (* Declarations introduced by the compiler at the beginning of the subprogram main.ads:45 *)
   ;
-  () (* Check for RTE in the Pre of the subprogram main.ads:25 *)
+  () (* Check for RTE in the Pre of the subprogram main.ads:45 *)
   ;
-   abstract ensures {true}(let _ = ( ((Boolean.to_int(Main__outerairlockdoorclosed.outerairlockdoorclosed.bool__content)) = (Boolean.to_int((Boolean.of_int(1))))) && ((Boolean.to_int(Main__innerairlockdoorclosed.innerairlockdoorclosed.bool__content)) = (Boolean.to_int((Boolean.of_int(1))))) ) in (
+   abstract ensures {true}(let _ = ( (Main__outerairlockdoorclosed.outerairlockdoorclosed.int__content = 1) && ( (Main__innerairlockdoorclosed.innerairlockdoorclosed.int__content = 1) && (Main__emergencyoperation.emergencyoperation.int__content = 0) ) ) in (
    ()))
    end ;
-  () (* Assume Pre of the subprogram main.ads:25 *)
+  () (* Assume Pre of the subprogram main.ads:45 *)
   ;
-   assume {  ( ( (Main__outerairlockdoorclosed.outerairlockdoorclosed.bool__content = True) <-> true ) /\ ( (Main__innerairlockdoorclosed.innerairlockdoorclosed.bool__content = True) <-> true ) ) };
+   assume {  ( (Main__outerairlockdoorclosed.outerairlockdoorclosed.int__content = 1) /\ ( (Main__innerairlockdoorclosed.innerairlockdoorclosed.int__content = 1) /\ (Main__emergencyoperation.emergencyoperation.int__content = 0) ) ) };
    try
    ( ( "GP_Sloc:main.adb:19:7" (#"main.adb" 19 0 0# ()) );
-   ( "GP_Sloc:main.adb:19:30" (#"main.adb" 19 0 0# #"main.adb" 19 0 0# Main__outerairlockdoorclosed.outerairlockdoorclosed.bool__content <- ( (Boolean.of_int(0)) )) );
+   ( "GP_Sloc:main.adb:19:30" (#"main.adb" 19 0 0# #"main.adb" 19 0 0# Main__outerairlockdoorclosed.outerairlockdoorclosed.int__content <- ( 0 )) );
     raise Return__exc )
   with
    Return__exc -> ()
   end;
-   abstract ensures {true}(let _ = ((Boolean.to_int(Main__outerairlockdoorclosed.outerairlockdoorclosed.bool__content)) = (Boolean.to_int((Boolean.of_int(0))))) in (
+   abstract ensures {true}(let _ = (Main__outerairlockdoorclosed.outerairlockdoorclosed.int__content = 0) in (
    ()))
    end  )
 end
 
-(* Module for checking contracts and absence of run-time errors in subprogram "closeinnerairlockdoor" defined at main.ads:32, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+(* Module for checking contracts and absence of run-time errors in subprogram "closeinnerairlockdoor" defined at main.ads:52, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
 module Main__closeinnerairlockdoor__subprogram_def
  use import "_gnatprove_standard".Main
  use import "int".Int
- use        "_gnatprove_standard".Boolean
+ use        Main__status___axiom
  use        Main__innerairlockdoorclosed
  use        Main__outerairlockdoorclosed
+ use        Main__status___axiom
  use        Main__innerairlockdoorclosed___axiom
  use        Main__outerairlockdoorclosed___axiom
 
- let def #"main.ads" 32 0 0#"W:diverges:N" "GP_Subp:main.ads:32" 
+ let def #"main.ads" 52 0 0#"W:diverges:N" "GP_Subp:main.ads:52" 
    (__void_param : unit)
-  requires { #"main.ads" 32 0 0# true }
-  ensures { #"main.ads" 32 0 0# (#"main.ads" 35 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:main.ads:35:14" "GP_Id:2" "comment:     Post => innerAirLockDoorClosed = True;
-             ^ main.ads:35:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:3004" "GP_Sloc:main.ads:35:14" ( (Main__innerairlockdoorclosed.innerairlockdoorclosed.bool__content = True) <-> true ) ) )) }
+  requires { #"main.ads" 52 0 0# true }
+  ensures { #"main.ads" 52 0 0# (#"main.ads" 55 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:main.ads:55:14" "GP_Id:2" "comment:     Post => innerAirLockDoorClosed = TRUE;
+             ^ main.ads:55:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:3277" "GP_Sloc:main.ads:55:14" (Main__innerairlockdoorclosed.innerairlockdoorclosed.int__content = 1) ) )) }
    =
-  ( () (* Assume dynamic invariants of inputs of the subprogram main.ads:32 *)
+  ( () (* Assume dynamic invariants of inputs of the subprogram main.ads:52 *)
   ;
+   assume {  (Main__status___axiom.dynamic_invariant Main__innerairlockdoorclosed.innerairlockdoorclosed.int__content True False True True) };
+   assume {  (Main__status___axiom.dynamic_invariant Main__outerairlockdoorclosed.outerairlockdoorclosed.int__content True False True True) };
    assume {  true };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram main.ads:32 *)
+  () (* Declarations introduced by the compiler at the beginning of the subprogram main.ads:52 *)
   ;
-  () (* Check for RTE in the Pre of the subprogram main.ads:32 *)
+  () (* Check for RTE in the Pre of the subprogram main.ads:52 *)
   ;
-   abstract ensures {true}(let _ = ( ((Boolean.to_int(Main__innerairlockdoorclosed.innerairlockdoorclosed.bool__content)) = (Boolean.to_int((Boolean.of_int(0))))) && ((Boolean.to_int(Main__outerairlockdoorclosed.outerairlockdoorclosed.bool__content)) = (Boolean.to_int((Boolean.of_int(1))))) ) in (
+   abstract ensures {true}(let _ = ( (Main__innerairlockdoorclosed.innerairlockdoorclosed.int__content = 0) && (Main__outerairlockdoorclosed.outerairlockdoorclosed.int__content = 1) ) in (
    ()))
    end ;
-  () (* Assume Pre of the subprogram main.ads:32 *)
+  () (* Assume Pre of the subprogram main.ads:52 *)
   ;
-   assume {  ( ( (Main__innerairlockdoorclosed.innerairlockdoorclosed.bool__content = True) <-> false ) /\ ( (Main__outerairlockdoorclosed.outerairlockdoorclosed.bool__content = True) <-> true ) ) };
+   assume {  ( (Main__innerairlockdoorclosed.innerairlockdoorclosed.int__content = 0) /\ (Main__outerairlockdoorclosed.outerairlockdoorclosed.int__content = 1) ) };
    try
    ( ( "GP_Sloc:main.adb:26:7" (#"main.adb" 26 0 0# ()) );
-   ( "GP_Sloc:main.adb:26:30" (#"main.adb" 26 0 0# #"main.adb" 26 0 0# Main__innerairlockdoorclosed.innerairlockdoorclosed.bool__content <- ( (Boolean.of_int(1)) )) );
+   ( "GP_Sloc:main.adb:26:30" (#"main.adb" 26 0 0# #"main.adb" 26 0 0# Main__innerairlockdoorclosed.innerairlockdoorclosed.int__content <- ( 1 )) );
     raise Return__exc )
   with
    Return__exc -> ()
   end;
-   abstract ensures {true}(let _ = ((Boolean.to_int(Main__innerairlockdoorclosed.innerairlockdoorclosed.bool__content)) = (Boolean.to_int((Boolean.of_int(1))))) in (
+   abstract ensures {true}(let _ = (Main__innerairlockdoorclosed.innerairlockdoorclosed.int__content = 1) in (
    ()))
    end  )
 end
 
-(* Module for checking contracts and absence of run-time errors in subprogram "openinnerairlockdoor" defined at main.ads:37, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+(* Module for checking contracts and absence of run-time errors in subprogram "openinnerairlockdoor" defined at main.ads:57, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
 module Main__openinnerairlockdoor__subprogram_def
  use import "_gnatprove_standard".Main
  use import "int".Int
- use        "_gnatprove_standard".Boolean
+ use        Main__status___axiom
  use        Main__innerairlockdoorclosed
  use        Main__outerairlockdoorclosed
+ use        Main__emergencyoperation
+ use        Main__status___axiom
  use        Main__innerairlockdoorclosed___axiom
  use        Main__outerairlockdoorclosed___axiom
+ use        Main__emergencyoperation___axiom
 
- let def #"main.ads" 37 0 0#"W:diverges:N" "GP_Subp:main.ads:37" 
+ let def #"main.ads" 57 0 0#"W:diverges:N" "GP_Subp:main.ads:57" 
    (__void_param : unit)
-  requires { #"main.ads" 37 0 0# true }
-  ensures { #"main.ads" 37 0 0# (#"main.ads" 40 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:main.ads:40:14" "GP_Id:3" "comment:     Post => innerAirLockDoorClosed = False;
-             ^ main.ads:40:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:3076" "GP_Sloc:main.ads:40:14" ( (Main__innerairlockdoorclosed.innerairlockdoorclosed.bool__content = True) <-> false ) ) )) }
+  requires { #"main.ads" 57 0 0# true }
+  ensures { #"main.ads" 57 0 0# (#"main.ads" 60 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:main.ads:60:14" "GP_Id:3" "comment:     Post => innerAirLockDoorClosed = FALSE;
+             ^ main.ads:60:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:3373" "GP_Sloc:main.ads:60:14" (Main__innerairlockdoorclosed.innerairlockdoorclosed.int__content = 0) ) )) }
    =
-  ( () (* Assume dynamic invariants of inputs of the subprogram main.ads:37 *)
+  ( () (* Assume dynamic invariants of inputs of the subprogram main.ads:57 *)
   ;
+   assume {  (Main__status___axiom.dynamic_invariant Main__innerairlockdoorclosed.innerairlockdoorclosed.int__content True False True True) };
+   assume {  (Main__status___axiom.dynamic_invariant Main__outerairlockdoorclosed.outerairlockdoorclosed.int__content True False True True) };
+   assume {  (Main__status___axiom.dynamic_invariant Main__emergencyoperation.emergencyoperation.int__content True False True True) };
    assume {  true };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram main.ads:37 *)
+  () (* Declarations introduced by the compiler at the beginning of the subprogram main.ads:57 *)
   ;
-  () (* Check for RTE in the Pre of the subprogram main.ads:37 *)
+  () (* Check for RTE in the Pre of the subprogram main.ads:57 *)
   ;
-   abstract ensures {true}(let _ = ( ((Boolean.to_int(Main__innerairlockdoorclosed.innerairlockdoorclosed.bool__content)) = (Boolean.to_int((Boolean.of_int(1))))) && ((Boolean.to_int(Main__outerairlockdoorclosed.outerairlockdoorclosed.bool__content)) = (Boolean.to_int((Boolean.of_int(1))))) ) in (
+   abstract ensures {true}(let _ = ( (Main__innerairlockdoorclosed.innerairlockdoorclosed.int__content = 1) && ( (Main__outerairlockdoorclosed.outerairlockdoorclosed.int__content = 1) && (Main__emergencyoperation.emergencyoperation.int__content = 0) ) ) in (
    ()))
    end ;
-  () (* Assume Pre of the subprogram main.ads:37 *)
+  () (* Assume Pre of the subprogram main.ads:57 *)
   ;
-   assume {  ( ( (Main__innerairlockdoorclosed.innerairlockdoorclosed.bool__content = True) <-> true ) /\ ( (Main__outerairlockdoorclosed.outerairlockdoorclosed.bool__content = True) <-> true ) ) };
+   assume {  ( (Main__innerairlockdoorclosed.innerairlockdoorclosed.int__content = 1) /\ ( (Main__outerairlockdoorclosed.outerairlockdoorclosed.int__content = 1) /\ (Main__emergencyoperation.emergencyoperation.int__content = 0) ) ) };
    try
    ( ( "GP_Sloc:main.adb:32:7" (#"main.adb" 32 0 0# ()) );
-   ( "GP_Sloc:main.adb:32:30" (#"main.adb" 32 0 0# #"main.adb" 32 0 0# Main__innerairlockdoorclosed.innerairlockdoorclosed.bool__content <- ( (Boolean.of_int(0)) )) );
+   ( "GP_Sloc:main.adb:32:30" (#"main.adb" 32 0 0# #"main.adb" 32 0 0# Main__innerairlockdoorclosed.innerairlockdoorclosed.int__content <- ( 0 )) );
     raise Return__exc )
   with
    Return__exc -> ()
   end;
-   abstract ensures {true}(let _ = ((Boolean.to_int(Main__innerairlockdoorclosed.innerairlockdoorclosed.bool__content)) = (Boolean.to_int((Boolean.of_int(0))))) in (
+   abstract ensures {true}(let _ = (Main__innerairlockdoorclosed.innerairlockdoorclosed.int__content = 0) in (
    ()))
    end  )
 end
 
-(* Module for checking contracts and absence of run-time errors in subprogram "lockinnerairlockdoor" defined at main.ads:49, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+(* Module for checking contracts and absence of run-time errors in subprogram "lockinnerairlockdoor" defined at main.ads:69, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
 module Main__lockinnerairlockdoor__subprogram_def
  use import "_gnatprove_standard".Main
  use import "int".Int
- use        "_gnatprove_standard".Boolean
+ use        Main__status___axiom
  use        Main__innerairlockdoorclosed
  use        Main__innerairlockdoorlocked
+ use        Main__status___axiom
  use        Main__innerairlockdoorclosed___axiom
  use        Main__innerairlockdoorlocked___axiom
 
- let def #"main.ads" 49 0 0#"W:diverges:N" "GP_Subp:main.ads:49" 
+ let def #"main.ads" 69 0 0#"W:diverges:N" "GP_Subp:main.ads:69" 
    (__void_param : unit)
-  requires { #"main.ads" 49 0 0# true }
-  ensures { #"main.ads" 49 0 0# (#"main.ads" 52 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:main.ads:52:14" "GP_Id:4" "comment:     Post => innerAirLockDoorLocked = True;
-             ^ main.ads:52:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:3148" "GP_Sloc:main.ads:52:14" ( (Main__innerairlockdoorlocked.innerairlockdoorlocked.bool__content = True) <-> true ) ) )) }
+  requires { #"main.ads" 69 0 0# true }
+  ensures { #"main.ads" 69 0 0# (#"main.ads" 72 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:main.ads:72:14" "GP_Id:4" "comment:     Post => innerAirLockDoorLocked = TRUE;
+             ^ main.ads:72:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:3452" "GP_Sloc:main.ads:72:14" (Main__innerairlockdoorlocked.innerairlockdoorlocked.int__content = 1) ) )) }
    =
-  ( () (* Assume dynamic invariants of inputs of the subprogram main.ads:49 *)
+  ( () (* Assume dynamic invariants of inputs of the subprogram main.ads:69 *)
   ;
+   assume {  (Main__status___axiom.dynamic_invariant Main__innerairlockdoorclosed.innerairlockdoorclosed.int__content True False True True) };
+   assume {  (Main__status___axiom.dynamic_invariant Main__innerairlockdoorlocked.innerairlockdoorlocked.int__content True False True True) };
    assume {  true };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram main.ads:49 *)
+  () (* Declarations introduced by the compiler at the beginning of the subprogram main.ads:69 *)
   ;
-  () (* Check for RTE in the Pre of the subprogram main.ads:49 *)
+  () (* Check for RTE in the Pre of the subprogram main.ads:69 *)
   ;
-   abstract ensures {true}(let _ = ( ((Boolean.to_int(Main__innerairlockdoorlocked.innerairlockdoorlocked.bool__content)) = (Boolean.to_int((Boolean.of_int(0))))) && ((Boolean.to_int(Main__innerairlockdoorclosed.innerairlockdoorclosed.bool__content)) = (Boolean.to_int((Boolean.of_int(1))))) ) in (
+   abstract ensures {true}(let _ = ( (Main__innerairlockdoorlocked.innerairlockdoorlocked.int__content = 0) && (Main__innerairlockdoorclosed.innerairlockdoorclosed.int__content = 1) ) in (
    ()))
    end ;
-  () (* Assume Pre of the subprogram main.ads:49 *)
+  () (* Assume Pre of the subprogram main.ads:69 *)
   ;
-   assume {  ( ( (Main__innerairlockdoorlocked.innerairlockdoorlocked.bool__content = True) <-> false ) /\ ( (Main__innerairlockdoorclosed.innerairlockdoorclosed.bool__content = True) <-> true ) ) };
+   assume {  ( (Main__innerairlockdoorlocked.innerairlockdoorlocked.int__content = 0) /\ (Main__innerairlockdoorclosed.innerairlockdoorclosed.int__content = 1) ) };
    try
    ( ( "GP_Sloc:main.adb:44:7" (#"main.adb" 44 0 0# ()) );
-   ( "GP_Sloc:main.adb:44:30" (#"main.adb" 44 0 0# #"main.adb" 44 0 0# Main__innerairlockdoorlocked.innerairlockdoorlocked.bool__content <- ( (Boolean.of_int(1)) )) );
+   ( "GP_Sloc:main.adb:44:30" (#"main.adb" 44 0 0# #"main.adb" 44 0 0# Main__innerairlockdoorlocked.innerairlockdoorlocked.int__content <- ( 1 )) );
     raise Return__exc )
   with
    Return__exc -> ()
   end;
-   abstract ensures {true}(let _ = ((Boolean.to_int(Main__innerairlockdoorlocked.innerairlockdoorlocked.bool__content)) = (Boolean.to_int((Boolean.of_int(1))))) in (
+   abstract ensures {true}(let _ = (Main__innerairlockdoorlocked.innerairlockdoorlocked.int__content = 1) in (
    ()))
    end  )
 end
 
-(* Module for checking contracts and absence of run-time errors in subprogram "lockouterairlockdoor" defined at main.ads:56, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+(* Module for checking contracts and absence of run-time errors in subprogram "lockouterairlockdoor" defined at main.ads:76, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
 module Main__lockouterairlockdoor__subprogram_def
  use import "_gnatprove_standard".Main
  use import "int".Int
- use        "_gnatprove_standard".Boolean
+ use        Main__status___axiom
  use        Main__outerairlockdoorclosed
  use        Main__outerairlockdoorlocked
+ use        Main__status___axiom
  use        Main__outerairlockdoorclosed___axiom
  use        Main__outerairlockdoorlocked___axiom
 
- let def #"main.ads" 56 0 0#"W:diverges:N" "GP_Subp:main.ads:56" 
+ let def #"main.ads" 76 0 0#"W:diverges:N" "GP_Subp:main.ads:76" 
    (__void_param : unit)
-  requires { #"main.ads" 56 0 0# true }
-  ensures { #"main.ads" 56 0 0# (#"main.ads" 59 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:main.ads:59:14" "GP_Id:5" "comment:     Post => outerAirLockDoorLocked = True;
-             ^ main.ads:59:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:3220" "GP_Sloc:main.ads:59:14" ( (Main__outerairlockdoorlocked.outerairlockdoorlocked.bool__content = True) <-> true ) ) )) }
+  requires { #"main.ads" 76 0 0# true }
+  ensures { #"main.ads" 76 0 0# (#"main.ads" 79 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:main.ads:79:14" "GP_Id:5" "comment:     Post => outerAirLockDoorLocked = TRUE;
+             ^ main.ads:79:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:3524" "GP_Sloc:main.ads:79:14" (Main__outerairlockdoorlocked.outerairlockdoorlocked.int__content = 1) ) )) }
    =
-  ( () (* Assume dynamic invariants of inputs of the subprogram main.ads:56 *)
+  ( () (* Assume dynamic invariants of inputs of the subprogram main.ads:76 *)
   ;
+   assume {  (Main__status___axiom.dynamic_invariant Main__outerairlockdoorclosed.outerairlockdoorclosed.int__content True False True True) };
+   assume {  (Main__status___axiom.dynamic_invariant Main__outerairlockdoorlocked.outerairlockdoorlocked.int__content True False True True) };
    assume {  true };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram main.ads:56 *)
+  () (* Declarations introduced by the compiler at the beginning of the subprogram main.ads:76 *)
   ;
-  () (* Check for RTE in the Pre of the subprogram main.ads:56 *)
+  () (* Check for RTE in the Pre of the subprogram main.ads:76 *)
   ;
-   abstract ensures {true}(let _ = ( ((Boolean.to_int(Main__outerairlockdoorlocked.outerairlockdoorlocked.bool__content)) = (Boolean.to_int((Boolean.of_int(0))))) && ((Boolean.to_int(Main__outerairlockdoorclosed.outerairlockdoorclosed.bool__content)) = (Boolean.to_int((Boolean.of_int(1))))) ) in (
+   abstract ensures {true}(let _ = ( (Main__outerairlockdoorlocked.outerairlockdoorlocked.int__content = 0) && (Main__outerairlockdoorclosed.outerairlockdoorclosed.int__content = 1) ) in (
    ()))
    end ;
-  () (* Assume Pre of the subprogram main.ads:56 *)
+  () (* Assume Pre of the subprogram main.ads:76 *)
   ;
-   assume {  ( ( (Main__outerairlockdoorlocked.outerairlockdoorlocked.bool__content = True) <-> false ) /\ ( (Main__outerairlockdoorclosed.outerairlockdoorclosed.bool__content = True) <-> true ) ) };
+   assume {  ( (Main__outerairlockdoorlocked.outerairlockdoorlocked.int__content = 0) /\ (Main__outerairlockdoorclosed.outerairlockdoorclosed.int__content = 1) ) };
    try
    ( ( "GP_Sloc:main.adb:51:7" (#"main.adb" 51 0 0# ()) );
-   ( "GP_Sloc:main.adb:51:30" (#"main.adb" 51 0 0# #"main.adb" 51 0 0# Main__outerairlockdoorlocked.outerairlockdoorlocked.bool__content <- ( (Boolean.of_int(1)) )) );
+   ( "GP_Sloc:main.adb:51:30" (#"main.adb" 51 0 0# #"main.adb" 51 0 0# Main__outerairlockdoorlocked.outerairlockdoorlocked.int__content <- ( 1 )) );
     raise Return__exc )
   with
    Return__exc -> ()
   end;
-   abstract ensures {true}(let _ = ((Boolean.to_int(Main__outerairlockdoorlocked.outerairlockdoorlocked.bool__content)) = (Boolean.to_int((Boolean.of_int(1))))) in (
+   abstract ensures {true}(let _ = (Main__outerairlockdoorlocked.outerairlockdoorlocked.int__content = 1) in (
    ()))
    end  )
 end
 
-(* Module for checking contracts and absence of run-time errors in subprogram "unlockinnerairlockdoor" defined at main.ads:63, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+(* Module for checking contracts and absence of run-time errors in subprogram "unlockinnerairlockdoor" defined at main.ads:83, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
 module Main__unlockinnerairlockdoor__subprogram_def
  use import "_gnatprove_standard".Main
  use import "int".Int
- use        "_gnatprove_standard".Boolean
+ use        Main__status___axiom
  use        Main__innerairlockdoorlocked
+ use        Main__emergencyoperation
+ use        Main__status___axiom
  use        Main__innerairlockdoorlocked___axiom
+ use        Main__emergencyoperation___axiom
 
- let def #"main.ads" 63 0 0#"W:diverges:N" "GP_Subp:main.ads:63" 
+ let def #"main.ads" 83 0 0#"W:diverges:N" "GP_Subp:main.ads:83" 
    (__void_param : unit)
-  requires { #"main.ads" 63 0 0# true }
-  ensures { #"main.ads" 63 0 0# (#"main.ads" 66 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:main.ads:66:14" "GP_Id:6" "comment:     Post => innerAirLockDoorLocked = False;
-             ^ main.ads:66:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:3271" "GP_Sloc:main.ads:66:14" ( (Main__innerairlockdoorlocked.innerairlockdoorlocked.bool__content = True) <-> false ) ) )) }
+  requires { #"main.ads" 83 0 0# true }
+  ensures { #"main.ads" 83 0 0# (#"main.ads" 86 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:main.ads:86:14" "GP_Id:6" "comment:     Post => innerAirLockDoorLocked = FALSE;
+             ^ main.ads:86:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:3596" "GP_Sloc:main.ads:86:14" (Main__innerairlockdoorlocked.innerairlockdoorlocked.int__content = 0) ) )) }
    =
-  ( () (* Assume dynamic invariants of inputs of the subprogram main.ads:63 *)
+  ( () (* Assume dynamic invariants of inputs of the subprogram main.ads:83 *)
   ;
+   assume {  (Main__status___axiom.dynamic_invariant Main__innerairlockdoorlocked.innerairlockdoorlocked.int__content True False True True) };
+   assume {  (Main__status___axiom.dynamic_invariant Main__emergencyoperation.emergencyoperation.int__content True False True True) };
    assume {  true };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram main.ads:63 *)
+  () (* Declarations introduced by the compiler at the beginning of the subprogram main.ads:83 *)
   ;
-  () (* Check for RTE in the Pre of the subprogram main.ads:63 *)
+  () (* Check for RTE in the Pre of the subprogram main.ads:83 *)
   ;
-   abstract ensures {true}(let _ = ((Boolean.to_int(Main__innerairlockdoorlocked.innerairlockdoorlocked.bool__content)) = (Boolean.to_int((Boolean.of_int(1))))) in (
+   abstract ensures {true}(let _ = ( (Main__innerairlockdoorlocked.innerairlockdoorlocked.int__content = 1) && (Main__emergencyoperation.emergencyoperation.int__content = 0) ) in (
    ()))
    end ;
-  () (* Assume Pre of the subprogram main.ads:63 *)
+  () (* Assume Pre of the subprogram main.ads:83 *)
   ;
-   assume {  ( (Main__innerairlockdoorlocked.innerairlockdoorlocked.bool__content = True) <-> true ) };
+   assume {  ( (Main__innerairlockdoorlocked.innerairlockdoorlocked.int__content = 1) /\ (Main__emergencyoperation.emergencyoperation.int__content = 0) ) };
    try
    ( ( "GP_Sloc:main.adb:58:7" (#"main.adb" 58 0 0# ()) );
-   ( "GP_Sloc:main.adb:58:30" (#"main.adb" 58 0 0# #"main.adb" 58 0 0# Main__innerairlockdoorlocked.innerairlockdoorlocked.bool__content <- ( (Boolean.of_int(0)) )) );
+   ( "GP_Sloc:main.adb:58:30" (#"main.adb" 58 0 0# #"main.adb" 58 0 0# Main__innerairlockdoorlocked.innerairlockdoorlocked.int__content <- ( 0 )) );
     raise Return__exc )
   with
    Return__exc -> ()
   end;
-   abstract ensures {true}(let _ = ((Boolean.to_int(Main__innerairlockdoorlocked.innerairlockdoorlocked.bool__content)) = (Boolean.to_int((Boolean.of_int(0))))) in (
+   abstract ensures {true}(let _ = (Main__innerairlockdoorlocked.innerairlockdoorlocked.int__content = 0) in (
    ()))
    end  )
 end
 
-(* Module for checking contracts and absence of run-time errors in subprogram "unlockouterairlockdoor" defined at main.ads:70, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+(* Module for checking contracts and absence of run-time errors in subprogram "unlockouterairlockdoor" defined at main.ads:90, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
 module Main__unlockouterairlockdoor__subprogram_def
  use import "_gnatprove_standard".Main
  use import "int".Int
- use        "_gnatprove_standard".Boolean
+ use        Main__status___axiom
  use        Main__outerairlockdoorlocked
+ use        Main__emergencyoperation
+ use        Main__status___axiom
  use        Main__outerairlockdoorlocked___axiom
+ use        Main__emergencyoperation___axiom
 
- let def #"main.ads" 70 0 0#"W:diverges:N" "GP_Subp:main.ads:70" 
+ let def #"main.ads" 90 0 0#"W:diverges:N" "GP_Subp:main.ads:90" 
    (__void_param : unit)
-  requires { #"main.ads" 70 0 0# true }
-  ensures { #"main.ads" 70 0 0# (#"main.ads" 73 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:main.ads:73:14" "GP_Id:7" "comment:     Post => outerAirLockDoorLocked = False;
-             ^ main.ads:73:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:3315" "GP_Sloc:main.ads:73:14" ( (Main__outerairlockdoorlocked.outerairlockdoorlocked.bool__content = True) <-> false ) ) )) }
+  requires { #"main.ads" 90 0 0# true }
+  ensures { #"main.ads" 90 0 0# (#"main.ads" 93 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:main.ads:93:14" "GP_Id:7" "comment:     Post => outerAirLockDoorLocked = FALSE;
+             ^ main.ads:93:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:3668" "GP_Sloc:main.ads:93:14" (Main__outerairlockdoorlocked.outerairlockdoorlocked.int__content = 0) ) )) }
    =
-  ( () (* Assume dynamic invariants of inputs of the subprogram main.ads:70 *)
+  ( () (* Assume dynamic invariants of inputs of the subprogram main.ads:90 *)
   ;
+   assume {  (Main__status___axiom.dynamic_invariant Main__outerairlockdoorlocked.outerairlockdoorlocked.int__content True False True True) };
+   assume {  (Main__status___axiom.dynamic_invariant Main__emergencyoperation.emergencyoperation.int__content True False True True) };
    assume {  true };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram main.ads:70 *)
+  () (* Declarations introduced by the compiler at the beginning of the subprogram main.ads:90 *)
   ;
-  () (* Check for RTE in the Pre of the subprogram main.ads:70 *)
+  () (* Check for RTE in the Pre of the subprogram main.ads:90 *)
   ;
-   abstract ensures {true}(let _ = ((Boolean.to_int(Main__outerairlockdoorlocked.outerairlockdoorlocked.bool__content)) = (Boolean.to_int((Boolean.of_int(1))))) in (
+   abstract ensures {true}(let _ = ( (Main__outerairlockdoorlocked.outerairlockdoorlocked.int__content = 1) && (Main__emergencyoperation.emergencyoperation.int__content = 0) ) in (
    ()))
    end ;
-  () (* Assume Pre of the subprogram main.ads:70 *)
+  () (* Assume Pre of the subprogram main.ads:90 *)
   ;
-   assume {  ( (Main__outerairlockdoorlocked.outerairlockdoorlocked.bool__content = True) <-> true ) };
+   assume {  ( (Main__outerairlockdoorlocked.outerairlockdoorlocked.int__content = 1) /\ (Main__emergencyoperation.emergencyoperation.int__content = 0) ) };
    try
    ( ( "GP_Sloc:main.adb:65:7" (#"main.adb" 65 0 0# ()) );
-   ( "GP_Sloc:main.adb:65:30" (#"main.adb" 65 0 0# #"main.adb" 65 0 0# Main__outerairlockdoorlocked.outerairlockdoorlocked.bool__content <- ( (Boolean.of_int(0)) )) );
+   ( "GP_Sloc:main.adb:65:30" (#"main.adb" 65 0 0# #"main.adb" 65 0 0# Main__outerairlockdoorlocked.outerairlockdoorlocked.int__content <- ( 0 )) );
     raise Return__exc )
   with
    Return__exc -> ()
   end;
-   abstract ensures {true}(let _ = ((Boolean.to_int(Main__outerairlockdoorlocked.outerairlockdoorlocked.bool__content)) = (Boolean.to_int((Boolean.of_int(0))))) in (
+   abstract ensures {true}(let _ = (Main__outerairlockdoorlocked.outerairlockdoorlocked.int__content = 0) in (
    ()))
    end  )
 end
 
-(* Module for checking contracts and absence of run-time errors in subprogram "canperformoperations" defined at main.ads:77, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+(* Module for checking contracts and absence of run-time errors in subprogram "canperformoperations" defined at main.ads:97, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
 module Main__canperformoperations__subprogram_def
  use import "_gnatprove_standard".Main
  use import "int".Int
- use        "_gnatprove_standard".Boolean
+ use        Main__status___axiom
  use        Main__innerairlockdoorlocked
  use        Main__outerairlockdoorlocked
- use        Main__bothairlockdoorslocked
+ use        Main__canperformoperation
+ use        Main__status___axiom
  use        Main__innerairlockdoorlocked___axiom
  use        Main__outerairlockdoorlocked___axiom
- use        Main__bothairlockdoorslocked___axiom
+ use        Main__canperformoperation___axiom
 
- let def #"main.ads" 77 0 0#"W:diverges:N" "GP_Subp:main.ads:77" 
+ let def #"main.ads" 97 0 0#"W:diverges:N" "GP_Subp:main.ads:97" 
    (__void_param : unit)
-  requires { #"main.ads" 77 0 0# true }
-  ensures { #"main.ads" 77 0 0# (#"main.ads" 80 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:main.ads:80:14" "GP_Id:8" "comment:     Post => bothAirLockDoorsLocked = True;
-             ^ main.ads:80:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:3404" "GP_Sloc:main.ads:80:14" ( (Main__bothairlockdoorslocked.bothairlockdoorslocked.bool__content = True) <-> true ) ) )) }
+  requires { #"main.ads" 97 0 0# true }
+  ensures { #"main.ads" 97 0 0# (#"main.ads" 100 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:main.ads:100:14" "GP_Id:8" "comment:     Post => canPerformOperation = TRUE;
+             ^ main.ads:100:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:3764" "GP_Sloc:main.ads:100:14" (Main__canperformoperation.canperformoperation.int__content = 1) ) )) }
    =
-  ( () (* Assume dynamic invariants of inputs of the subprogram main.ads:77 *)
+  ( () (* Assume dynamic invariants of inputs of the subprogram main.ads:97 *)
   ;
+   assume {  (Main__status___axiom.dynamic_invariant Main__innerairlockdoorlocked.innerairlockdoorlocked.int__content True False True True) };
+   assume {  (Main__status___axiom.dynamic_invariant Main__outerairlockdoorlocked.outerairlockdoorlocked.int__content True False True True) };
+   assume {  (Main__status___axiom.dynamic_invariant Main__canperformoperation.canperformoperation.int__content True False True True) };
    assume {  true };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram main.ads:77 *)
+  () (* Declarations introduced by the compiler at the beginning of the subprogram main.ads:97 *)
   ;
-  () (* Check for RTE in the Pre of the subprogram main.ads:77 *)
+  () (* Check for RTE in the Pre of the subprogram main.ads:97 *)
   ;
-   abstract ensures {true}(let _ = ( ((Boolean.to_int(Main__bothairlockdoorslocked.bothairlockdoorslocked.bool__content)) = (Boolean.to_int((Boolean.of_int(0))))) && ( ((Boolean.to_int(Main__innerairlockdoorlocked.innerairlockdoorlocked.bool__content)) = (Boolean.to_int((Boolean.of_int(1))))) && ((Boolean.to_int(Main__outerairlockdoorlocked.outerairlockdoorlocked.bool__content)) = (Boolean.to_int((Boolean.of_int(1))))) ) ) in (
+   abstract ensures {true}(let _ = ( (Main__canperformoperation.canperformoperation.int__content = 0) && ( (Main__innerairlockdoorlocked.innerairlockdoorlocked.int__content = 1) && (Main__outerairlockdoorlocked.outerairlockdoorlocked.int__content = 1) ) ) in (
    ()))
    end ;
-  () (* Assume Pre of the subprogram main.ads:77 *)
+  () (* Assume Pre of the subprogram main.ads:97 *)
   ;
-   assume {  ( ( (Main__bothairlockdoorslocked.bothairlockdoorslocked.bool__content = True) <-> false ) /\ ( ( (Main__innerairlockdoorlocked.innerairlockdoorlocked.bool__content = True) <-> true ) /\ ( (Main__outerairlockdoorlocked.outerairlockdoorlocked.bool__content = True) <-> true ) ) ) };
+   assume {  ( (Main__canperformoperation.canperformoperation.int__content = 0) /\ ( (Main__innerairlockdoorlocked.innerairlockdoorlocked.int__content = 1) /\ (Main__outerairlockdoorlocked.outerairlockdoorlocked.int__content = 1) ) ) };
    try
    ( ( "GP_Sloc:main.adb:72:7" (#"main.adb" 72 0 0# ()) );
-   ( "GP_Sloc:main.adb:72:30" (#"main.adb" 72 0 0# #"main.adb" 72 0 0# Main__bothairlockdoorslocked.bothairlockdoorslocked.bool__content <- ( (Boolean.of_int(1)) )) );
+   ( "GP_Sloc:main.adb:72:27" (#"main.adb" 72 0 0# #"main.adb" 72 0 0# Main__canperformoperation.canperformoperation.int__content <- ( 1 )) );
     raise Return__exc )
   with
    Return__exc -> ()
   end;
-   abstract ensures {true}(let _ = ((Boolean.to_int(Main__bothairlockdoorslocked.bothairlockdoorslocked.bool__content)) = (Boolean.to_int((Boolean.of_int(1))))) in (
+   abstract ensures {true}(let _ = (Main__canperformoperation.canperformoperation.int__content = 1) in (
+   ()))
+   end  )
+end
+
+(* Module for checking contracts and absence of run-time errors in subprogram "nooxygenleftaction" defined at main.ads:112, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+module Main__nooxygenleftaction__subprogram_def
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Main__status___axiom
+ use        Main__canperformoperation
+ use        Main__oxygenemptywarning
+ use        Main__emergencyoperation
+ use        Main__status___axiom
+ use        Main__canperformoperation___axiom
+ use        Main__oxygenemptywarning___axiom
+ use        Main__emergencyoperation___axiom
+
+ let def #"main.ads" 112 0 0#"W:diverges:N" "GP_Subp:main.ads:112" 
+   (__void_param : unit)
+  requires { #"main.ads" 112 0 0# true }
+  ensures { #"main.ads" 112 0 0# (#"main.ads" 115 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:main.ads:115:14" "GP_Id:9" "comment:     Post => emergencyOperation = TRUE;
+             ^ main.ads:115:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:3867" "GP_Sloc:main.ads:115:14" (Main__emergencyoperation.emergencyoperation.int__content = 1) ) )) }
+   =
+  ( () (* Assume dynamic invariants of inputs of the subprogram main.ads:112 *)
+  ;
+   assume {  (Main__status___axiom.dynamic_invariant Main__canperformoperation.canperformoperation.int__content True False True True) };
+   assume {  (Main__status___axiom.dynamic_invariant Main__oxygenemptywarning.oxygenemptywarning.int__content True False True True) };
+   assume {  (Main__status___axiom.dynamic_invariant Main__emergencyoperation.emergencyoperation.int__content True False True True) };
+   assume {  true };
+  () (* Declarations introduced by the compiler at the beginning of the subprogram main.ads:112 *)
+  ;
+  () (* Check for RTE in the Pre of the subprogram main.ads:112 *)
+  ;
+   abstract ensures {true}(let _ = ( (Main__emergencyoperation.emergencyoperation.int__content = 0) && ( (Main__oxygenemptywarning.oxygenemptywarning.int__content = 1) && (Main__canperformoperation.canperformoperation.int__content = 1) ) ) in (
+   ()))
+   end ;
+  () (* Assume Pre of the subprogram main.ads:112 *)
+  ;
+   assume {  ( (Main__emergencyoperation.emergencyoperation.int__content = 0) /\ ( (Main__oxygenemptywarning.oxygenemptywarning.int__content = 1) /\ (Main__canperformoperation.canperformoperation.int__content = 1) ) ) };
+   try
+   ( ( "GP_Sloc:main.adb:86:7" (#"main.adb" 86 0 0# ()) );
+   ( "GP_Sloc:main.adb:86:26" (#"main.adb" 86 0 0# #"main.adb" 86 0 0# Main__emergencyoperation.emergencyoperation.int__content <- ( 1 )) );
+    raise Return__exc )
+  with
+   Return__exc -> ()
+  end;
+   abstract ensures {true}(let _ = (Main__emergencyoperation.emergencyoperation.int__content = 1) in (
+   ()))
+   end  )
+end
+
+(* Module for checking contracts and absence of run-time errors in subprogram "reactoroverheatingaction" defined at main.ads:122, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+module Main__reactoroverheatingaction__subprogram_def
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Main__status___axiom
+ use        Main__canperformoperation
+ use        Main__reactoroverheating
+ use        Main__emergencyoperation
+ use        Main__status___axiom
+ use        Main__canperformoperation___axiom
+ use        Main__reactoroverheating___axiom
+ use        Main__emergencyoperation___axiom
+
+ let def #"main.ads" 122 0 0#"W:diverges:N" "GP_Subp:main.ads:122" 
+   (__void_param : unit)
+  requires { #"main.ads" 122 0 0# true }
+  ensures { #"main.ads" 122 0 0# (#"main.ads" 125 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:main.ads:125:14" "GP_Id:10" "comment:     Post => emergencyOperation = TRUE;
+             ^ main.ads:125:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:3970" "GP_Sloc:main.ads:125:14" (Main__emergencyoperation.emergencyoperation.int__content = 1) ) )) }
+   =
+  ( () (* Assume dynamic invariants of inputs of the subprogram main.ads:122 *)
+  ;
+   assume {  (Main__status___axiom.dynamic_invariant Main__canperformoperation.canperformoperation.int__content True False True True) };
+   assume {  (Main__status___axiom.dynamic_invariant Main__reactoroverheating.reactoroverheating.int__content True False True True) };
+   assume {  (Main__status___axiom.dynamic_invariant Main__emergencyoperation.emergencyoperation.int__content True False True True) };
+   assume {  true };
+  () (* Declarations introduced by the compiler at the beginning of the subprogram main.ads:122 *)
+  ;
+  () (* Check for RTE in the Pre of the subprogram main.ads:122 *)
+  ;
+   abstract ensures {true}(let _ = ( (Main__emergencyoperation.emergencyoperation.int__content = 0) && ( (Main__reactoroverheating.reactoroverheating.int__content = 1) && (Main__canperformoperation.canperformoperation.int__content = 1) ) ) in (
+   ()))
+   end ;
+  () (* Assume Pre of the subprogram main.ads:122 *)
+  ;
+   assume {  ( (Main__emergencyoperation.emergencyoperation.int__content = 0) /\ ( (Main__reactoroverheating.reactoroverheating.int__content = 1) /\ (Main__canperformoperation.canperformoperation.int__content = 1) ) ) };
+   try
+   ( ( "GP_Sloc:main.adb:96:7" (#"main.adb" 96 0 0# ()) );
+   ( "GP_Sloc:main.adb:96:26" (#"main.adb" 96 0 0# #"main.adb" 96 0 0# Main__emergencyoperation.emergencyoperation.int__content <- ( 1 )) );
+    raise Return__exc )
+  with
+   Return__exc -> ()
+  end;
+   abstract ensures {true}(let _ = (Main__emergencyoperation.emergencyoperation.int__content = 1) in (
    ()))
    end  )
 end
