@@ -11,7 +11,27 @@
       "spark": "all"
     },
     {
-      "name": "Main.closeOuterAirLockDoor",
+      "name": "Main.CloseOuterAirLockDoor",
+      "sloc": [
+        {
+          "file": "main.ads",
+          "line": 28
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "Main.CloseInnerAirLockDoor",
+      "sloc": [
+        {
+          "file": "main.ads",
+          "line": 34
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "Main.OpenOuterAirLockDoor",
       "sloc": [
         {
           "file": "main.ads",
@@ -21,87 +41,77 @@
       "spark": "all"
     },
     {
-      "name": "Main.openOuterAirLockDoor",
+      "name": "Main.OpenInnerAirLockDoor",
       "sloc": [
         {
           "file": "main.ads",
-          "line": 45
+          "line": 46
         }
       ],
       "spark": "all"
     },
     {
-      "name": "Main.closeInnerAirLockDoor",
+      "name": "Main.LockOuterDoor",
       "sloc": [
         {
           "file": "main.ads",
-          "line": 52
+          "line": 60
         }
       ],
       "spark": "all"
     },
     {
-      "name": "Main.openInnerAirLockDoor",
+      "name": "Main.UnlockOuterDoor",
       "sloc": [
         {
           "file": "main.ads",
-          "line": 57
+          "line": 66
         }
       ],
       "spark": "all"
     },
     {
-      "name": "Main.lockInnerAirLockDoor",
+      "name": "Main.LockInnerDoor",
       "sloc": [
         {
           "file": "main.ads",
-          "line": 69
+          "line": 72
         }
       ],
       "spark": "all"
     },
     {
-      "name": "Main.lockOuterAirLockDoor",
+      "name": "Main.UnlockInnerDoor",
       "sloc": [
         {
           "file": "main.ads",
-          "line": 76
+          "line": 78
         }
       ],
       "spark": "all"
     },
     {
-      "name": "Main.unlockInnerAirLockDoor",
+      "name": "Main.AllowOperation",
       "sloc": [
         {
           "file": "main.ads",
-          "line": 83
+          "line": 84
         }
       ],
       "spark": "all"
     },
     {
-      "name": "Main.unlockOuterAirLockDoor",
+      "name": "Main.ProhibitOperation",
       "sloc": [
         {
           "file": "main.ads",
-          "line": 90
+          "line": 89
         }
       ],
       "spark": "all"
     },
     {
-      "name": "Main.canPerformOperations",
-      "sloc": [
-        {
-          "file": "main.ads",
-          "line": 97
-        }
-      ],
-      "spark": "all"
-    },
-    {
-      "name": "Main.noOxygenLeftAction",
+      "name": "Main.OxygenTankLow",
       "sloc": [
         {
           "file": "main.ads",
@@ -111,31 +121,201 @@
       "spark": "all"
     },
     {
-      "name": "Main.reactorOverheatingAction",
+      "name": "Main.SoundOxygenLowAlarm",
       "sloc": [
         {
           "file": "main.ads",
-          "line": 122
+          "line": 118
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "Main.TurnOffOxygenLowAlarm",
+      "sloc": [
+        {
+          "file": "main.ads",
+          "line": 124
         }
       ],
       "spark": "all"
     }
   ],
   "flow": [
+    {
+      "file": "main.ads",
+      "line": 90,
+      "col": 27,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "Main.ProhibitOperation",
+        "sloc": [
+          {
+            "file": "main.ads",
+            "line": 89
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "main__flow__219.trace",
+      "how_proved": "flow"
+    },
+    {
+      "file": "main.ads",
+      "line": 92,
+      "col": 37,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "Main.ProhibitOperation",
+        "sloc": [
+          {
+            "file": "main.ads",
+            "line": 89
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "main__flow__220.trace",
+      "how_proved": "flow"
+    },
+    {
+      "file": "main.adb",
+      "line": 78,
+      "col": 26,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "Main.OxygenTankLow",
+        "sloc": [
+          {
+            "file": "main.ads",
+            "line": 112
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "main__flow__256.trace",
+      "how_proved": "flow"
+    },
+    {
+      "file": "main.adb",
+      "line": 79,
+      "col": 10,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "Main.OxygenTankLow",
+        "sloc": [
+          {
+            "file": "main.ads",
+            "line": 112
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "main__flow__257.trace",
+      "how_proved": "flow"
+    },
+    {
+      "file": "main.adb",
+      "line": 80,
+      "col": 24,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "Main.OxygenTankLow",
+        "sloc": [
+          {
+            "file": "main.ads",
+            "line": 112
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "main__flow__258.trace",
+      "how_proved": "flow"
+    },
+    {
+      "file": "main.adb",
+      "line": 77,
+      "col": 36,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "Main.OxygenTankLow",
+        "sloc": [
+          {
+            "file": "main.ads",
+            "line": 112
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "main__flow__259.trace",
+      "how_proved": "flow"
+    },
+    {
+      "file": "main.ads",
+      "line": 85,
+      "col": 27,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "Main.AllowOperation",
+        "sloc": [
+          {
+            "file": "main.ads",
+            "line": 84
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "main__flow__330.trace",
+      "how_proved": "flow"
+    },
+    {
+      "file": "main.ads",
+      "line": 87,
+      "col": 37,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "Main.AllowOperation",
+        "sloc": [
+          {
+            "file": "main.ads",
+            "line": 84
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "main__flow__331.trace",
+      "how_proved": "flow"
+    }
   ],
   "proof": [
     {
       "file": "main.ads",
-      "line": 100,
+      "line": 87,
       "col": 14,
       "rule": "VC_POSTCONDITION",
       "severity": "info",
       "entity": {
-        "name": "Main.canPerformOperations",
+        "name": "Main.AllowOperation",
         "sloc": [
           {
             "file": "main.ads",
-            "line": 97
+            "line": 84
           }
         ]
       },
@@ -153,7 +333,7 @@
         }
       ],
       "check_file": "main.ads",
-      "check_line": 100,
+      "check_line": 87,
       "check_col": 14,
       "how_proved": "prover",
       "stats": {
@@ -166,16 +346,16 @@
     },
     {
       "file": "main.ads",
-      "line": 93,
+      "line": 81,
       "col": 14,
       "rule": "VC_POSTCONDITION",
       "severity": "info",
       "entity": {
-        "name": "Main.unlockOuterAirLockDoor",
+        "name": "Main.UnlockInnerDoor",
         "sloc": [
           {
             "file": "main.ads",
-            "line": 90
+            "line": 78
           }
         ]
       },
@@ -193,7 +373,167 @@
         }
       ],
       "check_file": "main.ads",
-      "check_line": 93,
+      "check_line": 81,
+      "check_col": 14,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "main.ads",
+      "line": 127,
+      "col": 14,
+      "rule": "VC_POSTCONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "Main.TurnOffOxygenLowAlarm",
+        "sloc": [
+          {
+            "file": "main.ads",
+            "line": 124
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 2.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "main.ads",
+      "check_line": 127,
+      "check_col": 14,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 1.99999995529652E-02
+        }
+      }
+    },
+    {
+      "file": "main.ads",
+      "line": 121,
+      "col": 14,
+      "rule": "VC_POSTCONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "Main.SoundOxygenLowAlarm",
+        "sloc": [
+          {
+            "file": "main.ads",
+            "line": 118
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "main.ads",
+      "check_line": 121,
+      "check_col": 14,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "main.ads",
+      "line": 92,
+      "col": 14,
+      "rule": "VC_POSTCONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "Main.ProhibitOperation",
+        "sloc": [
+          {
+            "file": "main.ads",
+            "line": 89
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "main.ads",
+      "check_line": 92,
+      "check_col": 14,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "main.ads",
+      "line": 31,
+      "col": 14,
+      "rule": "VC_POSTCONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "Main.CloseOuterAirLockDoor",
+        "sloc": [
+          {
+            "file": "main.ads",
+            "line": 28
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "main.ads",
+      "check_line": 31,
       "check_col": 14,
       "how_proved": "prover",
       "stats": {
@@ -211,7 +551,7 @@
       "rule": "VC_POSTCONDITION",
       "severity": "info",
       "entity": {
-        "name": "Main.noOxygenLeftAction",
+        "name": "Main.OxygenTankLow",
         "sloc": [
           {
             "file": "main.ads",
@@ -246,12 +586,252 @@
     },
     {
       "file": "main.ads",
+      "line": 75,
+      "col": 14,
+      "rule": "VC_POSTCONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "Main.LockInnerDoor",
+        "sloc": [
+          {
+            "file": "main.ads",
+            "line": 72
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "main.ads",
+      "check_line": 75,
+      "check_col": 14,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "main.adb",
+      "line": 80,
+      "col": 36,
+      "rule": "VC_RANGE_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "Main.OxygenTankLow",
+        "sloc": [
+          {
+            "file": "main.ads",
+            "line": 112
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "main.adb",
+      "check_line": 80,
+      "check_col": 36,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "main.ads",
+      "line": 49,
+      "col": 14,
+      "rule": "VC_POSTCONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "Main.OpenInnerAirLockDoor",
+        "sloc": [
+          {
+            "file": "main.ads",
+            "line": 46
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "main.ads",
+      "check_line": 49,
+      "check_col": 14,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "main.ads",
+      "line": 63,
+      "col": 14,
+      "rule": "VC_POSTCONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "Main.LockOuterDoor",
+        "sloc": [
+          {
+            "file": "main.ads",
+            "line": 60
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "main.ads",
+      "check_line": 63,
+      "check_col": 14,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "main.ads",
+      "line": 69,
+      "col": 14,
+      "rule": "VC_POSTCONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "Main.UnlockOuterDoor",
+        "sloc": [
+          {
+            "file": "main.ads",
+            "line": 66
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "main.ads",
+      "check_line": 69,
+      "check_col": 14,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "main.ads",
+      "line": 37,
+      "col": 14,
+      "rule": "VC_POSTCONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "Main.CloseInnerAirLockDoor",
+        "sloc": [
+          {
+            "file": "main.ads",
+            "line": 34
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "main.ads",
+      "check_line": 37,
+      "check_col": 14,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "main.ads",
       "line": 43,
       "col": 14,
       "rule": "VC_POSTCONDITION",
       "severity": "info",
       "entity": {
-        "name": "Main.closeOuterAirLockDoor",
+        "name": "Main.OpenOuterAirLockDoor",
         "sloc": [
           {
             "file": "main.ads",
@@ -283,286 +863,6 @@
           "max_time": 0.00000000000000E+00
         }
       }
-    },
-    {
-      "file": "main.ads",
-      "line": 125,
-      "col": 14,
-      "rule": "VC_POSTCONDITION",
-      "severity": "info",
-      "entity": {
-        "name": "Main.reactorOverheatingAction",
-        "sloc": [
-          {
-            "file": "main.ads",
-            "line": 122
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "main.ads",
-      "check_line": 125,
-      "check_col": 14,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 1,
-          "max_steps": 1,
-          "max_time": 0.00000000000000E+00
-        }
-      }
-    },
-    {
-      "file": "main.ads",
-      "line": 86,
-      "col": 14,
-      "rule": "VC_POSTCONDITION",
-      "severity": "info",
-      "entity": {
-        "name": "Main.unlockInnerAirLockDoor",
-        "sloc": [
-          {
-            "file": "main.ads",
-            "line": 83
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "main.ads",
-      "check_line": 86,
-      "check_col": 14,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 1,
-          "max_steps": 1,
-          "max_time": 0.00000000000000E+00
-        }
-      }
-    },
-    {
-      "file": "main.ads",
-      "line": 60,
-      "col": 14,
-      "rule": "VC_POSTCONDITION",
-      "severity": "info",
-      "entity": {
-        "name": "Main.openInnerAirLockDoor",
-        "sloc": [
-          {
-            "file": "main.ads",
-            "line": 57
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "main.ads",
-      "check_line": 60,
-      "check_col": 14,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 1,
-          "max_steps": 1,
-          "max_time": 0.00000000000000E+00
-        }
-      }
-    },
-    {
-      "file": "main.ads",
-      "line": 72,
-      "col": 14,
-      "rule": "VC_POSTCONDITION",
-      "severity": "info",
-      "entity": {
-        "name": "Main.lockInnerAirLockDoor",
-        "sloc": [
-          {
-            "file": "main.ads",
-            "line": 69
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "main.ads",
-      "check_line": 72,
-      "check_col": 14,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 1,
-          "max_steps": 1,
-          "max_time": 0.00000000000000E+00
-        }
-      }
-    },
-    {
-      "file": "main.ads",
-      "line": 79,
-      "col": 14,
-      "rule": "VC_POSTCONDITION",
-      "severity": "info",
-      "entity": {
-        "name": "Main.lockOuterAirLockDoor",
-        "sloc": [
-          {
-            "file": "main.ads",
-            "line": 76
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "main.ads",
-      "check_line": 79,
-      "check_col": 14,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 1,
-          "max_steps": 1,
-          "max_time": 0.00000000000000E+00
-        }
-      }
-    },
-    {
-      "file": "main.ads",
-      "line": 48,
-      "col": 14,
-      "rule": "VC_POSTCONDITION",
-      "severity": "info",
-      "entity": {
-        "name": "Main.openOuterAirLockDoor",
-        "sloc": [
-          {
-            "file": "main.ads",
-            "line": 45
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "main.ads",
-      "check_line": 48,
-      "check_col": 14,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 1,
-          "max_steps": 1,
-          "max_time": 0.00000000000000E+00
-        }
-      }
-    },
-    {
-      "file": "main.ads",
-      "line": 55,
-      "col": 14,
-      "rule": "VC_POSTCONDITION",
-      "severity": "info",
-      "entity": {
-        "name": "Main.closeInnerAirLockDoor",
-        "sloc": [
-          {
-            "file": "main.ads",
-            "line": 52
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "main.ads",
-      "check_line": 55,
-      "check_col": 14,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 1,
-          "max_steps": 1,
-          "max_time": 0.00000000000000E+00
-        }
-      }
     }
   ],
   "assumptions": [
@@ -570,9 +870,169 @@
       "assumptions": [
       ],
       "claim": {
+        "predicate": "CLAIM_POST",
+        "arg": {
+          "name": "Main.SoundOxygenLowAlarm",
+          "sloc": [
+            {
+              "file": "main.ads",
+              "line": 118
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Main.ProhibitOperation",
+          "sloc": [
+            {
+              "file": "main.ads",
+              "line": 89
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
         "predicate": "CLAIM_AORTE",
         "arg": {
-          "name": "Main.noOxygenLeftAction",
+          "name": "Main.ProhibitOperation",
+          "sloc": [
+            {
+              "file": "main.ads",
+              "line": 89
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Main.SoundOxygenLowAlarm",
+          "sloc": [
+            {
+              "file": "main.ads",
+              "line": 118
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Main.SoundOxygenLowAlarm",
+          "sloc": [
+            {
+              "file": "main.ads",
+              "line": 118
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_POST",
+        "arg": {
+          "name": "Main.CloseOuterAirLockDoor",
+          "sloc": [
+            {
+              "file": "main.ads",
+              "line": 28
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Main.CloseOuterAirLockDoor",
+          "sloc": [
+            {
+              "file": "main.ads",
+              "line": 28
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Main.CloseOuterAirLockDoor",
+          "sloc": [
+            {
+              "file": "main.ads",
+              "line": 28
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_POST",
+        "arg": {
+          "name": "Main.OxygenTankLow",
+          "sloc": [
+            {
+              "file": "main.ads",
+              "line": 112
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Main.OxygenTankLow",
+          "sloc": [
+            {
+              "file": "main.ads",
+              "line": 112
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Main.OxygenTankLow",
           "sloc": [
             {
               "file": "main.ads",
@@ -588,43 +1048,11 @@
       "claim": {
         "predicate": "CLAIM_POST",
         "arg": {
-          "name": "Main.reactorOverheatingAction",
+          "name": "Main.UnlockOuterDoor",
           "sloc": [
             {
               "file": "main.ads",
-              "line": 122
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_EFFECTS",
-        "arg": {
-          "name": "Main.reactorOverheatingAction",
-          "sloc": [
-            {
-              "file": "main.ads",
-              "line": 122
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_AORTE",
-        "arg": {
-          "name": "Main.reactorOverheatingAction",
-          "sloc": [
-            {
-              "file": "main.ads",
-              "line": 122
+              "line": 66
             }
           ]
         }
@@ -636,11 +1064,75 @@
       "claim": {
         "predicate": "CLAIM_POST",
         "arg": {
-          "name": "Main.openInnerAirLockDoor",
+          "name": "Main.OpenInnerAirLockDoor",
           "sloc": [
             {
               "file": "main.ads",
-              "line": 57
+              "line": 46
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Main.UnlockOuterDoor",
+          "sloc": [
+            {
+              "file": "main.ads",
+              "line": 66
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Main.UnlockOuterDoor",
+          "sloc": [
+            {
+              "file": "main.ads",
+              "line": 66
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Main.OpenInnerAirLockDoor",
+          "sloc": [
+            {
+              "file": "main.ads",
+              "line": 46
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Main.OpenInnerAirLockDoor",
+          "sloc": [
+            {
+              "file": "main.ads",
+              "line": 46
             }
           ]
         }
@@ -652,75 +1144,11 @@
       "claim": {
         "predicate": "CLAIM_POST",
         "arg": {
-          "name": "Main.unlockOuterAirLockDoor",
+          "name": "Main.CloseInnerAirLockDoor",
           "sloc": [
             {
               "file": "main.ads",
-              "line": 90
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_EFFECTS",
-        "arg": {
-          "name": "Main.openInnerAirLockDoor",
-          "sloc": [
-            {
-              "file": "main.ads",
-              "line": 57
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_AORTE",
-        "arg": {
-          "name": "Main.openInnerAirLockDoor",
-          "sloc": [
-            {
-              "file": "main.ads",
-              "line": 57
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_EFFECTS",
-        "arg": {
-          "name": "Main.unlockOuterAirLockDoor",
-          "sloc": [
-            {
-              "file": "main.ads",
-              "line": 90
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_AORTE",
-        "arg": {
-          "name": "Main.unlockOuterAirLockDoor",
-          "sloc": [
-            {
-              "file": "main.ads",
-              "line": 90
+              "line": 34
             }
           ]
         }
@@ -732,11 +1160,11 @@
       "claim": {
         "predicate": "CLAIM_POST",
         "arg": {
-          "name": "Main.lockInnerAirLockDoor",
+          "name": "Main.LockOuterDoor",
           "sloc": [
             {
               "file": "main.ads",
-              "line": 69
+              "line": 60
             }
           ]
         }
@@ -748,11 +1176,27 @@
       "claim": {
         "predicate": "CLAIM_EFFECTS",
         "arg": {
-          "name": "Main.lockInnerAirLockDoor",
+          "name": "Main.CloseInnerAirLockDoor",
           "sloc": [
             {
               "file": "main.ads",
-              "line": 69
+              "line": 34
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Main.LockOuterDoor",
+          "sloc": [
+            {
+              "file": "main.ads",
+              "line": 60
             }
           ]
         }
@@ -764,11 +1208,187 @@
       "claim": {
         "predicate": "CLAIM_AORTE",
         "arg": {
-          "name": "Main.lockInnerAirLockDoor",
+          "name": "Main.CloseInnerAirLockDoor",
           "sloc": [
             {
               "file": "main.ads",
-              "line": 69
+              "line": 34
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Main.LockOuterDoor",
+          "sloc": [
+            {
+              "file": "main.ads",
+              "line": 60
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_POST",
+        "arg": {
+          "name": "Main.UnlockInnerDoor",
+          "sloc": [
+            {
+              "file": "main.ads",
+              "line": 78
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Main.UnlockInnerDoor",
+          "sloc": [
+            {
+              "file": "main.ads",
+              "line": 78
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Main.UnlockInnerDoor",
+          "sloc": [
+            {
+              "file": "main.ads",
+              "line": 78
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_POST",
+        "arg": {
+          "name": "Main.TurnOffOxygenLowAlarm",
+          "sloc": [
+            {
+              "file": "main.ads",
+              "line": 124
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Main.TurnOffOxygenLowAlarm",
+          "sloc": [
+            {
+              "file": "main.ads",
+              "line": 124
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_POST",
+        "arg": {
+          "name": "Main.LockInnerDoor",
+          "sloc": [
+            {
+              "file": "main.ads",
+              "line": 72
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Main.TurnOffOxygenLowAlarm",
+          "sloc": [
+            {
+              "file": "main.ads",
+              "line": 124
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Main.LockInnerDoor",
+          "sloc": [
+            {
+              "file": "main.ads",
+              "line": 72
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Main.LockInnerDoor",
+          "sloc": [
+            {
+              "file": "main.ads",
+              "line": 72
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_POST",
+        "arg": {
+          "name": "Main.OpenOuterAirLockDoor",
+          "sloc": [
+            {
+              "file": "main.ads",
+              "line": 40
             }
           ]
         }
@@ -794,169 +1414,9 @@
       "assumptions": [
       ],
       "claim": {
-        "predicate": "CLAIM_POST",
-        "arg": {
-          "name": "Main.openOuterAirLockDoor",
-          "sloc": [
-            {
-              "file": "main.ads",
-              "line": 45
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
         "predicate": "CLAIM_EFFECTS",
         "arg": {
-          "name": "Main.openOuterAirLockDoor",
-          "sloc": [
-            {
-              "file": "main.ads",
-              "line": 45
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_AORTE",
-        "arg": {
-          "name": "Main.openOuterAirLockDoor",
-          "sloc": [
-            {
-              "file": "main.ads",
-              "line": 45
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_POST",
-        "arg": {
-          "name": "Main.closeInnerAirLockDoor",
-          "sloc": [
-            {
-              "file": "main.ads",
-              "line": 52
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_POST",
-        "arg": {
-          "name": "Main.unlockInnerAirLockDoor",
-          "sloc": [
-            {
-              "file": "main.ads",
-              "line": 83
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_EFFECTS",
-        "arg": {
-          "name": "Main.closeInnerAirLockDoor",
-          "sloc": [
-            {
-              "file": "main.ads",
-              "line": 52
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_AORTE",
-        "arg": {
-          "name": "Main.closeInnerAirLockDoor",
-          "sloc": [
-            {
-              "file": "main.ads",
-              "line": 52
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_EFFECTS",
-        "arg": {
-          "name": "Main.unlockInnerAirLockDoor",
-          "sloc": [
-            {
-              "file": "main.ads",
-              "line": 83
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_AORTE",
-        "arg": {
-          "name": "Main.unlockInnerAirLockDoor",
-          "sloc": [
-            {
-              "file": "main.ads",
-              "line": 83
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_POST",
-        "arg": {
-          "name": "Main.closeOuterAirLockDoor",
-          "sloc": [
-            {
-              "file": "main.ads",
-              "line": 40
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_EFFECTS",
-        "arg": {
-          "name": "Main.closeOuterAirLockDoor",
+          "name": "Main.OpenOuterAirLockDoor",
           "sloc": [
             {
               "file": "main.ads",
@@ -972,7 +1432,7 @@
       "claim": {
         "predicate": "CLAIM_AORTE",
         "arg": {
-          "name": "Main.closeOuterAirLockDoor",
+          "name": "Main.OpenOuterAirLockDoor",
           "sloc": [
             {
               "file": "main.ads",
@@ -988,11 +1448,11 @@
       "claim": {
         "predicate": "CLAIM_POST",
         "arg": {
-          "name": "Main.canPerformOperations",
+          "name": "Main.AllowOperation",
           "sloc": [
             {
               "file": "main.ads",
-              "line": 97
+              "line": 84
             }
           ]
         }
@@ -1004,11 +1464,11 @@
       "claim": {
         "predicate": "CLAIM_EFFECTS",
         "arg": {
-          "name": "Main.canPerformOperations",
+          "name": "Main.AllowOperation",
           "sloc": [
             {
               "file": "main.ads",
-              "line": 97
+              "line": 84
             }
           ]
         }
@@ -1020,11 +1480,11 @@
       "claim": {
         "predicate": "CLAIM_AORTE",
         "arg": {
-          "name": "Main.canPerformOperations",
+          "name": "Main.AllowOperation",
           "sloc": [
             {
               "file": "main.ads",
-              "line": 97
+              "line": 84
             }
           ]
         }
@@ -1036,75 +1496,11 @@
       "claim": {
         "predicate": "CLAIM_POST",
         "arg": {
-          "name": "Main.lockOuterAirLockDoor",
+          "name": "Main.ProhibitOperation",
           "sloc": [
             {
               "file": "main.ads",
-              "line": 76
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_POST",
-        "arg": {
-          "name": "Main.noOxygenLeftAction",
-          "sloc": [
-            {
-              "file": "main.ads",
-              "line": 112
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_EFFECTS",
-        "arg": {
-          "name": "Main.lockOuterAirLockDoor",
-          "sloc": [
-            {
-              "file": "main.ads",
-              "line": 76
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_AORTE",
-        "arg": {
-          "name": "Main.lockOuterAirLockDoor",
-          "sloc": [
-            {
-              "file": "main.ads",
-              "line": 76
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_EFFECTS",
-        "arg": {
-          "name": "Main.noOxygenLeftAction",
-          "sloc": [
-            {
-              "file": "main.ads",
-              "line": 112
+              "line": 89
             }
           ]
         }
@@ -1112,14 +1508,14 @@
     }
   ],
   "timings": {
-    "marking": 2.44800001382828E-04,
-    "globals (basic)": 5.30100020114332E-04,
-    "globals/properties (advanced)": 1.22800003737211E-03,
-    "flow analysis": 8.11779964715242E-03,
+    "marking": 4.04399994295090E-04,
+    "globals (basic)": 6.79999997373670E-04,
+    "globals/properties (advanced)": 1.68780004605651E-03,
+    "flow analysis": 1.55192995443940E-02,
     "codepeer results": 6.70000008540228E-06,
-    "init_why_sections": 2.09599995287135E-04,
-    "translation of standard": 2.93920002877712E-03,
-    "translation of compilation unit": 5.18919993191957E-03,
-    "proof": 8.36384296417236E-01
+    "init_why_sections": 2.58099986240268E-04,
+    "translation of standard": 4.12779999896884E-03,
+    "translation of compilation unit": 8.80580022931099E-03,
+    "proof": 9.59169924259186E-01
   }
 }

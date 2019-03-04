@@ -2,99 +2,107 @@ package body Main
 with SPARK_Mode
 is
 
-
-
    ---------------------------------------------------------------------------
    -- The submarine must have at least one airlock door closed at all times --
    ---------------------------------------------------------------------------
 
-   -- Outer AirLock Door
-   procedure closeOuterAirLockDoor is
+   procedure CloseOuterAirLockDoor is
    begin
-      outerAirLockDoorClosed := TRUE;
-   end closeOuterAirLockDoor;
+      outerDoor.door := Closed;
+   end CloseOuterAirLockDoor;
 
-   procedure openOuterAirLockDoor is
+   procedure CloseInnerAirLockDoor is
    begin
-      outerAirLockDoorClosed := FALSE;
-   end openOuterAirLockDoor;
+      innerDoor.door := Closed;
+   end CloseInnerAirLockDoor;
 
-
-   -- Inner Air Lock Door
-   procedure closeInnerAirLockDoor is
+   procedure OpenOuterAirLockDoor is
    begin
-      innerAirLockDoorClosed := TRUE;
-   end closeInnerAirLockDoor;
+      outerDoor.door := Open;
+   end OpenOuterAirLockDoor;
 
-
-   procedure openInnerAirLockDoor is
+   procedure OpenInnerAirLockDoor is
    begin
-      innerAirLockDoorClosed := FALSE;
-   end openInnerAirLockDoor;
-
+      innerDoor.door := Open;
+   end OpenInnerAirLockDoor;
 
 
    -------------------------------------------------------------------------------------
    -- The submarine can perform no operations unless both doors are closed and locked --
    -------------------------------------------------------------------------------------
 
-   -- Lock Inner Air Lock Door
-   procedure lockInnerAirLockDoor is
+   procedure LockOuterDoor is
    begin
-      innerAirLockDoorLocked := TRUE;
-   end lockInnerAirLockDoor;
+      outerDoor.lock := Locked;
+   end LockOuterDoor;
 
 
-   -- Lock Outer Air Lock Door
-   procedure lockOuterAirLockDoor is
+   procedure UnlockOuterDoor is
    begin
-      outerAirLockDoorLocked := TRUE;
-   end lockOuterAirLockDoor;
+      outerDoor.lock := Unlocked;
+   end UnlockOuterDoor;
 
 
-   -- Unlock Inner Air Lock Door
-   procedure unlockInnerAirLockDoor is
+   procedure LockInnerDoor is
    begin
-      innerAirLockDoorLocked := FALSE;
-   end unlockInnerAirLockDoor;
+      innerDoor.lock := Locked;
+   end LockInnerDoor;
 
 
-   -- Unlock Outer Air Lock Door
-   procedure unlockOuterAirLockDoor is
+   procedure UnlockInnerDoor is
    begin
-      outerAirLockDoorLocked := FALSE;
-   end unlockOuterAirLockDoor;
+      innerDoor.lock := Unlocked;
+   end UnlockInnerDoor;
 
 
-   -- Allows Operations
-   procedure canPerformOperations is
+   procedure AllowOperation is
    begin
-      canPerformOperation := TRUE;
-   end canPerformOperations;
+      currentOperationStatus := Allowed;
+   end AllowOperation;
+
+
+   procedure ProhibitOperation is
+   begin
+      currentOperationStatus := Prohibited;
+   end ProhibitOperation;
+
 
    -----------------------------------------------------
    -- If the oxygen runs low, a warning must be shown --
    -----------------------------------------------------
 
+   procedure OxygenTankLow ( level : in out OxygenTank ) is
+      Position : TankLevelPercentage := level'Last;
+   begin
+      while Position > level'First loop
+         level(Position) := Nothing;
+         if Position = 10 then exit;
+         else Position := Position - 1;
+         end if;
+      end loop;
+      oxygenTankStatus := low;
+   end OxygenTankLow;
+
+
+   procedure SoundOxygenLowAlarm is
+   begin
+      oxygenTankLowAlarm := On;
+   end SoundOxygenLowAlarm;
+
+
+   procedure TurnOffOxygenLowAlarm is
+   begin
+      oxygenTankLowAlarm := Off;
+   end TurnOffOxygenLowAlarm;
+
+
    ----------------------------------------------------------
    -- If the oxygen runs out, the submarine has to surface --
    ----------------------------------------------------------
 
-   -- Surfaces the submarine when the oxygen tank is empty
-   procedure noOxygenLeftAction is
-   begin
-      emergencyOperation := TRUE;
-   end noOxygenLeftAction;
-
    ------------------------------------------------------------
    -- If the reactor overheats, the submarine has to surface --
    ------------------------------------------------------------
-
-    -- Surfaces the submarine when the reactor is overheating
-   procedure reactorOverheatingAction is
-   begin
-      emergencyOperation := TRUE;
-   end reactorOverheatingAction;
 
    -------------------------------------------------------
    -- The submarine cannot dive beneath a certain depth --

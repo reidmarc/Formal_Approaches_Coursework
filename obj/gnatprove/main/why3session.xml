@@ -16,7 +16,13 @@
   <goal name="WP_parameter def.0" expl="postcondition" proved="true">
   <proof prover="0"><result status="valid" steps="5"/></proof>
   </goal>
-  <goal name="WP_parameter def.0">
+ </transf>
+ </goal>
+</theory>
+<theory name="Main__closeinnerairlockdoor__subprogram_def" proved="true">
+ <goal name="WP_parameter def" expl="VC for def" proved="true">
+ <transf name="split_goal_wp_conj" proved="true" >
+  <goal name="WP_parameter def.0" expl="postcondition" proved="true">
   <proof prover="0"><result status="valid" steps="5"/></proof>
   </goal>
  </transf>
@@ -28,21 +34,6 @@
   <goal name="WP_parameter def.0" expl="postcondition" proved="true">
   <proof prover="0"><result status="valid" steps="5"/></proof>
   </goal>
-  <goal name="WP_parameter def.0">
-  <proof prover="0"><result status="valid" steps="5"/></proof>
-  </goal>
- </transf>
- </goal>
-</theory>
-<theory name="Main__closeinnerairlockdoor__subprogram_def" proved="true">
- <goal name="WP_parameter def" expl="VC for def" proved="true">
- <transf name="split_goal_wp_conj" proved="true" >
-  <goal name="WP_parameter def.0" expl="postcondition" proved="true">
-  <proof prover="0"><result status="valid" steps="5"/></proof>
-  </goal>
-  <goal name="WP_parameter def.0">
-  <proof prover="0"><result status="valid" steps="5"/></proof>
-  </goal>
  </transf>
  </goal>
 </theory>
@@ -52,73 +43,10 @@
   <goal name="WP_parameter def.0" expl="postcondition" proved="true">
   <proof prover="0"><result status="valid" steps="5"/></proof>
   </goal>
-  <goal name="WP_parameter def.0">
-  <proof prover="0"><result status="valid" steps="5"/></proof>
-  </goal>
  </transf>
  </goal>
 </theory>
-<theory name="Main__lockinnerairlockdoor__subprogram_def" proved="true">
- <goal name="WP_parameter def" expl="VC for def" proved="true">
- <transf name="split_goal_wp_conj" proved="true" >
-  <goal name="WP_parameter def.0" expl="postcondition" proved="true">
-  <proof prover="0"><result status="valid" steps="5"/></proof>
-  </goal>
-  <goal name="WP_parameter def.0">
-  <proof prover="0"><result status="valid" steps="5"/></proof>
-  </goal>
- </transf>
- </goal>
-</theory>
-<theory name="Main__lockouterairlockdoor__subprogram_def" proved="true">
- <goal name="WP_parameter def" expl="VC for def" proved="true">
- <transf name="split_goal_wp_conj" proved="true" >
-  <goal name="WP_parameter def.0" expl="postcondition" proved="true">
-  <proof prover="0"><result status="valid" steps="5"/></proof>
-  </goal>
-  <goal name="WP_parameter def.0">
-  <proof prover="0"><result status="valid" steps="5"/></proof>
-  </goal>
- </transf>
- </goal>
-</theory>
-<theory name="Main__unlockinnerairlockdoor__subprogram_def" proved="true">
- <goal name="WP_parameter def" expl="VC for def" proved="true">
- <transf name="split_goal_wp_conj" proved="true" >
-  <goal name="WP_parameter def.0" expl="postcondition" proved="true">
-  <proof prover="0"><result status="valid" steps="5"/></proof>
-  </goal>
-  <goal name="WP_parameter def.0">
-  <proof prover="0"><result status="valid" steps="5"/></proof>
-  </goal>
- </transf>
- </goal>
-</theory>
-<theory name="Main__unlockouterairlockdoor__subprogram_def" proved="true">
- <goal name="WP_parameter def" expl="VC for def" proved="true">
- <transf name="split_goal_wp_conj" proved="true" >
-  <goal name="WP_parameter def.0" expl="postcondition" proved="true">
-  <proof prover="0"><result status="valid" steps="5"/></proof>
-  </goal>
-  <goal name="WP_parameter def.0">
-  <proof prover="0"><result status="valid" steps="5"/></proof>
-  </goal>
- </transf>
- </goal>
-</theory>
-<theory name="Main__canperformoperations__subprogram_def" proved="true">
- <goal name="WP_parameter def" expl="VC for def" proved="true">
- <transf name="split_goal_wp_conj" proved="true" >
-  <goal name="WP_parameter def.0" expl="postcondition" proved="true">
-  <proof prover="0"><result status="valid" steps="5"/></proof>
-  </goal>
-  <goal name="WP_parameter def.0">
-  <proof prover="0"><result status="valid" steps="5"/></proof>
-  </goal>
- </transf>
- </goal>
-</theory>
-<theory name="Main__nooxygenleftaction__subprogram_def" proved="true">
+<theory name="Main__lockouterdoor__subprogram_def" proved="true">
  <goal name="WP_parameter def" expl="VC for def" proved="true">
  <transf name="split_goal_wp_conj" proved="true" >
   <goal name="WP_parameter def.0" expl="postcondition" proved="true">
@@ -127,7 +55,73 @@
  </transf>
  </goal>
 </theory>
-<theory name="Main__reactoroverheatingaction__subprogram_def" proved="true">
+<theory name="Main__unlockouterdoor__subprogram_def" proved="true">
+ <goal name="WP_parameter def" expl="VC for def" proved="true">
+ <transf name="split_goal_wp_conj" proved="true" >
+  <goal name="WP_parameter def.0" expl="postcondition" proved="true">
+  <proof prover="0"><result status="valid" steps="5"/></proof>
+  </goal>
+ </transf>
+ </goal>
+</theory>
+<theory name="Main__lockinnerdoor__subprogram_def" proved="true">
+ <goal name="WP_parameter def" expl="VC for def" proved="true">
+ <transf name="split_goal_wp_conj" proved="true" >
+  <goal name="WP_parameter def.0" expl="postcondition" proved="true">
+  <proof prover="0"><result status="valid" steps="5"/></proof>
+  </goal>
+ </transf>
+ </goal>
+</theory>
+<theory name="Main__unlockinnerdoor__subprogram_def" proved="true">
+ <goal name="WP_parameter def" expl="VC for def" proved="true">
+ <transf name="split_goal_wp_conj" proved="true" >
+  <goal name="WP_parameter def.0" expl="postcondition" proved="true">
+  <proof prover="0"><result status="valid" steps="5"/></proof>
+  </goal>
+ </transf>
+ </goal>
+</theory>
+<theory name="Main__allowoperation__subprogram_def" proved="true">
+ <goal name="WP_parameter def" expl="VC for def" proved="true">
+ <transf name="split_goal_wp_conj" proved="true" >
+  <goal name="WP_parameter def.0" expl="postcondition" proved="true">
+  <proof prover="0"><result status="valid" steps="5"/></proof>
+  </goal>
+ </transf>
+ </goal>
+</theory>
+<theory name="Main__prohibitoperation__subprogram_def" proved="true">
+ <goal name="WP_parameter def" expl="VC for def" proved="true">
+ <transf name="split_goal_wp_conj" proved="true" >
+  <goal name="WP_parameter def.0" expl="postcondition" proved="true">
+  <proof prover="0"><result status="valid" steps="5"/></proof>
+  </goal>
+ </transf>
+ </goal>
+</theory>
+<theory name="Main__oxygentanklow__subprogram_def" proved="true">
+ <goal name="WP_parameter def" expl="VC for def" proved="true">
+ <transf name="split_goal_wp_conj" proved="true" >
+  <goal name="WP_parameter def.0" expl="precondition" proved="true">
+  <proof prover="0"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="WP_parameter def.1" expl="postcondition" proved="true">
+  <proof prover="0"><result status="valid" steps="5"/></proof>
+  </goal>
+ </transf>
+ </goal>
+</theory>
+<theory name="Main__soundoxygenlowalarm__subprogram_def" proved="true">
+ <goal name="WP_parameter def" expl="VC for def" proved="true">
+ <transf name="split_goal_wp_conj" proved="true" >
+  <goal name="WP_parameter def.0" expl="postcondition" proved="true">
+  <proof prover="0"><result status="valid" steps="5"/></proof>
+  </goal>
+ </transf>
+ </goal>
+</theory>
+<theory name="Main__turnoffoxygenlowalarm__subprogram_def" proved="true">
  <goal name="WP_parameter def" expl="VC for def" proved="true">
  <transf name="split_goal_wp_conj" proved="true" >
   <goal name="WP_parameter def.0" expl="postcondition" proved="true">

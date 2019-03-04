@@ -2,128 +2,140 @@ package Main
 with SPARK_Mode
 is
 
-
-   --innerAirLockDoorClosed : Boolean := False;
-   --outerAirLockDoorClosed : Boolean := True;
-
-   --innerAirLockDoorLocked : Boolean := False;
-   --outerAirLockDoorLocked : Boolean := False;
-
-
-   --bothAirLockDoorsLocked : Boolean := False;
-
-
-   type status is new Boolean;
-
-   innerAirLockDoorClosed : status := FALSE;
-   outerAirLockDoorClosed : status := TRUE;
-
-   innerAirLockDoorLocked : status := FALSE;
-   outerAirLockDoorLocked : status := FALSE;
-
-   canPerformOperation : status := FALSE;
-
-   oxygenLowWarning : status := TRUE;
-   oxygenEmptyWarning : status := TRUE;
-
-   reactorOverheating : status := TRUE;
-
-
-   emergencyOperation : status := FALSE;
-
-
    ---------------------------------------------------------------------------
    -- The submarine must have at least one airlock door closed at all times --
    ---------------------------------------------------------------------------
 
-   -- Outer Air Lock Door
-   procedure closeOuterAirLockDoor with
-     Global => (In_Out => outerAirLockDoorClosed, Input => innerAirLockDoorClosed),
-     Pre => outerAirLockDoorClosed = FALSE and then innerAirLockDoorClosed = TRUE,
-     Post => outerAirLockDoorClosed = TRUE;
+   type DoorStatus is (Open, Closed);
+   type LockStatus is (Locked, Unlocked);
 
-   procedure openOuterAirLockDoor with
-     Global => (In_Out => outerAirLockDoorClosed, Input => (innerAirLockDoorClosed, emergencyOperation)),
-     Pre => outerAirLockDoorClosed = TRUE and then innerAirLockDoorClosed = TRUE and then emergencyOperation = FALSE,
-     Post => outerAirLockDoorClosed = FALSE;
+   type AirLockDoor is record
+      door : DoorStatus;
+      lock : LockStatus;
+   end record;
+
+   outerDoor : AirLockDoor := (door => Closed, lock => Locked);
+   innerDoor : AirLockDoor := (door => Closed, lock => Locked);
+
+   -- outerDoorClosedAndLocked : AirLockDoor := (door => Closed, lock => Locked);
+   -- outerDoorClosedAndUnlocked : AirLockDoor := (door => Closed, lock => Unlocked);
+   -- outerDoorOpenAndUnlocked: AirLockDoor := (door => Open, lock => Unlocked);
+
+   -- innerDoorClosedAndLocked : AirLockDoor := (door => Closed, lock => Locked);
+   -- innerDoorClosedAndUnlocked : AirLockDoor := (door => Closed, lock => Unlocked);
+   -- innerDoorOpenAndUnlocked: AirLockDoor := (door => Open, lock => Unlocked);
+
+   procedure CloseOuterAirLockDoor with
+     Global => (In_Out => outerDoor),
+     Pre => outerDoor.door = Open,
+     Post => outerDoor.door = Closed;
 
 
-   -- Inner Air Lock Door
-   procedure closeInnerAirLockDoor with
-     Global => (In_Out => innerAirLockDoorClosed, Input => outerAirLockDoorClosed),
-     Pre => innerAirLockDoorClosed = FALSE and then outerAirLockDoorClosed = TRUE,
-     Post => innerAirLockDoorClosed = TRUE;
+   procedure CloseInnerAirLockDoor with
+     Global => (In_Out => innerDoor),
+     Pre => innerDoor.door = Open,
+     Post => innerDoor.door = Closed;
 
-   procedure openInnerAirLockDoor with
-     Global => (In_Out => innerAirLockDoorClosed, Input => (outerAirLockDoorClosed, emergencyOperation)),
-     Pre => innerAirLockDoorClosed = TRUE and then outerAirLockDoorClosed = TRUE and then emergencyOperation = FALSE,
-     Post => innerAirLockDoorClosed = FALSE;
 
+   procedure OpenOuterAirLockDoor with
+     Global => (In_Out => outerDoor, Input => innerDoor),
+     Pre => outerDoor.door = Closed and then outerDoor.lock = Unlocked and then innerDoor.door = Closed,
+     Post => outerDoor.door = Open;
+
+
+   procedure OpenInnerAirLockDoor with
+     Global => (In_Out => innerDoor, Input => outerDoor),
+     Pre => innerDoor.door = Closed and then innerDoor.lock = Unlocked and then outerDoor.door = Closed,
+     Post => innerDoor.door = Open;
 
 
    -------------------------------------------------------------------------------------
    -- The submarine can perform no operations unless both doors are closed and locked --
    -------------------------------------------------------------------------------------
 
-   -- Lock Inner Air Lock Door
-   procedure lockInnerAirLockDoor with
-     Global => (In_Out => innerAirLockDoorLocked, Input => innerAirLockDoorClosed),
-     Pre => innerAirLockDoorLocked = FALSE and then innerAirLockDoorClosed = TRUE,
-     Post => innerAirLockDoorLocked = TRUE;
+   type OperationStatus is (Allowed, Prohibited);
+
+   currentOperationStatus : OperationStatus := Prohibited;
+
+   procedure LockOuterDoor with
+     Global => (In_Out => outerDoor),
+     Pre => outerDoor.door = Closed and then outerDoor.lock = Unlocked,
+     Post => outerDoor.lock = Locked;
 
 
-   -- Lock Outer Air Lock Door
-   procedure lockOuterAirLockDoor with
-     Global => (In_Out => outerAirLockDoorLocked, Input => outerAirLockDoorClosed),
-     Pre => outerAirLockDoorLocked = FALSE and then outerAirLockDoorClosed = TRUE,
-     Post => outerAirLockDoorLocked = TRUE;
+   procedure UnlockOuterDoor with
+     Global => (In_Out => outerDoor),
+     Pre => outerDoor.lock = Locked,
+     Post => outerDoor.lock = Unlocked;
 
 
-   -- Unlock Inner Air Lock Door
-   procedure unlockInnerAirLockDoor with
-     Global => (In_Out => innerAirLockDoorLocked, Input => emergencyOperation),
-     Pre => innerAirLockDoorLocked = TRUE and then emergencyOperation = FALSE,
-     Post => innerAirLockDoorLocked = FALSE;
+   procedure LockInnerDoor with
+     Global => (In_Out => innerDoor),
+     Pre => innerDoor.door = Closed and then innerDoor.lock = Unlocked,
+     Post => innerDoor.lock = Locked;
 
 
-   -- Unlock Outer Air Lock Door
-   procedure unlockOuterAirLockDoor with
-     Global => (In_Out => outerAirLockDoorLocked, Input => emergencyOperation),
-     Pre => outerAirLockDoorLocked = TRUE and then emergencyOperation = FALSE,
-     Post => outerAirLockDoorLocked = FALSE;
+   procedure UnlockInnerDoor with
+     Global => (In_Out => innerDoor),
+     Pre => innerDoor.lock = Locked,
+     Post => innerDoor.lock = Unlocked;
 
 
-   -- Allows Operations
-   procedure canPerformOperations with
-     Global => (In_Out => canPerformOperation, Input => (innerAirLockDoorLocked, outerAirLockDoorLocked)),
-     Pre => canPerformOperation = FALSE and then innerAirLockDoorLocked = TRUE and then outerAirLockDoorLocked = TRUE,
-     Post => canPerformOperation = TRUE;
+   procedure AllowOperation with
+     Global => (Output => currentOperationStatus, Input => (innerDoor, outerDoor)),
+     Pre => outerDoor.lock = Locked and then innerDoor.lock = Locked,
+     Post => currentOperationStatus = Allowed;
+
+   procedure ProhibitOperation with
+     Global => (Output => currentOperationStatus, Input => (innerDoor, outerDoor)),
+     Pre => outerDoor.lock = Unlocked or innerDoor.lock = Unlocked,
+     Post => currentOperationStatus = Prohibited;
 
 
    -----------------------------------------------------
    -- If the oxygen runs low, a warning must be shown --
    -----------------------------------------------------
+   type Content is (Oxygen, Nothing);
 
+   type TankLevelPercentage is range 0..100;
+
+   type OxygenTank is array (TankLevelPercentage) of Content;
+
+   type TankStatus is (Adequate, Low, Empty);
+
+   oxygenTankStatus : TankStatus := Adequate;
+
+   type Alarm is (On, Off);
+
+   oxygenTankLowAlarm : Alarm := Off;
+
+   procedure OxygenTankLow ( level : in out OxygenTank) with
+     Global => (In_Out => oxygenTankStatus),
+     Pre => oxygenTankStatus = Adequate,
+     Post => oxygenTankStatus = Low;
+
+
+   procedure SoundOxygenLowAlarm with
+     Global => (In_Out => oxygenTankLowAlarm, Input => oxygenTankStatus),
+     Pre => oxygenTankLowAlarm = Off and then oxygenTankStatus = Low,
+     Post => oxygenTankLowAlarm = On;
+
+   -- Needs works to improve logic
+   procedure TurnOffOxygenLowAlarm with
+     Global => (In_Out => oxygenTankLowAlarm, Input => oxygenTankStatus),
+     Pre => oxygenTankLowAlarm = On and then oxygenTankStatus = Adequate,
+     Post => oxygenTankLowAlarm = Off;
 
    ----------------------------------------------------------
    -- If the oxygen runs out, the submarine has to surface --
    ----------------------------------------------------------
 
-   procedure noOxygenLeftAction with
-     Global => (In_Out => emergencyOperation, Input => (oxygenEmptyWarning, canPerformOperation)),
-     Pre => emergencyOperation = FALSE and then oxygenEmptyWarning = TRUE and then canPerformOperation = TRUE,
-     Post => emergencyOperation = TRUE;
+
 
 
    ------------------------------------------------------------
    -- If the reactor overheats, the submarine has to surface --
    ------------------------------------------------------------
-
-   procedure reactorOverheatingAction with
-     Global => (In_Out => emergencyOperation, Input => (reactorOverheating, canPerformOperation)),
-     Pre => emergencyOperation = FALSE and then reactorOverheating = TRUE and then canPerformOperation = TRUE,
-     Post => emergencyOperation = TRUE;
-
 
    -------------------------------------------------------
    -- The submarine cannot dive beneath a certain depth --
