@@ -121,5 +121,14 @@
  </transf>
  </goal>
 </theory>
+<theory name="Main__turnoffoxygenlowalarm__subprogram_def" proved="true">
+ <goal name="WP_parameter def" expl="VC for def" proved="true">
+ <transf name="split_goal_wp_conj" proved="true" >
+  <goal name="WP_parameter def.0" expl="postcondition" proved="true">
+  <proof prover="0"><result status="valid" steps="5"/></proof>
+  </goal>
+ </transf>
+ </goal>
+</theory>
 </file>
 </why3session>

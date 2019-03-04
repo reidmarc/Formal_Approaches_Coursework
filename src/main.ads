@@ -109,7 +109,11 @@ is
 
    oxygenTankLowAlarm : Alarm := Off;
 
-   procedure OxygenTankLow ( level : in out OxygenTank) with
+   type RecievedWarning is (Yes, No);
+
+   oxygenTankWarningRecieved : RecievedWarning := No;
+
+   procedure OxygenTankLow (level : in out OxygenTank) with
      Global => (In_Out => oxygenTankStatus),
      Pre => oxygenTankStatus = Adequate,
      Post => oxygenTankStatus = Low;
@@ -120,10 +124,11 @@ is
      Pre => oxygenTankLowAlarm = Off and then oxygenTankStatus = Low,
      Post => oxygenTankLowAlarm = On;
 
+
    -- Needs works to improve logic
    procedure TurnOffOxygenLowAlarm with
-     Global => (In_Out => oxygenTankLowAlarm, Input => oxygenTankStatus),
-     Pre => oxygenTankLowAlarm = On and then oxygenTankStatus = Adequate,
+     Global => (In_Out => oxygenTankLowAlarm, Input => oxygenTankWarningRecieved),
+     Pre => oxygenTankLowAlarm = On and then oxygenTankWarningRecieved = Yes,
      Post => oxygenTankLowAlarm = Off;
 
    ----------------------------------------------------------

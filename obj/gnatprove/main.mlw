@@ -2467,6 +2467,63 @@ module Main__alarm__rep
  meta "inline : no" function to_rep
 
 end
+
+(* Module for axiomatizing type "recievedwarning" defined at main.ads:112, created in Gnat2Why.Types.Translate_Type *)
+module Main__recievedwarning
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type recievedwarning 
+ 
+ function first 
+   : int =
+  0
+ 
+ function last 
+   : int =
+  1
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = recievedwarning, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type recievedwarning__ref =
+  { mutable recievedwarning__content "model_trace:" "name:" : recievedwarning }
+ 
+ function recievedwarning__ref___projection 
+   (a : recievedwarning__ref) : recievedwarning =
+  a.recievedwarning__content
+ 
+ meta "model_projection" function recievedwarning__ref___projection
+ 
+ meta "inline : no" function recievedwarning__ref___projection
+ 
+ val recievedwarning__havoc 
+   (x : recievedwarning__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "recievedwarning" defined at main.ads:112, created in Gnat2Why.Types.Translate_Type *)
+module Main__recievedwarning__rep
+ use        Main__recievedwarning
+ use import "_gnatprove_standard".Main
+
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Main__recievedwarning.recievedwarning, 
+ predicate in_range = Main__recievedwarning.in_range
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
 (* Module for defining a ref holding the value of variable "outerdoor" defined at main.ads:17, created in Gnat2Why.Decls.Translate_Variable *)
 module Main__outerdoor
  use import "_gnatprove_standard".Main
@@ -2559,19 +2616,37 @@ module Main__oxygentanklowalarm___axiom
 
 end
 
-(* Module for defining a ref holding the value of variable "level" defined at main.ads:112, created in Gnat2Why.Decls.Translate_Variable *)
-module Main__oxygentanklow__level
+(* Module for defining a ref holding the value of variable "oxygentankwarningrecieved" defined at main.ads:114, created in Gnat2Why.Decls.Translate_Variable *)
+module Main__oxygentankwarningrecieved
  use import "_gnatprove_standard".Main
- use        Array__Int__Main__content
 
- val level #"main.ads" 112 0 0#"model_projected" "model_trace:3230" "name:level"  : Array__Int__Main__content.map__ref 
+ val oxygentankwarningrecieved #"main.ads" 114 0 0#"model_projected" "model_trace:3247" "name:oxygenTankWarningRecieved"  : int__ref 
  
  function attr__ATTRIBUTE_ADDRESS 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "level" defined at main.ads:112, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "oxygentankwarningrecieved" defined at main.ads:114, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Main__oxygentankwarningrecieved___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining a ref holding the value of variable "level" defined at main.ads:116, created in Gnat2Why.Decls.Translate_Variable *)
+module Main__oxygentanklow__level
+ use import "_gnatprove_standard".Main
+ use        Array__Int__Main__content
+
+ val level #"main.ads" 116 0 0#"model_projected" "model_trace:3264" "name:level"  : Array__Int__Main__content.map__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "level" defined at main.ads:116, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Main__oxygentanklow__level___axiom
  use import "_gnatprove_standard".Main
 
@@ -3028,21 +3103,21 @@ module Main__prohibitoperation
 
 end
 
-(* Module for possibly declaring a logic function for "oxygentanklow" defined at main.ads:112, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "oxygentanklow" defined at main.ads:116, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Main__oxygentanklow
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "soundoxygenlowalarm" defined at main.ads:118, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "soundoxygenlowalarm" defined at main.ads:122, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Main__soundoxygenlowalarm
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "turnoffoxygenlowalarm" defined at main.ads:124, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "turnoffoxygenlowalarm" defined at main.ads:129, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Main__turnoffoxygenlowalarm
  use import "_gnatprove_standard".Main
 
@@ -3224,6 +3299,23 @@ module Main__alarm___axiom
  
  predicate default_initial_assumption "inline" 
    (temp___expr_221 : int) (temp___skip_top_level_222 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "recievedwarning" defined at main.ads:112, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Main__recievedwarning___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Main__recievedwarning
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_227 : int) (temp___is_init_223 : bool) (temp___skip_constant_224 : bool) (temp___do_toplevel_225 : bool) (temp___do_typ_inv_226 : bool)  =
+  (if (( temp___is_init_223 \/ (Main__recievedwarning.first <= Main__recievedwarning.last) )) then (
+   (Main__recievedwarning.dynamic_property Main__recievedwarning.first Main__recievedwarning.last temp___expr_227)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_228 : int) (temp___skip_top_level_229 : bool)  =
   true
 
 end
@@ -3447,7 +3539,7 @@ module Main__prohibitoperation___axiom
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "oxygentanklow" defined at main.ads:112, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "oxygentanklow" defined at main.ads:116, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Main__oxygentanklow___axiom
  use        Main__oxygentankstatus
  use import "_gnatprove_standard".Main
@@ -3466,7 +3558,7 @@ module Main__oxygentanklow___axiom
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "soundoxygenlowalarm" defined at main.ads:118, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "soundoxygenlowalarm" defined at main.ads:122, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Main__soundoxygenlowalarm___axiom
  use        Main__oxygentanklowalarm
  use        Main__oxygentankstatus
@@ -3485,21 +3577,21 @@ module Main__soundoxygenlowalarm___axiom
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "turnoffoxygenlowalarm" defined at main.ads:124, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "turnoffoxygenlowalarm" defined at main.ads:129, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Main__turnoffoxygenlowalarm___axiom
+ use        Main__oxygentankwarningrecieved
  use        Main__oxygentanklowalarm
- use        Main__oxygentankstatus
  use import "_gnatprove_standard".Main
  use import "int".Int
- use        Main__oxygentankstatus
  use        Main__alarm___axiom
  use        Main__oxygentanklowalarm
+ use        Main__oxygentankwarningrecieved
 
  val turnoffoxygenlowalarm 
    (__void_param : unit) : unit
-  requires {  ( (Main__oxygentanklowalarm.oxygentanklowalarm.int__content = 0) /\ (Main__oxygentankstatus.oxygentankstatus.int__content = 0) ) }
+  requires {  ( (Main__oxygentanklowalarm.oxygentanklowalarm.int__content = 0) /\ (Main__oxygentankwarningrecieved.oxygentankwarningrecieved.int__content = 0) ) }
   ensures {  ( (Main__oxygentanklowalarm.oxygentanklowalarm.int__content = 1) /\ (Main__alarm___axiom.dynamic_invariant Main__oxygentanklowalarm.oxygentanklowalarm.int__content True True True True) ) }
-  reads {Main__oxygentankstatus.oxygentankstatus, Main__oxygentanklowalarm.oxygentanklowalarm}
+  reads {Main__oxygentanklowalarm.oxygentanklowalarm, Main__oxygentankwarningrecieved.oxygentankwarningrecieved}
   writes {Main__oxygentanklowalarm.oxygentanklowalarm}
 
 end
@@ -3522,6 +3614,8 @@ module Main__package_def
  use        Main__oxygentankstatus
  use        Main__alarm___axiom
  use        Main__oxygentanklowalarm
+ use        Main__recievedwarning___axiom
+ use        Main__oxygentankwarningrecieved
  use        Main__doorstatus___axiom
  use        Main__lockstatus___axiom
  use        Main__airlockdoor___axiom
@@ -3533,6 +3627,8 @@ module Main__package_def
  use        Main__oxygentankstatus___axiom
  use        Main__alarm___axiom
  use        Main__oxygentanklowalarm___axiom
+ use        Main__recievedwarning___axiom
+ use        Main__oxygentankwarningrecieved___axiom
 
  let def #"main.ads" 1 0 0#"GP_Subp:main.ads:1" "W:diverges:N" 
    (__void_param : unit)
@@ -3617,25 +3713,29 @@ module Main__package_def
   (#"main.ads" 110 0 0# ( #"main.ads" 110 0 0# Main__oxygentanklowalarm.oxygentanklowalarm.int__content <- ( 1 );
   #"main.ads" 110 0 0# assume { #"main.ads" 110 0 0# (Main__alarm___axiom.dynamic_invariant Main__oxygentanklowalarm.oxygentanklowalarm.int__content True False True True) } ));
   (#"main.ads" 112 0 0# ());
-  (#"main.ads" 115 0 0# ());
   (#"main.ads" 114 0 0# ());
-  (#"main.ads" 113 0 0# ());
-  (#"main.ads" 118 0 0# ());
-  (#"main.ads" 121 0 0# ());
-  (#"main.ads" 120 0 0# ());
-  (#"main.ads" 120 0 0# ());
+  (#"main.ads" 114 0 0# ( #"main.ads" 114 0 0# Main__oxygentankwarningrecieved.oxygentankwarningrecieved.int__content <- ( 1 );
+  #"main.ads" 114 0 0# assume { #"main.ads" 114 0 0# (Main__recievedwarning___axiom.dynamic_invariant Main__oxygentankwarningrecieved.oxygentankwarningrecieved.int__content True False True True) } ));
+  (#"main.ads" 116 0 0# ());
   (#"main.ads" 119 0 0# ());
+  (#"main.ads" 118 0 0# ());
+  (#"main.ads" 117 0 0# ());
+  (#"main.ads" 122 0 0# ());
+  (#"main.ads" 125 0 0# ());
   (#"main.ads" 124 0 0# ());
-  (#"main.ads" 127 0 0# ());
-  (#"main.ads" 126 0 0# ());
-  (#"main.ads" 126 0 0# ());
-  (#"main.ads" 125 0 0# ());
-  (#"main.ads" 125 0 0# ());
-  (#"main.ads" 125 0 0# ());
-  (#"main.ads" 125 0 0# ());
-  (#"main.ads" 125 0 0# ());
-  (#"main.ads" 125 0 0# ());
-  (#"main.ads" 125 0 0# ());
+  (#"main.ads" 124 0 0# ());
+  (#"main.ads" 123 0 0# ());
+  (#"main.ads" 129 0 0# ());
+  (#"main.ads" 132 0 0# ());
+  (#"main.ads" 131 0 0# ());
+  (#"main.ads" 131 0 0# ());
+  (#"main.ads" 130 0 0# ());
+  (#"main.ads" 130 0 0# ());
+  (#"main.ads" 130 0 0# ());
+  (#"main.ads" 130 0 0# ());
+  (#"main.ads" 130 0 0# ());
+  (#"main.ads" 130 0 0# ());
+  (#"main.ads" 130 0 0# ());
   (#"main.adb" 2 0 0# ());
   (#"main.adb" 9 0 0# ());
   (#"main.adb" 14 0 0# ());
@@ -3671,7 +3771,7 @@ module Main__closeouterairlockdoor__subprogram_def
    (__void_param : unit)
   requires { #"main.ads" 28 0 0# true }
   ensures { #"main.ads" 28 0 0# (#"main.ads" 31 0 0# ( "model_vc_post" "keep_on_simp" "GP_Sloc:main.ads:31:14" "GP_Reason:VC_POSTCONDITION" "GP_Id:0" "comment:     Post => outerDoor.door = Closed;
-             ^ main.ads:31:14:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" ( "GP_Pretty_Ada:3388" "GP_Sloc:main.ads:31:14" ((Main__doorstatus__rep.to_rep (Main__airlockdoor.rec__main__airlockdoor__door (Main__airlockdoor.__split_fields { Main__airlockdoor.__split_fields = Main__outerdoor.outerdoor__split_fields.Main__airlockdoor.__split_fields__content }))) = 1) ) )) }
+             ^ main.ads:31:14:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" ( "GP_Pretty_Ada:3422" "GP_Sloc:main.ads:31:14" ((Main__doorstatus__rep.to_rep (Main__airlockdoor.rec__main__airlockdoor__door (Main__airlockdoor.__split_fields { Main__airlockdoor.__split_fields = Main__outerdoor.outerdoor__split_fields.Main__airlockdoor.__split_fields__content }))) = 1) ) )) }
    =
   ( () (* Assume dynamic invariants of inputs of the subprogram main.ads:28 *)
   ;
@@ -3689,13 +3789,13 @@ module Main__closeouterairlockdoor__subprogram_def
    assume {  ((Main__doorstatus__rep.to_rep (Main__airlockdoor.rec__main__airlockdoor__door (Main__airlockdoor.__split_fields { Main__airlockdoor.__split_fields = Main__outerdoor.outerdoor__split_fields.Main__airlockdoor.__split_fields__content }))) = 0) };
    try
    ( ( "GP_Sloc:main.adb:11:7" (#"main.adb" 11 0 0# ()) );
-   ( "GP_Sloc:main.adb:11:22" (#"main.adb" 11 0 0# (let temp___226 = (let temp___225 = { Main__airlockdoor.__split_fields = Main__outerdoor.outerdoor__split_fields.Main__airlockdoor.__split_fields__content } in (
-    ( #"main.adb" 11 0 0# abstract ensures {true}(let _ = (Main__airlockdoor.rec__main__airlockdoor__door((Main__airlockdoor.__split_fields(temp___225)))) in (
+   ( "GP_Sloc:main.adb:11:22" (#"main.adb" 11 0 0# (let temp___233 = (let temp___232 = { Main__airlockdoor.__split_fields = Main__outerdoor.outerdoor__split_fields.Main__airlockdoor.__split_fields__content } in (
+    ( #"main.adb" 11 0 0# abstract ensures {true}(let _ = (Main__airlockdoor.rec__main__airlockdoor__door((Main__airlockdoor.__split_fields(temp___232)))) in (
      ()))
      end ;
-    { ( temp___225 ) with Main__airlockdoor.__split_fields = { ( (Main__airlockdoor.__split_fields(temp___225)) ) with Main__airlockdoor.rec__main__airlockdoor__door = (Main__doorstatus__rep.of_rep(1)) } } )))
+    { ( temp___232 ) with Main__airlockdoor.__split_fields = { ( (Main__airlockdoor.__split_fields(temp___232)) ) with Main__airlockdoor.rec__main__airlockdoor__door = (Main__doorstatus__rep.of_rep(1)) } } )))
     in (
-    #"main.adb" 11 0 0# Main__outerdoor.outerdoor__split_fields.Main__airlockdoor.__split_fields__content <- ( (Main__airlockdoor.__split_fields(temp___226)) )))
+    #"main.adb" 11 0 0# Main__outerdoor.outerdoor__split_fields.Main__airlockdoor.__split_fields__content <- ( (Main__airlockdoor.__split_fields(temp___233)) )))
    ) );
     raise Return__exc )
   with
@@ -3724,7 +3824,7 @@ module Main__closeinnerairlockdoor__subprogram_def
    (__void_param : unit)
   requires { #"main.ads" 34 0 0# true }
   ensures { #"main.ads" 34 0 0# (#"main.ads" 37 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:main.ads:37:14" "GP_Id:1" "comment:     Post => innerDoor.door = Closed;
-             ^ main.ads:37:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:3436" "GP_Sloc:main.ads:37:14" ((Main__doorstatus__rep.to_rep (Main__airlockdoor.rec__main__airlockdoor__door (Main__airlockdoor.__split_fields { Main__airlockdoor.__split_fields = Main__innerdoor.innerdoor__split_fields.Main__airlockdoor.__split_fields__content }))) = 1) ) )) }
+             ^ main.ads:37:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:3470" "GP_Sloc:main.ads:37:14" ((Main__doorstatus__rep.to_rep (Main__airlockdoor.rec__main__airlockdoor__door (Main__airlockdoor.__split_fields { Main__airlockdoor.__split_fields = Main__innerdoor.innerdoor__split_fields.Main__airlockdoor.__split_fields__content }))) = 1) ) )) }
    =
   ( () (* Assume dynamic invariants of inputs of the subprogram main.ads:34 *)
   ;
@@ -3742,13 +3842,13 @@ module Main__closeinnerairlockdoor__subprogram_def
    assume {  ((Main__doorstatus__rep.to_rep (Main__airlockdoor.rec__main__airlockdoor__door (Main__airlockdoor.__split_fields { Main__airlockdoor.__split_fields = Main__innerdoor.innerdoor__split_fields.Main__airlockdoor.__split_fields__content }))) = 0) };
    try
    ( ( "GP_Sloc:main.adb:16:7" (#"main.adb" 16 0 0# ()) );
-   ( "GP_Sloc:main.adb:16:22" (#"main.adb" 16 0 0# (let temp___228 = (let temp___227 = { Main__airlockdoor.__split_fields = Main__innerdoor.innerdoor__split_fields.Main__airlockdoor.__split_fields__content } in (
-    ( #"main.adb" 16 0 0# abstract ensures {true}(let _ = (Main__airlockdoor.rec__main__airlockdoor__door((Main__airlockdoor.__split_fields(temp___227)))) in (
+   ( "GP_Sloc:main.adb:16:22" (#"main.adb" 16 0 0# (let temp___235 = (let temp___234 = { Main__airlockdoor.__split_fields = Main__innerdoor.innerdoor__split_fields.Main__airlockdoor.__split_fields__content } in (
+    ( #"main.adb" 16 0 0# abstract ensures {true}(let _ = (Main__airlockdoor.rec__main__airlockdoor__door((Main__airlockdoor.__split_fields(temp___234)))) in (
      ()))
      end ;
-    { ( temp___227 ) with Main__airlockdoor.__split_fields = { ( (Main__airlockdoor.__split_fields(temp___227)) ) with Main__airlockdoor.rec__main__airlockdoor__door = (Main__doorstatus__rep.of_rep(1)) } } )))
+    { ( temp___234 ) with Main__airlockdoor.__split_fields = { ( (Main__airlockdoor.__split_fields(temp___234)) ) with Main__airlockdoor.rec__main__airlockdoor__door = (Main__doorstatus__rep.of_rep(1)) } } )))
     in (
-    #"main.adb" 16 0 0# Main__innerdoor.innerdoor__split_fields.Main__airlockdoor.__split_fields__content <- ( (Main__airlockdoor.__split_fields(temp___228)) )))
+    #"main.adb" 16 0 0# Main__innerdoor.innerdoor__split_fields.Main__airlockdoor.__split_fields__content <- ( (Main__airlockdoor.__split_fields(temp___235)) )))
    ) );
     raise Return__exc )
   with
@@ -3781,7 +3881,7 @@ module Main__openouterairlockdoor__subprogram_def
    (__void_param : unit)
   requires { #"main.ads" 40 0 0# true }
   ensures { #"main.ads" 40 0 0# (#"main.ads" 43 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:main.ads:43:14" "GP_Id:2" "comment:     Post => outerDoor.door = Open;
-             ^ main.ads:43:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:3537" "GP_Sloc:main.ads:43:14" ((Main__doorstatus__rep.to_rep (Main__airlockdoor.rec__main__airlockdoor__door (Main__airlockdoor.__split_fields { Main__airlockdoor.__split_fields = Main__outerdoor.outerdoor__split_fields.Main__airlockdoor.__split_fields__content }))) = 0) ) )) }
+             ^ main.ads:43:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:3571" "GP_Sloc:main.ads:43:14" ((Main__doorstatus__rep.to_rep (Main__airlockdoor.rec__main__airlockdoor__door (Main__airlockdoor.__split_fields { Main__airlockdoor.__split_fields = Main__outerdoor.outerdoor__split_fields.Main__airlockdoor.__split_fields__content }))) = 0) ) )) }
    =
   ( () (* Assume dynamic invariants of inputs of the subprogram main.ads:40 *)
   ;
@@ -3800,13 +3900,13 @@ module Main__openouterairlockdoor__subprogram_def
    assume {  ( ((Main__doorstatus__rep.to_rep (Main__airlockdoor.rec__main__airlockdoor__door (Main__airlockdoor.__split_fields { Main__airlockdoor.__split_fields = Main__outerdoor.outerdoor__split_fields.Main__airlockdoor.__split_fields__content }))) = 1) /\ ( ((Main__lockstatus__rep.to_rep (Main__airlockdoor.rec__main__airlockdoor__lock (Main__airlockdoor.__split_fields { Main__airlockdoor.__split_fields = Main__outerdoor.outerdoor__split_fields.Main__airlockdoor.__split_fields__content }))) = 1) /\ ((Main__doorstatus__rep.to_rep (Main__airlockdoor.rec__main__airlockdoor__door (Main__airlockdoor.__split_fields { Main__airlockdoor.__split_fields = Main__innerdoor.innerdoor__split_fields.Main__airlockdoor.__split_fields__content }))) = 1) ) ) };
    try
    ( ( "GP_Sloc:main.adb:21:7" (#"main.adb" 21 0 0# ()) );
-   ( "GP_Sloc:main.adb:21:22" (#"main.adb" 21 0 0# (let temp___230 = (let temp___229 = { Main__airlockdoor.__split_fields = Main__outerdoor.outerdoor__split_fields.Main__airlockdoor.__split_fields__content } in (
-    ( #"main.adb" 21 0 0# abstract ensures {true}(let _ = (Main__airlockdoor.rec__main__airlockdoor__door((Main__airlockdoor.__split_fields(temp___229)))) in (
+   ( "GP_Sloc:main.adb:21:22" (#"main.adb" 21 0 0# (let temp___237 = (let temp___236 = { Main__airlockdoor.__split_fields = Main__outerdoor.outerdoor__split_fields.Main__airlockdoor.__split_fields__content } in (
+    ( #"main.adb" 21 0 0# abstract ensures {true}(let _ = (Main__airlockdoor.rec__main__airlockdoor__door((Main__airlockdoor.__split_fields(temp___236)))) in (
      ()))
      end ;
-    { ( temp___229 ) with Main__airlockdoor.__split_fields = { ( (Main__airlockdoor.__split_fields(temp___229)) ) with Main__airlockdoor.rec__main__airlockdoor__door = (Main__doorstatus__rep.of_rep(0)) } } )))
+    { ( temp___236 ) with Main__airlockdoor.__split_fields = { ( (Main__airlockdoor.__split_fields(temp___236)) ) with Main__airlockdoor.rec__main__airlockdoor__door = (Main__doorstatus__rep.of_rep(0)) } } )))
     in (
-    #"main.adb" 21 0 0# Main__outerdoor.outerdoor__split_fields.Main__airlockdoor.__split_fields__content <- ( (Main__airlockdoor.__split_fields(temp___230)) )))
+    #"main.adb" 21 0 0# Main__outerdoor.outerdoor__split_fields.Main__airlockdoor.__split_fields__content <- ( (Main__airlockdoor.__split_fields(temp___237)) )))
    ) );
     raise Return__exc )
   with
@@ -3839,7 +3939,7 @@ module Main__openinnerairlockdoor__subprogram_def
    (__void_param : unit)
   requires { #"main.ads" 46 0 0# true }
   ensures { #"main.ads" 46 0 0# (#"main.ads" 49 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:main.ads:49:14" "GP_Id:3" "comment:     Post => innerDoor.door = Open;
-             ^ main.ads:49:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:3652" "GP_Sloc:main.ads:49:14" ((Main__doorstatus__rep.to_rep (Main__airlockdoor.rec__main__airlockdoor__door (Main__airlockdoor.__split_fields { Main__airlockdoor.__split_fields = Main__innerdoor.innerdoor__split_fields.Main__airlockdoor.__split_fields__content }))) = 0) ) )) }
+             ^ main.ads:49:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:3686" "GP_Sloc:main.ads:49:14" ((Main__doorstatus__rep.to_rep (Main__airlockdoor.rec__main__airlockdoor__door (Main__airlockdoor.__split_fields { Main__airlockdoor.__split_fields = Main__innerdoor.innerdoor__split_fields.Main__airlockdoor.__split_fields__content }))) = 0) ) )) }
    =
   ( () (* Assume dynamic invariants of inputs of the subprogram main.ads:46 *)
   ;
@@ -3858,13 +3958,13 @@ module Main__openinnerairlockdoor__subprogram_def
    assume {  ( ((Main__doorstatus__rep.to_rep (Main__airlockdoor.rec__main__airlockdoor__door (Main__airlockdoor.__split_fields { Main__airlockdoor.__split_fields = Main__innerdoor.innerdoor__split_fields.Main__airlockdoor.__split_fields__content }))) = 1) /\ ( ((Main__lockstatus__rep.to_rep (Main__airlockdoor.rec__main__airlockdoor__lock (Main__airlockdoor.__split_fields { Main__airlockdoor.__split_fields = Main__innerdoor.innerdoor__split_fields.Main__airlockdoor.__split_fields__content }))) = 1) /\ ((Main__doorstatus__rep.to_rep (Main__airlockdoor.rec__main__airlockdoor__door (Main__airlockdoor.__split_fields { Main__airlockdoor.__split_fields = Main__outerdoor.outerdoor__split_fields.Main__airlockdoor.__split_fields__content }))) = 1) ) ) };
    try
    ( ( "GP_Sloc:main.adb:26:7" (#"main.adb" 26 0 0# ()) );
-   ( "GP_Sloc:main.adb:26:22" (#"main.adb" 26 0 0# (let temp___232 = (let temp___231 = { Main__airlockdoor.__split_fields = Main__innerdoor.innerdoor__split_fields.Main__airlockdoor.__split_fields__content } in (
-    ( #"main.adb" 26 0 0# abstract ensures {true}(let _ = (Main__airlockdoor.rec__main__airlockdoor__door((Main__airlockdoor.__split_fields(temp___231)))) in (
+   ( "GP_Sloc:main.adb:26:22" (#"main.adb" 26 0 0# (let temp___239 = (let temp___238 = { Main__airlockdoor.__split_fields = Main__innerdoor.innerdoor__split_fields.Main__airlockdoor.__split_fields__content } in (
+    ( #"main.adb" 26 0 0# abstract ensures {true}(let _ = (Main__airlockdoor.rec__main__airlockdoor__door((Main__airlockdoor.__split_fields(temp___238)))) in (
      ()))
      end ;
-    { ( temp___231 ) with Main__airlockdoor.__split_fields = { ( (Main__airlockdoor.__split_fields(temp___231)) ) with Main__airlockdoor.rec__main__airlockdoor__door = (Main__doorstatus__rep.of_rep(0)) } } )))
+    { ( temp___238 ) with Main__airlockdoor.__split_fields = { ( (Main__airlockdoor.__split_fields(temp___238)) ) with Main__airlockdoor.rec__main__airlockdoor__door = (Main__doorstatus__rep.of_rep(0)) } } )))
     in (
-    #"main.adb" 26 0 0# Main__innerdoor.innerdoor__split_fields.Main__airlockdoor.__split_fields__content <- ( (Main__airlockdoor.__split_fields(temp___232)) )))
+    #"main.adb" 26 0 0# Main__innerdoor.innerdoor__split_fields.Main__airlockdoor.__split_fields__content <- ( (Main__airlockdoor.__split_fields(temp___239)) )))
    ) );
     raise Return__exc )
   with
@@ -3895,7 +3995,7 @@ module Main__lockouterdoor__subprogram_def
    (__void_param : unit)
   requires { #"main.ads" 60 0 0# true }
   ensures { #"main.ads" 60 0 0# (#"main.ads" 63 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:main.ads:63:14" "GP_Id:4" "comment:     Post => outerDoor.lock = Locked;
-             ^ main.ads:63:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:3740" "GP_Sloc:main.ads:63:14" ((Main__lockstatus__rep.to_rep (Main__airlockdoor.rec__main__airlockdoor__lock (Main__airlockdoor.__split_fields { Main__airlockdoor.__split_fields = Main__outerdoor.outerdoor__split_fields.Main__airlockdoor.__split_fields__content }))) = 0) ) )) }
+             ^ main.ads:63:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:3774" "GP_Sloc:main.ads:63:14" ((Main__lockstatus__rep.to_rep (Main__airlockdoor.rec__main__airlockdoor__lock (Main__airlockdoor.__split_fields { Main__airlockdoor.__split_fields = Main__outerdoor.outerdoor__split_fields.Main__airlockdoor.__split_fields__content }))) = 0) ) )) }
    =
   ( () (* Assume dynamic invariants of inputs of the subprogram main.ads:60 *)
   ;
@@ -3913,13 +4013,13 @@ module Main__lockouterdoor__subprogram_def
    assume {  ( ((Main__doorstatus__rep.to_rep (Main__airlockdoor.rec__main__airlockdoor__door (Main__airlockdoor.__split_fields { Main__airlockdoor.__split_fields = Main__outerdoor.outerdoor__split_fields.Main__airlockdoor.__split_fields__content }))) = 1) /\ ((Main__lockstatus__rep.to_rep (Main__airlockdoor.rec__main__airlockdoor__lock (Main__airlockdoor.__split_fields { Main__airlockdoor.__split_fields = Main__outerdoor.outerdoor__split_fields.Main__airlockdoor.__split_fields__content }))) = 1) ) };
    try
    ( ( "GP_Sloc:main.adb:36:7" (#"main.adb" 36 0 0# ()) );
-   ( "GP_Sloc:main.adb:36:22" (#"main.adb" 36 0 0# (let temp___234 = (let temp___233 = { Main__airlockdoor.__split_fields = Main__outerdoor.outerdoor__split_fields.Main__airlockdoor.__split_fields__content } in (
-    ( #"main.adb" 36 0 0# abstract ensures {true}(let _ = (Main__airlockdoor.rec__main__airlockdoor__lock((Main__airlockdoor.__split_fields(temp___233)))) in (
+   ( "GP_Sloc:main.adb:36:22" (#"main.adb" 36 0 0# (let temp___241 = (let temp___240 = { Main__airlockdoor.__split_fields = Main__outerdoor.outerdoor__split_fields.Main__airlockdoor.__split_fields__content } in (
+    ( #"main.adb" 36 0 0# abstract ensures {true}(let _ = (Main__airlockdoor.rec__main__airlockdoor__lock((Main__airlockdoor.__split_fields(temp___240)))) in (
      ()))
      end ;
-    { ( temp___233 ) with Main__airlockdoor.__split_fields = { ( (Main__airlockdoor.__split_fields(temp___233)) ) with Main__airlockdoor.rec__main__airlockdoor__lock = (Main__lockstatus__rep.of_rep(0)) } } )))
+    { ( temp___240 ) with Main__airlockdoor.__split_fields = { ( (Main__airlockdoor.__split_fields(temp___240)) ) with Main__airlockdoor.rec__main__airlockdoor__lock = (Main__lockstatus__rep.of_rep(0)) } } )))
     in (
-    #"main.adb" 36 0 0# Main__outerdoor.outerdoor__split_fields.Main__airlockdoor.__split_fields__content <- ( (Main__airlockdoor.__split_fields(temp___234)) )))
+    #"main.adb" 36 0 0# Main__outerdoor.outerdoor__split_fields.Main__airlockdoor.__split_fields__content <- ( (Main__airlockdoor.__split_fields(temp___241)) )))
    ) );
     raise Return__exc )
   with
@@ -3948,7 +4048,7 @@ module Main__unlockouterdoor__subprogram_def
    (__void_param : unit)
   requires { #"main.ads" 66 0 0# true }
   ensures { #"main.ads" 66 0 0# (#"main.ads" 69 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:main.ads:69:14" "GP_Id:5" "comment:     Post => outerDoor.lock = Unlocked;
-             ^ main.ads:69:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:3795" "GP_Sloc:main.ads:69:14" ((Main__lockstatus__rep.to_rep (Main__airlockdoor.rec__main__airlockdoor__lock (Main__airlockdoor.__split_fields { Main__airlockdoor.__split_fields = Main__outerdoor.outerdoor__split_fields.Main__airlockdoor.__split_fields__content }))) = 1) ) )) }
+             ^ main.ads:69:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:3829" "GP_Sloc:main.ads:69:14" ((Main__lockstatus__rep.to_rep (Main__airlockdoor.rec__main__airlockdoor__lock (Main__airlockdoor.__split_fields { Main__airlockdoor.__split_fields = Main__outerdoor.outerdoor__split_fields.Main__airlockdoor.__split_fields__content }))) = 1) ) )) }
    =
   ( () (* Assume dynamic invariants of inputs of the subprogram main.ads:66 *)
   ;
@@ -3966,13 +4066,13 @@ module Main__unlockouterdoor__subprogram_def
    assume {  ((Main__lockstatus__rep.to_rep (Main__airlockdoor.rec__main__airlockdoor__lock (Main__airlockdoor.__split_fields { Main__airlockdoor.__split_fields = Main__outerdoor.outerdoor__split_fields.Main__airlockdoor.__split_fields__content }))) = 0) };
    try
    ( ( "GP_Sloc:main.adb:42:7" (#"main.adb" 42 0 0# ()) );
-   ( "GP_Sloc:main.adb:42:22" (#"main.adb" 42 0 0# (let temp___236 = (let temp___235 = { Main__airlockdoor.__split_fields = Main__outerdoor.outerdoor__split_fields.Main__airlockdoor.__split_fields__content } in (
-    ( #"main.adb" 42 0 0# abstract ensures {true}(let _ = (Main__airlockdoor.rec__main__airlockdoor__lock((Main__airlockdoor.__split_fields(temp___235)))) in (
+   ( "GP_Sloc:main.adb:42:22" (#"main.adb" 42 0 0# (let temp___243 = (let temp___242 = { Main__airlockdoor.__split_fields = Main__outerdoor.outerdoor__split_fields.Main__airlockdoor.__split_fields__content } in (
+    ( #"main.adb" 42 0 0# abstract ensures {true}(let _ = (Main__airlockdoor.rec__main__airlockdoor__lock((Main__airlockdoor.__split_fields(temp___242)))) in (
      ()))
      end ;
-    { ( temp___235 ) with Main__airlockdoor.__split_fields = { ( (Main__airlockdoor.__split_fields(temp___235)) ) with Main__airlockdoor.rec__main__airlockdoor__lock = (Main__lockstatus__rep.of_rep(1)) } } )))
+    { ( temp___242 ) with Main__airlockdoor.__split_fields = { ( (Main__airlockdoor.__split_fields(temp___242)) ) with Main__airlockdoor.rec__main__airlockdoor__lock = (Main__lockstatus__rep.of_rep(1)) } } )))
     in (
-    #"main.adb" 42 0 0# Main__outerdoor.outerdoor__split_fields.Main__airlockdoor.__split_fields__content <- ( (Main__airlockdoor.__split_fields(temp___236)) )))
+    #"main.adb" 42 0 0# Main__outerdoor.outerdoor__split_fields.Main__airlockdoor.__split_fields__content <- ( (Main__airlockdoor.__split_fields(temp___243)) )))
    ) );
     raise Return__exc )
   with
@@ -4003,7 +4103,7 @@ module Main__lockinnerdoor__subprogram_def
    (__void_param : unit)
   requires { #"main.ads" 72 0 0# true }
   ensures { #"main.ads" 72 0 0# (#"main.ads" 75 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:main.ads:75:14" "GP_Id:6" "comment:     Post => innerDoor.lock = Locked;
-             ^ main.ads:75:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:3865" "GP_Sloc:main.ads:75:14" ((Main__lockstatus__rep.to_rep (Main__airlockdoor.rec__main__airlockdoor__lock (Main__airlockdoor.__split_fields { Main__airlockdoor.__split_fields = Main__innerdoor.innerdoor__split_fields.Main__airlockdoor.__split_fields__content }))) = 0) ) )) }
+             ^ main.ads:75:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:3899" "GP_Sloc:main.ads:75:14" ((Main__lockstatus__rep.to_rep (Main__airlockdoor.rec__main__airlockdoor__lock (Main__airlockdoor.__split_fields { Main__airlockdoor.__split_fields = Main__innerdoor.innerdoor__split_fields.Main__airlockdoor.__split_fields__content }))) = 0) ) )) }
    =
   ( () (* Assume dynamic invariants of inputs of the subprogram main.ads:72 *)
   ;
@@ -4021,13 +4121,13 @@ module Main__lockinnerdoor__subprogram_def
    assume {  ( ((Main__doorstatus__rep.to_rep (Main__airlockdoor.rec__main__airlockdoor__door (Main__airlockdoor.__split_fields { Main__airlockdoor.__split_fields = Main__innerdoor.innerdoor__split_fields.Main__airlockdoor.__split_fields__content }))) = 1) /\ ((Main__lockstatus__rep.to_rep (Main__airlockdoor.rec__main__airlockdoor__lock (Main__airlockdoor.__split_fields { Main__airlockdoor.__split_fields = Main__innerdoor.innerdoor__split_fields.Main__airlockdoor.__split_fields__content }))) = 1) ) };
    try
    ( ( "GP_Sloc:main.adb:48:7" (#"main.adb" 48 0 0# ()) );
-   ( "GP_Sloc:main.adb:48:22" (#"main.adb" 48 0 0# (let temp___238 = (let temp___237 = { Main__airlockdoor.__split_fields = Main__innerdoor.innerdoor__split_fields.Main__airlockdoor.__split_fields__content } in (
-    ( #"main.adb" 48 0 0# abstract ensures {true}(let _ = (Main__airlockdoor.rec__main__airlockdoor__lock((Main__airlockdoor.__split_fields(temp___237)))) in (
+   ( "GP_Sloc:main.adb:48:22" (#"main.adb" 48 0 0# (let temp___245 = (let temp___244 = { Main__airlockdoor.__split_fields = Main__innerdoor.innerdoor__split_fields.Main__airlockdoor.__split_fields__content } in (
+    ( #"main.adb" 48 0 0# abstract ensures {true}(let _ = (Main__airlockdoor.rec__main__airlockdoor__lock((Main__airlockdoor.__split_fields(temp___244)))) in (
      ()))
      end ;
-    { ( temp___237 ) with Main__airlockdoor.__split_fields = { ( (Main__airlockdoor.__split_fields(temp___237)) ) with Main__airlockdoor.rec__main__airlockdoor__lock = (Main__lockstatus__rep.of_rep(0)) } } )))
+    { ( temp___244 ) with Main__airlockdoor.__split_fields = { ( (Main__airlockdoor.__split_fields(temp___244)) ) with Main__airlockdoor.rec__main__airlockdoor__lock = (Main__lockstatus__rep.of_rep(0)) } } )))
     in (
-    #"main.adb" 48 0 0# Main__innerdoor.innerdoor__split_fields.Main__airlockdoor.__split_fields__content <- ( (Main__airlockdoor.__split_fields(temp___238)) )))
+    #"main.adb" 48 0 0# Main__innerdoor.innerdoor__split_fields.Main__airlockdoor.__split_fields__content <- ( (Main__airlockdoor.__split_fields(temp___245)) )))
    ) );
     raise Return__exc )
   with
@@ -4056,7 +4156,7 @@ module Main__unlockinnerdoor__subprogram_def
    (__void_param : unit)
   requires { #"main.ads" 78 0 0# true }
   ensures { #"main.ads" 78 0 0# (#"main.ads" 81 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:main.ads:81:14" "GP_Id:7" "comment:     Post => innerDoor.lock = Unlocked;
-             ^ main.ads:81:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:3920" "GP_Sloc:main.ads:81:14" ((Main__lockstatus__rep.to_rep (Main__airlockdoor.rec__main__airlockdoor__lock (Main__airlockdoor.__split_fields { Main__airlockdoor.__split_fields = Main__innerdoor.innerdoor__split_fields.Main__airlockdoor.__split_fields__content }))) = 1) ) )) }
+             ^ main.ads:81:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:3954" "GP_Sloc:main.ads:81:14" ((Main__lockstatus__rep.to_rep (Main__airlockdoor.rec__main__airlockdoor__lock (Main__airlockdoor.__split_fields { Main__airlockdoor.__split_fields = Main__innerdoor.innerdoor__split_fields.Main__airlockdoor.__split_fields__content }))) = 1) ) )) }
    =
   ( () (* Assume dynamic invariants of inputs of the subprogram main.ads:78 *)
   ;
@@ -4074,13 +4174,13 @@ module Main__unlockinnerdoor__subprogram_def
    assume {  ((Main__lockstatus__rep.to_rep (Main__airlockdoor.rec__main__airlockdoor__lock (Main__airlockdoor.__split_fields { Main__airlockdoor.__split_fields = Main__innerdoor.innerdoor__split_fields.Main__airlockdoor.__split_fields__content }))) = 0) };
    try
    ( ( "GP_Sloc:main.adb:54:7" (#"main.adb" 54 0 0# ()) );
-   ( "GP_Sloc:main.adb:54:22" (#"main.adb" 54 0 0# (let temp___240 = (let temp___239 = { Main__airlockdoor.__split_fields = Main__innerdoor.innerdoor__split_fields.Main__airlockdoor.__split_fields__content } in (
-    ( #"main.adb" 54 0 0# abstract ensures {true}(let _ = (Main__airlockdoor.rec__main__airlockdoor__lock((Main__airlockdoor.__split_fields(temp___239)))) in (
+   ( "GP_Sloc:main.adb:54:22" (#"main.adb" 54 0 0# (let temp___247 = (let temp___246 = { Main__airlockdoor.__split_fields = Main__innerdoor.innerdoor__split_fields.Main__airlockdoor.__split_fields__content } in (
+    ( #"main.adb" 54 0 0# abstract ensures {true}(let _ = (Main__airlockdoor.rec__main__airlockdoor__lock((Main__airlockdoor.__split_fields(temp___246)))) in (
      ()))
      end ;
-    { ( temp___239 ) with Main__airlockdoor.__split_fields = { ( (Main__airlockdoor.__split_fields(temp___239)) ) with Main__airlockdoor.rec__main__airlockdoor__lock = (Main__lockstatus__rep.of_rep(1)) } } )))
+    { ( temp___246 ) with Main__airlockdoor.__split_fields = { ( (Main__airlockdoor.__split_fields(temp___246)) ) with Main__airlockdoor.rec__main__airlockdoor__lock = (Main__lockstatus__rep.of_rep(1)) } } )))
     in (
-    #"main.adb" 54 0 0# Main__innerdoor.innerdoor__split_fields.Main__airlockdoor.__split_fields__content <- ( (Main__airlockdoor.__split_fields(temp___240)) )))
+    #"main.adb" 54 0 0# Main__innerdoor.innerdoor__split_fields.Main__airlockdoor.__split_fields__content <- ( (Main__airlockdoor.__split_fields(temp___247)) )))
    ) );
     raise Return__exc )
   with
@@ -4115,7 +4215,7 @@ module Main__allowoperation__subprogram_def
    (__void_param : unit)
   requires { #"main.ads" 84 0 0# true }
   ensures { #"main.ads" 84 0 0# (#"main.ads" 87 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:main.ads:87:14" "GP_Id:8" "comment:     Post => currentOperationStatus = Allowed;
-             ^ main.ads:87:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:3993" "GP_Sloc:main.ads:87:14" (Main__currentoperationstatus.currentoperationstatus.int__content = 0) ) )) }
+             ^ main.ads:87:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:4027" "GP_Sloc:main.ads:87:14" (Main__currentoperationstatus.currentoperationstatus.int__content = 0) ) )) }
    =
   ( () (* Assume dynamic invariants of inputs of the subprogram main.ads:84 *)
   ;
@@ -4170,7 +4270,7 @@ module Main__prohibitoperation__subprogram_def
    (__void_param : unit)
   requires { #"main.ads" 89 0 0# true }
   ensures { #"main.ads" 89 0 0# (#"main.ads" 92 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:main.ads:92:14" "GP_Id:9" "comment:     Post => currentOperationStatus = Prohibited;
-             ^ main.ads:92:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:4057" "GP_Sloc:main.ads:92:14" (Main__currentoperationstatus.currentoperationstatus.int__content = 1) ) )) }
+             ^ main.ads:92:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:4091" "GP_Sloc:main.ads:92:14" (Main__currentoperationstatus.currentoperationstatus.int__content = 1) ) )) }
    =
   ( () (* Assume dynamic invariants of inputs of the subprogram main.ads:89 *)
   ;
@@ -4200,7 +4300,7 @@ module Main__prohibitoperation__subprogram_def
    end  )
 end
 
-(* Module for checking contracts and absence of run-time errors in subprogram "oxygentanklow" defined at main.ads:112, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+(* Module for checking contracts and absence of run-time errors in subprogram "oxygentanklow" defined at main.ads:116, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
 module Main__oxygentanklow__subprogram_def
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -4226,25 +4326,25 @@ module Main__oxygentanklow__subprogram_def
  use        Main__oxygentankstatus___axiom
  use        Main__oxygentanklow__level___axiom
 
- let def #"main.ads" 112 0 0#"W:diverges:N" "GP_Subp:main.ads:112" 
+ let def #"main.ads" 116 0 0#"W:diverges:N" "GP_Subp:main.ads:116" 
    (__void_param : unit)
-  requires { #"main.ads" 112 0 0# true }
-  ensures { #"main.ads" 112 0 0# (#"main.ads" 115 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:main.ads:115:14" "GP_Id:11" "comment:     Post => oxygenTankStatus = Low;
-             ^ main.ads:115:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:4149" "GP_Sloc:main.ads:115:14" (Main__oxygentankstatus.oxygentankstatus.int__content = 1) ) )) }
+  requires { #"main.ads" 116 0 0# true }
+  ensures { #"main.ads" 116 0 0# (#"main.ads" 119 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:main.ads:119:14" "GP_Id:11" "comment:     Post => oxygenTankStatus = Low;
+             ^ main.ads:119:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:4187" "GP_Sloc:main.ads:119:14" (Main__oxygentankstatus.oxygentankstatus.int__content = 1) ) )) }
    =
-  ( () (* Assume dynamic invariants of inputs of the subprogram main.ads:112 *)
+  ( () (* Assume dynamic invariants of inputs of the subprogram main.ads:116 *)
   ;
    assume {  (Main__tankstatus___axiom.dynamic_invariant Main__oxygentankstatus.oxygentankstatus.int__content True False True True) };
    assume {  (Main__oxygentank___axiom.dynamic_invariant Main__oxygentanklow__level.level.Array__Int__Main__content.map__content True False True True) };
    assume {  true };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram main.ads:112 *)
+  () (* Declarations introduced by the compiler at the beginning of the subprogram main.ads:116 *)
   ;
-  () (* Check for RTE in the Pre of the subprogram main.ads:112 *)
+  () (* Check for RTE in the Pre of the subprogram main.ads:116 *)
   ;
    abstract ensures {true}(let _ = (Main__oxygentankstatus.oxygentankstatus.int__content = 0) in (
    ()))
    end ;
-  () (* Assume Pre of the subprogram main.ads:112 *)
+  () (* Assume Pre of the subprogram main.ads:116 *)
   ;
    assume {  (Main__oxygentankstatus.oxygentankstatus.int__content = 0) };
    try
@@ -4255,17 +4355,17 @@ module Main__oxygentanklow__subprogram_def
    ;
    (if ((Main__oxygentanklow__position.position.int__content > 0)) then (
     #"main.adb" 77 0 0# try
-     ( #"main.adb" 77 0 0# abstract ensures {true}(let _ = Main__oxygentanklow__level.level.Array__Int__Main__content.map__content in (
+     ( #"main.adb" 77 0 0# abstract ensures {true}(let _ = Main__oxygentanklow__position.position.int__content in (
       ()))
       end ;
-     (let temp___242 = #"main.adb" 77 0 0# (any Array__Int__Main__content.map
-     ensures {#"main.adb" 77 0 0# (result = Main__oxygentanklow__level.level.Array__Int__Main__content.map__content)} 
+     (let temp___250 = #"main.adb" 77 0 0# (any int
+     ensures {#"main.adb" 77 0 0# (result = Main__oxygentanklow__position.position.int__content)} 
      ) in (
-      ( #"main.adb" 77 0 0# abstract ensures {true}(let _ = Main__oxygentanklow__position.position.int__content in (
+      ( #"main.adb" 77 0 0# abstract ensures {true}(let _ = Main__oxygentanklow__level.level.Array__Int__Main__content.map__content in (
        ()))
        end ;
-      (let temp___241 = #"main.adb" 77 0 0# (any int
-      ensures {#"main.adb" 77 0 0# (result = Main__oxygentanklow__position.position.int__content)} 
+      (let temp___248 = #"main.adb" 77 0 0# (any Array__Int__Main__content.map
+      ensures {#"main.adb" 77 0 0# (result = Main__oxygentanklow__level.level.Array__Int__Main__content.map__content)} 
       ) in (
        ( () (* First unroling of the loop statements appearing before the loop invariant of loop main.adb:77 *)
        ;
@@ -4274,7 +4374,7 @@ module Main__oxygentanklow__subprogram_def
        #"main.adb" 77 0 0# while True do
         ( () (* Assume implicit invariants from the loop main.adb:77 *)
         ;
-        #"main.adb" 77 0 0# assume { #"main.adb" 77 0 0# (Boolean.andb(( ( ( ( true /\ (Main__tanklevelpercentage___axiom.dynamic_invariant Main__oxygentanklow__position.position.int__content False True True True) ) /\ true ) /\ (Main__oxygentank___axiom.dynamic_invariant Main__oxygentanklow__level.level.Array__Int__Main__content.map__content True True True True) ) /\ true )) ((Main__oxygentanklow__position.position.int__content > 0))) };
+        #"main.adb" 77 0 0# assume { #"main.adb" 77 0 0# (Boolean.andb(( ( ( ( true /\ (Main__oxygentank___axiom.dynamic_invariant Main__oxygentanklow__level.level.Array__Int__Main__content.map__content True True True True) ) /\ true ) /\ (Main__tanklevelpercentage___axiom.dynamic_invariant Main__oxygentanklow__position.position.int__content False True True True) ) /\ true )) ((Main__oxygentanklow__position.position.int__content > 0))) };
         () (* Check for absence of RTE in the invariant of loop main.adb:77 *)
         ;
         () (* Loop statements appearing after the loop invariant of loop main.adb:77 *)
@@ -4309,7 +4409,7 @@ module Main__oxygentanklow__subprogram_def
    end  )
 end
 
-(* Module for checking contracts and absence of run-time errors in subprogram "soundoxygenlowalarm" defined at main.ads:118, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+(* Module for checking contracts and absence of run-time errors in subprogram "soundoxygenlowalarm" defined at main.ads:122, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
 module Main__soundoxygenlowalarm__subprogram_def
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -4322,25 +4422,25 @@ module Main__soundoxygenlowalarm__subprogram_def
  use        Main__alarm___axiom
  use        Main__oxygentanklowalarm___axiom
 
- let def #"main.ads" 118 0 0#"W:diverges:N" "GP_Subp:main.ads:118" 
+ let def #"main.ads" 122 0 0#"W:diverges:N" "GP_Subp:main.ads:122" 
    (__void_param : unit)
-  requires { #"main.ads" 118 0 0# true }
-  ensures { #"main.ads" 118 0 0# (#"main.ads" 121 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:main.ads:121:14" "GP_Id:12" "comment:     Post => oxygenTankLowAlarm = On;
-             ^ main.ads:121:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:4214" "GP_Sloc:main.ads:121:14" (Main__oxygentanklowalarm.oxygentanklowalarm.int__content = 0) ) )) }
+  requires { #"main.ads" 122 0 0# true }
+  ensures { #"main.ads" 122 0 0# (#"main.ads" 125 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:main.ads:125:14" "GP_Id:12" "comment:     Post => oxygenTankLowAlarm = On;
+             ^ main.ads:125:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:4252" "GP_Sloc:main.ads:125:14" (Main__oxygentanklowalarm.oxygentanklowalarm.int__content = 0) ) )) }
    =
-  ( () (* Assume dynamic invariants of inputs of the subprogram main.ads:118 *)
+  ( () (* Assume dynamic invariants of inputs of the subprogram main.ads:122 *)
   ;
    assume {  (Main__tankstatus___axiom.dynamic_invariant Main__oxygentankstatus.oxygentankstatus.int__content True False True True) };
    assume {  (Main__alarm___axiom.dynamic_invariant Main__oxygentanklowalarm.oxygentanklowalarm.int__content True False True True) };
    assume {  true };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram main.ads:118 *)
+  () (* Declarations introduced by the compiler at the beginning of the subprogram main.ads:122 *)
   ;
-  () (* Check for RTE in the Pre of the subprogram main.ads:118 *)
+  () (* Check for RTE in the Pre of the subprogram main.ads:122 *)
   ;
    abstract ensures {true}(let _ = ( (Main__oxygentanklowalarm.oxygentanklowalarm.int__content = 1) && (Main__oxygentankstatus.oxygentankstatus.int__content = 1) ) in (
    ()))
    end ;
-  () (* Assume Pre of the subprogram main.ads:118 *)
+  () (* Assume Pre of the subprogram main.ads:122 *)
   ;
    assume {  ( (Main__oxygentanklowalarm.oxygentanklowalarm.int__content = 1) /\ (Main__oxygentankstatus.oxygentankstatus.int__content = 1) ) };
    try
@@ -4355,40 +4455,40 @@ module Main__soundoxygenlowalarm__subprogram_def
    end  )
 end
 
-(* Module for checking contracts and absence of run-time errors in subprogram "turnoffoxygenlowalarm" defined at main.ads:124, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+(* Module for checking contracts and absence of run-time errors in subprogram "turnoffoxygenlowalarm" defined at main.ads:129, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
 module Main__turnoffoxygenlowalarm__subprogram_def
  use import "_gnatprove_standard".Main
  use import "int".Int
- use        Main__tankstatus___axiom
- use        Main__oxygentankstatus
  use        Main__alarm___axiom
  use        Main__oxygentanklowalarm
- use        Main__tankstatus___axiom
- use        Main__oxygentankstatus___axiom
+ use        Main__recievedwarning___axiom
+ use        Main__oxygentankwarningrecieved
  use        Main__alarm___axiom
  use        Main__oxygentanklowalarm___axiom
+ use        Main__recievedwarning___axiom
+ use        Main__oxygentankwarningrecieved___axiom
 
- let def #"main.ads" 124 0 0#"W:diverges:N" "GP_Subp:main.ads:124" 
+ let def #"main.ads" 129 0 0#"W:diverges:N" "GP_Subp:main.ads:129" 
    (__void_param : unit)
-  requires { #"main.ads" 124 0 0# true }
-  ensures { #"main.ads" 124 0 0# (#"main.ads" 127 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:main.ads:127:14" "GP_Id:13" "comment:     Post => oxygenTankLowAlarm = Off;
-             ^ main.ads:127:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:4286" "GP_Sloc:main.ads:127:14" (Main__oxygentanklowalarm.oxygentanklowalarm.int__content = 1) ) )) }
+  requires { #"main.ads" 129 0 0# true }
+  ensures { #"main.ads" 129 0 0# (#"main.ads" 132 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:main.ads:132:14" "GP_Id:13" "comment:     Post => oxygenTankLowAlarm = Off;
+             ^ main.ads:132:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:4324" "GP_Sloc:main.ads:132:14" (Main__oxygentanklowalarm.oxygentanklowalarm.int__content = 1) ) )) }
    =
-  ( () (* Assume dynamic invariants of inputs of the subprogram main.ads:124 *)
+  ( () (* Assume dynamic invariants of inputs of the subprogram main.ads:129 *)
   ;
-   assume {  (Main__tankstatus___axiom.dynamic_invariant Main__oxygentankstatus.oxygentankstatus.int__content True False True True) };
    assume {  (Main__alarm___axiom.dynamic_invariant Main__oxygentanklowalarm.oxygentanklowalarm.int__content True False True True) };
+   assume {  (Main__recievedwarning___axiom.dynamic_invariant Main__oxygentankwarningrecieved.oxygentankwarningrecieved.int__content True False True True) };
    assume {  true };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram main.ads:124 *)
+  () (* Declarations introduced by the compiler at the beginning of the subprogram main.ads:129 *)
   ;
-  () (* Check for RTE in the Pre of the subprogram main.ads:124 *)
+  () (* Check for RTE in the Pre of the subprogram main.ads:129 *)
   ;
-   abstract ensures {true}(let _ = ( (Main__oxygentanklowalarm.oxygentanklowalarm.int__content = 0) && (Main__oxygentankstatus.oxygentankstatus.int__content = 0) ) in (
+   abstract ensures {true}(let _ = ( (Main__oxygentanklowalarm.oxygentanklowalarm.int__content = 0) && (Main__oxygentankwarningrecieved.oxygentankwarningrecieved.int__content = 0) ) in (
    ()))
    end ;
-  () (* Assume Pre of the subprogram main.ads:124 *)
+  () (* Assume Pre of the subprogram main.ads:129 *)
   ;
-   assume {  ( (Main__oxygentanklowalarm.oxygentanklowalarm.int__content = 0) /\ (Main__oxygentankstatus.oxygentankstatus.int__content = 0) ) };
+   assume {  ( (Main__oxygentanklowalarm.oxygentanklowalarm.int__content = 0) /\ (Main__oxygentankwarningrecieved.oxygentankwarningrecieved.int__content = 0) ) };
    try
    ( ( "GP_Sloc:main.adb:95:7" (#"main.adb" 95 0 0# ()) );
    ( "GP_Sloc:main.adb:95:26" (#"main.adb" 95 0 0# #"main.adb" 95 0 0# Main__oxygentanklowalarm.oxygentanklowalarm.int__content <- ( 1 )) );

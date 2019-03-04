@@ -71,7 +71,7 @@ is
    -- If the oxygen runs low, a warning must be shown --
    -----------------------------------------------------
 
-   procedure OxygenTankLow ( level : in out OxygenTank ) is
+   procedure OxygenTankLow (level : in out OxygenTank) is
       Position : TankLevelPercentage := level'Last;
    begin
       while Position > level'First loop
