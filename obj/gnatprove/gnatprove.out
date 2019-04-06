@@ -8,27 +8,41 @@ Data Dependencies                 .          .          .          .            
 Flow Dependencies                 .          .          .          .            .           .          .
 Initialization                    8          8          .          .            .           .          .
 Non-Aliasing                      .          .          .          .            .           .          .
-Run-time Checks                   1          .          .          .     1 (CVC4)           .          .
+Run-time Checks                   3          .          .          .     3 (CVC4)           .          .
 Assertions                        .          .          .          .            .           .          .
-Functional Contracts             13          .          .          .    13 (CVC4)           .          .
+Functional Contracts             23          .          .          .    23 (CVC4)           .          .
 LSP Verification                  .          .          .          .            .           .          .
 --------------------------------------------------------------------------------------------------------
-Total                            22    8 (36%)          .          .     14 (64%)           .          .
+Total                            34    8 (24%)          .          .     26 (76%)           .          .
 
 
-Analyzed 1 unit
-in unit main, 14 subprograms and packages out of 14 analyzed
-  Main at main.ads:1 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
-  Main.AllowOperation at main.ads:84 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
-  Main.CloseInnerAirLockDoor at main.ads:34 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
-  Main.CloseOuterAirLockDoor at main.ads:28 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
-  Main.LockInnerDoor at main.ads:72 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
-  Main.LockOuterDoor at main.ads:60 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
-  Main.OpenInnerAirLockDoor at main.ads:46 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
-  Main.OpenOuterAirLockDoor at main.ads:40 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
-  Main.OxygenTankLow at main.ads:116 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (2 checks)
-  Main.ProhibitOperation at main.ads:89 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
-  Main.SoundOxygenLowAlarm at main.ads:122 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
-  Main.TurnOffOxygenLowAlarm at main.ads:129 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
-  Main.UnlockInnerDoor at main.ads:78 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
-  Main.UnlockOuterDoor at main.ads:66 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+Analyzed 3 units
+in unit altsubmarine, 11 subprograms and packages out of 11 analyzed
+  AltSubmarine at altsubmarine.ads:1 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  AltSubmarine.AllowOperation at altsubmarine.ads:93 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  AltSubmarine.CloseInnerAirLockDoor at altsubmarine.ads:52 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  AltSubmarine.CloseOuterAirLockDoor at altsubmarine.ads:46 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  AltSubmarine.LockInnerDoor at altsubmarine.ads:81 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  AltSubmarine.LockOuterDoor at altsubmarine.ads:69 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  AltSubmarine.OpenInnerAirLockDoor at altsubmarine.ads:34 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  AltSubmarine.OpenOuterAirLockDoor at altsubmarine.ads:23 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  AltSubmarine.ProhibitOperation at altsubmarine.ads:99 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  AltSubmarine.UnlockInnerDoor at altsubmarine.ads:87 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  AltSubmarine.UnlockOuterDoor at altsubmarine.ads:75 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+in unit main, 0 subprograms and packages out of 1 analyzed
+  Main at main.adb:7 skipped
+in unit submarine, 14 subprograms and packages out of 14 analyzed
+  Submarine at submarine.ads:1 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  Submarine.CloseInnerAirLockDoor at submarine.ads:49 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  Submarine.CloseOuterAirLockDoor at submarine.ads:43 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  Submarine.DiveTheSubmarine100ft at submarine.ads:149 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (2 checks)
+  Submarine.LockInnerDoor at submarine.ads:72 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  Submarine.LockOuterDoor at submarine.ads:60 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  Submarine.OpenInnerAirLockDoor at submarine.ads:36 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  Submarine.OpenOuterAirLockDoor at submarine.ads:30 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  Submarine.OxygenTankLow at submarine.ads:118 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (2 checks)
+  Submarine.RaiseTheSubmarine100ft at submarine.ads:156 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (2 checks)
+  Submarine.SoundOxygenLowAlarm at submarine.ads:124 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  Submarine.TurnOffOxygenLowAlarm at submarine.ads:131 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  Submarine.UnlockInnerDoor at submarine.ads:78 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  Submarine.UnlockOuterDoor at submarine.ads:66 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)

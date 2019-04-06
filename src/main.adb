@@ -1,116 +1,174 @@
-package body Main
-with SPARK_Mode
-is
-
-   ---------------------------------------------------------------------------
-   -- The submarine must have at least one airlock door closed at all times --
-   ---------------------------------------------------------------------------
-
-   procedure CloseOuterAirLockDoor is
-   begin
-      outerDoor.door := Closed;
-   end CloseOuterAirLockDoor;
-
-   procedure CloseInnerAirLockDoor is
-   begin
-      innerDoor.door := Closed;
-   end CloseInnerAirLockDoor;
-
-   procedure OpenOuterAirLockDoor is
-   begin
-      outerDoor.door := Open;
-   end OpenOuterAirLockDoor;
-
-   procedure OpenInnerAirLockDoor is
-   begin
-      innerDoor.door := Open;
-   end OpenInnerAirLockDoor;
+with Submarine;
+use Submarine;
+with Ada.Text_IO;
+use Ada.Text_IO;
 
 
-   -------------------------------------------------------------------------------------
-   -- The submarine can perform no operations unless both doors are closed and locked --
-   -------------------------------------------------------------------------------------
+procedure Main is
+begin
+   Put_Line("Outer Door is: ");
+   Put_Line(outerDoor.door'Image);
+   Put_Line("and: ");
+   Put_Line(outerDoor.lock'Image);
+   Put_Line("Inner Door is: ");
+   Put_Line(innerDoor.door'Image);
+   Put_Line("and: ");
+   Put_Line(innerDoor.lock'Image);
 
-   procedure LockOuterDoor is
-   begin
-      outerDoor.lock := Locked;
-   end LockOuterDoor;
+   Put_Line("Try open the outer door...");
+   OpenOuterAirLockDoor;
+   Put_Line("The outer door is: ");
+   Put_Line(outerDoor.door'Image);
 
+   Put_Line("Try unlock the outer door...");
+   UnlockOuterDoor;
+   Put_Line("The outer door is: ");
+   Put_Line(outerDoor.lock'Image);
 
-   procedure UnlockOuterDoor is
-   begin
-      outerDoor.lock := Unlocked;
-   end UnlockOuterDoor;
-
-
-   procedure LockInnerDoor is
-   begin
-      innerDoor.lock := Locked;
-   end LockInnerDoor;
-
-
-   procedure UnlockInnerDoor is
-   begin
-      innerDoor.lock := Unlocked;
-   end UnlockInnerDoor;
-
-
-   procedure AllowOperation is
-   begin
-      currentOperationStatus := Allowed;
-   end AllowOperation;
+   Put_Line("Try open the outer door again...");
+   OpenOuterAirLockDoor;
+   Put_Line("The outer door is: ");
+   Put_Line(outerDoor.door'Image);
 
 
-   procedure ProhibitOperation is
-   begin
-      currentOperationStatus := Prohibited;
-   end ProhibitOperation;
+
+   Put_Line("Try open the inner door...");
+   OpenInnerAirLockDoor;
+   Put_Line("The inner door is: ");
+   Put_Line(innerDoor.door'Image);
 
 
-   -----------------------------------------------------
-   -- If the oxygen runs low, a warning must be shown --
-   -----------------------------------------------------
-
-   procedure OxygenTankLow (level : in out OxygenTank) is
-      Position : TankLevelPercentage := level'Last;
-   begin
-      while Position > level'First loop
-         level(Position) := Nothing;
-         if Position = 10 then exit;
-         else Position := Position - 1;
-         end if;
-      end loop;
-      oxygenTankStatus := low;
-   end OxygenTankLow;
+   Put_Line("Try close the outer door...");
+   CloseOuterAirLockDoor;
+   Put_Line("The outer door is: ");
+   Put_Line(outerDoor.door'Image);
 
 
-   procedure SoundOxygenLowAlarm is
-   begin
-      oxygenTankLowAlarm := On;
-   end SoundOxygenLowAlarm;
+   Put_Line("Try open the inner door again...");
+   OpenInnerAirLockDoor;
+   Put_Line("The inner door is: ");
+   Put_Line(innerDoor.door'Image);
+
+   Put_Line("Try unlock the inner door...");
+   UnlockInnerDoor;
+   Put_Line("The inner door is: ");
+   Put_Line(innerDoor.lock'Image);
+
+   Put_Line("Try open the inner door again...");
+   OpenInnerAirLockDoor;
+   Put_Line("The inner door is: ");
+   Put_Line(innerDoor.door'Image);
+
+   Put_Line("Try open the outer door again...");
+   OpenOuterAirLockDoor;
+   Put_Line("The outer door is: ");
+   Put_Line(outerDoor.door'Image);
 
 
-   procedure TurnOffOxygenLowAlarm is
-   begin
-      oxygenTankLowAlarm := Off;
-   end TurnOffOxygenLowAlarm;
+
+   Put_Line("Try operate the submarine...");
+   Put_Line("Operation Status:");
+   Put_Line(currentOperationStatus'Image);
+
+   Put_Line("Try close the inner door...");
+   CloseInnerAirLockDoor;
+   Put_Line("The inner door is: ");
+   Put_Line(outerDoor.door'Image);
+
+   Put_Line("Try operate the submarine...");
+   Put_Line("Operation Status:");
+   Put_Line(currentOperationStatus'Image);
 
 
-   ----------------------------------------------------------
-   -- If the oxygen runs out, the submarine has to surface --
-   ----------------------------------------------------------
 
-   ------------------------------------------------------------
-   -- If the reactor overheats, the submarine has to surface --
-   ------------------------------------------------------------
+   Put_Line("Outer Door is: ");
+   Put_Line(outerDoor.door'Image);
+   Put_Line("and: ");
+   Put_Line(outerDoor.lock'Image);
+   Put_Line("Inner Door is: ");
+   Put_Line(innerDoor.door'Image);
+   Put_Line("and: ");
+   Put_Line(innerDoor.lock'Image);
 
-   -------------------------------------------------------
-   -- The submarine cannot dive beneath a certain depth --
-   -------------------------------------------------------
 
-   -----------------------------------------------------------------------------------
-   -- The submarine must be capable of storing, loading and firing torpedoes safely --
-   -----------------------------------------------------------------------------------
+   Put_Line("Lock both doors...");
+   LockInnerDoor;
+   LockOuterDoor;
+
+
+   Put_Line("Try operate the submarine...");
+   Put_Line("Operation Status:");
+   Put_Line(currentOperationStatus'Image);
+
+
+   Put_Line("Current depth of the submarine:");
+   Put_Line(currentDepth'Image);
+
+   Put_Line("Submarine dives by 100ft");
+   DiveTheSubmarine100ft;
+
+   Put_Line("Current depth of the submarine:");
+   Put_Line(currentDepth'Image);
+
+   Put_Line("Try unlock the inner door...");
+   UnlockInnerDoor;
+   Put_Line("The inner door is: ");
+   Put_Line(innerDoor.lock'Image);
+
+
+   Put_Line("Submarine rises by 100ft");
+   RaiseTheSubmarine100ft;
+
+
+   Put_Line("Current depth of the submarine:");
+   Put_Line(currentDepth'Image);
+
+
+   Put_Line("Try unlock the inner door...");
+   UnlockInnerDoor;
+   Put_Line("The inner door is: ");
+   Put_Line(innerDoor.lock'Image);
+
+
+   Put_Line("Lock boththe inner door...");
+   LockInnerDoor;
+
+   Put_Line("Submarine dives by 2000ft");
+   DiveTheSubmarine100ft;
+   DiveTheSubmarine100ft;
+   DiveTheSubmarine100ft;
+   DiveTheSubmarine100ft;
+   DiveTheSubmarine100ft;
+   DiveTheSubmarine100ft;
+   DiveTheSubmarine100ft;
+   DiveTheSubmarine100ft;
+   DiveTheSubmarine100ft;
+   DiveTheSubmarine100ft;
+   DiveTheSubmarine100ft;
+   DiveTheSubmarine100ft;
+   DiveTheSubmarine100ft;
+   DiveTheSubmarine100ft;
+   DiveTheSubmarine100ft;
+   DiveTheSubmarine100ft;
+   DiveTheSubmarine100ft;
+   DiveTheSubmarine100ft;
+   DiveTheSubmarine100ft;
+   DiveTheSubmarine100ft;
+
+
+   Put_Line("Current depth of the submarine:");
+   Put_Line(currentDepth'Image);
+
+
+   Put_Line("Submarine attempts to dive past the 2000ft limit by 100ft");
+   DiveTheSubmarine100ft;
+
+   Put_Line("Current depth of the submarine:");
+   Put_Line(currentDepth'Image);
+
+
+
+
 
 
 end Main;

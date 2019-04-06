@@ -1,0 +1,3625 @@
+(* Module for axiomatizing type "short_short_integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__short_short_integer
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type short_short_integer =
+  < range -128 127 >
+ 
+ function first 
+   : int =
+  ( -128 )
+ 
+ function last 
+   : int =
+  127
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = short_short_integer, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type short_short_integer__ref =
+  { mutable short_short_integer__content "model_trace:" "name:" : short_short_integer }
+ 
+ function short_short_integer__ref___projection 
+   (a : short_short_integer__ref) : short_short_integer =
+  a.short_short_integer__content
+ 
+ meta "model_projection" function short_short_integer__ref___projection
+ 
+ meta "inline : no" function short_short_integer__ref___projection
+ 
+ val short_short_integer__havoc 
+   (x : short_short_integer__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "short_short_integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__short_short_integer__rep
+ use        Standard__short_short_integer
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Standard__short_short_integer.short_short_integer) : int =
+  (Standard__short_short_integer.short_short_integer'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Standard__short_short_integer.short_short_integer, 
+ predicate in_range = Standard__short_short_integer.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "short_integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__short_integer
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type short_integer =
+  < range -32768 32767 >
+ 
+ function first 
+   : int =
+  ( -32768 )
+ 
+ function last 
+   : int =
+  32767
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = short_integer, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type short_integer__ref =
+  { mutable short_integer__content "model_trace:" "name:" : short_integer }
+ 
+ function short_integer__ref___projection 
+   (a : short_integer__ref) : short_integer =
+  a.short_integer__content
+ 
+ meta "model_projection" function short_integer__ref___projection
+ 
+ meta "inline : no" function short_integer__ref___projection
+ 
+ val short_integer__havoc 
+   (x : short_integer__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "short_integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__short_integer__rep
+ use        Standard__short_integer
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Standard__short_integer.short_integer) : int =
+  (Standard__short_integer.short_integer'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Standard__short_integer.short_integer, 
+ predicate in_range = Standard__short_integer.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__integer
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type integer =
+  < range -2147483648 2147483647 >
+ 
+ function first 
+   : int =
+  ( -2147483648 )
+ 
+ function last 
+   : int =
+  2147483647
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = integer, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type integer__ref =
+  { mutable integer__content "model_trace:" "name:" : integer }
+ 
+ function integer__ref___projection 
+   (a : integer__ref) : integer =
+  a.integer__content
+ 
+ meta "model_projection" function integer__ref___projection
+ 
+ meta "inline : no" function integer__ref___projection
+ 
+ val integer__havoc 
+   (x : integer__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__integer__rep
+ use        Standard__integer
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Standard__integer.integer) : int =
+  (Standard__integer.integer'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Standard__integer.integer, 
+ predicate in_range = Standard__integer.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "long_integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__long_integer
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type long_integer =
+  < range -2147483648 2147483647 >
+ 
+ function first 
+   : int =
+  ( -2147483648 )
+ 
+ function last 
+   : int =
+  2147483647
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = long_integer, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type long_integer__ref =
+  { mutable long_integer__content "model_trace:" "name:" : long_integer }
+ 
+ function long_integer__ref___projection 
+   (a : long_integer__ref) : long_integer =
+  a.long_integer__content
+ 
+ meta "model_projection" function long_integer__ref___projection
+ 
+ meta "inline : no" function long_integer__ref___projection
+ 
+ val long_integer__havoc 
+   (x : long_integer__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "long_integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__long_integer__rep
+ use        Standard__long_integer
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Standard__long_integer.long_integer) : int =
+  (Standard__long_integer.long_integer'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Standard__long_integer.long_integer, 
+ predicate in_range = Standard__long_integer.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "long_long_integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__long_long_integer
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type long_long_integer =
+  < range -9223372036854775808 9223372036854775807 >
+ 
+ function first 
+   : int =
+  ( -9223372036854775808 )
+ 
+ function last 
+   : int =
+  9223372036854775807
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = long_long_integer, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type long_long_integer__ref =
+  { mutable long_long_integer__content "model_trace:" "name:" : long_long_integer }
+ 
+ function long_long_integer__ref___projection 
+   (a : long_long_integer__ref) : long_long_integer =
+  a.long_long_integer__content
+ 
+ meta "model_projection" function long_long_integer__ref___projection
+ 
+ meta "inline : no" function long_long_integer__ref___projection
+ 
+ val long_long_integer__havoc 
+   (x : long_long_integer__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "long_long_integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__long_long_integer__rep
+ use        Standard__long_long_integer
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Standard__long_long_integer.long_long_integer) : int =
+  (Standard__long_long_integer.long_long_integer'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Standard__long_long_integer.long_long_integer, 
+ predicate in_range = Standard__long_long_integer.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "natural", created in Gnat2Why.Types.Translate_Type *)
+module Standard__natural
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type natural =
+  < range 0 2147483647 >
+ 
+ function first 
+   : int =
+  0
+ 
+ function last 
+   : int =
+  2147483647
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = natural, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type natural__ref =
+  { mutable natural__content "model_trace:" "name:" : natural }
+ 
+ function natural__ref___projection 
+   (a : natural__ref) : natural =
+  a.natural__content
+ 
+ meta "model_projection" function natural__ref___projection
+ 
+ meta "inline : no" function natural__ref___projection
+ 
+ val natural__havoc 
+   (x : natural__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "natural", created in Gnat2Why.Types.Translate_Type *)
+module Standard__natural__rep
+ use        Standard__natural
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Standard__natural.natural) : int =
+  (Standard__natural.natural'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Standard__natural.natural, 
+ predicate in_range = Standard__natural.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "positive", created in Gnat2Why.Types.Translate_Type *)
+module Standard__positive
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type positive =
+  < range 1 2147483647 >
+ 
+ function first 
+   : int =
+  1
+ 
+ function last 
+   : int =
+  2147483647
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = positive, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type positive__ref =
+  { mutable positive__content "model_trace:" "name:" : positive }
+ 
+ function positive__ref___projection 
+   (a : positive__ref) : positive =
+  a.positive__content
+ 
+ meta "model_projection" function positive__ref___projection
+ 
+ meta "inline : no" function positive__ref___projection
+ 
+ val positive__havoc 
+   (x : positive__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "positive", created in Gnat2Why.Types.Translate_Type *)
+module Standard__positive__rep
+ use        Standard__positive
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Standard__positive.positive) : int =
+  (Standard__positive.positive'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Standard__positive.positive, 
+ predicate in_range = Standard__positive.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "short_float", created in Gnat2Why.Types.Translate_Type *)
+module Standard__short_float
+ use import "_gnatprove_standard".Main
+ use        "_gnatprove_standard".Float32
+
+ type short_float 
+ 
+ function first 
+   : Float32.t =
+  (Float32.neg (340282346638528859811704183484516925440.0:Float32.t))
+ 
+ function last 
+   : Float32.t =
+  (340282346638528859811704183484516925440.0:Float32.t)
+ 
+ predicate in_range 
+   (x : Float32.t)  =
+  (Float32.t'isFinite x)
+ 
+ clone export "ada__model".Static_Float32 with
+ type t = short_float, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type short_float__ref =
+  { mutable short_float__content "model_trace:" "name:" : short_float }
+ 
+ function short_float__ref___projection 
+   (a : short_float__ref) : short_float =
+  a.short_float__content
+ 
+ meta "model_projection" function short_float__ref___projection
+ 
+ meta "inline : no" function short_float__ref___projection
+ 
+ val short_float__havoc 
+   (x : short_float__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "short_float", created in Gnat2Why.Types.Translate_Type *)
+module Standard__short_float__rep
+ use        Standard__short_float
+ use        "_gnatprove_standard".Float32
+ use import "_gnatprove_standard".Main
+
+ clone export "ada__model".Rep_Proj_Float32 with
+ type t = Standard__short_float.short_float, 
+ predicate in_range = Standard__short_float.in_range
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "float", created in Gnat2Why.Types.Translate_Type *)
+module Standard__float
+ use import "_gnatprove_standard".Main
+ use        "_gnatprove_standard".Float32
+
+ type float 
+ 
+ function first 
+   : Float32.t =
+  (Float32.neg (340282346638528859811704183484516925440.0:Float32.t))
+ 
+ function last 
+   : Float32.t =
+  (340282346638528859811704183484516925440.0:Float32.t)
+ 
+ predicate in_range 
+   (x : Float32.t)  =
+  (Float32.t'isFinite x)
+ 
+ clone export "ada__model".Static_Float32 with
+ type t = float, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type float__ref =
+  { mutable float__content "model_trace:" "name:" : float }
+ 
+ function float__ref___projection 
+   (a : float__ref) : float =
+  a.float__content
+ 
+ meta "model_projection" function float__ref___projection
+ 
+ meta "inline : no" function float__ref___projection
+ 
+ val float__havoc 
+   (x : float__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "float", created in Gnat2Why.Types.Translate_Type *)
+module Standard__float__rep
+ use        Standard__float
+ use        "_gnatprove_standard".Float32
+ use import "_gnatprove_standard".Main
+
+ clone export "ada__model".Rep_Proj_Float32 with
+ type t = Standard__float.float, 
+ predicate in_range = Standard__float.in_range
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "long_float", created in Gnat2Why.Types.Translate_Type *)
+module Standard__long_float
+ use import "_gnatprove_standard".Main
+ use        "_gnatprove_standard".Float64
+
+ type long_float 
+ 
+ function first 
+   : Float64.t =
+  (Float64.neg (179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.0:Float64.t))
+ 
+ function last 
+   : Float64.t =
+  (179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.0:Float64.t)
+ 
+ predicate in_range 
+   (x : Float64.t)  =
+  (Float64.t'isFinite x)
+ 
+ clone export "ada__model".Static_Float64 with
+ type t = long_float, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type long_float__ref =
+  { mutable long_float__content "model_trace:" "name:" : long_float }
+ 
+ function long_float__ref___projection 
+   (a : long_float__ref) : long_float =
+  a.long_float__content
+ 
+ meta "model_projection" function long_float__ref___projection
+ 
+ meta "inline : no" function long_float__ref___projection
+ 
+ val long_float__havoc 
+   (x : long_float__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "long_float", created in Gnat2Why.Types.Translate_Type *)
+module Standard__long_float__rep
+ use        Standard__long_float
+ use        "_gnatprove_standard".Float64
+ use import "_gnatprove_standard".Main
+
+ clone export "ada__model".Rep_Proj_Float64 with
+ type t = Standard__long_float.long_float, 
+ predicate in_range = Standard__long_float.in_range
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "character", created in Gnat2Why.Types.Translate_Type *)
+module Standard__character
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type character 
+ 
+ function first 
+   : int =
+  0
+ 
+ function last 
+   : int =
+  255
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = character, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type character__ref =
+  { mutable character__content "model_trace:" "name:" : character }
+ 
+ function character__ref___projection 
+   (a : character__ref) : character =
+  a.character__content
+ 
+ meta "model_projection" function character__ref___projection
+ 
+ meta "inline : no" function character__ref___projection
+ 
+ val character__havoc 
+   (x : character__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "character", created in Gnat2Why.Types.Translate_Type *)
+module Standard__character__rep
+ use        Standard__character
+ use import "_gnatprove_standard".Main
+
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Standard__character.character, 
+ predicate in_range = Standard__character.in_range
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "wide_character", created in Gnat2Why.Types.Translate_Type *)
+module Standard__wide_character
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type wide_character 
+ 
+ function first 
+   : int =
+  0
+ 
+ function last 
+   : int =
+  65535
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = wide_character, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type wide_character__ref =
+  { mutable wide_character__content "model_trace:" "name:" : wide_character }
+ 
+ function wide_character__ref___projection 
+   (a : wide_character__ref) : wide_character =
+  a.wide_character__content
+ 
+ meta "model_projection" function wide_character__ref___projection
+ 
+ meta "inline : no" function wide_character__ref___projection
+ 
+ val wide_character__havoc 
+   (x : wide_character__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "wide_character", created in Gnat2Why.Types.Translate_Type *)
+module Standard__wide_character__rep
+ use        Standard__wide_character
+ use import "_gnatprove_standard".Main
+
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Standard__wide_character.wide_character, 
+ predicate in_range = Standard__wide_character.in_range
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "wide_wide_character", created in Gnat2Why.Types.Translate_Type *)
+module Standard__wide_wide_character
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type wide_wide_character 
+ 
+ function first 
+   : int =
+  0
+ 
+ function last 
+   : int =
+  2147483647
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = wide_wide_character, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type wide_wide_character__ref =
+  { mutable wide_wide_character__content "model_trace:" "name:" : wide_wide_character }
+ 
+ function wide_wide_character__ref___projection 
+   (a : wide_wide_character__ref) : wide_wide_character =
+  a.wide_wide_character__content
+ 
+ meta "model_projection" function wide_wide_character__ref___projection
+ 
+ meta "inline : no" function wide_wide_character__ref___projection
+ 
+ val wide_wide_character__havoc 
+   (x : wide_wide_character__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "wide_wide_character", created in Gnat2Why.Types.Translate_Type *)
+module Standard__wide_wide_character__rep
+ use        Standard__wide_wide_character
+ use import "_gnatprove_standard".Main
+
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Standard__wide_wide_character.wide_wide_character, 
+ predicate in_range = Standard__wide_wide_character.in_range
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing the array theory associated to type "string", created in Why.Gen.Arrays.Create_Rep_Array_Theory *)
+module Array__Int__Standard__character
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__character
+ use        Standard__character__rep
+
+ function index_I1_one 
+   : int =
+  1
+ 
+ type component_type =
+  Standard__character.character
+ 
+ clone export "_gnatprove_standard".Array__1 with
+ type I1.t = int, 
+ predicate I1.le = Int.(<=), 
+ predicate I1.lt = Int.(<), 
+ predicate I1.gt = Int.(>), 
+ function I1.add = Int.(+), 
+ function I1.sub = Int.(-), 
+ function I1.one = index_I1_one, 
+ type component_type = component_type
+ 
+ function bool_eq 
+   (a : map) (a__first : int) (a__last : int) (b : map) (b__first : int) (b__last : int) : bool =
+  ( (if ((a__first <= a__last)) then (
+   ( (b__first <= b__last) /\ ((a__last - a__first) = (b__last - b__first)) )) else (
+   (b__first > b__last))) /\ (forall temp___idx_91   : int.
+   (if (( (a__first <= temp___idx_91) /\ (temp___idx_91 <= a__last) )) then (
+    ((Standard__character__rep.to_rep (get a temp___idx_91)) = (Standard__character__rep.to_rep (get b ((b__first - a__first) + temp___idx_91))))) else true)) )
+ 
+ axiom bool_eq_rev :
+  (forall a   b   : map.
+  (forall a__first   a__last   b__first   b__last   : int.
+   ( ((bool_eq b b__first b__last a a__first a__last) = True) -> ( (if ((a__first <= a__last)) then (
+    ( (b__first <= b__last) /\ ((a__last - a__first) = (b__last - b__first)) )) else (
+    (b__first > b__last))) /\ (forall temp___idx_91   : int.
+    (if (( (a__first <= temp___idx_91) /\ (temp___idx_91 <= a__last) )) then (
+     ((Standard__character__rep.to_rep (get a temp___idx_91)) = (Standard__character__rep.to_rep (get b ((b__first - a__first) + temp___idx_91))))) else true)) ) )))
+
+end
+
+(* Module for axiomatizing concatenation for the array theory associated to type "string", created in Why.Gen.Arrays.Declare_Concatenation_Symbols *)
+module Array__Int__Standard__character__Concat
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Array__Int__Standard__character
+
+ function index_Index_one 
+   : int =
+  1
+ 
+ clone export "_gnatprove_standard".Array__1__Concat with
+ type component_type = Array__Int__Standard__character.component_type, 
+ type map = Array__Int__Standard__character.map, 
+ type Index.t = int, 
+ predicate Index.le = Int.(<=), 
+ predicate Index.lt = Int.(<), 
+ predicate Index.gt = Int.(>), 
+ function Index.add = Int.(+), 
+ function Index.sub = Int.(-), 
+ function Index.one = index_Index_one, 
+ function get = Array__Int__Standard__character.get
+
+end
+
+(* Module for axiomatizing comparison for the array theory associated to type "string", created in Why.Gen.Arrays.Declare_Comparison_Symbols *)
+module Array__Int__Standard__character_Comp
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__character__rep
+ use        Array__Int__Standard__character
+
+ function index_Index_one 
+   : int =
+  1
+ 
+ clone export "ada__model".Array_Int_Rep_Comparison_Axiom with
+ type component_type = Array__Int__Standard__character.component_type, 
+ function to_rep = Standard__character__rep.to_rep, 
+ type map = Array__Int__Standard__character.map, 
+ type Index.t = int, 
+ predicate Index.le = Int.(<=), 
+ predicate Index.lt = Int.(<), 
+ predicate Index.gt = Int.(>), 
+ function Index.add = Int.(+), 
+ function Index.sub = Int.(-), 
+ function Index.one = index_Index_one, 
+ function get = Array__Int__Standard__character.get, 
+ function bool_eq = Array__Int__Standard__character.bool_eq
+
+end
+
+(* Module for axiomatizing type "string", created in Gnat2Why.Types.Translate_Type *)
+module Standard__string
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        "_gnatprove_standard".Main
+ use        Standard__integer
+ use        Standard__positive
+ use        Standard__character
+ use        Array__Int__Standard__character
+ use        Standard__integer__rep
+
+ type component_type =
+  Standard__character.character
+ 
+ function index_1_id 
+   (x : int) : int =
+  x
+ 
+ clone export "ada__model".Unconstr_Array with
+ type map = Array__Int__Standard__character.map, 
+ function array_bool_eq = Array__Int__Standard__character.bool_eq, 
+ type index_base_type = Standard__integer.integer, 
+ type index_rep_type = int, 
+ function to_rep = Standard__integer__rep.to_rep, 
+ function rep_to_int = index_1_id, 
+ predicate in_range_base = Standard__integer.in_range, 
+ predicate index_dynamic_property = Standard__positive.dynamic_property, 
+ predicate index_rep_le = Int.(<=)
+ 
+ type string =
+  __t
+ 
+ meta "model_projection" function to_array
+ 
+ meta "inline : no" function to_array
+ 
+ meta "model_projection" function first
+ 
+ meta "inline : no" function first
+ 
+ meta "model_projection" function last
+ 
+ meta "inline : no" function last
+ 
+ function to_string 
+   (x : Main.__image) : string
+ 
+ function from_string 
+   (x : string) : Main.__image
+ 
+ type string__ref =
+  { mutable string__content "model_trace:" "name:" : string }
+ 
+ function string__ref___projection 
+   (a : string__ref) : string =
+  a.string__content
+ 
+ meta "model_projection" function string__ref___projection
+ 
+ meta "inline : no" function string__ref___projection
+ 
+ val string__havoc 
+   (x : string__ref) : unit
+  writes {x}
+
+end
+
+(* Module for axiomatizing the array theory associated to type "wide_string", created in Why.Gen.Arrays.Create_Rep_Array_Theory *)
+module Array__Int__Standard__wide_character
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__wide_character
+ use        Standard__wide_character__rep
+
+ function index_I1_one 
+   : int =
+  1
+ 
+ type component_type =
+  Standard__wide_character.wide_character
+ 
+ clone export "_gnatprove_standard".Array__1 with
+ type I1.t = int, 
+ predicate I1.le = Int.(<=), 
+ predicate I1.lt = Int.(<), 
+ predicate I1.gt = Int.(>), 
+ function I1.add = Int.(+), 
+ function I1.sub = Int.(-), 
+ function I1.one = index_I1_one, 
+ type component_type = component_type
+ 
+ function bool_eq 
+   (a : map) (a__first : int) (a__last : int) (b : map) (b__first : int) (b__last : int) : bool =
+  ( (if ((a__first <= a__last)) then (
+   ( (b__first <= b__last) /\ ((a__last - a__first) = (b__last - b__first)) )) else (
+   (b__first > b__last))) /\ (forall temp___idx_98   : int.
+   (if (( (a__first <= temp___idx_98) /\ (temp___idx_98 <= a__last) )) then (
+    ((Standard__wide_character__rep.to_rep (get a temp___idx_98)) = (Standard__wide_character__rep.to_rep (get b ((b__first - a__first) + temp___idx_98))))) else true)) )
+ 
+ axiom bool_eq_rev :
+  (forall a   b   : map.
+  (forall a__first   a__last   b__first   b__last   : int.
+   ( ((bool_eq b b__first b__last a a__first a__last) = True) -> ( (if ((a__first <= a__last)) then (
+    ( (b__first <= b__last) /\ ((a__last - a__first) = (b__last - b__first)) )) else (
+    (b__first > b__last))) /\ (forall temp___idx_98   : int.
+    (if (( (a__first <= temp___idx_98) /\ (temp___idx_98 <= a__last) )) then (
+     ((Standard__wide_character__rep.to_rep (get a temp___idx_98)) = (Standard__wide_character__rep.to_rep (get b ((b__first - a__first) + temp___idx_98))))) else true)) ) )))
+
+end
+
+(* Module for axiomatizing concatenation for the array theory associated to type "wide_string", created in Why.Gen.Arrays.Declare_Concatenation_Symbols *)
+module Array__Int__Standard__wide_character__Concat
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Array__Int__Standard__wide_character
+
+ function index_Index_one 
+   : int =
+  1
+ 
+ clone export "_gnatprove_standard".Array__1__Concat with
+ type component_type = Array__Int__Standard__wide_character.component_type, 
+ type map = Array__Int__Standard__wide_character.map, 
+ type Index.t = int, 
+ predicate Index.le = Int.(<=), 
+ predicate Index.lt = Int.(<), 
+ predicate Index.gt = Int.(>), 
+ function Index.add = Int.(+), 
+ function Index.sub = Int.(-), 
+ function Index.one = index_Index_one, 
+ function get = Array__Int__Standard__wide_character.get
+
+end
+
+(* Module for axiomatizing comparison for the array theory associated to type "wide_string", created in Why.Gen.Arrays.Declare_Comparison_Symbols *)
+module Array__Int__Standard__wide_character_Comp
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__wide_character__rep
+ use        Array__Int__Standard__wide_character
+
+ function index_Index_one 
+   : int =
+  1
+ 
+ clone export "ada__model".Array_Int_Rep_Comparison_Axiom with
+ type component_type = Array__Int__Standard__wide_character.component_type, 
+ function to_rep = Standard__wide_character__rep.to_rep, 
+ type map = Array__Int__Standard__wide_character.map, 
+ type Index.t = int, 
+ predicate Index.le = Int.(<=), 
+ predicate Index.lt = Int.(<), 
+ predicate Index.gt = Int.(>), 
+ function Index.add = Int.(+), 
+ function Index.sub = Int.(-), 
+ function Index.one = index_Index_one, 
+ function get = Array__Int__Standard__wide_character.get, 
+ function bool_eq = Array__Int__Standard__wide_character.bool_eq
+
+end
+
+(* Module for axiomatizing type "wide_string", created in Gnat2Why.Types.Translate_Type *)
+module Standard__wide_string
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__integer
+ use        Standard__positive
+ use        Standard__wide_character
+ use        Standard__integer__rep
+ use        Array__Int__Standard__wide_character
+
+ type component_type =
+  Standard__wide_character.wide_character
+ 
+ function index_1_id 
+   (x : int) : int =
+  x
+ 
+ clone export "ada__model".Unconstr_Array with
+ type map = Array__Int__Standard__wide_character.map, 
+ function array_bool_eq = Array__Int__Standard__wide_character.bool_eq, 
+ type index_base_type = Standard__integer.integer, 
+ type index_rep_type = int, 
+ function to_rep = Standard__integer__rep.to_rep, 
+ function rep_to_int = index_1_id, 
+ predicate in_range_base = Standard__integer.in_range, 
+ predicate index_dynamic_property = Standard__positive.dynamic_property, 
+ predicate index_rep_le = Int.(<=)
+ 
+ type wide_string =
+  __t
+ 
+ meta "model_projection" function to_array
+ 
+ meta "inline : no" function to_array
+ 
+ meta "model_projection" function first
+ 
+ meta "inline : no" function first
+ 
+ meta "model_projection" function last
+ 
+ meta "inline : no" function last
+ 
+ type wide_string__ref =
+  { mutable wide_string__content "model_trace:" "name:" : wide_string }
+ 
+ function wide_string__ref___projection 
+   (a : wide_string__ref) : wide_string =
+  a.wide_string__content
+ 
+ meta "model_projection" function wide_string__ref___projection
+ 
+ meta "inline : no" function wide_string__ref___projection
+ 
+ val wide_string__havoc 
+   (x : wide_string__ref) : unit
+  writes {x}
+
+end
+
+(* Module for axiomatizing the array theory associated to type "wide_wide_string", created in Why.Gen.Arrays.Create_Rep_Array_Theory *)
+module Array__Int__Standard__wide_wide_character
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__wide_wide_character
+ use        Standard__wide_wide_character__rep
+
+ function index_I1_one 
+   : int =
+  1
+ 
+ type component_type =
+  Standard__wide_wide_character.wide_wide_character
+ 
+ clone export "_gnatprove_standard".Array__1 with
+ type I1.t = int, 
+ predicate I1.le = Int.(<=), 
+ predicate I1.lt = Int.(<), 
+ predicate I1.gt = Int.(>), 
+ function I1.add = Int.(+), 
+ function I1.sub = Int.(-), 
+ function I1.one = index_I1_one, 
+ type component_type = component_type
+ 
+ function bool_eq 
+   (a : map) (a__first : int) (a__last : int) (b : map) (b__first : int) (b__last : int) : bool =
+  ( (if ((a__first <= a__last)) then (
+   ( (b__first <= b__last) /\ ((a__last - a__first) = (b__last - b__first)) )) else (
+   (b__first > b__last))) /\ (forall temp___idx_105   : int.
+   (if (( (a__first <= temp___idx_105) /\ (temp___idx_105 <= a__last) )) then (
+    ((Standard__wide_wide_character__rep.to_rep (get a temp___idx_105)) = (Standard__wide_wide_character__rep.to_rep (get b ((b__first - a__first) + temp___idx_105))))) else true)) )
+ 
+ axiom bool_eq_rev :
+  (forall a   b   : map.
+  (forall a__first   a__last   b__first   b__last   : int.
+   ( ((bool_eq b b__first b__last a a__first a__last) = True) -> ( (if ((a__first <= a__last)) then (
+    ( (b__first <= b__last) /\ ((a__last - a__first) = (b__last - b__first)) )) else (
+    (b__first > b__last))) /\ (forall temp___idx_105   : int.
+    (if (( (a__first <= temp___idx_105) /\ (temp___idx_105 <= a__last) )) then (
+     ((Standard__wide_wide_character__rep.to_rep (get a temp___idx_105)) = (Standard__wide_wide_character__rep.to_rep (get b ((b__first - a__first) + temp___idx_105))))) else true)) ) )))
+
+end
+
+(* Module for axiomatizing concatenation for the array theory associated to type "wide_wide_string", created in Why.Gen.Arrays.Declare_Concatenation_Symbols *)
+module Array__Int__Standard__wide_wide_character__Concat
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Array__Int__Standard__wide_wide_character
+
+ function index_Index_one 
+   : int =
+  1
+ 
+ clone export "_gnatprove_standard".Array__1__Concat with
+ type component_type = Array__Int__Standard__wide_wide_character.component_type, 
+ type map = Array__Int__Standard__wide_wide_character.map, 
+ type Index.t = int, 
+ predicate Index.le = Int.(<=), 
+ predicate Index.lt = Int.(<), 
+ predicate Index.gt = Int.(>), 
+ function Index.add = Int.(+), 
+ function Index.sub = Int.(-), 
+ function Index.one = index_Index_one, 
+ function get = Array__Int__Standard__wide_wide_character.get
+
+end
+
+(* Module for axiomatizing comparison for the array theory associated to type "wide_wide_string", created in Why.Gen.Arrays.Declare_Comparison_Symbols *)
+module Array__Int__Standard__wide_wide_character_Comp
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__wide_wide_character__rep
+ use        Array__Int__Standard__wide_wide_character
+
+ function index_Index_one 
+   : int =
+  1
+ 
+ clone export "ada__model".Array_Int_Rep_Comparison_Axiom with
+ type component_type = Array__Int__Standard__wide_wide_character.component_type, 
+ function to_rep = Standard__wide_wide_character__rep.to_rep, 
+ type map = Array__Int__Standard__wide_wide_character.map, 
+ type Index.t = int, 
+ predicate Index.le = Int.(<=), 
+ predicate Index.lt = Int.(<), 
+ predicate Index.gt = Int.(>), 
+ function Index.add = Int.(+), 
+ function Index.sub = Int.(-), 
+ function Index.one = index_Index_one, 
+ function get = Array__Int__Standard__wide_wide_character.get, 
+ function bool_eq = Array__Int__Standard__wide_wide_character.bool_eq
+
+end
+
+(* Module for axiomatizing type "wide_wide_string", created in Gnat2Why.Types.Translate_Type *)
+module Standard__wide_wide_string
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__integer
+ use        Standard__positive
+ use        Standard__wide_wide_character
+ use        Standard__integer__rep
+ use        Array__Int__Standard__wide_wide_character
+
+ type component_type =
+  Standard__wide_wide_character.wide_wide_character
+ 
+ function index_1_id 
+   (x : int) : int =
+  x
+ 
+ clone export "ada__model".Unconstr_Array with
+ type map = Array__Int__Standard__wide_wide_character.map, 
+ function array_bool_eq = Array__Int__Standard__wide_wide_character.bool_eq, 
+ type index_base_type = Standard__integer.integer, 
+ type index_rep_type = int, 
+ function to_rep = Standard__integer__rep.to_rep, 
+ function rep_to_int = index_1_id, 
+ predicate in_range_base = Standard__integer.in_range, 
+ predicate index_dynamic_property = Standard__positive.dynamic_property, 
+ predicate index_rep_le = Int.(<=)
+ 
+ type wide_wide_string =
+  __t
+ 
+ meta "model_projection" function to_array
+ 
+ meta "inline : no" function to_array
+ 
+ meta "model_projection" function first
+ 
+ meta "inline : no" function first
+ 
+ meta "model_projection" function last
+ 
+ meta "inline : no" function last
+ 
+ type wide_wide_string__ref =
+  { mutable wide_wide_string__content "model_trace:" "name:" : wide_wide_string }
+ 
+ function wide_wide_string__ref___projection 
+   (a : wide_wide_string__ref) : wide_wide_string =
+  a.wide_wide_string__content
+ 
+ meta "model_projection" function wide_wide_string__ref___projection
+ 
+ meta "inline : no" function wide_wide_string__ref___projection
+ 
+ val wide_wide_string__havoc 
+   (x : wide_wide_string__ref) : unit
+  writes {x}
+
+end
+
+(* Module for fixed-point operation for type at system.ads:1, created in Why.Gen.Scalars.Create_Fixed_Point_Theory_If_Needed *)
+module Fixed_Point__1_1000000000
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ function num_small 
+   : int =
+  1
+ 
+ function den_small 
+   : int =
+  1000000000
+ 
+ clone export "ada__model".Fixed_Point_Rep with
+ function num_small = num_small, 
+ function den_small = den_small
+
+end
+
+(* Module for axiomatizing type "duration", created in Gnat2Why.Types.Translate_Type *)
+module Standard__duration
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        "_gnatprove_standard".Main
+
+ type duration 
+ 
+ function num_small 
+   : Main.__fixed =
+  1
+ 
+ function den_small 
+   : Main.__fixed =
+  1000000000
+ 
+ function first 
+   : Main.__fixed =
+  ( -9223372036854775808 )
+ 
+ function last 
+   : Main.__fixed =
+  9223372036854775807
+ 
+ predicate in_range 
+   (x : Main.__fixed)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Fixed_Point with
+ type t = duration, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type duration__ref =
+  { mutable duration__content "model_trace:" "name:" : duration }
+ 
+ function duration__ref___projection 
+   (a : duration__ref) : duration =
+  a.duration__content
+ 
+ meta "model_projection" function duration__ref___projection
+ 
+ meta "inline : no" function duration__ref___projection
+ 
+ val duration__havoc 
+   (x : duration__ref) : unit
+  writes {x}
+
+end
+
+(* Module for axiomatizing type "integer_8", created in Gnat2Why.Types.Translate_Type *)
+module Standard__integer_8
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type integer_8 =
+  < range -128 127 >
+ 
+ function first 
+   : int =
+  ( -128 )
+ 
+ function last 
+   : int =
+  127
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = integer_8, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type integer_8__ref =
+  { mutable integer_8__content "model_trace:" "name:" : integer_8 }
+ 
+ function integer_8__ref___projection 
+   (a : integer_8__ref) : integer_8 =
+  a.integer_8__content
+ 
+ meta "model_projection" function integer_8__ref___projection
+ 
+ meta "inline : no" function integer_8__ref___projection
+ 
+ val integer_8__havoc 
+   (x : integer_8__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "integer_8", created in Gnat2Why.Types.Translate_Type *)
+module Standard__integer_8__rep
+ use        Standard__integer_8
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Standard__integer_8.integer_8) : int =
+  (Standard__integer_8.integer_8'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Standard__integer_8.integer_8, 
+ predicate in_range = Standard__integer_8.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "integer_16", created in Gnat2Why.Types.Translate_Type *)
+module Standard__integer_16
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type integer_16 =
+  < range -32768 32767 >
+ 
+ function first 
+   : int =
+  ( -32768 )
+ 
+ function last 
+   : int =
+  32767
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = integer_16, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type integer_16__ref =
+  { mutable integer_16__content "model_trace:" "name:" : integer_16 }
+ 
+ function integer_16__ref___projection 
+   (a : integer_16__ref) : integer_16 =
+  a.integer_16__content
+ 
+ meta "model_projection" function integer_16__ref___projection
+ 
+ meta "inline : no" function integer_16__ref___projection
+ 
+ val integer_16__havoc 
+   (x : integer_16__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "integer_16", created in Gnat2Why.Types.Translate_Type *)
+module Standard__integer_16__rep
+ use        Standard__integer_16
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Standard__integer_16.integer_16) : int =
+  (Standard__integer_16.integer_16'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Standard__integer_16.integer_16, 
+ predicate in_range = Standard__integer_16.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "integer_32", created in Gnat2Why.Types.Translate_Type *)
+module Standard__integer_32
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type integer_32 =
+  < range -2147483648 2147483647 >
+ 
+ function first 
+   : int =
+  ( -2147483648 )
+ 
+ function last 
+   : int =
+  2147483647
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = integer_32, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type integer_32__ref =
+  { mutable integer_32__content "model_trace:" "name:" : integer_32 }
+ 
+ function integer_32__ref___projection 
+   (a : integer_32__ref) : integer_32 =
+  a.integer_32__content
+ 
+ meta "model_projection" function integer_32__ref___projection
+ 
+ meta "inline : no" function integer_32__ref___projection
+ 
+ val integer_32__havoc 
+   (x : integer_32__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "integer_32", created in Gnat2Why.Types.Translate_Type *)
+module Standard__integer_32__rep
+ use        Standard__integer_32
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Standard__integer_32.integer_32) : int =
+  (Standard__integer_32.integer_32'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Standard__integer_32.integer_32, 
+ predicate in_range = Standard__integer_32.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "integer_64", created in Gnat2Why.Types.Translate_Type *)
+module Standard__integer_64
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type integer_64 =
+  < range -9223372036854775808 9223372036854775807 >
+ 
+ function first 
+   : int =
+  ( -9223372036854775808 )
+ 
+ function last 
+   : int =
+  9223372036854775807
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = integer_64, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type integer_64__ref =
+  { mutable integer_64__content "model_trace:" "name:" : integer_64 }
+ 
+ function integer_64__ref___projection 
+   (a : integer_64__ref) : integer_64 =
+  a.integer_64__content
+ 
+ meta "model_projection" function integer_64__ref___projection
+ 
+ meta "inline : no" function integer_64__ref___projection
+ 
+ val integer_64__havoc 
+   (x : integer_64__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "integer_64", created in Gnat2Why.Types.Translate_Type *)
+module Standard__integer_64__rep
+ use        Standard__integer_64
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Standard__integer_64.integer_64) : int =
+  (Standard__integer_64.integer_64'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Standard__integer_64.integer_64, 
+ predicate in_range = Standard__integer_64.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "universal_integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__universal_integer
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type universal_integer =
+  < range -9223372036854775808 9223372036854775807 >
+ 
+ function first 
+   : int =
+  ( -9223372036854775808 )
+ 
+ function last 
+   : int =
+  9223372036854775807
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = universal_integer, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type universal_integer__ref =
+  { mutable universal_integer__content "model_trace:" "name:" : universal_integer }
+ 
+ function universal_integer__ref___projection 
+   (a : universal_integer__ref) : universal_integer =
+  a.universal_integer__content
+ 
+ meta "model_projection" function universal_integer__ref___projection
+ 
+ meta "inline : no" function universal_integer__ref___projection
+ 
+ val universal_integer__havoc 
+   (x : universal_integer__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "universal_integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__universal_integer__rep
+ use        Standard__universal_integer
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Standard__universal_integer.universal_integer) : int =
+  (Standard__universal_integer.universal_integer'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Standard__universal_integer.universal_integer, 
+ predicate in_range = Standard__universal_integer.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "TdepthmonitorB" defined at altsubmarine.ads:4, created in Gnat2Why.Types.Translate_Type *)
+module Altsubmarine__TdepthmonitorB
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type tdepthmonitorB =
+  < range -32768 32767 >
+ 
+ function first 
+   : int =
+  ( -32768 )
+ 
+ function last 
+   : int =
+  32767
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = tdepthmonitorB, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type tdepthmonitorB__ref =
+  { mutable tdepthmonitorB__content "model_trace:" "name:" : tdepthmonitorB }
+ 
+ function tdepthmonitorB__ref___projection 
+   (a : tdepthmonitorB__ref) : tdepthmonitorB =
+  a.tdepthmonitorB__content
+ 
+ meta "model_projection" function tdepthmonitorB__ref___projection
+ 
+ meta "inline : no" function tdepthmonitorB__ref___projection
+ 
+ val tdepthmonitorB__havoc 
+   (x : tdepthmonitorB__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "TdepthmonitorB" defined at altsubmarine.ads:4, created in Gnat2Why.Types.Translate_Type *)
+module Altsubmarine__TdepthmonitorB__rep
+ use        Altsubmarine__TdepthmonitorB
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Altsubmarine__TdepthmonitorB.tdepthmonitorB) : int =
+  (Altsubmarine__TdepthmonitorB.tdepthmonitorB'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Altsubmarine__TdepthmonitorB.tdepthmonitorB, 
+ predicate in_range = Altsubmarine__TdepthmonitorB.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "depthmonitor" defined at altsubmarine.ads:4, created in Gnat2Why.Types.Translate_Type *)
+module Altsubmarine__depthmonitor
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type depthmonitor =
+  < range 0 2000 >
+ 
+ function first 
+   : int =
+  0
+ 
+ function last 
+   : int =
+  2000
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = depthmonitor, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type depthmonitor__ref =
+  { mutable depthmonitor__content "model_trace:" "name:" : depthmonitor }
+ 
+ function depthmonitor__ref___projection 
+   (a : depthmonitor__ref) : depthmonitor =
+  a.depthmonitor__content
+ 
+ meta "model_projection" function depthmonitor__ref___projection
+ 
+ meta "inline : no" function depthmonitor__ref___projection
+ 
+ val depthmonitor__havoc 
+   (x : depthmonitor__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "depthmonitor" defined at altsubmarine.ads:4, created in Gnat2Why.Types.Translate_Type *)
+module Altsubmarine__depthmonitor__rep
+ use        Altsubmarine__depthmonitor
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Altsubmarine__depthmonitor.depthmonitor) : int =
+  (Altsubmarine__depthmonitor.depthmonitor'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Altsubmarine__depthmonitor.depthmonitor, 
+ predicate in_range = Altsubmarine__depthmonitor.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "doorstatus" defined at altsubmarine.ads:12, created in Gnat2Why.Types.Translate_Type *)
+module Altsubmarine__doorstatus
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type doorstatus 
+ 
+ function first 
+   : int =
+  0
+ 
+ function last 
+   : int =
+  1
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = doorstatus, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type doorstatus__ref =
+  { mutable doorstatus__content "model_trace:" "name:" : doorstatus }
+ 
+ function doorstatus__ref___projection 
+   (a : doorstatus__ref) : doorstatus =
+  a.doorstatus__content
+ 
+ meta "model_projection" function doorstatus__ref___projection
+ 
+ meta "inline : no" function doorstatus__ref___projection
+ 
+ val doorstatus__havoc 
+   (x : doorstatus__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "doorstatus" defined at altsubmarine.ads:12, created in Gnat2Why.Types.Translate_Type *)
+module Altsubmarine__doorstatus__rep
+ use        Altsubmarine__doorstatus
+ use import "_gnatprove_standard".Main
+
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Altsubmarine__doorstatus.doorstatus, 
+ predicate in_range = Altsubmarine__doorstatus.in_range
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "lockstatus" defined at altsubmarine.ads:13, created in Gnat2Why.Types.Translate_Type *)
+module Altsubmarine__lockstatus
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type lockstatus 
+ 
+ function first 
+   : int =
+  0
+ 
+ function last 
+   : int =
+  1
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = lockstatus, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type lockstatus__ref =
+  { mutable lockstatus__content "model_trace:" "name:" : lockstatus }
+ 
+ function lockstatus__ref___projection 
+   (a : lockstatus__ref) : lockstatus =
+  a.lockstatus__content
+ 
+ meta "model_projection" function lockstatus__ref___projection
+ 
+ meta "inline : no" function lockstatus__ref___projection
+ 
+ val lockstatus__havoc 
+   (x : lockstatus__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "lockstatus" defined at altsubmarine.ads:13, created in Gnat2Why.Types.Translate_Type *)
+module Altsubmarine__lockstatus__rep
+ use        Altsubmarine__lockstatus
+ use import "_gnatprove_standard".Main
+
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Altsubmarine__lockstatus.lockstatus, 
+ predicate in_range = Altsubmarine__lockstatus.in_range
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing the record theory associated to type "airlockdoor" defined at altsubmarine.ads:15, created in Why.Gen.Records.Create_Rep_Record_Theory_If_Needed *)
+module Altsubmarine__airlockdoor__rep
+ use import "_gnatprove_standard".Main
+ use        Altsubmarine__doorstatus
+ use        Altsubmarine__doorstatus__rep
+ use        Altsubmarine__lockstatus
+ use        Altsubmarine__lockstatus__rep
+
+ type __split_fields =
+  { rec__altsubmarine__airlockdoor__door "model_trace:.2595" "name:door" : Altsubmarine__doorstatus.doorstatus; rec__altsubmarine__airlockdoor__lock "model_trace:.2605" "name:lock" : Altsubmarine__lockstatus.lockstatus }
+ 
+ function __split_fields_door__projection "model_trace:.2595" "name:door" 
+   (a : __split_fields) : Altsubmarine__doorstatus.doorstatus =
+  a.rec__altsubmarine__airlockdoor__door
+ 
+ meta "model_projection" function __split_fields_door__projection
+ 
+ meta "inline : no" function __split_fields_door__projection
+ 
+ function __split_fields_lock__projection "model_trace:.2605" "name:lock" 
+   (a : __split_fields) : Altsubmarine__lockstatus.lockstatus =
+  a.rec__altsubmarine__airlockdoor__lock
+ 
+ meta "model_projection" function __split_fields_lock__projection
+ 
+ meta "inline : no" function __split_fields_lock__projection
+ 
+ type __split_fields__ref =
+  { mutable __split_fields__content "model_trace:" "name:" : __split_fields }
+ 
+ function __split_fields__ref___projection 
+   (a : __split_fields__ref) : __split_fields =
+  a.__split_fields__content
+ 
+ meta "model_projection" function __split_fields__ref___projection
+ 
+ meta "inline : no" function __split_fields__ref___projection
+ 
+ val __split_fields__havoc 
+   (x : __split_fields__ref) : unit
+  writes {x}
+ 
+ type __rep =
+  { __split_fields "model_trace:" "name:" : __split_fields }
+ 
+ function __rep___projection 
+   (a : __rep) : __split_fields =
+  a.__split_fields
+ 
+ meta "model_projection" function __rep___projection
+ 
+ meta "inline : no" function __rep___projection
+ 
+ function to_base 
+   (a : __rep) : __rep =
+  a
+ 
+ function of_base 
+   (a : __rep) : __rep =
+  a
+ 
+ predicate altsubmarine__airlockdoor__door__pred 
+   (a : __rep)  =
+  true
+ 
+ val rec__altsubmarine__airlockdoor__door_ 
+   (a : __rep) : Altsubmarine__doorstatus.doorstatus
+  requires {  (altsubmarine__airlockdoor__door__pred a) }
+  ensures {  (result = a.__split_fields.rec__altsubmarine__airlockdoor__door) }
+ 
+ predicate altsubmarine__airlockdoor__lock__pred 
+   (a : __rep)  =
+  true
+ 
+ val rec__altsubmarine__airlockdoor__lock_ 
+   (a : __rep) : Altsubmarine__lockstatus.lockstatus
+  requires {  (altsubmarine__airlockdoor__lock__pred a) }
+  ensures {  (result = a.__split_fields.rec__altsubmarine__airlockdoor__lock) }
+ 
+ function bool_eq 
+   (a : __rep) (b : __rep) : bool =
+  (if (( ((Altsubmarine__doorstatus__rep.to_rep a.__split_fields.rec__altsubmarine__airlockdoor__door) = (Altsubmarine__doorstatus__rep.to_rep b.__split_fields.rec__altsubmarine__airlockdoor__door)) /\ ((Altsubmarine__lockstatus__rep.to_rep a.__split_fields.rec__altsubmarine__airlockdoor__lock) = (Altsubmarine__lockstatus__rep.to_rep b.__split_fields.rec__altsubmarine__airlockdoor__lock)) )) then (
+   True) else (
+   False))
+
+end
+
+(* Module for axiomatizing type "airlockdoor" defined at altsubmarine.ads:15, created in Gnat2Why.Types.Translate_Type *)
+module Altsubmarine__airlockdoor
+ use export Altsubmarine__airlockdoor__rep
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type airlockdoor =
+  __rep
+ 
+ function value__size 
+   : int
+ 
+ function object__size 
+   (a : airlockdoor) : int
+ 
+ function value__alignment 
+   : int
+ 
+ function object__alignment 
+   (a : airlockdoor) : int
+ 
+ axiom value__size_axiom :
+  ((value__size ) >= 0)
+ 
+ axiom object__size_axiom :
+  (forall a   : airlockdoor.
+   ((object__size a) >= 0))
+ 
+ axiom value__alignment_axiom :
+  ((value__alignment ) >= 0)
+ 
+ axiom object__alignment_axiom :
+  (forall a   : airlockdoor.
+   ((object__alignment a) >= 0))
+ 
+ function altsubmarine__airlockdoor__door__first__bit 
+   : int
+ 
+ function altsubmarine__airlockdoor__door__last__bit 
+   : int
+ 
+ function altsubmarine__airlockdoor__door__position 
+   : int
+ 
+ axiom altsubmarine__airlockdoor__door__first__bit_axiom :
+  ((altsubmarine__airlockdoor__door__first__bit ) >= 0)
+ 
+ axiom altsubmarine__airlockdoor__door__last__bit_axiom :
+  ((altsubmarine__airlockdoor__door__last__bit ) > (altsubmarine__airlockdoor__door__first__bit ))
+ 
+ axiom altsubmarine__airlockdoor__door__position_axiom :
+  ((altsubmarine__airlockdoor__door__position ) >= 0)
+ 
+ function altsubmarine__airlockdoor__lock__first__bit 
+   : int
+ 
+ function altsubmarine__airlockdoor__lock__last__bit 
+   : int
+ 
+ function altsubmarine__airlockdoor__lock__position 
+   : int
+ 
+ axiom altsubmarine__airlockdoor__lock__first__bit_axiom :
+  ((altsubmarine__airlockdoor__lock__first__bit ) >= 0)
+ 
+ axiom altsubmarine__airlockdoor__lock__last__bit_axiom :
+  ((altsubmarine__airlockdoor__lock__last__bit ) > (altsubmarine__airlockdoor__lock__first__bit ))
+ 
+ axiom altsubmarine__airlockdoor__lock__position_axiom :
+  ((altsubmarine__airlockdoor__lock__position ) >= 0)
+ 
+ function user_eq 
+   (a : airlockdoor) (b : airlockdoor) : bool
+ 
+ function dummy 
+   : airlockdoor
+ 
+ type airlockdoor__ref =
+  { mutable airlockdoor__content "model_trace:" "name:" : airlockdoor }
+ 
+ function airlockdoor__ref___projection 
+   (a : airlockdoor__ref) : airlockdoor =
+  a.airlockdoor__content
+ 
+ meta "model_projection" function airlockdoor__ref___projection
+ 
+ meta "inline : no" function airlockdoor__ref___projection
+ 
+ val airlockdoor__havoc 
+   (x : airlockdoor__ref) : unit
+  writes {x}
+
+end
+
+(* Module for axiomatizing type "operationstatus" defined at altsubmarine.ads:64, created in Gnat2Why.Types.Translate_Type *)
+module Altsubmarine__operationstatus
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type operationstatus 
+ 
+ function first 
+   : int =
+  0
+ 
+ function last 
+   : int =
+  1
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = operationstatus, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type operationstatus__ref =
+  { mutable operationstatus__content "model_trace:" "name:" : operationstatus }
+ 
+ function operationstatus__ref___projection 
+   (a : operationstatus__ref) : operationstatus =
+  a.operationstatus__content
+ 
+ meta "model_projection" function operationstatus__ref___projection
+ 
+ meta "inline : no" function operationstatus__ref___projection
+ 
+ val operationstatus__havoc 
+   (x : operationstatus__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "operationstatus" defined at altsubmarine.ads:64, created in Gnat2Why.Types.Translate_Type *)
+module Altsubmarine__operationstatus__rep
+ use        Altsubmarine__operationstatus
+ use import "_gnatprove_standard".Main
+
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Altsubmarine__operationstatus.operationstatus, 
+ predicate in_range = Altsubmarine__operationstatus.in_range
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+(* Module for defining a ref holding the value of variable "currentdepth" defined at altsubmarine.ads:5, created in Gnat2Why.Decls.Translate_Variable *)
+module Altsubmarine__currentdepth
+ use import "_gnatprove_standard".Main
+
+ val currentdepth #"altsubmarine.ads" 5 0 0#"model_projected" "model_trace:2528" "name:currentDepth"  : int__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "currentdepth" defined at altsubmarine.ads:5, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Altsubmarine__currentdepth___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining a ref holding the value of variable "outerdoor" defined at altsubmarine.ads:20, created in Gnat2Why.Decls.Translate_Variable *)
+module Altsubmarine__outerdoor
+ use import "_gnatprove_standard".Main
+ use        Altsubmarine__airlockdoor
+
+ val outerdoor__split_fields #"altsubmarine.ads" 20 0 0#"model_projected" "model_trace:2617" "name:outerDoor"  : Altsubmarine__airlockdoor.__split_fields__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "outerdoor" defined at altsubmarine.ads:20, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Altsubmarine__outerdoor___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining a ref holding the value of variable "innerdoor" defined at altsubmarine.ads:21, created in Gnat2Why.Decls.Translate_Variable *)
+module Altsubmarine__innerdoor
+ use import "_gnatprove_standard".Main
+ use        Altsubmarine__airlockdoor
+
+ val innerdoor__split_fields #"altsubmarine.ads" 21 0 0#"model_projected" "model_trace:2633" "name:innerDoor"  : Altsubmarine__airlockdoor.__split_fields__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "innerdoor" defined at altsubmarine.ads:21, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Altsubmarine__innerdoor___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining a ref holding the value of variable "currentoperationstatus" defined at altsubmarine.ads:66, created in Gnat2Why.Decls.Translate_Variable *)
+module Altsubmarine__currentoperationstatus
+ use import "_gnatprove_standard".Main
+
+ val currentoperationstatus #"altsubmarine.ads" 66 0 0#"model_projected" "model_trace:2841" "name:currentOperationStatus"  : int__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "currentoperationstatus" defined at altsubmarine.ads:66, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Altsubmarine__currentoperationstatus___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+(* Module giving axioms for type "short_short_integer", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__short_short_integer___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__short_short_integer
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_4 : int) (temp___is_init_0 : bool) (temp___skip_constant_1 : bool) (temp___do_toplevel_2 : bool) (temp___do_typ_inv_3 : bool)  =
+  (if (( temp___is_init_0 \/ (Standard__short_short_integer.first <= Standard__short_short_integer.last) )) then (
+   (Standard__short_short_integer.dynamic_property Standard__short_short_integer.first Standard__short_short_integer.last temp___expr_4)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_5 : int) (temp___skip_top_level_6 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "short_integer", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__short_integer___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__short_integer
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_11 : int) (temp___is_init_7 : bool) (temp___skip_constant_8 : bool) (temp___do_toplevel_9 : bool) (temp___do_typ_inv_10 : bool)  =
+  (if (( temp___is_init_7 \/ (Standard__short_integer.first <= Standard__short_integer.last) )) then (
+   (Standard__short_integer.dynamic_property Standard__short_integer.first Standard__short_integer.last temp___expr_11)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_12 : int) (temp___skip_top_level_13 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "integer", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__integer___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__integer
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_18 : int) (temp___is_init_14 : bool) (temp___skip_constant_15 : bool) (temp___do_toplevel_16 : bool) (temp___do_typ_inv_17 : bool)  =
+  (if (( temp___is_init_14 \/ (Standard__integer.first <= Standard__integer.last) )) then (
+   (Standard__integer.dynamic_property Standard__integer.first Standard__integer.last temp___expr_18)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_19 : int) (temp___skip_top_level_20 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "long_integer", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__long_integer___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__long_integer
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_25 : int) (temp___is_init_21 : bool) (temp___skip_constant_22 : bool) (temp___do_toplevel_23 : bool) (temp___do_typ_inv_24 : bool)  =
+  (if (( temp___is_init_21 \/ (Standard__long_integer.first <= Standard__long_integer.last) )) then (
+   (Standard__long_integer.dynamic_property Standard__long_integer.first Standard__long_integer.last temp___expr_25)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_26 : int) (temp___skip_top_level_27 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "long_long_integer", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__long_long_integer___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__long_long_integer
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_32 : int) (temp___is_init_28 : bool) (temp___skip_constant_29 : bool) (temp___do_toplevel_30 : bool) (temp___do_typ_inv_31 : bool)  =
+  (if (( temp___is_init_28 \/ (Standard__long_long_integer.first <= Standard__long_long_integer.last) )) then (
+   (Standard__long_long_integer.dynamic_property Standard__long_long_integer.first Standard__long_long_integer.last temp___expr_32)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_33 : int) (temp___skip_top_level_34 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "natural", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__natural___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__natural
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_39 : int) (temp___is_init_35 : bool) (temp___skip_constant_36 : bool) (temp___do_toplevel_37 : bool) (temp___do_typ_inv_38 : bool)  =
+  (if (( temp___is_init_35 \/ (Standard__natural.first <= Standard__natural.last) )) then (
+   (Standard__natural.dynamic_property Standard__natural.first Standard__natural.last temp___expr_39)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_40 : int) (temp___skip_top_level_41 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "positive", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__positive___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__positive
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_46 : int) (temp___is_init_42 : bool) (temp___skip_constant_43 : bool) (temp___do_toplevel_44 : bool) (temp___do_typ_inv_45 : bool)  =
+  (if (( temp___is_init_42 \/ (Standard__positive.first <= Standard__positive.last) )) then (
+   (Standard__positive.dynamic_property Standard__positive.first Standard__positive.last temp___expr_46)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_47 : int) (temp___skip_top_level_48 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "short_float", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__short_float___axiom
+ use import "_gnatprove_standard".Main
+ use        "_gnatprove_standard".Float32
+ use        Standard__short_float
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_53 : Float32.t) (temp___is_init_49 : bool) (temp___skip_constant_50 : bool) (temp___do_toplevel_51 : bool) (temp___do_typ_inv_52 : bool)  =
+  (if (( temp___is_init_49 \/ (Float32.le Standard__short_float.first Standard__short_float.last) )) then (
+   (Standard__short_float.dynamic_property Standard__short_float.first Standard__short_float.last temp___expr_53)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_54 : Float32.t) (temp___skip_top_level_55 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "float", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__float___axiom
+ use import "_gnatprove_standard".Main
+ use        "_gnatprove_standard".Float32
+ use        Standard__float
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_60 : Float32.t) (temp___is_init_56 : bool) (temp___skip_constant_57 : bool) (temp___do_toplevel_58 : bool) (temp___do_typ_inv_59 : bool)  =
+  (if (( temp___is_init_56 \/ (Float32.le Standard__float.first Standard__float.last) )) then (
+   (Standard__float.dynamic_property Standard__float.first Standard__float.last temp___expr_60)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_61 : Float32.t) (temp___skip_top_level_62 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "long_float", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__long_float___axiom
+ use import "_gnatprove_standard".Main
+ use        "_gnatprove_standard".Float64
+ use        Standard__long_float
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_67 : Float64.t) (temp___is_init_63 : bool) (temp___skip_constant_64 : bool) (temp___do_toplevel_65 : bool) (temp___do_typ_inv_66 : bool)  =
+  (if (( temp___is_init_63 \/ (Float64.le Standard__long_float.first Standard__long_float.last) )) then (
+   (Standard__long_float.dynamic_property Standard__long_float.first Standard__long_float.last temp___expr_67)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_68 : Float64.t) (temp___skip_top_level_69 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "character", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__character___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__character
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_74 : int) (temp___is_init_70 : bool) (temp___skip_constant_71 : bool) (temp___do_toplevel_72 : bool) (temp___do_typ_inv_73 : bool)  =
+  (if (( temp___is_init_70 \/ (Standard__character.first <= Standard__character.last) )) then (
+   (Standard__character.dynamic_property Standard__character.first Standard__character.last temp___expr_74)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_75 : int) (temp___skip_top_level_76 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "wide_character", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__wide_character___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__wide_character
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_81 : int) (temp___is_init_77 : bool) (temp___skip_constant_78 : bool) (temp___do_toplevel_79 : bool) (temp___do_typ_inv_80 : bool)  =
+  (if (( temp___is_init_77 \/ (Standard__wide_character.first <= Standard__wide_character.last) )) then (
+   (Standard__wide_character.dynamic_property Standard__wide_character.first Standard__wide_character.last temp___expr_81)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_82 : int) (temp___skip_top_level_83 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "wide_wide_character", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__wide_wide_character___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__wide_wide_character
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_88 : int) (temp___is_init_84 : bool) (temp___skip_constant_85 : bool) (temp___do_toplevel_86 : bool) (temp___do_typ_inv_87 : bool)  =
+  (if (( temp___is_init_84 \/ (Standard__wide_wide_character.first <= Standard__wide_wide_character.last) )) then (
+   (Standard__wide_wide_character.dynamic_property Standard__wide_wide_character.first Standard__wide_wide_character.last temp___expr_88)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_89 : int) (temp___skip_top_level_90 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "string", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__string___axiom
+ use import "_gnatprove_standard".Main
+ use        Standard__string
+ use        Standard__positive
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_96 : Standard__string.string) (temp___is_init_92 : bool) (temp___skip_constant_93 : bool) (temp___do_toplevel_94 : bool) (temp___do_typ_inv_95 : bool)  =
+  (if (temp___skip_constant_93) then (
+   true) else (
+   (Standard__string.dynamic_property Standard__positive.first Standard__positive.last (Standard__string.first temp___expr_96) (Standard__string.last temp___expr_96))))
+
+end
+
+(* Module giving axioms for type "wide_string", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__wide_string___axiom
+ use import "_gnatprove_standard".Main
+ use        Standard__positive
+ use        Standard__wide_string
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_103 : Standard__wide_string.wide_string) (temp___is_init_99 : bool) (temp___skip_constant_100 : bool) (temp___do_toplevel_101 : bool) (temp___do_typ_inv_102 : bool)  =
+  (if (temp___skip_constant_100) then (
+   true) else (
+   (Standard__wide_string.dynamic_property Standard__positive.first Standard__positive.last (Standard__wide_string.first temp___expr_103) (Standard__wide_string.last temp___expr_103))))
+
+end
+
+(* Module giving axioms for type "wide_wide_string", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__wide_wide_string___axiom
+ use import "_gnatprove_standard".Main
+ use        Standard__positive
+ use        Standard__wide_wide_string
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_110 : Standard__wide_wide_string.wide_wide_string) (temp___is_init_106 : bool) (temp___skip_constant_107 : bool) (temp___do_toplevel_108 : bool) (temp___do_typ_inv_109 : bool)  =
+  (if (temp___skip_constant_107) then (
+   true) else (
+   (Standard__wide_wide_string.dynamic_property Standard__positive.first Standard__positive.last (Standard__wide_wide_string.first temp___expr_110) (Standard__wide_wide_string.last temp___expr_110))))
+
+end
+
+(* Module giving axioms for type "duration", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__duration___axiom
+ use import "_gnatprove_standard".Main
+ use        Standard__duration
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_116 : Standard__duration.duration) (temp___is_init_112 : bool) (temp___skip_constant_113 : bool) (temp___do_toplevel_114 : bool) (temp___do_typ_inv_115 : bool)  =
+  true
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_117 : Standard__duration.duration) (temp___skip_top_level_118 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "integer_8", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__integer_8___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__integer_8
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_123 : int) (temp___is_init_119 : bool) (temp___skip_constant_120 : bool) (temp___do_toplevel_121 : bool) (temp___do_typ_inv_122 : bool)  =
+  (if (( temp___is_init_119 \/ (Standard__integer_8.first <= Standard__integer_8.last) )) then (
+   (Standard__integer_8.dynamic_property Standard__integer_8.first Standard__integer_8.last temp___expr_123)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_124 : int) (temp___skip_top_level_125 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "integer_16", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__integer_16___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__integer_16
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_130 : int) (temp___is_init_126 : bool) (temp___skip_constant_127 : bool) (temp___do_toplevel_128 : bool) (temp___do_typ_inv_129 : bool)  =
+  (if (( temp___is_init_126 \/ (Standard__integer_16.first <= Standard__integer_16.last) )) then (
+   (Standard__integer_16.dynamic_property Standard__integer_16.first Standard__integer_16.last temp___expr_130)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_131 : int) (temp___skip_top_level_132 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "integer_32", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__integer_32___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__integer_32
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_137 : int) (temp___is_init_133 : bool) (temp___skip_constant_134 : bool) (temp___do_toplevel_135 : bool) (temp___do_typ_inv_136 : bool)  =
+  (if (( temp___is_init_133 \/ (Standard__integer_32.first <= Standard__integer_32.last) )) then (
+   (Standard__integer_32.dynamic_property Standard__integer_32.first Standard__integer_32.last temp___expr_137)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_138 : int) (temp___skip_top_level_139 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "integer_64", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__integer_64___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__integer_64
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_144 : int) (temp___is_init_140 : bool) (temp___skip_constant_141 : bool) (temp___do_toplevel_142 : bool) (temp___do_typ_inv_143 : bool)  =
+  (if (( temp___is_init_140 \/ (Standard__integer_64.first <= Standard__integer_64.last) )) then (
+   (Standard__integer_64.dynamic_property Standard__integer_64.first Standard__integer_64.last temp___expr_144)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_145 : int) (temp___skip_top_level_146 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "universal_integer", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__universal_integer___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__universal_integer
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_151 : int) (temp___is_init_147 : bool) (temp___skip_constant_148 : bool) (temp___do_toplevel_149 : bool) (temp___do_typ_inv_150 : bool)  =
+  (if (( temp___is_init_147 \/ (Standard__universal_integer.first <= Standard__universal_integer.last) )) then (
+   (Standard__universal_integer.dynamic_property Standard__universal_integer.first Standard__universal_integer.last temp___expr_151)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_152 : int) (temp___skip_top_level_153 : bool)  =
+  true
+
+end
+
+(* Module for possibly declaring a logic function for "openouterairlockdoor" defined at altsubmarine.ads:23, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Altsubmarine__openouterairlockdoor
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for possibly declaring a logic function for "openinnerairlockdoor" defined at altsubmarine.ads:34, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Altsubmarine__openinnerairlockdoor
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for possibly declaring a logic function for "closeouterairlockdoor" defined at altsubmarine.ads:46, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Altsubmarine__closeouterairlockdoor
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for possibly declaring a logic function for "closeinnerairlockdoor" defined at altsubmarine.ads:52, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Altsubmarine__closeinnerairlockdoor
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for possibly declaring a logic function for "lockouterdoor" defined at altsubmarine.ads:69, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Altsubmarine__lockouterdoor
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for possibly declaring a logic function for "unlockouterdoor" defined at altsubmarine.ads:75, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Altsubmarine__unlockouterdoor
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for possibly declaring a logic function for "lockinnerdoor" defined at altsubmarine.ads:81, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Altsubmarine__lockinnerdoor
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for possibly declaring a logic function for "unlockinnerdoor" defined at altsubmarine.ads:87, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Altsubmarine__unlockinnerdoor
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for possibly declaring a logic function for "allowoperation" defined at altsubmarine.ads:93, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Altsubmarine__allowoperation
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for possibly declaring a logic function for "prohibitoperation" defined at altsubmarine.ads:99, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Altsubmarine__prohibitoperation
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module giving axioms for type "TdepthmonitorB" defined at altsubmarine.ads:4, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Altsubmarine__TdepthmonitorB___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module giving axioms for type "depthmonitor" defined at altsubmarine.ads:4, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Altsubmarine__depthmonitor___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Altsubmarine__depthmonitor
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_158 : int) (temp___is_init_154 : bool) (temp___skip_constant_155 : bool) (temp___do_toplevel_156 : bool) (temp___do_typ_inv_157 : bool)  =
+  (if (( temp___is_init_154 \/ (Altsubmarine__depthmonitor.first <= Altsubmarine__depthmonitor.last) )) then (
+   (Altsubmarine__depthmonitor.dynamic_property Altsubmarine__depthmonitor.first Altsubmarine__depthmonitor.last temp___expr_158)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_159 : int) (temp___skip_top_level_160 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "doorstatus" defined at altsubmarine.ads:12, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Altsubmarine__doorstatus___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Altsubmarine__doorstatus
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_165 : int) (temp___is_init_161 : bool) (temp___skip_constant_162 : bool) (temp___do_toplevel_163 : bool) (temp___do_typ_inv_164 : bool)  =
+  (if (( temp___is_init_161 \/ (Altsubmarine__doorstatus.first <= Altsubmarine__doorstatus.last) )) then (
+   (Altsubmarine__doorstatus.dynamic_property Altsubmarine__doorstatus.first Altsubmarine__doorstatus.last temp___expr_165)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_166 : int) (temp___skip_top_level_167 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "lockstatus" defined at altsubmarine.ads:13, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Altsubmarine__lockstatus___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Altsubmarine__lockstatus
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_172 : int) (temp___is_init_168 : bool) (temp___skip_constant_169 : bool) (temp___do_toplevel_170 : bool) (temp___do_typ_inv_171 : bool)  =
+  (if (( temp___is_init_168 \/ (Altsubmarine__lockstatus.first <= Altsubmarine__lockstatus.last) )) then (
+   (Altsubmarine__lockstatus.dynamic_property Altsubmarine__lockstatus.first Altsubmarine__lockstatus.last temp___expr_172)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_173 : int) (temp___skip_top_level_174 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "airlockdoor" defined at altsubmarine.ads:15, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Altsubmarine__airlockdoor___axiom
+ use import "_gnatprove_standard".Main
+ use        Altsubmarine__airlockdoor
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_179 : Altsubmarine__airlockdoor.airlockdoor) (temp___is_init_175 : bool) (temp___skip_constant_176 : bool) (temp___do_toplevel_177 : bool) (temp___do_typ_inv_178 : bool)  =
+  true
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_180 : Altsubmarine__airlockdoor.airlockdoor) (temp___skip_top_level_181 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "operationstatus" defined at altsubmarine.ads:64, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Altsubmarine__operationstatus___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Altsubmarine__operationstatus
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_188 : int) (temp___is_init_184 : bool) (temp___skip_constant_185 : bool) (temp___do_toplevel_186 : bool) (temp___do_typ_inv_187 : bool)  =
+  (if (( temp___is_init_184 \/ (Altsubmarine__operationstatus.first <= Altsubmarine__operationstatus.last) )) then (
+   (Altsubmarine__operationstatus.dynamic_property Altsubmarine__operationstatus.first Altsubmarine__operationstatus.last temp___expr_188)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_189 : int) (temp___skip_top_level_190 : bool)  =
+  true
+
+end
+(* Module for declaring a program function (and possibly an axiom) for "openouterairlockdoor" defined at altsubmarine.ads:23, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Altsubmarine__openouterairlockdoor___axiom
+ use        Altsubmarine__outerdoor
+ use        Altsubmarine__innerdoor
+ use        Altsubmarine__currentdepth
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Altsubmarine__currentdepth
+ use        Altsubmarine__doorstatus
+ use        Altsubmarine__doorstatus__rep
+ use        Altsubmarine__lockstatus
+ use        Altsubmarine__lockstatus__rep
+ use        Altsubmarine__airlockdoor
+ use        Altsubmarine__airlockdoor___axiom
+ use        Altsubmarine__outerdoor
+ use        Altsubmarine__innerdoor
+
+ val openouterairlockdoor 
+   (__void_param : unit) : unit
+  requires {  ( (Altsubmarine__currentdepth.currentdepth.int__content = 0) /\ ( ((Altsubmarine__doorstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 1) /\ ( ((Altsubmarine__lockstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 1) /\ ((Altsubmarine__doorstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 1) ) ) ) }
+  ensures {  ( ((Altsubmarine__doorstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 0) /\ (Altsubmarine__airlockdoor___axiom.dynamic_invariant { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content } True True True True) ) }
+  reads {Altsubmarine__currentdepth.currentdepth, Altsubmarine__outerdoor.outerdoor__split_fields, Altsubmarine__innerdoor.innerdoor__split_fields}
+  writes {Altsubmarine__outerdoor.outerdoor__split_fields}
+
+end
+
+(* Module for declaring a program function (and possibly an axiom) for "openinnerairlockdoor" defined at altsubmarine.ads:34, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Altsubmarine__openinnerairlockdoor___axiom
+ use        Altsubmarine__outerdoor
+ use        Altsubmarine__innerdoor
+ use        Altsubmarine__currentdepth
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Altsubmarine__currentdepth
+ use        Altsubmarine__doorstatus
+ use        Altsubmarine__doorstatus__rep
+ use        Altsubmarine__lockstatus
+ use        Altsubmarine__lockstatus__rep
+ use        Altsubmarine__airlockdoor
+ use        Altsubmarine__airlockdoor___axiom
+ use        Altsubmarine__outerdoor
+ use        Altsubmarine__innerdoor
+
+ val openinnerairlockdoor 
+   (__void_param : unit) : unit
+  requires {  ( (Altsubmarine__currentdepth.currentdepth.int__content = 0) /\ ( ((Altsubmarine__doorstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 1) /\ ( ((Altsubmarine__lockstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 1) /\ ((Altsubmarine__doorstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 1) ) ) ) }
+  ensures {  ( ((Altsubmarine__doorstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 0) /\ (Altsubmarine__airlockdoor___axiom.dynamic_invariant { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content } True True True True) ) }
+  reads {Altsubmarine__currentdepth.currentdepth, Altsubmarine__outerdoor.outerdoor__split_fields, Altsubmarine__innerdoor.innerdoor__split_fields}
+  writes {Altsubmarine__innerdoor.innerdoor__split_fields}
+
+end
+
+(* Module for declaring a program function (and possibly an axiom) for "closeouterairlockdoor" defined at altsubmarine.ads:46, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Altsubmarine__closeouterairlockdoor___axiom
+ use        Altsubmarine__outerdoor
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Altsubmarine__doorstatus
+ use        Altsubmarine__doorstatus__rep
+ use        Altsubmarine__airlockdoor
+ use        Altsubmarine__airlockdoor___axiom
+ use        Altsubmarine__outerdoor
+
+ val closeouterairlockdoor 
+   (__void_param : unit) : unit
+  requires {  ((Altsubmarine__doorstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 0) }
+  ensures {  ( ((Altsubmarine__doorstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 1) /\ (Altsubmarine__airlockdoor___axiom.dynamic_invariant { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content } True True True True) ) }
+  reads {Altsubmarine__outerdoor.outerdoor__split_fields}
+  writes {Altsubmarine__outerdoor.outerdoor__split_fields}
+
+end
+
+(* Module for declaring a program function (and possibly an axiom) for "closeinnerairlockdoor" defined at altsubmarine.ads:52, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Altsubmarine__closeinnerairlockdoor___axiom
+ use        Altsubmarine__innerdoor
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Altsubmarine__doorstatus
+ use        Altsubmarine__doorstatus__rep
+ use        Altsubmarine__airlockdoor
+ use        Altsubmarine__airlockdoor___axiom
+ use        Altsubmarine__innerdoor
+
+ val closeinnerairlockdoor 
+   (__void_param : unit) : unit
+  requires {  ((Altsubmarine__doorstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 0) }
+  ensures {  ( ((Altsubmarine__doorstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 1) /\ (Altsubmarine__airlockdoor___axiom.dynamic_invariant { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content } True True True True) ) }
+  reads {Altsubmarine__innerdoor.innerdoor__split_fields}
+  writes {Altsubmarine__innerdoor.innerdoor__split_fields}
+
+end
+
+(* Module for declaring a program function (and possibly an axiom) for "lockouterdoor" defined at altsubmarine.ads:69, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Altsubmarine__lockouterdoor___axiom
+ use        Altsubmarine__outerdoor
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Altsubmarine__doorstatus
+ use        Altsubmarine__doorstatus__rep
+ use        Altsubmarine__lockstatus
+ use        Altsubmarine__lockstatus__rep
+ use        Altsubmarine__airlockdoor
+ use        Altsubmarine__airlockdoor___axiom
+ use        Altsubmarine__outerdoor
+
+ val lockouterdoor 
+   (__void_param : unit) : unit
+  requires {  ( ((Altsubmarine__doorstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 1) /\ ((Altsubmarine__lockstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 1) ) }
+  ensures {  ( ((Altsubmarine__lockstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 0) /\ (Altsubmarine__airlockdoor___axiom.dynamic_invariant { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content } True True True True) ) }
+  reads {Altsubmarine__outerdoor.outerdoor__split_fields}
+  writes {Altsubmarine__outerdoor.outerdoor__split_fields}
+
+end
+
+(* Module for declaring a program function (and possibly an axiom) for "unlockouterdoor" defined at altsubmarine.ads:75, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Altsubmarine__unlockouterdoor___axiom
+ use        Altsubmarine__outerdoor
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Altsubmarine__lockstatus
+ use        Altsubmarine__lockstatus__rep
+ use        Altsubmarine__airlockdoor
+ use        Altsubmarine__airlockdoor___axiom
+ use        Altsubmarine__outerdoor
+
+ val unlockouterdoor 
+   (__void_param : unit) : unit
+  requires {  ((Altsubmarine__lockstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 0) }
+  ensures {  ( ((Altsubmarine__lockstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 1) /\ (Altsubmarine__airlockdoor___axiom.dynamic_invariant { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content } True True True True) ) }
+  reads {Altsubmarine__outerdoor.outerdoor__split_fields}
+  writes {Altsubmarine__outerdoor.outerdoor__split_fields}
+
+end
+
+(* Module for declaring a program function (and possibly an axiom) for "lockinnerdoor" defined at altsubmarine.ads:81, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Altsubmarine__lockinnerdoor___axiom
+ use        Altsubmarine__innerdoor
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Altsubmarine__doorstatus
+ use        Altsubmarine__doorstatus__rep
+ use        Altsubmarine__lockstatus
+ use        Altsubmarine__lockstatus__rep
+ use        Altsubmarine__airlockdoor
+ use        Altsubmarine__airlockdoor___axiom
+ use        Altsubmarine__innerdoor
+
+ val lockinnerdoor 
+   (__void_param : unit) : unit
+  requires {  ( ((Altsubmarine__doorstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 1) /\ ((Altsubmarine__lockstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 1) ) }
+  ensures {  ( ((Altsubmarine__lockstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 0) /\ (Altsubmarine__airlockdoor___axiom.dynamic_invariant { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content } True True True True) ) }
+  reads {Altsubmarine__innerdoor.innerdoor__split_fields}
+  writes {Altsubmarine__innerdoor.innerdoor__split_fields}
+
+end
+
+(* Module for declaring a program function (and possibly an axiom) for "unlockinnerdoor" defined at altsubmarine.ads:87, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Altsubmarine__unlockinnerdoor___axiom
+ use        Altsubmarine__innerdoor
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Altsubmarine__lockstatus
+ use        Altsubmarine__lockstatus__rep
+ use        Altsubmarine__airlockdoor
+ use        Altsubmarine__airlockdoor___axiom
+ use        Altsubmarine__innerdoor
+
+ val unlockinnerdoor 
+   (__void_param : unit) : unit
+  requires {  ((Altsubmarine__lockstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 0) }
+  ensures {  ( ((Altsubmarine__lockstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 1) /\ (Altsubmarine__airlockdoor___axiom.dynamic_invariant { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content } True True True True) ) }
+  reads {Altsubmarine__innerdoor.innerdoor__split_fields}
+  writes {Altsubmarine__innerdoor.innerdoor__split_fields}
+
+end
+
+(* Module for declaring a program function (and possibly an axiom) for "allowoperation" defined at altsubmarine.ads:93, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Altsubmarine__allowoperation___axiom
+ use        Altsubmarine__outerdoor
+ use        Altsubmarine__currentoperationstatus
+ use        Altsubmarine__innerdoor
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Altsubmarine__lockstatus
+ use        Altsubmarine__lockstatus__rep
+ use        Altsubmarine__airlockdoor
+ use        Altsubmarine__outerdoor
+ use        Altsubmarine__innerdoor
+ use        Altsubmarine__operationstatus___axiom
+ use        Altsubmarine__currentoperationstatus
+
+ val allowoperation 
+   (__void_param : unit) : unit
+  requires {  ( ((Altsubmarine__lockstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 0) /\ ((Altsubmarine__lockstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 0) ) }
+  ensures {  ( (Altsubmarine__currentoperationstatus.currentoperationstatus.int__content = 0) /\ (Altsubmarine__operationstatus___axiom.dynamic_invariant Altsubmarine__currentoperationstatus.currentoperationstatus.int__content True True True True) ) }
+  reads {Altsubmarine__outerdoor.outerdoor__split_fields, Altsubmarine__innerdoor.innerdoor__split_fields}
+  writes {Altsubmarine__currentoperationstatus.currentoperationstatus}
+
+end
+
+(* Module for declaring a program function (and possibly an axiom) for "prohibitoperation" defined at altsubmarine.ads:99, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Altsubmarine__prohibitoperation___axiom
+ use        Altsubmarine__outerdoor
+ use        Altsubmarine__currentoperationstatus
+ use        Altsubmarine__innerdoor
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Altsubmarine__lockstatus
+ use        Altsubmarine__lockstatus__rep
+ use        Altsubmarine__airlockdoor
+ use        Altsubmarine__outerdoor
+ use        Altsubmarine__innerdoor
+ use        Altsubmarine__operationstatus___axiom
+ use        Altsubmarine__currentoperationstatus
+
+ val prohibitoperation 
+   (__void_param : unit) : unit
+  requires {  ( ((Altsubmarine__lockstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 1) \/ ((Altsubmarine__lockstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 1) ) }
+  ensures {  ( (Altsubmarine__currentoperationstatus.currentoperationstatus.int__content = 1) /\ (Altsubmarine__operationstatus___axiom.dynamic_invariant Altsubmarine__currentoperationstatus.currentoperationstatus.int__content True True True True) ) }
+  reads {Altsubmarine__outerdoor.outerdoor__split_fields, Altsubmarine__innerdoor.innerdoor__split_fields}
+  writes {Altsubmarine__currentoperationstatus.currentoperationstatus}
+
+end
+
+(* Module for checking absence of run-time errors and package initial condition on package elaboration of "altsubmarine" defined at altsubmarine.ads:1, created in Gnat2Why.Subprograms.Generate_VCs_For_Package_Elaboration *)
+module Altsubmarine__package_def
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Altsubmarine__depthmonitor___axiom
+ use        Altsubmarine__currentdepth
+ use        Altsubmarine__doorstatus
+ use        Altsubmarine__doorstatus__rep
+ use        Altsubmarine__lockstatus
+ use        Altsubmarine__lockstatus__rep
+ use        Altsubmarine__airlockdoor
+ use        Altsubmarine__airlockdoor___axiom
+ use        Altsubmarine__outerdoor
+ use        Altsubmarine__innerdoor
+ use        Altsubmarine__operationstatus___axiom
+ use        Altsubmarine__currentoperationstatus
+ use        Altsubmarine__depthmonitor___axiom
+ use        Altsubmarine__currentdepth___axiom
+ use        Altsubmarine__doorstatus___axiom
+ use        Altsubmarine__lockstatus___axiom
+ use        Altsubmarine__airlockdoor___axiom
+ use        Altsubmarine__outerdoor___axiom
+ use        Altsubmarine__innerdoor___axiom
+ use        Altsubmarine__operationstatus___axiom
+ use        Altsubmarine__currentoperationstatus___axiom
+
+ let def #"altsubmarine.ads" 1 0 0#"GP_Subp:altsubmarine.ads:1" "W:diverges:N" 
+   (__void_param : unit)
+  requires { #"altsubmarine.ads" 1 0 0# true }
+  ensures { #"altsubmarine.ads" 1 0 0# true }
+   =
+  ( (#"altsubmarine.ads" 1 0 0# ());
+  (#"altsubmarine.ads" 4 0 0# ());
+  (#"altsubmarine.ads" 5 0 0# ());
+  (#"altsubmarine.ads" 5 0 0# ());
+  (#"altsubmarine.ads" 5 0 0# ( #"altsubmarine.ads" 5 0 0# abstract ensures {true}(let _ = () in (
+   ()))
+   end ;
+  #"altsubmarine.ads" 5 0 0# assume { #"altsubmarine.ads" 5 0 0# (Altsubmarine__depthmonitor___axiom.default_initial_assumption Altsubmarine__currentdepth.currentdepth.int__content False) };
+  #"altsubmarine.ads" 5 0 0# assume { #"altsubmarine.ads" 5 0 0# (Altsubmarine__depthmonitor___axiom.dynamic_invariant Altsubmarine__currentdepth.currentdepth.int__content False False True True) } ));
+  (#"altsubmarine.ads" 12 0 0# ());
+  (#"altsubmarine.ads" 13 0 0# ());
+  (#"altsubmarine.ads" 15 0 0# ());
+  (#"altsubmarine.ads" 20 0 0# ());
+  (#"altsubmarine.ads" 20 0 0# ());
+  (#"altsubmarine.ads" 20 0 0# ());
+  (#"altsubmarine.ads" 20 0 0# ( (let altsubmarine__outerdoor__assume = { Altsubmarine__airlockdoor.__split_fields = { Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door = (Altsubmarine__doorstatus__rep.of_rep(1)); Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock = (Altsubmarine__lockstatus__rep.of_rep(0)) } } in (
+   #"altsubmarine.ads" 20 0 0# Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content <- ( (Altsubmarine__airlockdoor.__split_fields(altsubmarine__outerdoor__assume)) )))
+  ;
+  #"altsubmarine.ads" 20 0 0# assume { #"altsubmarine.ads" 20 0 0# (Altsubmarine__airlockdoor___axiom.dynamic_invariant { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content } True False True True) } ));
+  (#"altsubmarine.ads" 21 0 0# ( (let altsubmarine__innerdoor__assume = { Altsubmarine__airlockdoor.__split_fields = { Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door = (Altsubmarine__doorstatus__rep.of_rep(1)); Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock = (Altsubmarine__lockstatus__rep.of_rep(0)) } } in (
+   #"altsubmarine.ads" 21 0 0# Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content <- ( (Altsubmarine__airlockdoor.__split_fields(altsubmarine__innerdoor__assume)) )))
+  ;
+  #"altsubmarine.ads" 21 0 0# assume { #"altsubmarine.ads" 21 0 0# (Altsubmarine__airlockdoor___axiom.dynamic_invariant { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content } True False True True) } ));
+  (#"altsubmarine.ads" 23 0 0# ());
+  (#"altsubmarine.ads" 31 0 0# ());
+  (#"altsubmarine.ads" 26 0 0# ());
+  (#"altsubmarine.ads" 26 0 0# ());
+  (#"altsubmarine.ads" 27 0 0# ());
+  (#"altsubmarine.ads" 26 0 0# ());
+  (#"altsubmarine.ads" 24 0 0# ());
+  (#"altsubmarine.ads" 34 0 0# ());
+  (#"altsubmarine.ads" 43 0 0# ());
+  (#"altsubmarine.ads" 38 0 0# ());
+  (#"altsubmarine.ads" 38 0 0# ());
+  (#"altsubmarine.ads" 39 0 0# ());
+  (#"altsubmarine.ads" 38 0 0# ());
+  (#"altsubmarine.ads" 36 0 0# ());
+  (#"altsubmarine.ads" 46 0 0# ());
+  (#"altsubmarine.ads" 49 0 0# ());
+  (#"altsubmarine.ads" 48 0 0# ());
+  (#"altsubmarine.ads" 47 0 0# ());
+  (#"altsubmarine.ads" 52 0 0# ());
+  (#"altsubmarine.ads" 55 0 0# ());
+  (#"altsubmarine.ads" 54 0 0# ());
+  (#"altsubmarine.ads" 53 0 0# ());
+  (#"altsubmarine.ads" 64 0 0# ());
+  (#"altsubmarine.ads" 66 0 0# ());
+  (#"altsubmarine.ads" 66 0 0# ( #"altsubmarine.ads" 66 0 0# Altsubmarine__currentoperationstatus.currentoperationstatus.int__content <- ( 0 );
+  #"altsubmarine.ads" 66 0 0# assume { #"altsubmarine.ads" 66 0 0# (Altsubmarine__operationstatus___axiom.dynamic_invariant Altsubmarine__currentoperationstatus.currentoperationstatus.int__content True False True True) } ));
+  (#"altsubmarine.ads" 69 0 0# ());
+  (#"altsubmarine.ads" 72 0 0# ());
+  (#"altsubmarine.ads" 71 0 0# ());
+  (#"altsubmarine.ads" 71 0 0# ());
+  (#"altsubmarine.ads" 70 0 0# ());
+  (#"altsubmarine.ads" 75 0 0# ());
+  (#"altsubmarine.ads" 78 0 0# ());
+  (#"altsubmarine.ads" 77 0 0# ());
+  (#"altsubmarine.ads" 76 0 0# ());
+  (#"altsubmarine.ads" 81 0 0# ());
+  (#"altsubmarine.ads" 84 0 0# ());
+  (#"altsubmarine.ads" 83 0 0# ());
+  (#"altsubmarine.ads" 83 0 0# ());
+  (#"altsubmarine.ads" 82 0 0# ());
+  (#"altsubmarine.ads" 87 0 0# ());
+  (#"altsubmarine.ads" 90 0 0# ());
+  (#"altsubmarine.ads" 89 0 0# ());
+  (#"altsubmarine.ads" 88 0 0# ());
+  (#"altsubmarine.ads" 93 0 0# ());
+  (#"altsubmarine.ads" 96 0 0# ());
+  (#"altsubmarine.ads" 95 0 0# ());
+  (#"altsubmarine.ads" 95 0 0# ());
+  (#"altsubmarine.ads" 94 0 0# ());
+  (#"altsubmarine.ads" 99 0 0# ());
+  (#"altsubmarine.ads" 102 0 0# ());
+  (#"altsubmarine.ads" 101 0 0# ());
+  (#"altsubmarine.ads" 100 0 0# ());
+  (#"altsubmarine.adb" 1 0 0# ());
+  (#"altsubmarine.adb" 9 0 0# ());
+  (#"altsubmarine.adb" 17 0 0# ());
+  (#"altsubmarine.adb" 25 0 0# ());
+  (#"altsubmarine.adb" 33 0 0# ());
+  (#"altsubmarine.adb" 47 0 0# ());
+  (#"altsubmarine.adb" 53 0 0# ());
+  (#"altsubmarine.adb" 59 0 0# ());
+  (#"altsubmarine.adb" 65 0 0# ());
+  (#"altsubmarine.adb" 71 0 0# ());
+  (#"altsubmarine.adb" 77 0 0# ());
+  ( "GP_Sloc:altsubmarine.adb:139:1" (#"altsubmarine.adb" 139 0 0# ()) ) )
+end
+
+(* Module for checking contracts and absence of run-time errors in subprogram "openouterairlockdoor" defined at altsubmarine.ads:23, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+module Altsubmarine__openouterairlockdoor__subprogram_def
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Altsubmarine__depthmonitor___axiom
+ use        Altsubmarine__currentdepth
+ use        Altsubmarine__doorstatus
+ use        Altsubmarine__doorstatus__rep
+ use        Altsubmarine__lockstatus
+ use        Altsubmarine__lockstatus__rep
+ use        Altsubmarine__airlockdoor
+ use        Altsubmarine__airlockdoor___axiom
+ use        Altsubmarine__outerdoor
+ use        Altsubmarine__innerdoor
+ use        Altsubmarine__depthmonitor___axiom
+ use        Altsubmarine__currentdepth___axiom
+ use        Altsubmarine__doorstatus___axiom
+ use        Altsubmarine__lockstatus___axiom
+ use        Altsubmarine__airlockdoor___axiom
+ use        Altsubmarine__outerdoor___axiom
+ use        Altsubmarine__innerdoor___axiom
+
+ let def #"altsubmarine.ads" 23 0 0#"W:diverges:N" "GP_Subp:altsubmarine.ads:23" 
+   (__void_param : unit)
+  requires { #"altsubmarine.ads" 23 0 0# true }
+  ensures { #"altsubmarine.ads" 23 0 0# (#"altsubmarine.ads" 31 0 0# ( "model_vc_post" "keep_on_simp" "GP_Sloc:altsubmarine.ads:31:14" "GP_Reason:VC_POSTCONDITION" "GP_Id:0" "comment:     Post => outerDoor.door = Open;
+             ^ altsubmarine.ads:31:14:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" ( "GP_Pretty_Ada:3220" "GP_Sloc:altsubmarine.ads:31:14" ((Altsubmarine__doorstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 0) ) )) }
+   =
+  ( () (* Assume dynamic invariants of inputs of the subprogram altsubmarine.ads:23 *)
+  ;
+   assume {  (Altsubmarine__depthmonitor___axiom.dynamic_invariant Altsubmarine__currentdepth.currentdepth.int__content True False True True) };
+   assume {  (Altsubmarine__airlockdoor___axiom.dynamic_invariant { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content } True False True True) };
+   assume {  (Altsubmarine__airlockdoor___axiom.dynamic_invariant { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content } True False True True) };
+   assume {  true };
+  () (* Declarations introduced by the compiler at the beginning of the subprogram altsubmarine.ads:23 *)
+  ;
+  () (* Check for RTE in the Pre of the subprogram altsubmarine.ads:23 *)
+  ;
+   abstract ensures {true}(let _ = ( (Altsubmarine__currentdepth.currentdepth.int__content = 0) && ( ((Altsubmarine__doorstatus__rep.to_rep((Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door((Altsubmarine__airlockdoor.__split_fields({ Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content })))))) = 1) && ( ((Altsubmarine__lockstatus__rep.to_rep((Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock((Altsubmarine__airlockdoor.__split_fields({ Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content })))))) = 1) && ((Altsubmarine__doorstatus__rep.to_rep((Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door((Altsubmarine__airlockdoor.__split_fields({ Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content })))))) = 1) ) ) ) in (
+   ()))
+   end ;
+  () (* Assume Pre of the subprogram altsubmarine.ads:23 *)
+  ;
+   assume {  ( (Altsubmarine__currentdepth.currentdepth.int__content = 0) /\ ( ((Altsubmarine__doorstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 1) /\ ( ((Altsubmarine__lockstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 1) /\ ((Altsubmarine__doorstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 1) ) ) ) };
+   try
+   ( ( "GP_Sloc:altsubmarine.adb:11:11" (#"altsubmarine.adb" 11 0 0# ()) );
+   ( "GP_Sloc:altsubmarine.adb:11:7" (#"altsubmarine.adb" 11 0 0# (if (((Altsubmarine__doorstatus__rep.to_rep((Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door((Altsubmarine__airlockdoor.__split_fields({ Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content })))))) = 1)) then (
+    ( ( "GP_Sloc:altsubmarine.adb:12:10" (#"altsubmarine.adb" 12 0 0# ()) );
+    ( "GP_Sloc:altsubmarine.adb:12:25" (#"altsubmarine.adb" 12 0 0# (let temp___192 = (let temp___191 = { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content } in (
+     ( #"altsubmarine.adb" 12 0 0# abstract ensures {true}(let _ = (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door((Altsubmarine__airlockdoor.__split_fields(temp___191)))) in (
+      ()))
+      end ;
+     { ( temp___191 ) with Altsubmarine__airlockdoor.__split_fields = { ( (Altsubmarine__airlockdoor.__split_fields(temp___191)) ) with Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door = (Altsubmarine__doorstatus__rep.of_rep(0)) } } )))
+     in (
+     #"altsubmarine.adb" 12 0 0# Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content <- ( (Altsubmarine__airlockdoor.__split_fields(temp___192)) )))
+    ) ) )) else (
+    ()))) );
+    raise Return__exc )
+  with
+   Return__exc -> ()
+  end;
+   abstract ensures {true}(let _ = ((Altsubmarine__doorstatus__rep.to_rep((Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door((Altsubmarine__airlockdoor.__split_fields({ Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content })))))) = 0) in (
+   ()))
+   end  )
+end
+
+(* Module for checking contracts and absence of run-time errors in subprogram "openinnerairlockdoor" defined at altsubmarine.ads:34, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+module Altsubmarine__openinnerairlockdoor__subprogram_def
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Altsubmarine__depthmonitor___axiom
+ use        Altsubmarine__currentdepth
+ use        Altsubmarine__doorstatus
+ use        Altsubmarine__doorstatus__rep
+ use        Altsubmarine__lockstatus
+ use        Altsubmarine__lockstatus__rep
+ use        Altsubmarine__airlockdoor
+ use        Altsubmarine__airlockdoor___axiom
+ use        Altsubmarine__outerdoor
+ use        Altsubmarine__innerdoor
+ use        Altsubmarine__depthmonitor___axiom
+ use        Altsubmarine__currentdepth___axiom
+ use        Altsubmarine__doorstatus___axiom
+ use        Altsubmarine__lockstatus___axiom
+ use        Altsubmarine__airlockdoor___axiom
+ use        Altsubmarine__outerdoor___axiom
+ use        Altsubmarine__innerdoor___axiom
+
+ let def #"altsubmarine.ads" 34 0 0#"W:diverges:N" "GP_Subp:altsubmarine.ads:34" 
+   (__void_param : unit)
+  requires { #"altsubmarine.ads" 34 0 0# true }
+  ensures { #"altsubmarine.ads" 34 0 0# (#"altsubmarine.ads" 43 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:altsubmarine.ads:43:14" "GP_Id:1" "comment:     Post => innerDoor.door = Open;
+             ^ altsubmarine.ads:43:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:3370" "GP_Sloc:altsubmarine.ads:43:14" ((Altsubmarine__doorstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 0) ) )) }
+   =
+  ( () (* Assume dynamic invariants of inputs of the subprogram altsubmarine.ads:34 *)
+  ;
+   assume {  (Altsubmarine__depthmonitor___axiom.dynamic_invariant Altsubmarine__currentdepth.currentdepth.int__content True False True True) };
+   assume {  (Altsubmarine__airlockdoor___axiom.dynamic_invariant { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content } True False True True) };
+   assume {  (Altsubmarine__airlockdoor___axiom.dynamic_invariant { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content } True False True True) };
+   assume {  true };
+  () (* Declarations introduced by the compiler at the beginning of the subprogram altsubmarine.ads:34 *)
+  ;
+  () (* Check for RTE in the Pre of the subprogram altsubmarine.ads:34 *)
+  ;
+   abstract ensures {true}(let _ = ( (Altsubmarine__currentdepth.currentdepth.int__content = 0) && ( ((Altsubmarine__doorstatus__rep.to_rep((Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door((Altsubmarine__airlockdoor.__split_fields({ Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content })))))) = 1) && ( ((Altsubmarine__lockstatus__rep.to_rep((Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock((Altsubmarine__airlockdoor.__split_fields({ Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content })))))) = 1) && ((Altsubmarine__doorstatus__rep.to_rep((Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door((Altsubmarine__airlockdoor.__split_fields({ Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content })))))) = 1) ) ) ) in (
+   ()))
+   end ;
+  () (* Assume Pre of the subprogram altsubmarine.ads:34 *)
+  ;
+   assume {  ( (Altsubmarine__currentdepth.currentdepth.int__content = 0) /\ ( ((Altsubmarine__doorstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 1) /\ ( ((Altsubmarine__lockstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 1) /\ ((Altsubmarine__doorstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 1) ) ) ) };
+   try
+   ( ( "GP_Sloc:altsubmarine.adb:19:11" (#"altsubmarine.adb" 19 0 0# ()) );
+   ( "GP_Sloc:altsubmarine.adb:19:7" (#"altsubmarine.adb" 19 0 0# (if (((Altsubmarine__doorstatus__rep.to_rep((Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door((Altsubmarine__airlockdoor.__split_fields({ Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content })))))) = 1)) then (
+    ( ( "GP_Sloc:altsubmarine.adb:20:10" (#"altsubmarine.adb" 20 0 0# ()) );
+    ( "GP_Sloc:altsubmarine.adb:20:25" (#"altsubmarine.adb" 20 0 0# (let temp___194 = (let temp___193 = { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content } in (
+     ( #"altsubmarine.adb" 20 0 0# abstract ensures {true}(let _ = (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door((Altsubmarine__airlockdoor.__split_fields(temp___193)))) in (
+      ()))
+      end ;
+     { ( temp___193 ) with Altsubmarine__airlockdoor.__split_fields = { ( (Altsubmarine__airlockdoor.__split_fields(temp___193)) ) with Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door = (Altsubmarine__doorstatus__rep.of_rep(0)) } } )))
+     in (
+     #"altsubmarine.adb" 20 0 0# Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content <- ( (Altsubmarine__airlockdoor.__split_fields(temp___194)) )))
+    ) ) )) else (
+    ()))) );
+    raise Return__exc )
+  with
+   Return__exc -> ()
+  end;
+   abstract ensures {true}(let _ = ((Altsubmarine__doorstatus__rep.to_rep((Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door((Altsubmarine__airlockdoor.__split_fields({ Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content })))))) = 0) in (
+   ()))
+   end  )
+end
+
+(* Module for checking contracts and absence of run-time errors in subprogram "closeouterairlockdoor" defined at altsubmarine.ads:46, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+module Altsubmarine__closeouterairlockdoor__subprogram_def
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Altsubmarine__doorstatus
+ use        Altsubmarine__doorstatus__rep
+ use        Altsubmarine__airlockdoor
+ use        Altsubmarine__airlockdoor___axiom
+ use        Altsubmarine__outerdoor
+ use        Altsubmarine__doorstatus___axiom
+ use        Altsubmarine__lockstatus___axiom
+ use        Altsubmarine__airlockdoor___axiom
+ use        Altsubmarine__outerdoor___axiom
+
+ let def #"altsubmarine.ads" 46 0 0#"W:diverges:N" "GP_Subp:altsubmarine.ads:46" 
+   (__void_param : unit)
+  requires { #"altsubmarine.ads" 46 0 0# true }
+  ensures { #"altsubmarine.ads" 46 0 0# (#"altsubmarine.ads" 49 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:altsubmarine.ads:49:14" "GP_Id:2" "comment:     Post => outerDoor.door = Closed;
+             ^ altsubmarine.ads:49:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:3439" "GP_Sloc:altsubmarine.ads:49:14" ((Altsubmarine__doorstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 1) ) )) }
+   =
+  ( () (* Assume dynamic invariants of inputs of the subprogram altsubmarine.ads:46 *)
+  ;
+   assume {  (Altsubmarine__airlockdoor___axiom.dynamic_invariant { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content } True False True True) };
+   assume {  true };
+  () (* Declarations introduced by the compiler at the beginning of the subprogram altsubmarine.ads:46 *)
+  ;
+  () (* Check for RTE in the Pre of the subprogram altsubmarine.ads:46 *)
+  ;
+   abstract ensures {true}(let _ = ((Altsubmarine__doorstatus__rep.to_rep((Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door((Altsubmarine__airlockdoor.__split_fields({ Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content })))))) = 0) in (
+   ()))
+   end ;
+  () (* Assume Pre of the subprogram altsubmarine.ads:46 *)
+  ;
+   assume {  ((Altsubmarine__doorstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 0) };
+   try
+   ( ( "GP_Sloc:altsubmarine.adb:27:11" (#"altsubmarine.adb" 27 0 0# ()) );
+   ( "GP_Sloc:altsubmarine.adb:27:7" (#"altsubmarine.adb" 27 0 0# (if (((Altsubmarine__doorstatus__rep.to_rep((Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door((Altsubmarine__airlockdoor.__split_fields({ Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content })))))) = 0)) then (
+    ( ( "GP_Sloc:altsubmarine.adb:28:10" (#"altsubmarine.adb" 28 0 0# ()) );
+    ( "GP_Sloc:altsubmarine.adb:28:25" (#"altsubmarine.adb" 28 0 0# (let temp___196 = (let temp___195 = { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content } in (
+     ( #"altsubmarine.adb" 28 0 0# abstract ensures {true}(let _ = (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door((Altsubmarine__airlockdoor.__split_fields(temp___195)))) in (
+      ()))
+      end ;
+     { ( temp___195 ) with Altsubmarine__airlockdoor.__split_fields = { ( (Altsubmarine__airlockdoor.__split_fields(temp___195)) ) with Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door = (Altsubmarine__doorstatus__rep.of_rep(1)) } } )))
+     in (
+     #"altsubmarine.adb" 28 0 0# Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content <- ( (Altsubmarine__airlockdoor.__split_fields(temp___196)) )))
+    ) ) )) else (
+    ()))) );
+    raise Return__exc )
+  with
+   Return__exc -> ()
+  end;
+   abstract ensures {true}(let _ = ((Altsubmarine__doorstatus__rep.to_rep((Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door((Altsubmarine__airlockdoor.__split_fields({ Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content })))))) = 1) in (
+   ()))
+   end  )
+end
+
+(* Module for checking contracts and absence of run-time errors in subprogram "closeinnerairlockdoor" defined at altsubmarine.ads:52, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+module Altsubmarine__closeinnerairlockdoor__subprogram_def
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Altsubmarine__doorstatus
+ use        Altsubmarine__doorstatus__rep
+ use        Altsubmarine__airlockdoor
+ use        Altsubmarine__airlockdoor___axiom
+ use        Altsubmarine__innerdoor
+ use        Altsubmarine__doorstatus___axiom
+ use        Altsubmarine__lockstatus___axiom
+ use        Altsubmarine__airlockdoor___axiom
+ use        Altsubmarine__innerdoor___axiom
+
+ let def #"altsubmarine.ads" 52 0 0#"W:diverges:N" "GP_Subp:altsubmarine.ads:52" 
+   (__void_param : unit)
+  requires { #"altsubmarine.ads" 52 0 0# true }
+  ensures { #"altsubmarine.ads" 52 0 0# (#"altsubmarine.ads" 55 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:altsubmarine.ads:55:14" "GP_Id:3" "comment:     Post => innerDoor.door = Closed;
+             ^ altsubmarine.ads:55:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:3487" "GP_Sloc:altsubmarine.ads:55:14" ((Altsubmarine__doorstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 1) ) )) }
+   =
+  ( () (* Assume dynamic invariants of inputs of the subprogram altsubmarine.ads:52 *)
+  ;
+   assume {  (Altsubmarine__airlockdoor___axiom.dynamic_invariant { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content } True False True True) };
+   assume {  true };
+  () (* Declarations introduced by the compiler at the beginning of the subprogram altsubmarine.ads:52 *)
+  ;
+  () (* Check for RTE in the Pre of the subprogram altsubmarine.ads:52 *)
+  ;
+   abstract ensures {true}(let _ = ((Altsubmarine__doorstatus__rep.to_rep((Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door((Altsubmarine__airlockdoor.__split_fields({ Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content })))))) = 0) in (
+   ()))
+   end ;
+  () (* Assume Pre of the subprogram altsubmarine.ads:52 *)
+  ;
+   assume {  ((Altsubmarine__doorstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 0) };
+   try
+   ( ( "GP_Sloc:altsubmarine.adb:35:11" (#"altsubmarine.adb" 35 0 0# ()) );
+   ( "GP_Sloc:altsubmarine.adb:35:7" (#"altsubmarine.adb" 35 0 0# (if (((Altsubmarine__doorstatus__rep.to_rep((Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door((Altsubmarine__airlockdoor.__split_fields({ Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content })))))) = 0)) then (
+    ( ( "GP_Sloc:altsubmarine.adb:36:10" (#"altsubmarine.adb" 36 0 0# ()) );
+    ( "GP_Sloc:altsubmarine.adb:36:25" (#"altsubmarine.adb" 36 0 0# (let temp___198 = (let temp___197 = { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content } in (
+     ( #"altsubmarine.adb" 36 0 0# abstract ensures {true}(let _ = (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door((Altsubmarine__airlockdoor.__split_fields(temp___197)))) in (
+      ()))
+      end ;
+     { ( temp___197 ) with Altsubmarine__airlockdoor.__split_fields = { ( (Altsubmarine__airlockdoor.__split_fields(temp___197)) ) with Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door = (Altsubmarine__doorstatus__rep.of_rep(1)) } } )))
+     in (
+     #"altsubmarine.adb" 36 0 0# Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content <- ( (Altsubmarine__airlockdoor.__split_fields(temp___198)) )))
+    ) ) )) else (
+    ()))) );
+    raise Return__exc )
+  with
+   Return__exc -> ()
+  end;
+   abstract ensures {true}(let _ = ((Altsubmarine__doorstatus__rep.to_rep((Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door((Altsubmarine__airlockdoor.__split_fields({ Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content })))))) = 1) in (
+   ()))
+   end  )
+end
+
+(* Module for checking contracts and absence of run-time errors in subprogram "lockouterdoor" defined at altsubmarine.ads:69, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+module Altsubmarine__lockouterdoor__subprogram_def
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Altsubmarine__doorstatus
+ use        Altsubmarine__doorstatus__rep
+ use        Altsubmarine__lockstatus
+ use        Altsubmarine__lockstatus__rep
+ use        Altsubmarine__airlockdoor
+ use        Altsubmarine__airlockdoor___axiom
+ use        Altsubmarine__outerdoor
+ use        Altsubmarine__doorstatus___axiom
+ use        Altsubmarine__lockstatus___axiom
+ use        Altsubmarine__airlockdoor___axiom
+ use        Altsubmarine__outerdoor___axiom
+
+ let def #"altsubmarine.ads" 69 0 0#"W:diverges:N" "GP_Subp:altsubmarine.ads:69" 
+   (__void_param : unit)
+  requires { #"altsubmarine.ads" 69 0 0# true }
+  ensures { #"altsubmarine.ads" 69 0 0# (#"altsubmarine.ads" 72 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:altsubmarine.ads:72:14" "GP_Id:4" "comment:     Post => outerDoor.lock = Locked;
+             ^ altsubmarine.ads:72:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:3561" "GP_Sloc:altsubmarine.ads:72:14" ((Altsubmarine__lockstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 0) ) )) }
+   =
+  ( () (* Assume dynamic invariants of inputs of the subprogram altsubmarine.ads:69 *)
+  ;
+   assume {  (Altsubmarine__airlockdoor___axiom.dynamic_invariant { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content } True False True True) };
+   assume {  true };
+  () (* Declarations introduced by the compiler at the beginning of the subprogram altsubmarine.ads:69 *)
+  ;
+  () (* Check for RTE in the Pre of the subprogram altsubmarine.ads:69 *)
+  ;
+   abstract ensures {true}(let _ = ( ((Altsubmarine__doorstatus__rep.to_rep((Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door((Altsubmarine__airlockdoor.__split_fields({ Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content })))))) = 1) && ((Altsubmarine__lockstatus__rep.to_rep((Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock((Altsubmarine__airlockdoor.__split_fields({ Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content })))))) = 1) ) in (
+   ()))
+   end ;
+  () (* Assume Pre of the subprogram altsubmarine.ads:69 *)
+  ;
+   assume {  ( ((Altsubmarine__doorstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 1) /\ ((Altsubmarine__lockstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 1) ) };
+   try
+   ( ( "GP_Sloc:altsubmarine.adb:49:7" (#"altsubmarine.adb" 49 0 0# ()) );
+   ( "GP_Sloc:altsubmarine.adb:49:22" (#"altsubmarine.adb" 49 0 0# (let temp___200 = (let temp___199 = { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content } in (
+    ( #"altsubmarine.adb" 49 0 0# abstract ensures {true}(let _ = (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock((Altsubmarine__airlockdoor.__split_fields(temp___199)))) in (
+     ()))
+     end ;
+    { ( temp___199 ) with Altsubmarine__airlockdoor.__split_fields = { ( (Altsubmarine__airlockdoor.__split_fields(temp___199)) ) with Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock = (Altsubmarine__lockstatus__rep.of_rep(0)) } } )))
+    in (
+    #"altsubmarine.adb" 49 0 0# Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content <- ( (Altsubmarine__airlockdoor.__split_fields(temp___200)) )))
+   ) );
+    raise Return__exc )
+  with
+   Return__exc -> ()
+  end;
+   abstract ensures {true}(let _ = ((Altsubmarine__lockstatus__rep.to_rep((Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock((Altsubmarine__airlockdoor.__split_fields({ Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content })))))) = 0) in (
+   ()))
+   end  )
+end
+
+(* Module for checking contracts and absence of run-time errors in subprogram "unlockouterdoor" defined at altsubmarine.ads:75, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+module Altsubmarine__unlockouterdoor__subprogram_def
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Altsubmarine__lockstatus
+ use        Altsubmarine__lockstatus__rep
+ use        Altsubmarine__airlockdoor
+ use        Altsubmarine__airlockdoor___axiom
+ use        Altsubmarine__outerdoor
+ use        Altsubmarine__doorstatus___axiom
+ use        Altsubmarine__lockstatus___axiom
+ use        Altsubmarine__airlockdoor___axiom
+ use        Altsubmarine__outerdoor___axiom
+
+ let def #"altsubmarine.ads" 75 0 0#"W:diverges:N" "GP_Subp:altsubmarine.ads:75" 
+   (__void_param : unit)
+  requires { #"altsubmarine.ads" 75 0 0# true }
+  ensures { #"altsubmarine.ads" 75 0 0# (#"altsubmarine.ads" 78 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:altsubmarine.ads:78:14" "GP_Id:5" "comment:     Post => outerDoor.lock = Unlocked;
+             ^ altsubmarine.ads:78:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:3616" "GP_Sloc:altsubmarine.ads:78:14" ((Altsubmarine__lockstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 1) ) )) }
+   =
+  ( () (* Assume dynamic invariants of inputs of the subprogram altsubmarine.ads:75 *)
+  ;
+   assume {  (Altsubmarine__airlockdoor___axiom.dynamic_invariant { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content } True False True True) };
+   assume {  true };
+  () (* Declarations introduced by the compiler at the beginning of the subprogram altsubmarine.ads:75 *)
+  ;
+  () (* Check for RTE in the Pre of the subprogram altsubmarine.ads:75 *)
+  ;
+   abstract ensures {true}(let _ = ((Altsubmarine__lockstatus__rep.to_rep((Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock((Altsubmarine__airlockdoor.__split_fields({ Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content })))))) = 0) in (
+   ()))
+   end ;
+  () (* Assume Pre of the subprogram altsubmarine.ads:75 *)
+  ;
+   assume {  ((Altsubmarine__lockstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 0) };
+   try
+   ( ( "GP_Sloc:altsubmarine.adb:55:7" (#"altsubmarine.adb" 55 0 0# ()) );
+   ( "GP_Sloc:altsubmarine.adb:55:22" (#"altsubmarine.adb" 55 0 0# (let temp___202 = (let temp___201 = { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content } in (
+    ( #"altsubmarine.adb" 55 0 0# abstract ensures {true}(let _ = (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock((Altsubmarine__airlockdoor.__split_fields(temp___201)))) in (
+     ()))
+     end ;
+    { ( temp___201 ) with Altsubmarine__airlockdoor.__split_fields = { ( (Altsubmarine__airlockdoor.__split_fields(temp___201)) ) with Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock = (Altsubmarine__lockstatus__rep.of_rep(1)) } } )))
+    in (
+    #"altsubmarine.adb" 55 0 0# Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content <- ( (Altsubmarine__airlockdoor.__split_fields(temp___202)) )))
+   ) );
+    raise Return__exc )
+  with
+   Return__exc -> ()
+  end;
+   abstract ensures {true}(let _ = ((Altsubmarine__lockstatus__rep.to_rep((Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock((Altsubmarine__airlockdoor.__split_fields({ Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content })))))) = 1) in (
+   ()))
+   end  )
+end
+
+(* Module for checking contracts and absence of run-time errors in subprogram "lockinnerdoor" defined at altsubmarine.ads:81, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+module Altsubmarine__lockinnerdoor__subprogram_def
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Altsubmarine__doorstatus
+ use        Altsubmarine__doorstatus__rep
+ use        Altsubmarine__lockstatus
+ use        Altsubmarine__lockstatus__rep
+ use        Altsubmarine__airlockdoor
+ use        Altsubmarine__airlockdoor___axiom
+ use        Altsubmarine__innerdoor
+ use        Altsubmarine__doorstatus___axiom
+ use        Altsubmarine__lockstatus___axiom
+ use        Altsubmarine__airlockdoor___axiom
+ use        Altsubmarine__innerdoor___axiom
+
+ let def #"altsubmarine.ads" 81 0 0#"W:diverges:N" "GP_Subp:altsubmarine.ads:81" 
+   (__void_param : unit)
+  requires { #"altsubmarine.ads" 81 0 0# true }
+  ensures { #"altsubmarine.ads" 81 0 0# (#"altsubmarine.ads" 84 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:altsubmarine.ads:84:14" "GP_Id:6" "comment:     Post => innerDoor.lock = Locked;
+             ^ altsubmarine.ads:84:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:3686" "GP_Sloc:altsubmarine.ads:84:14" ((Altsubmarine__lockstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 0) ) )) }
+   =
+  ( () (* Assume dynamic invariants of inputs of the subprogram altsubmarine.ads:81 *)
+  ;
+   assume {  (Altsubmarine__airlockdoor___axiom.dynamic_invariant { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content } True False True True) };
+   assume {  true };
+  () (* Declarations introduced by the compiler at the beginning of the subprogram altsubmarine.ads:81 *)
+  ;
+  () (* Check for RTE in the Pre of the subprogram altsubmarine.ads:81 *)
+  ;
+   abstract ensures {true}(let _ = ( ((Altsubmarine__doorstatus__rep.to_rep((Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door((Altsubmarine__airlockdoor.__split_fields({ Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content })))))) = 1) && ((Altsubmarine__lockstatus__rep.to_rep((Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock((Altsubmarine__airlockdoor.__split_fields({ Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content })))))) = 1) ) in (
+   ()))
+   end ;
+  () (* Assume Pre of the subprogram altsubmarine.ads:81 *)
+  ;
+   assume {  ( ((Altsubmarine__doorstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__door (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 1) /\ ((Altsubmarine__lockstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 1) ) };
+   try
+   ( ( "GP_Sloc:altsubmarine.adb:61:7" (#"altsubmarine.adb" 61 0 0# ()) );
+   ( "GP_Sloc:altsubmarine.adb:61:22" (#"altsubmarine.adb" 61 0 0# (let temp___204 = (let temp___203 = { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content } in (
+    ( #"altsubmarine.adb" 61 0 0# abstract ensures {true}(let _ = (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock((Altsubmarine__airlockdoor.__split_fields(temp___203)))) in (
+     ()))
+     end ;
+    { ( temp___203 ) with Altsubmarine__airlockdoor.__split_fields = { ( (Altsubmarine__airlockdoor.__split_fields(temp___203)) ) with Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock = (Altsubmarine__lockstatus__rep.of_rep(0)) } } )))
+    in (
+    #"altsubmarine.adb" 61 0 0# Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content <- ( (Altsubmarine__airlockdoor.__split_fields(temp___204)) )))
+   ) );
+    raise Return__exc )
+  with
+   Return__exc -> ()
+  end;
+   abstract ensures {true}(let _ = ((Altsubmarine__lockstatus__rep.to_rep((Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock((Altsubmarine__airlockdoor.__split_fields({ Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content })))))) = 0) in (
+   ()))
+   end  )
+end
+
+(* Module for checking contracts and absence of run-time errors in subprogram "unlockinnerdoor" defined at altsubmarine.ads:87, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+module Altsubmarine__unlockinnerdoor__subprogram_def
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Altsubmarine__lockstatus
+ use        Altsubmarine__lockstatus__rep
+ use        Altsubmarine__airlockdoor
+ use        Altsubmarine__airlockdoor___axiom
+ use        Altsubmarine__innerdoor
+ use        Altsubmarine__doorstatus___axiom
+ use        Altsubmarine__lockstatus___axiom
+ use        Altsubmarine__airlockdoor___axiom
+ use        Altsubmarine__innerdoor___axiom
+
+ let def #"altsubmarine.ads" 87 0 0#"W:diverges:N" "GP_Subp:altsubmarine.ads:87" 
+   (__void_param : unit)
+  requires { #"altsubmarine.ads" 87 0 0# true }
+  ensures { #"altsubmarine.ads" 87 0 0# (#"altsubmarine.ads" 90 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:altsubmarine.ads:90:14" "GP_Id:7" "comment:     Post => innerDoor.lock = Unlocked;
+             ^ altsubmarine.ads:90:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:3741" "GP_Sloc:altsubmarine.ads:90:14" ((Altsubmarine__lockstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 1) ) )) }
+   =
+  ( () (* Assume dynamic invariants of inputs of the subprogram altsubmarine.ads:87 *)
+  ;
+   assume {  (Altsubmarine__airlockdoor___axiom.dynamic_invariant { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content } True False True True) };
+   assume {  true };
+  () (* Declarations introduced by the compiler at the beginning of the subprogram altsubmarine.ads:87 *)
+  ;
+  () (* Check for RTE in the Pre of the subprogram altsubmarine.ads:87 *)
+  ;
+   abstract ensures {true}(let _ = ((Altsubmarine__lockstatus__rep.to_rep((Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock((Altsubmarine__airlockdoor.__split_fields({ Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content })))))) = 0) in (
+   ()))
+   end ;
+  () (* Assume Pre of the subprogram altsubmarine.ads:87 *)
+  ;
+   assume {  ((Altsubmarine__lockstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 0) };
+   try
+   ( ( "GP_Sloc:altsubmarine.adb:67:7" (#"altsubmarine.adb" 67 0 0# ()) );
+   ( "GP_Sloc:altsubmarine.adb:67:22" (#"altsubmarine.adb" 67 0 0# (let temp___206 = (let temp___205 = { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content } in (
+    ( #"altsubmarine.adb" 67 0 0# abstract ensures {true}(let _ = (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock((Altsubmarine__airlockdoor.__split_fields(temp___205)))) in (
+     ()))
+     end ;
+    { ( temp___205 ) with Altsubmarine__airlockdoor.__split_fields = { ( (Altsubmarine__airlockdoor.__split_fields(temp___205)) ) with Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock = (Altsubmarine__lockstatus__rep.of_rep(1)) } } )))
+    in (
+    #"altsubmarine.adb" 67 0 0# Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content <- ( (Altsubmarine__airlockdoor.__split_fields(temp___206)) )))
+   ) );
+    raise Return__exc )
+  with
+   Return__exc -> ()
+  end;
+   abstract ensures {true}(let _ = ((Altsubmarine__lockstatus__rep.to_rep((Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock((Altsubmarine__airlockdoor.__split_fields({ Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content })))))) = 1) in (
+   ()))
+   end  )
+end
+
+(* Module for checking contracts and absence of run-time errors in subprogram "allowoperation" defined at altsubmarine.ads:93, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+module Altsubmarine__allowoperation__subprogram_def
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Altsubmarine__lockstatus
+ use        Altsubmarine__lockstatus__rep
+ use        Altsubmarine__airlockdoor
+ use        Altsubmarine__airlockdoor___axiom
+ use        Altsubmarine__outerdoor
+ use        Altsubmarine__innerdoor
+ use        Altsubmarine__operationstatus___axiom
+ use        Altsubmarine__currentoperationstatus
+ use        Altsubmarine__doorstatus___axiom
+ use        Altsubmarine__lockstatus___axiom
+ use        Altsubmarine__airlockdoor___axiom
+ use        Altsubmarine__outerdoor___axiom
+ use        Altsubmarine__innerdoor___axiom
+ use        Altsubmarine__operationstatus___axiom
+ use        Altsubmarine__currentoperationstatus___axiom
+
+ let def #"altsubmarine.ads" 93 0 0#"W:diverges:N" "GP_Subp:altsubmarine.ads:93" 
+   (__void_param : unit)
+  requires { #"altsubmarine.ads" 93 0 0# true }
+  ensures { #"altsubmarine.ads" 93 0 0# (#"altsubmarine.ads" 96 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:altsubmarine.ads:96:14" "GP_Id:8" "comment:     Post => currentOperationStatus = Allowed;
+             ^ altsubmarine.ads:96:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:3814" "GP_Sloc:altsubmarine.ads:96:14" (Altsubmarine__currentoperationstatus.currentoperationstatus.int__content = 0) ) )) }
+   =
+  ( () (* Assume dynamic invariants of inputs of the subprogram altsubmarine.ads:93 *)
+  ;
+   assume {  (Altsubmarine__airlockdoor___axiom.dynamic_invariant { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content } True False True True) };
+   assume {  (Altsubmarine__airlockdoor___axiom.dynamic_invariant { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content } True False True True) };
+   assume {  (Altsubmarine__operationstatus___axiom.dynamic_invariant Altsubmarine__currentoperationstatus.currentoperationstatus.int__content False False True True) };
+   assume {  true };
+  () (* Declarations introduced by the compiler at the beginning of the subprogram altsubmarine.ads:93 *)
+  ;
+  () (* Check for RTE in the Pre of the subprogram altsubmarine.ads:93 *)
+  ;
+   abstract ensures {true}(let _ = ( ((Altsubmarine__lockstatus__rep.to_rep((Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock((Altsubmarine__airlockdoor.__split_fields({ Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content })))))) = 0) && ((Altsubmarine__lockstatus__rep.to_rep((Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock((Altsubmarine__airlockdoor.__split_fields({ Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content })))))) = 0) ) in (
+   ()))
+   end ;
+  () (* Assume Pre of the subprogram altsubmarine.ads:93 *)
+  ;
+   assume {  ( ((Altsubmarine__lockstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 0) /\ ((Altsubmarine__lockstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 0) ) };
+   try
+   ( ( "GP_Sloc:altsubmarine.adb:73:7" (#"altsubmarine.adb" 73 0 0# ()) );
+   ( "GP_Sloc:altsubmarine.adb:73:30" (#"altsubmarine.adb" 73 0 0# #"altsubmarine.adb" 73 0 0# Altsubmarine__currentoperationstatus.currentoperationstatus.int__content <- ( 0 )) );
+    raise Return__exc )
+  with
+   Return__exc -> ()
+  end;
+   abstract ensures {true}(let _ = (Altsubmarine__currentoperationstatus.currentoperationstatus.int__content = 0) in (
+   ()))
+   end  )
+end
+
+(* Module for checking contracts and absence of run-time errors in subprogram "prohibitoperation" defined at altsubmarine.ads:99, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+module Altsubmarine__prohibitoperation__subprogram_def
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        "_gnatprove_standard".Boolean
+ use        Altsubmarine__lockstatus
+ use        Altsubmarine__lockstatus__rep
+ use        Altsubmarine__airlockdoor
+ use        Altsubmarine__airlockdoor___axiom
+ use        Altsubmarine__outerdoor
+ use        Altsubmarine__innerdoor
+ use        Altsubmarine__operationstatus___axiom
+ use        Altsubmarine__currentoperationstatus
+ use        Altsubmarine__doorstatus___axiom
+ use        Altsubmarine__lockstatus___axiom
+ use        Altsubmarine__airlockdoor___axiom
+ use        Altsubmarine__outerdoor___axiom
+ use        Altsubmarine__innerdoor___axiom
+ use        Altsubmarine__operationstatus___axiom
+ use        Altsubmarine__currentoperationstatus___axiom
+
+ let def #"altsubmarine.ads" 99 0 0#"W:diverges:N" "GP_Subp:altsubmarine.ads:99" 
+   (__void_param : unit)
+  requires { #"altsubmarine.ads" 99 0 0# true }
+  ensures { #"altsubmarine.ads" 99 0 0# (#"altsubmarine.ads" 102 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:altsubmarine.ads:102:14" "GP_Id:9" "comment:     Post => currentOperationStatus = Prohibited;
+             ^ altsubmarine.ads:102:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:3878" "GP_Sloc:altsubmarine.ads:102:14" (Altsubmarine__currentoperationstatus.currentoperationstatus.int__content = 1) ) )) }
+   =
+  ( () (* Assume dynamic invariants of inputs of the subprogram altsubmarine.ads:99 *)
+  ;
+   assume {  (Altsubmarine__airlockdoor___axiom.dynamic_invariant { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content } True False True True) };
+   assume {  (Altsubmarine__airlockdoor___axiom.dynamic_invariant { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content } True False True True) };
+   assume {  (Altsubmarine__operationstatus___axiom.dynamic_invariant Altsubmarine__currentoperationstatus.currentoperationstatus.int__content False False True True) };
+   assume {  true };
+  () (* Declarations introduced by the compiler at the beginning of the subprogram altsubmarine.ads:99 *)
+  ;
+  () (* Check for RTE in the Pre of the subprogram altsubmarine.ads:99 *)
+  ;
+   abstract ensures {true}(let _ = (Boolean.orb(((Altsubmarine__lockstatus__rep.to_rep((Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock((Altsubmarine__airlockdoor.__split_fields({ Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content })))))) = 1)) (((Altsubmarine__lockstatus__rep.to_rep((Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock((Altsubmarine__airlockdoor.__split_fields({ Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content })))))) = 1))) in (
+   ()))
+   end ;
+  () (* Assume Pre of the subprogram altsubmarine.ads:99 *)
+  ;
+   assume {  ( ((Altsubmarine__lockstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__outerdoor.outerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 1) \/ ((Altsubmarine__lockstatus__rep.to_rep (Altsubmarine__airlockdoor.rec__altsubmarine__airlockdoor__lock (Altsubmarine__airlockdoor.__split_fields { Altsubmarine__airlockdoor.__split_fields = Altsubmarine__innerdoor.innerdoor__split_fields.Altsubmarine__airlockdoor.__split_fields__content }))) = 1) ) };
+   try
+   ( ( "GP_Sloc:altsubmarine.adb:79:7" (#"altsubmarine.adb" 79 0 0# ()) );
+   ( "GP_Sloc:altsubmarine.adb:79:30" (#"altsubmarine.adb" 79 0 0# #"altsubmarine.adb" 79 0 0# Altsubmarine__currentoperationstatus.currentoperationstatus.int__content <- ( 1 )) );
+    raise Return__exc )
+  with
+   Return__exc -> ()
+  end;
+   abstract ensures {true}(let _ = (Altsubmarine__currentoperationstatus.currentoperationstatus.int__content = 1) in (
+   ()))
+   end  )
+end
