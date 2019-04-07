@@ -1,7 +1,7 @@
-with Submarine;
-use Submarine;
-with Ada.Text_IO;
-use Ada.Text_IO;
+with Submarine; use Submarine;
+with Oxygen; use Oxygen;
+with Movement; use Movement;
+with Ada.Text_IO; use Ada.Text_IO;
 
 
 procedure Main is
@@ -130,7 +130,7 @@ begin
    Put_Line(innerDoor.lock'Image);
 
 
-   Put_Line("Lock boththe inner door...");
+   Put_Line("Lock the inner door...");
    LockInnerDoor;
 
    Put_Line("Submarine dives by 2000ft");
@@ -166,6 +166,42 @@ begin
    Put_Line("Current depth of the submarine:");
    Put_Line(currentDepth'Image);
 
+
+
+   Put_Line("Oxygen levels check:");
+   Put_Line(oxygenTankStatus'Image);
+
+   Put_Line("Oxygen alarm check:");
+   Put_Line(oxygenTankLowAlarm'Image);
+
+
+   Put_Line("Oxygen starts decreasing...");
+   OxygenTankCheck;
+
+
+   Put_Line("Oxygen levels check:");
+   Put_Line(oxygenTankStatus'Image);
+
+   Put_Line("Oxygen alarm check:");
+   Put_Line(oxygenTankLowAlarm'Image);
+
+   Put_Line("Acknowledge the alarm");
+   TurnOffOxygenLowAlarm;
+
+   Put_Line("Oxygen alarm check:");
+   Put_Line(oxygenTankLowAlarm'Image);
+
+   Put_Line("Current depth of the submarine:");
+   Put_Line(currentDepth'Image);
+
+   Put_Line("Oxygen starts decreasing...");
+   OxygenTankCheck;
+
+   Put_Line("Oxygen levels check:");
+   Put_Line(oxygenTankStatus'Image);
+
+   Put_Line("Current depth of the submarine:");
+   Put_Line(currentDepth'Image);
 
 
 

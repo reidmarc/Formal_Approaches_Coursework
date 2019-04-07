@@ -1,3 +1,5 @@
+
+
 package body Submarine with Spark_Mode
 is
 
@@ -100,69 +102,8 @@ is
 
 
 
-   -----------------------------------------------------
-   -- If the oxygen runs low, a warning must be shown --
-   -----------------------------------------------------
 
 
-   procedure OxygenTankLow (level : in out OxygenTank) is
-
-      Position : TankLevelPercentage := level'Last;
-
-   begin
-      while Position > level'First loop
-         level(Position) := Nothing;
-         if Position = 10 then exit;
-         else Position := Position - 1;
-         end if;
-      end loop;
-      oxygenTankStatus := low;
-   end OxygenTankLow;
-
-
-   procedure SoundOxygenLowAlarm is
-   begin
-      oxygenTankLowAlarm := On;
-   end SoundOxygenLowAlarm;
-
-
-   procedure TurnOffOxygenLowAlarm is
-   begin
-      oxygenTankLowAlarm := Off;
-   end TurnOffOxygenLowAlarm;
-
-
-
-
-
-
-
-
-   ----------------------------------------------------------
-   -- If the oxygen runs out, the submarine has to surface --
-   ----------------------------------------------------------
-   ------------------------------------------------------------
-   -- If the reactor overheats, the submarine has to surface --
-   ------------------------------------------------------------
-   -------------------------------------------------------
-   -- The submarine cannot dive beneath a certain depth --
-   -------------------------------------------------------
-
-
-   procedure DiveTheSubmarine100ft is
-   begin
-      if (currentDepth <= 1900 and currentDepth >= 0) then
-         currentDepth := currentDepth + 100;
-      end if;
-   end DiveTheSubmarine100ft;
-
-
-   procedure RaiseTheSubmarine100ft is
-   begin
-      if (currentDepth >= 100 and currentDepth <= 2000) then
-         currentDepth := currentDepth - 100;
-      end if;
-   end RaiseTheSubmarine100ft;
 
 
 

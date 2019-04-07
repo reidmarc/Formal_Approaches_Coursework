@@ -1,18 +1,20 @@
 [GENERATED OBJECT FILE]
 b__main.o
 [PROJECT FILES]
-C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\coursework.gpr
+C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr
 20190406144250
 [BOUND OBJECT FILES]
-C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\obj\Submarine.o
-C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\obj\main.o
+C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\obj\Submarine.o
+C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\obj\Movement.o
+C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\obj\Oxygen.o
+C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\obj\main.o
 [GENERATED SOURCE FILES]
 b__main.ads
 b__main.adb
 b__main.ali
 [RESULTING OPTIONS]
--LC:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\obj\
--LC:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\obj\
+-LC:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\obj\
+-LC:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\obj\
 -LC:/gnat/2018/lib/gcc/x86_64-pc-mingw32/7.3.1/adalib/
 -static
 -static-libgcc

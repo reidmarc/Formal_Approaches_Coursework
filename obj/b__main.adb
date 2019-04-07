@@ -28,7 +28,9 @@ package body ada_main is
    E110 : Short_Integer; pragma Import (Ada, E110, "ada__finalization_E");
    E109 : Short_Integer; pragma Import (Ada, E109, "system__file_io_E");
    E006 : Short_Integer; pragma Import (Ada, E006, "ada__text_io_E");
-   E115 : Short_Integer; pragma Import (Ada, E115, "submarine_E");
+   E117 : Short_Integer; pragma Import (Ada, E117, "submarine_E");
+   E115 : Short_Integer; pragma Import (Ada, E115, "movement_E");
+   E119 : Short_Integer; pragma Import (Ada, E119, "oxygen_E");
 
    Sec_Default_Sized_Stacks : array (1 .. 1) of aliased System.Secondary_Stack.SS_Stack (System.Parameters.Runtime_Default_Sec_Stack_Size);
 
@@ -200,7 +202,9 @@ package body ada_main is
       Ada.Text_Io'Elab_Spec;
       Ada.Text_Io'Elab_Body;
       E006 := E006 + 1;
+      E117 := E117 + 1;
       E115 := E115 + 1;
+      E119 := E119 + 1;
    end adainit;
 
    procedure Ada_Main_Program;
@@ -236,10 +240,12 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
-   --   C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\obj\Submarine.o
-   --   C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\obj\main.o
-   --   -LC:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\obj\
-   --   -LC:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\obj\
+   --   C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\obj\Submarine.o
+   --   C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\obj\Movement.o
+   --   C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\obj\Oxygen.o
+   --   C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\obj\main.o
+   --   -LC:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\obj\
+   --   -LC:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\obj\
    --   -LC:/gnat/2018/lib/gcc/x86_64-pc-mingw32/7.3.1/adalib/
    --   -static
    --   -lgnat
