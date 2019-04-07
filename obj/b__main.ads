@@ -37,7 +37,7 @@ package ada_main is
    pragma Export (C, main, "main");
 
    type Version_32 is mod 2 ** 32;
-   u00001 : constant Version_32 := 16#84ad18b4#;
+   u00001 : constant Version_32 := 16#97602f70#;
    pragma Export (C, u00001, "mainB");
    u00002 : constant Version_32 := 16#050ff2f0#;
    pragma Export (C, u00002, "system__standard_libraryB");
@@ -263,26 +263,34 @@ package ada_main is
    pragma Export (C, u00112, "system__finalization_rootS");
    u00113 : constant Version_32 := 16#cf3f1b90#;
    pragma Export (C, u00113, "system__file_control_blockS");
-   u00114 : constant Version_32 := 16#2689535e#;
+   u00114 : constant Version_32 := 16#c811eabb#;
    pragma Export (C, u00114, "movementB");
-   u00115 : constant Version_32 := 16#07365d75#;
+   u00115 : constant Version_32 := 16#46c0cf13#;
    pragma Export (C, u00115, "movementS");
    u00116 : constant Version_32 := 16#4d916351#;
    pragma Export (C, u00116, "submarineB");
    u00117 : constant Version_32 := 16#49bc63d3#;
    pragma Export (C, u00117, "submarineS");
-   u00118 : constant Version_32 := 16#d86b97ca#;
+   u00118 : constant Version_32 := 16#932da46f#;
    pragma Export (C, u00118, "oxygenB");
-   u00119 : constant Version_32 := 16#f0d614a7#;
+   u00119 : constant Version_32 := 16#32e6e7f7#;
    pragma Export (C, u00119, "oxygenS");
-   u00120 : constant Version_32 := 16#273384e4#;
-   pragma Export (C, u00120, "system__img_enum_newB");
-   u00121 : constant Version_32 := 16#53ec87f8#;
-   pragma Export (C, u00121, "system__img_enum_newS");
-   u00122 : constant Version_32 := 16#5dc07a5a#;
-   pragma Export (C, u00122, "system__memoryB");
-   u00123 : constant Version_32 := 16#6bdde70c#;
-   pragma Export (C, u00123, "system__memoryS");
+   u00120 : constant Version_32 := 16#fd4db915#;
+   pragma Export (C, u00120, "reactorB");
+   u00121 : constant Version_32 := 16#f1a488d8#;
+   pragma Export (C, u00121, "reactorS");
+   u00122 : constant Version_32 := 16#273384e4#;
+   pragma Export (C, u00122, "system__img_enum_newB");
+   u00123 : constant Version_32 := 16#53ec87f8#;
+   pragma Export (C, u00123, "system__img_enum_newS");
+   u00124 : constant Version_32 := 16#aedb9920#;
+   pragma Export (C, u00124, "torpedoesB");
+   u00125 : constant Version_32 := 16#ce1834cd#;
+   pragma Export (C, u00125, "torpedoesS");
+   u00126 : constant Version_32 := 16#5dc07a5a#;
+   pragma Export (C, u00126, "system__memoryB");
+   u00127 : constant Version_32 := 16#6bdde70c#;
+   pragma Export (C, u00127, "system__memoryS");
 
    --  BEGIN ELABORATION ORDER
    --  ada%s
@@ -407,6 +415,10 @@ package ada_main is
    --  movement%b
    --  oxygen%s
    --  oxygen%b
+   --  reactor%s
+   --  reactor%b
+   --  torpedoes%s
+   --  torpedoes%b
    --  main%b
    --  END ELABORATION ORDER
 

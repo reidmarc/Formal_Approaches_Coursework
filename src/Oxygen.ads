@@ -1,5 +1,5 @@
--- with Submarine;
--- use Submarine;
+with Submarine;
+use Submarine;
 with Movement;
 use Movement;
 
@@ -19,52 +19,39 @@ is
    oxygenTankStatus : TankStatus := Empty;
 
    type Alarm is (On, Off);
-   oxygenTankLowAlarm : Alarm := Off;
-   oxygenTankEmptyAlarm : Alarm := Off;
+   oxygenTankAlarm : Alarm := Off;
 
    type RecievedWarning is (Yes, No);
 
-   oxygenTankWarningRecieved : RecievedWarning := No;
+   oxygenTankLowWarningRecieved : RecievedWarning := No;
+   oxygenTankEmptyWarningRecieved : RecievedWarning := No;
 
 
    ----------------------
    -- Fill oxygen tank --
    ----------------------
-
-   procedure FillOxygenTank  with
-     Global => (In_Out => (oxygenTankStatus,oxygenTank)),
-     Pre => oxygenTankStatus /= Full,
+   procedure FillOxygenTank with
+     Global => (In_Out => (oxygenTankStatus,oxygenTank), Input => currentDepth),
+     Pre => oxygenTankStatus /= Full and then currentDepth = 0,
      Post => oxygenTankStatus = Full and then (for all J in oxygenTank'Range => oxygenTank(J) = Oxygen);
-
-
-
-
-
 
 
    -----------------------------------------------------
    -- If the oxygen runs low, a warning must be shown --
    -----------------------------------------------------
-
-
+   ----------------------------------------------------------
+   -- If the oxygen runs out, the submarine has to surface --
+   ----------------------------------------------------------
    procedure OxygenTankCheck with
-     Global => (In_Out => (oxygenTankStatus, oxygenTankLowAlarm, oxygenTankEmptyAlarm, oxygenTank)),
-     Pre => oxygenTankLowAlarm = Off or oxygenTankEmptyAlarm = Off,
-     Post => (oxygenTankStatus = Low and then oxygenTankLowAlarm = On) or
-     (oxygenTankStatus = Empty and then oxygenTankEmptyAlarm = On);
+     Global => (In_Out => (oxygenTankStatus, oxygenTankAlarm, oxygenTank, currentDepth)),
+     Pre => oxygenTankAlarm = Off and then currentDepth /=0,
+     Post => (oxygenTankStatus = Low  or oxygenTankStatus = Empty) and then oxygenTankAlarm = On;
 
 
    procedure TurnOffOxygenLowAlarm with
-     Global => (In_Out => (oxygenTankLowAlarm, oxygenTankWarningRecieved)),
-     Pre => oxygenTankLowAlarm = On and then oxygenTankWarningRecieved = No,
-     Post => oxygenTankLowAlarm = Off and then oxygenTankWarningRecieved = Yes;
-
-
-    ----------------------------------------------------------
-   -- If the oxygen runs out, the submarine has to surface --
-    ----------------------------------------------------------
-
-
+     Global => (In_Out => (oxygenTankAlarm, oxygenTankLowWarningRecieved)),
+     Pre => oxygenTankAlarm = On and then oxygenTankLowWarningRecieved = No,
+     Post => oxygenTankAlarm = Off and then oxygenTankLowWarningRecieved = Yes;
 
 
 

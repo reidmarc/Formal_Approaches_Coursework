@@ -55,7 +55,7 @@
       "sloc": [
         {
           "file": "submarine.ads",
-          "line": 54
+          "line": 53
         }
       ],
       "spark": "all"
@@ -65,7 +65,7 @@
       "sloc": [
         {
           "file": "submarine.ads",
-          "line": 60
+          "line": 59
         }
       ],
       "spark": "all"
@@ -75,7 +75,7 @@
       "sloc": [
         {
           "file": "submarine.ads",
-          "line": 66
+          "line": 65
         }
       ],
       "spark": "all"
@@ -85,7 +85,7 @@
       "sloc": [
         {
           "file": "submarine.ads",
-          "line": 72
+          "line": 71
         }
       ],
       "spark": "all"
@@ -96,7 +96,7 @@
   "proof": [
     {
       "file": "submarine.ads",
-      "line": 75,
+      "line": 74,
       "col": 14,
       "rule": "VC_POSTCONDITION",
       "severity": "info",
@@ -105,7 +105,7 @@
         "sloc": [
           {
             "file": "submarine.ads",
-            "line": 72
+            "line": 71
           }
         ]
       },
@@ -134,7 +134,7 @@
         }
       ],
       "check_file": "submarine.ads",
-      "check_line": 75,
+      "check_line": 74,
       "check_col": 14,
       "how_proved": "prover",
       "stats": {
@@ -201,7 +201,7 @@
     },
     {
       "file": "submarine.ads",
-      "line": 69,
+      "line": 68,
       "col": 14,
       "rule": "VC_POSTCONDITION",
       "severity": "info",
@@ -210,7 +210,7 @@
         "sloc": [
           {
             "file": "submarine.ads",
-            "line": 66
+            "line": 65
           }
         ]
       },
@@ -228,7 +228,7 @@
         }
       ],
       "check_file": "submarine.ads",
-      "check_line": 69,
+      "check_line": 68,
       "check_col": 14,
       "how_proved": "prover",
       "stats": {
@@ -281,7 +281,7 @@
     },
     {
       "file": "submarine.ads",
-      "line": 57,
+      "line": 56,
       "col": 14,
       "rule": "VC_POSTCONDITION",
       "severity": "info",
@@ -290,7 +290,7 @@
         "sloc": [
           {
             "file": "submarine.ads",
-            "line": 54
+            "line": 53
           }
         ]
       },
@@ -308,7 +308,7 @@
         }
       ],
       "check_file": "submarine.ads",
-      "check_line": 57,
+      "check_line": 56,
       "check_col": 14,
       "how_proved": "prover",
       "stats": {
@@ -321,7 +321,7 @@
     },
     {
       "file": "submarine.ads",
-      "line": 63,
+      "line": 62,
       "col": 14,
       "rule": "VC_POSTCONDITION",
       "severity": "info",
@@ -330,7 +330,7 @@
         "sloc": [
           {
             "file": "submarine.ads",
-            "line": 60
+            "line": 59
           }
         ]
       },
@@ -359,7 +359,7 @@
         }
       ],
       "check_file": "submarine.ads",
-      "check_line": 63,
+      "check_line": 62,
       "check_col": 14,
       "how_proved": "prover",
       "stats": {
@@ -476,7 +476,7 @@
           "sloc": [
             {
               "file": "submarine.ads",
-              "line": 66
+              "line": 65
             }
           ]
         }
@@ -492,7 +492,7 @@
           "sloc": [
             {
               "file": "submarine.ads",
-              "line": 66
+              "line": 65
             }
           ]
         }
@@ -508,7 +508,7 @@
           "sloc": [
             {
               "file": "submarine.ads",
-              "line": 66
+              "line": 65
             }
           ]
         }
@@ -620,7 +620,7 @@
           "sloc": [
             {
               "file": "submarine.ads",
-              "line": 72
+              "line": 71
             }
           ]
         }
@@ -652,7 +652,7 @@
           "sloc": [
             {
               "file": "submarine.ads",
-              "line": 72
+              "line": 71
             }
           ]
         }
@@ -668,7 +668,7 @@
           "sloc": [
             {
               "file": "submarine.ads",
-              "line": 72
+              "line": 71
             }
           ]
         }
@@ -684,7 +684,7 @@
           "sloc": [
             {
               "file": "submarine.ads",
-              "line": 54
+              "line": 53
             }
           ]
         }
@@ -700,7 +700,7 @@
           "sloc": [
             {
               "file": "submarine.ads",
-              "line": 54
+              "line": 53
             }
           ]
         }
@@ -716,7 +716,7 @@
           "sloc": [
             {
               "file": "submarine.ads",
-              "line": 54
+              "line": 53
             }
           ]
         }
@@ -780,7 +780,7 @@
           "sloc": [
             {
               "file": "submarine.ads",
-              "line": 60
+              "line": 59
             }
           ]
         }
@@ -796,7 +796,7 @@
           "sloc": [
             {
               "file": "submarine.ads",
-              "line": 60
+              "line": 59
             }
           ]
         }
@@ -828,7 +828,7 @@
           "sloc": [
             {
               "file": "submarine.ads",
-              "line": 60
+              "line": 59
             }
           ]
         }
@@ -868,14 +868,14 @@
     }
   ],
   "timings": {
-    "marking": 6.23899977654219E-04,
-    "globals (basic)": 5.98800019361079E-04,
-    "globals/properties (advanced)": 1.36949995066971E-03,
-    "flow analysis": 1.35065000504255E-02,
-    "codepeer results": 7.09999994796817E-06,
-    "init_why_sections": 2.56700004683807E-04,
-    "translation of standard": 3.33880004473031E-03,
-    "translation of compilation unit": 1.08163999393582E-02,
-    "proof": 7.34200716018677E-01
+    "marking": 3.68100008927286E-04,
+    "globals (basic)": 1.05510000139475E-03,
+    "globals/properties (advanced)": 2.11509992368519E-03,
+    "flow analysis": 2.06719990819693E-02,
+    "codepeer results": 9.00000031833770E-06,
+    "init_why_sections": 3.48500005202368E-04,
+    "translation of standard": 5.45549998059869E-03,
+    "translation of compilation unit": 1.45774995908141E-02,
+    "proof": 9.51686918735504E-01
   }
 }

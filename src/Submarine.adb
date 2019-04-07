@@ -6,8 +6,6 @@ is
    ---------------------------------------------------------------------------
    -- The submarine must have at least one airlock door closed at all times --
    ---------------------------------------------------------------------------
-
-
    procedure OpenOuterAirLockDoor is
    begin
       if (innerDoor.door = Closed and outerDoor.lock = Unlocked) then
@@ -43,8 +41,6 @@ is
    -------------------------------------------------------------------------------------
    -- The submarine can perform no operations unless both doors are closed and locked --
    -------------------------------------------------------------------------------------
-
-
    procedure LockOuterDoor is
    begin
       if (outerDoor.door = Closed and outerDoor.lock = Unlocked) then
@@ -84,33 +80,4 @@ is
       end if;
    end UnlockInnerDoor;
 
-
---     procedure AllowOperation is
---     begin
---        if (outerDoor.lock = Locked and innerDoor.lock = Locked) then
---           currentOperationStatus := Allowed;
---        end if;
---     end AllowOperation;
---
---
---     procedure ProhibitOperation is
---     begin
---        if (outerDoor.lock = Unlocked or innerDoor.lock = Unlocked) then
---           currentOperationStatus := Prohibited;
---           end if;
---     end ProhibitOperation;
-
-
-
-
-
-
-
-
-
-
-
-   -----------------------------------------------------------------------------------
-   -- The submarine must be capable of storing, loading and firing torpedoes safely --
-   -----------------------------------------------------------------------------------
 end Submarine;

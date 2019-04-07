@@ -5,17 +5,17 @@
       "sloc": [
         {
           "file": "reactor.ads",
-          "line": 1
+          "line": 6
         }
       ],
       "spark": "all"
     },
     {
-      "name": "Reactor.P1",
+      "name": "Reactor.ReactorTempOverheats",
       "sloc": [
         {
           "file": "reactor.ads",
-          "line": 10
+          "line": 15
         }
       ],
       "spark": "all"
@@ -26,16 +26,16 @@
   "proof": [
     {
       "file": "reactor.adb",
-      "line": 14,
-      "col": 14,
-      "rule": "VC_OVERFLOW_CHECK",
+      "line": 19,
+      "col": 7,
+      "rule": "VC_PRECONDITION",
       "severity": "info",
       "entity": {
-        "name": "Reactor.P1",
+        "name": "Reactor.ReactorTempOverheats",
         "sloc": [
           {
             "file": "reactor.ads",
-            "line": 10
+            "line": 15
           }
         ]
       },
@@ -44,8 +44,19 @@
           "proof_attempts": {
             "CVC4": {
               "result": "Valid",
-              "steps": 13,
-              "time": 2.00000000000000E-02
+              "steps": 22,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 22,
+              "time": 0
             }
           },
           "transformations": {
@@ -53,29 +64,29 @@
         }
       ],
       "check_file": "reactor.adb",
-      "check_line": 14,
-      "check_col": 14,
+      "check_line": 19,
+      "check_col": 7,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
-          "count": 1,
+          "count": 2,
           "max_steps": 1,
-          "max_time": 1.99999995529652E-02
+          "max_time": 0.00000000000000E+00
         }
       }
     },
     {
       "file": "reactor.ads",
-      "line": 12,
+      "line": 18,
       "col": 14,
       "rule": "VC_POSTCONDITION",
       "severity": "info",
       "entity": {
-        "name": "Reactor.P1",
+        "name": "Reactor.ReactorTempOverheats",
         "sloc": [
           {
             "file": "reactor.ads",
-            "line": 10
+            "line": 15
           }
         ]
       },
@@ -85,7 +96,44 @@
             "CVC4": {
               "result": "Valid",
               "steps": 5,
-              "time": 2.00000000000000E-02
+              "time": 0
+            }
+          },
+          "transformations": {
+            "split_disj": [
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              }
+            ]
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 12,
+              "time": 0
             }
           },
           "transformations": {
@@ -93,94 +141,14 @@
         }
       ],
       "check_file": "reactor.ads",
-      "check_line": 12,
+      "check_line": 18,
       "check_col": 14,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
-          "count": 1,
+          "count": 2,
           "max_steps": 1,
-          "max_time": 1.99999995529652E-02
-        }
-      }
-    },
-    {
-      "file": "reactor.adb",
-      "line": 15,
-      "col": 14,
-      "rule": "VC_OVERFLOW_CHECK",
-      "severity": "info",
-      "entity": {
-        "name": "Reactor.P1",
-        "sloc": [
-          {
-            "file": "reactor.ads",
-            "line": 10
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 2.00000000000000E-02
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "reactor.adb",
-      "check_line": 15,
-      "check_col": 14,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 1,
-          "max_steps": 1,
-          "max_time": 1.99999995529652E-02
-        }
-      }
-    },
-    {
-      "file": "reactor.ads",
-      "line": 11,
-      "col": 50,
-      "rule": "VC_OVERFLOW_CHECK",
-      "severity": "info",
-      "entity": {
-        "name": "Reactor.P1",
-        "sloc": [
-          {
-            "file": "reactor.ads",
-            "line": 10
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 2.00000000000000E-02
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "reactor.ads",
-      "check_line": 11,
-      "check_col": 50,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 1,
-          "max_steps": 1,
-          "max_time": 1.99999995529652E-02
+          "max_time": 0.00000000000000E+00
         }
       }
     }
@@ -188,15 +156,51 @@
   "assumptions": [
     {
       "assumptions": [
+        {
+          "predicate": "CLAIM_POST",
+          "arg": {
+            "name": "Movement.SurfaceTheSubmarine",
+            "sloc": [
+              {
+                "file": "movement.ads",
+                "line": 34
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Movement.SurfaceTheSubmarine",
+            "sloc": [
+              {
+                "file": "movement.ads",
+                "line": 34
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "Movement.SurfaceTheSubmarine",
+            "sloc": [
+              {
+                "file": "movement.ads",
+                "line": 34
+              }
+            ]
+          }
+        }
       ],
       "claim": {
         "predicate": "CLAIM_POST",
         "arg": {
-          "name": "Reactor.P1",
+          "name": "Reactor.ReactorTempOverheats",
           "sloc": [
             {
               "file": "reactor.ads",
-              "line": 10
+              "line": 15
             }
           ]
         }
@@ -204,15 +208,27 @@
     },
     {
       "assumptions": [
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Movement.SurfaceTheSubmarine",
+            "sloc": [
+              {
+                "file": "movement.ads",
+                "line": 34
+              }
+            ]
+          }
+        }
       ],
       "claim": {
         "predicate": "CLAIM_EFFECTS",
         "arg": {
-          "name": "Reactor.P1",
+          "name": "Reactor.ReactorTempOverheats",
           "sloc": [
             {
               "file": "reactor.ads",
-              "line": 10
+              "line": 15
             }
           ]
         }
@@ -220,15 +236,51 @@
     },
     {
       "assumptions": [
+        {
+          "predicate": "CLAIM_POST",
+          "arg": {
+            "name": "Movement.SurfaceTheSubmarine",
+            "sloc": [
+              {
+                "file": "movement.ads",
+                "line": 34
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Movement.SurfaceTheSubmarine",
+            "sloc": [
+              {
+                "file": "movement.ads",
+                "line": 34
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "Movement.SurfaceTheSubmarine",
+            "sloc": [
+              {
+                "file": "movement.ads",
+                "line": 34
+              }
+            ]
+          }
+        }
       ],
       "claim": {
         "predicate": "CLAIM_AORTE",
         "arg": {
-          "name": "Reactor.P1",
+          "name": "Reactor.ReactorTempOverheats",
           "sloc": [
             {
               "file": "reactor.ads",
-              "line": 10
+              "line": 15
             }
           ]
         }
@@ -244,7 +296,7 @@
           "sloc": [
             {
               "file": "reactor.ads",
-              "line": 1
+              "line": 6
             }
           ]
         }
@@ -252,14 +304,14 @@
     }
   ],
   "timings": {
-    "marking": 2.72900011623278E-04,
-    "globals (basic)": 8.17299995105714E-04,
-    "globals/properties (advanced)": 1.21190003119409E-03,
-    "flow analysis": 1.66810001246631E-03,
-    "codepeer results": 6.79999993735692E-06,
-    "init_why_sections": 2.42299996898510E-04,
-    "translation of standard": 6.64380006492138E-03,
-    "translation of compilation unit": 1.04500004090369E-03,
-    "proof": 6.31682693958282E-01
+    "marking": 4.20399999711663E-04,
+    "globals (basic)": 1.82150001637638E-03,
+    "globals/properties (advanced)": 3.15980007871985E-03,
+    "flow analysis": 2.39309994503856E-03,
+    "codepeer results": 1.49999996210681E-05,
+    "init_why_sections": 2.52800004091114E-04,
+    "translation of standard": 4.27980022504926E-03,
+    "translation of compilation unit": 7.29840015992522E-03,
+    "proof": 6.27337276935577E-01
   }
 }

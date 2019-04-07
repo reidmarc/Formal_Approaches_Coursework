@@ -1637,37 +1637,715 @@ module Standard__universal_integer__rep
  meta "inline : no" function to_rep
 
 end
-(* Module for defining a ref holding the value of variable "s" defined at reactor.ads:10, created in Gnat2Why.Decls.Translate_Variable *)
-module Reactor__p1__s
+
+(* Module for axiomatizing type "TdepthmonitorB" defined at submarine.ads:4, created in Gnat2Why.Types.Translate_Type *)
+module Submarine__TdepthmonitorB
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type tdepthmonitorB =
+  < range -32768 32767 >
+ 
+ function first 
+   : int =
+  ( -32768 )
+ 
+ function last 
+   : int =
+  32767
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = tdepthmonitorB, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type tdepthmonitorB__ref =
+  { mutable tdepthmonitorB__content "model_trace:" "name:" : tdepthmonitorB }
+ 
+ function tdepthmonitorB__ref___projection 
+   (a : tdepthmonitorB__ref) : tdepthmonitorB =
+  a.tdepthmonitorB__content
+ 
+ meta "model_projection" function tdepthmonitorB__ref___projection
+ 
+ meta "inline : no" function tdepthmonitorB__ref___projection
+ 
+ val tdepthmonitorB__havoc 
+   (x : tdepthmonitorB__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "TdepthmonitorB" defined at submarine.ads:4, created in Gnat2Why.Types.Translate_Type *)
+module Submarine__TdepthmonitorB__rep
+ use        Submarine__TdepthmonitorB
  use import "_gnatprove_standard".Main
 
- val s #"reactor.ads" 10 0 0#"model_projected" "model_trace:2373" "name:s"  : int__ref 
+ function to_rep 
+   (x : Submarine__TdepthmonitorB.tdepthmonitorB) : int =
+  (Submarine__TdepthmonitorB.tdepthmonitorB'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Submarine__TdepthmonitorB.tdepthmonitorB, 
+ predicate in_range = Submarine__TdepthmonitorB.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "depthmonitor" defined at submarine.ads:4, created in Gnat2Why.Types.Translate_Type *)
+module Submarine__depthmonitor
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type depthmonitor =
+  < range 0 2000 >
+ 
+ function first 
+   : int =
+  0
+ 
+ function last 
+   : int =
+  2000
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = depthmonitor, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type depthmonitor__ref =
+  { mutable depthmonitor__content "model_trace:" "name:" : depthmonitor }
+ 
+ function depthmonitor__ref___projection 
+   (a : depthmonitor__ref) : depthmonitor =
+  a.depthmonitor__content
+ 
+ meta "model_projection" function depthmonitor__ref___projection
+ 
+ meta "inline : no" function depthmonitor__ref___projection
+ 
+ val depthmonitor__havoc 
+   (x : depthmonitor__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "depthmonitor" defined at submarine.ads:4, created in Gnat2Why.Types.Translate_Type *)
+module Submarine__depthmonitor__rep
+ use        Submarine__depthmonitor
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Submarine__depthmonitor.depthmonitor) : int =
+  (Submarine__depthmonitor.depthmonitor'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Submarine__depthmonitor.depthmonitor, 
+ predicate in_range = Submarine__depthmonitor.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "doorstatus" defined at submarine.ads:12, created in Gnat2Why.Types.Translate_Type *)
+module Submarine__doorstatus
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type doorstatus 
+ 
+ function first 
+   : int =
+  0
+ 
+ function last 
+   : int =
+  1
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = doorstatus, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type doorstatus__ref =
+  { mutable doorstatus__content "model_trace:" "name:" : doorstatus }
+ 
+ function doorstatus__ref___projection 
+   (a : doorstatus__ref) : doorstatus =
+  a.doorstatus__content
+ 
+ meta "model_projection" function doorstatus__ref___projection
+ 
+ meta "inline : no" function doorstatus__ref___projection
+ 
+ val doorstatus__havoc 
+   (x : doorstatus__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "doorstatus" defined at submarine.ads:12, created in Gnat2Why.Types.Translate_Type *)
+module Submarine__doorstatus__rep
+ use        Submarine__doorstatus
+ use import "_gnatprove_standard".Main
+
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Submarine__doorstatus.doorstatus, 
+ predicate in_range = Submarine__doorstatus.in_range
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "lockstatus" defined at submarine.ads:13, created in Gnat2Why.Types.Translate_Type *)
+module Submarine__lockstatus
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type lockstatus 
+ 
+ function first 
+   : int =
+  0
+ 
+ function last 
+   : int =
+  1
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = lockstatus, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type lockstatus__ref =
+  { mutable lockstatus__content "model_trace:" "name:" : lockstatus }
+ 
+ function lockstatus__ref___projection 
+   (a : lockstatus__ref) : lockstatus =
+  a.lockstatus__content
+ 
+ meta "model_projection" function lockstatus__ref___projection
+ 
+ meta "inline : no" function lockstatus__ref___projection
+ 
+ val lockstatus__havoc 
+   (x : lockstatus__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "lockstatus" defined at submarine.ads:13, created in Gnat2Why.Types.Translate_Type *)
+module Submarine__lockstatus__rep
+ use        Submarine__lockstatus
+ use import "_gnatprove_standard".Main
+
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Submarine__lockstatus.lockstatus, 
+ predicate in_range = Submarine__lockstatus.in_range
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing the record theory associated to type "airlockdoor" defined at submarine.ads:15, created in Why.Gen.Records.Create_Rep_Record_Theory_If_Needed *)
+module Submarine__airlockdoor__rep
+ use import "_gnatprove_standard".Main
+ use        Submarine__doorstatus
+ use        Submarine__doorstatus__rep
+ use        Submarine__lockstatus
+ use        Submarine__lockstatus__rep
+
+ type __split_fields =
+  { rec__submarine__airlockdoor__door "model_trace:.2541" "name:door" : Submarine__doorstatus.doorstatus; rec__submarine__airlockdoor__lock "model_trace:.2551" "name:lock" : Submarine__lockstatus.lockstatus }
+ 
+ function __split_fields_door__projection "model_trace:.2541" "name:door" 
+   (a : __split_fields) : Submarine__doorstatus.doorstatus =
+  a.rec__submarine__airlockdoor__door
+ 
+ meta "model_projection" function __split_fields_door__projection
+ 
+ meta "inline : no" function __split_fields_door__projection
+ 
+ function __split_fields_lock__projection "model_trace:.2551" "name:lock" 
+   (a : __split_fields) : Submarine__lockstatus.lockstatus =
+  a.rec__submarine__airlockdoor__lock
+ 
+ meta "model_projection" function __split_fields_lock__projection
+ 
+ meta "inline : no" function __split_fields_lock__projection
+ 
+ type __split_fields__ref =
+  { mutable __split_fields__content "model_trace:" "name:" : __split_fields }
+ 
+ function __split_fields__ref___projection 
+   (a : __split_fields__ref) : __split_fields =
+  a.__split_fields__content
+ 
+ meta "model_projection" function __split_fields__ref___projection
+ 
+ meta "inline : no" function __split_fields__ref___projection
+ 
+ val __split_fields__havoc 
+   (x : __split_fields__ref) : unit
+  writes {x}
+ 
+ type __rep =
+  { __split_fields "model_trace:" "name:" : __split_fields }
+ 
+ function __rep___projection 
+   (a : __rep) : __split_fields =
+  a.__split_fields
+ 
+ meta "model_projection" function __rep___projection
+ 
+ meta "inline : no" function __rep___projection
+ 
+ function to_base 
+   (a : __rep) : __rep =
+  a
+ 
+ function of_base 
+   (a : __rep) : __rep =
+  a
+ 
+ predicate submarine__airlockdoor__door__pred 
+   (a : __rep)  =
+  true
+ 
+ val rec__submarine__airlockdoor__door_ 
+   (a : __rep) : Submarine__doorstatus.doorstatus
+  requires {  (submarine__airlockdoor__door__pred a) }
+  ensures {  (result = a.__split_fields.rec__submarine__airlockdoor__door) }
+ 
+ predicate submarine__airlockdoor__lock__pred 
+   (a : __rep)  =
+  true
+ 
+ val rec__submarine__airlockdoor__lock_ 
+   (a : __rep) : Submarine__lockstatus.lockstatus
+  requires {  (submarine__airlockdoor__lock__pred a) }
+  ensures {  (result = a.__split_fields.rec__submarine__airlockdoor__lock) }
+ 
+ function bool_eq 
+   (a : __rep) (b : __rep) : bool =
+  (if (( ((Submarine__doorstatus__rep.to_rep a.__split_fields.rec__submarine__airlockdoor__door) = (Submarine__doorstatus__rep.to_rep b.__split_fields.rec__submarine__airlockdoor__door)) /\ ((Submarine__lockstatus__rep.to_rep a.__split_fields.rec__submarine__airlockdoor__lock) = (Submarine__lockstatus__rep.to_rep b.__split_fields.rec__submarine__airlockdoor__lock)) )) then (
+   True) else (
+   False))
+
+end
+
+(* Module for axiomatizing type "airlockdoor" defined at submarine.ads:15, created in Gnat2Why.Types.Translate_Type *)
+module Submarine__airlockdoor
+ use export Submarine__airlockdoor__rep
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type airlockdoor =
+  __rep
+ 
+ function value__size 
+   : int
+ 
+ function object__size 
+   (a : airlockdoor) : int
+ 
+ function value__alignment 
+   : int
+ 
+ function object__alignment 
+   (a : airlockdoor) : int
+ 
+ axiom value__size_axiom :
+  ((value__size ) >= 0)
+ 
+ axiom object__size_axiom :
+  (forall a   : airlockdoor.
+   ((object__size a) >= 0))
+ 
+ axiom value__alignment_axiom :
+  ((value__alignment ) >= 0)
+ 
+ axiom object__alignment_axiom :
+  (forall a   : airlockdoor.
+   ((object__alignment a) >= 0))
+ 
+ function submarine__airlockdoor__door__first__bit 
+   : int
+ 
+ function submarine__airlockdoor__door__last__bit 
+   : int
+ 
+ function submarine__airlockdoor__door__position 
+   : int
+ 
+ axiom submarine__airlockdoor__door__first__bit_axiom :
+  ((submarine__airlockdoor__door__first__bit ) >= 0)
+ 
+ axiom submarine__airlockdoor__door__last__bit_axiom :
+  ((submarine__airlockdoor__door__last__bit ) > (submarine__airlockdoor__door__first__bit ))
+ 
+ axiom submarine__airlockdoor__door__position_axiom :
+  ((submarine__airlockdoor__door__position ) >= 0)
+ 
+ function submarine__airlockdoor__lock__first__bit 
+   : int
+ 
+ function submarine__airlockdoor__lock__last__bit 
+   : int
+ 
+ function submarine__airlockdoor__lock__position 
+   : int
+ 
+ axiom submarine__airlockdoor__lock__first__bit_axiom :
+  ((submarine__airlockdoor__lock__first__bit ) >= 0)
+ 
+ axiom submarine__airlockdoor__lock__last__bit_axiom :
+  ((submarine__airlockdoor__lock__last__bit ) > (submarine__airlockdoor__lock__first__bit ))
+ 
+ axiom submarine__airlockdoor__lock__position_axiom :
+  ((submarine__airlockdoor__lock__position ) >= 0)
+ 
+ function user_eq 
+   (a : airlockdoor) (b : airlockdoor) : bool
+ 
+ function dummy 
+   : airlockdoor
+ 
+ type airlockdoor__ref =
+  { mutable airlockdoor__content "model_trace:" "name:" : airlockdoor }
+ 
+ function airlockdoor__ref___projection 
+   (a : airlockdoor__ref) : airlockdoor =
+  a.airlockdoor__content
+ 
+ meta "model_projection" function airlockdoor__ref___projection
+ 
+ meta "inline : no" function airlockdoor__ref___projection
+ 
+ val airlockdoor__havoc 
+   (x : airlockdoor__ref) : unit
+  writes {x}
+
+end
+
+(* Module for axiomatizing type "operationstatus" defined at submarine.ads:50, created in Gnat2Why.Types.Translate_Type *)
+module Submarine__operationstatus
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type operationstatus 
+ 
+ function first 
+   : int =
+  0
+ 
+ function last 
+   : int =
+  1
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = operationstatus, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type operationstatus__ref =
+  { mutable operationstatus__content "model_trace:" "name:" : operationstatus }
+ 
+ function operationstatus__ref___projection 
+   (a : operationstatus__ref) : operationstatus =
+  a.operationstatus__content
+ 
+ meta "model_projection" function operationstatus__ref___projection
+ 
+ meta "inline : no" function operationstatus__ref___projection
+ 
+ val operationstatus__havoc 
+   (x : operationstatus__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "operationstatus" defined at submarine.ads:50, created in Gnat2Why.Types.Translate_Type *)
+module Submarine__operationstatus__rep
+ use        Submarine__operationstatus
+ use import "_gnatprove_standard".Main
+
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Submarine__operationstatus.operationstatus, 
+ predicate in_range = Submarine__operationstatus.in_range
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "TreactortemprangeB" defined at reactor.ads:11, created in Gnat2Why.Types.Translate_Type *)
+module Reactor__TreactortemprangeB
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type treactortemprangeB =
+  < range -128 127 >
+ 
+ function first 
+   : int =
+  ( -128 )
+ 
+ function last 
+   : int =
+  127
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = treactortemprangeB, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type treactortemprangeB__ref =
+  { mutable treactortemprangeB__content "model_trace:" "name:" : treactortemprangeB }
+ 
+ function treactortemprangeB__ref___projection 
+   (a : treactortemprangeB__ref) : treactortemprangeB =
+  a.treactortemprangeB__content
+ 
+ meta "model_projection" function treactortemprangeB__ref___projection
+ 
+ meta "inline : no" function treactortemprangeB__ref___projection
+ 
+ val treactortemprangeB__havoc 
+   (x : treactortemprangeB__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "TreactortemprangeB" defined at reactor.ads:11, created in Gnat2Why.Types.Translate_Type *)
+module Reactor__TreactortemprangeB__rep
+ use        Reactor__TreactortemprangeB
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Reactor__TreactortemprangeB.treactortemprangeB) : int =
+  (Reactor__TreactortemprangeB.treactortemprangeB'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Reactor__TreactortemprangeB.treactortemprangeB, 
+ predicate in_range = Reactor__TreactortemprangeB.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "reactortemprange" defined at reactor.ads:11, created in Gnat2Why.Types.Translate_Type *)
+module Reactor__reactortemprange
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type reactortemprange =
+  < range 0 100 >
+ 
+ function first 
+   : int =
+  0
+ 
+ function last 
+   : int =
+  100
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = reactortemprange, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type reactortemprange__ref =
+  { mutable reactortemprange__content "model_trace:" "name:" : reactortemprange }
+ 
+ function reactortemprange__ref___projection 
+   (a : reactortemprange__ref) : reactortemprange =
+  a.reactortemprange__content
+ 
+ meta "model_projection" function reactortemprange__ref___projection
+ 
+ meta "inline : no" function reactortemprange__ref___projection
+ 
+ val reactortemprange__havoc 
+   (x : reactortemprange__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "reactortemprange" defined at reactor.ads:11, created in Gnat2Why.Types.Translate_Type *)
+module Reactor__reactortemprange__rep
+ use        Reactor__reactortemprange
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Reactor__reactortemprange.reactortemprange) : int =
+  (Reactor__reactortemprange.reactortemprange'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Reactor__reactortemprange.reactortemprange, 
+ predicate in_range = Reactor__reactortemprange.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+(* Module for defining a ref holding the value of variable "currentdepth" defined at submarine.ads:5, created in Gnat2Why.Decls.Translate_Variable *)
+module Submarine__currentdepth
+ use import "_gnatprove_standard".Main
+
+ val currentdepth #"submarine.ads" 5 0 0#"model_projected" "model_trace:2474" "name:currentDepth"  : int__ref 
  
  function attr__ATTRIBUTE_ADDRESS 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "s" defined at reactor.ads:10, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
-module Reactor__p1__s___axiom
+(* Module giving an empty axiom for the entity "currentdepth" defined at submarine.ads:5, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Submarine__currentdepth___axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining a ref holding the value of variable "n" defined at reactor.ads:10, created in Gnat2Why.Decls.Translate_Variable *)
-module Reactor__p1__n
+(* Module for defining a ref holding the value of variable "outerdoor" defined at submarine.ads:20, created in Gnat2Why.Decls.Translate_Variable *)
+module Submarine__outerdoor
  use import "_gnatprove_standard".Main
+ use        Submarine__airlockdoor
 
- val n #"reactor.ads" 10 0 0#"model_projected" "model_trace:2380" "name:n"  : int__ref 
+ val outerdoor__split_fields #"submarine.ads" 20 0 0#"model_projected" "model_trace:2563" "name:outerDoor"  : Submarine__airlockdoor.__split_fields__ref 
  
  function attr__ATTRIBUTE_ADDRESS 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "n" defined at reactor.ads:10, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
-module Reactor__p1__n___axiom
+(* Module giving an empty axiom for the entity "outerdoor" defined at submarine.ads:20, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Submarine__outerdoor___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining a ref holding the value of variable "innerdoor" defined at submarine.ads:21, created in Gnat2Why.Decls.Translate_Variable *)
+module Submarine__innerdoor
+ use import "_gnatprove_standard".Main
+ use        Submarine__airlockdoor
+
+ val innerdoor__split_fields #"submarine.ads" 21 0 0#"model_projected" "model_trace:2579" "name:innerDoor"  : Submarine__airlockdoor.__split_fields__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "innerdoor" defined at submarine.ads:21, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Submarine__innerdoor___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining a ref holding the value of variable "currentoperationstatus" defined at submarine.ads:51, created in Gnat2Why.Decls.Translate_Variable *)
+module Submarine__currentoperationstatus
+ use import "_gnatprove_standard".Main
+
+ val currentoperationstatus #"submarine.ads" 51 0 0#"model_projected" "model_trace:2775" "name:currentOperationStatus"  : int__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "currentoperationstatus" defined at submarine.ads:51, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Submarine__currentoperationstatus___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining a ref holding the value of variable "reactortemp" defined at reactor.ads:12, created in Gnat2Why.Decls.Translate_Variable *)
+module Reactor__reactortemp
+ use import "_gnatprove_standard".Main
+
+ val reactortemp #"reactor.ads" 12 0 0#"model_projected" "model_trace:2392" "name:reactorTemp"  : int__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "reactortemp" defined at reactor.ads:12, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Reactor__reactortemp___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining a ref holding the value of variable "a" defined at reactor.adb:16, created in Gnat2Why.Decls.Translate_Variable *)
+module Reactor__reactortempoverheats__L_1__a
+ use import "_gnatprove_standard".Main
+
+ val a #"reactor.adb" 16 0 0#"model_projected" "model_trace:2326" "name:A"  : int__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "a" defined at reactor.adb:16, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Reactor__reactortempoverheats__L_1__a___axiom
  use import "_gnatprove_standard".Main
 
 
@@ -2035,90 +2713,724 @@ module Standard__universal_integer___axiom
 
 end
 
-(* Module for possibly declaring a logic function for "p1" defined at reactor.ads:10, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Reactor__p1
+(* Module for possibly declaring a logic function for "openouterairlockdoor" defined at submarine.ads:23, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Submarine__openouterairlockdoor
  use import "_gnatprove_standard".Main
 
 
 end
-(* Module for declaring a program function (and possibly an axiom) for "p1" defined at reactor.ads:10, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
-module Reactor__p1___axiom
+
+(* Module for possibly declaring a logic function for "openinnerairlockdoor" defined at submarine.ads:29, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Submarine__openinnerairlockdoor
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for possibly declaring a logic function for "closeouterairlockdoor" defined at submarine.ads:36, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Submarine__closeouterairlockdoor
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for possibly declaring a logic function for "closeinnerairlockdoor" defined at submarine.ads:42, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Submarine__closeinnerairlockdoor
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for possibly declaring a logic function for "lockouterdoor" defined at submarine.ads:53, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Submarine__lockouterdoor
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for possibly declaring a logic function for "unlockouterdoor" defined at submarine.ads:59, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Submarine__unlockouterdoor
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for possibly declaring a logic function for "lockinnerdoor" defined at submarine.ads:65, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Submarine__lockinnerdoor
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for possibly declaring a logic function for "unlockinnerdoor" defined at submarine.ads:71, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Submarine__unlockinnerdoor
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for possibly declaring a logic function for "maxdepthinvariant" defined at movement.ads:7, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Movement__maxdepthinvariant
+ use        Submarine__currentdepth
+ use import "_gnatprove_standard".Main
+
+ function maxdepthinvariant 
+   (submarine__currentdepth : int) : bool
+ 
+ predicate maxdepthinvariant__function_guard 
+   (result : bool) (submarine__currentdepth : int) 
+
+end
+
+(* Module for possibly declaring a logic function for "notsurfacedinvariant" defined at movement.ads:10, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Movement__notsurfacedinvariant
+ use        Submarine__currentdepth
+ use import "_gnatprove_standard".Main
+
+ function notsurfacedinvariant 
+   (submarine__currentdepth : int) : bool
+ 
+ predicate notsurfacedinvariant__function_guard 
+   (result : bool) (submarine__currentdepth : int) 
+
+end
+
+(* Module for possibly declaring a logic function for "divethesubmarine100ft" defined at movement.ads:16, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Movement__divethesubmarine100ft
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for possibly declaring a logic function for "divethesubmarinetomaxdepth" defined at movement.ads:22, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Movement__divethesubmarinetomaxdepth
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for possibly declaring a logic function for "raisethesubmarine100ft" defined at movement.ads:28, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Movement__raisethesubmarine100ft
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for possibly declaring a logic function for "surfacethesubmarine" defined at movement.ads:34, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Movement__surfacethesubmarine
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for possibly declaring a logic function for "reactortempoverheats" defined at reactor.ads:15, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Reactor__reactortempoverheats
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining the loop exit exception for the loop "L_1" defined at reactor.adb:16, created in Gnat2Why.Decls.Translate_Loop_Entity *)
+module Reactor__reactortempoverheats__L_1
+ use import "_gnatprove_standard".Main
+
+ exception L_1
+
+end
+
+(* Module giving an empty axiom for the entity "L_1" defined at reactor.adb:16, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Reactor__reactortempoverheats__L_1___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module giving axioms for type "TdepthmonitorB" defined at submarine.ads:4, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Submarine__TdepthmonitorB___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module giving axioms for type "depthmonitor" defined at submarine.ads:4, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Submarine__depthmonitor___axiom
  use import "_gnatprove_standard".Main
  use import "int".Int
- use        Standard__integer___axiom
+ use        Submarine__depthmonitor
 
- val p1 
-   (s : int__ref) (n : int__ref) : unit
-  requires {  ( (n.int__content > ( -2147483645 )) /\ (s.int__content <= (n.int__content - 3)) ) }
-  ensures {  ( (s.int__content <= n.int__content) /\ ( (Standard__integer___axiom.dynamic_invariant s.int__content True True True True) /\ (Standard__integer___axiom.dynamic_invariant n.int__content True True True True) ) ) }
-  writes {s, n}
+ predicate dynamic_invariant "inline" 
+   (temp___expr_158 : int) (temp___is_init_154 : bool) (temp___skip_constant_155 : bool) (temp___do_toplevel_156 : bool) (temp___do_typ_inv_157 : bool)  =
+  (if (( temp___is_init_154 \/ (Submarine__depthmonitor.first <= Submarine__depthmonitor.last) )) then (
+   (Submarine__depthmonitor.dynamic_property Submarine__depthmonitor.first Submarine__depthmonitor.last temp___expr_158)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_159 : int) (temp___skip_top_level_160 : bool)  =
+  true
 
 end
 
-(* Module for checking absence of run-time errors and package initial condition on package elaboration of "reactor" defined at reactor.ads:1, created in Gnat2Why.Subprograms.Generate_VCs_For_Package_Elaboration *)
+(* Module giving axioms for type "doorstatus" defined at submarine.ads:12, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Submarine__doorstatus___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Submarine__doorstatus
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_165 : int) (temp___is_init_161 : bool) (temp___skip_constant_162 : bool) (temp___do_toplevel_163 : bool) (temp___do_typ_inv_164 : bool)  =
+  (if (( temp___is_init_161 \/ (Submarine__doorstatus.first <= Submarine__doorstatus.last) )) then (
+   (Submarine__doorstatus.dynamic_property Submarine__doorstatus.first Submarine__doorstatus.last temp___expr_165)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_166 : int) (temp___skip_top_level_167 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "lockstatus" defined at submarine.ads:13, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Submarine__lockstatus___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Submarine__lockstatus
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_172 : int) (temp___is_init_168 : bool) (temp___skip_constant_169 : bool) (temp___do_toplevel_170 : bool) (temp___do_typ_inv_171 : bool)  =
+  (if (( temp___is_init_168 \/ (Submarine__lockstatus.first <= Submarine__lockstatus.last) )) then (
+   (Submarine__lockstatus.dynamic_property Submarine__lockstatus.first Submarine__lockstatus.last temp___expr_172)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_173 : int) (temp___skip_top_level_174 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "airlockdoor" defined at submarine.ads:15, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Submarine__airlockdoor___axiom
+ use import "_gnatprove_standard".Main
+ use        Submarine__airlockdoor
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_179 : Submarine__airlockdoor.airlockdoor) (temp___is_init_175 : bool) (temp___skip_constant_176 : bool) (temp___do_toplevel_177 : bool) (temp___do_typ_inv_178 : bool)  =
+  true
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_180 : Submarine__airlockdoor.airlockdoor) (temp___skip_top_level_181 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "operationstatus" defined at submarine.ads:50, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Submarine__operationstatus___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Submarine__operationstatus
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_188 : int) (temp___is_init_184 : bool) (temp___skip_constant_185 : bool) (temp___do_toplevel_186 : bool) (temp___do_typ_inv_187 : bool)  =
+  (if (( temp___is_init_184 \/ (Submarine__operationstatus.first <= Submarine__operationstatus.last) )) then (
+   (Submarine__operationstatus.dynamic_property Submarine__operationstatus.first Submarine__operationstatus.last temp___expr_188)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_189 : int) (temp___skip_top_level_190 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "TreactortemprangeB" defined at reactor.ads:11, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Reactor__TreactortemprangeB___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module giving axioms for type "reactortemprange" defined at reactor.ads:11, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Reactor__reactortemprange___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Reactor__reactortemprange
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_198 : int) (temp___is_init_194 : bool) (temp___skip_constant_195 : bool) (temp___do_toplevel_196 : bool) (temp___do_typ_inv_197 : bool)  =
+  (if (( temp___is_init_194 \/ (Reactor__reactortemprange.first <= Reactor__reactortemprange.last) )) then (
+   (Reactor__reactortemprange.dynamic_property Reactor__reactortemprange.first Reactor__reactortemprange.last temp___expr_198)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_199 : int) (temp___skip_top_level_200 : bool)  =
+  true
+
+end
+(* Module for declaring a program function (and possibly an axiom) for "openouterairlockdoor" defined at submarine.ads:23, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Submarine__openouterairlockdoor___axiom
+ use        Submarine__outerdoor
+ use        Submarine__innerdoor
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Submarine__doorstatus
+ use        Submarine__doorstatus__rep
+ use        Submarine__lockstatus
+ use        Submarine__lockstatus__rep
+ use        Submarine__airlockdoor
+ use        Submarine__airlockdoor___axiom
+ use        Submarine__outerdoor
+ use        Submarine__innerdoor
+
+ val openouterairlockdoor 
+   (__void_param : unit) : unit
+  requires {  ( ((Submarine__doorstatus__rep.to_rep (Submarine__airlockdoor.rec__submarine__airlockdoor__door (Submarine__airlockdoor.__split_fields { Submarine__airlockdoor.__split_fields = Submarine__innerdoor.innerdoor__split_fields.Submarine__airlockdoor.__split_fields__content }))) = 1) /\ ( ((Submarine__lockstatus__rep.to_rep (Submarine__airlockdoor.rec__submarine__airlockdoor__lock (Submarine__airlockdoor.__split_fields { Submarine__airlockdoor.__split_fields = Submarine__outerdoor.outerdoor__split_fields.Submarine__airlockdoor.__split_fields__content }))) = 1) /\ ((Submarine__doorstatus__rep.to_rep (Submarine__airlockdoor.rec__submarine__airlockdoor__door (Submarine__airlockdoor.__split_fields { Submarine__airlockdoor.__split_fields = Submarine__outerdoor.outerdoor__split_fields.Submarine__airlockdoor.__split_fields__content }))) = 1) ) ) }
+  ensures {  ( ((Submarine__doorstatus__rep.to_rep (Submarine__airlockdoor.rec__submarine__airlockdoor__door (Submarine__airlockdoor.__split_fields { Submarine__airlockdoor.__split_fields = Submarine__outerdoor.outerdoor__split_fields.Submarine__airlockdoor.__split_fields__content }))) = 0) /\ (Submarine__airlockdoor___axiom.dynamic_invariant { Submarine__airlockdoor.__split_fields = Submarine__outerdoor.outerdoor__split_fields.Submarine__airlockdoor.__split_fields__content } True True True True) ) }
+  reads {Submarine__outerdoor.outerdoor__split_fields, Submarine__innerdoor.innerdoor__split_fields}
+  writes {Submarine__outerdoor.outerdoor__split_fields}
+
+end
+
+(* Module for declaring a program function (and possibly an axiom) for "openinnerairlockdoor" defined at submarine.ads:29, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Submarine__openinnerairlockdoor___axiom
+ use        Submarine__outerdoor
+ use        Submarine__innerdoor
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Submarine__doorstatus
+ use        Submarine__doorstatus__rep
+ use        Submarine__lockstatus
+ use        Submarine__lockstatus__rep
+ use        Submarine__airlockdoor
+ use        Submarine__airlockdoor___axiom
+ use        Submarine__outerdoor
+ use        Submarine__innerdoor
+
+ val openinnerairlockdoor 
+   (__void_param : unit) : unit
+  requires {  ( ((Submarine__doorstatus__rep.to_rep (Submarine__airlockdoor.rec__submarine__airlockdoor__door (Submarine__airlockdoor.__split_fields { Submarine__airlockdoor.__split_fields = Submarine__outerdoor.outerdoor__split_fields.Submarine__airlockdoor.__split_fields__content }))) = 1) /\ ( ((Submarine__lockstatus__rep.to_rep (Submarine__airlockdoor.rec__submarine__airlockdoor__lock (Submarine__airlockdoor.__split_fields { Submarine__airlockdoor.__split_fields = Submarine__innerdoor.innerdoor__split_fields.Submarine__airlockdoor.__split_fields__content }))) = 1) /\ ((Submarine__doorstatus__rep.to_rep (Submarine__airlockdoor.rec__submarine__airlockdoor__door (Submarine__airlockdoor.__split_fields { Submarine__airlockdoor.__split_fields = Submarine__innerdoor.innerdoor__split_fields.Submarine__airlockdoor.__split_fields__content }))) = 1) ) ) }
+  ensures {  ( ((Submarine__doorstatus__rep.to_rep (Submarine__airlockdoor.rec__submarine__airlockdoor__door (Submarine__airlockdoor.__split_fields { Submarine__airlockdoor.__split_fields = Submarine__innerdoor.innerdoor__split_fields.Submarine__airlockdoor.__split_fields__content }))) = 0) /\ (Submarine__airlockdoor___axiom.dynamic_invariant { Submarine__airlockdoor.__split_fields = Submarine__innerdoor.innerdoor__split_fields.Submarine__airlockdoor.__split_fields__content } True True True True) ) }
+  reads {Submarine__outerdoor.outerdoor__split_fields, Submarine__innerdoor.innerdoor__split_fields}
+  writes {Submarine__innerdoor.innerdoor__split_fields}
+
+end
+
+(* Module for declaring a program function (and possibly an axiom) for "closeouterairlockdoor" defined at submarine.ads:36, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Submarine__closeouterairlockdoor___axiom
+ use        Submarine__outerdoor
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Submarine__doorstatus
+ use        Submarine__doorstatus__rep
+ use        Submarine__airlockdoor
+ use        Submarine__airlockdoor___axiom
+ use        Submarine__outerdoor
+
+ val closeouterairlockdoor 
+   (__void_param : unit) : unit
+  requires {  ((Submarine__doorstatus__rep.to_rep (Submarine__airlockdoor.rec__submarine__airlockdoor__door (Submarine__airlockdoor.__split_fields { Submarine__airlockdoor.__split_fields = Submarine__outerdoor.outerdoor__split_fields.Submarine__airlockdoor.__split_fields__content }))) = 0) }
+  ensures {  ( ((Submarine__doorstatus__rep.to_rep (Submarine__airlockdoor.rec__submarine__airlockdoor__door (Submarine__airlockdoor.__split_fields { Submarine__airlockdoor.__split_fields = Submarine__outerdoor.outerdoor__split_fields.Submarine__airlockdoor.__split_fields__content }))) = 1) /\ (Submarine__airlockdoor___axiom.dynamic_invariant { Submarine__airlockdoor.__split_fields = Submarine__outerdoor.outerdoor__split_fields.Submarine__airlockdoor.__split_fields__content } True True True True) ) }
+  reads {Submarine__outerdoor.outerdoor__split_fields}
+  writes {Submarine__outerdoor.outerdoor__split_fields}
+
+end
+
+(* Module for declaring a program function (and possibly an axiom) for "closeinnerairlockdoor" defined at submarine.ads:42, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Submarine__closeinnerairlockdoor___axiom
+ use        Submarine__innerdoor
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Submarine__doorstatus
+ use        Submarine__doorstatus__rep
+ use        Submarine__airlockdoor
+ use        Submarine__airlockdoor___axiom
+ use        Submarine__innerdoor
+
+ val closeinnerairlockdoor 
+   (__void_param : unit) : unit
+  requires {  ((Submarine__doorstatus__rep.to_rep (Submarine__airlockdoor.rec__submarine__airlockdoor__door (Submarine__airlockdoor.__split_fields { Submarine__airlockdoor.__split_fields = Submarine__innerdoor.innerdoor__split_fields.Submarine__airlockdoor.__split_fields__content }))) = 0) }
+  ensures {  ( ((Submarine__doorstatus__rep.to_rep (Submarine__airlockdoor.rec__submarine__airlockdoor__door (Submarine__airlockdoor.__split_fields { Submarine__airlockdoor.__split_fields = Submarine__innerdoor.innerdoor__split_fields.Submarine__airlockdoor.__split_fields__content }))) = 1) /\ (Submarine__airlockdoor___axiom.dynamic_invariant { Submarine__airlockdoor.__split_fields = Submarine__innerdoor.innerdoor__split_fields.Submarine__airlockdoor.__split_fields__content } True True True True) ) }
+  reads {Submarine__innerdoor.innerdoor__split_fields}
+  writes {Submarine__innerdoor.innerdoor__split_fields}
+
+end
+
+(* Module for declaring a program function (and possibly an axiom) for "lockouterdoor" defined at submarine.ads:53, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Submarine__lockouterdoor___axiom
+ use        Submarine__outerdoor
+ use        Submarine__currentoperationstatus
+ use        Submarine__innerdoor
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Submarine__doorstatus
+ use        Submarine__doorstatus__rep
+ use        Submarine__lockstatus
+ use        Submarine__lockstatus__rep
+ use        Submarine__airlockdoor
+ use        Submarine__airlockdoor___axiom
+ use        Submarine__outerdoor
+ use        Submarine__innerdoor
+ use        Submarine__operationstatus___axiom
+ use        Submarine__currentoperationstatus
+
+ val lockouterdoor 
+   (__void_param : unit) : unit
+  requires {  ( ((Submarine__doorstatus__rep.to_rep (Submarine__airlockdoor.rec__submarine__airlockdoor__door (Submarine__airlockdoor.__split_fields { Submarine__airlockdoor.__split_fields = Submarine__outerdoor.outerdoor__split_fields.Submarine__airlockdoor.__split_fields__content }))) = 1) /\ ((Submarine__lockstatus__rep.to_rep (Submarine__airlockdoor.rec__submarine__airlockdoor__lock (Submarine__airlockdoor.__split_fields { Submarine__airlockdoor.__split_fields = Submarine__outerdoor.outerdoor__split_fields.Submarine__airlockdoor.__split_fields__content }))) = 1) ) }
+  ensures {  ( ((Submarine__lockstatus__rep.to_rep (Submarine__airlockdoor.rec__submarine__airlockdoor__lock (Submarine__airlockdoor.__split_fields { Submarine__airlockdoor.__split_fields = Submarine__outerdoor.outerdoor__split_fields.Submarine__airlockdoor.__split_fields__content }))) = 0) /\ ( (Submarine__airlockdoor___axiom.dynamic_invariant { Submarine__airlockdoor.__split_fields = Submarine__outerdoor.outerdoor__split_fields.Submarine__airlockdoor.__split_fields__content } True True True True) /\ (Submarine__operationstatus___axiom.dynamic_invariant Submarine__currentoperationstatus.currentoperationstatus.int__content True True True True) ) ) }
+  reads {Submarine__outerdoor.outerdoor__split_fields, Submarine__innerdoor.innerdoor__split_fields, Submarine__currentoperationstatus.currentoperationstatus}
+  writes {Submarine__outerdoor.outerdoor__split_fields, Submarine__currentoperationstatus.currentoperationstatus}
+
+end
+
+(* Module for declaring a program function (and possibly an axiom) for "unlockouterdoor" defined at submarine.ads:59, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Submarine__unlockouterdoor___axiom
+ use        Submarine__outerdoor
+ use        Submarine__currentoperationstatus
+ use        Submarine__currentdepth
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Submarine__currentdepth
+ use        Submarine__lockstatus
+ use        Submarine__lockstatus__rep
+ use        Submarine__airlockdoor
+ use        Submarine__airlockdoor___axiom
+ use        Submarine__outerdoor
+ use        Submarine__operationstatus___axiom
+ use        Submarine__currentoperationstatus
+
+ val unlockouterdoor 
+   (__void_param : unit) : unit
+  requires {  ( (Submarine__currentdepth.currentdepth.int__content = 0) /\ ((Submarine__lockstatus__rep.to_rep (Submarine__airlockdoor.rec__submarine__airlockdoor__lock (Submarine__airlockdoor.__split_fields { Submarine__airlockdoor.__split_fields = Submarine__outerdoor.outerdoor__split_fields.Submarine__airlockdoor.__split_fields__content }))) = 0) ) }
+  ensures {  ( ( ((Submarine__lockstatus__rep.to_rep (Submarine__airlockdoor.rec__submarine__airlockdoor__lock (Submarine__airlockdoor.__split_fields { Submarine__airlockdoor.__split_fields = Submarine__outerdoor.outerdoor__split_fields.Submarine__airlockdoor.__split_fields__content }))) = 1) /\ (Submarine__currentoperationstatus.currentoperationstatus.int__content = 1) ) /\ ( (Submarine__airlockdoor___axiom.dynamic_invariant { Submarine__airlockdoor.__split_fields = Submarine__outerdoor.outerdoor__split_fields.Submarine__airlockdoor.__split_fields__content } True True True True) /\ (Submarine__operationstatus___axiom.dynamic_invariant Submarine__currentoperationstatus.currentoperationstatus.int__content True True True True) ) ) }
+  reads {Submarine__currentdepth.currentdepth, Submarine__outerdoor.outerdoor__split_fields, Submarine__currentoperationstatus.currentoperationstatus}
+  writes {Submarine__outerdoor.outerdoor__split_fields, Submarine__currentoperationstatus.currentoperationstatus}
+
+end
+
+(* Module for declaring a program function (and possibly an axiom) for "lockinnerdoor" defined at submarine.ads:65, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Submarine__lockinnerdoor___axiom
+ use        Submarine__outerdoor
+ use        Submarine__currentoperationstatus
+ use        Submarine__innerdoor
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Submarine__doorstatus
+ use        Submarine__doorstatus__rep
+ use        Submarine__lockstatus
+ use        Submarine__lockstatus__rep
+ use        Submarine__airlockdoor
+ use        Submarine__airlockdoor___axiom
+ use        Submarine__outerdoor
+ use        Submarine__innerdoor
+ use        Submarine__operationstatus___axiom
+ use        Submarine__currentoperationstatus
+
+ val lockinnerdoor 
+   (__void_param : unit) : unit
+  requires {  ( ((Submarine__doorstatus__rep.to_rep (Submarine__airlockdoor.rec__submarine__airlockdoor__door (Submarine__airlockdoor.__split_fields { Submarine__airlockdoor.__split_fields = Submarine__innerdoor.innerdoor__split_fields.Submarine__airlockdoor.__split_fields__content }))) = 1) /\ ((Submarine__lockstatus__rep.to_rep (Submarine__airlockdoor.rec__submarine__airlockdoor__lock (Submarine__airlockdoor.__split_fields { Submarine__airlockdoor.__split_fields = Submarine__innerdoor.innerdoor__split_fields.Submarine__airlockdoor.__split_fields__content }))) = 1) ) }
+  ensures {  ( ((Submarine__lockstatus__rep.to_rep (Submarine__airlockdoor.rec__submarine__airlockdoor__lock (Submarine__airlockdoor.__split_fields { Submarine__airlockdoor.__split_fields = Submarine__innerdoor.innerdoor__split_fields.Submarine__airlockdoor.__split_fields__content }))) = 0) /\ ( (Submarine__operationstatus___axiom.dynamic_invariant Submarine__currentoperationstatus.currentoperationstatus.int__content True True True True) /\ (Submarine__airlockdoor___axiom.dynamic_invariant { Submarine__airlockdoor.__split_fields = Submarine__innerdoor.innerdoor__split_fields.Submarine__airlockdoor.__split_fields__content } True True True True) ) ) }
+  reads {Submarine__outerdoor.outerdoor__split_fields, Submarine__innerdoor.innerdoor__split_fields, Submarine__currentoperationstatus.currentoperationstatus}
+  writes {Submarine__innerdoor.innerdoor__split_fields, Submarine__currentoperationstatus.currentoperationstatus}
+
+end
+
+(* Module for declaring a program function (and possibly an axiom) for "unlockinnerdoor" defined at submarine.ads:71, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Submarine__unlockinnerdoor___axiom
+ use        Submarine__currentoperationstatus
+ use        Submarine__innerdoor
+ use        Submarine__currentdepth
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Submarine__currentdepth
+ use        Submarine__lockstatus
+ use        Submarine__lockstatus__rep
+ use        Submarine__airlockdoor
+ use        Submarine__airlockdoor___axiom
+ use        Submarine__innerdoor
+ use        Submarine__operationstatus___axiom
+ use        Submarine__currentoperationstatus
+
+ val unlockinnerdoor 
+   (__void_param : unit) : unit
+  requires {  ( (Submarine__currentdepth.currentdepth.int__content = 0) /\ ((Submarine__lockstatus__rep.to_rep (Submarine__airlockdoor.rec__submarine__airlockdoor__lock (Submarine__airlockdoor.__split_fields { Submarine__airlockdoor.__split_fields = Submarine__innerdoor.innerdoor__split_fields.Submarine__airlockdoor.__split_fields__content }))) = 0) ) }
+  ensures {  ( ( ((Submarine__lockstatus__rep.to_rep (Submarine__airlockdoor.rec__submarine__airlockdoor__lock (Submarine__airlockdoor.__split_fields { Submarine__airlockdoor.__split_fields = Submarine__innerdoor.innerdoor__split_fields.Submarine__airlockdoor.__split_fields__content }))) = 1) /\ (Submarine__currentoperationstatus.currentoperationstatus.int__content = 1) ) /\ ( (Submarine__operationstatus___axiom.dynamic_invariant Submarine__currentoperationstatus.currentoperationstatus.int__content True True True True) /\ (Submarine__airlockdoor___axiom.dynamic_invariant { Submarine__airlockdoor.__split_fields = Submarine__innerdoor.innerdoor__split_fields.Submarine__airlockdoor.__split_fields__content } True True True True) ) ) }
+  reads {Submarine__currentdepth.currentdepth, Submarine__innerdoor.innerdoor__split_fields, Submarine__currentoperationstatus.currentoperationstatus}
+  writes {Submarine__innerdoor.innerdoor__split_fields, Submarine__currentoperationstatus.currentoperationstatus}
+
+end
+
+(* Module giving a program function and a defining axiom for the expression function "maxdepthinvariant" defined at movement.ads:7, created in Gnat2Why.Subprograms.Translate_Expression_Function_Body *)
+module Movement__maxdepthinvariant___axiom
+ use        Submarine__currentdepth
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Movement__maxdepthinvariant
+ use        Submarine__depthmonitor___axiom
+ use        Submarine__currentdepth
+
+ val maxdepthinvariant 
+   (__void_param : unit) : bool
+  requires {  true }
+  ensures {  ( ( (result = (Movement__maxdepthinvariant.maxdepthinvariant Submarine__currentdepth.currentdepth.int__content)) /\ (Movement__maxdepthinvariant.maxdepthinvariant__function_guard result Submarine__currentdepth.currentdepth.int__content) ) /\ ( (result = True) <-> (Submarine__currentdepth.currentdepth.int__content <= 2000) ) ) }
+  reads {Submarine__currentdepth.currentdepth}
+ 
+ axiom maxdepthinvariant__post_axiom :
+  (forall submarine__currentdepth   : int [(Movement__maxdepthinvariant.maxdepthinvariant submarine__currentdepth)].
+   ( (Submarine__depthmonitor___axiom.dynamic_invariant submarine__currentdepth True True True True) -> (let result = (Movement__maxdepthinvariant.maxdepthinvariant submarine__currentdepth) in (
+    (if ((Movement__maxdepthinvariant.maxdepthinvariant__function_guard result submarine__currentdepth)) then (
+     ( ( true /\ true ) /\ true )) else true)))
+    ))
+ 
+ axiom maxdepthinvariant__def_axiom :
+  (forall submarine__currentdepth   : int [(Movement__maxdepthinvariant.maxdepthinvariant submarine__currentdepth)].
+   ( (let result = (Movement__maxdepthinvariant.maxdepthinvariant submarine__currentdepth) in (
+    (Movement__maxdepthinvariant.maxdepthinvariant__function_guard result submarine__currentdepth)))
+    -> ( ((Movement__maxdepthinvariant.maxdepthinvariant submarine__currentdepth) = True) <-> (submarine__currentdepth <= 2000) ) ))
+
+end
+
+(* Module giving a program function and a defining axiom for the expression function "notsurfacedinvariant" defined at movement.ads:10, created in Gnat2Why.Subprograms.Translate_Expression_Function_Body *)
+module Movement__notsurfacedinvariant___axiom
+ use        Submarine__currentdepth
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Movement__notsurfacedinvariant
+ use        Submarine__depthmonitor___axiom
+ use        Submarine__currentdepth
+
+ val notsurfacedinvariant 
+   (__void_param : unit) : bool
+  requires {  true }
+  ensures {  ( ( (result = (Movement__notsurfacedinvariant.notsurfacedinvariant Submarine__currentdepth.currentdepth.int__content)) /\ (Movement__notsurfacedinvariant.notsurfacedinvariant__function_guard result Submarine__currentdepth.currentdepth.int__content) ) /\ ( (result = True) <-> (Submarine__currentdepth.currentdepth.int__content > 0) ) ) }
+  reads {Submarine__currentdepth.currentdepth}
+ 
+ axiom notsurfacedinvariant__post_axiom :
+  (forall submarine__currentdepth   : int [(Movement__notsurfacedinvariant.notsurfacedinvariant submarine__currentdepth)].
+   ( (Submarine__depthmonitor___axiom.dynamic_invariant submarine__currentdepth True True True True) -> (let result = (Movement__notsurfacedinvariant.notsurfacedinvariant submarine__currentdepth) in (
+    (if ((Movement__notsurfacedinvariant.notsurfacedinvariant__function_guard result submarine__currentdepth)) then (
+     ( ( true /\ true ) /\ true )) else true)))
+    ))
+ 
+ axiom notsurfacedinvariant__def_axiom :
+  (forall submarine__currentdepth   : int [(Movement__notsurfacedinvariant.notsurfacedinvariant submarine__currentdepth)].
+   ( (let result = (Movement__notsurfacedinvariant.notsurfacedinvariant submarine__currentdepth) in (
+    (Movement__notsurfacedinvariant.notsurfacedinvariant__function_guard result submarine__currentdepth)))
+    -> ( ((Movement__notsurfacedinvariant.notsurfacedinvariant submarine__currentdepth) = True) <-> (submarine__currentdepth > 0) ) ))
+
+end
+
+(* Module for declaring a program function (and possibly an axiom) for "divethesubmarine100ft" defined at movement.ads:16, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Movement__divethesubmarine100ft___axiom
+ use        Submarine__currentoperationstatus
+ use        Submarine__currentdepth
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Submarine__depthmonitor___axiom
+ use        Submarine__currentdepth
+ use        Submarine__currentoperationstatus
+
+ val divethesubmarine100ft 
+   (__void_param : unit) : unit
+  requires {  ( (Submarine__currentdepth.currentdepth.int__content <= 1900) /\ ( (Submarine__currentdepth.currentdepth.int__content >= 0) /\ (Submarine__currentoperationstatus.currentoperationstatus.int__content = 0) ) ) }
+  ensures {  ( ( (Submarine__currentdepth.currentdepth.int__content <= 2000) /\ (Submarine__currentdepth.currentdepth.int__content >= 100) ) /\ (Submarine__depthmonitor___axiom.dynamic_invariant Submarine__currentdepth.currentdepth.int__content True True True True) ) }
+  reads {Submarine__currentdepth.currentdepth, Submarine__currentoperationstatus.currentoperationstatus}
+  writes {Submarine__currentdepth.currentdepth}
+
+end
+
+(* Module for declaring a program function (and possibly an axiom) for "divethesubmarinetomaxdepth" defined at movement.ads:22, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Movement__divethesubmarinetomaxdepth___axiom
+ use        Submarine__currentoperationstatus
+ use        Submarine__currentdepth
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Submarine__depthmonitor___axiom
+ use        Submarine__currentdepth
+ use        Submarine__currentoperationstatus
+
+ val divethesubmarinetomaxdepth 
+   (__void_param : unit) : unit
+  requires {  ( (Submarine__currentdepth.currentdepth.int__content < 2000) /\ (Submarine__currentoperationstatus.currentoperationstatus.int__content = 0) ) }
+  ensures {  ( (Submarine__currentdepth.currentdepth.int__content = 2000) /\ (Submarine__depthmonitor___axiom.dynamic_invariant Submarine__currentdepth.currentdepth.int__content True True True True) ) }
+  reads {Submarine__currentdepth.currentdepth, Submarine__currentoperationstatus.currentoperationstatus}
+  writes {Submarine__currentdepth.currentdepth}
+
+end
+
+(* Module for declaring a program function (and possibly an axiom) for "raisethesubmarine100ft" defined at movement.ads:28, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Movement__raisethesubmarine100ft___axiom
+ use        Submarine__currentdepth
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Movement__maxdepthinvariant
+ use        Submarine__depthmonitor___axiom
+ use        Submarine__currentdepth
+
+ val raisethesubmarine100ft 
+   (__void_param : unit) : unit
+  requires {  ( (Submarine__currentdepth.currentdepth.int__content >= 100) /\ ((epsilon temp___result_191 : bool.
+   ( (temp___result_191 = (Movement__maxdepthinvariant.maxdepthinvariant Submarine__currentdepth.currentdepth.int__content)) /\ (Movement__maxdepthinvariant.maxdepthinvariant__function_guard temp___result_191 Submarine__currentdepth.currentdepth.int__content) )) = True) ) }
+  ensures {  ( ( (Submarine__currentdepth.currentdepth.int__content <= 1900) /\ (Submarine__currentdepth.currentdepth.int__content >= 0) ) /\ (Submarine__depthmonitor___axiom.dynamic_invariant Submarine__currentdepth.currentdepth.int__content True True True True) ) }
+  reads {Submarine__currentdepth.currentdepth}
+  writes {Submarine__currentdepth.currentdepth}
+
+end
+
+(* Module for declaring a program function (and possibly an axiom) for "surfacethesubmarine" defined at movement.ads:34, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Movement__surfacethesubmarine___axiom
+ use        Submarine__currentdepth
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Movement__maxdepthinvariant
+ use        Movement__notsurfacedinvariant
+ use        Submarine__depthmonitor___axiom
+ use        Submarine__currentdepth
+
+ val surfacethesubmarine 
+   (__void_param : unit) : unit
+  requires {  ( ((epsilon temp___result_193 : bool.
+   ( (temp___result_193 = (Movement__notsurfacedinvariant.notsurfacedinvariant Submarine__currentdepth.currentdepth.int__content)) /\ (Movement__notsurfacedinvariant.notsurfacedinvariant__function_guard temp___result_193 Submarine__currentdepth.currentdepth.int__content) )) = True) /\ ((epsilon temp___result_192 : bool.
+   ( (temp___result_192 = (Movement__maxdepthinvariant.maxdepthinvariant Submarine__currentdepth.currentdepth.int__content)) /\ (Movement__maxdepthinvariant.maxdepthinvariant__function_guard temp___result_192 Submarine__currentdepth.currentdepth.int__content) )) = True) ) }
+  ensures {  ( (Submarine__currentdepth.currentdepth.int__content = 0) /\ (Submarine__depthmonitor___axiom.dynamic_invariant Submarine__currentdepth.currentdepth.int__content True True True True) ) }
+  reads {Submarine__currentdepth.currentdepth}
+  writes {Submarine__currentdepth.currentdepth}
+
+end
+
+(* Module for declaring a program function (and possibly an axiom) for "reactortempoverheats" defined at reactor.ads:15, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Reactor__reactortempoverheats___axiom
+ use        Reactor__reactortemp
+ use        Submarine__currentdepth
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Submarine__depthmonitor___axiom
+ use        Submarine__currentdepth
+ use        Reactor__reactortemprange___axiom
+ use        Reactor__reactortemp
+
+ val reactortempoverheats 
+   (__void_param : unit) : unit
+  requires {  ( (Reactor__reactortemp.reactortemp.int__content < 100) /\ (Submarine__currentdepth.currentdepth.int__content > 0) ) }
+  ensures {  ( ( (Reactor__reactortemp.reactortemp.int__content = 100) /\ (Submarine__currentdepth.currentdepth.int__content = 0) ) /\ ( (Reactor__reactortemprange___axiom.dynamic_invariant Reactor__reactortemp.reactortemp.int__content True True True True) /\ (Submarine__depthmonitor___axiom.dynamic_invariant Submarine__currentdepth.currentdepth.int__content True True True True) ) ) }
+  reads {Submarine__currentdepth.currentdepth, Reactor__reactortemp.reactortemp}
+  writes {Submarine__currentdepth.currentdepth, Reactor__reactortemp.reactortemp}
+
+end
+
+(* Module for checking absence of run-time errors and package initial condition on package elaboration of "reactor" defined at reactor.ads:6, created in Gnat2Why.Subprograms.Generate_VCs_For_Package_Elaboration *)
 module Reactor__package_def
  use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Reactor__reactortemprange___axiom
+ use        Reactor__reactortemp
+ use        Reactor__reactortemprange___axiom
+ use        Reactor__reactortemp___axiom
 
- let def #"reactor.ads" 1 0 0#"GP_Subp:reactor.ads:1" "W:diverges:N" 
+ let def #"reactor.ads" 6 0 0#"GP_Subp:reactor.ads:6" "W:diverges:N" 
    (__void_param : unit)
-  requires { #"reactor.ads" 1 0 0# true }
-  ensures { #"reactor.ads" 1 0 0# true }
+  requires { #"reactor.ads" 6 0 0# true }
+  ensures { #"reactor.ads" 6 0 0# true }
    =
-  ( (#"reactor.ads" 1 0 0# ());
-  (#"reactor.ads" 10 0 0# ());
+  ( (#"reactor.ads" 6 0 0# ());
+  (#"reactor.ads" 11 0 0# ());
   (#"reactor.ads" 12 0 0# ());
-  (#"reactor.ads" 11 0 0# ());
-  (#"reactor.ads" 11 0 0# ());
-  (#"reactor.adb" 1 0 0# ());
-  (#"reactor.adb" 12 0 0# ());
-  ( "GP_Sloc:reactor.adb:25:1" (#"reactor.adb" 25 0 0# ()) ) )
+  (#"reactor.ads" 12 0 0# ());
+  (#"reactor.ads" 12 0 0# ( #"reactor.ads" 12 0 0# Reactor__reactortemp.reactortemp.int__content <- ( 0 );
+  #"reactor.ads" 12 0 0# assume { #"reactor.ads" 12 0 0# (Reactor__reactortemprange___axiom.dynamic_invariant Reactor__reactortemp.reactortemp.int__content True False True True) } ));
+  (#"reactor.ads" 15 0 0# ());
+  (#"reactor.ads" 18 0 0# ());
+  (#"reactor.ads" 18 0 0# ());
+  (#"reactor.ads" 17 0 0# ());
+  (#"reactor.ads" 17 0 0# ());
+  (#"reactor.ads" 16 0 0# ());
+  (#"reactor.adb" 7 0 0# ());
+  (#"reactor.adb" 14 0 0# ());
+  ( "GP_Sloc:reactor.adb:22:1" (#"reactor.adb" 22 0 0# ()) ) )
 end
 
-(* Module for checking contracts and absence of run-time errors in subprogram "p1" defined at reactor.ads:10, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
-module Reactor__p1__subprogram_def
+(* Module for checking contracts and absence of run-time errors in subprogram "reactortempoverheats" defined at reactor.ads:15, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+module Reactor__reactortempoverheats__subprogram_def
  use import "_gnatprove_standard".Main
  use import "int".Int
- use        Standard__integer
- use        Standard__integer___axiom
- use        Reactor__p1__s
- use        Reactor__p1__n
- use        Standard__integer___axiom
- use        Standard__integer___axiom
- use        Reactor__p1__s___axiom
- use        Reactor__p1__n___axiom
+ use        "_gnatprove_standard".Boolean
+ use        Movement__surfacethesubmarine___axiom
+ use        Submarine__depthmonitor___axiom
+ use        Submarine__currentdepth
+ use        Reactor__reactortemprange___axiom
+ use        Reactor__reactortemp
+ use        Reactor__reactortempoverheats__L_1
+ use        Reactor__reactortempoverheats__L_1__a
+ use        Reactor__reactortempoverheats__L_1__a___axiom
+ use        Reactor__reactortempoverheats__L_1___axiom
+ use        Reactor__reactortemprange___axiom
+ use        Reactor__reactortemp___axiom
+ use        Submarine__depthmonitor___axiom
+ use        Submarine__currentdepth___axiom
+ use        Movement__maxdepthinvariant___axiom
+ use        Movement__notsurfacedinvariant___axiom
+ use        Movement__surfacethesubmarine___axiom
 
- let def #"reactor.ads" 10 0 0#"W:diverges:N" "GP_Subp:reactor.ads:10" 
+ let def #"reactor.ads" 15 0 0#"W:diverges:N" "GP_Subp:reactor.ads:15" 
    (__void_param : unit)
-  requires { #"reactor.ads" 10 0 0# true }
-  ensures { #"reactor.ads" 10 0 0# (#"reactor.ads" 12 0 0# ( "model_vc_post" "keep_on_simp" "GP_Sloc:reactor.ads:12:14" "GP_Reason:VC_POSTCONDITION" "GP_Id:3" "comment:     Post => s <= n;
-             ^ reactor.ads:12:14:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" ( "GP_Pretty_Ada:2463" "GP_Sloc:reactor.ads:12:14" (Reactor__p1__s.s.int__content <= Reactor__p1__n.n.int__content) ) )) }
+  requires { #"reactor.ads" 15 0 0# true }
+  ensures { #"reactor.ads" 15 0 0# (#"reactor.ads" 18 0 0# ( "model_vc_post" "keep_on_simp" "GP_Sloc:reactor.ads:18:14" "GP_Reason:VC_POSTCONDITION" "GP_Id:1" "comment:     Post => reactorTemp = ReactorTempRange'Last and then currentDepth = 0;
+             ^ reactor.ads:18:14:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" ( ( "GP_Pretty_Ada:4374" "GP_Sloc:reactor.ads:18:14" (Reactor__reactortemp.reactortemp.int__content = 100) ) /\ ( "GP_Pretty_Ada:2443" "GP_Sloc:reactor.ads:18:72" (Submarine__currentdepth.currentdepth.int__content = 0) ) ) )) }
    =
-  ( () (* Assume dynamic invariants of inputs of the subprogram reactor.ads:10 *)
+  ( () (* Assume dynamic invariants of inputs of the subprogram reactor.ads:15 *)
   ;
-   assume {  (Standard__integer___axiom.dynamic_invariant Reactor__p1__s.s.int__content True False True True) };
-   assume {  (Standard__integer___axiom.dynamic_invariant Reactor__p1__n.n.int__content True False True True) };
+   assume {  (Reactor__reactortemprange___axiom.dynamic_invariant Reactor__reactortemp.reactortemp.int__content True False True True) };
+   assume {  (Submarine__depthmonitor___axiom.dynamic_invariant Submarine__currentdepth.currentdepth.int__content True False True True) };
    assume {  true };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram reactor.ads:10 *)
+  () (* Declarations introduced by the compiler at the beginning of the subprogram reactor.ads:15 *)
   ;
-  () (* Check for RTE in the Pre of the subprogram reactor.ads:10 *)
+  () (* Check for RTE in the Pre of the subprogram reactor.ads:15 *)
   ;
-   abstract ensures {true}(let _ = ( (Reactor__p1__n.n.int__content > ( -2147483645 )) && (Reactor__p1__s.s.int__content <= (#"reactor.ads" 11 0 0# ( "model_vc" "keep_on_simp" "GP_Reason:VC_OVERFLOW_CHECK" "GP_Sloc:reactor.ads:11:50" "GP_Id:2" "comment:     Pre=> n > Integer'First + 3 and then s <= n - 3,
-                                                 ^ reactor.ads:11:50:VC_OVERFLOW_CHECK" "GP_Shape:pragargs__cmp__sub" (Standard__integer.range_check_((Reactor__p1__n.n.int__content - 3))) ))) ) in (
+   abstract ensures {true}(let _ = ( (Reactor__reactortemp.reactortemp.int__content < 100) && (Submarine__currentdepth.currentdepth.int__content > 0) ) in (
    ()))
    end ;
-  () (* Assume Pre of the subprogram reactor.ads:10 *)
+  () (* Assume Pre of the subprogram reactor.ads:15 *)
   ;
-   assume {  ( (Reactor__p1__n.n.int__content > ( -2147483645 )) /\ (Reactor__p1__s.s.int__content <= (Reactor__p1__n.n.int__content - 3)) ) };
+   assume {  ( (Reactor__reactortemp.reactortemp.int__content < 100) /\ (Submarine__currentdepth.currentdepth.int__content > 0) ) };
    try
-   ( ( "GP_Sloc:reactor.adb:14:9" (#"reactor.adb" 14 0 0# #"reactor.adb" 14 0 0# Reactor__p1__s.s.int__content <- ( (#"reactor.adb" 14 0 0# ( "model_vc" "keep_on_simp" "GP_Sloc:reactor.adb:14:14" "GP_Reason:VC_OVERFLOW_CHECK" "GP_Id:0" "comment:      s := s + 2;
-             ^ reactor.adb:14:14:VC_OVERFLOW_CHECK" "GP_Shape:s_assign__add" (Standard__integer.range_check_((Reactor__p1__s.s.int__content + 2))) )) )) );
-   ( "GP_Sloc:reactor.adb:15:9" (#"reactor.adb" 15 0 0# #"reactor.adb" 15 0 0# Reactor__p1__n.n.int__content <- ( (#"reactor.adb" 15 0 0# ( "model_vc" "keep_on_simp" "GP_Reason:VC_OVERFLOW_CHECK" "GP_Sloc:reactor.adb:15:14" "GP_Id:1" "comment:      n := n - 1;
-             ^ reactor.adb:15:14:VC_OVERFLOW_CHECK" "GP_Shape:n_assign__sub" (Standard__integer.range_check_((Reactor__p1__n.n.int__content - 1))) )) )) );
+   ( (#"reactor.adb" 16 0 0# ());
+   ( "GP_Sloc:reactor.adb:16:33" (#"reactor.adb" 16 0 0# (let temp___201 = 0 in (
+   (let temp___202 = 100 in (
+    ( #"reactor.adb" 16 0 0# Reactor__reactortempoverheats__L_1__a.a.int__content <- ( temp___201 );
+    () (* Translation of an Ada loop from reactor.adb:16 *)
+    ;
+    (if ((Boolean.andb((temp___201 <= Reactor__reactortempoverheats__L_1__a.a.int__content)) ((Reactor__reactortempoverheats__L_1__a.a.int__content <= temp___202)))) then (
+     #"reactor.adb" 16 0 0# try
+      ( #"reactor.adb" 16 0 0# abstract ensures {true}(let _ = Reactor__reactortemp.reactortemp.int__content in (
+       ()))
+       end ;
+      (let temp___203 = #"reactor.adb" 16 0 0# (any int
+      ensures {#"reactor.adb" 16 0 0# (result = Reactor__reactortemp.reactortemp.int__content)} 
+      ) in (
+       ( () (* First unroling of the loop statements appearing before the loop invariant of loop reactor.adb:16 *)
+       ;
+       () (* While loop translating the Ada loop from reactor.adb:16 *)
+       ;
+       #"reactor.adb" 16 0 0# while True do
+        ( () (* Assume implicit invariants from the loop reactor.adb:16 *)
+        ;
+        #"reactor.adb" 16 0 0# assume { #"reactor.adb" 16 0 0# (Boolean.andb(( ( true /\ (Reactor__reactortemprange___axiom.dynamic_invariant Reactor__reactortemp.reactortemp.int__content True True True True) ) /\ true )) (( (0 <= Reactor__reactortempoverheats__L_1__a.a.int__content) /\ (Reactor__reactortempoverheats__L_1__a.a.int__content <= 100) ))) };
+        () (* Check for absence of RTE in the invariant of loop reactor.adb:16 *)
+        ;
+        () (* Loop statements appearing after the loop invariant of loop reactor.adb:16 *)
+        ;
+        ( "GP_Sloc:reactor.adb:17:10" (#"reactor.adb" 17 0 0# ()) );
+        ( "GP_Sloc:reactor.adb:17:22" (#"reactor.adb" 17 0 0# #"reactor.adb" 17 0 0# Reactor__reactortemp.reactortemp.int__content <- ( Reactor__reactortempoverheats__L_1__a.a.int__content )) );
+        () (* Check for the exit condition and loop statements appearing before the loop invariant of loop reactor.adb:16 *)
+        ;
+        (if ((Reactor__reactortempoverheats__L_1__a.a.int__content = temp___202)) then (
+          raise Reactor__reactortempoverheats__L_1.L_1));
+         Reactor__reactortempoverheats__L_1__a.a.int__content <- ( (Reactor__reactortempoverheats__L_1__a.a.int__content + 1) ) )
+       done )))
+       )
+     with
+      Reactor__reactortempoverheats__L_1.L_1 -> ()
+     end)) )))
+   ))
+   ) );
+   ( "GP_Sloc:reactor.adb:19:7" (#"reactor.adb" 19 0 0# ()) );
+   ( "GP_Sloc:reactor.adb:19:7" (#"reactor.adb" 19 0 0# ( (#"reactor.adb" 19 0 0# ( "model_vc" "keep_on_simp" "GP_Sloc:reactor.adb:19:7" "GP_Reason:VC_PRECONDITION" "GP_Id:0" "comment:      SurfaceTheSubmarine;
+      ^ reactor.adb:19:7:VC_PRECONDITION" "GP_Shape:call_surfacethesubmarine" (Movement__surfacethesubmarine___axiom.surfacethesubmarine(())) )) )) );
     raise Return__exc )
   with
    Return__exc -> ()
   end;
-   abstract ensures {true}(let _ = (Reactor__p1__s.s.int__content <= Reactor__p1__n.n.int__content) in (
+   abstract ensures {true}(let _ = ( (Reactor__reactortemp.reactortemp.int__content = 100) && (Submarine__currentdepth.currentdepth.int__content = 0) ) in (
    ()))
    end  )
 end

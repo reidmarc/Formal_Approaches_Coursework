@@ -1887,9 +1887,9 @@ module Submarine__airlockdoor__rep
  use        Submarine__lockstatus__rep
 
  type __split_fields =
-  { rec__submarine__airlockdoor__door "model_trace:.2552" "name:door" : Submarine__doorstatus.doorstatus; rec__submarine__airlockdoor__lock "model_trace:.2562" "name:lock" : Submarine__lockstatus.lockstatus }
+  { rec__submarine__airlockdoor__door "model_trace:.2694" "name:door" : Submarine__doorstatus.doorstatus; rec__submarine__airlockdoor__lock "model_trace:.2704" "name:lock" : Submarine__lockstatus.lockstatus }
  
- function __split_fields_door__projection "model_trace:.2552" "name:door" 
+ function __split_fields_door__projection "model_trace:.2694" "name:door" 
    (a : __split_fields) : Submarine__doorstatus.doorstatus =
   a.rec__submarine__airlockdoor__door
  
@@ -1897,7 +1897,7 @@ module Submarine__airlockdoor__rep
  
  meta "inline : no" function __split_fields_door__projection
  
- function __split_fields_lock__projection "model_trace:.2562" "name:lock" 
+ function __split_fields_lock__projection "model_trace:.2704" "name:lock" 
    (a : __split_fields) : Submarine__lockstatus.lockstatus =
   a.rec__submarine__airlockdoor__lock
  
@@ -2059,7 +2059,7 @@ module Submarine__airlockdoor
 
 end
 
-(* Module for axiomatizing type "operationstatus" defined at submarine.ads:51, created in Gnat2Why.Types.Translate_Type *)
+(* Module for axiomatizing type "operationstatus" defined at submarine.ads:50, created in Gnat2Why.Types.Translate_Type *)
 module Submarine__operationstatus
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -2101,7 +2101,7 @@ module Submarine__operationstatus
 
 end
 
-(* Module defining to_rep/of_rep for type "operationstatus" defined at submarine.ads:51, created in Gnat2Why.Types.Translate_Type *)
+(* Module defining to_rep/of_rep for type "operationstatus" defined at submarine.ads:50, created in Gnat2Why.Types.Translate_Type *)
 module Submarine__operationstatus__rep
  use        Submarine__operationstatus
  use import "_gnatprove_standard".Main
@@ -2119,7 +2119,7 @@ end
 module Submarine__currentdepth
  use import "_gnatprove_standard".Main
 
- val currentdepth #"submarine.ads" 5 0 0#"model_projected" "model_trace:2485" "name:currentDepth"  : int__ref 
+ val currentdepth #"submarine.ads" 5 0 0#"model_projected" "model_trace:2627" "name:currentDepth"  : int__ref 
  
  function attr__ATTRIBUTE_ADDRESS 
    : int
@@ -2138,7 +2138,7 @@ module Submarine__outerdoor
  use import "_gnatprove_standard".Main
  use        Submarine__airlockdoor
 
- val outerdoor__split_fields #"submarine.ads" 20 0 0#"model_projected" "model_trace:2574" "name:outerDoor"  : Submarine__airlockdoor.__split_fields__ref 
+ val outerdoor__split_fields #"submarine.ads" 20 0 0#"model_projected" "model_trace:2716" "name:outerDoor"  : Submarine__airlockdoor.__split_fields__ref 
  
  function attr__ATTRIBUTE_ADDRESS 
    : int
@@ -2157,7 +2157,7 @@ module Submarine__innerdoor
  use import "_gnatprove_standard".Main
  use        Submarine__airlockdoor
 
- val innerdoor__split_fields #"submarine.ads" 21 0 0#"model_projected" "model_trace:2590" "name:innerDoor"  : Submarine__airlockdoor.__split_fields__ref 
+ val innerdoor__split_fields #"submarine.ads" 21 0 0#"model_projected" "model_trace:2732" "name:innerDoor"  : Submarine__airlockdoor.__split_fields__ref 
  
  function attr__ATTRIBUTE_ADDRESS 
    : int
@@ -2171,18 +2171,18 @@ module Submarine__innerdoor___axiom
 
 end
 
-(* Module for defining a ref holding the value of variable "currentoperationstatus" defined at submarine.ads:52, created in Gnat2Why.Decls.Translate_Variable *)
+(* Module for defining a ref holding the value of variable "currentoperationstatus" defined at submarine.ads:51, created in Gnat2Why.Decls.Translate_Variable *)
 module Submarine__currentoperationstatus
  use import "_gnatprove_standard".Main
 
- val currentoperationstatus #"submarine.ads" 52 0 0#"model_projected" "model_trace:2786" "name:currentOperationStatus"  : int__ref 
+ val currentoperationstatus #"submarine.ads" 51 0 0#"model_projected" "model_trace:2928" "name:currentOperationStatus"  : int__ref 
  
  function attr__ATTRIBUTE_ADDRESS 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "currentoperationstatus" defined at submarine.ads:52, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "currentoperationstatus" defined at submarine.ads:51, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Submarine__currentoperationstatus___axiom
  use import "_gnatprove_standard".Main
 
@@ -2579,43 +2579,83 @@ module Submarine__closeinnerairlockdoor
 
 end
 
-(* Module for possibly declaring a logic function for "lockouterdoor" defined at submarine.ads:54, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "lockouterdoor" defined at submarine.ads:53, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Submarine__lockouterdoor
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "unlockouterdoor" defined at submarine.ads:60, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "unlockouterdoor" defined at submarine.ads:59, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Submarine__unlockouterdoor
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "lockinnerdoor" defined at submarine.ads:66, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "lockinnerdoor" defined at submarine.ads:65, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Submarine__lockinnerdoor
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "unlockinnerdoor" defined at submarine.ads:72, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "unlockinnerdoor" defined at submarine.ads:71, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Submarine__unlockinnerdoor
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "divethesubmarine100ft" defined at movement.ads:13, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "maxdepthinvariant" defined at movement.ads:7, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Movement__maxdepthinvariant
+ use        Submarine__currentdepth
+ use import "_gnatprove_standard".Main
+
+ function maxdepthinvariant 
+   (submarine__currentdepth : int) : bool
+ 
+ predicate maxdepthinvariant__function_guard 
+   (result : bool) (submarine__currentdepth : int) 
+
+end
+
+(* Module for possibly declaring a logic function for "notsurfacedinvariant" defined at movement.ads:10, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Movement__notsurfacedinvariant
+ use        Submarine__currentdepth
+ use import "_gnatprove_standard".Main
+
+ function notsurfacedinvariant 
+   (submarine__currentdepth : int) : bool
+ 
+ predicate notsurfacedinvariant__function_guard 
+   (result : bool) (submarine__currentdepth : int) 
+
+end
+
+(* Module for possibly declaring a logic function for "divethesubmarine100ft" defined at movement.ads:16, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Movement__divethesubmarine100ft
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "raisethesubmarine100ft" defined at movement.ads:19, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "divethesubmarinetomaxdepth" defined at movement.ads:22, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Movement__divethesubmarinetomaxdepth
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for possibly declaring a logic function for "raisethesubmarine100ft" defined at movement.ads:28, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Movement__raisethesubmarine100ft
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for possibly declaring a logic function for "surfacethesubmarine" defined at movement.ads:34, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Movement__surfacethesubmarine
  use import "_gnatprove_standard".Main
 
 
@@ -2694,7 +2734,7 @@ module Submarine__airlockdoor___axiom
 
 end
 
-(* Module giving axioms for type "operationstatus" defined at submarine.ads:51, created in Gnat2Why.Types.Generate_Type_Completion *)
+(* Module giving axioms for type "operationstatus" defined at submarine.ads:50, created in Gnat2Why.Types.Generate_Type_Completion *)
 module Submarine__operationstatus___axiom
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -2798,7 +2838,7 @@ module Submarine__closeinnerairlockdoor___axiom
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "lockouterdoor" defined at submarine.ads:54, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "lockouterdoor" defined at submarine.ads:53, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Submarine__lockouterdoor___axiom
  use        Submarine__outerdoor
  use        Submarine__currentoperationstatus
@@ -2825,7 +2865,7 @@ module Submarine__lockouterdoor___axiom
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "unlockouterdoor" defined at submarine.ads:60, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "unlockouterdoor" defined at submarine.ads:59, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Submarine__unlockouterdoor___axiom
  use        Submarine__outerdoor
  use        Submarine__currentoperationstatus
@@ -2850,7 +2890,7 @@ module Submarine__unlockouterdoor___axiom
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "lockinnerdoor" defined at submarine.ads:66, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "lockinnerdoor" defined at submarine.ads:65, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Submarine__lockinnerdoor___axiom
  use        Submarine__outerdoor
  use        Submarine__currentoperationstatus
@@ -2877,7 +2917,7 @@ module Submarine__lockinnerdoor___axiom
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "unlockinnerdoor" defined at submarine.ads:72, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "unlockinnerdoor" defined at submarine.ads:71, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Submarine__unlockinnerdoor___axiom
  use        Submarine__currentoperationstatus
  use        Submarine__innerdoor
@@ -2902,35 +2942,139 @@ module Submarine__unlockinnerdoor___axiom
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "divethesubmarine100ft" defined at movement.ads:13, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module giving a program function and a defining axiom for the expression function "maxdepthinvariant" defined at movement.ads:7, created in Gnat2Why.Subprograms.Translate_Expression_Function_Body *)
+module Movement__maxdepthinvariant___axiom
+ use        Submarine__currentdepth
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Movement__maxdepthinvariant
+ use        Submarine__depthmonitor___axiom
+ use        Submarine__currentdepth
+
+ val maxdepthinvariant 
+   (__void_param : unit) : bool
+  requires {  true }
+  ensures {  ( ( (result = (Movement__maxdepthinvariant.maxdepthinvariant Submarine__currentdepth.currentdepth.int__content)) /\ (Movement__maxdepthinvariant.maxdepthinvariant__function_guard result Submarine__currentdepth.currentdepth.int__content) ) /\ ( (result = True) <-> (Submarine__currentdepth.currentdepth.int__content <= 2000) ) ) }
+  reads {Submarine__currentdepth.currentdepth}
+ 
+ axiom maxdepthinvariant__post_axiom :
+  (forall submarine__currentdepth   : int [(Movement__maxdepthinvariant.maxdepthinvariant submarine__currentdepth)].
+   ( (Submarine__depthmonitor___axiom.dynamic_invariant submarine__currentdepth True True True True) -> (let result = (Movement__maxdepthinvariant.maxdepthinvariant submarine__currentdepth) in (
+    (if ((Movement__maxdepthinvariant.maxdepthinvariant__function_guard result submarine__currentdepth)) then (
+     ( ( true /\ true ) /\ true )) else true)))
+    ))
+ 
+ axiom maxdepthinvariant__def_axiom :
+  (forall submarine__currentdepth   : int [(Movement__maxdepthinvariant.maxdepthinvariant submarine__currentdepth)].
+   ( (let result = (Movement__maxdepthinvariant.maxdepthinvariant submarine__currentdepth) in (
+    (Movement__maxdepthinvariant.maxdepthinvariant__function_guard result submarine__currentdepth)))
+    -> ( ((Movement__maxdepthinvariant.maxdepthinvariant submarine__currentdepth) = True) <-> (submarine__currentdepth <= 2000) ) ))
+
+end
+
+(* Module giving a program function and a defining axiom for the expression function "notsurfacedinvariant" defined at movement.ads:10, created in Gnat2Why.Subprograms.Translate_Expression_Function_Body *)
+module Movement__notsurfacedinvariant___axiom
+ use        Submarine__currentdepth
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Movement__notsurfacedinvariant
+ use        Submarine__depthmonitor___axiom
+ use        Submarine__currentdepth
+
+ val notsurfacedinvariant 
+   (__void_param : unit) : bool
+  requires {  true }
+  ensures {  ( ( (result = (Movement__notsurfacedinvariant.notsurfacedinvariant Submarine__currentdepth.currentdepth.int__content)) /\ (Movement__notsurfacedinvariant.notsurfacedinvariant__function_guard result Submarine__currentdepth.currentdepth.int__content) ) /\ ( (result = True) <-> (Submarine__currentdepth.currentdepth.int__content > 0) ) ) }
+  reads {Submarine__currentdepth.currentdepth}
+ 
+ axiom notsurfacedinvariant__post_axiom :
+  (forall submarine__currentdepth   : int [(Movement__notsurfacedinvariant.notsurfacedinvariant submarine__currentdepth)].
+   ( (Submarine__depthmonitor___axiom.dynamic_invariant submarine__currentdepth True True True True) -> (let result = (Movement__notsurfacedinvariant.notsurfacedinvariant submarine__currentdepth) in (
+    (if ((Movement__notsurfacedinvariant.notsurfacedinvariant__function_guard result submarine__currentdepth)) then (
+     ( ( true /\ true ) /\ true )) else true)))
+    ))
+ 
+ axiom notsurfacedinvariant__def_axiom :
+  (forall submarine__currentdepth   : int [(Movement__notsurfacedinvariant.notsurfacedinvariant submarine__currentdepth)].
+   ( (let result = (Movement__notsurfacedinvariant.notsurfacedinvariant submarine__currentdepth) in (
+    (Movement__notsurfacedinvariant.notsurfacedinvariant__function_guard result submarine__currentdepth)))
+    -> ( ((Movement__notsurfacedinvariant.notsurfacedinvariant submarine__currentdepth) = True) <-> (submarine__currentdepth > 0) ) ))
+
+end
+
+(* Module for declaring a program function (and possibly an axiom) for "divethesubmarine100ft" defined at movement.ads:16, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Movement__divethesubmarine100ft___axiom
+ use        Submarine__currentoperationstatus
  use        Submarine__currentdepth
  use import "_gnatprove_standard".Main
  use import "int".Int
  use        Submarine__depthmonitor___axiom
  use        Submarine__currentdepth
+ use        Submarine__currentoperationstatus
 
  val divethesubmarine100ft 
    (__void_param : unit) : unit
-  requires {  ( (Submarine__currentdepth.currentdepth.int__content <= 1900) /\ (Submarine__currentdepth.currentdepth.int__content >= 0) ) }
+  requires {  ( (Submarine__currentdepth.currentdepth.int__content <= 1900) /\ ( (Submarine__currentdepth.currentdepth.int__content >= 0) /\ (Submarine__currentoperationstatus.currentoperationstatus.int__content = 0) ) ) }
   ensures {  ( ( (Submarine__currentdepth.currentdepth.int__content <= 2000) /\ (Submarine__currentdepth.currentdepth.int__content >= 100) ) /\ (Submarine__depthmonitor___axiom.dynamic_invariant Submarine__currentdepth.currentdepth.int__content True True True True) ) }
-  reads {Submarine__currentdepth.currentdepth}
+  reads {Submarine__currentdepth.currentdepth, Submarine__currentoperationstatus.currentoperationstatus}
   writes {Submarine__currentdepth.currentdepth}
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "raisethesubmarine100ft" defined at movement.ads:19, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "divethesubmarinetomaxdepth" defined at movement.ads:22, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Movement__divethesubmarinetomaxdepth___axiom
+ use        Submarine__currentoperationstatus
+ use        Submarine__currentdepth
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Submarine__depthmonitor___axiom
+ use        Submarine__currentdepth
+ use        Submarine__currentoperationstatus
+
+ val divethesubmarinetomaxdepth 
+   (__void_param : unit) : unit
+  requires {  ( (Submarine__currentdepth.currentdepth.int__content < 2000) /\ (Submarine__currentoperationstatus.currentoperationstatus.int__content = 0) ) }
+  ensures {  ( (Submarine__currentdepth.currentdepth.int__content = 2000) /\ (Submarine__depthmonitor___axiom.dynamic_invariant Submarine__currentdepth.currentdepth.int__content True True True True) ) }
+  reads {Submarine__currentdepth.currentdepth, Submarine__currentoperationstatus.currentoperationstatus}
+  writes {Submarine__currentdepth.currentdepth}
+
+end
+
+(* Module for declaring a program function (and possibly an axiom) for "raisethesubmarine100ft" defined at movement.ads:28, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Movement__raisethesubmarine100ft___axiom
  use        Submarine__currentdepth
  use import "_gnatprove_standard".Main
  use import "int".Int
+ use        Movement__maxdepthinvariant
  use        Submarine__depthmonitor___axiom
  use        Submarine__currentdepth
 
  val raisethesubmarine100ft 
    (__void_param : unit) : unit
-  requires {  ( (Submarine__currentdepth.currentdepth.int__content >= 100) /\ (Submarine__currentdepth.currentdepth.int__content <= 2000) ) }
+  requires {  ( (Submarine__currentdepth.currentdepth.int__content >= 100) /\ ((epsilon temp___result_191 : bool.
+   ( (temp___result_191 = (Movement__maxdepthinvariant.maxdepthinvariant Submarine__currentdepth.currentdepth.int__content)) /\ (Movement__maxdepthinvariant.maxdepthinvariant__function_guard temp___result_191 Submarine__currentdepth.currentdepth.int__content) )) = True) ) }
   ensures {  ( ( (Submarine__currentdepth.currentdepth.int__content <= 1900) /\ (Submarine__currentdepth.currentdepth.int__content >= 0) ) /\ (Submarine__depthmonitor___axiom.dynamic_invariant Submarine__currentdepth.currentdepth.int__content True True True True) ) }
+  reads {Submarine__currentdepth.currentdepth}
+  writes {Submarine__currentdepth.currentdepth}
+
+end
+
+(* Module for declaring a program function (and possibly an axiom) for "surfacethesubmarine" defined at movement.ads:34, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Movement__surfacethesubmarine___axiom
+ use        Submarine__currentdepth
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Movement__maxdepthinvariant
+ use        Movement__notsurfacedinvariant
+ use        Submarine__depthmonitor___axiom
+ use        Submarine__currentdepth
+
+ val surfacethesubmarine 
+   (__void_param : unit) : unit
+  requires {  ( ((epsilon temp___result_193 : bool.
+   ( (temp___result_193 = (Movement__notsurfacedinvariant.notsurfacedinvariant Submarine__currentdepth.currentdepth.int__content)) /\ (Movement__notsurfacedinvariant.notsurfacedinvariant__function_guard temp___result_193 Submarine__currentdepth.currentdepth.int__content) )) = True) /\ ((epsilon temp___result_192 : bool.
+   ( (temp___result_192 = (Movement__maxdepthinvariant.maxdepthinvariant Submarine__currentdepth.currentdepth.int__content)) /\ (Movement__maxdepthinvariant.maxdepthinvariant__function_guard temp___result_192 Submarine__currentdepth.currentdepth.int__content) )) = True) ) }
+  ensures {  ( (Submarine__currentdepth.currentdepth.int__content = 0) /\ (Submarine__depthmonitor___axiom.dynamic_invariant Submarine__currentdepth.currentdepth.int__content True True True True) ) }
   reads {Submarine__currentdepth.currentdepth}
   writes {Submarine__currentdepth.currentdepth}
 
@@ -2946,25 +3090,128 @@ module Movement__package_def
   ensures { #"movement.ads" 5 0 0# true }
    =
   ( (#"movement.ads" 5 0 0# ());
-  (#"movement.ads" 13 0 0# ());
+  (#"movement.ads" 7 0 0# ());
+  (#"movement.ads" 10 0 0# ());
   (#"movement.ads" 16 0 0# ());
-  (#"movement.ads" 16 0 0# ());
-  (#"movement.ads" 15 0 0# ());
-  (#"movement.ads" 15 0 0# ());
-  (#"movement.ads" 14 0 0# ());
   (#"movement.ads" 19 0 0# ());
+  (#"movement.ads" 19 0 0# ());
+  (#"movement.ads" 18 0 0# ());
+  (#"movement.ads" 18 0 0# ());
+  (#"movement.ads" 18 0 0# ());
+  (#"movement.ads" 17 0 0# ());
   (#"movement.ads" 22 0 0# ());
-  (#"movement.ads" 22 0 0# ());
-  (#"movement.ads" 21 0 0# ());
-  (#"movement.ads" 21 0 0# ());
-  (#"movement.ads" 20 0 0# ());
+  (#"movement.ads" 25 0 0# ());
+  (#"movement.ads" 24 0 0# ());
+  (#"movement.ads" 24 0 0# ());
+  (#"movement.ads" 23 0 0# ());
+  (#"movement.ads" 28 0 0# ());
+  (#"movement.ads" 31 0 0# ());
+  (#"movement.ads" 31 0 0# ());
+  (#"movement.ads" 30 0 0# ());
+  (#"movement.ads" 30 0 0# ());
+  (#"movement.ads" 29 0 0# ());
+  (#"movement.ads" 34 0 0# ());
+  (#"movement.ads" 37 0 0# ());
+  (#"movement.ads" 36 0 0# ());
+  (#"movement.ads" 36 0 0# ());
+  (#"movement.ads" 35 0 0# ());
+  (#"movement.ads" 7 0 0# ());
+  (#"movement.ads" 10 0 0# ());
   (#"movement.adb" 4 0 0# ());
   (#"movement.adb" 13 0 0# ());
   (#"movement.adb" 21 0 0# ());
-  ( "GP_Sloc:movement.adb:32:1" (#"movement.adb" 32 0 0# ()) ) )
+  (#"movement.adb" 29 0 0# ());
+  (#"movement.adb" 37 0 0# ());
+  ( "GP_Sloc:movement.adb:48:1" (#"movement.adb" 48 0 0# ()) ) )
 end
 
-(* Module for checking contracts and absence of run-time errors in subprogram "divethesubmarine100ft" defined at movement.ads:13, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+(* Module for checking contracts and absence of run-time errors in subprogram "maxdepthinvariant" defined at movement.ads:7, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+module Movement__maxdepthinvariant__subprogram_def
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Submarine__depthmonitor___axiom
+ use        Submarine__currentdepth
+ use        Submarine__depthmonitor___axiom
+ use        Submarine__currentdepth___axiom
+
+ val movement__maxdepthinvariant__result "model_projected" "model_trace:2431@result" "name:MaxDepthInvariant"  : bool__ref 
+ 
+ let def #"movement.ads" 7 0 0#"W:diverges:N" "GP_Subp:movement.ads:7" 
+   (__void_param : unit)
+  requires { #"movement.ads" 7 0 0# true }
+  ensures { #"movement.ads" 7 0 0# true }
+   =
+  ( () (* Assume dynamic invariants of inputs of the subprogram movement.ads:7 *)
+  ;
+  #"movement.ads" 7 0 0# assume { #"movement.ads" 7 0 0# (Submarine__depthmonitor___axiom.dynamic_invariant Submarine__currentdepth.currentdepth.int__content True False True True) };
+  #"movement.ads" 7 0 0# assume { #"movement.ads" 7 0 0# true };
+  () (* Declarations introduced by the compiler at the beginning of the subprogram movement.ads:7 *)
+  ;
+  () (* Check for RTE in the Pre of the subprogram movement.ads:7 *)
+  ;
+  #"movement.ads" 7 0 0# abstract ensures {true}(let _ = True in (
+   ()))
+   end ;
+  () (* Assume Pre of the subprogram movement.ads:7 *)
+  ;
+  #"movement.ads" 7 0 0# assume { #"movement.ads" 7 0 0# true };
+  #"movement.ads" 7 0 0# try
+   ( ( "GP_Sloc:movement.ads:8:20" (#"movement.ads" 8 0 0# ( #"movement.ads" 8 0 0# movement__maxdepthinvariant__result.bool__content <- ( (Submarine__currentdepth.currentdepth.int__content <= 2000) );
+   #"movement.ads" 8 0 0# raise Return__exc )) );
+    raise Return__exc )
+  with
+   Return__exc -> ()
+  end;
+   abstract ensures {true}(let _ = True in (
+   ()))
+   end ;
+  movement__maxdepthinvariant__result.bool__content )
+end
+
+(* Module for checking contracts and absence of run-time errors in subprogram "notsurfacedinvariant" defined at movement.ads:10, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+module Movement__notsurfacedinvariant__subprogram_def
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Submarine__depthmonitor___axiom
+ use        Submarine__currentdepth
+ use        Submarine__depthmonitor___axiom
+ use        Submarine__currentdepth___axiom
+
+ val movement__notsurfacedinvariant__result "model_projected" "model_trace:2444@result" "name:NotSurfacedInvariant"  : bool__ref 
+ 
+ let def #"movement.ads" 10 0 0#"W:diverges:N" "GP_Subp:movement.ads:10" 
+   (__void_param : unit)
+  requires { #"movement.ads" 10 0 0# true }
+  ensures { #"movement.ads" 10 0 0# true }
+   =
+  ( () (* Assume dynamic invariants of inputs of the subprogram movement.ads:10 *)
+  ;
+  #"movement.ads" 10 0 0# assume { #"movement.ads" 10 0 0# (Submarine__depthmonitor___axiom.dynamic_invariant Submarine__currentdepth.currentdepth.int__content True False True True) };
+  #"movement.ads" 10 0 0# assume { #"movement.ads" 10 0 0# true };
+  () (* Declarations introduced by the compiler at the beginning of the subprogram movement.ads:10 *)
+  ;
+  () (* Check for RTE in the Pre of the subprogram movement.ads:10 *)
+  ;
+  #"movement.ads" 10 0 0# abstract ensures {true}(let _ = True in (
+   ()))
+   end ;
+  () (* Assume Pre of the subprogram movement.ads:10 *)
+  ;
+  #"movement.ads" 10 0 0# assume { #"movement.ads" 10 0 0# true };
+  #"movement.ads" 10 0 0# try
+   ( ( "GP_Sloc:movement.ads:11:21" (#"movement.ads" 11 0 0# ( #"movement.ads" 11 0 0# movement__notsurfacedinvariant__result.bool__content <- ( (Submarine__currentdepth.currentdepth.int__content > 0) );
+   #"movement.ads" 11 0 0# raise Return__exc )) );
+    raise Return__exc )
+  with
+   Return__exc -> ()
+  end;
+   abstract ensures {true}(let _ = True in (
+   ()))
+   end ;
+  movement__notsurfacedinvariant__result.bool__content )
+end
+
+(* Module for checking contracts and absence of run-time errors in subprogram "divethesubmarine100ft" defined at movement.ads:16, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
 module Movement__divethesubmarine100ft__subprogram_def
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -2972,33 +3219,39 @@ module Movement__divethesubmarine100ft__subprogram_def
  use        Submarine__depthmonitor
  use        Submarine__depthmonitor___axiom
  use        Submarine__currentdepth
+ use        Submarine__operationstatus___axiom
+ use        Submarine__currentoperationstatus
  use        Submarine__depthmonitor___axiom
  use        Submarine__currentdepth___axiom
+ use        Submarine__operationstatus___axiom
+ use        Submarine__currentoperationstatus___axiom
 
- let def #"movement.ads" 13 0 0#"W:diverges:N" "GP_Subp:movement.ads:13" 
+ let def #"movement.ads" 16 0 0#"W:diverges:N" "GP_Subp:movement.ads:16" 
    (__void_param : unit)
-  requires { #"movement.ads" 13 0 0# true }
-  ensures { #"movement.ads" 13 0 0# (#"movement.ads" 16 0 0# ( "model_vc_post" "keep_on_simp" "GP_Sloc:movement.ads:16:14" "GP_Reason:VC_POSTCONDITION" "GP_Id:1" "comment:     Post => currentDepth <= 2000 and then currentDepth >= 100;
-             ^ movement.ads:16:14:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" ( ( "GP_Pretty_Ada:3779" "GP_Sloc:movement.ads:16:14" (Submarine__currentdepth.currentdepth.int__content <= 2000) ) /\ ( "GP_Pretty_Ada:2418" "GP_Sloc:movement.ads:16:57" (Submarine__currentdepth.currentdepth.int__content >= 100) ) ) )) }
+  requires { #"movement.ads" 16 0 0# true }
+  ensures { #"movement.ads" 16 0 0# (#"movement.ads" 19 0 0# ( "model_vc_post" "keep_on_simp" "GP_Sloc:movement.ads:19:14" "GP_Reason:VC_POSTCONDITION" "GP_Id:1" "comment:     Post => currentDepth <= 2000 and then currentDepth >= 100;
+             ^ movement.ads:19:14:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" ( ( "GP_Pretty_Ada:3974" "GP_Sloc:movement.ads:19:14" (Submarine__currentdepth.currentdepth.int__content <= 2000) ) /\ ( "GP_Pretty_Ada:2499" "GP_Sloc:movement.ads:19:57" (Submarine__currentdepth.currentdepth.int__content >= 100) ) ) )) }
    =
-  ( () (* Assume dynamic invariants of inputs of the subprogram movement.ads:13 *)
+  ( () (* Assume dynamic invariants of inputs of the subprogram movement.ads:16 *)
   ;
    assume {  (Submarine__depthmonitor___axiom.dynamic_invariant Submarine__currentdepth.currentdepth.int__content True False True True) };
+   assume {  (Submarine__operationstatus___axiom.dynamic_invariant Submarine__currentoperationstatus.currentoperationstatus.int__content True False True True) };
    assume {  true };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram movement.ads:13 *)
+  () (* Declarations introduced by the compiler at the beginning of the subprogram movement.ads:16 *)
   ;
-  () (* Check for RTE in the Pre of the subprogram movement.ads:13 *)
+  () (* Check for RTE in the Pre of the subprogram movement.ads:16 *)
   ;
-   abstract ensures {true}(let _ = ( (Submarine__currentdepth.currentdepth.int__content <= 1900) && (Submarine__currentdepth.currentdepth.int__content >= 0) ) in (
+   abstract ensures {true}(let _ = ( (Submarine__currentdepth.currentdepth.int__content <= 1900) && ( (Submarine__currentdepth.currentdepth.int__content >= 0) && (Submarine__currentoperationstatus.currentoperationstatus.int__content = 0) ) ) in (
    ()))
    end ;
-  () (* Assume Pre of the subprogram movement.ads:13 *)
+  () (* Assume Pre of the subprogram movement.ads:16 *)
   ;
-   assume {  ( (Submarine__currentdepth.currentdepth.int__content <= 1900) /\ (Submarine__currentdepth.currentdepth.int__content >= 0) ) };
+   assume {  ( (Submarine__currentdepth.currentdepth.int__content <= 1900) /\ ( (Submarine__currentdepth.currentdepth.int__content >= 0) /\ (Submarine__currentoperationstatus.currentoperationstatus.int__content = 0) ) ) };
    try
    ( ( "GP_Sloc:movement.adb:15:11" (#"movement.adb" 15 0 0# ()) );
    ( "GP_Sloc:movement.adb:15:36" (#"movement.adb" 15 0 0# ()) );
-   ( "GP_Sloc:movement.adb:15:7" (#"movement.adb" 15 0 0# (if ((Boolean.andb((Submarine__currentdepth.currentdepth.int__content <= 1900)) ((Submarine__currentdepth.currentdepth.int__content >= 0)))) then (
+   ( "GP_Sloc:movement.adb:15:58" (#"movement.adb" 15 0 0# ()) );
+   ( "GP_Sloc:movement.adb:15:7" (#"movement.adb" 15 0 0# (if ((Boolean.andb((Boolean.andb((Submarine__currentdepth.currentdepth.int__content <= 1900)) ((Submarine__currentdepth.currentdepth.int__content >= 0)))) ((Submarine__currentoperationstatus.currentoperationstatus.int__content = 0)))) then (
     ( ( "GP_Sloc:movement.adb:16:10" (#"movement.adb" 16 0 0# ()) );
     ( "GP_Sloc:movement.adb:16:26" (#"movement.adb" 16 0 0# ()) );
     ( "GP_Sloc:movement.adb:16:23" (#"movement.adb" 16 0 0# #"movement.adb" 16 0 0# Submarine__currentdepth.currentdepth.int__content <- ( (#"movement.adb" 16 0 0# ( "model_vc" "keep_on_simp" "GP_Sloc:movement.adb:16:39" "GP_Reason:VC_RANGE_CHECK" "GP_Id:0" "comment:         currentDepth := currentDepth + 100;
@@ -3013,51 +3266,160 @@ module Movement__divethesubmarine100ft__subprogram_def
    end  )
 end
 
-(* Module for checking contracts and absence of run-time errors in subprogram "raisethesubmarine100ft" defined at movement.ads:19, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+(* Module for checking contracts and absence of run-time errors in subprogram "divethesubmarinetomaxdepth" defined at movement.ads:22, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+module Movement__divethesubmarinetomaxdepth__subprogram_def
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        "_gnatprove_standard".Boolean
+ use        Submarine__depthmonitor___axiom
+ use        Submarine__currentdepth
+ use        Submarine__operationstatus___axiom
+ use        Submarine__currentoperationstatus
+ use        Submarine__depthmonitor___axiom
+ use        Submarine__currentdepth___axiom
+ use        Submarine__operationstatus___axiom
+ use        Submarine__currentoperationstatus___axiom
+
+ let def #"movement.ads" 22 0 0#"W:diverges:N" "GP_Subp:movement.ads:22" 
+   (__void_param : unit)
+  requires { #"movement.ads" 22 0 0# true }
+  ensures { #"movement.ads" 22 0 0# (#"movement.ads" 25 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:movement.ads:25:14" "GP_Id:2" "comment:     Post => currentDepth = 2000;
+             ^ movement.ads:25:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:4060" "GP_Sloc:movement.ads:25:14" (Submarine__currentdepth.currentdepth.int__content = 2000) ) )) }
+   =
+  ( () (* Assume dynamic invariants of inputs of the subprogram movement.ads:22 *)
+  ;
+   assume {  (Submarine__depthmonitor___axiom.dynamic_invariant Submarine__currentdepth.currentdepth.int__content True False True True) };
+   assume {  (Submarine__operationstatus___axiom.dynamic_invariant Submarine__currentoperationstatus.currentoperationstatus.int__content True False True True) };
+   assume {  true };
+  () (* Declarations introduced by the compiler at the beginning of the subprogram movement.ads:22 *)
+  ;
+  () (* Check for RTE in the Pre of the subprogram movement.ads:22 *)
+  ;
+   abstract ensures {true}(let _ = ( (Submarine__currentdepth.currentdepth.int__content < 2000) && (Submarine__currentoperationstatus.currentoperationstatus.int__content = 0) ) in (
+   ()))
+   end ;
+  () (* Assume Pre of the subprogram movement.ads:22 *)
+  ;
+   assume {  ( (Submarine__currentdepth.currentdepth.int__content < 2000) /\ (Submarine__currentoperationstatus.currentoperationstatus.int__content = 0) ) };
+   try
+   ( ( "GP_Sloc:movement.adb:23:11" (#"movement.adb" 23 0 0# ()) );
+   ( "GP_Sloc:movement.adb:23:35" (#"movement.adb" 23 0 0# ()) );
+   ( "GP_Sloc:movement.adb:23:7" (#"movement.adb" 23 0 0# (if ((Boolean.andb((Submarine__currentdepth.currentdepth.int__content < 2000)) ((Submarine__currentoperationstatus.currentoperationstatus.int__content = 0)))) then (
+    ( ( "GP_Sloc:movement.adb:24:10" (#"movement.adb" 24 0 0# ()) );
+    ( "GP_Sloc:movement.adb:24:23" (#"movement.adb" 24 0 0# #"movement.adb" 24 0 0# Submarine__currentdepth.currentdepth.int__content <- ( 2000 )) ) )) else (
+    ()))) );
+    raise Return__exc )
+  with
+   Return__exc -> ()
+  end;
+   abstract ensures {true}(let _ = (Submarine__currentdepth.currentdepth.int__content = 2000) in (
+   ()))
+   end  )
+end
+
+(* Module for checking contracts and absence of run-time errors in subprogram "raisethesubmarine100ft" defined at movement.ads:28, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
 module Movement__raisethesubmarine100ft__subprogram_def
  use import "_gnatprove_standard".Main
  use import "int".Int
  use        "_gnatprove_standard".Boolean
+ use        Movement__maxdepthinvariant
+ use        Movement__maxdepthinvariant___axiom
  use        Submarine__depthmonitor
  use        Submarine__depthmonitor___axiom
  use        Submarine__currentdepth
+ use        Movement__maxdepthinvariant___axiom
  use        Submarine__depthmonitor___axiom
  use        Submarine__currentdepth___axiom
 
- let def #"movement.ads" 19 0 0#"W:diverges:N" "GP_Subp:movement.ads:19" 
+ let def #"movement.ads" 28 0 0#"W:diverges:N" "GP_Subp:movement.ads:28" 
    (__void_param : unit)
-  requires { #"movement.ads" 19 0 0# true }
-  ensures { #"movement.ads" 19 0 0# (#"movement.ads" 22 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:movement.ads:22:14" "GP_Id:3" "comment:     Post => currentDepth <= 1900 and then currentDepth >= 0;
-             ^ movement.ads:22:14:VC_POSTCONDITION" ( ( "GP_Pretty_Ada:3873" "GP_Sloc:movement.ads:22:14" (Submarine__currentdepth.currentdepth.int__content <= 1900) ) /\ ( "GP_Pretty_Ada:2454" "GP_Sloc:movement.ads:22:57" (Submarine__currentdepth.currentdepth.int__content >= 0) ) ) )) }
+  requires { #"movement.ads" 28 0 0# true }
+  ensures { #"movement.ads" 28 0 0# (#"movement.ads" 31 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:movement.ads:31:14" "GP_Id:4" "comment:     Post => currentDepth <= 1900 and then currentDepth >= 0;
+             ^ movement.ads:31:14:VC_POSTCONDITION" ( ( "GP_Pretty_Ada:4145" "GP_Sloc:movement.ads:31:14" (Submarine__currentdepth.currentdepth.int__content <= 1900) ) /\ ( "GP_Pretty_Ada:2568" "GP_Sloc:movement.ads:31:57" (Submarine__currentdepth.currentdepth.int__content >= 0) ) ) )) }
    =
-  ( () (* Assume dynamic invariants of inputs of the subprogram movement.ads:19 *)
+  ( () (* Assume dynamic invariants of inputs of the subprogram movement.ads:28 *)
   ;
    assume {  (Submarine__depthmonitor___axiom.dynamic_invariant Submarine__currentdepth.currentdepth.int__content True False True True) };
    assume {  true };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram movement.ads:19 *)
+  () (* Declarations introduced by the compiler at the beginning of the subprogram movement.ads:28 *)
   ;
-  () (* Check for RTE in the Pre of the subprogram movement.ads:19 *)
+  () (* Check for RTE in the Pre of the subprogram movement.ads:28 *)
   ;
-   abstract ensures {true}(let _ = ( (Submarine__currentdepth.currentdepth.int__content >= 100) && (Submarine__currentdepth.currentdepth.int__content <= 2000) ) in (
+   abstract ensures {true}(let _ = ( (Submarine__currentdepth.currentdepth.int__content >= 100) && (Movement__maxdepthinvariant___axiom.maxdepthinvariant(())) ) in (
    ()))
    end ;
-  () (* Assume Pre of the subprogram movement.ads:19 *)
+  () (* Assume Pre of the subprogram movement.ads:28 *)
   ;
-   assume {  ( (Submarine__currentdepth.currentdepth.int__content >= 100) /\ (Submarine__currentdepth.currentdepth.int__content <= 2000) ) };
+   assume {  ( (Submarine__currentdepth.currentdepth.int__content >= 100) /\ ((epsilon temp___result_194 : bool.
+   ( (temp___result_194 = (Movement__maxdepthinvariant.maxdepthinvariant Submarine__currentdepth.currentdepth.int__content)) /\ (Movement__maxdepthinvariant.maxdepthinvariant__function_guard temp___result_194 Submarine__currentdepth.currentdepth.int__content) )) = True) ) };
    try
-   ( ( "GP_Sloc:movement.adb:23:11" (#"movement.adb" 23 0 0# ()) );
-   ( "GP_Sloc:movement.adb:23:35" (#"movement.adb" 23 0 0# ()) );
-   ( "GP_Sloc:movement.adb:23:7" (#"movement.adb" 23 0 0# (if ((Boolean.andb((Submarine__currentdepth.currentdepth.int__content >= 100)) ((Submarine__currentdepth.currentdepth.int__content <= 2000)))) then (
-    ( ( "GP_Sloc:movement.adb:24:10" (#"movement.adb" 24 0 0# ()) );
-    ( "GP_Sloc:movement.adb:24:26" (#"movement.adb" 24 0 0# ()) );
-    ( "GP_Sloc:movement.adb:24:23" (#"movement.adb" 24 0 0# #"movement.adb" 24 0 0# Submarine__currentdepth.currentdepth.int__content <- ( (#"movement.adb" 24 0 0# ( "model_vc" "keep_on_simp" "GP_Reason:VC_RANGE_CHECK" "GP_Sloc:movement.adb:24:39" "GP_Id:2" "comment:         currentDepth := currentDepth - 100;
-                                      ^ movement.adb:24:39:VC_RANGE_CHECK" "GP_Shape:if__currentdepth_assign__sub" (Submarine__depthmonitor.range_check_((Submarine__currentdepth.currentdepth.int__content - 100))) )) )) ) )) else (
+   ( ( "GP_Sloc:movement.adb:31:11" (#"movement.adb" 31 0 0# ()) );
+   ( "GP_Sloc:movement.adb:31:35" (#"movement.adb" 31 0 0# ()) );
+   ( "GP_Sloc:movement.adb:31:7" (#"movement.adb" 31 0 0# (if ((Boolean.andb((Submarine__currentdepth.currentdepth.int__content >= 100)) ((Submarine__currentdepth.currentdepth.int__content <= 2000)))) then (
+    ( ( "GP_Sloc:movement.adb:32:10" (#"movement.adb" 32 0 0# ()) );
+    ( "GP_Sloc:movement.adb:32:26" (#"movement.adb" 32 0 0# ()) );
+    ( "GP_Sloc:movement.adb:32:23" (#"movement.adb" 32 0 0# #"movement.adb" 32 0 0# Submarine__currentdepth.currentdepth.int__content <- ( (#"movement.adb" 32 0 0# ( "model_vc" "keep_on_simp" "GP_Reason:VC_RANGE_CHECK" "GP_Sloc:movement.adb:32:39" "GP_Id:3" "comment:         currentDepth := currentDepth - 100;
+                                      ^ movement.adb:32:39:VC_RANGE_CHECK" "GP_Shape:if__currentdepth_assign__sub" (Submarine__depthmonitor.range_check_((Submarine__currentdepth.currentdepth.int__content - 100))) )) )) ) )) else (
     ()))) );
     raise Return__exc )
   with
    Return__exc -> ()
   end;
    abstract ensures {true}(let _ = ( (Submarine__currentdepth.currentdepth.int__content <= 1900) && (Submarine__currentdepth.currentdepth.int__content >= 0) ) in (
+   ()))
+   end  )
+end
+
+(* Module for checking contracts and absence of run-time errors in subprogram "surfacethesubmarine" defined at movement.ads:34, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+module Movement__surfacethesubmarine__subprogram_def
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        "_gnatprove_standard".Boolean
+ use        Movement__maxdepthinvariant
+ use        Movement__maxdepthinvariant___axiom
+ use        Movement__notsurfacedinvariant
+ use        Movement__notsurfacedinvariant___axiom
+ use        Submarine__depthmonitor___axiom
+ use        Submarine__currentdepth
+ use        Movement__maxdepthinvariant___axiom
+ use        Movement__notsurfacedinvariant___axiom
+ use        Submarine__depthmonitor___axiom
+ use        Submarine__currentdepth___axiom
+
+ let def #"movement.ads" 34 0 0#"W:diverges:N" "GP_Subp:movement.ads:34" 
+   (__void_param : unit)
+  requires { #"movement.ads" 34 0 0# true }
+  ensures { #"movement.ads" 34 0 0# (#"movement.ads" 37 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:movement.ads:37:14" "GP_Id:5" "comment:     Post => currentDepth = 0;
+             ^ movement.ads:37:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:4215" "GP_Sloc:movement.ads:37:14" (Submarine__currentdepth.currentdepth.int__content = 0) ) )) }
+   =
+  ( () (* Assume dynamic invariants of inputs of the subprogram movement.ads:34 *)
+  ;
+   assume {  (Submarine__depthmonitor___axiom.dynamic_invariant Submarine__currentdepth.currentdepth.int__content True False True True) };
+   assume {  true };
+  () (* Declarations introduced by the compiler at the beginning of the subprogram movement.ads:34 *)
+  ;
+  () (* Check for RTE in the Pre of the subprogram movement.ads:34 *)
+  ;
+   abstract ensures {true}(let _ = ( (Movement__notsurfacedinvariant___axiom.notsurfacedinvariant(())) && (Movement__maxdepthinvariant___axiom.maxdepthinvariant(())) ) in (
+   ()))
+   end ;
+  () (* Assume Pre of the subprogram movement.ads:34 *)
+  ;
+   assume {  ( ((epsilon temp___result_196 : bool.
+   ( (temp___result_196 = (Movement__notsurfacedinvariant.notsurfacedinvariant Submarine__currentdepth.currentdepth.int__content)) /\ (Movement__notsurfacedinvariant.notsurfacedinvariant__function_guard temp___result_196 Submarine__currentdepth.currentdepth.int__content) )) = True) /\ ((epsilon temp___result_195 : bool.
+   ( (temp___result_195 = (Movement__maxdepthinvariant.maxdepthinvariant Submarine__currentdepth.currentdepth.int__content)) /\ (Movement__maxdepthinvariant.maxdepthinvariant__function_guard temp___result_195 Submarine__currentdepth.currentdepth.int__content) )) = True) ) };
+   try
+   ( ( "GP_Sloc:movement.adb:39:11" (#"movement.adb" 39 0 0# ()) );
+   ( "GP_Sloc:movement.adb:39:32" (#"movement.adb" 39 0 0# ()) );
+   ( "GP_Sloc:movement.adb:39:7" (#"movement.adb" 39 0 0# (if ((Boolean.andb((Submarine__currentdepth.currentdepth.int__content > 0)) ((Submarine__currentdepth.currentdepth.int__content <= 2000)))) then (
+    ( ( "GP_Sloc:movement.adb:40:10" (#"movement.adb" 40 0 0# ()) );
+    ( "GP_Sloc:movement.adb:40:23" (#"movement.adb" 40 0 0# #"movement.adb" 40 0 0# Submarine__currentdepth.currentdepth.int__content <- ( 0 )) ) )) else (
+    ()))) );
+    raise Return__exc )
+  with
+   Return__exc -> ()
+  end;
+   abstract ensures {true}(let _ = (Submarine__currentdepth.currentdepth.int__content = 0) in (
    ()))
    end  )
 end

@@ -47,7 +47,6 @@ is
    -------------------------------------------------------------------------------------
    -- The submarine can perform no operations unless both doors are closed and locked --
    -------------------------------------------------------------------------------------
-
    type OperationStatus is (Allowed, Prohibited);
    currentOperationStatus : OperationStatus;
 
@@ -75,30 +74,7 @@ is
      Post => innerDoor.lock = Unlocked and then currentOperationStatus = Prohibited;
 
 
---     procedure AllowOperation with
---       Global => (In_Out => currentOperationStatus, Input => (innerDoor, outerDoor)),
---       Pre => outerDoor.lock = Locked and then innerDoor.lock = Locked,
---       Post => currentOperationStatus = Allowed;
---
---
---     procedure ProhibitOperation with
---       Global => (In_Out => currentOperationStatus, Input => (innerDoor, outerDoor)),
---       Pre => outerDoor.lock = Unlocked or innerDoor.lock = Unlocked,
---       Post => currentOperationStatus = Prohibited;
 
-
-
-
-
-
-
-
-
-
-
-   -----------------------------------------------------------------------------------
-   -- The submarine must be capable of storing, loading and firing torpedoes safely --
-   -----------------------------------------------------------------------------------
 
 
 

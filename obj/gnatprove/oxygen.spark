@@ -15,7 +15,7 @@
       "sloc": [
         {
           "file": "oxygen.ads",
-          "line": 34
+          "line": 33
         }
       ],
       "spark": "all"
@@ -25,7 +25,7 @@
       "sloc": [
         {
           "file": "oxygen.ads",
-          "line": 50
+          "line": 45
         }
       ],
       "spark": "all"
@@ -35,7 +35,7 @@
       "sloc": [
         {
           "file": "oxygen.ads",
-          "line": 57
+          "line": 51
         }
       ],
       "spark": "all"
@@ -44,16 +44,96 @@
   "flow": [
     {
       "file": "oxygen.adb",
-      "line": 45,
+      "line": 19,
       "col": 34,
       "rule": "UNINITIALIZED",
       "severity": "info",
       "entity": {
-        "name": "Oxygen.OxygenTankCheck",
+        "name": "Oxygen.FillOxygenTank",
         "sloc": [
           {
             "file": "oxygen.ads",
-            "line": 50
+            "line": 33
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "oxygen__flow__87.trace",
+      "how_proved": "flow"
+    },
+    {
+      "file": "oxygen.adb",
+      "line": 20,
+      "col": 13,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "Oxygen.FillOxygenTank",
+        "sloc": [
+          {
+            "file": "oxygen.ads",
+            "line": 33
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "oxygen__flow__88.trace",
+      "how_proved": "flow"
+    },
+    {
+      "file": "oxygen.adb",
+      "line": 21,
+      "col": 27,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "Oxygen.FillOxygenTank",
+        "sloc": [
+          {
+            "file": "oxygen.ads",
+            "line": 33
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "oxygen__flow__89.trace",
+      "how_proved": "flow"
+    },
+    {
+      "file": "oxygen.adb",
+      "line": 23,
+      "col": 13,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "Oxygen.FillOxygenTank",
+        "sloc": [
+          {
+            "file": "oxygen.ads",
+            "line": 33
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "oxygen__flow__90.trace",
+      "how_proved": "flow"
+    },
+    {
+      "file": "oxygen.adb",
+      "line": 18,
+      "col": 44,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "Oxygen.FillOxygenTank",
+        "sloc": [
+          {
+            "file": "oxygen.ads",
+            "line": 33
           }
         ]
       },
@@ -64,67 +144,7 @@
     },
     {
       "file": "oxygen.adb",
-      "line": 46,
-      "col": 13,
-      "rule": "UNINITIALIZED",
-      "severity": "info",
-      "entity": {
-        "name": "Oxygen.OxygenTankCheck",
-        "sloc": [
-          {
-            "file": "oxygen.ads",
-            "line": 50
-          }
-        ]
-      },
-      "check_tree": {
-      },
-      "tracefile": "oxygen__flow__92.trace",
-      "how_proved": "flow"
-    },
-    {
-      "file": "oxygen.adb",
-      "line": 47,
-      "col": 27,
-      "rule": "UNINITIALIZED",
-      "severity": "info",
-      "entity": {
-        "name": "Oxygen.OxygenTankCheck",
-        "sloc": [
-          {
-            "file": "oxygen.ads",
-            "line": 50
-          }
-        ]
-      },
-      "check_tree": {
-      },
-      "tracefile": "oxygen__flow__93.trace",
-      "how_proved": "flow"
-    },
-    {
-      "file": "oxygen.adb",
-      "line": 44,
-      "col": 44,
-      "rule": "UNINITIALIZED",
-      "severity": "info",
-      "entity": {
-        "name": "Oxygen.OxygenTankCheck",
-        "sloc": [
-          {
-            "file": "oxygen.ads",
-            "line": 50
-          }
-        ]
-      },
-      "check_tree": {
-      },
-      "tracefile": "oxygen__flow__94.trace",
-      "how_proved": "flow"
-    },
-    {
-      "file": "oxygen.adb",
-      "line": 54,
+      "line": 41,
       "col": 34,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -133,18 +153,18 @@
         "sloc": [
           {
             "file": "oxygen.ads",
-            "line": 50
+            "line": 45
           }
         ]
       },
       "check_tree": {
       },
-      "tracefile": "oxygen__flow__95.trace",
+      "tracefile": "oxygen__flow__130.trace",
       "how_proved": "flow"
     },
     {
       "file": "oxygen.adb",
-      "line": 55,
+      "line": 42,
       "col": 13,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -153,18 +173,18 @@
         "sloc": [
           {
             "file": "oxygen.ads",
-            "line": 50
+            "line": 45
           }
         ]
       },
       "check_tree": {
       },
-      "tracefile": "oxygen__flow__96.trace",
+      "tracefile": "oxygen__flow__131.trace",
       "how_proved": "flow"
     },
     {
       "file": "oxygen.adb",
-      "line": 56,
+      "line": 43,
       "col": 27,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -173,18 +193,98 @@
         "sloc": [
           {
             "file": "oxygen.ads",
-            "line": 50
+            "line": 45
           }
         ]
       },
       "check_tree": {
       },
-      "tracefile": "oxygen__flow__97.trace",
+      "tracefile": "oxygen__flow__132.trace",
       "how_proved": "flow"
     },
     {
       "file": "oxygen.adb",
-      "line": 53,
+      "line": 40,
+      "col": 44,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "Oxygen.OxygenTankCheck",
+        "sloc": [
+          {
+            "file": "oxygen.ads",
+            "line": 45
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "oxygen__flow__133.trace",
+      "how_proved": "flow"
+    },
+    {
+      "file": "oxygen.adb",
+      "line": 50,
+      "col": 34,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "Oxygen.OxygenTankCheck",
+        "sloc": [
+          {
+            "file": "oxygen.ads",
+            "line": 45
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "oxygen__flow__134.trace",
+      "how_proved": "flow"
+    },
+    {
+      "file": "oxygen.adb",
+      "line": 51,
+      "col": 13,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "Oxygen.OxygenTankCheck",
+        "sloc": [
+          {
+            "file": "oxygen.ads",
+            "line": 45
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "oxygen__flow__135.trace",
+      "how_proved": "flow"
+    },
+    {
+      "file": "oxygen.adb",
+      "line": 52,
+      "col": 27,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "Oxygen.OxygenTankCheck",
+        "sloc": [
+          {
+            "file": "oxygen.ads",
+            "line": 45
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "oxygen__flow__136.trace",
+      "how_proved": "flow"
+    },
+    {
+      "file": "oxygen.adb",
+      "line": 49,
       "col": 45,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -193,120 +293,20 @@
         "sloc": [
           {
             "file": "oxygen.ads",
-            "line": 50
+            "line": 45
           }
         ]
       },
       "check_tree": {
       },
-      "tracefile": "oxygen__flow__98.trace",
-      "how_proved": "flow"
-    },
-    {
-      "file": "oxygen.adb",
-      "line": 21,
-      "col": 34,
-      "rule": "UNINITIALIZED",
-      "severity": "info",
-      "entity": {
-        "name": "Oxygen.FillOxygenTank",
-        "sloc": [
-          {
-            "file": "oxygen.ads",
-            "line": 34
-          }
-        ]
-      },
-      "check_tree": {
-      },
-      "tracefile": "oxygen__flow__122.trace",
-      "how_proved": "flow"
-    },
-    {
-      "file": "oxygen.adb",
-      "line": 22,
-      "col": 13,
-      "rule": "UNINITIALIZED",
-      "severity": "info",
-      "entity": {
-        "name": "Oxygen.FillOxygenTank",
-        "sloc": [
-          {
-            "file": "oxygen.ads",
-            "line": 34
-          }
-        ]
-      },
-      "check_tree": {
-      },
-      "tracefile": "oxygen__flow__123.trace",
-      "how_proved": "flow"
-    },
-    {
-      "file": "oxygen.adb",
-      "line": 23,
-      "col": 27,
-      "rule": "UNINITIALIZED",
-      "severity": "info",
-      "entity": {
-        "name": "Oxygen.FillOxygenTank",
-        "sloc": [
-          {
-            "file": "oxygen.ads",
-            "line": 34
-          }
-        ]
-      },
-      "check_tree": {
-      },
-      "tracefile": "oxygen__flow__124.trace",
-      "how_proved": "flow"
-    },
-    {
-      "file": "oxygen.adb",
-      "line": 25,
-      "col": 13,
-      "rule": "UNINITIALIZED",
-      "severity": "info",
-      "entity": {
-        "name": "Oxygen.FillOxygenTank",
-        "sloc": [
-          {
-            "file": "oxygen.ads",
-            "line": 34
-          }
-        ]
-      },
-      "check_tree": {
-      },
-      "tracefile": "oxygen__flow__125.trace",
-      "how_proved": "flow"
-    },
-    {
-      "file": "oxygen.adb",
-      "line": 20,
-      "col": 44,
-      "rule": "UNINITIALIZED",
-      "severity": "info",
-      "entity": {
-        "name": "Oxygen.FillOxygenTank",
-        "sloc": [
-          {
-            "file": "oxygen.ads",
-            "line": 34
-          }
-        ]
-      },
-      "check_tree": {
-      },
-      "tracefile": "oxygen__flow__126.trace",
+      "tracefile": "oxygen__flow__137.trace",
       "how_proved": "flow"
     }
   ],
   "proof": [
     {
       "file": "oxygen.ads",
-      "line": 60,
+      "line": 54,
       "col": 14,
       "rule": "VC_POSTCONDITION",
       "severity": "info",
@@ -315,7 +315,7 @@
         "sloc": [
           {
             "file": "oxygen.ads",
-            "line": 57
+            "line": 51
           }
         ]
       },
@@ -344,7 +344,7 @@
         }
       ],
       "check_file": "oxygen.ads",
-      "check_line": 60,
+      "check_line": 54,
       "check_col": 14,
       "how_proved": "prover",
       "stats": {
@@ -357,7 +357,7 @@
     },
     {
       "file": "oxygen.ads",
-      "line": 53,
+      "line": 48,
       "col": 14,
       "rule": "VC_POSTCONDITION",
       "severity": "info",
@@ -366,7 +366,7 @@
         "sloc": [
           {
             "file": "oxygen.ads",
-            "line": 50
+            "line": 45
           }
         ]
       },
@@ -375,7 +375,7 @@
           "proof_attempts": {
             "CVC4": {
               "result": "Valid",
-              "steps": 58,
+              "steps": 54,
               "time": 0
             }
           },
@@ -419,23 +419,34 @@
               }
             ]
           }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 49,
+              "time": 3.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
         }
       ],
       "check_file": "oxygen.ads",
-      "check_line": 53,
+      "check_line": 48,
       "check_col": 14,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
-          "count": 1,
+          "count": 2,
           "max_steps": 1,
-          "max_time": 0.00000000000000E+00
+          "max_time": 2.99999993294477E-02
         }
       }
     },
     {
       "file": "oxygen.adb",
-      "line": 23,
+      "line": 21,
       "col": 39,
       "rule": "VC_RANGE_CHECK",
       "severity": "info",
@@ -444,7 +455,7 @@
         "sloc": [
           {
             "file": "oxygen.ads",
-            "line": 34
+            "line": 33
           }
         ]
       },
@@ -473,7 +484,7 @@
         }
       ],
       "check_file": "oxygen.adb",
-      "check_line": 23,
+      "check_line": 21,
       "check_col": 39,
       "how_proved": "prover",
       "stats": {
@@ -486,7 +497,7 @@
     },
     {
       "file": "oxygen.adb",
-      "line": 25,
+      "line": 23,
       "col": 36,
       "rule": "VC_LOOP_INVARIANT_PRESERV",
       "severity": "info",
@@ -495,7 +506,7 @@
         "sloc": [
           {
             "file": "oxygen.ads",
-            "line": 34
+            "line": 33
           }
         ]
       },
@@ -513,7 +524,7 @@
         }
       ],
       "check_file": "oxygen.adb",
-      "check_line": 25,
+      "check_line": 23,
       "check_col": 36,
       "how_proved": "prover",
       "stats": {
@@ -526,7 +537,7 @@
     },
     {
       "file": "oxygen.adb",
-      "line": 25,
+      "line": 23,
       "col": 36,
       "rule": "VC_LOOP_INVARIANT_INIT",
       "severity": "info",
@@ -535,7 +546,7 @@
         "sloc": [
           {
             "file": "oxygen.ads",
-            "line": 34
+            "line": 33
           }
         ]
       },
@@ -553,7 +564,7 @@
         }
       ],
       "check_file": "oxygen.adb",
-      "check_line": 25,
+      "check_line": 23,
       "check_col": 36,
       "how_proved": "prover",
       "stats": {
@@ -566,7 +577,7 @@
     },
     {
       "file": "oxygen.ads",
-      "line": 37,
+      "line": 36,
       "col": 14,
       "rule": "VC_POSTCONDITION",
       "severity": "info",
@@ -575,7 +586,7 @@
         "sloc": [
           {
             "file": "oxygen.ads",
-            "line": 34
+            "line": 33
           }
         ]
       },
@@ -585,7 +596,7 @@
             "CVC4": {
               "result": "Valid",
               "steps": 110,
-              "time": 5.00000000000000E-02
+              "time": 0
             }
           },
           "transformations": {
@@ -680,20 +691,131 @@
         }
       ],
       "check_file": "oxygen.ads",
-      "check_line": 37,
+      "check_line": 36,
       "check_col": 14,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
           "count": 2,
           "max_steps": 1,
-          "max_time": 5.00000007450581E-02
+          "max_time": 0.00000000000000E+00
         }
       }
     },
     {
       "file": "oxygen.adb",
-      "line": 25,
+      "line": 43,
+      "col": 39,
+      "rule": "VC_RANGE_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "Oxygen.OxygenTankCheck",
+        "sloc": [
+          {
+            "file": "oxygen.ads",
+            "line": 45
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "oxygen.adb",
+      "check_line": 43,
+      "check_col": 39,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "oxygen.adb",
+      "line": 57,
+      "col": 10,
+      "rule": "VC_PRECONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "Oxygen.OxygenTankCheck",
+        "sloc": [
+          {
+            "file": "oxygen.ads",
+            "line": 45
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 27,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 27,
+              "time": 0
+            }
+          },
+          "transformations": {
+            "split_disj": [
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "check_file": "oxygen.adb",
+      "check_line": 57,
+      "check_col": 10,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "oxygen.adb",
+      "line": 23,
       "col": 96,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
@@ -702,7 +824,7 @@
         "sloc": [
           {
             "file": "oxygen.ads",
-            "line": 34
+            "line": 33
           }
         ]
       },
@@ -731,7 +853,7 @@
         }
       ],
       "check_file": "oxygen.adb",
-      "check_line": 25,
+      "check_line": 23,
       "check_col": 96,
       "how_proved": "prover",
       "stats": {
@@ -744,7 +866,7 @@
     },
     {
       "file": "oxygen.adb",
-      "line": 47,
+      "line": 52,
       "col": 39,
       "rule": "VC_RANGE_CHECK",
       "severity": "info",
@@ -753,47 +875,7 @@
         "sloc": [
           {
             "file": "oxygen.ads",
-            "line": 50
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "oxygen.adb",
-      "check_line": 47,
-      "check_col": 39,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 1,
-          "max_steps": 1,
-          "max_time": 0.00000000000000E+00
-        }
-      }
-    },
-    {
-      "file": "oxygen.adb",
-      "line": 56,
-      "col": 39,
-      "rule": "VC_RANGE_CHECK",
-      "severity": "info",
-      "entity": {
-        "name": "Oxygen.OxygenTankCheck",
-        "sloc": [
-          {
-            "file": "oxygen.ads",
-            "line": 50
+            "line": 45
           }
         ]
       },
@@ -811,7 +893,7 @@
         }
       ],
       "check_file": "oxygen.adb",
-      "check_line": 56,
+      "check_line": 52,
       "check_col": 39,
       "how_proved": "prover",
       "stats": {
@@ -824,6 +906,202 @@
     }
   ],
   "assumptions": [
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_POST",
+        "arg": {
+          "name": "Oxygen.FillOxygenTank",
+          "sloc": [
+            {
+              "file": "oxygen.ads",
+              "line": 33
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Oxygen.FillOxygenTank",
+          "sloc": [
+            {
+              "file": "oxygen.ads",
+              "line": 33
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Oxygen.FillOxygenTank",
+          "sloc": [
+            {
+              "file": "oxygen.ads",
+              "line": 33
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_POST",
+          "arg": {
+            "name": "Movement.SurfaceTheSubmarine",
+            "sloc": [
+              {
+                "file": "movement.ads",
+                "line": 34
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Movement.SurfaceTheSubmarine",
+            "sloc": [
+              {
+                "file": "movement.ads",
+                "line": 34
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "Movement.SurfaceTheSubmarine",
+            "sloc": [
+              {
+                "file": "movement.ads",
+                "line": 34
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_POST",
+        "arg": {
+          "name": "Oxygen.OxygenTankCheck",
+          "sloc": [
+            {
+              "file": "oxygen.ads",
+              "line": 45
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Movement.SurfaceTheSubmarine",
+            "sloc": [
+              {
+                "file": "movement.ads",
+                "line": 34
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Oxygen.OxygenTankCheck",
+          "sloc": [
+            {
+              "file": "oxygen.ads",
+              "line": 45
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_POST",
+          "arg": {
+            "name": "Movement.SurfaceTheSubmarine",
+            "sloc": [
+              {
+                "file": "movement.ads",
+                "line": 34
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Movement.SurfaceTheSubmarine",
+            "sloc": [
+              {
+                "file": "movement.ads",
+                "line": 34
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "Movement.SurfaceTheSubmarine",
+            "sloc": [
+              {
+                "file": "movement.ads",
+                "line": 34
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Oxygen.OxygenTankCheck",
+          "sloc": [
+            {
+              "file": "oxygen.ads",
+              "line": 45
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_POST",
+        "arg": {
+          "name": "Oxygen.TurnOffOxygenLowAlarm",
+          "sloc": [
+            {
+              "file": "oxygen.ads",
+              "line": 51
+            }
+          ]
+        }
+      }
+    },
     {
       "assumptions": [
       ],
@@ -844,125 +1122,13 @@
       "assumptions": [
       ],
       "claim": {
-        "predicate": "CLAIM_POST",
-        "arg": {
-          "name": "Oxygen.OxygenTankCheck",
-          "sloc": [
-            {
-              "file": "oxygen.ads",
-              "line": 50
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_EFFECTS",
-        "arg": {
-          "name": "Oxygen.OxygenTankCheck",
-          "sloc": [
-            {
-              "file": "oxygen.ads",
-              "line": 50
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_AORTE",
-        "arg": {
-          "name": "Oxygen.OxygenTankCheck",
-          "sloc": [
-            {
-              "file": "oxygen.ads",
-              "line": 50
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_POST",
-        "arg": {
-          "name": "Oxygen.FillOxygenTank",
-          "sloc": [
-            {
-              "file": "oxygen.ads",
-              "line": 34
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_EFFECTS",
-        "arg": {
-          "name": "Oxygen.FillOxygenTank",
-          "sloc": [
-            {
-              "file": "oxygen.ads",
-              "line": 34
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_AORTE",
-        "arg": {
-          "name": "Oxygen.FillOxygenTank",
-          "sloc": [
-            {
-              "file": "oxygen.ads",
-              "line": 34
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_POST",
-        "arg": {
-          "name": "Oxygen.TurnOffOxygenLowAlarm",
-          "sloc": [
-            {
-              "file": "oxygen.ads",
-              "line": 57
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
         "predicate": "CLAIM_EFFECTS",
         "arg": {
           "name": "Oxygen.TurnOffOxygenLowAlarm",
           "sloc": [
             {
               "file": "oxygen.ads",
-              "line": 57
+              "line": 51
             }
           ]
         }
@@ -978,7 +1144,7 @@
           "sloc": [
             {
               "file": "oxygen.ads",
-              "line": 57
+              "line": 51
             }
           ]
         }
@@ -986,14 +1152,14 @@
     }
   ],
   "timings": {
-    "marking": 3.54899995727465E-04,
-    "globals (basic)": 1.34700001217425E-03,
-    "globals/properties (advanced)": 2.29680002667010E-03,
-    "flow analysis": 4.72029997035861E-03,
-    "codepeer results": 5.40000019100262E-06,
-    "init_why_sections": 2.36699997913092E-04,
-    "translation of standard": 2.93270009569824E-03,
-    "translation of compilation unit": 7.73670012131333E-03,
-    "proof": 1.06328094005585E+00
+    "marking": 5.51600009202957E-04,
+    "globals (basic)": 1.54289999045432E-03,
+    "globals/properties (advanced)": 2.67429999075830E-03,
+    "flow analysis": 7.59849976748228E-03,
+    "codepeer results": 6.70000008540228E-06,
+    "init_why_sections": 3.61599988536909E-04,
+    "translation of standard": 4.16570017114282E-03,
+    "translation of compilation unit": 8.91949981451035E-03,
+    "proof": 9.52866375446320E-01
   }
 }

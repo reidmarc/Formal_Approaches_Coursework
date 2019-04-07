@@ -1,11 +1,14 @@
 with Submarine; use Submarine;
 with Oxygen; use Oxygen;
 with Movement; use Movement;
+with Reactor; use Reactor;
+with Torpedoes; use Torpedoes;
 with Ada.Text_IO; use Ada.Text_IO;
 
 
 procedure Main is
 begin
+   FillOxygenTank;
    Put_Line("Outer Door is: ");
    Put_Line(outerDoor.door'Image);
    Put_Line("and: ");
@@ -133,27 +136,8 @@ begin
    Put_Line("Lock the inner door...");
    LockInnerDoor;
 
-   Put_Line("Submarine dives by 2000ft");
-   DiveTheSubmarine100ft;
-   DiveTheSubmarine100ft;
-   DiveTheSubmarine100ft;
-   DiveTheSubmarine100ft;
-   DiveTheSubmarine100ft;
-   DiveTheSubmarine100ft;
-   DiveTheSubmarine100ft;
-   DiveTheSubmarine100ft;
-   DiveTheSubmarine100ft;
-   DiveTheSubmarine100ft;
-   DiveTheSubmarine100ft;
-   DiveTheSubmarine100ft;
-   DiveTheSubmarine100ft;
-   DiveTheSubmarine100ft;
-   DiveTheSubmarine100ft;
-   DiveTheSubmarine100ft;
-   DiveTheSubmarine100ft;
-   DiveTheSubmarine100ft;
-   DiveTheSubmarine100ft;
-   DiveTheSubmarine100ft;
+   Put_Line("Submarine dives to 2000ft");
+   DiveTheSubmarineToMaxDepth;
 
 
    Put_Line("Current depth of the submarine:");
@@ -166,30 +150,44 @@ begin
    Put_Line("Current depth of the submarine:");
    Put_Line(currentDepth'Image);
 
-
-
    Put_Line("Oxygen levels check:");
    Put_Line(oxygenTankStatus'Image);
 
    Put_Line("Oxygen alarm check:");
-   Put_Line(oxygenTankLowAlarm'Image);
+   Put_Line(oxygenTankAlarm'Image);
+
+
+
+
+
+
+
+
+
 
 
    Put_Line("Oxygen starts decreasing...");
    OxygenTankCheck;
 
 
+
+
+
+
+
+
+
    Put_Line("Oxygen levels check:");
    Put_Line(oxygenTankStatus'Image);
 
    Put_Line("Oxygen alarm check:");
-   Put_Line(oxygenTankLowAlarm'Image);
+   Put_Line(oxygenTankAlarm'Image);
 
    Put_Line("Acknowledge the alarm");
    TurnOffOxygenLowAlarm;
 
    Put_Line("Oxygen alarm check:");
-   Put_Line(oxygenTankLowAlarm'Image);
+   Put_Line(oxygenTankAlarm'Image);
 
    Put_Line("Current depth of the submarine:");
    Put_Line(currentDepth'Image);
@@ -200,9 +198,49 @@ begin
    Put_Line("Oxygen levels check:");
    Put_Line(oxygenTankStatus'Image);
 
+
+
+
+
+   Put_Line("Oxygen alarm check:");
+   Put_Line(oxygenTankAlarm'Image);
+
    Put_Line("Current depth of the submarine:");
    Put_Line(currentDepth'Image);
 
+   Put_Line("Acknowledge the alarm");
+   TurnOffOxygenLowAlarm;
+
+   Put_Line("Refill oxygen tanks...");
+   FillOxygenTank;
+
+   Put_Line("Oxygen levels check:");
+   Put_Line(oxygenTankStatus'Image);
+
+
+
+
+   Put_Line("Reactor temp is:");
+   Put_Line(reactorTemp'Image);
+
+   Put_Line("Submarine dives to 2000ft");
+   DiveTheSubmarineToMaxDepth;
+
+   Put_Line("Current depth of the submarine:");
+   Put_Line(currentDepth'Image);
+
+   Put_Line("Reactor temp rises...");
+   ReactorTempOverheats;
+
+   Put_Line("Reactor temp is:");
+   Put_Line(reactorTemp'Image);
+
+   Put_Line("Current depth of the submarine:");
+   Put_Line(currentDepth'Image);
+
+
+   Put_Line("Fill torpedo storage..");
+   FillTorpedoeStorage;
 
 
 

@@ -1887,9 +1887,9 @@ module Submarine__airlockdoor__rep
  use        Submarine__lockstatus__rep
 
  type __split_fields =
-  { rec__submarine__airlockdoor__door "model_trace:.3063" "name:door" : Submarine__doorstatus.doorstatus; rec__submarine__airlockdoor__lock "model_trace:.3073" "name:lock" : Submarine__lockstatus.lockstatus }
+  { rec__submarine__airlockdoor__door "model_trace:.2982" "name:door" : Submarine__doorstatus.doorstatus; rec__submarine__airlockdoor__lock "model_trace:.2992" "name:lock" : Submarine__lockstatus.lockstatus }
  
- function __split_fields_door__projection "model_trace:.3063" "name:door" 
+ function __split_fields_door__projection "model_trace:.2982" "name:door" 
    (a : __split_fields) : Submarine__doorstatus.doorstatus =
   a.rec__submarine__airlockdoor__door
  
@@ -1897,7 +1897,7 @@ module Submarine__airlockdoor__rep
  
  meta "inline : no" function __split_fields_door__projection
  
- function __split_fields_lock__projection "model_trace:.3073" "name:lock" 
+ function __split_fields_lock__projection "model_trace:.2992" "name:lock" 
    (a : __split_fields) : Submarine__lockstatus.lockstatus =
   a.rec__submarine__airlockdoor__lock
  
@@ -2059,7 +2059,7 @@ module Submarine__airlockdoor
 
 end
 
-(* Module for axiomatizing type "operationstatus" defined at submarine.ads:51, created in Gnat2Why.Types.Translate_Type *)
+(* Module for axiomatizing type "operationstatus" defined at submarine.ads:50, created in Gnat2Why.Types.Translate_Type *)
 module Submarine__operationstatus
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -2101,7 +2101,7 @@ module Submarine__operationstatus
 
 end
 
-(* Module defining to_rep/of_rep for type "operationstatus" defined at submarine.ads:51, created in Gnat2Why.Types.Translate_Type *)
+(* Module defining to_rep/of_rep for type "operationstatus" defined at submarine.ads:50, created in Gnat2Why.Types.Translate_Type *)
 module Submarine__operationstatus__rep
  use        Submarine__operationstatus
  use import "_gnatprove_standard".Main
@@ -2594,7 +2594,7 @@ module Oxygen__alarm__rep
 
 end
 
-(* Module for axiomatizing type "recievedwarning" defined at oxygen.ads:25, created in Gnat2Why.Types.Translate_Type *)
+(* Module for axiomatizing type "recievedwarning" defined at oxygen.ads:24, created in Gnat2Why.Types.Translate_Type *)
 module Oxygen__recievedwarning
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -2636,7 +2636,7 @@ module Oxygen__recievedwarning
 
 end
 
-(* Module defining to_rep/of_rep for type "recievedwarning" defined at oxygen.ads:25, created in Gnat2Why.Types.Translate_Type *)
+(* Module defining to_rep/of_rep for type "recievedwarning" defined at oxygen.ads:24, created in Gnat2Why.Types.Translate_Type *)
 module Oxygen__recievedwarning__rep
  use        Oxygen__recievedwarning
  use import "_gnatprove_standard".Main
@@ -2651,12 +2651,12 @@ module Oxygen__recievedwarning__rep
 
 end
 
-(* Module for axiomatizing type "T13s" defined at oxygen.ads:37, created in Gnat2Why.Types.Translate_Type *)
-module Oxygen__filloxygentank__L12s__T13s
+(* Module for axiomatizing type "T16s" defined at oxygen.ads:36, created in Gnat2Why.Types.Translate_Type *)
+module Oxygen__filloxygentank__L15s__T16s
  use import "_gnatprove_standard".Main
  use import "int".Int
 
- type t13s =
+ type t16s =
   < range 0 100 >
  
  function first 
@@ -2672,40 +2672,40 @@ module Oxygen__filloxygentank__L12s__T13s
   ( (first <= x) /\ (x <= last) )
  
  clone export "ada__model".Static_Discrete with
- type t = t13s, 
+ type t = t16s, 
  function first = first, 
  function last = last, 
  predicate in_range = in_range
  
- type t13s__ref =
-  { mutable t13s__content "model_trace:" "name:" : t13s }
+ type t16s__ref =
+  { mutable t16s__content "model_trace:" "name:" : t16s }
  
- function t13s__ref___projection 
-   (a : t13s__ref) : t13s =
-  a.t13s__content
+ function t16s__ref___projection 
+   (a : t16s__ref) : t16s =
+  a.t16s__content
  
- meta "model_projection" function t13s__ref___projection
+ meta "model_projection" function t16s__ref___projection
  
- meta "inline : no" function t13s__ref___projection
+ meta "inline : no" function t16s__ref___projection
  
- val t13s__havoc 
-   (x : t13s__ref) : unit
+ val t16s__havoc 
+   (x : t16s__ref) : unit
   writes {x}
 
 end
 
-(* Module defining to_rep/of_rep for type "T13s" defined at oxygen.ads:37, created in Gnat2Why.Types.Translate_Type *)
-module Oxygen__filloxygentank__L12s__T13s__rep
- use        Oxygen__filloxygentank__L12s__T13s
+(* Module defining to_rep/of_rep for type "T16s" defined at oxygen.ads:36, created in Gnat2Why.Types.Translate_Type *)
+module Oxygen__filloxygentank__L15s__T16s__rep
+ use        Oxygen__filloxygentank__L15s__T16s
  use import "_gnatprove_standard".Main
 
  function to_rep 
-   (x : Oxygen__filloxygentank__L12s__T13s.t13s) : int =
-  (Oxygen__filloxygentank__L12s__T13s.t13s'int x)
+   (x : Oxygen__filloxygentank__L15s__T16s.t16s) : int =
+  (Oxygen__filloxygentank__L15s__T16s.t16s'int x)
  
  clone export "ada__model".Rep_Proj_Int with
- type t = Oxygen__filloxygentank__L12s__T13s.t13s, 
- predicate in_range = Oxygen__filloxygentank__L12s__T13s.in_range, 
+ type t = Oxygen__filloxygentank__L15s__T16s.t16s, 
+ predicate in_range = Oxygen__filloxygentank__L15s__T16s.in_range, 
  function to_rep = to_rep
  
  meta "model_projection" function to_rep
@@ -2714,7 +2714,7 @@ module Oxygen__filloxygentank__L12s__T13s__rep
 
 end
 
-(* Module for axiomatizing type "T4b" defined at oxygen.adb:25, created in Gnat2Why.Types.Translate_Type *)
+(* Module for axiomatizing type "T4b" defined at oxygen.adb:23, created in Gnat2Why.Types.Translate_Type *)
 module Oxygen__filloxygentank__L_1__L3b__T4b
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -2752,7 +2752,7 @@ module Oxygen__filloxygentank__L_1__L3b__T4b
 
 end
 
-(* Module for axiomatizing type "T2b" defined at oxygen.adb:25, created in Gnat2Why.Types.Translate_Type *)
+(* Module for axiomatizing type "T2b" defined at oxygen.adb:23, created in Gnat2Why.Types.Translate_Type *)
 module Oxygen__filloxygentank__L_1__L1b__T2b
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -2793,7 +2793,7 @@ end
 module Submarine__currentdepth
  use import "_gnatprove_standard".Main
 
- val currentdepth #"submarine.ads" 5 0 0#"model_projected" "model_trace:2996" "name:currentDepth"  : int__ref 
+ val currentdepth #"submarine.ads" 5 0 0#"model_projected" "model_trace:2915" "name:currentDepth"  : int__ref 
  
  function attr__ATTRIBUTE_ADDRESS 
    : int
@@ -2812,7 +2812,7 @@ module Submarine__outerdoor
  use import "_gnatprove_standard".Main
  use        Submarine__airlockdoor
 
- val outerdoor__split_fields #"submarine.ads" 20 0 0#"model_projected" "model_trace:3085" "name:outerDoor"  : Submarine__airlockdoor.__split_fields__ref 
+ val outerdoor__split_fields #"submarine.ads" 20 0 0#"model_projected" "model_trace:3004" "name:outerDoor"  : Submarine__airlockdoor.__split_fields__ref 
  
  function attr__ATTRIBUTE_ADDRESS 
    : int
@@ -2831,7 +2831,7 @@ module Submarine__innerdoor
  use import "_gnatprove_standard".Main
  use        Submarine__airlockdoor
 
- val innerdoor__split_fields #"submarine.ads" 21 0 0#"model_projected" "model_trace:3101" "name:innerDoor"  : Submarine__airlockdoor.__split_fields__ref 
+ val innerdoor__split_fields #"submarine.ads" 21 0 0#"model_projected" "model_trace:3020" "name:innerDoor"  : Submarine__airlockdoor.__split_fields__ref 
  
  function attr__ATTRIBUTE_ADDRESS 
    : int
@@ -2845,18 +2845,18 @@ module Submarine__innerdoor___axiom
 
 end
 
-(* Module for defining a ref holding the value of variable "currentoperationstatus" defined at submarine.ads:52, created in Gnat2Why.Decls.Translate_Variable *)
+(* Module for defining a ref holding the value of variable "currentoperationstatus" defined at submarine.ads:51, created in Gnat2Why.Decls.Translate_Variable *)
 module Submarine__currentoperationstatus
  use import "_gnatprove_standard".Main
 
- val currentoperationstatus #"submarine.ads" 52 0 0#"model_projected" "model_trace:3297" "name:currentOperationStatus"  : int__ref 
+ val currentoperationstatus #"submarine.ads" 51 0 0#"model_projected" "model_trace:3216" "name:currentOperationStatus"  : int__ref 
  
  function attr__ATTRIBUTE_ADDRESS 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "currentoperationstatus" defined at submarine.ads:52, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "currentoperationstatus" defined at submarine.ads:51, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Submarine__currentoperationstatus___axiom
  use import "_gnatprove_standard".Main
 
@@ -2868,7 +2868,7 @@ module Oxygen__oxygentank
  use import "_gnatprove_standard".Main
  use        Array__Int__Oxygen__content
 
- val oxygentank #"oxygen.ads" 16 0 0#"model_projected" "model_trace:2604" "name:oxygenTank"  : Array__Int__Oxygen__content.map__ref 
+ val oxygentank #"oxygen.ads" 16 0 0#"model_projected" "model_trace:2614" "name:oxygenTank"  : Array__Int__Oxygen__content.map__ref 
  
  function attr__ATTRIBUTE_ADDRESS 
    : int
@@ -2886,7 +2886,7 @@ end
 module Oxygen__oxygentankstatus
  use import "_gnatprove_standard".Main
 
- val oxygentankstatus #"oxygen.ads" 19 0 0#"model_projected" "model_trace:2651" "name:oxygenTankStatus"  : int__ref 
+ val oxygentankstatus #"oxygen.ads" 19 0 0#"model_projected" "model_trace:2661" "name:oxygenTankStatus"  : int__ref 
  
  function attr__ATTRIBUTE_ADDRESS 
    : int
@@ -2900,90 +2900,90 @@ module Oxygen__oxygentankstatus___axiom
 
 end
 
-(* Module for defining a ref holding the value of variable "oxygentanklowalarm" defined at oxygen.ads:22, created in Gnat2Why.Decls.Translate_Variable *)
-module Oxygen__oxygentanklowalarm
+(* Module for defining a ref holding the value of variable "oxygentankalarm" defined at oxygen.ads:22, created in Gnat2Why.Decls.Translate_Variable *)
+module Oxygen__oxygentankalarm
  use import "_gnatprove_standard".Main
 
- val oxygentanklowalarm #"oxygen.ads" 22 0 0#"model_projected" "model_trace:2685" "name:oxygenTankLowAlarm"  : int__ref 
+ val oxygentankalarm #"oxygen.ads" 22 0 0#"model_projected" "model_trace:2695" "name:oxygenTankAlarm"  : int__ref 
  
  function attr__ATTRIBUTE_ADDRESS 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "oxygentanklowalarm" defined at oxygen.ads:22, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
-module Oxygen__oxygentanklowalarm___axiom
+(* Module giving an empty axiom for the entity "oxygentankalarm" defined at oxygen.ads:22, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Oxygen__oxygentankalarm___axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining a ref holding the value of variable "oxygentankemptyalarm" defined at oxygen.ads:23, created in Gnat2Why.Decls.Translate_Variable *)
-module Oxygen__oxygentankemptyalarm
+(* Module for defining a ref holding the value of variable "oxygentanklowwarningrecieved" defined at oxygen.ads:26, created in Gnat2Why.Decls.Translate_Variable *)
+module Oxygen__oxygentanklowwarningrecieved
  use import "_gnatprove_standard".Main
 
- val oxygentankemptyalarm #"oxygen.ads" 23 0 0#"model_projected" "model_trace:2695" "name:oxygenTankEmptyAlarm"  : int__ref 
+ val oxygentanklowwarningrecieved #"oxygen.ads" 26 0 0#"model_projected" "model_trace:2729" "name:oxygenTankLowWarningRecieved"  : int__ref 
  
  function attr__ATTRIBUTE_ADDRESS 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "oxygentankemptyalarm" defined at oxygen.ads:23, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
-module Oxygen__oxygentankemptyalarm___axiom
+(* Module giving an empty axiom for the entity "oxygentanklowwarningrecieved" defined at oxygen.ads:26, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Oxygen__oxygentanklowwarningrecieved___axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining a ref holding the value of variable "oxygentankwarningrecieved" defined at oxygen.ads:27, created in Gnat2Why.Decls.Translate_Variable *)
-module Oxygen__oxygentankwarningrecieved
+(* Module for defining a ref holding the value of variable "oxygentankemptywarningrecieved" defined at oxygen.ads:27, created in Gnat2Why.Decls.Translate_Variable *)
+module Oxygen__oxygentankemptywarningrecieved
  use import "_gnatprove_standard".Main
 
- val oxygentankwarningrecieved #"oxygen.ads" 27 0 0#"model_projected" "model_trace:2729" "name:oxygenTankWarningRecieved"  : int__ref 
+ val oxygentankemptywarningrecieved #"oxygen.ads" 27 0 0#"model_projected" "model_trace:2739" "name:oxygenTankEmptyWarningRecieved"  : int__ref 
  
  function attr__ATTRIBUTE_ADDRESS 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "oxygentankwarningrecieved" defined at oxygen.ads:27, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
-module Oxygen__oxygentankwarningrecieved___axiom
+(* Module giving an empty axiom for the entity "oxygentankemptywarningrecieved" defined at oxygen.ads:27, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Oxygen__oxygentankemptywarningrecieved___axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining a ref holding the value of variable "position" defined at oxygen.adb:16, created in Gnat2Why.Decls.Translate_Variable *)
+(* Module for defining a ref holding the value of variable "position" defined at oxygen.adb:14, created in Gnat2Why.Decls.Translate_Variable *)
 module Oxygen__filloxygentank__position
  use import "_gnatprove_standard".Main
 
- val position #"oxygen.adb" 16 0 0#"model_projected" "model_trace:2321" "name:Position"  : int__ref 
+ val position #"oxygen.adb" 14 0 0#"model_projected" "model_trace:2321" "name:Position"  : int__ref 
  
  function attr__ATTRIBUTE_ADDRESS 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "position" defined at oxygen.adb:16, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "position" defined at oxygen.adb:14, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Oxygen__filloxygentank__position___axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining a ref holding the value of variable "position" defined at oxygen.adb:40, created in Gnat2Why.Decls.Translate_Variable *)
+(* Module for defining a ref holding the value of variable "position" defined at oxygen.adb:36, created in Gnat2Why.Decls.Translate_Variable *)
 module Oxygen__oxygentankcheck__position
  use import "_gnatprove_standard".Main
 
- val position #"oxygen.adb" 40 0 0#"model_projected" "name:Position" "model_trace:2409"  : int__ref 
+ val position #"oxygen.adb" 36 0 0#"model_projected" "name:Position" "model_trace:2413"  : int__ref 
  
  function attr__ATTRIBUTE_ADDRESS 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "position" defined at oxygen.adb:40, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "position" defined at oxygen.adb:36, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Oxygen__oxygentankcheck__position___axiom
  use import "_gnatprove_standard".Main
 
@@ -3380,70 +3380,110 @@ module Submarine__closeinnerairlockdoor
 
 end
 
-(* Module for possibly declaring a logic function for "lockouterdoor" defined at submarine.ads:54, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "lockouterdoor" defined at submarine.ads:53, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Submarine__lockouterdoor
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "unlockouterdoor" defined at submarine.ads:60, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "unlockouterdoor" defined at submarine.ads:59, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Submarine__unlockouterdoor
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "lockinnerdoor" defined at submarine.ads:66, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "lockinnerdoor" defined at submarine.ads:65, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Submarine__lockinnerdoor
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "unlockinnerdoor" defined at submarine.ads:72, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "unlockinnerdoor" defined at submarine.ads:71, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Submarine__unlockinnerdoor
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "divethesubmarine100ft" defined at movement.ads:13, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "maxdepthinvariant" defined at movement.ads:7, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Movement__maxdepthinvariant
+ use        Submarine__currentdepth
+ use import "_gnatprove_standard".Main
+
+ function maxdepthinvariant 
+   (submarine__currentdepth : int) : bool
+ 
+ predicate maxdepthinvariant__function_guard 
+   (result : bool) (submarine__currentdepth : int) 
+
+end
+
+(* Module for possibly declaring a logic function for "notsurfacedinvariant" defined at movement.ads:10, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Movement__notsurfacedinvariant
+ use        Submarine__currentdepth
+ use import "_gnatprove_standard".Main
+
+ function notsurfacedinvariant 
+   (submarine__currentdepth : int) : bool
+ 
+ predicate notsurfacedinvariant__function_guard 
+   (result : bool) (submarine__currentdepth : int) 
+
+end
+
+(* Module for possibly declaring a logic function for "divethesubmarine100ft" defined at movement.ads:16, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Movement__divethesubmarine100ft
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "raisethesubmarine100ft" defined at movement.ads:19, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "divethesubmarinetomaxdepth" defined at movement.ads:22, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Movement__divethesubmarinetomaxdepth
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for possibly declaring a logic function for "raisethesubmarine100ft" defined at movement.ads:28, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Movement__raisethesubmarine100ft
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "filloxygentank" defined at oxygen.ads:34, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "surfacethesubmarine" defined at movement.ads:34, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Movement__surfacethesubmarine
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for possibly declaring a logic function for "filloxygentank" defined at oxygen.ads:33, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Oxygen__filloxygentank
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "oxygentankcheck" defined at oxygen.ads:50, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "oxygentankcheck" defined at oxygen.ads:45, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Oxygen__oxygentankcheck
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "turnoffoxygenlowalarm" defined at oxygen.ads:57, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "turnoffoxygenlowalarm" defined at oxygen.ads:51, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Oxygen__turnoffoxygenlowalarm
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining the loop exit exception for the loop "L_1" defined at oxygen.adb:20, created in Gnat2Why.Decls.Translate_Loop_Entity *)
+(* Module for defining the loop exit exception for the loop "L_1" defined at oxygen.adb:18, created in Gnat2Why.Decls.Translate_Loop_Entity *)
 module Oxygen__filloxygentank__L_1
  use import "_gnatprove_standard".Main
 
@@ -3451,14 +3491,14 @@ module Oxygen__filloxygentank__L_1
 
 end
 
-(* Module giving an empty axiom for the entity "L_1" defined at oxygen.adb:20, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "L_1" defined at oxygen.adb:18, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Oxygen__filloxygentank__L_1___axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining the loop exit exception for the loop "L_2" defined at oxygen.adb:44, created in Gnat2Why.Decls.Translate_Loop_Entity *)
+(* Module for defining the loop exit exception for the loop "L_2" defined at oxygen.adb:40, created in Gnat2Why.Decls.Translate_Loop_Entity *)
 module Oxygen__oxygentankcheck__L_2
  use import "_gnatprove_standard".Main
 
@@ -3466,14 +3506,14 @@ module Oxygen__oxygentankcheck__L_2
 
 end
 
-(* Module giving an empty axiom for the entity "L_2" defined at oxygen.adb:44, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "L_2" defined at oxygen.adb:40, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Oxygen__oxygentankcheck__L_2___axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining the loop exit exception for the loop "L_3" defined at oxygen.adb:53, created in Gnat2Why.Decls.Translate_Loop_Entity *)
+(* Module for defining the loop exit exception for the loop "L_3" defined at oxygen.adb:49, created in Gnat2Why.Decls.Translate_Loop_Entity *)
 module Oxygen__oxygentankcheck__L_3
  use import "_gnatprove_standard".Main
 
@@ -3481,7 +3521,7 @@ module Oxygen__oxygentankcheck__L_3
 
 end
 
-(* Module giving an empty axiom for the entity "L_3" defined at oxygen.adb:53, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "L_3" defined at oxygen.adb:49, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Oxygen__oxygentankcheck__L_3___axiom
  use import "_gnatprove_standard".Main
 
@@ -3561,7 +3601,7 @@ module Submarine__airlockdoor___axiom
 
 end
 
-(* Module giving axioms for type "operationstatus" defined at submarine.ads:51, created in Gnat2Why.Types.Generate_Type_Completion *)
+(* Module giving axioms for type "operationstatus" defined at submarine.ads:50, created in Gnat2Why.Types.Generate_Type_Completion *)
 module Submarine__operationstatus___axiom
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -3585,12 +3625,12 @@ module Oxygen__content___axiom
  use        Oxygen__content
 
  predicate dynamic_invariant "inline" 
-   (temp___expr_196 : int) (temp___is_init_192 : bool) (temp___skip_constant_193 : bool) (temp___do_toplevel_194 : bool) (temp___do_typ_inv_195 : bool)  =
-  (if (( temp___is_init_192 \/ (Oxygen__content.first <= Oxygen__content.last) )) then (
-   (Oxygen__content.dynamic_property Oxygen__content.first Oxygen__content.last temp___expr_196)) else true)
+   (temp___expr_199 : int) (temp___is_init_195 : bool) (temp___skip_constant_196 : bool) (temp___do_toplevel_197 : bool) (temp___do_typ_inv_198 : bool)  =
+  (if (( temp___is_init_195 \/ (Oxygen__content.first <= Oxygen__content.last) )) then (
+   (Oxygen__content.dynamic_property Oxygen__content.first Oxygen__content.last temp___expr_199)) else true)
  
  predicate default_initial_assumption "inline" 
-   (temp___expr_197 : int) (temp___skip_top_level_198 : bool)  =
+   (temp___expr_200 : int) (temp___skip_top_level_201 : bool)  =
   true
 
 end
@@ -3609,12 +3649,12 @@ module Oxygen__tanklevelpercentage___axiom
  use        Oxygen__tanklevelpercentage
 
  predicate dynamic_invariant "inline" 
-   (temp___expr_203 : int) (temp___is_init_199 : bool) (temp___skip_constant_200 : bool) (temp___do_toplevel_201 : bool) (temp___do_typ_inv_202 : bool)  =
-  (if (( temp___is_init_199 \/ (Oxygen__tanklevelpercentage.first <= Oxygen__tanklevelpercentage.last) )) then (
-   (Oxygen__tanklevelpercentage.dynamic_property Oxygen__tanklevelpercentage.first Oxygen__tanklevelpercentage.last temp___expr_203)) else true)
+   (temp___expr_206 : int) (temp___is_init_202 : bool) (temp___skip_constant_203 : bool) (temp___do_toplevel_204 : bool) (temp___do_typ_inv_205 : bool)  =
+  (if (( temp___is_init_202 \/ (Oxygen__tanklevelpercentage.first <= Oxygen__tanklevelpercentage.last) )) then (
+   (Oxygen__tanklevelpercentage.dynamic_property Oxygen__tanklevelpercentage.first Oxygen__tanklevelpercentage.last temp___expr_206)) else true)
  
  predicate default_initial_assumption "inline" 
-   (temp___expr_204 : int) (temp___skip_top_level_205 : bool)  =
+   (temp___expr_207 : int) (temp___skip_top_level_208 : bool)  =
   true
 
 end
@@ -3633,11 +3673,11 @@ module Oxygen__oxygentankcontainer___axiom
  use        Array__Int__Oxygen__content
 
  predicate dynamic_invariant "inline" 
-   (temp___expr_210 : Array__Int__Oxygen__content.map) (temp___is_init_206 : bool) (temp___skip_constant_207 : bool) (temp___do_toplevel_208 : bool) (temp___do_typ_inv_209 : bool)  =
+   (temp___expr_213 : Array__Int__Oxygen__content.map) (temp___is_init_209 : bool) (temp___skip_constant_210 : bool) (temp___do_toplevel_211 : bool) (temp___do_typ_inv_212 : bool)  =
   true
  
  predicate default_initial_assumption "inline" 
-   (temp___expr_212 : Array__Int__Oxygen__content.map) (temp___skip_top_level_213 : bool)  =
+   (temp___expr_215 : Array__Int__Oxygen__content.map) (temp___skip_top_level_216 : bool)  =
   true
 
 end
@@ -3649,12 +3689,12 @@ module Oxygen__tankstatus___axiom
  use        Oxygen__tankstatus
 
  predicate dynamic_invariant "inline" 
-   (temp___expr_220 : int) (temp___is_init_216 : bool) (temp___skip_constant_217 : bool) (temp___do_toplevel_218 : bool) (temp___do_typ_inv_219 : bool)  =
-  (if (( temp___is_init_216 \/ (Oxygen__tankstatus.first <= Oxygen__tankstatus.last) )) then (
-   (Oxygen__tankstatus.dynamic_property Oxygen__tankstatus.first Oxygen__tankstatus.last temp___expr_220)) else true)
+   (temp___expr_223 : int) (temp___is_init_219 : bool) (temp___skip_constant_220 : bool) (temp___do_toplevel_221 : bool) (temp___do_typ_inv_222 : bool)  =
+  (if (( temp___is_init_219 \/ (Oxygen__tankstatus.first <= Oxygen__tankstatus.last) )) then (
+   (Oxygen__tankstatus.dynamic_property Oxygen__tankstatus.first Oxygen__tankstatus.last temp___expr_223)) else true)
  
  predicate default_initial_assumption "inline" 
-   (temp___expr_221 : int) (temp___skip_top_level_222 : bool)  =
+   (temp___expr_224 : int) (temp___skip_top_level_225 : bool)  =
   true
 
 end
@@ -3666,48 +3706,48 @@ module Oxygen__alarm___axiom
  use        Oxygen__alarm
 
  predicate dynamic_invariant "inline" 
-   (temp___expr_227 : int) (temp___is_init_223 : bool) (temp___skip_constant_224 : bool) (temp___do_toplevel_225 : bool) (temp___do_typ_inv_226 : bool)  =
-  (if (( temp___is_init_223 \/ (Oxygen__alarm.first <= Oxygen__alarm.last) )) then (
-   (Oxygen__alarm.dynamic_property Oxygen__alarm.first Oxygen__alarm.last temp___expr_227)) else true)
+   (temp___expr_230 : int) (temp___is_init_226 : bool) (temp___skip_constant_227 : bool) (temp___do_toplevel_228 : bool) (temp___do_typ_inv_229 : bool)  =
+  (if (( temp___is_init_226 \/ (Oxygen__alarm.first <= Oxygen__alarm.last) )) then (
+   (Oxygen__alarm.dynamic_property Oxygen__alarm.first Oxygen__alarm.last temp___expr_230)) else true)
  
  predicate default_initial_assumption "inline" 
-   (temp___expr_228 : int) (temp___skip_top_level_229 : bool)  =
+   (temp___expr_231 : int) (temp___skip_top_level_232 : bool)  =
   true
 
 end
 
-(* Module giving axioms for type "recievedwarning" defined at oxygen.ads:25, created in Gnat2Why.Types.Generate_Type_Completion *)
+(* Module giving axioms for type "recievedwarning" defined at oxygen.ads:24, created in Gnat2Why.Types.Generate_Type_Completion *)
 module Oxygen__recievedwarning___axiom
  use import "_gnatprove_standard".Main
  use import "int".Int
  use        Oxygen__recievedwarning
 
  predicate dynamic_invariant "inline" 
-   (temp___expr_234 : int) (temp___is_init_230 : bool) (temp___skip_constant_231 : bool) (temp___do_toplevel_232 : bool) (temp___do_typ_inv_233 : bool)  =
-  (if (( temp___is_init_230 \/ (Oxygen__recievedwarning.first <= Oxygen__recievedwarning.last) )) then (
-   (Oxygen__recievedwarning.dynamic_property Oxygen__recievedwarning.first Oxygen__recievedwarning.last temp___expr_234)) else true)
+   (temp___expr_237 : int) (temp___is_init_233 : bool) (temp___skip_constant_234 : bool) (temp___do_toplevel_235 : bool) (temp___do_typ_inv_236 : bool)  =
+  (if (( temp___is_init_233 \/ (Oxygen__recievedwarning.first <= Oxygen__recievedwarning.last) )) then (
+   (Oxygen__recievedwarning.dynamic_property Oxygen__recievedwarning.first Oxygen__recievedwarning.last temp___expr_237)) else true)
  
  predicate default_initial_assumption "inline" 
-   (temp___expr_235 : int) (temp___skip_top_level_236 : bool)  =
+   (temp___expr_238 : int) (temp___skip_top_level_239 : bool)  =
   true
 
 end
 
-(* Module giving axioms for type "T13s" defined at oxygen.ads:37, created in Gnat2Why.Types.Generate_Type_Completion *)
-module Oxygen__filloxygentank__L12s__T13s___axiom
+(* Module giving axioms for type "T16s" defined at oxygen.ads:36, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Oxygen__filloxygentank__L15s__T16s___axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module giving axioms for type "T4b" defined at oxygen.adb:25, created in Gnat2Why.Types.Generate_Type_Completion *)
+(* Module giving axioms for type "T4b" defined at oxygen.adb:23, created in Gnat2Why.Types.Generate_Type_Completion *)
 module Oxygen__filloxygentank__L_1__L3b__T4b___axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module giving axioms for type "T2b" defined at oxygen.adb:25, created in Gnat2Why.Types.Generate_Type_Completion *)
+(* Module giving axioms for type "T2b" defined at oxygen.adb:23, created in Gnat2Why.Types.Generate_Type_Completion *)
 module Oxygen__filloxygentank__L_1__L1b__T2b___axiom
  use import "_gnatprove_standard".Main
 
@@ -3801,7 +3841,7 @@ module Submarine__closeinnerairlockdoor___axiom
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "lockouterdoor" defined at submarine.ads:54, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "lockouterdoor" defined at submarine.ads:53, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Submarine__lockouterdoor___axiom
  use        Submarine__outerdoor
  use        Submarine__currentoperationstatus
@@ -3828,11 +3868,11 @@ module Submarine__lockouterdoor___axiom
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "unlockouterdoor" defined at submarine.ads:60, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "unlockouterdoor" defined at submarine.ads:59, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Submarine__unlockouterdoor___axiom
+ use        Submarine__currentdepth
  use        Submarine__outerdoor
  use        Submarine__currentoperationstatus
- use        Submarine__currentdepth
  use import "_gnatprove_standard".Main
  use import "int".Int
  use        Submarine__currentdepth
@@ -3853,7 +3893,7 @@ module Submarine__unlockouterdoor___axiom
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "lockinnerdoor" defined at submarine.ads:66, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "lockinnerdoor" defined at submarine.ads:65, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Submarine__lockinnerdoor___axiom
  use        Submarine__outerdoor
  use        Submarine__currentoperationstatus
@@ -3880,11 +3920,11 @@ module Submarine__lockinnerdoor___axiom
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "unlockinnerdoor" defined at submarine.ads:72, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "unlockinnerdoor" defined at submarine.ads:71, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Submarine__unlockinnerdoor___axiom
+ use        Submarine__currentdepth
  use        Submarine__currentoperationstatus
  use        Submarine__innerdoor
- use        Submarine__currentdepth
  use import "_gnatprove_standard".Main
  use import "int".Int
  use        Submarine__currentdepth
@@ -3905,46 +3945,152 @@ module Submarine__unlockinnerdoor___axiom
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "divethesubmarine100ft" defined at movement.ads:13, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module giving a program function and a defining axiom for the expression function "maxdepthinvariant" defined at movement.ads:7, created in Gnat2Why.Subprograms.Translate_Expression_Function_Body *)
+module Movement__maxdepthinvariant___axiom
+ use        Submarine__currentdepth
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Movement__maxdepthinvariant
+ use        Submarine__depthmonitor___axiom
+ use        Submarine__currentdepth
+
+ val maxdepthinvariant 
+   (__void_param : unit) : bool
+  requires {  true }
+  ensures {  ( ( (result = (Movement__maxdepthinvariant.maxdepthinvariant Submarine__currentdepth.currentdepth.int__content)) /\ (Movement__maxdepthinvariant.maxdepthinvariant__function_guard result Submarine__currentdepth.currentdepth.int__content) ) /\ ( (result = True) <-> (Submarine__currentdepth.currentdepth.int__content <= 2000) ) ) }
+  reads {Submarine__currentdepth.currentdepth}
+ 
+ axiom maxdepthinvariant__post_axiom :
+  (forall submarine__currentdepth   : int [(Movement__maxdepthinvariant.maxdepthinvariant submarine__currentdepth)].
+   ( (Submarine__depthmonitor___axiom.dynamic_invariant submarine__currentdepth True True True True) -> (let result = (Movement__maxdepthinvariant.maxdepthinvariant submarine__currentdepth) in (
+    (if ((Movement__maxdepthinvariant.maxdepthinvariant__function_guard result submarine__currentdepth)) then (
+     ( ( true /\ true ) /\ true )) else true)))
+    ))
+ 
+ axiom maxdepthinvariant__def_axiom :
+  (forall submarine__currentdepth   : int [(Movement__maxdepthinvariant.maxdepthinvariant submarine__currentdepth)].
+   ( (let result = (Movement__maxdepthinvariant.maxdepthinvariant submarine__currentdepth) in (
+    (Movement__maxdepthinvariant.maxdepthinvariant__function_guard result submarine__currentdepth)))
+    -> ( ((Movement__maxdepthinvariant.maxdepthinvariant submarine__currentdepth) = True) <-> (submarine__currentdepth <= 2000) ) ))
+
+end
+
+(* Module giving a program function and a defining axiom for the expression function "notsurfacedinvariant" defined at movement.ads:10, created in Gnat2Why.Subprograms.Translate_Expression_Function_Body *)
+module Movement__notsurfacedinvariant___axiom
+ use        Submarine__currentdepth
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Movement__notsurfacedinvariant
+ use        Submarine__depthmonitor___axiom
+ use        Submarine__currentdepth
+
+ val notsurfacedinvariant 
+   (__void_param : unit) : bool
+  requires {  true }
+  ensures {  ( ( (result = (Movement__notsurfacedinvariant.notsurfacedinvariant Submarine__currentdepth.currentdepth.int__content)) /\ (Movement__notsurfacedinvariant.notsurfacedinvariant__function_guard result Submarine__currentdepth.currentdepth.int__content) ) /\ ( (result = True) <-> (Submarine__currentdepth.currentdepth.int__content > 0) ) ) }
+  reads {Submarine__currentdepth.currentdepth}
+ 
+ axiom notsurfacedinvariant__post_axiom :
+  (forall submarine__currentdepth   : int [(Movement__notsurfacedinvariant.notsurfacedinvariant submarine__currentdepth)].
+   ( (Submarine__depthmonitor___axiom.dynamic_invariant submarine__currentdepth True True True True) -> (let result = (Movement__notsurfacedinvariant.notsurfacedinvariant submarine__currentdepth) in (
+    (if ((Movement__notsurfacedinvariant.notsurfacedinvariant__function_guard result submarine__currentdepth)) then (
+     ( ( true /\ true ) /\ true )) else true)))
+    ))
+ 
+ axiom notsurfacedinvariant__def_axiom :
+  (forall submarine__currentdepth   : int [(Movement__notsurfacedinvariant.notsurfacedinvariant submarine__currentdepth)].
+   ( (let result = (Movement__notsurfacedinvariant.notsurfacedinvariant submarine__currentdepth) in (
+    (Movement__notsurfacedinvariant.notsurfacedinvariant__function_guard result submarine__currentdepth)))
+    -> ( ((Movement__notsurfacedinvariant.notsurfacedinvariant submarine__currentdepth) = True) <-> (submarine__currentdepth > 0) ) ))
+
+end
+
+(* Module for declaring a program function (and possibly an axiom) for "divethesubmarine100ft" defined at movement.ads:16, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Movement__divethesubmarine100ft___axiom
  use        Submarine__currentdepth
+ use        Submarine__currentoperationstatus
  use import "_gnatprove_standard".Main
  use import "int".Int
  use        Submarine__depthmonitor___axiom
  use        Submarine__currentdepth
+ use        Submarine__currentoperationstatus
 
  val divethesubmarine100ft 
    (__void_param : unit) : unit
-  requires {  ( (Submarine__currentdepth.currentdepth.int__content <= 1900) /\ (Submarine__currentdepth.currentdepth.int__content >= 0) ) }
+  requires {  ( (Submarine__currentdepth.currentdepth.int__content <= 1900) /\ ( (Submarine__currentdepth.currentdepth.int__content >= 0) /\ (Submarine__currentoperationstatus.currentoperationstatus.int__content = 0) ) ) }
   ensures {  ( ( (Submarine__currentdepth.currentdepth.int__content <= 2000) /\ (Submarine__currentdepth.currentdepth.int__content >= 100) ) /\ (Submarine__depthmonitor___axiom.dynamic_invariant Submarine__currentdepth.currentdepth.int__content True True True True) ) }
-  reads {Submarine__currentdepth.currentdepth}
+  reads {Submarine__currentdepth.currentdepth, Submarine__currentoperationstatus.currentoperationstatus}
   writes {Submarine__currentdepth.currentdepth}
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "raisethesubmarine100ft" defined at movement.ads:19, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "divethesubmarinetomaxdepth" defined at movement.ads:22, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Movement__divethesubmarinetomaxdepth___axiom
+ use        Submarine__currentdepth
+ use        Submarine__currentoperationstatus
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Submarine__depthmonitor___axiom
+ use        Submarine__currentdepth
+ use        Submarine__currentoperationstatus
+
+ val divethesubmarinetomaxdepth 
+   (__void_param : unit) : unit
+  requires {  ( (Submarine__currentdepth.currentdepth.int__content < 2000) /\ (Submarine__currentoperationstatus.currentoperationstatus.int__content = 0) ) }
+  ensures {  ( (Submarine__currentdepth.currentdepth.int__content = 2000) /\ (Submarine__depthmonitor___axiom.dynamic_invariant Submarine__currentdepth.currentdepth.int__content True True True True) ) }
+  reads {Submarine__currentdepth.currentdepth, Submarine__currentoperationstatus.currentoperationstatus}
+  writes {Submarine__currentdepth.currentdepth}
+
+end
+
+(* Module for declaring a program function (and possibly an axiom) for "raisethesubmarine100ft" defined at movement.ads:28, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Movement__raisethesubmarine100ft___axiom
  use        Submarine__currentdepth
  use import "_gnatprove_standard".Main
  use import "int".Int
+ use        Movement__maxdepthinvariant
  use        Submarine__depthmonitor___axiom
  use        Submarine__currentdepth
 
  val raisethesubmarine100ft 
    (__void_param : unit) : unit
-  requires {  ( (Submarine__currentdepth.currentdepth.int__content >= 100) /\ (Submarine__currentdepth.currentdepth.int__content <= 2000) ) }
+  requires {  ( (Submarine__currentdepth.currentdepth.int__content >= 100) /\ ((epsilon temp___result_192 : bool.
+   ( (temp___result_192 = (Movement__maxdepthinvariant.maxdepthinvariant Submarine__currentdepth.currentdepth.int__content)) /\ (Movement__maxdepthinvariant.maxdepthinvariant__function_guard temp___result_192 Submarine__currentdepth.currentdepth.int__content) )) = True) ) }
   ensures {  ( ( (Submarine__currentdepth.currentdepth.int__content <= 1900) /\ (Submarine__currentdepth.currentdepth.int__content >= 0) ) /\ (Submarine__depthmonitor___axiom.dynamic_invariant Submarine__currentdepth.currentdepth.int__content True True True True) ) }
   reads {Submarine__currentdepth.currentdepth}
   writes {Submarine__currentdepth.currentdepth}
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "filloxygentank" defined at oxygen.ads:34, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "surfacethesubmarine" defined at movement.ads:34, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Movement__surfacethesubmarine___axiom
+ use        Submarine__currentdepth
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Movement__maxdepthinvariant
+ use        Movement__notsurfacedinvariant
+ use        Submarine__depthmonitor___axiom
+ use        Submarine__currentdepth
+
+ val surfacethesubmarine 
+   (__void_param : unit) : unit
+  requires {  ( ((epsilon temp___result_194 : bool.
+   ( (temp___result_194 = (Movement__notsurfacedinvariant.notsurfacedinvariant Submarine__currentdepth.currentdepth.int__content)) /\ (Movement__notsurfacedinvariant.notsurfacedinvariant__function_guard temp___result_194 Submarine__currentdepth.currentdepth.int__content) )) = True) /\ ((epsilon temp___result_193 : bool.
+   ( (temp___result_193 = (Movement__maxdepthinvariant.maxdepthinvariant Submarine__currentdepth.currentdepth.int__content)) /\ (Movement__maxdepthinvariant.maxdepthinvariant__function_guard temp___result_193 Submarine__currentdepth.currentdepth.int__content) )) = True) ) }
+  ensures {  ( (Submarine__currentdepth.currentdepth.int__content = 0) /\ (Submarine__depthmonitor___axiom.dynamic_invariant Submarine__currentdepth.currentdepth.int__content True True True True) ) }
+  reads {Submarine__currentdepth.currentdepth}
+  writes {Submarine__currentdepth.currentdepth}
+
+end
+
+(* Module for declaring a program function (and possibly an axiom) for "filloxygentank" defined at oxygen.ads:33, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Oxygen__filloxygentank___axiom
+ use        Submarine__currentdepth
  use        Oxygen__oxygentankstatus
  use        Oxygen__oxygentank
  use import "_gnatprove_standard".Main
  use import "int".Int
+ use        Submarine__currentdepth
  use        Oxygen__content
  use        Oxygen__content__rep
  use        Array__Int__Oxygen__content
@@ -3956,57 +4102,58 @@ module Oxygen__filloxygentank___axiom
 
  val filloxygentank 
    (__void_param : unit) : unit
-  requires {  (Oxygen__oxygentankstatus.oxygentankstatus.int__content <> 0) }
-  ensures {  ( ( (Oxygen__oxygentankstatus.oxygentankstatus.int__content = 0) /\ (forall j   "model" "model_trace:2770" "name:J"  : int.
+  requires {  ( (Oxygen__oxygentankstatus.oxygentankstatus.int__content <> 0) /\ (Submarine__currentdepth.currentdepth.int__content = 0) ) }
+  ensures {  ( ( (Oxygen__oxygentankstatus.oxygentankstatus.int__content = 0) /\ (forall j   "model" "model_trace:2788" "name:J"  : int.
    ( ( (0 <= j) /\ (j <= 100) ) -> ((Oxygen__content__rep.to_rep (Array__Int__Oxygen__content.get Oxygen__oxygentank.oxygentank.Array__Int__Oxygen__content.map__content j)) = 0) )) ) /\ ( (Oxygen__tankstatus___axiom.dynamic_invariant Oxygen__oxygentankstatus.oxygentankstatus.int__content True True True True) /\ (Oxygen__oxygentankcontainer___axiom.dynamic_invariant Oxygen__oxygentank.oxygentank.Array__Int__Oxygen__content.map__content True True True True) ) ) }
-  reads {Oxygen__oxygentank.oxygentank, Oxygen__oxygentankstatus.oxygentankstatus}
+  reads {Submarine__currentdepth.currentdepth, Oxygen__oxygentank.oxygentank, Oxygen__oxygentankstatus.oxygentankstatus}
   writes {Oxygen__oxygentank.oxygentank, Oxygen__oxygentankstatus.oxygentankstatus}
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "oxygentankcheck" defined at oxygen.ads:50, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "oxygentankcheck" defined at oxygen.ads:45, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Oxygen__oxygentankcheck___axiom
+ use        Submarine__currentdepth
  use        Oxygen__oxygentankstatus
  use        Oxygen__oxygentank
- use        Oxygen__oxygentanklowalarm
- use        Oxygen__oxygentankemptyalarm
+ use        Oxygen__oxygentankalarm
  use import "_gnatprove_standard".Main
  use import "int".Int
+ use        Submarine__depthmonitor___axiom
+ use        Submarine__currentdepth
  use        Oxygen__oxygentankcontainer___axiom
  use        Array__Int__Oxygen__content
  use        Oxygen__oxygentank
  use        Oxygen__tankstatus___axiom
  use        Oxygen__oxygentankstatus
  use        Oxygen__alarm___axiom
- use        Oxygen__oxygentanklowalarm
- use        Oxygen__oxygentankemptyalarm
+ use        Oxygen__oxygentankalarm
 
  val oxygentankcheck 
    (__void_param : unit) : unit
-  requires {  ( (Oxygen__oxygentanklowalarm.oxygentanklowalarm.int__content = 1) \/ (Oxygen__oxygentankemptyalarm.oxygentankemptyalarm.int__content = 1) ) }
-  ensures {  ( ( ( (Oxygen__oxygentankstatus.oxygentankstatus.int__content = 2) /\ (Oxygen__oxygentanklowalarm.oxygentanklowalarm.int__content = 0) ) \/ ( (Oxygen__oxygentankstatus.oxygentankstatus.int__content = 3) /\ (Oxygen__oxygentankemptyalarm.oxygentankemptyalarm.int__content = 0) ) ) /\ ( ( ( (Oxygen__tankstatus___axiom.dynamic_invariant Oxygen__oxygentankstatus.oxygentankstatus.int__content True True True True) /\ (Oxygen__oxygentankcontainer___axiom.dynamic_invariant Oxygen__oxygentank.oxygentank.Array__Int__Oxygen__content.map__content True True True True) ) /\ (Oxygen__alarm___axiom.dynamic_invariant Oxygen__oxygentanklowalarm.oxygentanklowalarm.int__content True True True True) ) /\ (Oxygen__alarm___axiom.dynamic_invariant Oxygen__oxygentankemptyalarm.oxygentankemptyalarm.int__content True True True True) ) ) }
-  reads {Oxygen__oxygentank.oxygentank, Oxygen__oxygentankstatus.oxygentankstatus, Oxygen__oxygentanklowalarm.oxygentanklowalarm, Oxygen__oxygentankemptyalarm.oxygentankemptyalarm}
-  writes {Oxygen__oxygentank.oxygentank, Oxygen__oxygentankstatus.oxygentankstatus, Oxygen__oxygentanklowalarm.oxygentanklowalarm, Oxygen__oxygentankemptyalarm.oxygentankemptyalarm}
+  requires {  ( (Oxygen__oxygentankalarm.oxygentankalarm.int__content = 1) /\ (Submarine__currentdepth.currentdepth.int__content <> 0) ) }
+  ensures {  ( ( ( (Oxygen__oxygentankstatus.oxygentankstatus.int__content = 2) \/ (Oxygen__oxygentankstatus.oxygentankstatus.int__content = 3) ) /\ (Oxygen__oxygentankalarm.oxygentankalarm.int__content = 0) ) /\ ( ( ( (Submarine__depthmonitor___axiom.dynamic_invariant Submarine__currentdepth.currentdepth.int__content True True True True) /\ (Oxygen__tankstatus___axiom.dynamic_invariant Oxygen__oxygentankstatus.oxygentankstatus.int__content True True True True) ) /\ (Oxygen__oxygentankcontainer___axiom.dynamic_invariant Oxygen__oxygentank.oxygentank.Array__Int__Oxygen__content.map__content True True True True) ) /\ (Oxygen__alarm___axiom.dynamic_invariant Oxygen__oxygentankalarm.oxygentankalarm.int__content True True True True) ) ) }
+  reads {Submarine__currentdepth.currentdepth, Oxygen__oxygentank.oxygentank, Oxygen__oxygentankstatus.oxygentankstatus, Oxygen__oxygentankalarm.oxygentankalarm}
+  writes {Submarine__currentdepth.currentdepth, Oxygen__oxygentank.oxygentank, Oxygen__oxygentankstatus.oxygentankstatus, Oxygen__oxygentankalarm.oxygentankalarm}
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "turnoffoxygenlowalarm" defined at oxygen.ads:57, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "turnoffoxygenlowalarm" defined at oxygen.ads:51, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Oxygen__turnoffoxygenlowalarm___axiom
- use        Oxygen__oxygentankwarningrecieved
- use        Oxygen__oxygentanklowalarm
+ use        Oxygen__oxygentanklowwarningrecieved
+ use        Oxygen__oxygentankalarm
  use import "_gnatprove_standard".Main
  use import "int".Int
  use        Oxygen__alarm___axiom
- use        Oxygen__oxygentanklowalarm
+ use        Oxygen__oxygentankalarm
  use        Oxygen__recievedwarning___axiom
- use        Oxygen__oxygentankwarningrecieved
+ use        Oxygen__oxygentanklowwarningrecieved
 
  val turnoffoxygenlowalarm 
    (__void_param : unit) : unit
-  requires {  ( (Oxygen__oxygentanklowalarm.oxygentanklowalarm.int__content = 0) /\ (Oxygen__oxygentankwarningrecieved.oxygentankwarningrecieved.int__content = 1) ) }
-  ensures {  ( ( (Oxygen__oxygentanklowalarm.oxygentanklowalarm.int__content = 1) /\ (Oxygen__oxygentankwarningrecieved.oxygentankwarningrecieved.int__content = 0) ) /\ ( (Oxygen__recievedwarning___axiom.dynamic_invariant Oxygen__oxygentankwarningrecieved.oxygentankwarningrecieved.int__content True True True True) /\ (Oxygen__alarm___axiom.dynamic_invariant Oxygen__oxygentanklowalarm.oxygentanklowalarm.int__content True True True True) ) ) }
-  reads {Oxygen__oxygentanklowalarm.oxygentanklowalarm, Oxygen__oxygentankwarningrecieved.oxygentankwarningrecieved}
-  writes {Oxygen__oxygentanklowalarm.oxygentanklowalarm, Oxygen__oxygentankwarningrecieved.oxygentankwarningrecieved}
+  requires {  ( (Oxygen__oxygentankalarm.oxygentankalarm.int__content = 0) /\ (Oxygen__oxygentanklowwarningrecieved.oxygentanklowwarningrecieved.int__content = 1) ) }
+  ensures {  ( ( (Oxygen__oxygentankalarm.oxygentankalarm.int__content = 1) /\ (Oxygen__oxygentanklowwarningrecieved.oxygentanklowwarningrecieved.int__content = 0) ) /\ ( (Oxygen__recievedwarning___axiom.dynamic_invariant Oxygen__oxygentanklowwarningrecieved.oxygentanklowwarningrecieved.int__content True True True True) /\ (Oxygen__alarm___axiom.dynamic_invariant Oxygen__oxygentankalarm.oxygentankalarm.int__content True True True True) ) ) }
+  reads {Oxygen__oxygentankalarm.oxygentankalarm, Oxygen__oxygentanklowwarningrecieved.oxygentanklowwarningrecieved}
+  writes {Oxygen__oxygentankalarm.oxygentankalarm, Oxygen__oxygentanklowwarningrecieved.oxygentanklowwarningrecieved}
 
 end
 
@@ -4020,20 +4167,20 @@ module Oxygen__package_def
  use        Oxygen__tankstatus___axiom
  use        Oxygen__oxygentankstatus
  use        Oxygen__alarm___axiom
- use        Oxygen__oxygentanklowalarm
- use        Oxygen__oxygentankemptyalarm
+ use        Oxygen__oxygentankalarm
  use        Oxygen__recievedwarning___axiom
- use        Oxygen__oxygentankwarningrecieved
+ use        Oxygen__oxygentanklowwarningrecieved
+ use        Oxygen__oxygentankemptywarningrecieved
  use        Oxygen__content___axiom
  use        Oxygen__oxygentankcontainer___axiom
  use        Oxygen__oxygentank___axiom
  use        Oxygen__tankstatus___axiom
  use        Oxygen__oxygentankstatus___axiom
  use        Oxygen__alarm___axiom
- use        Oxygen__oxygentanklowalarm___axiom
- use        Oxygen__oxygentankemptyalarm___axiom
+ use        Oxygen__oxygentankalarm___axiom
  use        Oxygen__recievedwarning___axiom
- use        Oxygen__oxygentankwarningrecieved___axiom
+ use        Oxygen__oxygentanklowwarningrecieved___axiom
+ use        Oxygen__oxygentankemptywarningrecieved___axiom
 
  let def #"oxygen.ads" 7 0 0#"GP_Subp:oxygen.ads:7" "W:diverges:N" 
    (__void_param : unit)
@@ -4060,41 +4207,46 @@ module Oxygen__package_def
   #"oxygen.ads" 19 0 0# assume { #"oxygen.ads" 19 0 0# (Oxygen__tankstatus___axiom.dynamic_invariant Oxygen__oxygentankstatus.oxygentankstatus.int__content True False True True) } ));
   (#"oxygen.ads" 21 0 0# ());
   (#"oxygen.ads" 22 0 0# ());
-  (#"oxygen.ads" 22 0 0# ( #"oxygen.ads" 22 0 0# Oxygen__oxygentanklowalarm.oxygentanklowalarm.int__content <- ( 1 );
-  #"oxygen.ads" 22 0 0# assume { #"oxygen.ads" 22 0 0# (Oxygen__alarm___axiom.dynamic_invariant Oxygen__oxygentanklowalarm.oxygentanklowalarm.int__content True False True True) } ));
-  (#"oxygen.ads" 23 0 0# ( #"oxygen.ads" 23 0 0# Oxygen__oxygentankemptyalarm.oxygentankemptyalarm.int__content <- ( 1 );
-  #"oxygen.ads" 23 0 0# assume { #"oxygen.ads" 23 0 0# (Oxygen__alarm___axiom.dynamic_invariant Oxygen__oxygentankemptyalarm.oxygentankemptyalarm.int__content True False True True) } ));
-  (#"oxygen.ads" 25 0 0# ());
-  (#"oxygen.ads" 27 0 0# ());
-  (#"oxygen.ads" 27 0 0# ( #"oxygen.ads" 27 0 0# Oxygen__oxygentankwarningrecieved.oxygentankwarningrecieved.int__content <- ( 1 );
-  #"oxygen.ads" 27 0 0# assume { #"oxygen.ads" 27 0 0# (Oxygen__recievedwarning___axiom.dynamic_invariant Oxygen__oxygentankwarningrecieved.oxygentankwarningrecieved.int__content True False True True) } ));
-  (#"oxygen.ads" 34 0 0# ());
-  (#"oxygen.ads" 37 0 0# ());
-  (#"oxygen.ads" 37 0 0# ());
+  (#"oxygen.ads" 22 0 0# ( #"oxygen.ads" 22 0 0# Oxygen__oxygentankalarm.oxygentankalarm.int__content <- ( 1 );
+  #"oxygen.ads" 22 0 0# assume { #"oxygen.ads" 22 0 0# (Oxygen__alarm___axiom.dynamic_invariant Oxygen__oxygentankalarm.oxygentankalarm.int__content True False True True) } ));
+  (#"oxygen.ads" 24 0 0# ());
+  (#"oxygen.ads" 26 0 0# ());
+  (#"oxygen.ads" 26 0 0# ( #"oxygen.ads" 26 0 0# Oxygen__oxygentanklowwarningrecieved.oxygentanklowwarningrecieved.int__content <- ( 1 );
+  #"oxygen.ads" 26 0 0# assume { #"oxygen.ads" 26 0 0# (Oxygen__recievedwarning___axiom.dynamic_invariant Oxygen__oxygentanklowwarningrecieved.oxygentanklowwarningrecieved.int__content True False True True) } ));
+  (#"oxygen.ads" 27 0 0# ( #"oxygen.ads" 27 0 0# Oxygen__oxygentankemptywarningrecieved.oxygentankemptywarningrecieved.int__content <- ( 1 );
+  #"oxygen.ads" 27 0 0# assume { #"oxygen.ads" 27 0 0# (Oxygen__recievedwarning___axiom.dynamic_invariant Oxygen__oxygentankemptywarningrecieved.oxygentankemptywarningrecieved.int__content True False True True) } ));
+  (#"oxygen.ads" 33 0 0# ());
+  (#"oxygen.ads" 36 0 0# ());
   (#"oxygen.ads" 36 0 0# ());
   (#"oxygen.ads" 35 0 0# ());
-  (#"oxygen.ads" 50 0 0# ());
+  (#"oxygen.ads" 35 0 0# ());
+  (#"oxygen.ads" 34 0 0# ());
+  (#"oxygen.ads" 45 0 0# ());
+  (#"oxygen.ads" 48 0 0# ());
+  (#"oxygen.ads" 48 0 0# ());
+  (#"oxygen.ads" 47 0 0# ());
+  (#"oxygen.ads" 47 0 0# ());
+  (#"oxygen.ads" 46 0 0# ());
+  (#"oxygen.ads" 51 0 0# ());
+  (#"oxygen.ads" 54 0 0# ());
+  (#"oxygen.ads" 54 0 0# ());
+  (#"oxygen.ads" 53 0 0# ());
   (#"oxygen.ads" 53 0 0# ());
   (#"oxygen.ads" 52 0 0# ());
-  (#"oxygen.ads" 51 0 0# ());
-  (#"oxygen.ads" 57 0 0# ());
-  (#"oxygen.ads" 60 0 0# ());
-  (#"oxygen.ads" 60 0 0# ());
-  (#"oxygen.ads" 59 0 0# ());
-  (#"oxygen.ads" 59 0 0# ());
-  (#"oxygen.ads" 58 0 0# ());
   (#"oxygen.adb" 7 0 0# ());
-  (#"oxygen.adb" 15 0 0# ());
-  (#"oxygen.adb" 39 0 0# ());
-  (#"oxygen.adb" 68 0 0# ());
-  ( "GP_Sloc:oxygen.adb:82:1" (#"oxygen.adb" 82 0 0# ()) ) )
+  (#"oxygen.adb" 13 0 0# ());
+  (#"oxygen.adb" 35 0 0# ());
+  (#"oxygen.adb" 62 0 0# ());
+  ( "GP_Sloc:oxygen.adb:70:1" (#"oxygen.adb" 70 0 0# ()) ) )
 end
 
-(* Module for checking contracts and absence of run-time errors in subprogram "filloxygentank" defined at oxygen.ads:34, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+(* Module for checking contracts and absence of run-time errors in subprogram "filloxygentank" defined at oxygen.ads:33, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
 module Oxygen__filloxygentank__subprogram_def
  use import "_gnatprove_standard".Main
  use import "int".Int
  use        "_gnatprove_standard".Boolean
+ use        Submarine__depthmonitor___axiom
+ use        Submarine__currentdepth
  use        Oxygen__content
  use        Oxygen__content__rep
  use        Oxygen__tanklevelpercentage
@@ -4115,119 +4267,123 @@ module Oxygen__filloxygentank__subprogram_def
  use        Oxygen__oxygentank___axiom
  use        Oxygen__tankstatus___axiom
  use        Oxygen__oxygentankstatus___axiom
+ use        Submarine__depthmonitor___axiom
+ use        Submarine__currentdepth___axiom
 
- let def #"oxygen.ads" 34 0 0#"W:diverges:N" "GP_Subp:oxygen.ads:34" 
+ let def #"oxygen.ads" 33 0 0#"W:diverges:N" "GP_Subp:oxygen.ads:33" 
    (__void_param : unit)
-  requires { #"oxygen.ads" 34 0 0# true }
-  ensures { #"oxygen.ads" 34 0 0# (#"oxygen.ads" 37 0 0# ( "model_vc_post" "keep_on_simp" "GP_Sloc:oxygen.ads:37:14" "GP_Reason:VC_POSTCONDITION" "GP_Id:3" "comment:     Post => oxygenTankStatus = Full and then (for all J in oxygenTank'Range => oxygenTank(J) = Oxygen);
-             ^ oxygen.ads:37:14:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" ( ( "GP_Pretty_Ada:4527" "GP_Sloc:oxygen.ads:37:14" (Oxygen__oxygentankstatus.oxygentankstatus.int__content = 0) ) /\ (forall j #"oxygen.ads" 37 0 0#  "model" "model_trace:2770" "name:J"  : int.
-   ( ( (0 <= j) /\ (j <= 100) ) -> ( "GP_Pretty_Ada:2784" "GP_Sloc:oxygen.ads:37:81" ((Oxygen__content__rep.to_rep (Array__Int__Oxygen__content.get Oxygen__oxygentank.oxygentank.Array__Int__Oxygen__content.map__content j)) = 0) ) )) ) )) }
+  requires { #"oxygen.ads" 33 0 0# true }
+  ensures { #"oxygen.ads" 33 0 0# (#"oxygen.ads" 36 0 0# ( "model_vc_post" "keep_on_simp" "GP_Sloc:oxygen.ads:36:14" "GP_Reason:VC_POSTCONDITION" "GP_Id:3" "comment:     Post => oxygenTankStatus = Full and then (for all J in oxygenTank'Range => oxygenTank(J) = Oxygen);
+             ^ oxygen.ads:36:14:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" ( ( "GP_Pretty_Ada:4866" "GP_Sloc:oxygen.ads:36:14" (Oxygen__oxygentankstatus.oxygentankstatus.int__content = 0) ) /\ (forall j #"oxygen.ads" 36 0 0#  "model" "model_trace:2788" "name:J"  : int.
+   ( ( (0 <= j) /\ (j <= 100) ) -> ( "GP_Pretty_Ada:2802" "GP_Sloc:oxygen.ads:36:81" ((Oxygen__content__rep.to_rep (Array__Int__Oxygen__content.get Oxygen__oxygentank.oxygentank.Array__Int__Oxygen__content.map__content j)) = 0) ) )) ) )) }
    =
-  ( () (* Assume dynamic invariants of inputs of the subprogram oxygen.ads:34 *)
+  ( () (* Assume dynamic invariants of inputs of the subprogram oxygen.ads:33 *)
   ;
    assume {  (Oxygen__oxygentankcontainer___axiom.dynamic_invariant Oxygen__oxygentank.oxygentank.Array__Int__Oxygen__content.map__content True False True True) };
    assume {  (Oxygen__tankstatus___axiom.dynamic_invariant Oxygen__oxygentankstatus.oxygentankstatus.int__content True False True True) };
+   assume {  (Submarine__depthmonitor___axiom.dynamic_invariant Submarine__currentdepth.currentdepth.int__content True False True True) };
    assume {  true };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram oxygen.ads:34 *)
+  () (* Declarations introduced by the compiler at the beginning of the subprogram oxygen.ads:33 *)
   ;
-  () (* Check for RTE in the Pre of the subprogram oxygen.ads:34 *)
+  () (* Check for RTE in the Pre of the subprogram oxygen.ads:33 *)
   ;
-   abstract ensures {true}(let _ = (Oxygen__oxygentankstatus.oxygentankstatus.int__content <> 0) in (
+   abstract ensures {true}(let _ = ( (Oxygen__oxygentankstatus.oxygentankstatus.int__content <> 0) && (Submarine__currentdepth.currentdepth.int__content = 0) ) in (
    ()))
    end ;
-  () (* Assume Pre of the subprogram oxygen.ads:34 *)
+  () (* Assume Pre of the subprogram oxygen.ads:33 *)
   ;
-   assume {  (Oxygen__oxygentankstatus.oxygentankstatus.int__content <> 0) };
+   assume {  ( (Oxygen__oxygentankstatus.oxygentankstatus.int__content <> 0) /\ (Submarine__currentdepth.currentdepth.int__content = 0) ) };
    try
-   ( (#"oxygen.adb" 16 0 0# ());
-   (#"oxygen.adb" 16 0 0# ( #"oxygen.adb" 16 0 0# Oxygen__filloxygentank__position.position.int__content <- ( 0 );
-   #"oxygen.adb" 16 0 0# assume { #"oxygen.adb" 16 0 0# (Oxygen__tanklevelpercentage___axiom.dynamic_invariant Oxygen__filloxygentank__position.position.int__content True False True True) } ));
-   (#"oxygen.adb" 20 0 0# ());
-   ( "GP_Sloc:oxygen.adb:19:11" (#"oxygen.adb" 19 0 0# ()) );
-   ( "GP_Sloc:oxygen.adb:19:39" (#"oxygen.adb" 19 0 0# ()) );
-   ( "GP_Sloc:oxygen.adb:19:65" (#"oxygen.adb" 19 0 0# ()) );
-   ( "GP_Sloc:oxygen.adb:19:7" (#"oxygen.adb" 19 0 0# (if ((Boolean.orb((Boolean.orb((Oxygen__oxygentankstatus.oxygentankstatus.int__content = 3)) ((Oxygen__oxygentankstatus.oxygentankstatus.int__content = 2)))) ((Oxygen__oxygentankstatus.oxygentankstatus.int__content = 1)))) then (
-    ( ( "GP_Sloc:oxygen.adb:20:44" (#"oxygen.adb" 20 0 0# ( () (* Translation of an Ada loop from oxygen.adb:20 *)
+   ( (#"oxygen.adb" 14 0 0# ());
+   (#"oxygen.adb" 14 0 0# ( #"oxygen.adb" 14 0 0# Oxygen__filloxygentank__position.position.int__content <- ( 0 );
+   #"oxygen.adb" 14 0 0# assume { #"oxygen.adb" 14 0 0# (Oxygen__tanklevelpercentage___axiom.dynamic_invariant Oxygen__filloxygentank__position.position.int__content True False True True) } ));
+   (#"oxygen.adb" 18 0 0# ());
+   ( "GP_Sloc:oxygen.adb:17:12" (#"oxygen.adb" 17 0 0# ()) );
+   ( "GP_Sloc:oxygen.adb:17:40" (#"oxygen.adb" 17 0 0# ()) );
+   ( "GP_Sloc:oxygen.adb:17:66" (#"oxygen.adb" 17 0 0# ()) );
+   ( "GP_Sloc:oxygen.adb:17:99" (#"oxygen.adb" 17 0 0# ()) );
+   ( "GP_Sloc:oxygen.adb:17:7" (#"oxygen.adb" 17 0 0# (if ((Boolean.andb((Boolean.orb((Boolean.orb((Oxygen__oxygentankstatus.oxygentankstatus.int__content = 3)) ((Oxygen__oxygentankstatus.oxygentankstatus.int__content = 2)))) ((Oxygen__oxygentankstatus.oxygentankstatus.int__content = 1)))) ((Submarine__currentdepth.currentdepth.int__content = 0)))) then (
+    ( ( "GP_Sloc:oxygen.adb:18:44" (#"oxygen.adb" 18 0 0# ( () (* Translation of an Ada loop from oxygen.adb:18 *)
     ;
     (if ((Oxygen__filloxygentank__position.position.int__content <= 100)) then (
-     #"oxygen.adb" 20 0 0# try
-      ( #"oxygen.adb" 20 0 0# abstract ensures {true}(let _ = Oxygen__filloxygentank__position.position.int__content in (
+     #"oxygen.adb" 18 0 0# try
+      ( #"oxygen.adb" 18 0 0# abstract ensures {true}(let _ = Oxygen__filloxygentank__position.position.int__content in (
        ()))
        end ;
-      (let temp___243 = #"oxygen.adb" 20 0 0# (any int
-      ensures {#"oxygen.adb" 20 0 0# (result = Oxygen__filloxygentank__position.position.int__content)} 
+      (let temp___246 = #"oxygen.adb" 18 0 0# (any int
+      ensures {#"oxygen.adb" 18 0 0# (result = Oxygen__filloxygentank__position.position.int__content)} 
       ) in (
-       ( #"oxygen.adb" 20 0 0# abstract ensures {true}(let _ = Oxygen__oxygentank.oxygentank.Array__Int__Oxygen__content.map__content in (
+       ( #"oxygen.adb" 18 0 0# abstract ensures {true}(let _ = Oxygen__oxygentank.oxygentank.Array__Int__Oxygen__content.map__content in (
         ()))
         end ;
-       (let temp___241 = #"oxygen.adb" 20 0 0# (any Array__Int__Oxygen__content.map
-       ensures {#"oxygen.adb" 20 0 0# (result = Oxygen__oxygentank.oxygentank.Array__Int__Oxygen__content.map__content)} 
+       (let temp___244 = #"oxygen.adb" 18 0 0# (any Array__Int__Oxygen__content.map
+       ensures {#"oxygen.adb" 18 0 0# (result = Oxygen__oxygentank.oxygentank.Array__Int__Oxygen__content.map__content)} 
        ) in (
-        ( () (* First unroling of the loop statements appearing before the loop invariant of loop oxygen.adb:20 *)
+        ( () (* First unroling of the loop statements appearing before the loop invariant of loop oxygen.adb:18 *)
         ;
-        ( "GP_Sloc:oxygen.adb:21:13" (#"oxygen.adb" 21 0 0# ()) );
-        ( "GP_Sloc:oxygen.adb:21:24" (#"oxygen.adb" 21 0 0# ()) );
-        ( "GP_Sloc:oxygen.adb:21:34" (#"oxygen.adb" 21 0 0# #"oxygen.adb" 21 0 0# Oxygen__oxygentank.oxygentank.Array__Int__Oxygen__content.map__content <- ( (Array__Int__Oxygen__content.set(Oxygen__oxygentank.oxygentank.Array__Int__Oxygen__content.map__content) (Oxygen__filloxygentank__position.position.int__content) ((Oxygen__content__rep.of_rep(0)))) )) );
-        ( "GP_Sloc:oxygen.adb:22:16" (#"oxygen.adb" 22 0 0# ()) );
-        ( "GP_Sloc:oxygen.adb:22:13" (#"oxygen.adb" 22 0 0# (if ((Oxygen__filloxygentank__position.position.int__content = 100)) then (
-         ( "GP_Sloc:oxygen.adb:22:36" (#"oxygen.adb" 22 0 0# #"oxygen.adb" 22 0 0# raise Oxygen__filloxygentank__L_1.L_1) )) else (
-         ( ( "GP_Sloc:oxygen.adb:23:18" (#"oxygen.adb" 23 0 0# ()) );
-         ( "GP_Sloc:oxygen.adb:23:30" (#"oxygen.adb" 23 0 0# ()) );
-         ( "GP_Sloc:oxygen.adb:23:27" (#"oxygen.adb" 23 0 0# #"oxygen.adb" 23 0 0# Oxygen__filloxygentank__position.position.int__content <- ( (#"oxygen.adb" 23 0 0# ( "model_vc" "keep_on_simp" "GP_Sloc:oxygen.adb:23:39" "GP_Reason:VC_RANGE_CHECK" "GP_Id:0" "comment:            else Position := Position + 1;
-                                      ^ oxygen.adb:23:39:VC_RANGE_CHECK" "GP_Shape:if__L_1_while__if__position_assign__add" (Oxygen__tanklevelpercentage.range_check_((Oxygen__filloxygentank__position.position.int__content + 1))) )) )) ) )))) );
-        () (* While loop translating the Ada loop from oxygen.adb:20 *)
+        ( "GP_Sloc:oxygen.adb:19:13" (#"oxygen.adb" 19 0 0# ()) );
+        ( "GP_Sloc:oxygen.adb:19:24" (#"oxygen.adb" 19 0 0# ()) );
+        ( "GP_Sloc:oxygen.adb:19:34" (#"oxygen.adb" 19 0 0# #"oxygen.adb" 19 0 0# Oxygen__oxygentank.oxygentank.Array__Int__Oxygen__content.map__content <- ( (Array__Int__Oxygen__content.set(Oxygen__oxygentank.oxygentank.Array__Int__Oxygen__content.map__content) (Oxygen__filloxygentank__position.position.int__content) ((Oxygen__content__rep.of_rep(0)))) )) );
+        ( "GP_Sloc:oxygen.adb:20:16" (#"oxygen.adb" 20 0 0# ()) );
+        ( "GP_Sloc:oxygen.adb:20:13" (#"oxygen.adb" 20 0 0# (if ((Oxygen__filloxygentank__position.position.int__content = 100)) then (
+         ( "GP_Sloc:oxygen.adb:20:36" (#"oxygen.adb" 20 0 0# #"oxygen.adb" 20 0 0# raise Oxygen__filloxygentank__L_1.L_1) )) else (
+         ( ( "GP_Sloc:oxygen.adb:21:18" (#"oxygen.adb" 21 0 0# ()) );
+         ( "GP_Sloc:oxygen.adb:21:30" (#"oxygen.adb" 21 0 0# ()) );
+         ( "GP_Sloc:oxygen.adb:21:27" (#"oxygen.adb" 21 0 0# #"oxygen.adb" 21 0 0# Oxygen__filloxygentank__position.position.int__content <- ( (#"oxygen.adb" 21 0 0# ( "model_vc" "keep_on_simp" "GP_Sloc:oxygen.adb:21:39" "GP_Reason:VC_RANGE_CHECK" "GP_Id:0" "comment:            else Position := Position + 1;
+                                      ^ oxygen.adb:21:39:VC_RANGE_CHECK" "GP_Shape:if__L_1_while__if__position_assign__add" (Oxygen__tanklevelpercentage.range_check_((Oxygen__filloxygentank__position.position.int__content + 1))) )) )) ) )))) );
+        () (* While loop translating the Ada loop from oxygen.adb:18 *)
         ;
          while True do
          invariant { 
-          (#"oxygen.adb" 25 0 0# ( "model_vc" "keep_on_simp" "GP_Sloc:oxygen.adb:25:36" "GP_Reason:VC_LOOP_INVARIANT" "GP_Id:2" "comment:            pragma Loop_Invariant (for all J in oxygenTank'First..(Position - 1) => oxygenTank(J) = Oxygen);
-                                   ^ oxygen.adb:25:36:VC_LOOP_INVARIANT" "GP_Shape:if__L_1_while__pragargs__forall" (forall j #"oxygen.adb" 25 0 0#  "model" "name:J" "model_trace:2373"  : int.
-           ( ( (0 <= j) /\ (j <= (Oxygen__filloxygentank__position.position.int__content - 1)) ) -> ( "GP_Pretty_Ada:2392" "GP_Sloc:oxygen.adb:25:85" ((Oxygen__content__rep.to_rep (Array__Int__Oxygen__content.get Oxygen__oxygentank.oxygentank.Array__Int__Oxygen__content.map__content j)) = 0) ) )) ))
+          (#"oxygen.adb" 23 0 0# ( "model_vc" "keep_on_simp" "GP_Sloc:oxygen.adb:23:36" "GP_Reason:VC_LOOP_INVARIANT" "GP_Id:2" "comment:            pragma Loop_Invariant (for all J in oxygenTank'First..(Position - 1) => oxygenTank(J) = Oxygen);
+                                   ^ oxygen.adb:23:36:VC_LOOP_INVARIANT" "GP_Shape:if__L_1_while__pragargs__forall" (forall j #"oxygen.adb" 23 0 0#  "model" "name:J" "model_trace:2377"  : int.
+           ( ( (0 <= j) /\ (j <= (Oxygen__filloxygentank__position.position.int__content - 1)) ) -> ( "GP_Pretty_Ada:2396" "GP_Sloc:oxygen.adb:23:85" ((Oxygen__content__rep.to_rep (Array__Int__Oxygen__content.get Oxygen__oxygentank.oxygentank.Array__Int__Oxygen__content.map__content j)) = 0) ) )) ))
           }
-         ( () (* Assume implicit invariants from the loop oxygen.adb:20 *)
+         ( () (* Assume implicit invariants from the loop oxygen.adb:18 *)
          ;
           assume {  ( ( ( ( true /\ (Oxygen__oxygentankcontainer___axiom.dynamic_invariant Oxygen__oxygentank.oxygentank.Array__Int__Oxygen__content.map__content True True True True) ) /\ true ) /\ (Oxygen__tanklevelpercentage___axiom.dynamic_invariant Oxygen__filloxygentank__position.position.int__content False True True True) ) /\ true ) };
-         () (* Check for absence of RTE in the invariant of loop oxygen.adb:20 *)
+         () (* Check for absence of RTE in the invariant of loop oxygen.adb:18 *)
          ;
           abstract ensures {true}(let _ = ( (let j =  (any int
          ) in (
           (if ((Boolean.andb((0 <= j)) ((j <= (Oxygen__filloxygentank__position.position.int__content - 1))))) then (
-            abstract ensures {true}(let _ = ((Oxygen__content__rep.to_rep((Array__Int__Oxygen__content.get(Oxygen__oxygentank.oxygentank.Array__Int__Oxygen__content.map__content) ((  assert {  (#"oxygen.adb" 25 0 0# ( "model_vc" "keep_on_simp" "GP_Sloc:oxygen.adb:25:96" "GP_Reason:VC_INDEX_CHECK" "GP_Id:1" "comment:            pragma Loop_Invariant (for all J in oxygenTank'First..(Position - 1) => oxygenTank(J) = Oxygen);
-                                                                                               ^ oxygen.adb:25:96:VC_INDEX_CHECK" "GP_Shape:if__L_1_while__pragargs__forall__cmp__ixdcomp" ( (Oxygen__tanklevelpercentage.first <= j) /\ (j <= Oxygen__tanklevelpercentage.last) ) )) };
+            abstract ensures {true}(let _ = ((Oxygen__content__rep.to_rep((Array__Int__Oxygen__content.get(Oxygen__oxygentank.oxygentank.Array__Int__Oxygen__content.map__content) ((  assert {  (#"oxygen.adb" 23 0 0# ( "model_vc" "keep_on_simp" "GP_Sloc:oxygen.adb:23:96" "GP_Reason:VC_INDEX_CHECK" "GP_Id:1" "comment:            pragma Loop_Invariant (for all J in oxygenTank'First..(Position - 1) => oxygenTank(J) = Oxygen);
+                                                                                               ^ oxygen.adb:23:96:VC_INDEX_CHECK" "GP_Shape:if__L_1_while__pragargs__forall__cmp__ixdcomp" ( (Oxygen__tanklevelpercentage.first <= j) /\ (j <= Oxygen__tanklevelpercentage.last) ) )) };
            j ))))) = 0) in (
             ()))
             end ))))
          ;
           (any bool
          requires { true} 
-         ensures { ( (result = True) <-> (forall j   "model" "name:J" "model_trace:2373"  : int.
+         ensures { ( (result = True) <-> (forall j   "model" "name:J" "model_trace:2377"  : int.
           ( ( (0 <= j) /\ (j <= (Oxygen__filloxygentank__position.position.int__content - 1)) ) -> ((Oxygen__content__rep.to_rep (Array__Int__Oxygen__content.get Oxygen__oxygentank.oxygentank.Array__Int__Oxygen__content.map__content j)) = 0) )) )} 
          ) ) in (
           ()))
           end ;
-         () (* Loop statements appearing after the loop invariant of loop oxygen.adb:20 *)
+         () (* Loop statements appearing after the loop invariant of loop oxygen.adb:18 *)
          ;
-         () (* Check for the exit condition and loop statements appearing before the loop invariant of loop oxygen.adb:20 *)
+         () (* Check for the exit condition and loop statements appearing before the loop invariant of loop oxygen.adb:18 *)
          ;
          (if (not ( (Oxygen__filloxygentank__position.position.int__content <= 100) )) then (
            raise Oxygen__filloxygentank__L_1.L_1));
-         ( "GP_Sloc:oxygen.adb:21:13" (#"oxygen.adb" 21 0 0# ()) );
-         ( "GP_Sloc:oxygen.adb:21:24" (#"oxygen.adb" 21 0 0# ()) );
-         ( "GP_Sloc:oxygen.adb:21:34" (#"oxygen.adb" 21 0 0# #"oxygen.adb" 21 0 0# Oxygen__oxygentank.oxygentank.Array__Int__Oxygen__content.map__content <- ( (Array__Int__Oxygen__content.set(Oxygen__oxygentank.oxygentank.Array__Int__Oxygen__content.map__content) (Oxygen__filloxygentank__position.position.int__content) ((Oxygen__content__rep.of_rep(0)))) )) );
-         ( "GP_Sloc:oxygen.adb:22:16" (#"oxygen.adb" 22 0 0# ()) );
-         ( "GP_Sloc:oxygen.adb:22:13" (#"oxygen.adb" 22 0 0# (if ((Oxygen__filloxygentank__position.position.int__content = 100)) then (
-          ( "GP_Sloc:oxygen.adb:22:36" (#"oxygen.adb" 22 0 0# #"oxygen.adb" 22 0 0# raise Oxygen__filloxygentank__L_1.L_1) )) else (
-          ( ( "GP_Sloc:oxygen.adb:23:18" (#"oxygen.adb" 23 0 0# ()) );
-          ( "GP_Sloc:oxygen.adb:23:30" (#"oxygen.adb" 23 0 0# ()) );
-          ( "GP_Sloc:oxygen.adb:23:27" (#"oxygen.adb" 23 0 0# #"oxygen.adb" 23 0 0# Oxygen__filloxygentank__position.position.int__content <- ( (#"oxygen.adb" 23 0 0# ( "model_vc" "keep_on_simp" "GP_Sloc:oxygen.adb:23:39" "GP_Reason:VC_RANGE_CHECK" "GP_Id:0" "comment:            else Position := Position + 1;
-                                      ^ oxygen.adb:23:39:VC_RANGE_CHECK" "GP_Shape:if__L_1_while__if__position_assign__add" (Oxygen__tanklevelpercentage.range_check_((Oxygen__filloxygentank__position.position.int__content + 1))) )) )) ) )))) ) )
+         ( "GP_Sloc:oxygen.adb:19:13" (#"oxygen.adb" 19 0 0# ()) );
+         ( "GP_Sloc:oxygen.adb:19:24" (#"oxygen.adb" 19 0 0# ()) );
+         ( "GP_Sloc:oxygen.adb:19:34" (#"oxygen.adb" 19 0 0# #"oxygen.adb" 19 0 0# Oxygen__oxygentank.oxygentank.Array__Int__Oxygen__content.map__content <- ( (Array__Int__Oxygen__content.set(Oxygen__oxygentank.oxygentank.Array__Int__Oxygen__content.map__content) (Oxygen__filloxygentank__position.position.int__content) ((Oxygen__content__rep.of_rep(0)))) )) );
+         ( "GP_Sloc:oxygen.adb:20:16" (#"oxygen.adb" 20 0 0# ()) );
+         ( "GP_Sloc:oxygen.adb:20:13" (#"oxygen.adb" 20 0 0# (if ((Oxygen__filloxygentank__position.position.int__content = 100)) then (
+          ( "GP_Sloc:oxygen.adb:20:36" (#"oxygen.adb" 20 0 0# #"oxygen.adb" 20 0 0# raise Oxygen__filloxygentank__L_1.L_1) )) else (
+          ( ( "GP_Sloc:oxygen.adb:21:18" (#"oxygen.adb" 21 0 0# ()) );
+          ( "GP_Sloc:oxygen.adb:21:30" (#"oxygen.adb" 21 0 0# ()) );
+          ( "GP_Sloc:oxygen.adb:21:27" (#"oxygen.adb" 21 0 0# #"oxygen.adb" 21 0 0# Oxygen__filloxygentank__position.position.int__content <- ( (#"oxygen.adb" 21 0 0# ( "model_vc" "keep_on_simp" "GP_Sloc:oxygen.adb:21:39" "GP_Reason:VC_RANGE_CHECK" "GP_Id:0" "comment:            else Position := Position + 1;
+                                      ^ oxygen.adb:21:39:VC_RANGE_CHECK" "GP_Shape:if__L_1_while__if__position_assign__add" (Oxygen__tanklevelpercentage.range_check_((Oxygen__filloxygentank__position.position.int__content + 1))) )) )) ) )))) ) )
         done )))
         )))
        )
      with
       Oxygen__filloxygentank__L_1.L_1 -> ()
      end)) )) );
-    ( "GP_Sloc:oxygen.adb:27:10" (#"oxygen.adb" 27 0 0# ()) );
-    ( "GP_Sloc:oxygen.adb:27:27" (#"oxygen.adb" 27 0 0# #"oxygen.adb" 27 0 0# Oxygen__oxygentankstatus.oxygentankstatus.int__content <- ( 0 )) ) )) else (
+    ( "GP_Sloc:oxygen.adb:25:10" (#"oxygen.adb" 25 0 0# ()) );
+    ( "GP_Sloc:oxygen.adb:25:27" (#"oxygen.adb" 25 0 0# #"oxygen.adb" 25 0 0# Oxygen__oxygentankstatus.oxygentankstatus.int__content <- ( 0 )) ) )) else (
     ()))) );
     raise Return__exc )
   with
@@ -4242,18 +4398,21 @@ module Oxygen__filloxygentank__subprogram_def
   ;
    (any bool
   requires { true} 
-  ensures { ( (result = True) <-> (forall j   "model" "model_trace:2770" "name:J"  : int.
+  ensures { ( (result = True) <-> (forall j   "model" "model_trace:2788" "name:J"  : int.
    ( ( (0 <= j) /\ (j <= 100) ) -> ((Oxygen__content__rep.to_rep (Array__Int__Oxygen__content.get Oxygen__oxygentank.oxygentank.Array__Int__Oxygen__content.map__content j)) = 0) )) )} 
   ) ) ) in (
    ()))
    end  )
 end
 
-(* Module for checking contracts and absence of run-time errors in subprogram "oxygentankcheck" defined at oxygen.ads:50, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+(* Module for checking contracts and absence of run-time errors in subprogram "oxygentankcheck" defined at oxygen.ads:45, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
 module Oxygen__oxygentankcheck__subprogram_def
  use import "_gnatprove_standard".Main
  use import "int".Int
  use        "_gnatprove_standard".Boolean
+ use        Movement__surfacethesubmarine___axiom
+ use        Submarine__depthmonitor___axiom
+ use        Submarine__currentdepth
  use        Oxygen__content
  use        Oxygen__content__rep
  use        Oxygen__tanklevelpercentage
@@ -4265,8 +4424,7 @@ module Oxygen__oxygentankcheck__subprogram_def
  use        Oxygen__tankstatus___axiom
  use        Oxygen__oxygentankstatus
  use        Oxygen__alarm___axiom
- use        Oxygen__oxygentanklowalarm
- use        Oxygen__oxygentankemptyalarm
+ use        Oxygen__oxygentankalarm
  use        Oxygen__oxygentankcheck__position
  use        Oxygen__oxygentankcheck__L_2
  use        Oxygen__oxygentankcheck__L_3
@@ -4280,80 +4438,84 @@ module Oxygen__oxygentankcheck__subprogram_def
  use        Oxygen__tankstatus___axiom
  use        Oxygen__oxygentankstatus___axiom
  use        Oxygen__alarm___axiom
- use        Oxygen__oxygentanklowalarm___axiom
- use        Oxygen__oxygentankemptyalarm___axiom
+ use        Oxygen__oxygentankalarm___axiom
+ use        Submarine__depthmonitor___axiom
+ use        Submarine__currentdepth___axiom
+ use        Movement__maxdepthinvariant___axiom
+ use        Movement__notsurfacedinvariant___axiom
+ use        Movement__surfacethesubmarine___axiom
 
- let def #"oxygen.ads" 50 0 0#"W:diverges:N" "GP_Subp:oxygen.ads:50" 
+ let def #"oxygen.ads" 45 0 0#"W:diverges:N" "GP_Subp:oxygen.ads:45" 
    (__void_param : unit)
-  requires { #"oxygen.ads" 50 0 0# true }
-  ensures { #"oxygen.ads" 50 0 0# (#"oxygen.ads" 53 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Sloc:oxygen.ads:53:14" "GP_Id:6" "comment:     Post => (oxygenTankStatus = Low and then oxygenTankLowAlarm = On) or
-             ^ oxygen.ads:53:14:VC_POSTCONDITION" "GP_Shape:pragargs__or" ( "GP_Pretty_Ada:4598" "GP_Sloc:oxygen.ads:53:14" ( ( (Oxygen__oxygentankstatus.oxygentankstatus.int__content = 2) /\ (Oxygen__oxygentanklowalarm.oxygentanklowalarm.int__content = 0) ) \/ ( (Oxygen__oxygentankstatus.oxygentankstatus.int__content = 3) /\ (Oxygen__oxygentankemptyalarm.oxygentankemptyalarm.int__content = 0) ) ) ) )) }
+  requires { #"oxygen.ads" 45 0 0# true }
+  ensures { #"oxygen.ads" 45 0 0# (#"oxygen.ads" 48 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Sloc:oxygen.ads:48:14" "GP_Id:7" "comment:     Post => (oxygenTankStatus = Low  or oxygenTankStatus = Empty) and then oxygenTankAlarm = On;
+             ^ oxygen.ads:48:14:VC_POSTCONDITION" "GP_Shape:pragargs__or" ( ( "GP_Pretty_Ada:4972" "GP_Sloc:oxygen.ads:48:14" ( (Oxygen__oxygentankstatus.oxygentankstatus.int__content = 2) \/ (Oxygen__oxygentankstatus.oxygentankstatus.int__content = 3) ) ) /\ ( "GP_Pretty_Ada:2846" "GP_Sloc:oxygen.ads:48:93" (Oxygen__oxygentankalarm.oxygentankalarm.int__content = 0) ) ) )) }
    =
-  ( () (* Assume dynamic invariants of inputs of the subprogram oxygen.ads:50 *)
+  ( () (* Assume dynamic invariants of inputs of the subprogram oxygen.ads:45 *)
   ;
    assume {  (Oxygen__oxygentankcontainer___axiom.dynamic_invariant Oxygen__oxygentank.oxygentank.Array__Int__Oxygen__content.map__content True False True True) };
    assume {  (Oxygen__tankstatus___axiom.dynamic_invariant Oxygen__oxygentankstatus.oxygentankstatus.int__content True False True True) };
-   assume {  (Oxygen__alarm___axiom.dynamic_invariant Oxygen__oxygentanklowalarm.oxygentanklowalarm.int__content True False True True) };
-   assume {  (Oxygen__alarm___axiom.dynamic_invariant Oxygen__oxygentankemptyalarm.oxygentankemptyalarm.int__content True False True True) };
+   assume {  (Oxygen__alarm___axiom.dynamic_invariant Oxygen__oxygentankalarm.oxygentankalarm.int__content True False True True) };
+   assume {  (Submarine__depthmonitor___axiom.dynamic_invariant Submarine__currentdepth.currentdepth.int__content True False True True) };
    assume {  true };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram oxygen.ads:50 *)
+  () (* Declarations introduced by the compiler at the beginning of the subprogram oxygen.ads:45 *)
   ;
-  () (* Check for RTE in the Pre of the subprogram oxygen.ads:50 *)
+  () (* Check for RTE in the Pre of the subprogram oxygen.ads:45 *)
   ;
-   abstract ensures {true}(let _ = (Boolean.orb((Oxygen__oxygentanklowalarm.oxygentanklowalarm.int__content = 1)) ((Oxygen__oxygentankemptyalarm.oxygentankemptyalarm.int__content = 1))) in (
+   abstract ensures {true}(let _ = ( (Oxygen__oxygentankalarm.oxygentankalarm.int__content = 1) && (Submarine__currentdepth.currentdepth.int__content <> 0) ) in (
    ()))
    end ;
-  () (* Assume Pre of the subprogram oxygen.ads:50 *)
+  () (* Assume Pre of the subprogram oxygen.ads:45 *)
   ;
-   assume {  ( (Oxygen__oxygentanklowalarm.oxygentanklowalarm.int__content = 1) \/ (Oxygen__oxygentankemptyalarm.oxygentankemptyalarm.int__content = 1) ) };
+   assume {  ( (Oxygen__oxygentankalarm.oxygentankalarm.int__content = 1) /\ (Submarine__currentdepth.currentdepth.int__content <> 0) ) };
    try
-   ( (#"oxygen.adb" 40 0 0# ());
-   (#"oxygen.adb" 40 0 0# ( #"oxygen.adb" 40 0 0# Oxygen__oxygentankcheck__position.position.int__content <- ( 100 );
-   #"oxygen.adb" 40 0 0# assume { #"oxygen.adb" 40 0 0# (Oxygen__tanklevelpercentage___axiom.dynamic_invariant Oxygen__oxygentankcheck__position.position.int__content True False True True) } ));
-   (#"oxygen.adb" 44 0 0# ());
-   (#"oxygen.adb" 53 0 0# ());
-   ( "GP_Sloc:oxygen.adb:43:11" (#"oxygen.adb" 43 0 0# ()) );
-   ( "GP_Sloc:oxygen.adb:43:38" (#"oxygen.adb" 43 0 0# ()) );
-   ( "GP_Sloc:oxygen.adb:43:7" (#"oxygen.adb" 43 0 0# (if ((Boolean.orb((Oxygen__oxygentankstatus.oxygentankstatus.int__content = 0)) ((Oxygen__oxygentankstatus.oxygentankstatus.int__content = 1)))) then (
-    ( ( "GP_Sloc:oxygen.adb:44:44" (#"oxygen.adb" 44 0 0# ( () (* Translation of an Ada loop from oxygen.adb:44 *)
+   ( (#"oxygen.adb" 36 0 0# ());
+   (#"oxygen.adb" 36 0 0# ( #"oxygen.adb" 36 0 0# Oxygen__oxygentankcheck__position.position.int__content <- ( 100 );
+   #"oxygen.adb" 36 0 0# assume { #"oxygen.adb" 36 0 0# (Oxygen__tanklevelpercentage___axiom.dynamic_invariant Oxygen__oxygentankcheck__position.position.int__content True False True True) } ));
+   (#"oxygen.adb" 40 0 0# ());
+   (#"oxygen.adb" 49 0 0# ());
+   ( "GP_Sloc:oxygen.adb:39:11" (#"oxygen.adb" 39 0 0# ()) );
+   ( "GP_Sloc:oxygen.adb:39:38" (#"oxygen.adb" 39 0 0# ()) );
+   ( "GP_Sloc:oxygen.adb:39:7" (#"oxygen.adb" 39 0 0# (if ((Boolean.orb((Oxygen__oxygentankstatus.oxygentankstatus.int__content = 0)) ((Oxygen__oxygentankstatus.oxygentankstatus.int__content = 1)))) then (
+    ( ( "GP_Sloc:oxygen.adb:40:44" (#"oxygen.adb" 40 0 0# ( () (* Translation of an Ada loop from oxygen.adb:40 *)
     ;
     (if ((Oxygen__oxygentankcheck__position.position.int__content > 0)) then (
-     #"oxygen.adb" 44 0 0# try
-      ( #"oxygen.adb" 44 0 0# abstract ensures {true}(let _ = Oxygen__oxygentankcheck__position.position.int__content in (
+     #"oxygen.adb" 40 0 0# try
+      ( #"oxygen.adb" 40 0 0# abstract ensures {true}(let _ = Oxygen__oxygentankcheck__position.position.int__content in (
        ()))
        end ;
-      (let temp___251 = #"oxygen.adb" 44 0 0# (any int
-      ensures {#"oxygen.adb" 44 0 0# (result = Oxygen__oxygentankcheck__position.position.int__content)} 
+      (let temp___254 = #"oxygen.adb" 40 0 0# (any int
+      ensures {#"oxygen.adb" 40 0 0# (result = Oxygen__oxygentankcheck__position.position.int__content)} 
       ) in (
-       ( #"oxygen.adb" 44 0 0# abstract ensures {true}(let _ = Oxygen__oxygentank.oxygentank.Array__Int__Oxygen__content.map__content in (
+       ( #"oxygen.adb" 40 0 0# abstract ensures {true}(let _ = Oxygen__oxygentank.oxygentank.Array__Int__Oxygen__content.map__content in (
         ()))
         end ;
-       (let temp___249 = #"oxygen.adb" 44 0 0# (any Array__Int__Oxygen__content.map
-       ensures {#"oxygen.adb" 44 0 0# (result = Oxygen__oxygentank.oxygentank.Array__Int__Oxygen__content.map__content)} 
+       (let temp___252 = #"oxygen.adb" 40 0 0# (any Array__Int__Oxygen__content.map
+       ensures {#"oxygen.adb" 40 0 0# (result = Oxygen__oxygentank.oxygentank.Array__Int__Oxygen__content.map__content)} 
        ) in (
-        ( () (* First unroling of the loop statements appearing before the loop invariant of loop oxygen.adb:44 *)
+        ( () (* First unroling of the loop statements appearing before the loop invariant of loop oxygen.adb:40 *)
         ;
-        () (* While loop translating the Ada loop from oxygen.adb:44 *)
+        () (* While loop translating the Ada loop from oxygen.adb:40 *)
         ;
-        #"oxygen.adb" 44 0 0# while True do
-         ( () (* Assume implicit invariants from the loop oxygen.adb:44 *)
+        #"oxygen.adb" 40 0 0# while True do
+         ( () (* Assume implicit invariants from the loop oxygen.adb:40 *)
          ;
-         #"oxygen.adb" 44 0 0# assume { #"oxygen.adb" 44 0 0# (Boolean.andb(( ( ( ( true /\ (Oxygen__oxygentankcontainer___axiom.dynamic_invariant Oxygen__oxygentank.oxygentank.Array__Int__Oxygen__content.map__content True True True True) ) /\ true ) /\ (Oxygen__tanklevelpercentage___axiom.dynamic_invariant Oxygen__oxygentankcheck__position.position.int__content False True True True) ) /\ true )) ((Oxygen__oxygentankcheck__position.position.int__content > 0))) };
-         () (* Check for absence of RTE in the invariant of loop oxygen.adb:44 *)
+         #"oxygen.adb" 40 0 0# assume { #"oxygen.adb" 40 0 0# (Boolean.andb(( ( ( ( true /\ (Oxygen__oxygentankcontainer___axiom.dynamic_invariant Oxygen__oxygentank.oxygentank.Array__Int__Oxygen__content.map__content True True True True) ) /\ true ) /\ (Oxygen__tanklevelpercentage___axiom.dynamic_invariant Oxygen__oxygentankcheck__position.position.int__content False True True True) ) /\ true )) ((Oxygen__oxygentankcheck__position.position.int__content > 0))) };
+         () (* Check for absence of RTE in the invariant of loop oxygen.adb:40 *)
          ;
-         () (* Loop statements appearing after the loop invariant of loop oxygen.adb:44 *)
+         () (* Loop statements appearing after the loop invariant of loop oxygen.adb:40 *)
          ;
-         ( "GP_Sloc:oxygen.adb:45:13" (#"oxygen.adb" 45 0 0# ()) );
-         ( "GP_Sloc:oxygen.adb:45:24" (#"oxygen.adb" 45 0 0# ()) );
-         ( "GP_Sloc:oxygen.adb:45:34" (#"oxygen.adb" 45 0 0# #"oxygen.adb" 45 0 0# Oxygen__oxygentank.oxygentank.Array__Int__Oxygen__content.map__content <- ( (Array__Int__Oxygen__content.set(Oxygen__oxygentank.oxygentank.Array__Int__Oxygen__content.map__content) (Oxygen__oxygentankcheck__position.position.int__content) ((Oxygen__content__rep.of_rep(1)))) )) );
-         ( "GP_Sloc:oxygen.adb:46:16" (#"oxygen.adb" 46 0 0# ()) );
-         ( "GP_Sloc:oxygen.adb:46:13" (#"oxygen.adb" 46 0 0# (if ((Oxygen__oxygentankcheck__position.position.int__content = 10)) then (
-          ( "GP_Sloc:oxygen.adb:46:35" (#"oxygen.adb" 46 0 0# #"oxygen.adb" 46 0 0# raise Oxygen__oxygentankcheck__L_2.L_2) )) else (
-          ( ( "GP_Sloc:oxygen.adb:47:18" (#"oxygen.adb" 47 0 0# ()) );
-          ( "GP_Sloc:oxygen.adb:47:30" (#"oxygen.adb" 47 0 0# ()) );
-          ( "GP_Sloc:oxygen.adb:47:27" (#"oxygen.adb" 47 0 0# #"oxygen.adb" 47 0 0# Oxygen__oxygentankcheck__position.position.int__content <- ( (#"oxygen.adb" 47 0 0# ( "model_vc" "keep_on_simp" "GP_Reason:VC_RANGE_CHECK" "GP_Sloc:oxygen.adb:47:39" "GP_Id:5" "comment:            else Position := Position - 1;
-                                      ^ oxygen.adb:47:39:VC_RANGE_CHECK" "GP_Shape:if__L_2_while__if__position_assign__sub" (Oxygen__tanklevelpercentage.range_check_((Oxygen__oxygentankcheck__position.position.int__content - 1))) )) )) ) )))) );
-         () (* Check for the exit condition and loop statements appearing before the loop invariant of loop oxygen.adb:44 *)
+         ( "GP_Sloc:oxygen.adb:41:13" (#"oxygen.adb" 41 0 0# ()) );
+         ( "GP_Sloc:oxygen.adb:41:24" (#"oxygen.adb" 41 0 0# ()) );
+         ( "GP_Sloc:oxygen.adb:41:34" (#"oxygen.adb" 41 0 0# #"oxygen.adb" 41 0 0# Oxygen__oxygentank.oxygentank.Array__Int__Oxygen__content.map__content <- ( (Array__Int__Oxygen__content.set(Oxygen__oxygentank.oxygentank.Array__Int__Oxygen__content.map__content) (Oxygen__oxygentankcheck__position.position.int__content) ((Oxygen__content__rep.of_rep(1)))) )) );
+         ( "GP_Sloc:oxygen.adb:42:16" (#"oxygen.adb" 42 0 0# ()) );
+         ( "GP_Sloc:oxygen.adb:42:13" (#"oxygen.adb" 42 0 0# (if ((Oxygen__oxygentankcheck__position.position.int__content = 10)) then (
+          ( "GP_Sloc:oxygen.adb:42:35" (#"oxygen.adb" 42 0 0# #"oxygen.adb" 42 0 0# raise Oxygen__oxygentankcheck__L_2.L_2) )) else (
+          ( ( "GP_Sloc:oxygen.adb:43:18" (#"oxygen.adb" 43 0 0# ()) );
+          ( "GP_Sloc:oxygen.adb:43:30" (#"oxygen.adb" 43 0 0# ()) );
+          ( "GP_Sloc:oxygen.adb:43:27" (#"oxygen.adb" 43 0 0# #"oxygen.adb" 43 0 0# Oxygen__oxygentankcheck__position.position.int__content <- ( (#"oxygen.adb" 43 0 0# ( "model_vc" "keep_on_simp" "GP_Reason:VC_RANGE_CHECK" "GP_Sloc:oxygen.adb:43:39" "GP_Id:6" "comment:            else Position := Position - 1;
+                                      ^ oxygen.adb:43:39:VC_RANGE_CHECK" "GP_Shape:if__L_2_while__if__position_assign__sub" (Oxygen__tanklevelpercentage.range_check_((Oxygen__oxygentankcheck__position.position.int__content - 1))) )) )) ) )))) );
+         () (* Check for the exit condition and loop statements appearing before the loop invariant of loop oxygen.adb:40 *)
          ;
          (if (not ( (Oxygen__oxygentankcheck__position.position.int__content > 0) )) then (
            raise Oxygen__oxygentankcheck__L_2.L_2)) )
@@ -4363,49 +4525,49 @@ module Oxygen__oxygentankcheck__subprogram_def
      with
       Oxygen__oxygentankcheck__L_2.L_2 -> ()
      end)) )) );
-    ( "GP_Sloc:oxygen.adb:50:10" (#"oxygen.adb" 50 0 0# ()) );
-    ( "GP_Sloc:oxygen.adb:50:27" (#"oxygen.adb" 50 0 0# #"oxygen.adb" 50 0 0# Oxygen__oxygentankstatus.oxygentankstatus.int__content <- ( 2 )) );
-    ( "GP_Sloc:oxygen.adb:51:10" (#"oxygen.adb" 51 0 0# ()) );
-    ( "GP_Sloc:oxygen.adb:51:29" (#"oxygen.adb" 51 0 0# #"oxygen.adb" 51 0 0# Oxygen__oxygentanklowalarm.oxygentanklowalarm.int__content <- ( 0 )) ) )) else (
-    ( ( "GP_Sloc:oxygen.adb:53:45" (#"oxygen.adb" 53 0 0# ( () (* Translation of an Ada loop from oxygen.adb:53 *)
+    ( "GP_Sloc:oxygen.adb:46:10" (#"oxygen.adb" 46 0 0# ()) );
+    ( "GP_Sloc:oxygen.adb:46:26" (#"oxygen.adb" 46 0 0# #"oxygen.adb" 46 0 0# Oxygen__oxygentankalarm.oxygentankalarm.int__content <- ( 0 )) );
+    ( "GP_Sloc:oxygen.adb:47:10" (#"oxygen.adb" 47 0 0# ()) );
+    ( "GP_Sloc:oxygen.adb:47:27" (#"oxygen.adb" 47 0 0# #"oxygen.adb" 47 0 0# Oxygen__oxygentankstatus.oxygentankstatus.int__content <- ( 2 )) ) )) else (
+    ( ( "GP_Sloc:oxygen.adb:49:45" (#"oxygen.adb" 49 0 0# ( () (* Translation of an Ada loop from oxygen.adb:49 *)
     ;
     (if ((Oxygen__oxygentankcheck__position.position.int__content >= 0)) then (
-     #"oxygen.adb" 53 0 0# try
-      ( #"oxygen.adb" 53 0 0# abstract ensures {true}(let _ = Oxygen__oxygentankcheck__position.position.int__content in (
+     #"oxygen.adb" 49 0 0# try
+      ( #"oxygen.adb" 49 0 0# abstract ensures {true}(let _ = Oxygen__oxygentankcheck__position.position.int__content in (
        ()))
        end ;
-      (let temp___248 = #"oxygen.adb" 53 0 0# (any int
-      ensures {#"oxygen.adb" 53 0 0# (result = Oxygen__oxygentankcheck__position.position.int__content)} 
+      (let temp___251 = #"oxygen.adb" 49 0 0# (any int
+      ensures {#"oxygen.adb" 49 0 0# (result = Oxygen__oxygentankcheck__position.position.int__content)} 
       ) in (
-       ( #"oxygen.adb" 53 0 0# abstract ensures {true}(let _ = Oxygen__oxygentank.oxygentank.Array__Int__Oxygen__content.map__content in (
+       ( #"oxygen.adb" 49 0 0# abstract ensures {true}(let _ = Oxygen__oxygentank.oxygentank.Array__Int__Oxygen__content.map__content in (
         ()))
         end ;
-       (let temp___246 = #"oxygen.adb" 53 0 0# (any Array__Int__Oxygen__content.map
-       ensures {#"oxygen.adb" 53 0 0# (result = Oxygen__oxygentank.oxygentank.Array__Int__Oxygen__content.map__content)} 
+       (let temp___249 = #"oxygen.adb" 49 0 0# (any Array__Int__Oxygen__content.map
+       ensures {#"oxygen.adb" 49 0 0# (result = Oxygen__oxygentank.oxygentank.Array__Int__Oxygen__content.map__content)} 
        ) in (
-        ( () (* First unroling of the loop statements appearing before the loop invariant of loop oxygen.adb:53 *)
+        ( () (* First unroling of the loop statements appearing before the loop invariant of loop oxygen.adb:49 *)
         ;
-        () (* While loop translating the Ada loop from oxygen.adb:53 *)
+        () (* While loop translating the Ada loop from oxygen.adb:49 *)
         ;
-        #"oxygen.adb" 53 0 0# while True do
-         ( () (* Assume implicit invariants from the loop oxygen.adb:53 *)
+        #"oxygen.adb" 49 0 0# while True do
+         ( () (* Assume implicit invariants from the loop oxygen.adb:49 *)
          ;
-         #"oxygen.adb" 53 0 0# assume { #"oxygen.adb" 53 0 0# (Boolean.andb(( ( ( ( true /\ (Oxygen__oxygentankcontainer___axiom.dynamic_invariant Oxygen__oxygentank.oxygentank.Array__Int__Oxygen__content.map__content True True True True) ) /\ true ) /\ (Oxygen__tanklevelpercentage___axiom.dynamic_invariant Oxygen__oxygentankcheck__position.position.int__content False True True True) ) /\ true )) ((Oxygen__oxygentankcheck__position.position.int__content >= 0))) };
-         () (* Check for absence of RTE in the invariant of loop oxygen.adb:53 *)
+         #"oxygen.adb" 49 0 0# assume { #"oxygen.adb" 49 0 0# (Boolean.andb(( ( ( ( true /\ (Oxygen__oxygentankcontainer___axiom.dynamic_invariant Oxygen__oxygentank.oxygentank.Array__Int__Oxygen__content.map__content True True True True) ) /\ true ) /\ (Oxygen__tanklevelpercentage___axiom.dynamic_invariant Oxygen__oxygentankcheck__position.position.int__content False True True True) ) /\ true )) ((Oxygen__oxygentankcheck__position.position.int__content >= 0))) };
+         () (* Check for absence of RTE in the invariant of loop oxygen.adb:49 *)
          ;
-         () (* Loop statements appearing after the loop invariant of loop oxygen.adb:53 *)
+         () (* Loop statements appearing after the loop invariant of loop oxygen.adb:49 *)
          ;
-         ( "GP_Sloc:oxygen.adb:54:13" (#"oxygen.adb" 54 0 0# ()) );
-         ( "GP_Sloc:oxygen.adb:54:24" (#"oxygen.adb" 54 0 0# ()) );
-         ( "GP_Sloc:oxygen.adb:54:34" (#"oxygen.adb" 54 0 0# #"oxygen.adb" 54 0 0# Oxygen__oxygentank.oxygentank.Array__Int__Oxygen__content.map__content <- ( (Array__Int__Oxygen__content.set(Oxygen__oxygentank.oxygentank.Array__Int__Oxygen__content.map__content) (Oxygen__oxygentankcheck__position.position.int__content) ((Oxygen__content__rep.of_rep(1)))) )) );
-         ( "GP_Sloc:oxygen.adb:55:16" (#"oxygen.adb" 55 0 0# ()) );
-         ( "GP_Sloc:oxygen.adb:55:13" (#"oxygen.adb" 55 0 0# (if ((Oxygen__oxygentankcheck__position.position.int__content = 0)) then (
-          ( "GP_Sloc:oxygen.adb:55:34" (#"oxygen.adb" 55 0 0# #"oxygen.adb" 55 0 0# raise Oxygen__oxygentankcheck__L_3.L_3) )) else (
-          ( ( "GP_Sloc:oxygen.adb:56:18" (#"oxygen.adb" 56 0 0# ()) );
-          ( "GP_Sloc:oxygen.adb:56:30" (#"oxygen.adb" 56 0 0# ()) );
-          ( "GP_Sloc:oxygen.adb:56:27" (#"oxygen.adb" 56 0 0# #"oxygen.adb" 56 0 0# Oxygen__oxygentankcheck__position.position.int__content <- ( (#"oxygen.adb" 56 0 0# ( "model_vc" "keep_on_simp" "GP_Reason:VC_RANGE_CHECK" "GP_Sloc:oxygen.adb:56:39" "GP_Id:4" "comment:            else Position := Position - 1;
-                                      ^ oxygen.adb:56:39:VC_RANGE_CHECK" "GP_Shape:if__L_3_while__if__position_assign__sub" (Oxygen__tanklevelpercentage.range_check_((Oxygen__oxygentankcheck__position.position.int__content - 1))) )) )) ) )))) );
-         () (* Check for the exit condition and loop statements appearing before the loop invariant of loop oxygen.adb:53 *)
+         ( "GP_Sloc:oxygen.adb:50:13" (#"oxygen.adb" 50 0 0# ()) );
+         ( "GP_Sloc:oxygen.adb:50:24" (#"oxygen.adb" 50 0 0# ()) );
+         ( "GP_Sloc:oxygen.adb:50:34" (#"oxygen.adb" 50 0 0# #"oxygen.adb" 50 0 0# Oxygen__oxygentank.oxygentank.Array__Int__Oxygen__content.map__content <- ( (Array__Int__Oxygen__content.set(Oxygen__oxygentank.oxygentank.Array__Int__Oxygen__content.map__content) (Oxygen__oxygentankcheck__position.position.int__content) ((Oxygen__content__rep.of_rep(1)))) )) );
+         ( "GP_Sloc:oxygen.adb:51:16" (#"oxygen.adb" 51 0 0# ()) );
+         ( "GP_Sloc:oxygen.adb:51:13" (#"oxygen.adb" 51 0 0# (if ((Oxygen__oxygentankcheck__position.position.int__content = 0)) then (
+          ( "GP_Sloc:oxygen.adb:51:34" (#"oxygen.adb" 51 0 0# #"oxygen.adb" 51 0 0# raise Oxygen__oxygentankcheck__L_3.L_3) )) else (
+          ( ( "GP_Sloc:oxygen.adb:52:18" (#"oxygen.adb" 52 0 0# ()) );
+          ( "GP_Sloc:oxygen.adb:52:30" (#"oxygen.adb" 52 0 0# ()) );
+          ( "GP_Sloc:oxygen.adb:52:27" (#"oxygen.adb" 52 0 0# #"oxygen.adb" 52 0 0# Oxygen__oxygentankcheck__position.position.int__content <- ( (#"oxygen.adb" 52 0 0# ( "model_vc" "keep_on_simp" "GP_Reason:VC_RANGE_CHECK" "GP_Sloc:oxygen.adb:52:39" "GP_Id:4" "comment:            else Position := Position - 1;
+                                      ^ oxygen.adb:52:39:VC_RANGE_CHECK" "GP_Shape:if__L_3_while__if__position_assign__sub" (Oxygen__tanklevelpercentage.range_check_((Oxygen__oxygentankcheck__position.position.int__content - 1))) )) )) ) )))) );
+         () (* Check for the exit condition and loop statements appearing before the loop invariant of loop oxygen.adb:49 *)
          ;
          (if (not ( (Oxygen__oxygentankcheck__position.position.int__content >= 0) )) then (
            raise Oxygen__oxygentankcheck__L_3.L_3)) )
@@ -4415,63 +4577,66 @@ module Oxygen__oxygentankcheck__subprogram_def
      with
       Oxygen__oxygentankcheck__L_3.L_3 -> ()
      end)) )) );
-    ( "GP_Sloc:oxygen.adb:59:10" (#"oxygen.adb" 59 0 0# ()) );
-    ( "GP_Sloc:oxygen.adb:59:27" (#"oxygen.adb" 59 0 0# #"oxygen.adb" 59 0 0# Oxygen__oxygentankstatus.oxygentankstatus.int__content <- ( 3 )) );
-    ( "GP_Sloc:oxygen.adb:60:10" (#"oxygen.adb" 60 0 0# ()) );
-    ( "GP_Sloc:oxygen.adb:60:31" (#"oxygen.adb" 60 0 0# #"oxygen.adb" 60 0 0# Oxygen__oxygentankemptyalarm.oxygentankemptyalarm.int__content <- ( 0 )) ) )))) );
+    ( "GP_Sloc:oxygen.adb:55:10" (#"oxygen.adb" 55 0 0# ()) );
+    ( "GP_Sloc:oxygen.adb:55:27" (#"oxygen.adb" 55 0 0# #"oxygen.adb" 55 0 0# Oxygen__oxygentankstatus.oxygentankstatus.int__content <- ( 3 )) );
+    ( "GP_Sloc:oxygen.adb:56:10" (#"oxygen.adb" 56 0 0# ()) );
+    ( "GP_Sloc:oxygen.adb:56:26" (#"oxygen.adb" 56 0 0# #"oxygen.adb" 56 0 0# Oxygen__oxygentankalarm.oxygentankalarm.int__content <- ( 0 )) );
+    ( "GP_Sloc:oxygen.adb:57:10" (#"oxygen.adb" 57 0 0# ()) );
+    ( "GP_Sloc:oxygen.adb:57:10" (#"oxygen.adb" 57 0 0# ( (#"oxygen.adb" 57 0 0# ( "model_vc" "keep_on_simp" "GP_Sloc:oxygen.adb:57:10" "GP_Reason:VC_PRECONDITION" "GP_Id:5" "comment:         SurfaceTheSubmarine;
+         ^ oxygen.adb:57:10:VC_PRECONDITION" "GP_Shape:if__call_surfacethesubmarine" (Movement__surfacethesubmarine___axiom.surfacethesubmarine(())) )) )) ) )))) );
     raise Return__exc )
   with
    Return__exc -> ()
   end;
-   abstract ensures {true}(let _ = (Boolean.orb(( (Oxygen__oxygentankstatus.oxygentankstatus.int__content = 2) && (Oxygen__oxygentanklowalarm.oxygentanklowalarm.int__content = 0) )) (( (Oxygen__oxygentankstatus.oxygentankstatus.int__content = 3) && (Oxygen__oxygentankemptyalarm.oxygentankemptyalarm.int__content = 0) ))) in (
+   abstract ensures {true}(let _ = ( (Boolean.orb((Oxygen__oxygentankstatus.oxygentankstatus.int__content = 2)) ((Oxygen__oxygentankstatus.oxygentankstatus.int__content = 3))) && (Oxygen__oxygentankalarm.oxygentankalarm.int__content = 0) ) in (
    ()))
    end  )
 end
 
-(* Module for checking contracts and absence of run-time errors in subprogram "turnoffoxygenlowalarm" defined at oxygen.ads:57, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+(* Module for checking contracts and absence of run-time errors in subprogram "turnoffoxygenlowalarm" defined at oxygen.ads:51, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
 module Oxygen__turnoffoxygenlowalarm__subprogram_def
  use import "_gnatprove_standard".Main
  use import "int".Int
  use        Oxygen__alarm___axiom
- use        Oxygen__oxygentanklowalarm
+ use        Oxygen__oxygentankalarm
  use        Oxygen__recievedwarning___axiom
- use        Oxygen__oxygentankwarningrecieved
+ use        Oxygen__oxygentanklowwarningrecieved
  use        Oxygen__alarm___axiom
- use        Oxygen__oxygentanklowalarm___axiom
+ use        Oxygen__oxygentankalarm___axiom
  use        Oxygen__recievedwarning___axiom
- use        Oxygen__oxygentankwarningrecieved___axiom
+ use        Oxygen__oxygentanklowwarningrecieved___axiom
 
- let def #"oxygen.ads" 57 0 0#"W:diverges:N" "GP_Subp:oxygen.ads:57" 
+ let def #"oxygen.ads" 51 0 0#"W:diverges:N" "GP_Subp:oxygen.ads:51" 
    (__void_param : unit)
-  requires { #"oxygen.ads" 57 0 0# true }
-  ensures { #"oxygen.ads" 57 0 0# (#"oxygen.ads" 60 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:oxygen.ads:60:14" "GP_Id:7" "comment:     Post => oxygenTankLowAlarm = Off and then oxygenTankWarningRecieved = Yes;
-             ^ oxygen.ads:60:14:VC_POSTCONDITION" ( ( "GP_Pretty_Ada:4680" "GP_Sloc:oxygen.ads:60:14" (Oxygen__oxygentanklowalarm.oxygentanklowalarm.int__content = 1) ) /\ ( "GP_Pretty_Ada:2870" "GP_Sloc:oxygen.ads:60:74" (Oxygen__oxygentankwarningrecieved.oxygentankwarningrecieved.int__content = 0) ) ) )) }
+  requires { #"oxygen.ads" 51 0 0# true }
+  ensures { #"oxygen.ads" 51 0 0# (#"oxygen.ads" 54 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:oxygen.ads:54:14" "GP_Id:8" "comment:     Post => oxygenTankAlarm = Off and then oxygenTankLowWarningRecieved = Yes;
+             ^ oxygen.ads:54:14:VC_POSTCONDITION" ( ( "GP_Pretty_Ada:5068" "GP_Sloc:oxygen.ads:54:14" (Oxygen__oxygentankalarm.oxygentankalarm.int__content = 1) ) /\ ( "GP_Pretty_Ada:2884" "GP_Sloc:oxygen.ads:54:74" (Oxygen__oxygentanklowwarningrecieved.oxygentanklowwarningrecieved.int__content = 0) ) ) )) }
    =
-  ( () (* Assume dynamic invariants of inputs of the subprogram oxygen.ads:57 *)
+  ( () (* Assume dynamic invariants of inputs of the subprogram oxygen.ads:51 *)
   ;
-   assume {  (Oxygen__alarm___axiom.dynamic_invariant Oxygen__oxygentanklowalarm.oxygentanklowalarm.int__content True False True True) };
-   assume {  (Oxygen__recievedwarning___axiom.dynamic_invariant Oxygen__oxygentankwarningrecieved.oxygentankwarningrecieved.int__content True False True True) };
+   assume {  (Oxygen__alarm___axiom.dynamic_invariant Oxygen__oxygentankalarm.oxygentankalarm.int__content True False True True) };
+   assume {  (Oxygen__recievedwarning___axiom.dynamic_invariant Oxygen__oxygentanklowwarningrecieved.oxygentanklowwarningrecieved.int__content True False True True) };
    assume {  true };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram oxygen.ads:57 *)
+  () (* Declarations introduced by the compiler at the beginning of the subprogram oxygen.ads:51 *)
   ;
-  () (* Check for RTE in the Pre of the subprogram oxygen.ads:57 *)
+  () (* Check for RTE in the Pre of the subprogram oxygen.ads:51 *)
   ;
-   abstract ensures {true}(let _ = ( (Oxygen__oxygentanklowalarm.oxygentanklowalarm.int__content = 0) && (Oxygen__oxygentankwarningrecieved.oxygentankwarningrecieved.int__content = 1) ) in (
+   abstract ensures {true}(let _ = ( (Oxygen__oxygentankalarm.oxygentankalarm.int__content = 0) && (Oxygen__oxygentanklowwarningrecieved.oxygentanklowwarningrecieved.int__content = 1) ) in (
    ()))
    end ;
-  () (* Assume Pre of the subprogram oxygen.ads:57 *)
+  () (* Assume Pre of the subprogram oxygen.ads:51 *)
   ;
-   assume {  ( (Oxygen__oxygentanklowalarm.oxygentanklowalarm.int__content = 0) /\ (Oxygen__oxygentankwarningrecieved.oxygentankwarningrecieved.int__content = 1) ) };
+   assume {  ( (Oxygen__oxygentankalarm.oxygentankalarm.int__content = 0) /\ (Oxygen__oxygentanklowwarningrecieved.oxygentanklowwarningrecieved.int__content = 1) ) };
    try
-   ( ( "GP_Sloc:oxygen.adb:70:7" (#"oxygen.adb" 70 0 0# ()) );
-   ( "GP_Sloc:oxygen.adb:70:26" (#"oxygen.adb" 70 0 0# #"oxygen.adb" 70 0 0# Oxygen__oxygentanklowalarm.oxygentanklowalarm.int__content <- ( 1 )) );
-   ( "GP_Sloc:oxygen.adb:71:7" (#"oxygen.adb" 71 0 0# ()) );
-   ( "GP_Sloc:oxygen.adb:71:33" (#"oxygen.adb" 71 0 0# #"oxygen.adb" 71 0 0# Oxygen__oxygentankwarningrecieved.oxygentankwarningrecieved.int__content <- ( 0 )) );
+   ( ( "GP_Sloc:oxygen.adb:64:7" (#"oxygen.adb" 64 0 0# ()) );
+   ( "GP_Sloc:oxygen.adb:64:23" (#"oxygen.adb" 64 0 0# #"oxygen.adb" 64 0 0# Oxygen__oxygentankalarm.oxygentankalarm.int__content <- ( 1 )) );
+   ( "GP_Sloc:oxygen.adb:65:7" (#"oxygen.adb" 65 0 0# ()) );
+   ( "GP_Sloc:oxygen.adb:65:36" (#"oxygen.adb" 65 0 0# #"oxygen.adb" 65 0 0# Oxygen__oxygentanklowwarningrecieved.oxygentanklowwarningrecieved.int__content <- ( 0 )) );
     raise Return__exc )
   with
    Return__exc -> ()
   end;
-   abstract ensures {true}(let _ = ( (Oxygen__oxygentanklowalarm.oxygentanklowalarm.int__content = 1) && (Oxygen__oxygentankwarningrecieved.oxygentankwarningrecieved.int__content = 0) ) in (
+   abstract ensures {true}(let _ = ( (Oxygen__oxygentankalarm.oxygentankalarm.int__content = 1) && (Oxygen__oxygentanklowwarningrecieved.oxygentanklowwarningrecieved.int__content = 0) ) in (
    ()))
    end  )
 end

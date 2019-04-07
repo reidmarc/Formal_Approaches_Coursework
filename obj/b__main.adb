@@ -31,6 +31,8 @@ package body ada_main is
    E117 : Short_Integer; pragma Import (Ada, E117, "submarine_E");
    E115 : Short_Integer; pragma Import (Ada, E115, "movement_E");
    E119 : Short_Integer; pragma Import (Ada, E119, "oxygen_E");
+   E121 : Short_Integer; pragma Import (Ada, E121, "reactor_E");
+   E125 : Short_Integer; pragma Import (Ada, E125, "torpedoes_E");
 
    Sec_Default_Sized_Stacks : array (1 .. 1) of aliased System.Secondary_Stack.SS_Stack (System.Parameters.Runtime_Default_Sec_Stack_Size);
 
@@ -205,6 +207,8 @@ package body ada_main is
       E117 := E117 + 1;
       E115 := E115 + 1;
       E119 := E119 + 1;
+      E121 := E121 + 1;
+      E125 := E125 + 1;
    end adainit;
 
    procedure Ada_Main_Program;
@@ -243,6 +247,8 @@ package body ada_main is
    --   C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\obj\Submarine.o
    --   C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\obj\Movement.o
    --   C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\obj\Oxygen.o
+   --   C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\obj\Reactor.o
+   --   C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\obj\Torpedoes.o
    --   C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\obj\main.o
    --   -LC:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\obj\
    --   -LC:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\obj\

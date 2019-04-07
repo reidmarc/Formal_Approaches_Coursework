@@ -1,25 +1,22 @@
+with Submarine;
+use Submarine;
+with Movement;
+use Movement;
+
+
 package body Reactor with Spark_Mode
 is
-
-
 
    ------------------------------------------------------------
    -- If the reactor overheats, the submarine has to surface --
    ------------------------------------------------------------
 
-
-
-   procedure P1 (s, n : in out Integer) is
+   procedure ReactorTempOverheats is
    begin
-      s := s + 2;
-      n := n - 1;
-   end P1;
-
-
-
-
-
-
-
+      for A in ReactorTempRange loop
+         reactorTemp := A;
+      end loop;
+      SurfaceTheSubmarine;
+   end ReactorTempOverheats;
 
 end Reactor;
