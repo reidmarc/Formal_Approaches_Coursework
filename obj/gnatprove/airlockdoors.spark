@@ -1,91 +1,91 @@
 {
   "spark": [
     {
-      "name": "Submarine",
+      "name": "AirLockDoors",
       "sloc": [
         {
-          "file": "submarine.ads",
-          "line": 1
+          "file": "airlockdoors.ads",
+          "line": 4
         }
       ],
       "spark": "all"
     },
     {
-      "name": "Submarine.OpenOuterAirLockDoor",
+      "name": "AirLockDoors.OpenOuterAirLockDoor",
       "sloc": [
         {
-          "file": "submarine.ads",
-          "line": 23
+          "file": "airlockdoors.ads",
+          "line": 20
         }
       ],
       "spark": "all"
     },
     {
-      "name": "Submarine.OpenInnerAirLockDoor",
+      "name": "AirLockDoors.OpenInnerAirLockDoor",
       "sloc": [
         {
-          "file": "submarine.ads",
-          "line": 29
+          "file": "airlockdoors.ads",
+          "line": 26
         }
       ],
       "spark": "all"
     },
     {
-      "name": "Submarine.CloseOuterAirLockDoor",
+      "name": "AirLockDoors.CloseOuterAirLockDoor",
       "sloc": [
         {
-          "file": "submarine.ads",
-          "line": 36
+          "file": "airlockdoors.ads",
+          "line": 33
         }
       ],
       "spark": "all"
     },
     {
-      "name": "Submarine.CloseInnerAirLockDoor",
+      "name": "AirLockDoors.CloseInnerAirLockDoor",
       "sloc": [
         {
-          "file": "submarine.ads",
-          "line": 42
+          "file": "airlockdoors.ads",
+          "line": 39
         }
       ],
       "spark": "all"
     },
     {
-      "name": "Submarine.LockOuterDoor",
+      "name": "AirLockDoors.LockOuterDoor",
       "sloc": [
         {
-          "file": "submarine.ads",
-          "line": 53
+          "file": "airlockdoors.ads",
+          "line": 48
         }
       ],
       "spark": "all"
     },
     {
-      "name": "Submarine.UnlockOuterDoor",
+      "name": "AirLockDoors.UnlockOuterDoor",
       "sloc": [
         {
-          "file": "submarine.ads",
-          "line": 59
+          "file": "airlockdoors.ads",
+          "line": 54
         }
       ],
       "spark": "all"
     },
     {
-      "name": "Submarine.LockInnerDoor",
+      "name": "AirLockDoors.LockInnerDoor",
       "sloc": [
         {
-          "file": "submarine.ads",
-          "line": 65
+          "file": "airlockdoors.ads",
+          "line": 60
         }
       ],
       "spark": "all"
     },
     {
-      "name": "Submarine.UnlockInnerDoor",
+      "name": "AirLockDoors.UnlockInnerDoor",
       "sloc": [
         {
-          "file": "submarine.ads",
-          "line": 71
+          "file": "airlockdoors.ads",
+          "line": 66
         }
       ],
       "spark": "all"
@@ -95,17 +95,17 @@
   ],
   "proof": [
     {
-      "file": "submarine.ads",
-      "line": 74,
+      "file": "airlockdoors.ads",
+      "line": 69,
       "col": 14,
       "rule": "VC_POSTCONDITION",
       "severity": "info",
       "entity": {
-        "name": "Submarine.UnlockInnerDoor",
+        "name": "AirLockDoors.UnlockInnerDoor",
         "sloc": [
           {
-            "file": "submarine.ads",
-            "line": 71
+            "file": "airlockdoors.ads",
+            "line": 66
           }
         ]
       },
@@ -133,8 +133,8 @@
           }
         }
       ],
-      "check_file": "submarine.ads",
-      "check_line": 74,
+      "check_file": "airlockdoors.ads",
+      "check_line": 69,
       "check_col": 14,
       "how_proved": "prover",
       "stats": {
@@ -146,71 +146,17 @@
       }
     },
     {
-      "file": "submarine.ads",
-      "line": 26,
+      "file": "airlockdoors.ads",
+      "line": 23,
       "col": 14,
       "rule": "VC_POSTCONDITION",
       "severity": "info",
       "entity": {
-        "name": "Submarine.OpenOuterAirLockDoor",
+        "name": "AirLockDoors.OpenOuterAirLockDoor",
         "sloc": [
           {
-            "file": "submarine.ads",
-            "line": 23
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-            "split_disj": [
-              {
-                "proof_attempts": {
-                },
-                "transformations": {
-                }
-              },
-              {
-                "proof_attempts": {
-                },
-                "transformations": {
-                }
-              }
-            ]
-          }
-        }
-      ],
-      "check_file": "submarine.ads",
-      "check_line": 26,
-      "check_col": 14,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 1,
-          "max_steps": 1,
-          "max_time": 0.00000000000000E+00
-        }
-      }
-    },
-    {
-      "file": "submarine.ads",
-      "line": 68,
-      "col": 14,
-      "rule": "VC_POSTCONDITION",
-      "severity": "info",
-      "entity": {
-        "name": "Submarine.LockInnerDoor",
-        "sloc": [
-          {
-            "file": "submarine.ads",
-            "line": 65
+            "file": "airlockdoors.ads",
+            "line": 20
           }
         ]
       },
@@ -227,8 +173,8 @@
           }
         }
       ],
-      "check_file": "submarine.ads",
-      "check_line": 68,
+      "check_file": "airlockdoors.ads",
+      "check_line": 23,
       "check_col": 14,
       "how_proved": "prover",
       "stats": {
@@ -240,17 +186,17 @@
       }
     },
     {
-      "file": "submarine.ads",
-      "line": 45,
+      "file": "airlockdoors.ads",
+      "line": 63,
       "col": 14,
       "rule": "VC_POSTCONDITION",
       "severity": "info",
       "entity": {
-        "name": "Submarine.CloseInnerAirLockDoor",
+        "name": "AirLockDoors.LockInnerDoor",
         "sloc": [
           {
-            "file": "submarine.ads",
-            "line": 42
+            "file": "airlockdoors.ads",
+            "line": 60
           }
         ]
       },
@@ -267,8 +213,8 @@
           }
         }
       ],
-      "check_file": "submarine.ads",
-      "check_line": 45,
+      "check_file": "airlockdoors.ads",
+      "check_line": 63,
       "check_col": 14,
       "how_proved": "prover",
       "stats": {
@@ -280,17 +226,17 @@
       }
     },
     {
-      "file": "submarine.ads",
-      "line": 56,
+      "file": "airlockdoors.ads",
+      "line": 42,
       "col": 14,
       "rule": "VC_POSTCONDITION",
       "severity": "info",
       "entity": {
-        "name": "Submarine.LockOuterDoor",
+        "name": "AirLockDoors.CloseInnerAirLockDoor",
         "sloc": [
           {
-            "file": "submarine.ads",
-            "line": 53
+            "file": "airlockdoors.ads",
+            "line": 39
           }
         ]
       },
@@ -307,8 +253,8 @@
           }
         }
       ],
-      "check_file": "submarine.ads",
-      "check_line": 56,
+      "check_file": "airlockdoors.ads",
+      "check_line": 42,
       "check_col": 14,
       "how_proved": "prover",
       "stats": {
@@ -320,17 +266,57 @@
       }
     },
     {
-      "file": "submarine.ads",
-      "line": 62,
+      "file": "airlockdoors.ads",
+      "line": 51,
       "col": 14,
       "rule": "VC_POSTCONDITION",
       "severity": "info",
       "entity": {
-        "name": "Submarine.UnlockOuterDoor",
+        "name": "AirLockDoors.LockOuterDoor",
         "sloc": [
           {
-            "file": "submarine.ads",
-            "line": 59
+            "file": "airlockdoors.ads",
+            "line": 48
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "airlockdoors.ads",
+      "check_line": 51,
+      "check_col": 14,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "airlockdoors.ads",
+      "line": 57,
+      "col": 14,
+      "rule": "VC_POSTCONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "AirLockDoors.UnlockOuterDoor",
+        "sloc": [
+          {
+            "file": "airlockdoors.ads",
+            "line": 54
           }
         ]
       },
@@ -358,8 +344,8 @@
           }
         }
       ],
-      "check_file": "submarine.ads",
-      "check_line": 62,
+      "check_file": "airlockdoors.ads",
+      "check_line": 57,
       "check_col": 14,
       "how_proved": "prover",
       "stats": {
@@ -371,17 +357,17 @@
       }
     },
     {
-      "file": "submarine.ads",
-      "line": 33,
+      "file": "airlockdoors.ads",
+      "line": 30,
       "col": 14,
       "rule": "VC_POSTCONDITION",
       "severity": "info",
       "entity": {
-        "name": "Submarine.OpenInnerAirLockDoor",
+        "name": "AirLockDoors.OpenInnerAirLockDoor",
         "sloc": [
           {
-            "file": "submarine.ads",
-            "line": 29
+            "file": "airlockdoors.ads",
+            "line": 26
           }
         ]
       },
@@ -395,25 +381,11 @@
             }
           },
           "transformations": {
-            "split_disj": [
-              {
-                "proof_attempts": {
-                },
-                "transformations": {
-                }
-              },
-              {
-                "proof_attempts": {
-                },
-                "transformations": {
-                }
-              }
-            ]
           }
         }
       ],
-      "check_file": "submarine.ads",
-      "check_line": 33,
+      "check_file": "airlockdoors.ads",
+      "check_line": 30,
       "check_col": 14,
       "how_proved": "prover",
       "stats": {
@@ -425,17 +397,17 @@
       }
     },
     {
-      "file": "submarine.ads",
-      "line": 39,
+      "file": "airlockdoors.ads",
+      "line": 36,
       "col": 14,
       "rule": "VC_POSTCONDITION",
       "severity": "info",
       "entity": {
-        "name": "Submarine.CloseOuterAirLockDoor",
+        "name": "AirLockDoors.CloseOuterAirLockDoor",
         "sloc": [
           {
-            "file": "submarine.ads",
-            "line": 36
+            "file": "airlockdoors.ads",
+            "line": 33
           }
         ]
       },
@@ -452,8 +424,8 @@
           }
         }
       ],
-      "check_file": "submarine.ads",
-      "check_line": 39,
+      "check_file": "airlockdoors.ads",
+      "check_line": 36,
       "check_col": 14,
       "how_proved": "prover",
       "stats": {
@@ -472,43 +444,11 @@
       "claim": {
         "predicate": "CLAIM_POST",
         "arg": {
-          "name": "Submarine.LockInnerDoor",
+          "name": "AirLockDoors.LockInnerDoor",
           "sloc": [
             {
-              "file": "submarine.ads",
-              "line": 65
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_EFFECTS",
-        "arg": {
-          "name": "Submarine.LockInnerDoor",
-          "sloc": [
-            {
-              "file": "submarine.ads",
-              "line": 65
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_AORTE",
-        "arg": {
-          "name": "Submarine.LockInnerDoor",
-          "sloc": [
-            {
-              "file": "submarine.ads",
-              "line": 65
+              "file": "airlockdoors.ads",
+              "line": 60
             }
           ]
         }
@@ -520,11 +460,11 @@
       "claim": {
         "predicate": "CLAIM_POST",
         "arg": {
-          "name": "Submarine.OpenOuterAirLockDoor",
+          "name": "AirLockDoors.CloseInnerAirLockDoor",
           "sloc": [
             {
-              "file": "submarine.ads",
-              "line": 23
+              "file": "airlockdoors.ads",
+              "line": 39
             }
           ]
         }
@@ -536,11 +476,11 @@
       "claim": {
         "predicate": "CLAIM_EFFECTS",
         "arg": {
-          "name": "Submarine.OpenOuterAirLockDoor",
+          "name": "AirLockDoors.LockInnerDoor",
           "sloc": [
             {
-              "file": "submarine.ads",
-              "line": 23
+              "file": "airlockdoors.ads",
+              "line": 60
             }
           ]
         }
@@ -552,11 +492,43 @@
       "claim": {
         "predicate": "CLAIM_AORTE",
         "arg": {
-          "name": "Submarine.OpenOuterAirLockDoor",
+          "name": "AirLockDoors.LockInnerDoor",
           "sloc": [
             {
-              "file": "submarine.ads",
-              "line": 23
+              "file": "airlockdoors.ads",
+              "line": 60
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "AirLockDoors.CloseInnerAirLockDoor",
+          "sloc": [
+            {
+              "file": "airlockdoors.ads",
+              "line": 39
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "AirLockDoors.CloseInnerAirLockDoor",
+          "sloc": [
+            {
+              "file": "airlockdoors.ads",
+              "line": 39
             }
           ]
         }
@@ -568,11 +540,11 @@
       "claim": {
         "predicate": "CLAIM_POST",
         "arg": {
-          "name": "Submarine.CloseOuterAirLockDoor",
+          "name": "AirLockDoors.OpenInnerAirLockDoor",
           "sloc": [
             {
-              "file": "submarine.ads",
-              "line": 36
+              "file": "airlockdoors.ads",
+              "line": 26
             }
           ]
         }
@@ -584,11 +556,11 @@
       "claim": {
         "predicate": "CLAIM_EFFECTS",
         "arg": {
-          "name": "Submarine.CloseOuterAirLockDoor",
+          "name": "AirLockDoors.OpenInnerAirLockDoor",
           "sloc": [
             {
-              "file": "submarine.ads",
-              "line": 36
+              "file": "airlockdoors.ads",
+              "line": 26
             }
           ]
         }
@@ -600,11 +572,11 @@
       "claim": {
         "predicate": "CLAIM_AORTE",
         "arg": {
-          "name": "Submarine.CloseOuterAirLockDoor",
+          "name": "AirLockDoors.OpenInnerAirLockDoor",
           "sloc": [
             {
-              "file": "submarine.ads",
-              "line": 36
+              "file": "airlockdoors.ads",
+              "line": 26
             }
           ]
         }
@@ -616,11 +588,11 @@
       "claim": {
         "predicate": "CLAIM_POST",
         "arg": {
-          "name": "Submarine.UnlockInnerDoor",
+          "name": "AirLockDoors.UnlockInnerDoor",
           "sloc": [
             {
-              "file": "submarine.ads",
-              "line": 71
+              "file": "airlockdoors.ads",
+              "line": 66
             }
           ]
         }
@@ -632,11 +604,11 @@
       "claim": {
         "predicate": "CLAIM_AORTE",
         "arg": {
-          "name": "Submarine",
+          "name": "AirLockDoors",
           "sloc": [
             {
-              "file": "submarine.ads",
-              "line": 1
+              "file": "airlockdoors.ads",
+              "line": 4
             }
           ]
         }
@@ -648,11 +620,11 @@
       "claim": {
         "predicate": "CLAIM_EFFECTS",
         "arg": {
-          "name": "Submarine.UnlockInnerDoor",
+          "name": "AirLockDoors.UnlockInnerDoor",
           "sloc": [
             {
-              "file": "submarine.ads",
-              "line": 71
+              "file": "airlockdoors.ads",
+              "line": 66
             }
           ]
         }
@@ -664,11 +636,11 @@
       "claim": {
         "predicate": "CLAIM_AORTE",
         "arg": {
-          "name": "Submarine.UnlockInnerDoor",
+          "name": "AirLockDoors.UnlockInnerDoor",
           "sloc": [
             {
-              "file": "submarine.ads",
-              "line": 71
+              "file": "airlockdoors.ads",
+              "line": 66
             }
           ]
         }
@@ -680,11 +652,11 @@
       "claim": {
         "predicate": "CLAIM_POST",
         "arg": {
-          "name": "Submarine.LockOuterDoor",
+          "name": "AirLockDoors.LockOuterDoor",
           "sloc": [
             {
-              "file": "submarine.ads",
-              "line": 53
+              "file": "airlockdoors.ads",
+              "line": 48
             }
           ]
         }
@@ -696,11 +668,11 @@
       "claim": {
         "predicate": "CLAIM_EFFECTS",
         "arg": {
-          "name": "Submarine.LockOuterDoor",
+          "name": "AirLockDoors.LockOuterDoor",
           "sloc": [
             {
-              "file": "submarine.ads",
-              "line": 53
+              "file": "airlockdoors.ads",
+              "line": 48
             }
           ]
         }
@@ -712,11 +684,11 @@
       "claim": {
         "predicate": "CLAIM_AORTE",
         "arg": {
-          "name": "Submarine.LockOuterDoor",
+          "name": "AirLockDoors.LockOuterDoor",
           "sloc": [
             {
-              "file": "submarine.ads",
-              "line": 53
+              "file": "airlockdoors.ads",
+              "line": 48
             }
           ]
         }
@@ -728,43 +700,11 @@
       "claim": {
         "predicate": "CLAIM_POST",
         "arg": {
-          "name": "Submarine.CloseInnerAirLockDoor",
+          "name": "AirLockDoors.OpenOuterAirLockDoor",
           "sloc": [
             {
-              "file": "submarine.ads",
-              "line": 42
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_EFFECTS",
-        "arg": {
-          "name": "Submarine.CloseInnerAirLockDoor",
-          "sloc": [
-            {
-              "file": "submarine.ads",
-              "line": 42
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_AORTE",
-        "arg": {
-          "name": "Submarine.CloseInnerAirLockDoor",
-          "sloc": [
-            {
-              "file": "submarine.ads",
-              "line": 42
+              "file": "airlockdoors.ads",
+              "line": 20
             }
           ]
         }
@@ -776,11 +716,11 @@
       "claim": {
         "predicate": "CLAIM_POST",
         "arg": {
-          "name": "Submarine.UnlockOuterDoor",
+          "name": "AirLockDoors.UnlockOuterDoor",
           "sloc": [
             {
-              "file": "submarine.ads",
-              "line": 59
+              "file": "airlockdoors.ads",
+              "line": 54
             }
           ]
         }
@@ -792,11 +732,59 @@
       "claim": {
         "predicate": "CLAIM_EFFECTS",
         "arg": {
-          "name": "Submarine.UnlockOuterDoor",
+          "name": "AirLockDoors.OpenOuterAirLockDoor",
           "sloc": [
             {
-              "file": "submarine.ads",
-              "line": 59
+              "file": "airlockdoors.ads",
+              "line": 20
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "AirLockDoors.OpenOuterAirLockDoor",
+          "sloc": [
+            {
+              "file": "airlockdoors.ads",
+              "line": 20
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "AirLockDoors.UnlockOuterDoor",
+          "sloc": [
+            {
+              "file": "airlockdoors.ads",
+              "line": 54
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "AirLockDoors.UnlockOuterDoor",
+          "sloc": [
+            {
+              "file": "airlockdoors.ads",
+              "line": 54
             }
           ]
         }
@@ -808,27 +796,11 @@
       "claim": {
         "predicate": "CLAIM_POST",
         "arg": {
-          "name": "Submarine.OpenInnerAirLockDoor",
+          "name": "AirLockDoors.CloseOuterAirLockDoor",
           "sloc": [
             {
-              "file": "submarine.ads",
-              "line": 29
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_AORTE",
-        "arg": {
-          "name": "Submarine.UnlockOuterDoor",
-          "sloc": [
-            {
-              "file": "submarine.ads",
-              "line": 59
+              "file": "airlockdoors.ads",
+              "line": 33
             }
           ]
         }
@@ -840,11 +812,11 @@
       "claim": {
         "predicate": "CLAIM_EFFECTS",
         "arg": {
-          "name": "Submarine.OpenInnerAirLockDoor",
+          "name": "AirLockDoors.CloseOuterAirLockDoor",
           "sloc": [
             {
-              "file": "submarine.ads",
-              "line": 29
+              "file": "airlockdoors.ads",
+              "line": 33
             }
           ]
         }
@@ -856,11 +828,11 @@
       "claim": {
         "predicate": "CLAIM_AORTE",
         "arg": {
-          "name": "Submarine.OpenInnerAirLockDoor",
+          "name": "AirLockDoors.CloseOuterAirLockDoor",
           "sloc": [
             {
-              "file": "submarine.ads",
-              "line": 29
+              "file": "airlockdoors.ads",
+              "line": 33
             }
           ]
         }
@@ -868,14 +840,14 @@
     }
   ],
   "timings": {
-    "marking": 3.68100008927286E-04,
-    "globals (basic)": 1.05510000139475E-03,
-    "globals/properties (advanced)": 2.11509992368519E-03,
-    "flow analysis": 2.06719990819693E-02,
-    "codepeer results": 9.00000031833770E-06,
-    "init_why_sections": 3.48500005202368E-04,
-    "translation of standard": 5.45549998059869E-03,
-    "translation of compilation unit": 1.45774995908141E-02,
-    "proof": 9.51686918735504E-01
+    "marking": 5.76800026465207E-04,
+    "globals (basic)": 1.81599997449666E-03,
+    "globals/properties (advanced)": 2.32929992489517E-03,
+    "flow analysis": 1.89232993870974E-02,
+    "codepeer results": 7.30000010662479E-06,
+    "init_why_sections": 5.45600021723658E-04,
+    "translation of standard": 4.89469990134239E-03,
+    "translation of compilation unit": 1.40674002468586E-02,
+    "proof": 9.49546873569489E-01
   }
 }

@@ -1,11 +1,8 @@
-package Submarine with SPARK_Mode
+with Movement;
+use Movement;
+
+package AirLockDoors with SPARK_Mode
 is
-
-   type DepthMonitor is range 0..2000;
-   currentDepth : DepthMonitor;
-
-
-
    ---------------------------------------------------------------------------
    -- The submarine must have at least one airlock door closed at all times --
    ---------------------------------------------------------------------------
@@ -47,8 +44,6 @@ is
    -------------------------------------------------------------------------------------
    -- The submarine can perform no operations unless both doors are closed and locked --
    -------------------------------------------------------------------------------------
-   type OperationStatus is (Allowed, Prohibited);
-   currentOperationStatus : OperationStatus;
 
    procedure LockOuterDoor with
      Global => (In_Out => (outerDoor, currentOperationStatus), Input => innerDoor),
@@ -73,11 +68,4 @@ is
      Pre => currentDepth = 0 and then innerDoor.lock = Locked,
      Post => innerDoor.lock = Unlocked and then currentOperationStatus = Prohibited;
 
-
-
-
-
-
-
-
-end Submarine;
+end AirLockDoors;

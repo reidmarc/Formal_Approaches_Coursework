@@ -1,8 +1,5 @@
-with Submarine;
-use Submarine;
 with Movement;
 use Movement;
-
 
 package body Reactor with Spark_Mode
 is

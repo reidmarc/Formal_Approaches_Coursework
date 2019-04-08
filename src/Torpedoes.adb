@@ -1,3 +1,5 @@
+with Movement;
+use Movement;
 
 package body Torpedoes with Spark_Mode
 is
@@ -23,11 +25,5 @@ is
          end loop;
       end if;
      end FillTorpedoeStorage;
-
-
-
-
-
-
 
 end Torpedoes;

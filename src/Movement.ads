@@ -1,9 +1,13 @@
-with Submarine;
-use Submarine;
-
-
 package Movement with SPARK_Mode
 is
+
+   type DepthMonitor is range 0..2000;
+   currentDepth : DepthMonitor;
+
+   type OperationStatus is (Allowed, Prohibited);
+   currentOperationStatus : OperationStatus;
+
+
    function MaxDepthInvariant return Boolean is
      (currentDepth <= 2000);
 

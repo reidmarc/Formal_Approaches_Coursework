@@ -5,7 +5,7 @@
       "sloc": [
         {
           "file": "movement.ads",
-          "line": 5
+          "line": 1
         }
       ],
       "spark": "all"
@@ -15,7 +15,7 @@
       "sloc": [
         {
           "file": "movement.ads",
-          "line": 7
+          "line": 11
         }
       ],
       "spark": "all"
@@ -25,7 +25,7 @@
       "sloc": [
         {
           "file": "movement.ads",
-          "line": 10
+          "line": 14
         }
       ],
       "spark": "all"
@@ -35,7 +35,7 @@
       "sloc": [
         {
           "file": "movement.ads",
-          "line": 16
+          "line": 20
         }
       ],
       "spark": "all"
@@ -45,7 +45,7 @@
       "sloc": [
         {
           "file": "movement.ads",
-          "line": 22
+          "line": 26
         }
       ],
       "spark": "all"
@@ -55,7 +55,7 @@
       "sloc": [
         {
           "file": "movement.ads",
-          "line": 28
+          "line": 32
         }
       ],
       "spark": "all"
@@ -65,7 +65,7 @@
       "sloc": [
         {
           "file": "movement.ads",
-          "line": 34
+          "line": 38
         }
       ],
       "spark": "all"
@@ -76,7 +76,7 @@
   "proof": [
     {
       "file": "movement.adb",
-      "line": 16,
+      "line": 11,
       "col": 39,
       "rule": "VC_RANGE_CHECK",
       "severity": "info",
@@ -85,7 +85,7 @@
         "sloc": [
           {
             "file": "movement.ads",
-            "line": 16
+            "line": 20
           }
         ]
       },
@@ -103,7 +103,7 @@
         }
       ],
       "check_file": "movement.adb",
-      "check_line": 16,
+      "check_line": 11,
       "check_col": 39,
       "how_proved": "prover",
       "stats": {
@@ -116,7 +116,7 @@
     },
     {
       "file": "movement.ads",
-      "line": 31,
+      "line": 35,
       "col": 14,
       "rule": "VC_POSTCONDITION",
       "severity": "info",
@@ -125,7 +125,7 @@
         "sloc": [
           {
             "file": "movement.ads",
-            "line": 28
+            "line": 32
           }
         ]
       },
@@ -154,7 +154,7 @@
         }
       ],
       "check_file": "movement.ads",
-      "check_line": 31,
+      "check_line": 35,
       "check_col": 14,
       "how_proved": "prover",
       "stats": {
@@ -167,7 +167,7 @@
     },
     {
       "file": "movement.ads",
-      "line": 37,
+      "line": 41,
       "col": 14,
       "rule": "VC_POSTCONDITION",
       "severity": "info",
@@ -176,7 +176,7 @@
         "sloc": [
           {
             "file": "movement.ads",
-            "line": 34
+            "line": 38
           }
         ]
       },
@@ -194,7 +194,7 @@
         }
       ],
       "check_file": "movement.ads",
-      "check_line": 37,
+      "check_line": 41,
       "check_col": 14,
       "how_proved": "prover",
       "stats": {
@@ -207,7 +207,7 @@
     },
     {
       "file": "movement.ads",
-      "line": 19,
+      "line": 23,
       "col": 14,
       "rule": "VC_POSTCONDITION",
       "severity": "info",
@@ -216,7 +216,7 @@
         "sloc": [
           {
             "file": "movement.ads",
-            "line": 16
+            "line": 20
           }
         ]
       },
@@ -245,7 +245,7 @@
         }
       ],
       "check_file": "movement.ads",
-      "check_line": 19,
+      "check_line": 23,
       "check_col": 14,
       "how_proved": "prover",
       "stats": {
@@ -258,7 +258,7 @@
     },
     {
       "file": "movement.adb",
-      "line": 32,
+      "line": 27,
       "col": 39,
       "rule": "VC_RANGE_CHECK",
       "severity": "info",
@@ -267,7 +267,7 @@
         "sloc": [
           {
             "file": "movement.ads",
-            "line": 28
+            "line": 32
           }
         ]
       },
@@ -285,7 +285,7 @@
         }
       ],
       "check_file": "movement.adb",
-      "check_line": 32,
+      "check_line": 27,
       "check_col": 39,
       "how_proved": "prover",
       "stats": {
@@ -298,7 +298,7 @@
     },
     {
       "file": "movement.ads",
-      "line": 25,
+      "line": 29,
       "col": 14,
       "rule": "VC_POSTCONDITION",
       "severity": "info",
@@ -307,7 +307,7 @@
         "sloc": [
           {
             "file": "movement.ads",
-            "line": 22
+            "line": 26
           }
         ]
       },
@@ -325,7 +325,7 @@
         }
       ],
       "check_file": "movement.ads",
-      "check_line": 25,
+      "check_line": 29,
       "check_col": 14,
       "how_proved": "prover",
       "stats": {
@@ -340,226 +340,6 @@
   "assumptions": [
     {
       "assumptions": [
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "Movement.MaxDepthInvariant",
-            "sloc": [
-              {
-                "file": "movement.ads",
-                "line": 7
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_AORTE",
-          "arg": {
-            "name": "Movement.MaxDepthInvariant",
-            "sloc": [
-              {
-                "file": "movement.ads",
-                "line": 7
-              }
-            ]
-          }
-        }
-      ],
-      "claim": {
-        "predicate": "CLAIM_POST",
-        "arg": {
-          "name": "Movement.RaiseTheSubmarine100ft",
-          "sloc": [
-            {
-              "file": "movement.ads",
-              "line": 28
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "Movement.MaxDepthInvariant",
-            "sloc": [
-              {
-                "file": "movement.ads",
-                "line": 7
-              }
-            ]
-          }
-        }
-      ],
-      "claim": {
-        "predicate": "CLAIM_EFFECTS",
-        "arg": {
-          "name": "Movement.RaiseTheSubmarine100ft",
-          "sloc": [
-            {
-              "file": "movement.ads",
-              "line": 28
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "Movement.MaxDepthInvariant",
-            "sloc": [
-              {
-                "file": "movement.ads",
-                "line": 7
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_AORTE",
-          "arg": {
-            "name": "Movement.MaxDepthInvariant",
-            "sloc": [
-              {
-                "file": "movement.ads",
-                "line": 7
-              }
-            ]
-          }
-        }
-      ],
-      "claim": {
-        "predicate": "CLAIM_AORTE",
-        "arg": {
-          "name": "Movement.RaiseTheSubmarine100ft",
-          "sloc": [
-            {
-              "file": "movement.ads",
-              "line": 28
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_POST",
-        "arg": {
-          "name": "Movement.DiveTheSubmarine100ft",
-          "sloc": [
-            {
-              "file": "movement.ads",
-              "line": 16
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_EFFECTS",
-        "arg": {
-          "name": "Movement.DiveTheSubmarine100ft",
-          "sloc": [
-            {
-              "file": "movement.ads",
-              "line": 16
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_AORTE",
-        "arg": {
-          "name": "Movement.DiveTheSubmarine100ft",
-          "sloc": [
-            {
-              "file": "movement.ads",
-              "line": 16
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_EFFECTS",
-        "arg": {
-          "name": "Movement.NotSurfacedInvariant",
-          "sloc": [
-            {
-              "file": "movement.ads",
-              "line": 10
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_AORTE",
-        "arg": {
-          "name": "Movement.NotSurfacedInvariant",
-          "sloc": [
-            {
-              "file": "movement.ads",
-              "line": 10
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_EFFECTS",
-        "arg": {
-          "name": "Movement.MaxDepthInvariant",
-          "sloc": [
-            {
-              "file": "movement.ads",
-              "line": 7
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_AORTE",
-        "arg": {
-          "name": "Movement.MaxDepthInvariant",
-          "sloc": [
-            {
-              "file": "movement.ads",
-              "line": 7
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
       ],
       "claim": {
         "predicate": "CLAIM_AORTE",
@@ -568,7 +348,7 @@
           "sloc": [
             {
               "file": "movement.ads",
-              "line": 5
+              "line": 1
             }
           ]
         }
@@ -584,7 +364,7 @@
           "sloc": [
             {
               "file": "movement.ads",
-              "line": 22
+              "line": 26
             }
           ]
         }
@@ -600,7 +380,7 @@
           "sloc": [
             {
               "file": "movement.ads",
-              "line": 22
+              "line": 26
             }
           ]
         }
@@ -616,7 +396,7 @@
           "sloc": [
             {
               "file": "movement.ads",
-              "line": 22
+              "line": 26
             }
           ]
         }
@@ -631,7 +411,7 @@
             "sloc": [
               {
                 "file": "movement.ads",
-                "line": 7
+                "line": 11
               }
             ]
           }
@@ -643,7 +423,7 @@
             "sloc": [
               {
                 "file": "movement.ads",
-                "line": 10
+                "line": 14
               }
             ]
           }
@@ -655,7 +435,7 @@
             "sloc": [
               {
                 "file": "movement.ads",
-                "line": 7
+                "line": 11
               }
             ]
           }
@@ -667,7 +447,7 @@
             "sloc": [
               {
                 "file": "movement.ads",
-                "line": 10
+                "line": 14
               }
             ]
           }
@@ -680,7 +460,7 @@
           "sloc": [
             {
               "file": "movement.ads",
-              "line": 34
+              "line": 38
             }
           ]
         }
@@ -695,7 +475,7 @@
             "sloc": [
               {
                 "file": "movement.ads",
-                "line": 7
+                "line": 11
               }
             ]
           }
@@ -707,7 +487,7 @@
             "sloc": [
               {
                 "file": "movement.ads",
-                "line": 10
+                "line": 14
               }
             ]
           }
@@ -720,7 +500,7 @@
           "sloc": [
             {
               "file": "movement.ads",
-              "line": 34
+              "line": 38
             }
           ]
         }
@@ -735,7 +515,7 @@
             "sloc": [
               {
                 "file": "movement.ads",
-                "line": 7
+                "line": 11
               }
             ]
           }
@@ -747,7 +527,7 @@
             "sloc": [
               {
                 "file": "movement.ads",
-                "line": 10
+                "line": 14
               }
             ]
           }
@@ -759,7 +539,7 @@
             "sloc": [
               {
                 "file": "movement.ads",
-                "line": 7
+                "line": 11
               }
             ]
           }
@@ -771,7 +551,7 @@
             "sloc": [
               {
                 "file": "movement.ads",
-                "line": 10
+                "line": 14
               }
             ]
           }
@@ -784,7 +564,227 @@
           "sloc": [
             {
               "file": "movement.ads",
-              "line": 34
+              "line": 38
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Movement.MaxDepthInvariant",
+            "sloc": [
+              {
+                "file": "movement.ads",
+                "line": 11
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "Movement.MaxDepthInvariant",
+            "sloc": [
+              {
+                "file": "movement.ads",
+                "line": 11
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_POST",
+        "arg": {
+          "name": "Movement.RaiseTheSubmarine100ft",
+          "sloc": [
+            {
+              "file": "movement.ads",
+              "line": 32
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Movement.MaxDepthInvariant",
+            "sloc": [
+              {
+                "file": "movement.ads",
+                "line": 11
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Movement.RaiseTheSubmarine100ft",
+          "sloc": [
+            {
+              "file": "movement.ads",
+              "line": 32
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Movement.MaxDepthInvariant",
+            "sloc": [
+              {
+                "file": "movement.ads",
+                "line": 11
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "Movement.MaxDepthInvariant",
+            "sloc": [
+              {
+                "file": "movement.ads",
+                "line": 11
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Movement.RaiseTheSubmarine100ft",
+          "sloc": [
+            {
+              "file": "movement.ads",
+              "line": 32
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_POST",
+        "arg": {
+          "name": "Movement.DiveTheSubmarine100ft",
+          "sloc": [
+            {
+              "file": "movement.ads",
+              "line": 20
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Movement.DiveTheSubmarine100ft",
+          "sloc": [
+            {
+              "file": "movement.ads",
+              "line": 20
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Movement.DiveTheSubmarine100ft",
+          "sloc": [
+            {
+              "file": "movement.ads",
+              "line": 20
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Movement.NotSurfacedInvariant",
+          "sloc": [
+            {
+              "file": "movement.ads",
+              "line": 14
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Movement.NotSurfacedInvariant",
+          "sloc": [
+            {
+              "file": "movement.ads",
+              "line": 14
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Movement.MaxDepthInvariant",
+          "sloc": [
+            {
+              "file": "movement.ads",
+              "line": 11
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Movement.MaxDepthInvariant",
+          "sloc": [
+            {
+              "file": "movement.ads",
+              "line": 11
             }
           ]
         }
@@ -792,14 +792,14 @@
     }
   ],
   "timings": {
-    "marking": 6.22300023678690E-04,
-    "globals (basic)": 1.15140003617853E-03,
-    "globals/properties (advanced)": 2.73640011437237E-03,
-    "flow analysis": 6.56889984384179E-03,
-    "codepeer results": 6.00000021222513E-06,
-    "init_why_sections": 3.25700006214902E-04,
-    "translation of standard": 9.19609982520342E-03,
-    "translation of compilation unit": 1.02674998342991E-02,
-    "proof": 8.50888311862946E-01
+    "marking": 2.94600002234802E-04,
+    "globals (basic)": 7.01399985700846E-04,
+    "globals/properties (advanced)": 1.34990003425628E-03,
+    "flow analysis": 6.88990019261837E-03,
+    "codepeer results": 5.50000004295725E-06,
+    "init_why_sections": 2.05200005439110E-04,
+    "translation of standard": 5.93119999393821E-03,
+    "translation of compilation unit": 5.82229997962713E-03,
+    "proof": 8.40039491653442E-01
   }
 }

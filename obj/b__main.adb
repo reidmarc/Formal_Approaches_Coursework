@@ -28,8 +28,8 @@ package body ada_main is
    E110 : Short_Integer; pragma Import (Ada, E110, "ada__finalization_E");
    E109 : Short_Integer; pragma Import (Ada, E109, "system__file_io_E");
    E006 : Short_Integer; pragma Import (Ada, E006, "ada__text_io_E");
-   E117 : Short_Integer; pragma Import (Ada, E117, "submarine_E");
-   E115 : Short_Integer; pragma Import (Ada, E115, "movement_E");
+   E117 : Short_Integer; pragma Import (Ada, E117, "movement_E");
+   E115 : Short_Integer; pragma Import (Ada, E115, "airlockdoors_E");
    E119 : Short_Integer; pragma Import (Ada, E119, "oxygen_E");
    E121 : Short_Integer; pragma Import (Ada, E121, "reactor_E");
    E125 : Short_Integer; pragma Import (Ada, E125, "torpedoes_E");
@@ -244,11 +244,11 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
-   --   C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\obj\Submarine.o
-   --   C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\obj\Movement.o
-   --   C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\obj\Oxygen.o
-   --   C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\obj\Reactor.o
-   --   C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\obj\Torpedoes.o
+   --   C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\obj\movement.o
+   --   C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\obj\airlockdoors.o
+   --   C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\obj\oxygen.o
+   --   C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\obj\reactor.o
+   --   C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\obj\torpedoes.o
    --   C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\obj\main.o
    --   -LC:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\obj\
    --   -LC:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\obj\

@@ -1,6 +1,5 @@
-with Submarine;
-use Submarine;
-
+with Movement;
+use Movement;
 
 package Torpedoes with SPARK_Mode
 is
@@ -21,14 +20,12 @@ is
    torpedoeTube : Launcher := (Empty);
 
 
-
-
    ---------------------------
    -- Fill torpedoe storage --
    ---------------------------
    procedure FillTorpedoeStorage with
      Global => (In_Out => (torpedoeStorage), Input => currentDepth),
-     Pre => currentDepth = 0,
+     Pre => currentDepth = 0 and then StorageIsEmpty(torpedoeStorage),
      Post => StorageIsFull(torpedoeStorage);
 
    -- for all J in torpedoeStorage'Range => torpedoeStorage(J) = Torp);
@@ -38,8 +35,8 @@ is
      (for all I in d'Range => d(I) = Torp);
 
 
-
-
+   function StorageIsEmpty (d : Storage) return Boolean is
+     (for all I in d'Range => d(I) = Nothing);
 
 
    -- Storing
@@ -47,11 +44,5 @@ is
    -- Loading
 
    -- Firing
-
-
-
-
-
-
 
 end Torpedoes;

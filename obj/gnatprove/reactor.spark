@@ -5,7 +5,7 @@
       "sloc": [
         {
           "file": "reactor.ads",
-          "line": 6
+          "line": 4
         }
       ],
       "spark": "all"
@@ -15,7 +15,7 @@
       "sloc": [
         {
           "file": "reactor.ads",
-          "line": 15
+          "line": 13
         }
       ],
       "spark": "all"
@@ -26,7 +26,7 @@
   "proof": [
     {
       "file": "reactor.adb",
-      "line": 19,
+      "line": 16,
       "col": 7,
       "rule": "VC_PRECONDITION",
       "severity": "info",
@@ -35,7 +35,7 @@
         "sloc": [
           {
             "file": "reactor.ads",
-            "line": 15
+            "line": 13
           }
         ]
       },
@@ -64,7 +64,7 @@
         }
       ],
       "check_file": "reactor.adb",
-      "check_line": 19,
+      "check_line": 16,
       "check_col": 7,
       "how_proved": "prover",
       "stats": {
@@ -77,7 +77,7 @@
     },
     {
       "file": "reactor.ads",
-      "line": 18,
+      "line": 16,
       "col": 14,
       "rule": "VC_POSTCONDITION",
       "severity": "info",
@@ -86,7 +86,7 @@
         "sloc": [
           {
             "file": "reactor.ads",
-            "line": 15
+            "line": 13
           }
         ]
       },
@@ -100,32 +100,6 @@
             }
           },
           "transformations": {
-            "split_disj": [
-              {
-                "proof_attempts": {
-                },
-                "transformations": {
-                }
-              },
-              {
-                "proof_attempts": {
-                },
-                "transformations": {
-                }
-              },
-              {
-                "proof_attempts": {
-                },
-                "transformations": {
-                }
-              },
-              {
-                "proof_attempts": {
-                },
-                "transformations": {
-                }
-              }
-            ]
           }
         },
         {
@@ -141,7 +115,7 @@
         }
       ],
       "check_file": "reactor.ads",
-      "check_line": 18,
+      "check_line": 16,
       "check_col": 14,
       "how_proved": "prover",
       "stats": {
@@ -156,6 +130,22 @@
   "assumptions": [
     {
       "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Reactor",
+          "sloc": [
+            {
+              "file": "reactor.ads",
+              "line": 4
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
         {
           "predicate": "CLAIM_POST",
           "arg": {
@@ -163,7 +153,7 @@
             "sloc": [
               {
                 "file": "movement.ads",
-                "line": 34
+                "line": 38
               }
             ]
           }
@@ -175,7 +165,7 @@
             "sloc": [
               {
                 "file": "movement.ads",
-                "line": 34
+                "line": 38
               }
             ]
           }
@@ -187,7 +177,7 @@
             "sloc": [
               {
                 "file": "movement.ads",
-                "line": 34
+                "line": 38
               }
             ]
           }
@@ -200,7 +190,7 @@
           "sloc": [
             {
               "file": "reactor.ads",
-              "line": 15
+              "line": 13
             }
           ]
         }
@@ -215,7 +205,7 @@
             "sloc": [
               {
                 "file": "movement.ads",
-                "line": 34
+                "line": 38
               }
             ]
           }
@@ -228,7 +218,7 @@
           "sloc": [
             {
               "file": "reactor.ads",
-              "line": 15
+              "line": 13
             }
           ]
         }
@@ -243,7 +233,7 @@
             "sloc": [
               {
                 "file": "movement.ads",
-                "line": 34
+                "line": 38
               }
             ]
           }
@@ -255,7 +245,7 @@
             "sloc": [
               {
                 "file": "movement.ads",
-                "line": 34
+                "line": 38
               }
             ]
           }
@@ -267,7 +257,7 @@
             "sloc": [
               {
                 "file": "movement.ads",
-                "line": 34
+                "line": 38
               }
             ]
           }
@@ -280,23 +270,7 @@
           "sloc": [
             {
               "file": "reactor.ads",
-              "line": 15
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_AORTE",
-        "arg": {
-          "name": "Reactor",
-          "sloc": [
-            {
-              "file": "reactor.ads",
-              "line": 6
+              "line": 13
             }
           ]
         }
@@ -304,14 +278,14 @@
     }
   ],
   "timings": {
-    "marking": 4.20399999711663E-04,
-    "globals (basic)": 1.82150001637638E-03,
-    "globals/properties (advanced)": 3.15980007871985E-03,
-    "flow analysis": 2.39309994503856E-03,
-    "codepeer results": 1.49999996210681E-05,
-    "init_why_sections": 2.52800004091114E-04,
-    "translation of standard": 4.27980022504926E-03,
-    "translation of compilation unit": 7.29840015992522E-03,
-    "proof": 6.27337276935577E-01
+    "marking": 2.20100002479739E-04,
+    "globals (basic)": 1.09130004420877E-03,
+    "globals/properties (advanced)": 2.62079993262887E-03,
+    "flow analysis": 3.84990009479225E-03,
+    "codepeer results": 5.70000020161388E-06,
+    "init_why_sections": 4.53699991339818E-04,
+    "translation of standard": 4.91099990904331E-03,
+    "translation of compilation unit": 4.81049995869398E-03,
+    "proof": 8.38939011096954E-01
   }
 }

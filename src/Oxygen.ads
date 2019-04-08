@@ -1,8 +1,5 @@
-with Submarine;
-use Submarine;
 with Movement;
 use Movement;
-
 
 package Oxygen with SPARK_Mode
 is

@@ -1,6 +1,8 @@
+with Movement;
+use Movement;
 
 
-package body Submarine with Spark_Mode
+package body AirLockDoors with Spark_Mode
 is
 
    ---------------------------------------------------------------------------
@@ -80,4 +82,4 @@ is
       end if;
    end UnlockInnerDoor;
 
-end Submarine;
+end AirLockDoors;

@@ -3,14 +3,14 @@
 "http://why3.lri.fr/why3session.dtd">
 <why3session shape_version="4">
 <prover id="0" name="CVC4" version="1.6-gnatprove" timelimit="1" steplimit="0" memlimit="0"/>
-<file name="..\altsubmarine.mlw" proved="true">
-<theory name="Altsubmarine__package_def" proved="true">
+<file name="..\airlockdoors.mlw" proved="true">
+<theory name="Airlockdoors__package_def" proved="true">
  <goal name="WP_parameter def" expl="VC for def" proved="true">
  <transf name="split_goal_wp_conj" proved="true" >
  </transf>
  </goal>
 </theory>
-<theory name="Altsubmarine__openouterairlockdoor__subprogram_def" proved="true">
+<theory name="Airlockdoors__openouterairlockdoor__subprogram_def" proved="true">
  <goal name="WP_parameter def" expl="VC for def" proved="true">
  <transf name="split_goal_wp_conj" proved="true" >
   <goal name="WP_parameter def.0" expl="postcondition" proved="true">
@@ -19,7 +19,7 @@
  </transf>
  </goal>
 </theory>
-<theory name="Altsubmarine__openinnerairlockdoor__subprogram_def" proved="true">
+<theory name="Airlockdoors__openinnerairlockdoor__subprogram_def" proved="true">
  <goal name="WP_parameter def" expl="VC for def" proved="true">
  <transf name="split_goal_wp_conj" proved="true" >
   <goal name="WP_parameter def.0" expl="postcondition" proved="true">
@@ -28,7 +28,7 @@
  </transf>
  </goal>
 </theory>
-<theory name="Altsubmarine__closeouterairlockdoor__subprogram_def" proved="true">
+<theory name="Airlockdoors__closeouterairlockdoor__subprogram_def" proved="true">
  <goal name="WP_parameter def" expl="VC for def" proved="true">
  <transf name="split_goal_wp_conj" proved="true" >
   <goal name="WP_parameter def.0" expl="postcondition" proved="true">
@@ -37,7 +37,7 @@
  </transf>
  </goal>
 </theory>
-<theory name="Altsubmarine__closeinnerairlockdoor__subprogram_def" proved="true">
+<theory name="Airlockdoors__closeinnerairlockdoor__subprogram_def" proved="true">
  <goal name="WP_parameter def" expl="VC for def" proved="true">
  <transf name="split_goal_wp_conj" proved="true" >
   <goal name="WP_parameter def.0" expl="postcondition" proved="true">
@@ -46,7 +46,7 @@
  </transf>
  </goal>
 </theory>
-<theory name="Altsubmarine__lockouterdoor__subprogram_def" proved="true">
+<theory name="Airlockdoors__lockouterdoor__subprogram_def" proved="true">
  <goal name="WP_parameter def" expl="VC for def" proved="true">
  <transf name="split_goal_wp_conj" proved="true" >
   <goal name="WP_parameter def.0" expl="postcondition" proved="true">
@@ -55,7 +55,19 @@
  </transf>
  </goal>
 </theory>
-<theory name="Altsubmarine__unlockouterdoor__subprogram_def" proved="true">
+<theory name="Airlockdoors__unlockouterdoor__subprogram_def" proved="true">
+ <goal name="WP_parameter def" expl="VC for def" proved="true">
+ <transf name="split_goal_wp_conj" proved="true" >
+  <goal name="WP_parameter def.0" expl="postcondition" proved="true">
+  <proof prover="0"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="WP_parameter def.1" expl="postcondition" proved="true">
+  <proof prover="0"><result status="valid" steps="5"/></proof>
+  </goal>
+ </transf>
+ </goal>
+</theory>
+<theory name="Airlockdoors__lockinnerdoor__subprogram_def" proved="true">
  <goal name="WP_parameter def" expl="VC for def" proved="true">
  <transf name="split_goal_wp_conj" proved="true" >
   <goal name="WP_parameter def.0" expl="postcondition" proved="true">
@@ -64,37 +76,13 @@
  </transf>
  </goal>
 </theory>
-<theory name="Altsubmarine__lockinnerdoor__subprogram_def" proved="true">
+<theory name="Airlockdoors__unlockinnerdoor__subprogram_def" proved="true">
  <goal name="WP_parameter def" expl="VC for def" proved="true">
  <transf name="split_goal_wp_conj" proved="true" >
   <goal name="WP_parameter def.0" expl="postcondition" proved="true">
   <proof prover="0"><result status="valid" steps="5"/></proof>
   </goal>
- </transf>
- </goal>
-</theory>
-<theory name="Altsubmarine__unlockinnerdoor__subprogram_def" proved="true">
- <goal name="WP_parameter def" expl="VC for def" proved="true">
- <transf name="split_goal_wp_conj" proved="true" >
-  <goal name="WP_parameter def.0" expl="postcondition" proved="true">
-  <proof prover="0"><result status="valid" steps="5"/></proof>
-  </goal>
- </transf>
- </goal>
-</theory>
-<theory name="Altsubmarine__allowoperation__subprogram_def" proved="true">
- <goal name="WP_parameter def" expl="VC for def" proved="true">
- <transf name="split_goal_wp_conj" proved="true" >
-  <goal name="WP_parameter def.0" expl="postcondition" proved="true">
-  <proof prover="0"><result status="valid" steps="5"/></proof>
-  </goal>
- </transf>
- </goal>
-</theory>
-<theory name="Altsubmarine__prohibitoperation__subprogram_def" proved="true">
- <goal name="WP_parameter def" expl="VC for def" proved="true">
- <transf name="split_goal_wp_conj" proved="true" >
-  <goal name="WP_parameter def.0" expl="postcondition" proved="true">
+  <goal name="WP_parameter def.1" expl="postcondition" proved="true">
   <proof prover="0"><result status="valid" steps="5"/></proof>
   </goal>
  </transf>

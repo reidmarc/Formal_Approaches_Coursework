@@ -1,8 +1,5 @@
--- with Submarine;
--- use Submarine;
 with Movement;
 use Movement;
-
 
 package body Oxygen with Spark_Mode
 is

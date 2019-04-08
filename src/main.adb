@@ -1,4 +1,4 @@
-with Submarine; use Submarine;
+with AirLockDoors; use AirLockDoors;
 with Oxygen; use Oxygen;
 with Movement; use Movement;
 with Reactor; use Reactor;

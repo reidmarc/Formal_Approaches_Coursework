@@ -1,10 +1,5 @@
-with Submarine;
-use Submarine;
-
 package body Movement with Spark_Mode
 is
-
-
    -------------------------------------------------------
    -- The submarine cannot dive beneath a certain depth --
    -------------------------------------------------------

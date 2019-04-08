@@ -1638,8 +1638,8 @@ module Standard__universal_integer__rep
 
 end
 
-(* Module for axiomatizing type "TdepthmonitorB" defined at submarine.ads:4, created in Gnat2Why.Types.Translate_Type *)
-module Submarine__TdepthmonitorB
+(* Module for axiomatizing type "TdepthmonitorB" defined at movement.ads:4, created in Gnat2Why.Types.Translate_Type *)
+module Movement__TdepthmonitorB
  use import "_gnatprove_standard".Main
  use import "int".Int
 
@@ -1681,18 +1681,18 @@ module Submarine__TdepthmonitorB
 
 end
 
-(* Module defining to_rep/of_rep for type "TdepthmonitorB" defined at submarine.ads:4, created in Gnat2Why.Types.Translate_Type *)
-module Submarine__TdepthmonitorB__rep
- use        Submarine__TdepthmonitorB
+(* Module defining to_rep/of_rep for type "TdepthmonitorB" defined at movement.ads:4, created in Gnat2Why.Types.Translate_Type *)
+module Movement__TdepthmonitorB__rep
+ use        Movement__TdepthmonitorB
  use import "_gnatprove_standard".Main
 
  function to_rep 
-   (x : Submarine__TdepthmonitorB.tdepthmonitorB) : int =
-  (Submarine__TdepthmonitorB.tdepthmonitorB'int x)
+   (x : Movement__TdepthmonitorB.tdepthmonitorB) : int =
+  (Movement__TdepthmonitorB.tdepthmonitorB'int x)
  
  clone export "ada__model".Rep_Proj_Int with
- type t = Submarine__TdepthmonitorB.tdepthmonitorB, 
- predicate in_range = Submarine__TdepthmonitorB.in_range, 
+ type t = Movement__TdepthmonitorB.tdepthmonitorB, 
+ predicate in_range = Movement__TdepthmonitorB.in_range, 
  function to_rep = to_rep
  
  meta "model_projection" function to_rep
@@ -1701,8 +1701,8 @@ module Submarine__TdepthmonitorB__rep
 
 end
 
-(* Module for axiomatizing type "depthmonitor" defined at submarine.ads:4, created in Gnat2Why.Types.Translate_Type *)
-module Submarine__depthmonitor
+(* Module for axiomatizing type "depthmonitor" defined at movement.ads:4, created in Gnat2Why.Types.Translate_Type *)
+module Movement__depthmonitor
  use import "_gnatprove_standard".Main
  use import "int".Int
 
@@ -1744,18 +1744,18 @@ module Submarine__depthmonitor
 
 end
 
-(* Module defining to_rep/of_rep for type "depthmonitor" defined at submarine.ads:4, created in Gnat2Why.Types.Translate_Type *)
-module Submarine__depthmonitor__rep
- use        Submarine__depthmonitor
+(* Module defining to_rep/of_rep for type "depthmonitor" defined at movement.ads:4, created in Gnat2Why.Types.Translate_Type *)
+module Movement__depthmonitor__rep
+ use        Movement__depthmonitor
  use import "_gnatprove_standard".Main
 
  function to_rep 
-   (x : Submarine__depthmonitor.depthmonitor) : int =
-  (Submarine__depthmonitor.depthmonitor'int x)
+   (x : Movement__depthmonitor.depthmonitor) : int =
+  (Movement__depthmonitor.depthmonitor'int x)
  
  clone export "ada__model".Rep_Proj_Int with
- type t = Submarine__depthmonitor.depthmonitor, 
- predicate in_range = Submarine__depthmonitor.in_range, 
+ type t = Movement__depthmonitor.depthmonitor, 
+ predicate in_range = Movement__depthmonitor.in_range, 
  function to_rep = to_rep
  
  meta "model_projection" function to_rep
@@ -1764,303 +1764,8 @@ module Submarine__depthmonitor__rep
 
 end
 
-(* Module for axiomatizing type "doorstatus" defined at submarine.ads:12, created in Gnat2Why.Types.Translate_Type *)
-module Submarine__doorstatus
- use import "_gnatprove_standard".Main
- use import "int".Int
-
- type doorstatus 
- 
- function first 
-   : int =
-  0
- 
- function last 
-   : int =
-  1
- 
- predicate in_range 
-   (x : int)  =
-  ( (first <= x) /\ (x <= last) )
- 
- clone export "ada__model".Static_Discrete with
- type t = doorstatus, 
- function first = first, 
- function last = last, 
- predicate in_range = in_range
- 
- type doorstatus__ref =
-  { mutable doorstatus__content "model_trace:" "name:" : doorstatus }
- 
- function doorstatus__ref___projection 
-   (a : doorstatus__ref) : doorstatus =
-  a.doorstatus__content
- 
- meta "model_projection" function doorstatus__ref___projection
- 
- meta "inline : no" function doorstatus__ref___projection
- 
- val doorstatus__havoc 
-   (x : doorstatus__ref) : unit
-  writes {x}
-
-end
-
-(* Module defining to_rep/of_rep for type "doorstatus" defined at submarine.ads:12, created in Gnat2Why.Types.Translate_Type *)
-module Submarine__doorstatus__rep
- use        Submarine__doorstatus
- use import "_gnatprove_standard".Main
-
- clone export "ada__model".Rep_Proj_Int with
- type t = Submarine__doorstatus.doorstatus, 
- predicate in_range = Submarine__doorstatus.in_range
- 
- meta "model_projection" function to_rep
- 
- meta "inline : no" function to_rep
-
-end
-
-(* Module for axiomatizing type "lockstatus" defined at submarine.ads:13, created in Gnat2Why.Types.Translate_Type *)
-module Submarine__lockstatus
- use import "_gnatprove_standard".Main
- use import "int".Int
-
- type lockstatus 
- 
- function first 
-   : int =
-  0
- 
- function last 
-   : int =
-  1
- 
- predicate in_range 
-   (x : int)  =
-  ( (first <= x) /\ (x <= last) )
- 
- clone export "ada__model".Static_Discrete with
- type t = lockstatus, 
- function first = first, 
- function last = last, 
- predicate in_range = in_range
- 
- type lockstatus__ref =
-  { mutable lockstatus__content "model_trace:" "name:" : lockstatus }
- 
- function lockstatus__ref___projection 
-   (a : lockstatus__ref) : lockstatus =
-  a.lockstatus__content
- 
- meta "model_projection" function lockstatus__ref___projection
- 
- meta "inline : no" function lockstatus__ref___projection
- 
- val lockstatus__havoc 
-   (x : lockstatus__ref) : unit
-  writes {x}
-
-end
-
-(* Module defining to_rep/of_rep for type "lockstatus" defined at submarine.ads:13, created in Gnat2Why.Types.Translate_Type *)
-module Submarine__lockstatus__rep
- use        Submarine__lockstatus
- use import "_gnatprove_standard".Main
-
- clone export "ada__model".Rep_Proj_Int with
- type t = Submarine__lockstatus.lockstatus, 
- predicate in_range = Submarine__lockstatus.in_range
- 
- meta "model_projection" function to_rep
- 
- meta "inline : no" function to_rep
-
-end
-
-(* Module for axiomatizing the record theory associated to type "airlockdoor" defined at submarine.ads:15, created in Why.Gen.Records.Create_Rep_Record_Theory_If_Needed *)
-module Submarine__airlockdoor__rep
- use import "_gnatprove_standard".Main
- use        Submarine__doorstatus
- use        Submarine__doorstatus__rep
- use        Submarine__lockstatus
- use        Submarine__lockstatus__rep
-
- type __split_fields =
-  { rec__submarine__airlockdoor__door "model_trace:.2670" "name:door" : Submarine__doorstatus.doorstatus; rec__submarine__airlockdoor__lock "model_trace:.2680" "name:lock" : Submarine__lockstatus.lockstatus }
- 
- function __split_fields_door__projection "model_trace:.2670" "name:door" 
-   (a : __split_fields) : Submarine__doorstatus.doorstatus =
-  a.rec__submarine__airlockdoor__door
- 
- meta "model_projection" function __split_fields_door__projection
- 
- meta "inline : no" function __split_fields_door__projection
- 
- function __split_fields_lock__projection "model_trace:.2680" "name:lock" 
-   (a : __split_fields) : Submarine__lockstatus.lockstatus =
-  a.rec__submarine__airlockdoor__lock
- 
- meta "model_projection" function __split_fields_lock__projection
- 
- meta "inline : no" function __split_fields_lock__projection
- 
- type __split_fields__ref =
-  { mutable __split_fields__content "model_trace:" "name:" : __split_fields }
- 
- function __split_fields__ref___projection 
-   (a : __split_fields__ref) : __split_fields =
-  a.__split_fields__content
- 
- meta "model_projection" function __split_fields__ref___projection
- 
- meta "inline : no" function __split_fields__ref___projection
- 
- val __split_fields__havoc 
-   (x : __split_fields__ref) : unit
-  writes {x}
- 
- type __rep =
-  { __split_fields "model_trace:" "name:" : __split_fields }
- 
- function __rep___projection 
-   (a : __rep) : __split_fields =
-  a.__split_fields
- 
- meta "model_projection" function __rep___projection
- 
- meta "inline : no" function __rep___projection
- 
- function to_base 
-   (a : __rep) : __rep =
-  a
- 
- function of_base 
-   (a : __rep) : __rep =
-  a
- 
- predicate submarine__airlockdoor__door__pred 
-   (a : __rep)  =
-  true
- 
- val rec__submarine__airlockdoor__door_ 
-   (a : __rep) : Submarine__doorstatus.doorstatus
-  requires {  (submarine__airlockdoor__door__pred a) }
-  ensures {  (result = a.__split_fields.rec__submarine__airlockdoor__door) }
- 
- predicate submarine__airlockdoor__lock__pred 
-   (a : __rep)  =
-  true
- 
- val rec__submarine__airlockdoor__lock_ 
-   (a : __rep) : Submarine__lockstatus.lockstatus
-  requires {  (submarine__airlockdoor__lock__pred a) }
-  ensures {  (result = a.__split_fields.rec__submarine__airlockdoor__lock) }
- 
- function bool_eq 
-   (a : __rep) (b : __rep) : bool =
-  (if (( ((Submarine__doorstatus__rep.to_rep a.__split_fields.rec__submarine__airlockdoor__door) = (Submarine__doorstatus__rep.to_rep b.__split_fields.rec__submarine__airlockdoor__door)) /\ ((Submarine__lockstatus__rep.to_rep a.__split_fields.rec__submarine__airlockdoor__lock) = (Submarine__lockstatus__rep.to_rep b.__split_fields.rec__submarine__airlockdoor__lock)) )) then (
-   True) else (
-   False))
-
-end
-
-(* Module for axiomatizing type "airlockdoor" defined at submarine.ads:15, created in Gnat2Why.Types.Translate_Type *)
-module Submarine__airlockdoor
- use export Submarine__airlockdoor__rep
- use import "_gnatprove_standard".Main
- use import "int".Int
-
- type airlockdoor =
-  __rep
- 
- function value__size 
-   : int
- 
- function object__size 
-   (a : airlockdoor) : int
- 
- function value__alignment 
-   : int
- 
- function object__alignment 
-   (a : airlockdoor) : int
- 
- axiom value__size_axiom :
-  ((value__size ) >= 0)
- 
- axiom object__size_axiom :
-  (forall a   : airlockdoor.
-   ((object__size a) >= 0))
- 
- axiom value__alignment_axiom :
-  ((value__alignment ) >= 0)
- 
- axiom object__alignment_axiom :
-  (forall a   : airlockdoor.
-   ((object__alignment a) >= 0))
- 
- function submarine__airlockdoor__door__first__bit 
-   : int
- 
- function submarine__airlockdoor__door__last__bit 
-   : int
- 
- function submarine__airlockdoor__door__position 
-   : int
- 
- axiom submarine__airlockdoor__door__first__bit_axiom :
-  ((submarine__airlockdoor__door__first__bit ) >= 0)
- 
- axiom submarine__airlockdoor__door__last__bit_axiom :
-  ((submarine__airlockdoor__door__last__bit ) > (submarine__airlockdoor__door__first__bit ))
- 
- axiom submarine__airlockdoor__door__position_axiom :
-  ((submarine__airlockdoor__door__position ) >= 0)
- 
- function submarine__airlockdoor__lock__first__bit 
-   : int
- 
- function submarine__airlockdoor__lock__last__bit 
-   : int
- 
- function submarine__airlockdoor__lock__position 
-   : int
- 
- axiom submarine__airlockdoor__lock__first__bit_axiom :
-  ((submarine__airlockdoor__lock__first__bit ) >= 0)
- 
- axiom submarine__airlockdoor__lock__last__bit_axiom :
-  ((submarine__airlockdoor__lock__last__bit ) > (submarine__airlockdoor__lock__first__bit ))
- 
- axiom submarine__airlockdoor__lock__position_axiom :
-  ((submarine__airlockdoor__lock__position ) >= 0)
- 
- function user_eq 
-   (a : airlockdoor) (b : airlockdoor) : bool
- 
- function dummy 
-   : airlockdoor
- 
- type airlockdoor__ref =
-  { mutable airlockdoor__content "model_trace:" "name:" : airlockdoor }
- 
- function airlockdoor__ref___projection 
-   (a : airlockdoor__ref) : airlockdoor =
-  a.airlockdoor__content
- 
- meta "model_projection" function airlockdoor__ref___projection
- 
- meta "inline : no" function airlockdoor__ref___projection
- 
- val airlockdoor__havoc 
-   (x : airlockdoor__ref) : unit
-  writes {x}
-
-end
-
-(* Module for axiomatizing type "operationstatus" defined at submarine.ads:50, created in Gnat2Why.Types.Translate_Type *)
-module Submarine__operationstatus
+(* Module for axiomatizing type "operationstatus" defined at movement.ads:7, created in Gnat2Why.Types.Translate_Type *)
+module Movement__operationstatus
  use import "_gnatprove_standard".Main
  use import "int".Int
 
@@ -2101,14 +1806,14 @@ module Submarine__operationstatus
 
 end
 
-(* Module defining to_rep/of_rep for type "operationstatus" defined at submarine.ads:50, created in Gnat2Why.Types.Translate_Type *)
-module Submarine__operationstatus__rep
- use        Submarine__operationstatus
+(* Module defining to_rep/of_rep for type "operationstatus" defined at movement.ads:7, created in Gnat2Why.Types.Translate_Type *)
+module Movement__operationstatus__rep
+ use        Movement__operationstatus
  use import "_gnatprove_standard".Main
 
  clone export "ada__model".Rep_Proj_Int with
- type t = Submarine__operationstatus.operationstatus, 
- predicate in_range = Submarine__operationstatus.in_range
+ type t = Movement__operationstatus.operationstatus, 
+ predicate in_range = Movement__operationstatus.in_range
  
  meta "model_projection" function to_rep
  
@@ -2116,7 +1821,7 @@ module Submarine__operationstatus__rep
 
 end
 
-(* Module for axiomatizing type "content" defined at torpedoes.ads:11, created in Gnat2Why.Types.Translate_Type *)
+(* Module for axiomatizing type "content" defined at torpedoes.ads:10, created in Gnat2Why.Types.Translate_Type *)
 module Torpedoes__content
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -2158,7 +1863,7 @@ module Torpedoes__content
 
 end
 
-(* Module defining to_rep/of_rep for type "content" defined at torpedoes.ads:11, created in Gnat2Why.Types.Translate_Type *)
+(* Module defining to_rep/of_rep for type "content" defined at torpedoes.ads:10, created in Gnat2Why.Types.Translate_Type *)
 module Torpedoes__content__rep
  use        Torpedoes__content
  use import "_gnatprove_standard".Main
@@ -2173,7 +1878,7 @@ module Torpedoes__content__rep
 
 end
 
-(* Module for axiomatizing type "TstoragecapacityB" defined at torpedoes.ads:13, created in Gnat2Why.Types.Translate_Type *)
+(* Module for axiomatizing type "TstoragecapacityB" defined at torpedoes.ads:12, created in Gnat2Why.Types.Translate_Type *)
 module Torpedoes__TstoragecapacityB
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -2216,7 +1921,7 @@ module Torpedoes__TstoragecapacityB
 
 end
 
-(* Module defining to_rep/of_rep for type "TstoragecapacityB" defined at torpedoes.ads:13, created in Gnat2Why.Types.Translate_Type *)
+(* Module defining to_rep/of_rep for type "TstoragecapacityB" defined at torpedoes.ads:12, created in Gnat2Why.Types.Translate_Type *)
 module Torpedoes__TstoragecapacityB__rep
  use        Torpedoes__TstoragecapacityB
  use import "_gnatprove_standard".Main
@@ -2236,7 +1941,7 @@ module Torpedoes__TstoragecapacityB__rep
 
 end
 
-(* Module for axiomatizing type "storagecapacity" defined at torpedoes.ads:13, created in Gnat2Why.Types.Translate_Type *)
+(* Module for axiomatizing type "storagecapacity" defined at torpedoes.ads:12, created in Gnat2Why.Types.Translate_Type *)
 module Torpedoes__storagecapacity
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -2279,7 +1984,7 @@ module Torpedoes__storagecapacity
 
 end
 
-(* Module defining to_rep/of_rep for type "storagecapacity" defined at torpedoes.ads:13, created in Gnat2Why.Types.Translate_Type *)
+(* Module defining to_rep/of_rep for type "storagecapacity" defined at torpedoes.ads:12, created in Gnat2Why.Types.Translate_Type *)
 module Torpedoes__storagecapacity__rep
  use        Torpedoes__storagecapacity
  use import "_gnatprove_standard".Main
@@ -2299,7 +2004,7 @@ module Torpedoes__storagecapacity__rep
 
 end
 
-(* Module for axiomatizing the array theory associated to type "TstorageB" defined at torpedoes.ads:15, created in Why.Gen.Arrays.Create_Rep_Array_Theory *)
+(* Module for axiomatizing the array theory associated to type "TstorageB" defined at torpedoes.ads:14, created in Why.Gen.Arrays.Create_Rep_Array_Theory *)
 module Array__Int__Torpedoes__content
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -2342,7 +2047,7 @@ module Array__Int__Torpedoes__content
 
 end
 
-(* Module for axiomatizing concatenation for the array theory associated to type "TstorageB" defined at torpedoes.ads:15, created in Why.Gen.Arrays.Declare_Concatenation_Symbols *)
+(* Module for axiomatizing concatenation for the array theory associated to type "TstorageB" defined at torpedoes.ads:14, created in Why.Gen.Arrays.Declare_Concatenation_Symbols *)
 module Array__Int__Torpedoes__content__Concat
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -2366,7 +2071,7 @@ module Array__Int__Torpedoes__content__Concat
 
 end
 
-(* Module for axiomatizing comparison for the array theory associated to type "TstorageB" defined at torpedoes.ads:15, created in Why.Gen.Arrays.Declare_Comparison_Symbols *)
+(* Module for axiomatizing comparison for the array theory associated to type "TstorageB" defined at torpedoes.ads:14, created in Why.Gen.Arrays.Declare_Comparison_Symbols *)
 module Array__Int__Torpedoes__content_Comp
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -2393,7 +2098,7 @@ module Array__Int__Torpedoes__content_Comp
 
 end
 
-(* Module for axiomatizing type "TstorageB" defined at torpedoes.ads:15, created in Gnat2Why.Types.Translate_Type *)
+(* Module for axiomatizing type "TstorageB" defined at torpedoes.ads:14, created in Gnat2Why.Types.Translate_Type *)
 module Torpedoes__TstorageB
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -2453,7 +2158,7 @@ module Torpedoes__TstorageB
 
 end
 
-(* Module for axiomatizing type "storage" defined at torpedoes.ads:15, created in Gnat2Why.Types.Translate_Type *)
+(* Module for axiomatizing type "storage" defined at torpedoes.ads:14, created in Gnat2Why.Types.Translate_Type *)
 module Torpedoes__storage
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -2480,7 +2185,7 @@ module Torpedoes__storage
 
 end
 
-(* Module for axiomatizing type "launcher" defined at torpedoes.ads:19, created in Gnat2Why.Types.Translate_Type *)
+(* Module for axiomatizing type "launcher" defined at torpedoes.ads:18, created in Gnat2Why.Types.Translate_Type *)
 module Torpedoes__launcher
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -2522,7 +2227,7 @@ module Torpedoes__launcher
 
 end
 
-(* Module defining to_rep/of_rep for type "launcher" defined at torpedoes.ads:19, created in Gnat2Why.Types.Translate_Type *)
+(* Module defining to_rep/of_rep for type "launcher" defined at torpedoes.ads:18, created in Gnat2Why.Types.Translate_Type *)
 module Torpedoes__launcher__rep
  use        Torpedoes__launcher
  use import "_gnatprove_standard".Main
@@ -2537,12 +2242,12 @@ module Torpedoes__launcher__rep
 
 end
 
-(* Module for defining the constant "d" defined at torpedoes.ads:37, created in Gnat2Why.Decls.Translate_Constant *)
-module Torpedoes__storageisfull__d
+(* Module for defining the constant "d" defined at torpedoes.ads:38, created in Gnat2Why.Decls.Translate_Constant *)
+module Torpedoes__storageisempty__d
  use import "_gnatprove_standard".Main
  use        Array__Int__Torpedoes__content
 
- function d #"torpedoes.ads" 37 0 0#"model_projected" "model_trace:2545" "name:d" 
+ function d #"torpedoes.ads" 38 0 0#"model_projected" "model_trace:2589" "name:d" 
    : Array__Int__Torpedoes__content.map
  
  function attr__ATTRIBUTE_ADDRESS 
@@ -2550,14 +2255,47 @@ module Torpedoes__storageisfull__d
 
 end
 
-(* Module giving an empty axiom for the entity "d" defined at torpedoes.ads:37, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "d" defined at torpedoes.ads:38, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Torpedoes__storageisempty__d___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for possibly declaring a logic function for "storageisempty" defined at torpedoes.ads:38, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Torpedoes__storageisempty
+ use import "_gnatprove_standard".Main
+ use        Array__Int__Torpedoes__content
+
+ function storageisempty 
+   (d : Array__Int__Torpedoes__content.map) : bool
+ 
+ predicate storageisempty__function_guard 
+   (result : bool) (d : Array__Int__Torpedoes__content.map) 
+
+end
+
+(* Module for defining the constant "d" defined at torpedoes.ads:34, created in Gnat2Why.Decls.Translate_Constant *)
+module Torpedoes__storageisfull__d
+ use import "_gnatprove_standard".Main
+ use        Array__Int__Torpedoes__content
+
+ function d #"torpedoes.ads" 34 0 0#"model_projected" "name:d" "model_trace:2554" 
+   : Array__Int__Torpedoes__content.map
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "d" defined at torpedoes.ads:34, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Torpedoes__storageisfull__d___axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "storageisfull" defined at torpedoes.ads:37, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "storageisfull" defined at torpedoes.ads:34, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Torpedoes__storageisfull
  use import "_gnatprove_standard".Main
  use        Array__Int__Torpedoes__content
@@ -2570,8 +2308,197 @@ module Torpedoes__storageisfull
 
 end
 
-(* Module for axiomatizing type "T9s" defined at torpedoes.ads:38, created in Gnat2Why.Types.Translate_Type *)
-module Torpedoes__storageisfull__L8s__T9s
+(* Module for axiomatizing type "T12s" defined at torpedoes.ads:35, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__storageisfull__L11s__T12s
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type t12s =
+  < range 0 50 >
+ 
+ function first 
+   : int =
+  0
+ 
+ function last 
+   : int =
+  50
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = t12s, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type t12s__ref =
+  { mutable t12s__content "model_trace:" "name:" : t12s }
+ 
+ function t12s__ref___projection 
+   (a : t12s__ref) : t12s =
+  a.t12s__content
+ 
+ meta "model_projection" function t12s__ref___projection
+ 
+ meta "inline : no" function t12s__ref___projection
+ 
+ val t12s__havoc 
+   (x : t12s__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "T12s" defined at torpedoes.ads:35, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__storageisfull__L11s__T12s__rep
+ use        Torpedoes__storageisfull__L11s__T12s
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Torpedoes__storageisfull__L11s__T12s.t12s) : int =
+  (Torpedoes__storageisfull__L11s__T12s.t12s'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Torpedoes__storageisfull__L11s__T12s.t12s, 
+ predicate in_range = Torpedoes__storageisfull__L11s__T12s.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "T7s" defined at torpedoes.ads:35, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__storageisfull__L6s__T7s
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type t7s =
+  < range 0 50 >
+ 
+ function first 
+   : int =
+  0
+ 
+ function last 
+   : int =
+  50
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = t7s, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type t7s__ref =
+  { mutable t7s__content "model_trace:" "name:" : t7s }
+ 
+ function t7s__ref___projection 
+   (a : t7s__ref) : t7s =
+  a.t7s__content
+ 
+ meta "model_projection" function t7s__ref___projection
+ 
+ meta "inline : no" function t7s__ref___projection
+ 
+ val t7s__havoc 
+   (x : t7s__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "T7s" defined at torpedoes.ads:35, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__storageisfull__L6s__T7s__rep
+ use        Torpedoes__storageisfull__L6s__T7s
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Torpedoes__storageisfull__L6s__T7s.t7s) : int =
+  (Torpedoes__storageisfull__L6s__T7s.t7s'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Torpedoes__storageisfull__L6s__T7s.t7s, 
+ predicate in_range = Torpedoes__storageisfull__L6s__T7s.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "T15s" defined at torpedoes.ads:39, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__storageisempty__L14s__T15s
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type t15s =
+  < range 0 50 >
+ 
+ function first 
+   : int =
+  0
+ 
+ function last 
+   : int =
+  50
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = t15s, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type t15s__ref =
+  { mutable t15s__content "model_trace:" "name:" : t15s }
+ 
+ function t15s__ref___projection 
+   (a : t15s__ref) : t15s =
+  a.t15s__content
+ 
+ meta "model_projection" function t15s__ref___projection
+ 
+ meta "inline : no" function t15s__ref___projection
+ 
+ val t15s__havoc 
+   (x : t15s__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "T15s" defined at torpedoes.ads:39, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__storageisempty__L14s__T15s__rep
+ use        Torpedoes__storageisempty__L14s__T15s
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Torpedoes__storageisempty__L14s__T15s.t15s) : int =
+  (Torpedoes__storageisempty__L14s__T15s.t15s'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Torpedoes__storageisempty__L14s__T15s.t15s, 
+ predicate in_range = Torpedoes__storageisempty__L14s__T15s.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "T9s" defined at torpedoes.ads:39, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__storageisempty__L8s__T9s
  use import "_gnatprove_standard".Main
  use import "int".Int
 
@@ -2613,18 +2540,18 @@ module Torpedoes__storageisfull__L8s__T9s
 
 end
 
-(* Module defining to_rep/of_rep for type "T9s" defined at torpedoes.ads:38, created in Gnat2Why.Types.Translate_Type *)
-module Torpedoes__storageisfull__L8s__T9s__rep
- use        Torpedoes__storageisfull__L8s__T9s
+(* Module defining to_rep/of_rep for type "T9s" defined at torpedoes.ads:39, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__storageisempty__L8s__T9s__rep
+ use        Torpedoes__storageisempty__L8s__T9s
  use import "_gnatprove_standard".Main
 
  function to_rep 
-   (x : Torpedoes__storageisfull__L8s__T9s.t9s) : int =
-  (Torpedoes__storageisfull__L8s__T9s.t9s'int x)
+   (x : Torpedoes__storageisempty__L8s__T9s.t9s) : int =
+  (Torpedoes__storageisempty__L8s__T9s.t9s'int x)
  
  clone export "ada__model".Rep_Proj_Int with
- type t = Torpedoes__storageisfull__L8s__T9s.t9s, 
- predicate in_range = Torpedoes__storageisfull__L8s__T9s.in_range, 
+ type t = Torpedoes__storageisempty__L8s__T9s.t9s, 
+ predicate in_range = Torpedoes__storageisempty__L8s__T9s.in_range, 
  function to_rep = to_rep
  
  meta "model_projection" function to_rep
@@ -2633,70 +2560,7 @@ module Torpedoes__storageisfull__L8s__T9s__rep
 
 end
 
-(* Module for axiomatizing type "T6s" defined at torpedoes.ads:38, created in Gnat2Why.Types.Translate_Type *)
-module Torpedoes__storageisfull__L5s__T6s
- use import "_gnatprove_standard".Main
- use import "int".Int
-
- type t6s =
-  < range 0 50 >
- 
- function first 
-   : int =
-  0
- 
- function last 
-   : int =
-  50
- 
- predicate in_range 
-   (x : int)  =
-  ( (first <= x) /\ (x <= last) )
- 
- clone export "ada__model".Static_Discrete with
- type t = t6s, 
- function first = first, 
- function last = last, 
- predicate in_range = in_range
- 
- type t6s__ref =
-  { mutable t6s__content "model_trace:" "name:" : t6s }
- 
- function t6s__ref___projection 
-   (a : t6s__ref) : t6s =
-  a.t6s__content
- 
- meta "model_projection" function t6s__ref___projection
- 
- meta "inline : no" function t6s__ref___projection
- 
- val t6s__havoc 
-   (x : t6s__ref) : unit
-  writes {x}
-
-end
-
-(* Module defining to_rep/of_rep for type "T6s" defined at torpedoes.ads:38, created in Gnat2Why.Types.Translate_Type *)
-module Torpedoes__storageisfull__L5s__T6s__rep
- use        Torpedoes__storageisfull__L5s__T6s
- use import "_gnatprove_standard".Main
-
- function to_rep 
-   (x : Torpedoes__storageisfull__L5s__T6s.t6s) : int =
-  (Torpedoes__storageisfull__L5s__T6s.t6s'int x)
- 
- clone export "ada__model".Rep_Proj_Int with
- type t = Torpedoes__storageisfull__L5s__T6s.t6s, 
- predicate in_range = Torpedoes__storageisfull__L5s__T6s.in_range, 
- function to_rep = to_rep
- 
- meta "model_projection" function to_rep
- 
- meta "inline : no" function to_rep
-
-end
-
-(* Module for axiomatizing type "T4b" defined at torpedoes.adb:22, created in Gnat2Why.Types.Translate_Type *)
+(* Module for axiomatizing type "T4b" defined at torpedoes.adb:24, created in Gnat2Why.Types.Translate_Type *)
 module Torpedoes__filltorpedoestorage__L_1__L3b__T4b
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -2734,7 +2598,7 @@ module Torpedoes__filltorpedoestorage__L_1__L3b__T4b
 
 end
 
-(* Module for axiomatizing type "T2b" defined at torpedoes.adb:22, created in Gnat2Why.Types.Translate_Type *)
+(* Module for axiomatizing type "T2b" defined at torpedoes.adb:24, created in Gnat2Why.Types.Translate_Type *)
 module Torpedoes__filltorpedoestorage__L_1__L1b__T2b
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -2771,129 +2635,91 @@ module Torpedoes__filltorpedoestorage__L_1__L1b__T2b
   writes {x}
 
 end
-(* Module for defining a ref holding the value of variable "currentdepth" defined at submarine.ads:5, created in Gnat2Why.Decls.Translate_Variable *)
-module Submarine__currentdepth
+(* Module for defining a ref holding the value of variable "currentdepth" defined at movement.ads:5, created in Gnat2Why.Decls.Translate_Variable *)
+module Movement__currentdepth
  use import "_gnatprove_standard".Main
 
- val currentdepth #"submarine.ads" 5 0 0#"model_projected" "model_trace:2603" "name:currentDepth"  : int__ref 
+ val currentdepth #"movement.ads" 5 0 0#"model_projected" "model_trace:2647" "name:currentDepth"  : int__ref 
  
  function attr__ATTRIBUTE_ADDRESS 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "currentdepth" defined at submarine.ads:5, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
-module Submarine__currentdepth___axiom
+(* Module giving an empty axiom for the entity "currentdepth" defined at movement.ads:5, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Movement__currentdepth___axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining a ref holding the value of variable "outerdoor" defined at submarine.ads:20, created in Gnat2Why.Decls.Translate_Variable *)
-module Submarine__outerdoor
+(* Module for defining a ref holding the value of variable "currentoperationstatus" defined at movement.ads:8, created in Gnat2Why.Decls.Translate_Variable *)
+module Movement__currentoperationstatus
  use import "_gnatprove_standard".Main
- use        Submarine__airlockdoor
 
- val outerdoor__split_fields #"submarine.ads" 20 0 0#"model_projected" "model_trace:2692" "name:outerDoor"  : Submarine__airlockdoor.__split_fields__ref 
+ val currentoperationstatus #"movement.ads" 8 0 0#"model_projected" "model_trace:2680" "name:currentOperationStatus"  : int__ref 
  
  function attr__ATTRIBUTE_ADDRESS 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "outerdoor" defined at submarine.ads:20, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
-module Submarine__outerdoor___axiom
+(* Module giving an empty axiom for the entity "currentoperationstatus" defined at movement.ads:8, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Movement__currentoperationstatus___axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining a ref holding the value of variable "innerdoor" defined at submarine.ads:21, created in Gnat2Why.Decls.Translate_Variable *)
-module Submarine__innerdoor
- use import "_gnatprove_standard".Main
- use        Submarine__airlockdoor
-
- val innerdoor__split_fields #"submarine.ads" 21 0 0#"model_projected" "model_trace:2708" "name:innerDoor"  : Submarine__airlockdoor.__split_fields__ref 
- 
- function attr__ATTRIBUTE_ADDRESS 
-   : int
-
-end
-
-(* Module giving an empty axiom for the entity "innerdoor" defined at submarine.ads:21, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
-module Submarine__innerdoor___axiom
- use import "_gnatprove_standard".Main
-
-
-end
-
-(* Module for defining a ref holding the value of variable "currentoperationstatus" defined at submarine.ads:51, created in Gnat2Why.Decls.Translate_Variable *)
-module Submarine__currentoperationstatus
- use import "_gnatprove_standard".Main
-
- val currentoperationstatus #"submarine.ads" 51 0 0#"model_projected" "model_trace:2904" "name:currentOperationStatus"  : int__ref 
- 
- function attr__ATTRIBUTE_ADDRESS 
-   : int
-
-end
-
-(* Module giving an empty axiom for the entity "currentoperationstatus" defined at submarine.ads:51, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
-module Submarine__currentoperationstatus___axiom
- use import "_gnatprove_standard".Main
-
-
-end
-
-(* Module for defining a ref holding the value of variable "torpedoestorage" defined at torpedoes.ads:17, created in Gnat2Why.Decls.Translate_Variable *)
+(* Module for defining a ref holding the value of variable "torpedoestorage" defined at torpedoes.ads:16, created in Gnat2Why.Decls.Translate_Variable *)
 module Torpedoes__torpedoestorage
  use import "_gnatprove_standard".Main
  use        Array__Int__Torpedoes__content
 
- val torpedoestorage #"torpedoes.ads" 17 0 0#"model_projected" "model_trace:2465" "name:torpedoeStorage"  : Array__Int__Torpedoes__content.map__ref 
+ val torpedoestorage #"torpedoes.ads" 16 0 0#"model_projected" "model_trace:2469" "name:torpedoeStorage"  : Array__Int__Torpedoes__content.map__ref 
  
  function attr__ATTRIBUTE_ADDRESS 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "torpedoestorage" defined at torpedoes.ads:17, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "torpedoestorage" defined at torpedoes.ads:16, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Torpedoes__torpedoestorage___axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining a ref holding the value of variable "torpedoetube" defined at torpedoes.ads:21, created in Gnat2Why.Decls.Translate_Variable *)
+(* Module for defining a ref holding the value of variable "torpedoetube" defined at torpedoes.ads:20, created in Gnat2Why.Decls.Translate_Variable *)
 module Torpedoes__torpedoetube
  use import "_gnatprove_standard".Main
 
- val torpedoetube #"torpedoes.ads" 21 0 0#"model_projected" "model_trace:2498" "name:torpedoeTube"  : int__ref 
+ val torpedoetube #"torpedoes.ads" 20 0 0#"model_projected" "model_trace:2502" "name:torpedoeTube"  : int__ref 
  
  function attr__ATTRIBUTE_ADDRESS 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "torpedoetube" defined at torpedoes.ads:21, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "torpedoetube" defined at torpedoes.ads:20, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Torpedoes__torpedoetube___axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining a ref holding the value of variable "position" defined at torpedoes.adb:13, created in Gnat2Why.Decls.Translate_Variable *)
+(* Module for defining a ref holding the value of variable "position" defined at torpedoes.adb:15, created in Gnat2Why.Decls.Translate_Variable *)
 module Torpedoes__filltorpedoestorage__position
  use import "_gnatprove_standard".Main
 
- val position #"torpedoes.adb" 13 0 0#"model_projected" "model_trace:2317" "name:Position"  : int__ref 
+ val position #"torpedoes.adb" 15 0 0#"model_projected" "model_trace:2321" "name:Position"  : int__ref 
  
  function attr__ATTRIBUTE_ADDRESS 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "position" defined at torpedoes.adb:13, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "position" defined at torpedoes.adb:15, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Torpedoes__filltorpedoestorage__position___axiom
  use import "_gnatprove_standard".Main
 
@@ -3262,70 +3088,68 @@ module Standard__universal_integer___axiom
 
 end
 
-(* Module for possibly declaring a logic function for "openouterairlockdoor" defined at submarine.ads:23, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Submarine__openouterairlockdoor
+(* Module for possibly declaring a logic function for "maxdepthinvariant" defined at movement.ads:11, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Movement__maxdepthinvariant
+ use        Movement__currentdepth
+ use import "_gnatprove_standard".Main
+
+ function maxdepthinvariant 
+   (movement__currentdepth : int) : bool
+ 
+ predicate maxdepthinvariant__function_guard 
+   (result : bool) (movement__currentdepth : int) 
+
+end
+
+(* Module for possibly declaring a logic function for "notsurfacedinvariant" defined at movement.ads:14, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Movement__notsurfacedinvariant
+ use        Movement__currentdepth
+ use import "_gnatprove_standard".Main
+
+ function notsurfacedinvariant 
+   (movement__currentdepth : int) : bool
+ 
+ predicate notsurfacedinvariant__function_guard 
+   (result : bool) (movement__currentdepth : int) 
+
+end
+
+(* Module for possibly declaring a logic function for "divethesubmarine100ft" defined at movement.ads:20, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Movement__divethesubmarine100ft
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "openinnerairlockdoor" defined at submarine.ads:29, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Submarine__openinnerairlockdoor
+(* Module for possibly declaring a logic function for "divethesubmarinetomaxdepth" defined at movement.ads:26, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Movement__divethesubmarinetomaxdepth
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "closeouterairlockdoor" defined at submarine.ads:36, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Submarine__closeouterairlockdoor
+(* Module for possibly declaring a logic function for "raisethesubmarine100ft" defined at movement.ads:32, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Movement__raisethesubmarine100ft
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "closeinnerairlockdoor" defined at submarine.ads:42, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Submarine__closeinnerairlockdoor
+(* Module for possibly declaring a logic function for "surfacethesubmarine" defined at movement.ads:38, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Movement__surfacethesubmarine
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "lockouterdoor" defined at submarine.ads:53, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Submarine__lockouterdoor
- use import "_gnatprove_standard".Main
-
-
-end
-
-(* Module for possibly declaring a logic function for "unlockouterdoor" defined at submarine.ads:59, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Submarine__unlockouterdoor
- use import "_gnatprove_standard".Main
-
-
-end
-
-(* Module for possibly declaring a logic function for "lockinnerdoor" defined at submarine.ads:65, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Submarine__lockinnerdoor
- use import "_gnatprove_standard".Main
-
-
-end
-
-(* Module for possibly declaring a logic function for "unlockinnerdoor" defined at submarine.ads:71, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Submarine__unlockinnerdoor
- use import "_gnatprove_standard".Main
-
-
-end
-
-(* Module for possibly declaring a logic function for "filltorpedoestorage" defined at torpedoes.ads:29, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "filltorpedoestorage" defined at torpedoes.ads:26, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Torpedoes__filltorpedoestorage
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining the loop exit exception for the loop "L_1" defined at torpedoes.adb:17, created in Gnat2Why.Decls.Translate_Loop_Entity *)
+(* Module for defining the loop exit exception for the loop "L_1" defined at torpedoes.adb:19, created in Gnat2Why.Decls.Translate_Loop_Entity *)
 module Torpedoes__filltorpedoestorage__L_1
  use import "_gnatprove_standard".Main
 
@@ -3333,30 +3157,30 @@ module Torpedoes__filltorpedoestorage__L_1
 
 end
 
-(* Module giving an empty axiom for the entity "L_1" defined at torpedoes.adb:17, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "L_1" defined at torpedoes.adb:19, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Torpedoes__filltorpedoestorage__L_1___axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module giving axioms for type "TdepthmonitorB" defined at submarine.ads:4, created in Gnat2Why.Types.Generate_Type_Completion *)
-module Submarine__TdepthmonitorB___axiom
+(* Module giving axioms for type "TdepthmonitorB" defined at movement.ads:4, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Movement__TdepthmonitorB___axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module giving axioms for type "depthmonitor" defined at submarine.ads:4, created in Gnat2Why.Types.Generate_Type_Completion *)
-module Submarine__depthmonitor___axiom
+(* Module giving axioms for type "depthmonitor" defined at movement.ads:4, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Movement__depthmonitor___axiom
  use import "_gnatprove_standard".Main
  use import "int".Int
- use        Submarine__depthmonitor
+ use        Movement__depthmonitor
 
  predicate dynamic_invariant "inline" 
    (temp___expr_159 : int) (temp___is_init_155 : bool) (temp___skip_constant_156 : bool) (temp___do_toplevel_157 : bool) (temp___do_typ_inv_158 : bool)  =
-  (if (( temp___is_init_155 \/ (Submarine__depthmonitor.first <= Submarine__depthmonitor.last) )) then (
-   (Submarine__depthmonitor.dynamic_property Submarine__depthmonitor.first Submarine__depthmonitor.last temp___expr_159)) else true)
+  (if (( temp___is_init_155 \/ (Movement__depthmonitor.first <= Movement__depthmonitor.last) )) then (
+   (Movement__depthmonitor.dynamic_property Movement__depthmonitor.first Movement__depthmonitor.last temp___expr_159)) else true)
  
  predicate default_initial_assumption "inline" 
    (temp___expr_160 : int) (temp___skip_top_level_161 : bool)  =
@@ -3364,16 +3188,16 @@ module Submarine__depthmonitor___axiom
 
 end
 
-(* Module giving axioms for type "doorstatus" defined at submarine.ads:12, created in Gnat2Why.Types.Generate_Type_Completion *)
-module Submarine__doorstatus___axiom
+(* Module giving axioms for type "operationstatus" defined at movement.ads:7, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Movement__operationstatus___axiom
  use import "_gnatprove_standard".Main
  use import "int".Int
- use        Submarine__doorstatus
+ use        Movement__operationstatus
 
  predicate dynamic_invariant "inline" 
    (temp___expr_166 : int) (temp___is_init_162 : bool) (temp___skip_constant_163 : bool) (temp___do_toplevel_164 : bool) (temp___do_typ_inv_165 : bool)  =
-  (if (( temp___is_init_162 \/ (Submarine__doorstatus.first <= Submarine__doorstatus.last) )) then (
-   (Submarine__doorstatus.dynamic_property Submarine__doorstatus.first Submarine__doorstatus.last temp___expr_166)) else true)
+  (if (( temp___is_init_162 \/ (Movement__operationstatus.first <= Movement__operationstatus.last) )) then (
+   (Movement__operationstatus.dynamic_property Movement__operationstatus.first Movement__operationstatus.last temp___expr_166)) else true)
  
  predicate default_initial_assumption "inline" 
    (temp___expr_167 : int) (temp___skip_top_level_168 : bool)  =
@@ -3381,356 +3205,302 @@ module Submarine__doorstatus___axiom
 
 end
 
-(* Module giving axioms for type "lockstatus" defined at submarine.ads:13, created in Gnat2Why.Types.Generate_Type_Completion *)
-module Submarine__lockstatus___axiom
- use import "_gnatprove_standard".Main
- use import "int".Int
- use        Submarine__lockstatus
-
- predicate dynamic_invariant "inline" 
-   (temp___expr_173 : int) (temp___is_init_169 : bool) (temp___skip_constant_170 : bool) (temp___do_toplevel_171 : bool) (temp___do_typ_inv_172 : bool)  =
-  (if (( temp___is_init_169 \/ (Submarine__lockstatus.first <= Submarine__lockstatus.last) )) then (
-   (Submarine__lockstatus.dynamic_property Submarine__lockstatus.first Submarine__lockstatus.last temp___expr_173)) else true)
- 
- predicate default_initial_assumption "inline" 
-   (temp___expr_174 : int) (temp___skip_top_level_175 : bool)  =
-  true
-
-end
-
-(* Module giving axioms for type "airlockdoor" defined at submarine.ads:15, created in Gnat2Why.Types.Generate_Type_Completion *)
-module Submarine__airlockdoor___axiom
- use import "_gnatprove_standard".Main
- use        Submarine__airlockdoor
-
- predicate dynamic_invariant "inline" 
-   (temp___expr_180 : Submarine__airlockdoor.airlockdoor) (temp___is_init_176 : bool) (temp___skip_constant_177 : bool) (temp___do_toplevel_178 : bool) (temp___do_typ_inv_179 : bool)  =
-  true
- 
- predicate default_initial_assumption "inline" 
-   (temp___expr_181 : Submarine__airlockdoor.airlockdoor) (temp___skip_top_level_182 : bool)  =
-  true
-
-end
-
-(* Module giving axioms for type "operationstatus" defined at submarine.ads:50, created in Gnat2Why.Types.Generate_Type_Completion *)
-module Submarine__operationstatus___axiom
- use import "_gnatprove_standard".Main
- use import "int".Int
- use        Submarine__operationstatus
-
- predicate dynamic_invariant "inline" 
-   (temp___expr_189 : int) (temp___is_init_185 : bool) (temp___skip_constant_186 : bool) (temp___do_toplevel_187 : bool) (temp___do_typ_inv_188 : bool)  =
-  (if (( temp___is_init_185 \/ (Submarine__operationstatus.first <= Submarine__operationstatus.last) )) then (
-   (Submarine__operationstatus.dynamic_property Submarine__operationstatus.first Submarine__operationstatus.last temp___expr_189)) else true)
- 
- predicate default_initial_assumption "inline" 
-   (temp___expr_190 : int) (temp___skip_top_level_191 : bool)  =
-  true
-
-end
-
-(* Module giving axioms for type "content" defined at torpedoes.ads:11, created in Gnat2Why.Types.Generate_Type_Completion *)
+(* Module giving axioms for type "content" defined at torpedoes.ads:10, created in Gnat2Why.Types.Generate_Type_Completion *)
 module Torpedoes__content___axiom
  use import "_gnatprove_standard".Main
  use import "int".Int
  use        Torpedoes__content
 
  predicate dynamic_invariant "inline" 
-   (temp___expr_196 : int) (temp___is_init_192 : bool) (temp___skip_constant_193 : bool) (temp___do_toplevel_194 : bool) (temp___do_typ_inv_195 : bool)  =
-  (if (( temp___is_init_192 \/ (Torpedoes__content.first <= Torpedoes__content.last) )) then (
-   (Torpedoes__content.dynamic_property Torpedoes__content.first Torpedoes__content.last temp___expr_196)) else true)
+   (temp___expr_176 : int) (temp___is_init_172 : bool) (temp___skip_constant_173 : bool) (temp___do_toplevel_174 : bool) (temp___do_typ_inv_175 : bool)  =
+  (if (( temp___is_init_172 \/ (Torpedoes__content.first <= Torpedoes__content.last) )) then (
+   (Torpedoes__content.dynamic_property Torpedoes__content.first Torpedoes__content.last temp___expr_176)) else true)
  
  predicate default_initial_assumption "inline" 
-   (temp___expr_197 : int) (temp___skip_top_level_198 : bool)  =
+   (temp___expr_177 : int) (temp___skip_top_level_178 : bool)  =
   true
 
 end
 
-(* Module giving axioms for type "TstoragecapacityB" defined at torpedoes.ads:13, created in Gnat2Why.Types.Generate_Type_Completion *)
+(* Module giving axioms for type "TstoragecapacityB" defined at torpedoes.ads:12, created in Gnat2Why.Types.Generate_Type_Completion *)
 module Torpedoes__TstoragecapacityB___axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module giving axioms for type "storagecapacity" defined at torpedoes.ads:13, created in Gnat2Why.Types.Generate_Type_Completion *)
+(* Module giving axioms for type "storagecapacity" defined at torpedoes.ads:12, created in Gnat2Why.Types.Generate_Type_Completion *)
 module Torpedoes__storagecapacity___axiom
  use import "_gnatprove_standard".Main
  use import "int".Int
  use        Torpedoes__storagecapacity
 
  predicate dynamic_invariant "inline" 
-   (temp___expr_203 : int) (temp___is_init_199 : bool) (temp___skip_constant_200 : bool) (temp___do_toplevel_201 : bool) (temp___do_typ_inv_202 : bool)  =
-  (if (( temp___is_init_199 \/ (Torpedoes__storagecapacity.first <= Torpedoes__storagecapacity.last) )) then (
-   (Torpedoes__storagecapacity.dynamic_property Torpedoes__storagecapacity.first Torpedoes__storagecapacity.last temp___expr_203)) else true)
+   (temp___expr_183 : int) (temp___is_init_179 : bool) (temp___skip_constant_180 : bool) (temp___do_toplevel_181 : bool) (temp___do_typ_inv_182 : bool)  =
+  (if (( temp___is_init_179 \/ (Torpedoes__storagecapacity.first <= Torpedoes__storagecapacity.last) )) then (
+   (Torpedoes__storagecapacity.dynamic_property Torpedoes__storagecapacity.first Torpedoes__storagecapacity.last temp___expr_183)) else true)
  
  predicate default_initial_assumption "inline" 
-   (temp___expr_204 : int) (temp___skip_top_level_205 : bool)  =
+   (temp___expr_184 : int) (temp___skip_top_level_185 : bool)  =
   true
 
 end
 
-(* Module giving axioms for type "TstorageB" defined at torpedoes.ads:15, created in Gnat2Why.Types.Generate_Type_Completion *)
+(* Module giving axioms for type "TstorageB" defined at torpedoes.ads:14, created in Gnat2Why.Types.Generate_Type_Completion *)
 module Torpedoes__TstorageB___axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module giving axioms for type "storage" defined at torpedoes.ads:15, created in Gnat2Why.Types.Generate_Type_Completion *)
+(* Module giving axioms for type "storage" defined at torpedoes.ads:14, created in Gnat2Why.Types.Generate_Type_Completion *)
 module Torpedoes__storage___axiom
  use import "_gnatprove_standard".Main
  use        Array__Int__Torpedoes__content
  use        Array__Int__Torpedoes__content
 
  predicate dynamic_invariant "inline" 
-   (temp___expr_210 : Array__Int__Torpedoes__content.map) (temp___is_init_206 : bool) (temp___skip_constant_207 : bool) (temp___do_toplevel_208 : bool) (temp___do_typ_inv_209 : bool)  =
+   (temp___expr_190 : Array__Int__Torpedoes__content.map) (temp___is_init_186 : bool) (temp___skip_constant_187 : bool) (temp___do_toplevel_188 : bool) (temp___do_typ_inv_189 : bool)  =
   true
  
  predicate default_initial_assumption "inline" 
-   (temp___expr_212 : Array__Int__Torpedoes__content.map) (temp___skip_top_level_213 : bool)  =
+   (temp___expr_192 : Array__Int__Torpedoes__content.map) (temp___skip_top_level_193 : bool)  =
   true
 
 end
 
-(* Module giving axioms for type "launcher" defined at torpedoes.ads:19, created in Gnat2Why.Types.Generate_Type_Completion *)
+(* Module giving axioms for type "launcher" defined at torpedoes.ads:18, created in Gnat2Why.Types.Generate_Type_Completion *)
 module Torpedoes__launcher___axiom
  use import "_gnatprove_standard".Main
  use import "int".Int
  use        Torpedoes__launcher
 
  predicate dynamic_invariant "inline" 
-   (temp___expr_220 : int) (temp___is_init_216 : bool) (temp___skip_constant_217 : bool) (temp___do_toplevel_218 : bool) (temp___do_typ_inv_219 : bool)  =
-  (if (( temp___is_init_216 \/ (Torpedoes__launcher.first <= Torpedoes__launcher.last) )) then (
-   (Torpedoes__launcher.dynamic_property Torpedoes__launcher.first Torpedoes__launcher.last temp___expr_220)) else true)
+   (temp___expr_200 : int) (temp___is_init_196 : bool) (temp___skip_constant_197 : bool) (temp___do_toplevel_198 : bool) (temp___do_typ_inv_199 : bool)  =
+  (if (( temp___is_init_196 \/ (Torpedoes__launcher.first <= Torpedoes__launcher.last) )) then (
+   (Torpedoes__launcher.dynamic_property Torpedoes__launcher.first Torpedoes__launcher.last temp___expr_200)) else true)
  
  predicate default_initial_assumption "inline" 
-   (temp___expr_221 : int) (temp___skip_top_level_222 : bool)  =
+   (temp___expr_201 : int) (temp___skip_top_level_202 : bool)  =
   true
 
 end
 
-(* Module giving axioms for type "T9s" defined at torpedoes.ads:38, created in Gnat2Why.Types.Generate_Type_Completion *)
-module Torpedoes__storageisfull__L8s__T9s___axiom
+(* Module giving axioms for type "T12s" defined at torpedoes.ads:35, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Torpedoes__storageisfull__L11s__T12s___axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module giving axioms for type "T6s" defined at torpedoes.ads:38, created in Gnat2Why.Types.Generate_Type_Completion *)
-module Torpedoes__storageisfull__L5s__T6s___axiom
+(* Module giving axioms for type "T7s" defined at torpedoes.ads:35, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Torpedoes__storageisfull__L6s__T7s___axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module giving axioms for type "T4b" defined at torpedoes.adb:22, created in Gnat2Why.Types.Generate_Type_Completion *)
+(* Module giving axioms for type "T15s" defined at torpedoes.ads:39, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Torpedoes__storageisempty__L14s__T15s___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module giving axioms for type "T9s" defined at torpedoes.ads:39, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Torpedoes__storageisempty__L8s__T9s___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module giving axioms for type "T4b" defined at torpedoes.adb:24, created in Gnat2Why.Types.Generate_Type_Completion *)
 module Torpedoes__filltorpedoestorage__L_1__L3b__T4b___axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module giving axioms for type "T2b" defined at torpedoes.adb:22, created in Gnat2Why.Types.Generate_Type_Completion *)
+(* Module giving axioms for type "T2b" defined at torpedoes.adb:24, created in Gnat2Why.Types.Generate_Type_Completion *)
 module Torpedoes__filltorpedoestorage__L_1__L1b__T2b___axiom
  use import "_gnatprove_standard".Main
 
 
 end
-(* Module for declaring a program function (and possibly an axiom) for "openouterairlockdoor" defined at submarine.ads:23, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
-module Submarine__openouterairlockdoor___axiom
- use        Submarine__innerdoor
- use        Submarine__outerdoor
+(* Module giving a program function and a defining axiom for the expression function "maxdepthinvariant" defined at movement.ads:11, created in Gnat2Why.Subprograms.Translate_Expression_Function_Body *)
+module Movement__maxdepthinvariant___axiom
+ use        Movement__currentdepth
  use import "_gnatprove_standard".Main
  use import "int".Int
- use        Submarine__doorstatus
- use        Submarine__doorstatus__rep
- use        Submarine__lockstatus
- use        Submarine__lockstatus__rep
- use        Submarine__airlockdoor
- use        Submarine__airlockdoor___axiom
- use        Submarine__outerdoor
- use        Submarine__innerdoor
+ use        Movement__maxdepthinvariant
+ use        Movement__depthmonitor___axiom
+ use        Movement__currentdepth
 
- val openouterairlockdoor 
-   (__void_param : unit) : unit
-  requires {  ( ((Submarine__doorstatus__rep.to_rep (Submarine__airlockdoor.rec__submarine__airlockdoor__door (Submarine__airlockdoor.__split_fields { Submarine__airlockdoor.__split_fields = Submarine__innerdoor.innerdoor__split_fields.Submarine__airlockdoor.__split_fields__content }))) = 1) /\ ( ((Submarine__lockstatus__rep.to_rep (Submarine__airlockdoor.rec__submarine__airlockdoor__lock (Submarine__airlockdoor.__split_fields { Submarine__airlockdoor.__split_fields = Submarine__outerdoor.outerdoor__split_fields.Submarine__airlockdoor.__split_fields__content }))) = 1) /\ ((Submarine__doorstatus__rep.to_rep (Submarine__airlockdoor.rec__submarine__airlockdoor__door (Submarine__airlockdoor.__split_fields { Submarine__airlockdoor.__split_fields = Submarine__outerdoor.outerdoor__split_fields.Submarine__airlockdoor.__split_fields__content }))) = 1) ) ) }
-  ensures {  ( ((Submarine__doorstatus__rep.to_rep (Submarine__airlockdoor.rec__submarine__airlockdoor__door (Submarine__airlockdoor.__split_fields { Submarine__airlockdoor.__split_fields = Submarine__outerdoor.outerdoor__split_fields.Submarine__airlockdoor.__split_fields__content }))) = 0) /\ (Submarine__airlockdoor___axiom.dynamic_invariant { Submarine__airlockdoor.__split_fields = Submarine__outerdoor.outerdoor__split_fields.Submarine__airlockdoor.__split_fields__content } True True True True) ) }
-  reads {Submarine__outerdoor.outerdoor__split_fields, Submarine__innerdoor.innerdoor__split_fields}
-  writes {Submarine__outerdoor.outerdoor__split_fields}
+ val maxdepthinvariant 
+   (__void_param : unit) : bool
+  requires {  true }
+  ensures {  ( ( (result = (Movement__maxdepthinvariant.maxdepthinvariant Movement__currentdepth.currentdepth.int__content)) /\ (Movement__maxdepthinvariant.maxdepthinvariant__function_guard result Movement__currentdepth.currentdepth.int__content) ) /\ ( (result = True) <-> (Movement__currentdepth.currentdepth.int__content <= 2000) ) ) }
+  reads {Movement__currentdepth.currentdepth}
+ 
+ axiom maxdepthinvariant__post_axiom :
+  (forall movement__currentdepth   : int [(Movement__maxdepthinvariant.maxdepthinvariant movement__currentdepth)].
+   ( (Movement__depthmonitor___axiom.dynamic_invariant movement__currentdepth True True True True) -> (let result = (Movement__maxdepthinvariant.maxdepthinvariant movement__currentdepth) in (
+    (if ((Movement__maxdepthinvariant.maxdepthinvariant__function_guard result movement__currentdepth)) then (
+     ( ( true /\ true ) /\ true )) else true)))
+    ))
+ 
+ axiom maxdepthinvariant__def_axiom :
+  (forall movement__currentdepth   : int [(Movement__maxdepthinvariant.maxdepthinvariant movement__currentdepth)].
+   ( (let result = (Movement__maxdepthinvariant.maxdepthinvariant movement__currentdepth) in (
+    (Movement__maxdepthinvariant.maxdepthinvariant__function_guard result movement__currentdepth)))
+    -> ( ((Movement__maxdepthinvariant.maxdepthinvariant movement__currentdepth) = True) <-> (movement__currentdepth <= 2000) ) ))
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "openinnerairlockdoor" defined at submarine.ads:29, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
-module Submarine__openinnerairlockdoor___axiom
- use        Submarine__innerdoor
- use        Submarine__outerdoor
+(* Module giving a program function and a defining axiom for the expression function "notsurfacedinvariant" defined at movement.ads:14, created in Gnat2Why.Subprograms.Translate_Expression_Function_Body *)
+module Movement__notsurfacedinvariant___axiom
+ use        Movement__currentdepth
  use import "_gnatprove_standard".Main
  use import "int".Int
- use        Submarine__doorstatus
- use        Submarine__doorstatus__rep
- use        Submarine__lockstatus
- use        Submarine__lockstatus__rep
- use        Submarine__airlockdoor
- use        Submarine__airlockdoor___axiom
- use        Submarine__outerdoor
- use        Submarine__innerdoor
+ use        Movement__notsurfacedinvariant
+ use        Movement__depthmonitor___axiom
+ use        Movement__currentdepth
 
- val openinnerairlockdoor 
-   (__void_param : unit) : unit
-  requires {  ( ((Submarine__doorstatus__rep.to_rep (Submarine__airlockdoor.rec__submarine__airlockdoor__door (Submarine__airlockdoor.__split_fields { Submarine__airlockdoor.__split_fields = Submarine__outerdoor.outerdoor__split_fields.Submarine__airlockdoor.__split_fields__content }))) = 1) /\ ( ((Submarine__lockstatus__rep.to_rep (Submarine__airlockdoor.rec__submarine__airlockdoor__lock (Submarine__airlockdoor.__split_fields { Submarine__airlockdoor.__split_fields = Submarine__innerdoor.innerdoor__split_fields.Submarine__airlockdoor.__split_fields__content }))) = 1) /\ ((Submarine__doorstatus__rep.to_rep (Submarine__airlockdoor.rec__submarine__airlockdoor__door (Submarine__airlockdoor.__split_fields { Submarine__airlockdoor.__split_fields = Submarine__innerdoor.innerdoor__split_fields.Submarine__airlockdoor.__split_fields__content }))) = 1) ) ) }
-  ensures {  ( ((Submarine__doorstatus__rep.to_rep (Submarine__airlockdoor.rec__submarine__airlockdoor__door (Submarine__airlockdoor.__split_fields { Submarine__airlockdoor.__split_fields = Submarine__innerdoor.innerdoor__split_fields.Submarine__airlockdoor.__split_fields__content }))) = 0) /\ (Submarine__airlockdoor___axiom.dynamic_invariant { Submarine__airlockdoor.__split_fields = Submarine__innerdoor.innerdoor__split_fields.Submarine__airlockdoor.__split_fields__content } True True True True) ) }
-  reads {Submarine__outerdoor.outerdoor__split_fields, Submarine__innerdoor.innerdoor__split_fields}
-  writes {Submarine__innerdoor.innerdoor__split_fields}
+ val notsurfacedinvariant 
+   (__void_param : unit) : bool
+  requires {  true }
+  ensures {  ( ( (result = (Movement__notsurfacedinvariant.notsurfacedinvariant Movement__currentdepth.currentdepth.int__content)) /\ (Movement__notsurfacedinvariant.notsurfacedinvariant__function_guard result Movement__currentdepth.currentdepth.int__content) ) /\ ( (result = True) <-> (Movement__currentdepth.currentdepth.int__content > 0) ) ) }
+  reads {Movement__currentdepth.currentdepth}
+ 
+ axiom notsurfacedinvariant__post_axiom :
+  (forall movement__currentdepth   : int [(Movement__notsurfacedinvariant.notsurfacedinvariant movement__currentdepth)].
+   ( (Movement__depthmonitor___axiom.dynamic_invariant movement__currentdepth True True True True) -> (let result = (Movement__notsurfacedinvariant.notsurfacedinvariant movement__currentdepth) in (
+    (if ((Movement__notsurfacedinvariant.notsurfacedinvariant__function_guard result movement__currentdepth)) then (
+     ( ( true /\ true ) /\ true )) else true)))
+    ))
+ 
+ axiom notsurfacedinvariant__def_axiom :
+  (forall movement__currentdepth   : int [(Movement__notsurfacedinvariant.notsurfacedinvariant movement__currentdepth)].
+   ( (let result = (Movement__notsurfacedinvariant.notsurfacedinvariant movement__currentdepth) in (
+    (Movement__notsurfacedinvariant.notsurfacedinvariant__function_guard result movement__currentdepth)))
+    -> ( ((Movement__notsurfacedinvariant.notsurfacedinvariant movement__currentdepth) = True) <-> (movement__currentdepth > 0) ) ))
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "closeouterairlockdoor" defined at submarine.ads:36, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
-module Submarine__closeouterairlockdoor___axiom
- use        Submarine__outerdoor
+(* Module for declaring a program function (and possibly an axiom) for "divethesubmarine100ft" defined at movement.ads:20, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Movement__divethesubmarine100ft___axiom
+ use        Movement__currentoperationstatus
+ use        Movement__currentdepth
  use import "_gnatprove_standard".Main
  use import "int".Int
- use        Submarine__doorstatus
- use        Submarine__doorstatus__rep
- use        Submarine__airlockdoor
- use        Submarine__airlockdoor___axiom
- use        Submarine__outerdoor
+ use        Movement__depthmonitor___axiom
+ use        Movement__currentdepth
+ use        Movement__currentoperationstatus
 
- val closeouterairlockdoor 
+ val divethesubmarine100ft 
    (__void_param : unit) : unit
-  requires {  ((Submarine__doorstatus__rep.to_rep (Submarine__airlockdoor.rec__submarine__airlockdoor__door (Submarine__airlockdoor.__split_fields { Submarine__airlockdoor.__split_fields = Submarine__outerdoor.outerdoor__split_fields.Submarine__airlockdoor.__split_fields__content }))) = 0) }
-  ensures {  ( ((Submarine__doorstatus__rep.to_rep (Submarine__airlockdoor.rec__submarine__airlockdoor__door (Submarine__airlockdoor.__split_fields { Submarine__airlockdoor.__split_fields = Submarine__outerdoor.outerdoor__split_fields.Submarine__airlockdoor.__split_fields__content }))) = 1) /\ (Submarine__airlockdoor___axiom.dynamic_invariant { Submarine__airlockdoor.__split_fields = Submarine__outerdoor.outerdoor__split_fields.Submarine__airlockdoor.__split_fields__content } True True True True) ) }
-  reads {Submarine__outerdoor.outerdoor__split_fields}
-  writes {Submarine__outerdoor.outerdoor__split_fields}
+  requires {  ( (Movement__currentdepth.currentdepth.int__content <= 1900) /\ ( (Movement__currentdepth.currentdepth.int__content >= 0) /\ (Movement__currentoperationstatus.currentoperationstatus.int__content = 0) ) ) }
+  ensures {  ( ( (Movement__currentdepth.currentdepth.int__content <= 2000) /\ (Movement__currentdepth.currentdepth.int__content >= 100) ) /\ (Movement__depthmonitor___axiom.dynamic_invariant Movement__currentdepth.currentdepth.int__content True True True True) ) }
+  reads {Movement__currentdepth.currentdepth, Movement__currentoperationstatus.currentoperationstatus}
+  writes {Movement__currentdepth.currentdepth}
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "closeinnerairlockdoor" defined at submarine.ads:42, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
-module Submarine__closeinnerairlockdoor___axiom
- use        Submarine__innerdoor
+(* Module for declaring a program function (and possibly an axiom) for "divethesubmarinetomaxdepth" defined at movement.ads:26, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Movement__divethesubmarinetomaxdepth___axiom
+ use        Movement__currentoperationstatus
+ use        Movement__currentdepth
  use import "_gnatprove_standard".Main
  use import "int".Int
- use        Submarine__doorstatus
- use        Submarine__doorstatus__rep
- use        Submarine__airlockdoor
- use        Submarine__airlockdoor___axiom
- use        Submarine__innerdoor
+ use        Movement__depthmonitor___axiom
+ use        Movement__currentdepth
+ use        Movement__currentoperationstatus
 
- val closeinnerairlockdoor 
+ val divethesubmarinetomaxdepth 
    (__void_param : unit) : unit
-  requires {  ((Submarine__doorstatus__rep.to_rep (Submarine__airlockdoor.rec__submarine__airlockdoor__door (Submarine__airlockdoor.__split_fields { Submarine__airlockdoor.__split_fields = Submarine__innerdoor.innerdoor__split_fields.Submarine__airlockdoor.__split_fields__content }))) = 0) }
-  ensures {  ( ((Submarine__doorstatus__rep.to_rep (Submarine__airlockdoor.rec__submarine__airlockdoor__door (Submarine__airlockdoor.__split_fields { Submarine__airlockdoor.__split_fields = Submarine__innerdoor.innerdoor__split_fields.Submarine__airlockdoor.__split_fields__content }))) = 1) /\ (Submarine__airlockdoor___axiom.dynamic_invariant { Submarine__airlockdoor.__split_fields = Submarine__innerdoor.innerdoor__split_fields.Submarine__airlockdoor.__split_fields__content } True True True True) ) }
-  reads {Submarine__innerdoor.innerdoor__split_fields}
-  writes {Submarine__innerdoor.innerdoor__split_fields}
+  requires {  ( (Movement__currentdepth.currentdepth.int__content < 2000) /\ (Movement__currentoperationstatus.currentoperationstatus.int__content = 0) ) }
+  ensures {  ( (Movement__currentdepth.currentdepth.int__content = 2000) /\ (Movement__depthmonitor___axiom.dynamic_invariant Movement__currentdepth.currentdepth.int__content True True True True) ) }
+  reads {Movement__currentdepth.currentdepth, Movement__currentoperationstatus.currentoperationstatus}
+  writes {Movement__currentdepth.currentdepth}
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "lockouterdoor" defined at submarine.ads:53, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
-module Submarine__lockouterdoor___axiom
- use        Submarine__innerdoor
- use        Submarine__outerdoor
- use        Submarine__currentoperationstatus
+(* Module for declaring a program function (and possibly an axiom) for "raisethesubmarine100ft" defined at movement.ads:32, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Movement__raisethesubmarine100ft___axiom
+ use        Movement__currentdepth
  use import "_gnatprove_standard".Main
  use import "int".Int
- use        Submarine__doorstatus
- use        Submarine__doorstatus__rep
- use        Submarine__lockstatus
- use        Submarine__lockstatus__rep
- use        Submarine__airlockdoor
- use        Submarine__airlockdoor___axiom
- use        Submarine__outerdoor
- use        Submarine__innerdoor
- use        Submarine__operationstatus___axiom
- use        Submarine__currentoperationstatus
+ use        Movement__maxdepthinvariant
+ use        Movement__depthmonitor___axiom
+ use        Movement__currentdepth
 
- val lockouterdoor 
+ val raisethesubmarine100ft 
    (__void_param : unit) : unit
-  requires {  ( ((Submarine__doorstatus__rep.to_rep (Submarine__airlockdoor.rec__submarine__airlockdoor__door (Submarine__airlockdoor.__split_fields { Submarine__airlockdoor.__split_fields = Submarine__outerdoor.outerdoor__split_fields.Submarine__airlockdoor.__split_fields__content }))) = 1) /\ ((Submarine__lockstatus__rep.to_rep (Submarine__airlockdoor.rec__submarine__airlockdoor__lock (Submarine__airlockdoor.__split_fields { Submarine__airlockdoor.__split_fields = Submarine__outerdoor.outerdoor__split_fields.Submarine__airlockdoor.__split_fields__content }))) = 1) ) }
-  ensures {  ( ((Submarine__lockstatus__rep.to_rep (Submarine__airlockdoor.rec__submarine__airlockdoor__lock (Submarine__airlockdoor.__split_fields { Submarine__airlockdoor.__split_fields = Submarine__outerdoor.outerdoor__split_fields.Submarine__airlockdoor.__split_fields__content }))) = 0) /\ ( (Submarine__airlockdoor___axiom.dynamic_invariant { Submarine__airlockdoor.__split_fields = Submarine__outerdoor.outerdoor__split_fields.Submarine__airlockdoor.__split_fields__content } True True True True) /\ (Submarine__operationstatus___axiom.dynamic_invariant Submarine__currentoperationstatus.currentoperationstatus.int__content True True True True) ) ) }
-  reads {Submarine__outerdoor.outerdoor__split_fields, Submarine__innerdoor.innerdoor__split_fields, Submarine__currentoperationstatus.currentoperationstatus}
-  writes {Submarine__outerdoor.outerdoor__split_fields, Submarine__currentoperationstatus.currentoperationstatus}
+  requires {  ( (Movement__currentdepth.currentdepth.int__content >= 100) /\ ((epsilon temp___result_169 : bool.
+   ( (temp___result_169 = (Movement__maxdepthinvariant.maxdepthinvariant Movement__currentdepth.currentdepth.int__content)) /\ (Movement__maxdepthinvariant.maxdepthinvariant__function_guard temp___result_169 Movement__currentdepth.currentdepth.int__content) )) = True) ) }
+  ensures {  ( ( (Movement__currentdepth.currentdepth.int__content <= 1900) /\ (Movement__currentdepth.currentdepth.int__content >= 0) ) /\ (Movement__depthmonitor___axiom.dynamic_invariant Movement__currentdepth.currentdepth.int__content True True True True) ) }
+  reads {Movement__currentdepth.currentdepth}
+  writes {Movement__currentdepth.currentdepth}
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "unlockouterdoor" defined at submarine.ads:59, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
-module Submarine__unlockouterdoor___axiom
- use        Submarine__currentdepth
- use        Submarine__outerdoor
- use        Submarine__currentoperationstatus
+(* Module for declaring a program function (and possibly an axiom) for "surfacethesubmarine" defined at movement.ads:38, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Movement__surfacethesubmarine___axiom
+ use        Movement__currentdepth
  use import "_gnatprove_standard".Main
  use import "int".Int
- use        Submarine__currentdepth
- use        Submarine__lockstatus
- use        Submarine__lockstatus__rep
- use        Submarine__airlockdoor
- use        Submarine__airlockdoor___axiom
- use        Submarine__outerdoor
- use        Submarine__operationstatus___axiom
- use        Submarine__currentoperationstatus
+ use        Movement__maxdepthinvariant
+ use        Movement__notsurfacedinvariant
+ use        Movement__depthmonitor___axiom
+ use        Movement__currentdepth
 
- val unlockouterdoor 
+ val surfacethesubmarine 
    (__void_param : unit) : unit
-  requires {  ( (Submarine__currentdepth.currentdepth.int__content = 0) /\ ((Submarine__lockstatus__rep.to_rep (Submarine__airlockdoor.rec__submarine__airlockdoor__lock (Submarine__airlockdoor.__split_fields { Submarine__airlockdoor.__split_fields = Submarine__outerdoor.outerdoor__split_fields.Submarine__airlockdoor.__split_fields__content }))) = 0) ) }
-  ensures {  ( ( ((Submarine__lockstatus__rep.to_rep (Submarine__airlockdoor.rec__submarine__airlockdoor__lock (Submarine__airlockdoor.__split_fields { Submarine__airlockdoor.__split_fields = Submarine__outerdoor.outerdoor__split_fields.Submarine__airlockdoor.__split_fields__content }))) = 1) /\ (Submarine__currentoperationstatus.currentoperationstatus.int__content = 1) ) /\ ( (Submarine__airlockdoor___axiom.dynamic_invariant { Submarine__airlockdoor.__split_fields = Submarine__outerdoor.outerdoor__split_fields.Submarine__airlockdoor.__split_fields__content } True True True True) /\ (Submarine__operationstatus___axiom.dynamic_invariant Submarine__currentoperationstatus.currentoperationstatus.int__content True True True True) ) ) }
-  reads {Submarine__currentdepth.currentdepth, Submarine__outerdoor.outerdoor__split_fields, Submarine__currentoperationstatus.currentoperationstatus}
-  writes {Submarine__outerdoor.outerdoor__split_fields, Submarine__currentoperationstatus.currentoperationstatus}
+  requires {  ( ((epsilon temp___result_171 : bool.
+   ( (temp___result_171 = (Movement__notsurfacedinvariant.notsurfacedinvariant Movement__currentdepth.currentdepth.int__content)) /\ (Movement__notsurfacedinvariant.notsurfacedinvariant__function_guard temp___result_171 Movement__currentdepth.currentdepth.int__content) )) = True) /\ ((epsilon temp___result_170 : bool.
+   ( (temp___result_170 = (Movement__maxdepthinvariant.maxdepthinvariant Movement__currentdepth.currentdepth.int__content)) /\ (Movement__maxdepthinvariant.maxdepthinvariant__function_guard temp___result_170 Movement__currentdepth.currentdepth.int__content) )) = True) ) }
+  ensures {  ( (Movement__currentdepth.currentdepth.int__content = 0) /\ (Movement__depthmonitor___axiom.dynamic_invariant Movement__currentdepth.currentdepth.int__content True True True True) ) }
+  reads {Movement__currentdepth.currentdepth}
+  writes {Movement__currentdepth.currentdepth}
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "lockinnerdoor" defined at submarine.ads:65, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
-module Submarine__lockinnerdoor___axiom
- use        Submarine__innerdoor
- use        Submarine__outerdoor
- use        Submarine__currentoperationstatus
+(* Module giving a program function and a defining axiom for the expression function "storageisempty" defined at torpedoes.ads:38, created in Gnat2Why.Subprograms.Translate_Expression_Function_Body *)
+module Torpedoes__storageisempty___axiom
  use import "_gnatprove_standard".Main
  use import "int".Int
- use        Submarine__doorstatus
- use        Submarine__doorstatus__rep
- use        Submarine__lockstatus
- use        Submarine__lockstatus__rep
- use        Submarine__airlockdoor
- use        Submarine__airlockdoor___axiom
- use        Submarine__outerdoor
- use        Submarine__innerdoor
- use        Submarine__operationstatus___axiom
- use        Submarine__currentoperationstatus
+ use        Torpedoes__storageisempty
+ use        Torpedoes__content
+ use        Torpedoes__content__rep
+ use        Array__Int__Torpedoes__content
+ use        Torpedoes__storage___axiom
+ use        Array__Int__Torpedoes__content
+ use        Array__Int__Torpedoes__content
+ use        Array__Int__Torpedoes__content
 
- val lockinnerdoor 
-   (__void_param : unit) : unit
-  requires {  ( ((Submarine__doorstatus__rep.to_rep (Submarine__airlockdoor.rec__submarine__airlockdoor__door (Submarine__airlockdoor.__split_fields { Submarine__airlockdoor.__split_fields = Submarine__innerdoor.innerdoor__split_fields.Submarine__airlockdoor.__split_fields__content }))) = 1) /\ ((Submarine__lockstatus__rep.to_rep (Submarine__airlockdoor.rec__submarine__airlockdoor__lock (Submarine__airlockdoor.__split_fields { Submarine__airlockdoor.__split_fields = Submarine__innerdoor.innerdoor__split_fields.Submarine__airlockdoor.__split_fields__content }))) = 1) ) }
-  ensures {  ( ((Submarine__lockstatus__rep.to_rep (Submarine__airlockdoor.rec__submarine__airlockdoor__lock (Submarine__airlockdoor.__split_fields { Submarine__airlockdoor.__split_fields = Submarine__innerdoor.innerdoor__split_fields.Submarine__airlockdoor.__split_fields__content }))) = 0) /\ ( (Submarine__airlockdoor___axiom.dynamic_invariant { Submarine__airlockdoor.__split_fields = Submarine__innerdoor.innerdoor__split_fields.Submarine__airlockdoor.__split_fields__content } True True True True) /\ (Submarine__operationstatus___axiom.dynamic_invariant Submarine__currentoperationstatus.currentoperationstatus.int__content True True True True) ) ) }
-  reads {Submarine__outerdoor.outerdoor__split_fields, Submarine__innerdoor.innerdoor__split_fields, Submarine__currentoperationstatus.currentoperationstatus}
-  writes {Submarine__innerdoor.innerdoor__split_fields, Submarine__currentoperationstatus.currentoperationstatus}
+ val storageisempty 
+   (d : Array__Int__Torpedoes__content.map) : bool
+  requires {  true }
+  ensures {  ( ( (result = (Torpedoes__storageisempty.storageisempty d)) /\ (Torpedoes__storageisempty.storageisempty__function_guard result d) ) /\ ( (result = True) <-> (forall i   "model" "model_trace:2602" "name:I"  : int.
+   ( ( (0 <= i) /\ (i <= 50) ) -> ((Torpedoes__content__rep.to_rep (Array__Int__Torpedoes__content.get d i)) = 1) )) ) ) }
+ 
+ axiom storageisempty__post_axiom :
+  (forall d   : Array__Int__Torpedoes__content.map [(Torpedoes__storageisempty.storageisempty d)].
+   ( (Torpedoes__storage___axiom.dynamic_invariant d True True True True) -> (let result = (Torpedoes__storageisempty.storageisempty d) in (
+    (if ((Torpedoes__storageisempty.storageisempty__function_guard result d)) then (
+     ( ( true /\ true ) /\ true )) else true)))
+    ))
+ 
+ axiom storageisempty__def_axiom :
+  (forall d   : Array__Int__Torpedoes__content.map [(Torpedoes__storageisempty.storageisempty d)].
+   ( (let result = (Torpedoes__storageisempty.storageisempty d) in (
+    (Torpedoes__storageisempty.storageisempty__function_guard result d)))
+    -> ( ((Torpedoes__storageisempty.storageisempty d) = True) <-> (forall i   "model" "model_trace:2602" "name:I"  : int.
+    ( ( (0 <= i) /\ (i <= 50) ) -> ((Torpedoes__content__rep.to_rep (Array__Int__Torpedoes__content.get d i)) = 1) )) ) ))
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "unlockinnerdoor" defined at submarine.ads:71, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
-module Submarine__unlockinnerdoor___axiom
- use        Submarine__innerdoor
- use        Submarine__currentdepth
- use        Submarine__currentoperationstatus
- use import "_gnatprove_standard".Main
- use import "int".Int
- use        Submarine__currentdepth
- use        Submarine__lockstatus
- use        Submarine__lockstatus__rep
- use        Submarine__airlockdoor
- use        Submarine__airlockdoor___axiom
- use        Submarine__innerdoor
- use        Submarine__operationstatus___axiom
- use        Submarine__currentoperationstatus
-
- val unlockinnerdoor 
-   (__void_param : unit) : unit
-  requires {  ( (Submarine__currentdepth.currentdepth.int__content = 0) /\ ((Submarine__lockstatus__rep.to_rep (Submarine__airlockdoor.rec__submarine__airlockdoor__lock (Submarine__airlockdoor.__split_fields { Submarine__airlockdoor.__split_fields = Submarine__innerdoor.innerdoor__split_fields.Submarine__airlockdoor.__split_fields__content }))) = 0) ) }
-  ensures {  ( ( ((Submarine__lockstatus__rep.to_rep (Submarine__airlockdoor.rec__submarine__airlockdoor__lock (Submarine__airlockdoor.__split_fields { Submarine__airlockdoor.__split_fields = Submarine__innerdoor.innerdoor__split_fields.Submarine__airlockdoor.__split_fields__content }))) = 1) /\ (Submarine__currentoperationstatus.currentoperationstatus.int__content = 1) ) /\ ( (Submarine__airlockdoor___axiom.dynamic_invariant { Submarine__airlockdoor.__split_fields = Submarine__innerdoor.innerdoor__split_fields.Submarine__airlockdoor.__split_fields__content } True True True True) /\ (Submarine__operationstatus___axiom.dynamic_invariant Submarine__currentoperationstatus.currentoperationstatus.int__content True True True True) ) ) }
-  reads {Submarine__currentdepth.currentdepth, Submarine__innerdoor.innerdoor__split_fields, Submarine__currentoperationstatus.currentoperationstatus}
-  writes {Submarine__innerdoor.innerdoor__split_fields, Submarine__currentoperationstatus.currentoperationstatus}
-
-end
-
-(* Module giving a program function and a defining axiom for the expression function "storageisfull" defined at torpedoes.ads:37, created in Gnat2Why.Subprograms.Translate_Expression_Function_Body *)
+(* Module giving a program function and a defining axiom for the expression function "storageisfull" defined at torpedoes.ads:34, created in Gnat2Why.Subprograms.Translate_Expression_Function_Body *)
 module Torpedoes__storageisfull___axiom
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -3746,7 +3516,7 @@ module Torpedoes__storageisfull___axiom
  val storageisfull 
    (d : Array__Int__Torpedoes__content.map) : bool
   requires {  true }
-  ensures {  ( ( (result = (Torpedoes__storageisfull.storageisfull d)) /\ (Torpedoes__storageisfull.storageisfull__function_guard result d) ) /\ ( (result = True) <-> (forall i   "model" "model_trace:2558" "name:I"  : int.
+  ensures {  ( ( (result = (Torpedoes__storageisfull.storageisfull d)) /\ (Torpedoes__storageisfull.storageisfull__function_guard result d) ) /\ ( (result = True) <-> (forall i   "model" "name:I" "model_trace:2567"  : int.
    ( ( (0 <= i) /\ (i <= 50) ) -> ((Torpedoes__content__rep.to_rep (Array__Int__Torpedoes__content.get d i)) = 0) )) ) ) }
  
  axiom storageisfull__post_axiom :
@@ -3760,34 +3530,36 @@ module Torpedoes__storageisfull___axiom
   (forall d   : Array__Int__Torpedoes__content.map [(Torpedoes__storageisfull.storageisfull d)].
    ( (let result = (Torpedoes__storageisfull.storageisfull d) in (
     (Torpedoes__storageisfull.storageisfull__function_guard result d)))
-    -> ( ((Torpedoes__storageisfull.storageisfull d) = True) <-> (forall i   "model" "model_trace:2558" "name:I"  : int.
+    -> ( ((Torpedoes__storageisfull.storageisfull d) = True) <-> (forall i   "model" "name:I" "model_trace:2567"  : int.
     ( ( (0 <= i) /\ (i <= 50) ) -> ((Torpedoes__content__rep.to_rep (Array__Int__Torpedoes__content.get d i)) = 0) )) ) ))
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "filltorpedoestorage" defined at torpedoes.ads:29, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "filltorpedoestorage" defined at torpedoes.ads:26, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Torpedoes__filltorpedoestorage___axiom
- use        Submarine__currentdepth
  use        Torpedoes__torpedoestorage
+ use        Movement__currentdepth
  use import "_gnatprove_standard".Main
  use import "int".Int
+ use        Torpedoes__storageisempty
  use        Torpedoes__storageisfull
- use        Submarine__currentdepth
+ use        Movement__currentdepth
  use        Torpedoes__storage___axiom
  use        Array__Int__Torpedoes__content
  use        Torpedoes__torpedoestorage
 
  val filltorpedoestorage 
    (__void_param : unit) : unit
-  requires {  (Submarine__currentdepth.currentdepth.int__content = 0) }
-  ensures {  ( ((epsilon temp___result_225 : bool.
-   ( (temp___result_225 = (Torpedoes__storageisfull.storageisfull Torpedoes__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__content.map__content)) /\ (Torpedoes__storageisfull.storageisfull__function_guard temp___result_225 Torpedoes__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__content.map__content) )) = True) /\ (Torpedoes__storage___axiom.dynamic_invariant Torpedoes__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__content.map__content True True True True) ) }
-  reads {Submarine__currentdepth.currentdepth, Torpedoes__torpedoestorage.torpedoestorage}
+  requires {  ( (Movement__currentdepth.currentdepth.int__content = 0) /\ ((epsilon temp___result_207 : bool.
+   ( (temp___result_207 = (Torpedoes__storageisempty.storageisempty Torpedoes__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__content.map__content)) /\ (Torpedoes__storageisempty.storageisempty__function_guard temp___result_207 Torpedoes__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__content.map__content) )) = True) ) }
+  ensures {  ( ((epsilon temp___result_208 : bool.
+   ( (temp___result_208 = (Torpedoes__storageisfull.storageisfull Torpedoes__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__content.map__content)) /\ (Torpedoes__storageisfull.storageisfull__function_guard temp___result_208 Torpedoes__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__content.map__content) )) = True) /\ (Torpedoes__storage___axiom.dynamic_invariant Torpedoes__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__content.map__content True True True True) ) }
+  reads {Movement__currentdepth.currentdepth, Torpedoes__torpedoestorage.torpedoestorage}
   writes {Torpedoes__torpedoestorage.torpedoestorage}
 
 end
 
-(* Module for checking absence of run-time errors and package initial condition on package elaboration of "torpedoes" defined at torpedoes.ads:5, created in Gnat2Why.Subprograms.Generate_VCs_For_Package_Elaboration *)
+(* Module for checking absence of run-time errors and package initial condition on package elaboration of "torpedoes" defined at torpedoes.ads:4, created in Gnat2Why.Subprograms.Generate_VCs_For_Package_Elaboration *)
 module Torpedoes__package_def
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -3802,41 +3574,103 @@ module Torpedoes__package_def
  use        Torpedoes__launcher___axiom
  use        Torpedoes__torpedoetube___axiom
 
- let def #"torpedoes.ads" 5 0 0#"GP_Subp:torpedoes.ads:5" "W:diverges:N" 
+ let def #"torpedoes.ads" 4 0 0#"GP_Subp:torpedoes.ads:4" "W:diverges:N" 
    (__void_param : unit)
-  requires { #"torpedoes.ads" 5 0 0# true }
-  ensures { #"torpedoes.ads" 5 0 0# true }
+  requires { #"torpedoes.ads" 4 0 0# true }
+  ensures { #"torpedoes.ads" 4 0 0# true }
    =
-  ( (#"torpedoes.ads" 5 0 0# ());
-  (#"torpedoes.ads" 11 0 0# ());
-  (#"torpedoes.ads" 13 0 0# ());
-  (#"torpedoes.ads" 15 0 0# ());
-  (#"torpedoes.ads" 17 0 0# ());
-  (#"torpedoes.ads" 17 0 0# ());
-  (#"torpedoes.ads" 17 0 0# ());
-  (#"torpedoes.ads" 17 0 0# ());
-  (#"torpedoes.ads" 17 0 0# ());
-  (#"torpedoes.ads" 17 0 0# ( #"torpedoes.ads" 17 0 0# abstract ensures {true}(let _ = () in (
+  ( (#"torpedoes.ads" 4 0 0# ());
+  (#"torpedoes.ads" 10 0 0# ());
+  (#"torpedoes.ads" 12 0 0# ());
+  (#"torpedoes.ads" 14 0 0# ());
+  (#"torpedoes.ads" 16 0 0# ());
+  (#"torpedoes.ads" 16 0 0# ());
+  (#"torpedoes.ads" 16 0 0# ());
+  (#"torpedoes.ads" 16 0 0# ());
+  (#"torpedoes.ads" 16 0 0# ());
+  (#"torpedoes.ads" 16 0 0# ( #"torpedoes.ads" 16 0 0# abstract ensures {true}(let _ = () in (
    ()))
    end ;
-  #"torpedoes.ads" 17 0 0# assume { #"torpedoes.ads" 17 0 0# (Torpedoes__storage___axiom.default_initial_assumption Torpedoes__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__content.map__content False) };
-  #"torpedoes.ads" 17 0 0# assume { #"torpedoes.ads" 17 0 0# (Torpedoes__storage___axiom.dynamic_invariant Torpedoes__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__content.map__content False False True True) } ));
-  (#"torpedoes.ads" 19 0 0# ());
-  (#"torpedoes.ads" 21 0 0# ());
-  (#"torpedoes.ads" 21 0 0# ( #"torpedoes.ads" 21 0 0# Torpedoes__torpedoetube.torpedoetube.int__content <- ( 1 );
-  #"torpedoes.ads" 21 0 0# assume { #"torpedoes.ads" 21 0 0# (Torpedoes__launcher___axiom.dynamic_invariant Torpedoes__torpedoetube.torpedoetube.int__content True False True True) } ));
+  #"torpedoes.ads" 16 0 0# assume { #"torpedoes.ads" 16 0 0# (Torpedoes__storage___axiom.default_initial_assumption Torpedoes__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__content.map__content False) };
+  #"torpedoes.ads" 16 0 0# assume { #"torpedoes.ads" 16 0 0# (Torpedoes__storage___axiom.dynamic_invariant Torpedoes__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__content.map__content False False True True) } ));
+  (#"torpedoes.ads" 18 0 0# ());
+  (#"torpedoes.ads" 20 0 0# ());
+  (#"torpedoes.ads" 20 0 0# ( #"torpedoes.ads" 20 0 0# Torpedoes__torpedoetube.torpedoetube.int__content <- ( 1 );
+  #"torpedoes.ads" 20 0 0# assume { #"torpedoes.ads" 20 0 0# (Torpedoes__launcher___axiom.dynamic_invariant Torpedoes__torpedoetube.torpedoetube.int__content True False True True) } ));
+  (#"torpedoes.ads" 26 0 0# ());
   (#"torpedoes.ads" 29 0 0# ());
-  (#"torpedoes.ads" 32 0 0# ());
-  (#"torpedoes.ads" 31 0 0# ());
-  (#"torpedoes.ads" 30 0 0# ());
-  (#"torpedoes.ads" 37 0 0# ());
-  (#"torpedoes.ads" 37 0 0# ());
-  (#"torpedoes.adb" 2 0 0# ());
-  (#"torpedoes.adb" 12 0 0# ());
-  ( "GP_Sloc:torpedoes.adb:33:1" (#"torpedoes.adb" 33 0 0# ()) ) )
+  (#"torpedoes.ads" 28 0 0# ());
+  (#"torpedoes.ads" 28 0 0# ());
+  (#"torpedoes.ads" 27 0 0# ());
+  (#"torpedoes.ads" 34 0 0# ());
+  (#"torpedoes.ads" 38 0 0# ());
+  (#"torpedoes.ads" 34 0 0# ());
+  (#"torpedoes.ads" 38 0 0# ());
+  (#"torpedoes.adb" 4 0 0# ());
+  (#"torpedoes.adb" 14 0 0# ());
+  ( "GP_Sloc:torpedoes.adb:29:1" (#"torpedoes.adb" 29 0 0# ()) ) )
 end
 
-(* Module for checking contracts and absence of run-time errors in subprogram "storageisfull" defined at torpedoes.ads:37, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+(* Module for checking contracts and absence of run-time errors in subprogram "storageisempty" defined at torpedoes.ads:38, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+module Torpedoes__storageisempty__subprogram_def
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        "_gnatprove_standard".Boolean
+ use        Torpedoes__content
+ use        Torpedoes__content__rep
+ use        Array__Int__Torpedoes__content
+ use        Torpedoes__storage___axiom
+ use        Torpedoes__storageisempty__d
+ use        Torpedoes__content___axiom
+ use        Torpedoes__storage___axiom
+ use        Torpedoes__storageisempty__d___axiom
+
+ val torpedoes__storageisempty__result "model_projected" "model_trace:2582@result" "name:StorageIsEmpty"  : bool__ref 
+ 
+ let def #"torpedoes.ads" 38 0 0#"W:diverges:N" "GP_Subp:torpedoes.ads:38" 
+   (__void_param : unit)
+  requires { #"torpedoes.ads" 38 0 0# true }
+  ensures { #"torpedoes.ads" 38 0 0# true }
+   =
+  ( () (* Assume dynamic invariants of inputs of the subprogram torpedoes.ads:38 *)
+  ;
+  #"torpedoes.ads" 38 0 0# assume { #"torpedoes.ads" 38 0 0# (Torpedoes__storage___axiom.dynamic_invariant Torpedoes__storageisempty__d.d True False True True) };
+  #"torpedoes.ads" 38 0 0# assume { #"torpedoes.ads" 38 0 0# true };
+  () (* Declarations introduced by the compiler at the beginning of the subprogram torpedoes.ads:38 *)
+  ;
+  () (* Check for RTE in the Pre of the subprogram torpedoes.ads:38 *)
+  ;
+  #"torpedoes.ads" 38 0 0# abstract ensures {true}(let _ = True in (
+   ()))
+   end ;
+  () (* Assume Pre of the subprogram torpedoes.ads:38 *)
+  ;
+  #"torpedoes.ads" 38 0 0# assume { #"torpedoes.ads" 38 0 0# true };
+  #"torpedoes.ads" 38 0 0# try
+   ( ( "GP_Sloc:torpedoes.ads:39:7" (#"torpedoes.ads" 39 0 0# ( #"torpedoes.ads" 39 0 0# torpedoes__storageisempty__result.bool__content <- ( ( (let i = #"torpedoes.ads" 39 0 0# (any int
+   ) in (
+    (if ((Boolean.andb((0 <= i)) ((i <= 50)))) then (
+     #"torpedoes.ads" 39 0 0# abstract ensures {true}(let _ = ((Torpedoes__content__rep.to_rep((Array__Int__Torpedoes__content.get(Torpedoes__storageisempty__d.d) (i)))) = 1) in (
+      ()))
+      end ))))
+   ;
+   #"torpedoes.ads" 39 0 0# (any bool
+   requires {#"torpedoes.ads" 39 0 0# true} 
+   ensures {#"torpedoes.ads" 39 0 0# ( (result = True) <-> (forall i #"torpedoes.ads" 39 0 0#  "model" "model_trace:2602" "name:I"  : int.
+    ( ( (0 <= i) /\ (i <= 50) ) -> ((Torpedoes__content__rep.to_rep (Array__Int__Torpedoes__content.get Torpedoes__storageisempty__d.d i)) = 1) )) )} 
+   ) ) );
+   #"torpedoes.ads" 39 0 0# raise Return__exc )) );
+    raise Return__exc )
+  with
+   Return__exc -> ()
+  end;
+   abstract ensures {true}(let _ = True in (
+   ()))
+   end ;
+  torpedoes__storageisempty__result.bool__content )
+end
+
+(* Module for checking contracts and absence of run-time errors in subprogram "storageisfull" defined at torpedoes.ads:34, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
 module Torpedoes__storageisfull__subprogram_def
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -3850,41 +3684,41 @@ module Torpedoes__storageisfull__subprogram_def
  use        Torpedoes__storage___axiom
  use        Torpedoes__storageisfull__d___axiom
 
- val torpedoes__storageisfull__result "model_projected" "model_trace:2538@result" "name:StorageIsFull"  : bool__ref 
+ val torpedoes__storageisfull__result "model_projected" "model_trace:2547@result" "name:StorageIsFull"  : bool__ref 
  
- let def #"torpedoes.ads" 37 0 0#"W:diverges:N" "GP_Subp:torpedoes.ads:37" 
+ let def #"torpedoes.ads" 34 0 0#"W:diverges:N" "GP_Subp:torpedoes.ads:34" 
    (__void_param : unit)
-  requires { #"torpedoes.ads" 37 0 0# true }
-  ensures { #"torpedoes.ads" 37 0 0# true }
+  requires { #"torpedoes.ads" 34 0 0# true }
+  ensures { #"torpedoes.ads" 34 0 0# true }
    =
-  ( () (* Assume dynamic invariants of inputs of the subprogram torpedoes.ads:37 *)
+  ( () (* Assume dynamic invariants of inputs of the subprogram torpedoes.ads:34 *)
   ;
-  #"torpedoes.ads" 37 0 0# assume { #"torpedoes.ads" 37 0 0# (Torpedoes__storage___axiom.dynamic_invariant Torpedoes__storageisfull__d.d True False True True) };
-  #"torpedoes.ads" 37 0 0# assume { #"torpedoes.ads" 37 0 0# true };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram torpedoes.ads:37 *)
+  #"torpedoes.ads" 34 0 0# assume { #"torpedoes.ads" 34 0 0# (Torpedoes__storage___axiom.dynamic_invariant Torpedoes__storageisfull__d.d True False True True) };
+  #"torpedoes.ads" 34 0 0# assume { #"torpedoes.ads" 34 0 0# true };
+  () (* Declarations introduced by the compiler at the beginning of the subprogram torpedoes.ads:34 *)
   ;
-  () (* Check for RTE in the Pre of the subprogram torpedoes.ads:37 *)
+  () (* Check for RTE in the Pre of the subprogram torpedoes.ads:34 *)
   ;
-  #"torpedoes.ads" 37 0 0# abstract ensures {true}(let _ = True in (
+  #"torpedoes.ads" 34 0 0# abstract ensures {true}(let _ = True in (
    ()))
    end ;
-  () (* Assume Pre of the subprogram torpedoes.ads:37 *)
+  () (* Assume Pre of the subprogram torpedoes.ads:34 *)
   ;
-  #"torpedoes.ads" 37 0 0# assume { #"torpedoes.ads" 37 0 0# true };
-  #"torpedoes.ads" 37 0 0# try
-   ( ( "GP_Sloc:torpedoes.ads:38:7" (#"torpedoes.ads" 38 0 0# ( #"torpedoes.ads" 38 0 0# torpedoes__storageisfull__result.bool__content <- ( ( (let i = #"torpedoes.ads" 38 0 0# (any int
+  #"torpedoes.ads" 34 0 0# assume { #"torpedoes.ads" 34 0 0# true };
+  #"torpedoes.ads" 34 0 0# try
+   ( ( "GP_Sloc:torpedoes.ads:35:7" (#"torpedoes.ads" 35 0 0# ( #"torpedoes.ads" 35 0 0# torpedoes__storageisfull__result.bool__content <- ( ( (let i = #"torpedoes.ads" 35 0 0# (any int
    ) in (
     (if ((Boolean.andb((0 <= i)) ((i <= 50)))) then (
-     #"torpedoes.ads" 38 0 0# abstract ensures {true}(let _ = ((Torpedoes__content__rep.to_rep((Array__Int__Torpedoes__content.get(Torpedoes__storageisfull__d.d) (i)))) = 0) in (
+     #"torpedoes.ads" 35 0 0# abstract ensures {true}(let _ = ((Torpedoes__content__rep.to_rep((Array__Int__Torpedoes__content.get(Torpedoes__storageisfull__d.d) (i)))) = 0) in (
       ()))
       end ))))
    ;
-   #"torpedoes.ads" 38 0 0# (any bool
-   requires {#"torpedoes.ads" 38 0 0# true} 
-   ensures {#"torpedoes.ads" 38 0 0# ( (result = True) <-> (forall i #"torpedoes.ads" 38 0 0#  "model" "model_trace:2558" "name:I"  : int.
+   #"torpedoes.ads" 35 0 0# (any bool
+   requires {#"torpedoes.ads" 35 0 0# true} 
+   ensures {#"torpedoes.ads" 35 0 0# ( (result = True) <-> (forall i #"torpedoes.ads" 35 0 0#  "model" "name:I" "model_trace:2567"  : int.
     ( ( (0 <= i) /\ (i <= 50) ) -> ((Torpedoes__content__rep.to_rep (Array__Int__Torpedoes__content.get Torpedoes__storageisfull__d.d i)) = 0) )) )} 
    ) ) );
-   #"torpedoes.ads" 38 0 0# raise Return__exc )) );
+   #"torpedoes.ads" 35 0 0# raise Return__exc )) );
     raise Return__exc )
   with
    Return__exc -> ()
@@ -3895,15 +3729,17 @@ module Torpedoes__storageisfull__subprogram_def
   torpedoes__storageisfull__result.bool__content )
 end
 
-(* Module for checking contracts and absence of run-time errors in subprogram "filltorpedoestorage" defined at torpedoes.ads:29, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+(* Module for checking contracts and absence of run-time errors in subprogram "filltorpedoestorage" defined at torpedoes.ads:26, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
 module Torpedoes__filltorpedoestorage__subprogram_def
  use import "_gnatprove_standard".Main
  use import "int".Int
  use        "_gnatprove_standard".Boolean
+ use        Torpedoes__storageisempty
+ use        Torpedoes__storageisempty___axiom
  use        Torpedoes__storageisfull
  use        Torpedoes__storageisfull___axiom
- use        Submarine__depthmonitor___axiom
- use        Submarine__currentdepth
+ use        Movement__depthmonitor___axiom
+ use        Movement__currentdepth
  use        Torpedoes__content
  use        Torpedoes__content__rep
  use        Torpedoes__storagecapacity
@@ -3921,113 +3757,115 @@ module Torpedoes__filltorpedoestorage__subprogram_def
  use        Torpedoes__storage___axiom
  use        Torpedoes__torpedoestorage___axiom
  use        Torpedoes__storageisfull___axiom
- use        Submarine__depthmonitor___axiom
- use        Submarine__currentdepth___axiom
+ use        Torpedoes__storageisempty___axiom
+ use        Movement__depthmonitor___axiom
+ use        Movement__currentdepth___axiom
 
- let def #"torpedoes.ads" 29 0 0#"W:diverges:N" "GP_Subp:torpedoes.ads:29" 
+ let def #"torpedoes.ads" 26 0 0#"W:diverges:N" "GP_Subp:torpedoes.ads:26" 
    (__void_param : unit)
-  requires { #"torpedoes.ads" 29 0 0# true }
-  ensures { #"torpedoes.ads" 29 0 0# (#"torpedoes.ads" 32 0 0# ( "model_vc_post" "keep_on_simp" "GP_Sloc:torpedoes.ads:32:14" "GP_Reason:VC_POSTCONDITION" "GP_Id:3" "comment:     Post => StorageIsFull(torpedoeStorage);
-             ^ torpedoes.ads:32:14:VC_POSTCONDITION" "GP_Shape:pragargs__call_storageisfull" ( "GP_Pretty_Ada:3911" "GP_Sloc:torpedoes.ads:32:14" ((epsilon temp___result_234 : bool.
-   ( (temp___result_234 = (Torpedoes__storageisfull.storageisfull Torpedoes__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__content.map__content)) /\ (Torpedoes__storageisfull.storageisfull__function_guard temp___result_234 Torpedoes__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__content.map__content) )) = True) ) )) }
+  requires { #"torpedoes.ads" 26 0 0# true }
+  ensures { #"torpedoes.ads" 26 0 0# (#"torpedoes.ads" 29 0 0# ( "model_vc_post" "keep_on_simp" "GP_Sloc:torpedoes.ads:29:14" "GP_Reason:VC_POSTCONDITION" "GP_Id:3" "comment:     Post => StorageIsFull(torpedoeStorage);
+             ^ torpedoes.ads:29:14:VC_POSTCONDITION" "GP_Shape:pragargs__call_storageisfull" ( "GP_Pretty_Ada:3368" "GP_Sloc:torpedoes.ads:29:14" ((epsilon temp___result_219 : bool.
+   ( (temp___result_219 = (Torpedoes__storageisfull.storageisfull Torpedoes__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__content.map__content)) /\ (Torpedoes__storageisfull.storageisfull__function_guard temp___result_219 Torpedoes__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__content.map__content) )) = True) ) )) }
    =
-  ( () (* Assume dynamic invariants of inputs of the subprogram torpedoes.ads:29 *)
+  ( () (* Assume dynamic invariants of inputs of the subprogram torpedoes.ads:26 *)
   ;
    assume {  (Torpedoes__storage___axiom.dynamic_invariant Torpedoes__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__content.map__content True False True True) };
-   assume {  (Submarine__depthmonitor___axiom.dynamic_invariant Submarine__currentdepth.currentdepth.int__content True False True True) };
+   assume {  (Movement__depthmonitor___axiom.dynamic_invariant Movement__currentdepth.currentdepth.int__content True False True True) };
    assume {  true };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram torpedoes.ads:29 *)
+  () (* Declarations introduced by the compiler at the beginning of the subprogram torpedoes.ads:26 *)
   ;
-  () (* Check for RTE in the Pre of the subprogram torpedoes.ads:29 *)
+  () (* Check for RTE in the Pre of the subprogram torpedoes.ads:26 *)
   ;
-   abstract ensures {true}(let _ = (Submarine__currentdepth.currentdepth.int__content = 0) in (
+   abstract ensures {true}(let _ = ( (Movement__currentdepth.currentdepth.int__content = 0) && (Torpedoes__storageisempty___axiom.storageisempty(Torpedoes__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__content.map__content)) ) in (
    ()))
    end ;
-  () (* Assume Pre of the subprogram torpedoes.ads:29 *)
+  () (* Assume Pre of the subprogram torpedoes.ads:26 *)
   ;
-   assume {  (Submarine__currentdepth.currentdepth.int__content = 0) };
+   assume {  ( (Movement__currentdepth.currentdepth.int__content = 0) /\ ((epsilon temp___result_218 : bool.
+   ( (temp___result_218 = (Torpedoes__storageisempty.storageisempty Torpedoes__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__content.map__content)) /\ (Torpedoes__storageisempty.storageisempty__function_guard temp___result_218 Torpedoes__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__content.map__content) )) = True) ) };
    try
-   ( (#"torpedoes.adb" 13 0 0# ());
-   (#"torpedoes.adb" 13 0 0# ( #"torpedoes.adb" 13 0 0# Torpedoes__filltorpedoestorage__position.position.int__content <- ( 0 );
-   #"torpedoes.adb" 13 0 0# assume { #"torpedoes.adb" 13 0 0# (Torpedoes__storagecapacity___axiom.dynamic_invariant Torpedoes__filltorpedoestorage__position.position.int__content True False True True) } ));
-   (#"torpedoes.adb" 17 0 0# ());
-   ( "GP_Sloc:torpedoes.adb:16:11" (#"torpedoes.adb" 16 0 0# ()) );
-   ( "GP_Sloc:torpedoes.adb:16:7" (#"torpedoes.adb" 16 0 0# (if ((Submarine__currentdepth.currentdepth.int__content = 0)) then (
-    ( "GP_Sloc:torpedoes.adb:17:49" (#"torpedoes.adb" 17 0 0# ( () (* Translation of an Ada loop from torpedoes.adb:17 *)
+   ( (#"torpedoes.adb" 15 0 0# ());
+   (#"torpedoes.adb" 15 0 0# ( #"torpedoes.adb" 15 0 0# Torpedoes__filltorpedoestorage__position.position.int__content <- ( 0 );
+   #"torpedoes.adb" 15 0 0# assume { #"torpedoes.adb" 15 0 0# (Torpedoes__storagecapacity___axiom.dynamic_invariant Torpedoes__filltorpedoestorage__position.position.int__content True False True True) } ));
+   (#"torpedoes.adb" 19 0 0# ());
+   ( "GP_Sloc:torpedoes.adb:18:11" (#"torpedoes.adb" 18 0 0# ()) );
+   ( "GP_Sloc:torpedoes.adb:18:7" (#"torpedoes.adb" 18 0 0# (if ((Movement__currentdepth.currentdepth.int__content = 0)) then (
+    ( "GP_Sloc:torpedoes.adb:19:49" (#"torpedoes.adb" 19 0 0# ( () (* Translation of an Ada loop from torpedoes.adb:19 *)
     ;
     (if ((Torpedoes__filltorpedoestorage__position.position.int__content <= 50)) then (
-     #"torpedoes.adb" 17 0 0# try
-      ( #"torpedoes.adb" 17 0 0# abstract ensures {true}(let _ = Torpedoes__filltorpedoestorage__position.position.int__content in (
+     #"torpedoes.adb" 19 0 0# try
+      ( #"torpedoes.adb" 19 0 0# abstract ensures {true}(let _ = Torpedoes__filltorpedoestorage__position.position.int__content in (
        ()))
        end ;
-      (let temp___231 = #"torpedoes.adb" 17 0 0# (any int
-      ensures {#"torpedoes.adb" 17 0 0# (result = Torpedoes__filltorpedoestorage__position.position.int__content)} 
+      (let temp___215 = #"torpedoes.adb" 19 0 0# (any int
+      ensures {#"torpedoes.adb" 19 0 0# (result = Torpedoes__filltorpedoestorage__position.position.int__content)} 
       ) in (
-       ( #"torpedoes.adb" 17 0 0# abstract ensures {true}(let _ = Torpedoes__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__content.map__content in (
+       ( #"torpedoes.adb" 19 0 0# abstract ensures {true}(let _ = Torpedoes__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__content.map__content in (
         ()))
         end ;
-       (let temp___229 = #"torpedoes.adb" 17 0 0# (any Array__Int__Torpedoes__content.map
-       ensures {#"torpedoes.adb" 17 0 0# (result = Torpedoes__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__content.map__content)} 
+       (let temp___213 = #"torpedoes.adb" 19 0 0# (any Array__Int__Torpedoes__content.map
+       ensures {#"torpedoes.adb" 19 0 0# (result = Torpedoes__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__content.map__content)} 
        ) in (
-        ( () (* First unroling of the loop statements appearing before the loop invariant of loop torpedoes.adb:17 *)
+        ( () (* First unroling of the loop statements appearing before the loop invariant of loop torpedoes.adb:19 *)
         ;
-        ( "GP_Sloc:torpedoes.adb:18:13" (#"torpedoes.adb" 18 0 0# ()) );
-        ( "GP_Sloc:torpedoes.adb:18:29" (#"torpedoes.adb" 18 0 0# ()) );
-        ( "GP_Sloc:torpedoes.adb:18:39" (#"torpedoes.adb" 18 0 0# #"torpedoes.adb" 18 0 0# Torpedoes__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__content.map__content <- ( (Array__Int__Torpedoes__content.set(Torpedoes__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__content.map__content) (Torpedoes__filltorpedoestorage__position.position.int__content) ((Torpedoes__content__rep.of_rep(0)))) )) );
-        ( "GP_Sloc:torpedoes.adb:19:16" (#"torpedoes.adb" 19 0 0# ()) );
-        ( "GP_Sloc:torpedoes.adb:19:27" (#"torpedoes.adb" 19 0 0# ()) );
-        ( "GP_Sloc:torpedoes.adb:19:13" (#"torpedoes.adb" 19 0 0# (if ((Torpedoes__filltorpedoestorage__position.position.int__content = 50)) then (
-         ( "GP_Sloc:torpedoes.adb:19:53" (#"torpedoes.adb" 19 0 0# #"torpedoes.adb" 19 0 0# raise Torpedoes__filltorpedoestorage__L_1.L_1) )) else (
-         ( ( "GP_Sloc:torpedoes.adb:20:18" (#"torpedoes.adb" 20 0 0# ()) );
-         ( "GP_Sloc:torpedoes.adb:20:30" (#"torpedoes.adb" 20 0 0# ()) );
-         ( "GP_Sloc:torpedoes.adb:20:27" (#"torpedoes.adb" 20 0 0# #"torpedoes.adb" 20 0 0# Torpedoes__filltorpedoestorage__position.position.int__content <- ( (#"torpedoes.adb" 20 0 0# ( "model_vc" "keep_on_simp" "GP_Sloc:torpedoes.adb:20:39" "GP_Reason:VC_RANGE_CHECK" "GP_Id:0" "comment:            else Position := Position + 1;
-                                      ^ torpedoes.adb:20:39:VC_RANGE_CHECK" "GP_Shape:if__L_1_while__if__position_assign__add" (Torpedoes__storagecapacity.range_check_((Torpedoes__filltorpedoestorage__position.position.int__content + 1))) )) )) ) )))) );
-        () (* While loop translating the Ada loop from torpedoes.adb:17 *)
+        ( "GP_Sloc:torpedoes.adb:20:13" (#"torpedoes.adb" 20 0 0# ()) );
+        ( "GP_Sloc:torpedoes.adb:20:29" (#"torpedoes.adb" 20 0 0# ()) );
+        ( "GP_Sloc:torpedoes.adb:20:39" (#"torpedoes.adb" 20 0 0# #"torpedoes.adb" 20 0 0# Torpedoes__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__content.map__content <- ( (Array__Int__Torpedoes__content.set(Torpedoes__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__content.map__content) (Torpedoes__filltorpedoestorage__position.position.int__content) ((Torpedoes__content__rep.of_rep(0)))) )) );
+        ( "GP_Sloc:torpedoes.adb:21:16" (#"torpedoes.adb" 21 0 0# ()) );
+        ( "GP_Sloc:torpedoes.adb:21:27" (#"torpedoes.adb" 21 0 0# ()) );
+        ( "GP_Sloc:torpedoes.adb:21:13" (#"torpedoes.adb" 21 0 0# (if ((Torpedoes__filltorpedoestorage__position.position.int__content = 50)) then (
+         ( "GP_Sloc:torpedoes.adb:21:53" (#"torpedoes.adb" 21 0 0# #"torpedoes.adb" 21 0 0# raise Torpedoes__filltorpedoestorage__L_1.L_1) )) else (
+         ( ( "GP_Sloc:torpedoes.adb:22:18" (#"torpedoes.adb" 22 0 0# ()) );
+         ( "GP_Sloc:torpedoes.adb:22:30" (#"torpedoes.adb" 22 0 0# ()) );
+         ( "GP_Sloc:torpedoes.adb:22:27" (#"torpedoes.adb" 22 0 0# #"torpedoes.adb" 22 0 0# Torpedoes__filltorpedoestorage__position.position.int__content <- ( (#"torpedoes.adb" 22 0 0# ( "model_vc" "keep_on_simp" "GP_Sloc:torpedoes.adb:22:39" "GP_Reason:VC_RANGE_CHECK" "GP_Id:0" "comment:            else Position := Position + 1;
+                                      ^ torpedoes.adb:22:39:VC_RANGE_CHECK" "GP_Shape:if__L_1_while__if__position_assign__add" (Torpedoes__storagecapacity.range_check_((Torpedoes__filltorpedoestorage__position.position.int__content + 1))) )) )) ) )))) );
+        () (* While loop translating the Ada loop from torpedoes.adb:19 *)
         ;
          while True do
          invariant { 
-          (#"torpedoes.adb" 22 0 0# ( "model_vc" "keep_on_simp" "GP_Sloc:torpedoes.adb:22:36" "GP_Reason:VC_LOOP_INVARIANT" "GP_Id:2" "comment:            pragma Loop_Invariant (for all J in torpedoeStorage'First..(Position - 1) => torpedoeStorage(J) = Torp);
-                                   ^ torpedoes.adb:22:36:VC_LOOP_INVARIANT" "GP_Shape:if__L_1_while__pragargs__forall" (forall j #"torpedoes.adb" 22 0 0#  "model" "model_trace:2363" "name:J"  : int.
-           ( ( (0 <= j) /\ (j <= (Torpedoes__filltorpedoestorage__position.position.int__content - 1)) ) -> ( "GP_Pretty_Ada:2382" "GP_Sloc:torpedoes.adb:22:90" ((Torpedoes__content__rep.to_rep (Array__Int__Torpedoes__content.get Torpedoes__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__content.map__content j)) = 0) ) )) ))
+          (#"torpedoes.adb" 24 0 0# ( "model_vc" "keep_on_simp" "GP_Sloc:torpedoes.adb:24:36" "GP_Reason:VC_LOOP_INVARIANT" "GP_Id:2" "comment:            pragma Loop_Invariant (for all J in torpedoeStorage'First..(Position - 1) => torpedoeStorage(J) = Torp);
+                                   ^ torpedoes.adb:24:36:VC_LOOP_INVARIANT" "GP_Shape:if__L_1_while__pragargs__forall" (forall j #"torpedoes.adb" 24 0 0#  "model" "model_trace:2367" "name:J"  : int.
+           ( ( (0 <= j) /\ (j <= (Torpedoes__filltorpedoestorage__position.position.int__content - 1)) ) -> ( "GP_Pretty_Ada:2386" "GP_Sloc:torpedoes.adb:24:90" ((Torpedoes__content__rep.to_rep (Array__Int__Torpedoes__content.get Torpedoes__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__content.map__content j)) = 0) ) )) ))
           }
-         ( () (* Assume implicit invariants from the loop torpedoes.adb:17 *)
+         ( () (* Assume implicit invariants from the loop torpedoes.adb:19 *)
          ;
           assume {  ( ( ( ( true /\ (Torpedoes__storage___axiom.dynamic_invariant Torpedoes__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__content.map__content True True True True) ) /\ true ) /\ (Torpedoes__storagecapacity___axiom.dynamic_invariant Torpedoes__filltorpedoestorage__position.position.int__content False True True True) ) /\ true ) };
-         () (* Check for absence of RTE in the invariant of loop torpedoes.adb:17 *)
+         () (* Check for absence of RTE in the invariant of loop torpedoes.adb:19 *)
          ;
           abstract ensures {true}(let _ = ( (let j =  (any int
          ) in (
           (if ((Boolean.andb((0 <= j)) ((j <= (Torpedoes__filltorpedoestorage__position.position.int__content - 1))))) then (
-            abstract ensures {true}(let _ = ((Torpedoes__content__rep.to_rep((Array__Int__Torpedoes__content.get(Torpedoes__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__content.map__content) ((  assert {  (#"torpedoes.adb" 22 0 0# ( "model_vc" "keep_on_simp" "GP_Sloc:torpedoes.adb:22:106" "GP_Reason:VC_INDEX_CHECK" "GP_Id:1" "comment:            pragma Loop_Invariant (for all J in torpedoeStorage'First..(Position - 1) => torpedoeStorage(J) = Torp);
-                                                                                                         ^ torpedoes.adb:22:106:VC_INDEX_CHECK" "GP_Shape:if__L_1_while__pragargs__forall__cmp__ixdcomp" ( (Torpedoes__storagecapacity.first <= j) /\ (j <= Torpedoes__storagecapacity.last) ) )) };
+            abstract ensures {true}(let _ = ((Torpedoes__content__rep.to_rep((Array__Int__Torpedoes__content.get(Torpedoes__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__content.map__content) ((  assert {  (#"torpedoes.adb" 24 0 0# ( "model_vc" "keep_on_simp" "GP_Sloc:torpedoes.adb:24:106" "GP_Reason:VC_INDEX_CHECK" "GP_Id:1" "comment:            pragma Loop_Invariant (for all J in torpedoeStorage'First..(Position - 1) => torpedoeStorage(J) = Torp);
+                                                                                                         ^ torpedoes.adb:24:106:VC_INDEX_CHECK" "GP_Shape:if__L_1_while__pragargs__forall__cmp__ixdcomp" ( (Torpedoes__storagecapacity.first <= j) /\ (j <= Torpedoes__storagecapacity.last) ) )) };
            j ))))) = 0) in (
             ()))
             end ))))
          ;
           (any bool
          requires { true} 
-         ensures { ( (result = True) <-> (forall j   "model" "model_trace:2363" "name:J"  : int.
+         ensures { ( (result = True) <-> (forall j   "model" "model_trace:2367" "name:J"  : int.
           ( ( (0 <= j) /\ (j <= (Torpedoes__filltorpedoestorage__position.position.int__content - 1)) ) -> ((Torpedoes__content__rep.to_rep (Array__Int__Torpedoes__content.get Torpedoes__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__content.map__content j)) = 0) )) )} 
          ) ) in (
           ()))
           end ;
-         () (* Loop statements appearing after the loop invariant of loop torpedoes.adb:17 *)
+         () (* Loop statements appearing after the loop invariant of loop torpedoes.adb:19 *)
          ;
-         () (* Check for the exit condition and loop statements appearing before the loop invariant of loop torpedoes.adb:17 *)
+         () (* Check for the exit condition and loop statements appearing before the loop invariant of loop torpedoes.adb:19 *)
          ;
          (if (not ( (Torpedoes__filltorpedoestorage__position.position.int__content <= 50) )) then (
            raise Torpedoes__filltorpedoestorage__L_1.L_1));
-         ( "GP_Sloc:torpedoes.adb:18:13" (#"torpedoes.adb" 18 0 0# ()) );
-         ( "GP_Sloc:torpedoes.adb:18:29" (#"torpedoes.adb" 18 0 0# ()) );
-         ( "GP_Sloc:torpedoes.adb:18:39" (#"torpedoes.adb" 18 0 0# #"torpedoes.adb" 18 0 0# Torpedoes__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__content.map__content <- ( (Array__Int__Torpedoes__content.set(Torpedoes__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__content.map__content) (Torpedoes__filltorpedoestorage__position.position.int__content) ((Torpedoes__content__rep.of_rep(0)))) )) );
-         ( "GP_Sloc:torpedoes.adb:19:16" (#"torpedoes.adb" 19 0 0# ()) );
-         ( "GP_Sloc:torpedoes.adb:19:27" (#"torpedoes.adb" 19 0 0# ()) );
-         ( "GP_Sloc:torpedoes.adb:19:13" (#"torpedoes.adb" 19 0 0# (if ((Torpedoes__filltorpedoestorage__position.position.int__content = 50)) then (
-          ( "GP_Sloc:torpedoes.adb:19:53" (#"torpedoes.adb" 19 0 0# #"torpedoes.adb" 19 0 0# raise Torpedoes__filltorpedoestorage__L_1.L_1) )) else (
-          ( ( "GP_Sloc:torpedoes.adb:20:18" (#"torpedoes.adb" 20 0 0# ()) );
-          ( "GP_Sloc:torpedoes.adb:20:30" (#"torpedoes.adb" 20 0 0# ()) );
-          ( "GP_Sloc:torpedoes.adb:20:27" (#"torpedoes.adb" 20 0 0# #"torpedoes.adb" 20 0 0# Torpedoes__filltorpedoestorage__position.position.int__content <- ( (#"torpedoes.adb" 20 0 0# ( "model_vc" "keep_on_simp" "GP_Sloc:torpedoes.adb:20:39" "GP_Reason:VC_RANGE_CHECK" "GP_Id:0" "comment:            else Position := Position + 1;
-                                      ^ torpedoes.adb:20:39:VC_RANGE_CHECK" "GP_Shape:if__L_1_while__if__position_assign__add" (Torpedoes__storagecapacity.range_check_((Torpedoes__filltorpedoestorage__position.position.int__content + 1))) )) )) ) )))) ) )
+         ( "GP_Sloc:torpedoes.adb:20:13" (#"torpedoes.adb" 20 0 0# ()) );
+         ( "GP_Sloc:torpedoes.adb:20:29" (#"torpedoes.adb" 20 0 0# ()) );
+         ( "GP_Sloc:torpedoes.adb:20:39" (#"torpedoes.adb" 20 0 0# #"torpedoes.adb" 20 0 0# Torpedoes__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__content.map__content <- ( (Array__Int__Torpedoes__content.set(Torpedoes__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__content.map__content) (Torpedoes__filltorpedoestorage__position.position.int__content) ((Torpedoes__content__rep.of_rep(0)))) )) );
+         ( "GP_Sloc:torpedoes.adb:21:16" (#"torpedoes.adb" 21 0 0# ()) );
+         ( "GP_Sloc:torpedoes.adb:21:27" (#"torpedoes.adb" 21 0 0# ()) );
+         ( "GP_Sloc:torpedoes.adb:21:13" (#"torpedoes.adb" 21 0 0# (if ((Torpedoes__filltorpedoestorage__position.position.int__content = 50)) then (
+          ( "GP_Sloc:torpedoes.adb:21:53" (#"torpedoes.adb" 21 0 0# #"torpedoes.adb" 21 0 0# raise Torpedoes__filltorpedoestorage__L_1.L_1) )) else (
+          ( ( "GP_Sloc:torpedoes.adb:22:18" (#"torpedoes.adb" 22 0 0# ()) );
+          ( "GP_Sloc:torpedoes.adb:22:30" (#"torpedoes.adb" 22 0 0# ()) );
+          ( "GP_Sloc:torpedoes.adb:22:27" (#"torpedoes.adb" 22 0 0# #"torpedoes.adb" 22 0 0# Torpedoes__filltorpedoestorage__position.position.int__content <- ( (#"torpedoes.adb" 22 0 0# ( "model_vc" "keep_on_simp" "GP_Sloc:torpedoes.adb:22:39" "GP_Reason:VC_RANGE_CHECK" "GP_Id:0" "comment:            else Position := Position + 1;
+                                      ^ torpedoes.adb:22:39:VC_RANGE_CHECK" "GP_Shape:if__L_1_while__if__position_assign__add" (Torpedoes__storagecapacity.range_check_((Torpedoes__filltorpedoestorage__position.position.int__content + 1))) )) )) ) )))) ) )
         done )))
         )))
        )

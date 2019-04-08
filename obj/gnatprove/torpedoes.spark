@@ -5,7 +5,17 @@
       "sloc": [
         {
           "file": "torpedoes.ads",
-          "line": 5
+          "line": 4
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "Torpedoes.StorageIsEmpty",
+      "sloc": [
+        {
+          "file": "torpedoes.ads",
+          "line": 38
         }
       ],
       "spark": "all"
@@ -15,7 +25,7 @@
       "sloc": [
         {
           "file": "torpedoes.ads",
-          "line": 37
+          "line": 34
         }
       ],
       "spark": "all"
@@ -25,7 +35,7 @@
       "sloc": [
         {
           "file": "torpedoes.ads",
-          "line": 29
+          "line": 26
         }
       ],
       "spark": "all"
@@ -34,7 +44,7 @@
   "flow": [
     {
       "file": "torpedoes.adb",
-      "line": 18,
+      "line": 20,
       "col": 39,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -43,18 +53,18 @@
         "sloc": [
           {
             "file": "torpedoes.ads",
-            "line": 29
+            "line": 26
           }
         ]
       },
       "check_tree": {
       },
-      "tracefile": "torpedoes__flow__43.trace",
+      "tracefile": "torpedoes__flow__59.trace",
       "how_proved": "flow"
     },
     {
       "file": "torpedoes.adb",
-      "line": 19,
+      "line": 21,
       "col": 13,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -63,18 +73,18 @@
         "sloc": [
           {
             "file": "torpedoes.ads",
-            "line": 29
+            "line": 26
           }
         ]
       },
       "check_tree": {
       },
-      "tracefile": "torpedoes__flow__44.trace",
+      "tracefile": "torpedoes__flow__60.trace",
       "how_proved": "flow"
     },
     {
       "file": "torpedoes.adb",
-      "line": 20,
+      "line": 22,
       "col": 27,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -83,18 +93,18 @@
         "sloc": [
           {
             "file": "torpedoes.ads",
-            "line": 29
+            "line": 26
           }
         ]
       },
       "check_tree": {
       },
-      "tracefile": "torpedoes__flow__45.trace",
+      "tracefile": "torpedoes__flow__61.trace",
       "how_proved": "flow"
     },
     {
       "file": "torpedoes.adb",
-      "line": 22,
+      "line": 24,
       "col": 13,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -103,18 +113,18 @@
         "sloc": [
           {
             "file": "torpedoes.ads",
-            "line": 29
+            "line": 26
           }
         ]
       },
       "check_tree": {
       },
-      "tracefile": "torpedoes__flow__46.trace",
+      "tracefile": "torpedoes__flow__62.trace",
       "how_proved": "flow"
     },
     {
       "file": "torpedoes.adb",
-      "line": 17,
+      "line": 19,
       "col": 49,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -123,20 +133,20 @@
         "sloc": [
           {
             "file": "torpedoes.ads",
-            "line": 29
+            "line": 26
           }
         ]
       },
       "check_tree": {
       },
-      "tracefile": "torpedoes__flow__47.trace",
+      "tracefile": "torpedoes__flow__63.trace",
       "how_proved": "flow"
     }
   ],
   "proof": [
     {
       "file": "torpedoes.adb",
-      "line": 20,
+      "line": 22,
       "col": 39,
       "rule": "VC_RANGE_CHECK",
       "severity": "info",
@@ -145,7 +155,7 @@
         "sloc": [
           {
             "file": "torpedoes.ads",
-            "line": 29
+            "line": 26
           }
         ]
       },
@@ -174,7 +184,7 @@
         }
       ],
       "check_file": "torpedoes.adb",
-      "check_line": 20,
+      "check_line": 22,
       "check_col": 39,
       "how_proved": "prover",
       "stats": {
@@ -187,7 +197,7 @@
     },
     {
       "file": "torpedoes.adb",
-      "line": 22,
+      "line": 24,
       "col": 36,
       "rule": "VC_LOOP_INVARIANT_PRESERV",
       "severity": "info",
@@ -196,7 +206,7 @@
         "sloc": [
           {
             "file": "torpedoes.ads",
-            "line": 29
+            "line": 26
           }
         ]
       },
@@ -205,7 +215,7 @@
           "proof_attempts": {
             "CVC4": {
               "result": "Valid",
-              "steps": 103,
+              "steps": 105,
               "time": 0
             }
           },
@@ -214,7 +224,7 @@
         }
       ],
       "check_file": "torpedoes.adb",
-      "check_line": 22,
+      "check_line": 24,
       "check_col": 36,
       "how_proved": "prover",
       "stats": {
@@ -227,7 +237,7 @@
     },
     {
       "file": "torpedoes.adb",
-      "line": 22,
+      "line": 24,
       "col": 36,
       "rule": "VC_LOOP_INVARIANT_INIT",
       "severity": "info",
@@ -236,7 +246,7 @@
         "sloc": [
           {
             "file": "torpedoes.ads",
-            "line": 29
+            "line": 26
           }
         ]
       },
@@ -254,7 +264,7 @@
         }
       ],
       "check_file": "torpedoes.adb",
-      "check_line": 22,
+      "check_line": 24,
       "check_col": 36,
       "how_proved": "prover",
       "stats": {
@@ -267,7 +277,7 @@
     },
     {
       "file": "torpedoes.ads",
-      "line": 32,
+      "line": 29,
       "col": 14,
       "rule": "VC_POSTCONDITION",
       "severity": "info",
@@ -276,7 +286,7 @@
         "sloc": [
           {
             "file": "torpedoes.ads",
-            "line": 29
+            "line": 26
           }
         ]
       },
@@ -285,7 +295,7 @@
           "proof_attempts": {
             "CVC4": {
               "result": "Valid",
-              "steps": 87,
+              "steps": 109,
               "time": 0
             }
           },
@@ -294,7 +304,7 @@
         }
       ],
       "check_file": "torpedoes.ads",
-      "check_line": 32,
+      "check_line": 29,
       "check_col": 14,
       "how_proved": "prover",
       "stats": {
@@ -307,7 +317,7 @@
     },
     {
       "file": "torpedoes.adb",
-      "line": 22,
+      "line": 24,
       "col": 106,
       "rule": "VC_INDEX_CHECK",
       "severity": "info",
@@ -316,7 +326,7 @@
         "sloc": [
           {
             "file": "torpedoes.ads",
-            "line": 29
+            "line": 26
           }
         ]
       },
@@ -345,7 +355,7 @@
         }
       ],
       "check_file": "torpedoes.adb",
-      "check_line": 22,
+      "check_line": 24,
       "check_col": 106,
       "how_proved": "prover",
       "stats": {
@@ -360,6 +370,50 @@
   "assumptions": [
     {
       "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Torpedoes.StorageIsFull",
+          "sloc": [
+            {
+              "file": "torpedoes.ads",
+              "line": 34
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Torpedoes.StorageIsFull",
+          "sloc": [
+            {
+              "file": "torpedoes.ads",
+              "line": 34
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Torpedoes.StorageIsEmpty",
+            "sloc": [
+              {
+                "file": "torpedoes.ads",
+                "line": 38
+              }
+            ]
+          }
+        },
         {
           "predicate": "CLAIM_EFFECTS",
           "arg": {
@@ -367,7 +421,19 @@
             "sloc": [
               {
                 "file": "torpedoes.ads",
-                "line": 37
+                "line": 34
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "Torpedoes.StorageIsEmpty",
+            "sloc": [
+              {
+                "file": "torpedoes.ads",
+                "line": 38
               }
             ]
           }
@@ -379,7 +445,7 @@
             "sloc": [
               {
                 "file": "torpedoes.ads",
-                "line": 37
+                "line": 34
               }
             ]
           }
@@ -392,7 +458,7 @@
           "sloc": [
             {
               "file": "torpedoes.ads",
-              "line": 29
+              "line": 26
             }
           ]
         }
@@ -403,11 +469,23 @@
         {
           "predicate": "CLAIM_EFFECTS",
           "arg": {
+            "name": "Torpedoes.StorageIsEmpty",
+            "sloc": [
+              {
+                "file": "torpedoes.ads",
+                "line": 38
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
             "name": "Torpedoes.StorageIsFull",
             "sloc": [
               {
                 "file": "torpedoes.ads",
-                "line": 37
+                "line": 34
               }
             ]
           }
@@ -420,7 +498,7 @@
           "sloc": [
             {
               "file": "torpedoes.ads",
-              "line": 29
+              "line": 26
             }
           ]
         }
@@ -431,11 +509,35 @@
         {
           "predicate": "CLAIM_EFFECTS",
           "arg": {
+            "name": "Torpedoes.StorageIsEmpty",
+            "sloc": [
+              {
+                "file": "torpedoes.ads",
+                "line": 38
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
             "name": "Torpedoes.StorageIsFull",
             "sloc": [
               {
                 "file": "torpedoes.ads",
-                "line": 37
+                "line": 34
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "Torpedoes.StorageIsEmpty",
+            "sloc": [
+              {
+                "file": "torpedoes.ads",
+                "line": 38
               }
             ]
           }
@@ -447,7 +549,7 @@
             "sloc": [
               {
                 "file": "torpedoes.ads",
-                "line": 37
+                "line": 34
               }
             ]
           }
@@ -460,7 +562,7 @@
           "sloc": [
             {
               "file": "torpedoes.ads",
-              "line": 29
+              "line": 26
             }
           ]
         }
@@ -472,11 +574,11 @@
       "claim": {
         "predicate": "CLAIM_EFFECTS",
         "arg": {
-          "name": "Torpedoes.StorageIsFull",
+          "name": "Torpedoes.StorageIsEmpty",
           "sloc": [
             {
               "file": "torpedoes.ads",
-              "line": 37
+              "line": 38
             }
           ]
         }
@@ -488,11 +590,11 @@
       "claim": {
         "predicate": "CLAIM_AORTE",
         "arg": {
-          "name": "Torpedoes.StorageIsFull",
+          "name": "Torpedoes.StorageIsEmpty",
           "sloc": [
             {
               "file": "torpedoes.ads",
-              "line": 37
+              "line": 38
             }
           ]
         }
@@ -508,7 +610,7 @@
           "sloc": [
             {
               "file": "torpedoes.ads",
-              "line": 5
+              "line": 4
             }
           ]
         }
@@ -516,14 +618,14 @@
     }
   ],
   "timings": {
-    "marking": 8.15699982922524E-04,
-    "globals (basic)": 2.48749996535480E-03,
-    "globals/properties (advanced)": 3.17610008642077E-03,
-    "flow analysis": 4.23539988696575E-03,
-    "codepeer results": 6.30000022283639E-06,
-    "init_why_sections": 3.16499994369224E-04,
-    "translation of standard": 6.74400012940168E-03,
-    "translation of compilation unit": 1.32299996912479E-02,
-    "proof": 9.49542403221130E-01
+    "marking": 5.29000011738390E-04,
+    "globals (basic)": 1.20990001596510E-03,
+    "globals/properties (advanced)": 3.43660009093583E-03,
+    "flow analysis": 4.18579997494817E-03,
+    "codepeer results": 4.90000002173474E-06,
+    "init_why_sections": 2.69499985734001E-04,
+    "translation of standard": 5.86749985814095E-03,
+    "translation of compilation unit": 9.52049996703863E-03,
+    "proof": 9.48829591274261E-01
   }
 }
