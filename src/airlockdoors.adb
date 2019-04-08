@@ -1,6 +1,4 @@
-with Movement;
-use Movement;
-
+with Movement; use Movement;
 
 package body AirLockDoors with Spark_Mode
 is
@@ -8,78 +6,47 @@ is
    ---------------------------------------------------------------------------
    -- The submarine must have at least one airlock door closed at all times --
    ---------------------------------------------------------------------------
-   procedure OpenOuterAirLockDoor is
+   procedure OpenAirLockDoor (doorOne : in out AirLockDoor;
+                              doorTwo : in AirLockDoor) is
    begin
-      if (innerDoor.door = Closed and outerDoor.lock = Unlocked) then
-         outerDoor.door := Open;
+      if (doorTwo.door = Closed
+          and doorOne.lock = Unlocked) then
+         doorOne.door := Open;
       end if;
-   end OpenOuterAirLockDoor;
+   end OpenAirLockDoor;
 
 
-   procedure OpenInnerAirLockDoor is
+   procedure CloseAirLockDoor (doorOne : in out AirLockDoor) is
    begin
-      if (outerDoor.door = Closed and innerDoor.lock = Unlocked) then
-         innerDoor.door := Open;
+      if (doorOne.door = Open) then
+         doorOne.door := Closed;
       end if;
-   end OpenInnerAirLockDoor;
-
-
-   procedure CloseOuterAirLockDoor is
-   begin
-      if (outerDoor.door = Open) then
-         outerDoor.door := Closed;
-      end if;
-   end CloseOuterAirLockDoor;
-
-
-   procedure CloseInnerAirLockDoor is
-   begin
-      if (innerDoor.door = Open) then
-         innerDoor.door := Closed;
-      end if;
-   end CloseInnerAirLockDoor;
+   end CloseAirLockDoor;
 
 
    -------------------------------------------------------------------------------------
    -- The submarine can perform no operations unless both doors are closed and locked --
    -------------------------------------------------------------------------------------
-   procedure LockOuterDoor is
+   procedure LockAirLockDoor (doorOne : in out AirLockDoor;
+                              currentOperationStatus : in out OperationStatus;
+                              doorTwo : in AirLockDoor) is
    begin
-      if (outerDoor.door = Closed and outerDoor.lock = Unlocked) then
-         outerDoor.lock := Locked;
-         if (innerDoor.lock = Locked) then
+      if (doorOne.door = Closed and doorOne.lock = Unlocked) then
+         doorOne.lock := Locked;
+         if (doorTwo.lock = Locked) then
             currentOperationStatus := Allowed;
          end if;
       end if;
-   end LockOuterDoor;
+   end LockAirLockDoor;
 
 
-   procedure UnlockOuterDoor is
+   procedure UnlockAirLockDoor (doorOne : in out AirLockDoor;
+                                currentOperationStatus : in out OperationStatus;
+                                currentDepth : in DepthMonitor) is
    begin
-      if (outerDoor.lock = Locked and currentDepth = 0) then
-         outerDoor.lock := Unlocked;
+      if (doorOne.lock = Locked and currentDepth = 0) then
+         doorOne.lock := Unlocked;
          currentOperationStatus := Prohibited;
       end if;
-   end UnlockOuterDoor;
-
-
-   procedure LockInnerDoor is
-   begin
-      if (innerDoor.door = Closed and innerDoor.lock = Unlocked) then
-         innerDoor.lock := Locked;
-         if (outerDoor.lock = Locked) then
-            currentOperationStatus := Allowed;
-         end if;
-      end if;
-   end LockInnerDoor;
-
-
-   procedure UnlockInnerDoor is
-   begin
-      if (innerDoor.lock = Locked and currentDepth = 0) then
-         innerDoor.lock := Unlocked;
-         currentOperationStatus := Prohibited;
-      end if;
-   end UnlockInnerDoor;
-
+   end UnlockAirLockDoor;
 end AirLockDoors;

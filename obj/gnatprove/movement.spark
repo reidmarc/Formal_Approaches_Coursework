@@ -11,51 +11,21 @@
       "spark": "all"
     },
     {
-      "name": "Movement.MaxDepthInvariant",
+      "name": "Movement.DiveTheSubmarine",
       "sloc": [
         {
           "file": "movement.ads",
-          "line": 11
+          "line": 18
         }
       ],
       "spark": "all"
     },
     {
-      "name": "Movement.NotSurfacedInvariant",
+      "name": "Movement.RaiseTheSubmarine",
       "sloc": [
         {
           "file": "movement.ads",
-          "line": 14
-        }
-      ],
-      "spark": "all"
-    },
-    {
-      "name": "Movement.DiveTheSubmarine100ft",
-      "sloc": [
-        {
-          "file": "movement.ads",
-          "line": 20
-        }
-      ],
-      "spark": "all"
-    },
-    {
-      "name": "Movement.DiveTheSubmarineToMaxDepth",
-      "sloc": [
-        {
-          "file": "movement.ads",
-          "line": 26
-        }
-      ],
-      "spark": "all"
-    },
-    {
-      "name": "Movement.RaiseTheSubmarine100ft",
-      "sloc": [
-        {
-          "file": "movement.ads",
-          "line": 32
+          "line": 30
         }
       ],
       "spark": "all"
@@ -65,7 +35,7 @@
       "sloc": [
         {
           "file": "movement.ads",
-          "line": 38
+          "line": 39
         }
       ],
       "spark": "all"
@@ -76,198 +46,16 @@
   "proof": [
     {
       "file": "movement.adb",
-      "line": 11,
-      "col": 39,
-      "rule": "VC_RANGE_CHECK",
-      "severity": "info",
-      "entity": {
-        "name": "Movement.DiveTheSubmarine100ft",
-        "sloc": [
-          {
-            "file": "movement.ads",
-            "line": 20
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "movement.adb",
-      "check_line": 11,
-      "check_col": 39,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 1,
-          "max_steps": 1,
-          "max_time": 0.00000000000000E+00
-        }
-      }
-    },
-    {
-      "file": "movement.ads",
-      "line": 35,
-      "col": 14,
-      "rule": "VC_POSTCONDITION",
-      "severity": "info",
-      "entity": {
-        "name": "Movement.RaiseTheSubmarine100ft",
-        "sloc": [
-          {
-            "file": "movement.ads",
-            "line": 32
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        },
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "movement.ads",
-      "check_line": 35,
-      "check_col": 14,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 2,
-          "max_steps": 1,
-          "max_time": 0.00000000000000E+00
-        }
-      }
-    },
-    {
-      "file": "movement.ads",
-      "line": 41,
-      "col": 14,
-      "rule": "VC_POSTCONDITION",
-      "severity": "info",
-      "entity": {
-        "name": "Movement.SurfaceTheSubmarine",
-        "sloc": [
-          {
-            "file": "movement.ads",
-            "line": 38
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 14,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "movement.ads",
-      "check_line": 41,
-      "check_col": 14,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 1,
-          "max_steps": 1,
-          "max_time": 0.00000000000000E+00
-        }
-      }
-    },
-    {
-      "file": "movement.ads",
-      "line": 23,
-      "col": 14,
-      "rule": "VC_POSTCONDITION",
-      "severity": "info",
-      "entity": {
-        "name": "Movement.DiveTheSubmarine100ft",
-        "sloc": [
-          {
-            "file": "movement.ads",
-            "line": 20
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        },
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 5,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "movement.ads",
-      "check_line": 23,
-      "check_col": 14,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 2,
-          "max_steps": 1,
-          "max_time": 0.00000000000000E+00
-        }
-      }
-    },
-    {
-      "file": "movement.adb",
       "line": 27,
       "col": 39,
       "rule": "VC_RANGE_CHECK",
       "severity": "info",
       "entity": {
-        "name": "Movement.RaiseTheSubmarine100ft",
+        "name": "Movement.RaiseTheSubmarine",
         "sloc": [
           {
             "file": "movement.ads",
-            "line": 32
+            "line": 30
           }
         ]
       },
@@ -276,7 +64,7 @@
           "proof_attempts": {
             "CVC4": {
               "result": "Valid",
-              "steps": 5,
+              "steps": 13,
               "time": 0
             }
           },
@@ -297,17 +85,57 @@
       }
     },
     {
+      "file": "movement.adb",
+      "line": 16,
+      "col": 39,
+      "rule": "VC_RANGE_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "Movement.DiveTheSubmarine",
+        "sloc": [
+          {
+            "file": "movement.ads",
+            "line": 18
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 13,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "movement.adb",
+      "check_line": 16,
+      "check_col": 39,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
       "file": "movement.ads",
-      "line": 29,
+      "line": 36,
       "col": 14,
       "rule": "VC_POSTCONDITION",
       "severity": "info",
       "entity": {
-        "name": "Movement.DiveTheSubmarineToMaxDepth",
+        "name": "Movement.RaiseTheSubmarine",
         "sloc": [
           {
             "file": "movement.ads",
-            "line": 26
+            "line": 30
           }
         ]
       },
@@ -325,7 +153,7 @@
         }
       ],
       "check_file": "movement.ads",
-      "check_line": 29,
+      "check_line": 36,
       "check_col": 14,
       "how_proved": "prover",
       "stats": {
@@ -335,9 +163,202 @@
           "max_time": 0.00000000000000E+00
         }
       }
+    },
+    {
+      "file": "movement.ads",
+      "line": 41,
+      "col": 14,
+      "rule": "VC_POSTCONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "Movement.SurfaceTheSubmarine",
+        "sloc": [
+          {
+            "file": "movement.ads",
+            "line": 39
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 2.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "movement.ads",
+      "check_line": 41,
+      "check_col": 14,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 1.99999995529652E-02
+        }
+      }
+    },
+    {
+      "file": "movement.ads",
+      "line": 26,
+      "col": 14,
+      "rule": "VC_POSTCONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "Movement.DiveTheSubmarine",
+        "sloc": [
+          {
+            "file": "movement.ads",
+            "line": 18
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 13,
+              "time": 0
+            }
+          },
+          "transformations": {
+            "split_disj": [
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              }
+            ]
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "movement.ads",
+      "check_line": 26,
+      "check_col": 14,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 2,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "movement.adb",
+      "line": 35,
+      "col": 39,
+      "rule": "VC_RANGE_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "Movement.SurfaceTheSubmarine",
+        "sloc": [
+          {
+            "file": "movement.ads",
+            "line": 39
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 2.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "movement.adb",
+      "check_line": 35,
+      "check_col": 39,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 1.99999995529652E-02
+        }
+      }
     }
   ],
   "assumptions": [
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_POST",
+        "arg": {
+          "name": "Movement.DiveTheSubmarine",
+          "sloc": [
+            {
+              "file": "movement.ads",
+              "line": 18
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Movement.DiveTheSubmarine",
+          "sloc": [
+            {
+              "file": "movement.ads",
+              "line": 18
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Movement.DiveTheSubmarine",
+          "sloc": [
+            {
+              "file": "movement.ads",
+              "line": 18
+            }
+          ]
+        }
+      }
+    },
     {
       "assumptions": [
       ],
@@ -360,11 +381,11 @@
       "claim": {
         "predicate": "CLAIM_POST",
         "arg": {
-          "name": "Movement.DiveTheSubmarineToMaxDepth",
+          "name": "Movement.RaiseTheSubmarine",
           "sloc": [
             {
               "file": "movement.ads",
-              "line": 26
+              "line": 30
             }
           ]
         }
@@ -376,11 +397,11 @@
       "claim": {
         "predicate": "CLAIM_EFFECTS",
         "arg": {
-          "name": "Movement.DiveTheSubmarineToMaxDepth",
+          "name": "Movement.RaiseTheSubmarine",
           "sloc": [
             {
               "file": "movement.ads",
-              "line": 26
+              "line": 30
             }
           ]
         }
@@ -392,287 +413,11 @@
       "claim": {
         "predicate": "CLAIM_AORTE",
         "arg": {
-          "name": "Movement.DiveTheSubmarineToMaxDepth",
+          "name": "Movement.RaiseTheSubmarine",
           "sloc": [
             {
               "file": "movement.ads",
-              "line": 26
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "Movement.MaxDepthInvariant",
-            "sloc": [
-              {
-                "file": "movement.ads",
-                "line": 11
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "Movement.NotSurfacedInvariant",
-            "sloc": [
-              {
-                "file": "movement.ads",
-                "line": 14
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_AORTE",
-          "arg": {
-            "name": "Movement.MaxDepthInvariant",
-            "sloc": [
-              {
-                "file": "movement.ads",
-                "line": 11
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_AORTE",
-          "arg": {
-            "name": "Movement.NotSurfacedInvariant",
-            "sloc": [
-              {
-                "file": "movement.ads",
-                "line": 14
-              }
-            ]
-          }
-        }
-      ],
-      "claim": {
-        "predicate": "CLAIM_POST",
-        "arg": {
-          "name": "Movement.SurfaceTheSubmarine",
-          "sloc": [
-            {
-              "file": "movement.ads",
-              "line": 38
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "Movement.MaxDepthInvariant",
-            "sloc": [
-              {
-                "file": "movement.ads",
-                "line": 11
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "Movement.NotSurfacedInvariant",
-            "sloc": [
-              {
-                "file": "movement.ads",
-                "line": 14
-              }
-            ]
-          }
-        }
-      ],
-      "claim": {
-        "predicate": "CLAIM_EFFECTS",
-        "arg": {
-          "name": "Movement.SurfaceTheSubmarine",
-          "sloc": [
-            {
-              "file": "movement.ads",
-              "line": 38
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "Movement.MaxDepthInvariant",
-            "sloc": [
-              {
-                "file": "movement.ads",
-                "line": 11
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "Movement.NotSurfacedInvariant",
-            "sloc": [
-              {
-                "file": "movement.ads",
-                "line": 14
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_AORTE",
-          "arg": {
-            "name": "Movement.MaxDepthInvariant",
-            "sloc": [
-              {
-                "file": "movement.ads",
-                "line": 11
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_AORTE",
-          "arg": {
-            "name": "Movement.NotSurfacedInvariant",
-            "sloc": [
-              {
-                "file": "movement.ads",
-                "line": 14
-              }
-            ]
-          }
-        }
-      ],
-      "claim": {
-        "predicate": "CLAIM_AORTE",
-        "arg": {
-          "name": "Movement.SurfaceTheSubmarine",
-          "sloc": [
-            {
-              "file": "movement.ads",
-              "line": 38
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "Movement.MaxDepthInvariant",
-            "sloc": [
-              {
-                "file": "movement.ads",
-                "line": 11
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_AORTE",
-          "arg": {
-            "name": "Movement.MaxDepthInvariant",
-            "sloc": [
-              {
-                "file": "movement.ads",
-                "line": 11
-              }
-            ]
-          }
-        }
-      ],
-      "claim": {
-        "predicate": "CLAIM_POST",
-        "arg": {
-          "name": "Movement.RaiseTheSubmarine100ft",
-          "sloc": [
-            {
-              "file": "movement.ads",
-              "line": 32
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "Movement.MaxDepthInvariant",
-            "sloc": [
-              {
-                "file": "movement.ads",
-                "line": 11
-              }
-            ]
-          }
-        }
-      ],
-      "claim": {
-        "predicate": "CLAIM_EFFECTS",
-        "arg": {
-          "name": "Movement.RaiseTheSubmarine100ft",
-          "sloc": [
-            {
-              "file": "movement.ads",
-              "line": 32
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "Movement.MaxDepthInvariant",
-            "sloc": [
-              {
-                "file": "movement.ads",
-                "line": 11
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_AORTE",
-          "arg": {
-            "name": "Movement.MaxDepthInvariant",
-            "sloc": [
-              {
-                "file": "movement.ads",
-                "line": 11
-              }
-            ]
-          }
-        }
-      ],
-      "claim": {
-        "predicate": "CLAIM_AORTE",
-        "arg": {
-          "name": "Movement.RaiseTheSubmarine100ft",
-          "sloc": [
-            {
-              "file": "movement.ads",
-              "line": 32
+              "line": 30
             }
           ]
         }
@@ -684,11 +429,11 @@
       "claim": {
         "predicate": "CLAIM_POST",
         "arg": {
-          "name": "Movement.DiveTheSubmarine100ft",
+          "name": "Movement.SurfaceTheSubmarine",
           "sloc": [
             {
               "file": "movement.ads",
-              "line": 20
+              "line": 39
             }
           ]
         }
@@ -700,11 +445,11 @@
       "claim": {
         "predicate": "CLAIM_EFFECTS",
         "arg": {
-          "name": "Movement.DiveTheSubmarine100ft",
+          "name": "Movement.SurfaceTheSubmarine",
           "sloc": [
             {
               "file": "movement.ads",
-              "line": 20
+              "line": 39
             }
           ]
         }
@@ -716,75 +461,11 @@
       "claim": {
         "predicate": "CLAIM_AORTE",
         "arg": {
-          "name": "Movement.DiveTheSubmarine100ft",
+          "name": "Movement.SurfaceTheSubmarine",
           "sloc": [
             {
               "file": "movement.ads",
-              "line": 20
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_EFFECTS",
-        "arg": {
-          "name": "Movement.NotSurfacedInvariant",
-          "sloc": [
-            {
-              "file": "movement.ads",
-              "line": 14
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_AORTE",
-        "arg": {
-          "name": "Movement.NotSurfacedInvariant",
-          "sloc": [
-            {
-              "file": "movement.ads",
-              "line": 14
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_EFFECTS",
-        "arg": {
-          "name": "Movement.MaxDepthInvariant",
-          "sloc": [
-            {
-              "file": "movement.ads",
-              "line": 11
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_AORTE",
-        "arg": {
-          "name": "Movement.MaxDepthInvariant",
-          "sloc": [
-            {
-              "file": "movement.ads",
-              "line": 11
+              "line": 39
             }
           ]
         }
@@ -792,14 +473,14 @@
     }
   ],
   "timings": {
-    "marking": 2.94600002234802E-04,
-    "globals (basic)": 7.01399985700846E-04,
-    "globals/properties (advanced)": 1.34990003425628E-03,
-    "flow analysis": 6.88990019261837E-03,
-    "codepeer results": 5.50000004295725E-06,
-    "init_why_sections": 2.05200005439110E-04,
-    "translation of standard": 5.93119999393821E-03,
-    "translation of compilation unit": 5.82229997962713E-03,
-    "proof": 8.40039491653442E-01
+    "marking": 2.45100003667176E-04,
+    "globals (basic)": 4.98000008519739E-04,
+    "globals/properties (advanced)": 8.72700009495020E-04,
+    "flow analysis": 3.20079992525280E-03,
+    "codepeer results": 5.10000018039136E-06,
+    "init_why_sections": 2.51499994192272E-04,
+    "translation of standard": 3.70289990678430E-03,
+    "translation of compilation unit": 1.53779995162040E-03,
+    "proof": 8.35107624530792E-01
   }
 }

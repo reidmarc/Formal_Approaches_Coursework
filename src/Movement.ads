@@ -2,42 +2,42 @@ package Movement with SPARK_Mode
 is
 
    type DepthMonitor is range 0..2000;
-   currentDepth : DepthMonitor;
-
    type OperationStatus is (Allowed, Prohibited);
-   currentOperationStatus : OperationStatus;
 
 
-   function MaxDepthInvariant return Boolean is
-     (currentDepth <= 2000);
 
-   function NotSurfacedInvariant return Boolean is
-      (currentDepth > 0);
+--     function MaxDepthInvariant return Boolean is
+--       (currentDepth <= 2000);
+--
+--     function NotSurfacedInvariant return Boolean is
+--        (currentDepth > 0);
 
    -------------------------------------------------------
    -- The submarine cannot dive beneath a certain depth --
    -------------------------------------------------------
-   procedure DiveTheSubmarine100ft with
-     Global => (In_Out => currentDepth, Input => currentOperationStatus),
-     Pre => currentDepth <= 1900 and then currentDepth >= 0 and then currentoperationStatus = Allowed,
-     Post => currentDepth <= 2000 and then currentDepth >= 100;
+   procedure DiveTheSubmarine (diveBy : in DepthMonitor;
+                               currentDepth : in out DepthMonitor;
+                               currentOperationStatus : in OperationStatus) with
+     Pre => (currentDepth + diveBy) <= DepthMonitor'Last
+     and then currentDepth >= DepthMonitor'First
+     and then currentoperationStatus = Allowed
+     and then diveBy > 0,
+
+     Post => currentDepth <= DepthMonitor'Last
+     and then currentDepth > DepthMonitor'First;
 
 
-   procedure DiveTheSubmarineToMaxDepth with
-     Global => (In_Out => currentDepth, Input => currentOperationStatus),
-     Pre => currentDepth < 2000 and then currentOperationStatus = Allowed,
-     Post => currentDepth = 2000;
+   procedure RaiseTheSubmarine (riseBy : in DepthMonitor;
+                                currentDepth : in out DepthMonitor) with
+     Pre => (currentDepth - riseBy) >= DepthMonitor'First
+     and then currentDepth > DepthMonitor'First
+     and then riseBy > 0,
+
+     Post => currentDepth >= DepthMonitor'First;
 
 
-   procedure RaiseTheSubmarine100ft with
-     Global => (In_Out => currentDepth),
-     Pre => currentDepth >= 100 and then MaxDepthInvariant,
-     Post => currentDepth <= 1900 and then currentDepth >= 0;
-
-
-   procedure SurfaceTheSubmarine with
-     Global => (In_Out => currentDepth),
-     Pre => NotSurfacedInvariant and then MaxDepthInvariant,
-     Post => currentDepth = 0;
+   procedure SurfaceTheSubmarine (currentDepth : in out DepthMonitor) with
+     Pre => currentDepth > DepthMonitor'First,
+     Post => currentDepth = DepthMonitor'First;
 
 end Movement;

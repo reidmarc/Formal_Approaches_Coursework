@@ -1764,7 +1764,7 @@ module Movement__depthmonitor__rep
 
 end
 
-(* Module for axiomatizing type "operationstatus" defined at movement.ads:7, created in Gnat2Why.Types.Translate_Type *)
+(* Module for axiomatizing type "operationstatus" defined at movement.ads:5, created in Gnat2Why.Types.Translate_Type *)
 module Movement__operationstatus
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -1806,7 +1806,7 @@ module Movement__operationstatus
 
 end
 
-(* Module defining to_rep/of_rep for type "operationstatus" defined at movement.ads:7, created in Gnat2Why.Types.Translate_Type *)
+(* Module defining to_rep/of_rep for type "operationstatus" defined at movement.ads:5, created in Gnat2Why.Types.Translate_Type *)
 module Movement__operationstatus__rep
  use        Movement__operationstatus
  use import "_gnatprove_standard".Main
@@ -1821,21 +1821,78 @@ module Movement__operationstatus__rep
 
 end
 
+(* Module for defining the constant "diveby" defined at movement.ads:18, created in Gnat2Why.Decls.Translate_Constant *)
+module Movement__divethesubmarine__diveby
+ use import "_gnatprove_standard".Main
+
+ function diveby #"movement.ads" 18 0 0#"model" "model_trace:2774" "name:diveBy" 
+   : int
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "diveby" defined at movement.ads:18, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Movement__divethesubmarine__diveby___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining the constant "currentoperationstatus" defined at movement.ads:20, created in Gnat2Why.Decls.Translate_Constant *)
+module Movement__divethesubmarine__currentoperationstatus
+ use import "_gnatprove_standard".Main
+
+ function currentoperationstatus #"movement.ads" 20 0 0#"model" "model_trace:2792" "name:currentOperationStatus" 
+   : int
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "currentoperationstatus" defined at movement.ads:20, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Movement__divethesubmarine__currentoperationstatus___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining the constant "riseby" defined at movement.ads:30, created in Gnat2Why.Decls.Translate_Constant *)
+module Movement__raisethesubmarine__riseby
+ use import "_gnatprove_standard".Main
+
+ function riseby #"movement.ads" 30 0 0#"model" "model_trace:2849" "name:riseBy" 
+   : int
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "riseby" defined at movement.ads:30, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Movement__raisethesubmarine__riseby___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
 (* Module for axiomatizing type "TreactortemprangeB" defined at reactor.ads:9, created in Gnat2Why.Types.Translate_Type *)
 module Reactor__TreactortemprangeB
  use import "_gnatprove_standard".Main
  use import "int".Int
 
  type treactortemprangeB =
-  < range -128 127 >
+  < range -32768 32767 >
  
  function first 
    : int =
-  ( -128 )
+  ( -32768 )
  
  function last 
    : int =
-  127
+  32767
  
  predicate in_range 
    (x : int)  =
@@ -1890,7 +1947,7 @@ module Reactor__reactortemprange
  use import "int".Int
 
  type reactortemprange =
-  < range 0 100 >
+  < range 0 2400 >
  
  function first 
    : int =
@@ -1898,7 +1955,7 @@ module Reactor__reactortemprange
  
  function last 
    : int =
-  100
+  2400
  
  predicate in_range 
    (x : int)  =
@@ -1946,73 +2003,393 @@ module Reactor__reactortemprange__rep
  meta "inline : no" function to_rep
 
 end
-(* Module for defining a ref holding the value of variable "currentdepth" defined at movement.ads:5, created in Gnat2Why.Decls.Translate_Variable *)
-module Movement__currentdepth
+
+(* Module for axiomatizing type "reactortempstatus" defined at reactor.ads:11, created in Gnat2Why.Types.Translate_Type *)
+module Reactor__reactortempstatus
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type reactortempstatus 
+ 
+ function first 
+   : int =
+  0
+ 
+ function last 
+   : int =
+  1
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = reactortempstatus, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type reactortempstatus__ref =
+  { mutable reactortempstatus__content "model_trace:" "name:" : reactortempstatus }
+ 
+ function reactortempstatus__ref___projection 
+   (a : reactortempstatus__ref) : reactortempstatus =
+  a.reactortempstatus__content
+ 
+ meta "model_projection" function reactortempstatus__ref___projection
+ 
+ meta "inline : no" function reactortempstatus__ref___projection
+ 
+ val reactortempstatus__havoc 
+   (x : reactortempstatus__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "reactortempstatus" defined at reactor.ads:11, created in Gnat2Why.Types.Translate_Type *)
+module Reactor__reactortempstatus__rep
+ use        Reactor__reactortempstatus
  use import "_gnatprove_standard".Main
 
- val currentdepth #"movement.ads" 5 0 0#"model_projected" "model_trace:2466" "name:currentDepth"  : int__ref 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Reactor__reactortempstatus.reactortempstatus, 
+ predicate in_range = Reactor__reactortempstatus.in_range
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for defining the constant "currentdepth" defined at reactor.ads:27, created in Gnat2Why.Decls.Translate_Constant *)
+module Reactor__reactortempcoolsdown__currentdepth
+ use import "_gnatprove_standard".Main
+
+ function currentdepth #"reactor.ads" 27 0 0#"model" "name:currentDepth" "model_trace:2655" 
+   : int
  
  function attr__ATTRIBUTE_ADDRESS 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "currentdepth" defined at movement.ads:5, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
-module Movement__currentdepth___axiom
+(* Module giving an empty axiom for the entity "currentdepth" defined at reactor.ads:27, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Reactor__reactortempcoolsdown__currentdepth___axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining a ref holding the value of variable "currentoperationstatus" defined at movement.ads:8, created in Gnat2Why.Decls.Translate_Variable *)
-module Movement__currentoperationstatus
+(* Module for defining the constant "R1b" defined at reactor.adb:15, created in Gnat2Why.Decls.Translate_Constant *)
+module Reactor__reactortempoverheats__L_1__R1b
  use import "_gnatprove_standard".Main
 
- val currentoperationstatus #"movement.ads" 8 0 0#"model_projected" "model_trace:2499" "name:currentOperationStatus"  : int__ref 
+ function r1b #"reactor.adb" 15 0 0#
+   : int
  
  function attr__ATTRIBUTE_ADDRESS 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "currentoperationstatus" defined at movement.ads:8, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
-module Movement__currentoperationstatus___axiom
+(* Module for axiomatizing type "T2b" defined at reactor.adb:15, created in Gnat2Why.Types.Translate_Type *)
+module Reactor__reactortempoverheats__L_1__T2b
  use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Reactor__TreactortemprangeB
+ use        Reactor__TreactortemprangeB__rep
 
+ type t2b =
+  Reactor__TreactortemprangeB.treactortemprangeB
+ 
+ predicate dynamic_property 
+   (first_int : int) (last_int : int) (x : int)  =
+  ( (first_int <= x) /\ (x <= last_int) )
+ 
+ clone export "ada__model".Dynamic_Discrete with
+ type t = t2b, 
+ type rep_type = int, 
+ function base_to_rep = Reactor__TreactortemprangeB__rep.to_rep, 
+ function base_of_rep = Reactor__TreactortemprangeB__rep.of_rep, 
+ predicate dynamic_property = dynamic_property
+ 
+ type t2b__ref =
+  { mutable t2b__content "model_trace:" "name:" : t2b }
+ 
+ function t2b__ref___projection 
+   (a : t2b__ref) : t2b =
+  a.t2b__content
+ 
+ meta "model_projection" function t2b__ref___projection
+ 
+ meta "inline : no" function t2b__ref___projection
+ 
+ val t2b__havoc 
+   (x : t2b__ref) : unit
+  writes {x}
 
 end
 
-(* Module for defining a ref holding the value of variable "reactortemp" defined at reactor.ads:10, created in Gnat2Why.Decls.Translate_Variable *)
-module Reactor__reactortemp
+(* Module for defining the constant "R3b" defined at reactor.adb:35, created in Gnat2Why.Decls.Translate_Constant *)
+module Reactor__reactortempcoolsdown__L_2__R3b
  use import "_gnatprove_standard".Main
 
- val reactortemp #"reactor.ads" 10 0 0#"model_projected" "model_trace:2384" "name:reactorTemp"  : int__ref 
+ function r3b #"reactor.adb" 35 0 0#
+   : int
  
  function attr__ATTRIBUTE_ADDRESS 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "reactortemp" defined at reactor.ads:10, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
-module Reactor__reactortemp___axiom
+(* Module for axiomatizing type "T4b" defined at reactor.adb:35, created in Gnat2Why.Types.Translate_Type *)
+module Reactor__reactortempcoolsdown__L_2__T4b
  use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Reactor__TreactortemprangeB
+ use        Reactor__TreactortemprangeB__rep
 
+ type t4b =
+  Reactor__TreactortemprangeB.treactortemprangeB
+ 
+ predicate dynamic_property 
+   (first_int : int) (last_int : int) (x : int)  =
+  ( (first_int <= x) /\ (x <= last_int) )
+ 
+ clone export "ada__model".Dynamic_Discrete with
+ type t = t4b, 
+ type rep_type = int, 
+ function base_to_rep = Reactor__TreactortemprangeB__rep.to_rep, 
+ function base_of_rep = Reactor__TreactortemprangeB__rep.of_rep, 
+ predicate dynamic_property = dynamic_property
+ 
+ type t4b__ref =
+  { mutable t4b__content "model_trace:" "name:" : t4b }
+ 
+ function t4b__ref___projection 
+   (a : t4b__ref) : t4b =
+  a.t4b__content
+ 
+ meta "model_projection" function t4b__ref___projection
+ 
+ meta "inline : no" function t4b__ref___projection
+ 
+ val t4b__havoc 
+   (x : t4b__ref) : unit
+  writes {x}
 
 end
-
-(* Module for defining a ref holding the value of variable "a" defined at reactor.adb:13, created in Gnat2Why.Decls.Translate_Variable *)
-module Reactor__reactortempoverheats__L_1__a
+(* Module for defining a ref holding the value of variable "currentdepth" defined at movement.ads:19, created in Gnat2Why.Decls.Translate_Variable *)
+module Movement__divethesubmarine__currentdepth
  use import "_gnatprove_standard".Main
 
- val a #"reactor.adb" 13 0 0#"model_projected" "model_trace:2322" "name:A"  : int__ref 
+ val currentdepth #"movement.ads" 19 0 0#"model_projected" "model_trace:2783" "name:currentDepth"  : int__ref 
  
  function attr__ATTRIBUTE_ADDRESS 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "a" defined at reactor.adb:13, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
-module Reactor__reactortempoverheats__L_1__a___axiom
+(* Module giving an empty axiom for the entity "currentdepth" defined at movement.ads:19, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Movement__divethesubmarine__currentdepth___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining a ref holding the value of variable "currentdepth" defined at movement.ads:31, created in Gnat2Why.Decls.Translate_Variable *)
+module Movement__raisethesubmarine__currentdepth
+ use import "_gnatprove_standard".Main
+
+ val currentdepth #"movement.ads" 31 0 0#"model_projected" "name:currentDepth" "model_trace:2858"  : int__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "currentdepth" defined at movement.ads:31, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Movement__raisethesubmarine__currentdepth___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining a ref holding the value of variable "currentdepth" defined at movement.ads:39, created in Gnat2Why.Decls.Translate_Variable *)
+module Movement__surfacethesubmarine__currentdepth
+ use import "_gnatprove_standard".Main
+
+ val currentdepth #"movement.ads" 39 0 0#"model_projected" "name:currentDepth" "model_trace:2905"  : int__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "currentdepth" defined at movement.ads:39, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Movement__surfacethesubmarine__currentdepth___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining a ref holding the value of variable "reactortemp" defined at reactor.ads:13, created in Gnat2Why.Decls.Translate_Variable *)
+module Reactor__reactortempoverheats__reactortemp
+ use import "_gnatprove_standard".Main
+
+ val reactortemp #"reactor.ads" 13 0 0#"model_projected" "model_trace:2564" "name:reactorTemp"  : int__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "reactortemp" defined at reactor.ads:13, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Reactor__reactortempoverheats__reactortemp___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining a ref holding the value of variable "currentdepth" defined at reactor.ads:14, created in Gnat2Why.Decls.Translate_Variable *)
+module Reactor__reactortempoverheats__currentdepth
+ use import "_gnatprove_standard".Main
+
+ val currentdepth #"reactor.ads" 14 0 0#"model_projected" "name:currentDepth" "model_trace:2573"  : int__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "currentdepth" defined at reactor.ads:14, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Reactor__reactortempoverheats__currentdepth___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining a ref holding the value of variable "currentoperationstatus" defined at reactor.ads:15, created in Gnat2Why.Decls.Translate_Variable *)
+module Reactor__reactortempoverheats__currentoperationstatus
+ use import "_gnatprove_standard".Main
+
+ val currentoperationstatus #"reactor.ads" 15 0 0#"model_projected" "name:currentOperationStatus" "model_trace:2582"  : int__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "currentoperationstatus" defined at reactor.ads:15, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Reactor__reactortempoverheats__currentoperationstatus___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining a ref holding the value of variable "reactorstatus" defined at reactor.ads:16, created in Gnat2Why.Decls.Translate_Variable *)
+module Reactor__reactortempoverheats__reactorstatus
+ use import "_gnatprove_standard".Main
+
+ val reactorstatus #"reactor.ads" 16 0 0#"model_projected" "model_trace:2591" "name:reactorStatus"  : int__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "reactorstatus" defined at reactor.ads:16, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Reactor__reactortempoverheats__reactorstatus___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining a ref holding the value of variable "reactortemp" defined at reactor.ads:26, created in Gnat2Why.Decls.Translate_Variable *)
+module Reactor__reactortempcoolsdown__reactortemp
+ use import "_gnatprove_standard".Main
+
+ val reactortemp #"reactor.ads" 26 0 0#"model_projected" "name:reactorTemp" "model_trace:2646"  : int__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "reactortemp" defined at reactor.ads:26, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Reactor__reactortempcoolsdown__reactortemp___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining a ref holding the value of variable "currentoperationstatus" defined at reactor.ads:28, created in Gnat2Why.Decls.Translate_Variable *)
+module Reactor__reactortempcoolsdown__currentoperationstatus
+ use import "_gnatprove_standard".Main
+
+ val currentoperationstatus #"reactor.ads" 28 0 0#"model_projected" "name:currentOperationStatus" "model_trace:2664"  : int__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "currentoperationstatus" defined at reactor.ads:28, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Reactor__reactortempcoolsdown__currentoperationstatus___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining a ref holding the value of variable "reactorstatus" defined at reactor.ads:29, created in Gnat2Why.Decls.Translate_Variable *)
+module Reactor__reactortempcoolsdown__reactorstatus
+ use import "_gnatprove_standard".Main
+
+ val reactorstatus #"reactor.ads" 29 0 0#"model_projected" "name:reactorStatus" "model_trace:2673"  : int__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "reactorstatus" defined at reactor.ads:29, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Reactor__reactortempcoolsdown__reactorstatus___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining a ref holding the value of variable "i" defined at reactor.adb:15, created in Gnat2Why.Decls.Translate_Variable *)
+module Reactor__reactortempoverheats__L_1__i
+ use import "_gnatprove_standard".Main
+
+ val i #"reactor.adb" 15 0 0#"model_projected" "model_trace:2358" "name:I"  : int__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "i" defined at reactor.adb:15, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Reactor__reactortempoverheats__L_1__i___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining a ref holding the value of variable "i" defined at reactor.adb:35, created in Gnat2Why.Decls.Translate_Variable *)
+module Reactor__reactortempcoolsdown__L_2__i
+ use import "_gnatprove_standard".Main
+
+ val i #"reactor.adb" 35 0 0#"model_projected" "name:I" "model_trace:2455"  : int__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "i" defined at reactor.adb:35, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Reactor__reactortempcoolsdown__L_2__i___axiom
  use import "_gnatprove_standard".Main
 
 
@@ -2380,54 +2757,21 @@ module Standard__universal_integer___axiom
 
 end
 
-(* Module for possibly declaring a logic function for "maxdepthinvariant" defined at movement.ads:11, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Movement__maxdepthinvariant
- use        Movement__currentdepth
- use import "_gnatprove_standard".Main
-
- function maxdepthinvariant 
-   (movement__currentdepth : int) : bool
- 
- predicate maxdepthinvariant__function_guard 
-   (result : bool) (movement__currentdepth : int) 
-
-end
-
-(* Module for possibly declaring a logic function for "notsurfacedinvariant" defined at movement.ads:14, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Movement__notsurfacedinvariant
- use        Movement__currentdepth
- use import "_gnatprove_standard".Main
-
- function notsurfacedinvariant 
-   (movement__currentdepth : int) : bool
- 
- predicate notsurfacedinvariant__function_guard 
-   (result : bool) (movement__currentdepth : int) 
-
-end
-
-(* Module for possibly declaring a logic function for "divethesubmarine100ft" defined at movement.ads:20, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Movement__divethesubmarine100ft
+(* Module for possibly declaring a logic function for "divethesubmarine" defined at movement.ads:18, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Movement__divethesubmarine
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "divethesubmarinetomaxdepth" defined at movement.ads:26, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Movement__divethesubmarinetomaxdepth
+(* Module for possibly declaring a logic function for "raisethesubmarine" defined at movement.ads:30, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Movement__raisethesubmarine
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "raisethesubmarine100ft" defined at movement.ads:32, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Movement__raisethesubmarine100ft
- use import "_gnatprove_standard".Main
-
-
-end
-
-(* Module for possibly declaring a logic function for "surfacethesubmarine" defined at movement.ads:38, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "surfacethesubmarine" defined at movement.ads:39, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Movement__surfacethesubmarine
  use import "_gnatprove_standard".Main
 
@@ -2441,7 +2785,14 @@ module Reactor__reactortempoverheats
 
 end
 
-(* Module for defining the loop exit exception for the loop "L_1" defined at reactor.adb:13, created in Gnat2Why.Decls.Translate_Loop_Entity *)
+(* Module for possibly declaring a logic function for "reactortempcoolsdown" defined at reactor.ads:26, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Reactor__reactortempcoolsdown
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining the loop exit exception for the loop "L_1" defined at reactor.adb:15, created in Gnat2Why.Decls.Translate_Loop_Entity *)
 module Reactor__reactortempoverheats__L_1
  use import "_gnatprove_standard".Main
 
@@ -2449,8 +2800,23 @@ module Reactor__reactortempoverheats__L_1
 
 end
 
-(* Module giving an empty axiom for the entity "L_1" defined at reactor.adb:13, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "L_1" defined at reactor.adb:15, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Reactor__reactortempoverheats__L_1___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining the loop exit exception for the loop "L_2" defined at reactor.adb:35, created in Gnat2Why.Decls.Translate_Loop_Entity *)
+module Reactor__reactortempcoolsdown__L_2
+ use import "_gnatprove_standard".Main
+
+ exception L_2
+
+end
+
+(* Module giving an empty axiom for the entity "L_2" defined at reactor.adb:35, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Reactor__reactortempcoolsdown__L_2___axiom
  use import "_gnatprove_standard".Main
 
 
@@ -2480,7 +2846,7 @@ module Movement__depthmonitor___axiom
 
 end
 
-(* Module giving axioms for type "operationstatus" defined at movement.ads:7, created in Gnat2Why.Types.Generate_Type_Completion *)
+(* Module giving axioms for type "operationstatus" defined at movement.ads:5, created in Gnat2Why.Types.Generate_Type_Completion *)
 module Movement__operationstatus___axiom
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -2511,181 +2877,138 @@ module Reactor__reactortemprange___axiom
  use        Reactor__reactortemprange
 
  predicate dynamic_invariant "inline" 
-   (temp___expr_175 : int) (temp___is_init_171 : bool) (temp___skip_constant_172 : bool) (temp___do_toplevel_173 : bool) (temp___do_typ_inv_174 : bool)  =
-  (if (( temp___is_init_171 \/ (Reactor__reactortemprange.first <= Reactor__reactortemprange.last) )) then (
-   (Reactor__reactortemprange.dynamic_property Reactor__reactortemprange.first Reactor__reactortemprange.last temp___expr_175)) else true)
+   (temp___expr_172 : int) (temp___is_init_168 : bool) (temp___skip_constant_169 : bool) (temp___do_toplevel_170 : bool) (temp___do_typ_inv_171 : bool)  =
+  (if (( temp___is_init_168 \/ (Reactor__reactortemprange.first <= Reactor__reactortemprange.last) )) then (
+   (Reactor__reactortemprange.dynamic_property Reactor__reactortemprange.first Reactor__reactortemprange.last temp___expr_172)) else true)
  
  predicate default_initial_assumption "inline" 
-   (temp___expr_176 : int) (temp___skip_top_level_177 : bool)  =
+   (temp___expr_173 : int) (temp___skip_top_level_174 : bool)  =
   true
 
 end
-(* Module giving a program function and a defining axiom for the expression function "maxdepthinvariant" defined at movement.ads:11, created in Gnat2Why.Subprograms.Translate_Expression_Function_Body *)
-module Movement__maxdepthinvariant___axiom
- use        Movement__currentdepth
+
+(* Module giving axioms for type "reactortempstatus" defined at reactor.ads:11, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Reactor__reactortempstatus___axiom
  use import "_gnatprove_standard".Main
  use import "int".Int
- use        Movement__maxdepthinvariant
- use        Movement__depthmonitor___axiom
- use        Movement__currentdepth
+ use        Reactor__reactortempstatus
 
- val maxdepthinvariant 
-   (__void_param : unit) : bool
-  requires {  true }
-  ensures {  ( ( (result = (Movement__maxdepthinvariant.maxdepthinvariant Movement__currentdepth.currentdepth.int__content)) /\ (Movement__maxdepthinvariant.maxdepthinvariant__function_guard result Movement__currentdepth.currentdepth.int__content) ) /\ ( (result = True) <-> (Movement__currentdepth.currentdepth.int__content <= 2000) ) ) }
-  reads {Movement__currentdepth.currentdepth}
+ predicate dynamic_invariant "inline" 
+   (temp___expr_179 : int) (temp___is_init_175 : bool) (temp___skip_constant_176 : bool) (temp___do_toplevel_177 : bool) (temp___do_typ_inv_178 : bool)  =
+  (if (( temp___is_init_175 \/ (Reactor__reactortempstatus.first <= Reactor__reactortempstatus.last) )) then (
+   (Reactor__reactortempstatus.dynamic_property Reactor__reactortempstatus.first Reactor__reactortempstatus.last temp___expr_179)) else true)
  
- axiom maxdepthinvariant__post_axiom :
-  (forall movement__currentdepth   : int [(Movement__maxdepthinvariant.maxdepthinvariant movement__currentdepth)].
-   ( (Movement__depthmonitor___axiom.dynamic_invariant movement__currentdepth True True True True) -> (let result = (Movement__maxdepthinvariant.maxdepthinvariant movement__currentdepth) in (
-    (if ((Movement__maxdepthinvariant.maxdepthinvariant__function_guard result movement__currentdepth)) then (
-     ( ( true /\ true ) /\ true )) else true)))
-    ))
- 
- axiom maxdepthinvariant__def_axiom :
-  (forall movement__currentdepth   : int [(Movement__maxdepthinvariant.maxdepthinvariant movement__currentdepth)].
-   ( (let result = (Movement__maxdepthinvariant.maxdepthinvariant movement__currentdepth) in (
-    (Movement__maxdepthinvariant.maxdepthinvariant__function_guard result movement__currentdepth)))
-    -> ( ((Movement__maxdepthinvariant.maxdepthinvariant movement__currentdepth) = True) <-> (movement__currentdepth <= 2000) ) ))
+ predicate default_initial_assumption "inline" 
+   (temp___expr_180 : int) (temp___skip_top_level_181 : bool)  =
+  true
 
 end
 
-(* Module giving a program function and a defining axiom for the expression function "notsurfacedinvariant" defined at movement.ads:14, created in Gnat2Why.Subprograms.Translate_Expression_Function_Body *)
-module Movement__notsurfacedinvariant___axiom
- use        Movement__currentdepth
+(* Module giving axioms for type "T2b" defined at reactor.adb:15, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Reactor__reactortempoverheats__L_1__T2b___axiom
  use import "_gnatprove_standard".Main
- use import "int".Int
- use        Movement__notsurfacedinvariant
- use        Movement__depthmonitor___axiom
- use        Movement__currentdepth
 
- val notsurfacedinvariant 
-   (__void_param : unit) : bool
-  requires {  true }
-  ensures {  ( ( (result = (Movement__notsurfacedinvariant.notsurfacedinvariant Movement__currentdepth.currentdepth.int__content)) /\ (Movement__notsurfacedinvariant.notsurfacedinvariant__function_guard result Movement__currentdepth.currentdepth.int__content) ) /\ ( (result = True) <-> (Movement__currentdepth.currentdepth.int__content > 0) ) ) }
-  reads {Movement__currentdepth.currentdepth}
- 
- axiom notsurfacedinvariant__post_axiom :
-  (forall movement__currentdepth   : int [(Movement__notsurfacedinvariant.notsurfacedinvariant movement__currentdepth)].
-   ( (Movement__depthmonitor___axiom.dynamic_invariant movement__currentdepth True True True True) -> (let result = (Movement__notsurfacedinvariant.notsurfacedinvariant movement__currentdepth) in (
-    (if ((Movement__notsurfacedinvariant.notsurfacedinvariant__function_guard result movement__currentdepth)) then (
-     ( ( true /\ true ) /\ true )) else true)))
-    ))
- 
- axiom notsurfacedinvariant__def_axiom :
-  (forall movement__currentdepth   : int [(Movement__notsurfacedinvariant.notsurfacedinvariant movement__currentdepth)].
-   ( (let result = (Movement__notsurfacedinvariant.notsurfacedinvariant movement__currentdepth) in (
-    (Movement__notsurfacedinvariant.notsurfacedinvariant__function_guard result movement__currentdepth)))
-    -> ( ((Movement__notsurfacedinvariant.notsurfacedinvariant movement__currentdepth) = True) <-> (movement__currentdepth > 0) ) ))
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "divethesubmarine100ft" defined at movement.ads:20, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
-module Movement__divethesubmarine100ft___axiom
- use        Movement__currentoperationstatus
- use        Movement__currentdepth
+(* Module giving axioms for type "T4b" defined at reactor.adb:35, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Reactor__reactortempcoolsdown__L_2__T4b___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+(* Module for defining the value of constant "R1b" defined at reactor.adb:15, created in Gnat2Why.Decls.Translate_Constant_Value *)
+module Reactor__reactortempoverheats__L_1__R1b___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining the value of constant "R3b" defined at reactor.adb:35, created in Gnat2Why.Decls.Translate_Constant_Value *)
+module Reactor__reactortempcoolsdown__L_2__R3b___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for declaring a program function (and possibly an axiom) for "divethesubmarine" defined at movement.ads:18, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Movement__divethesubmarine___axiom
  use import "_gnatprove_standard".Main
  use import "int".Int
  use        Movement__depthmonitor___axiom
- use        Movement__currentdepth
- use        Movement__currentoperationstatus
 
- val divethesubmarine100ft 
-   (__void_param : unit) : unit
-  requires {  ( (Movement__currentdepth.currentdepth.int__content <= 1900) /\ ( (Movement__currentdepth.currentdepth.int__content >= 0) /\ (Movement__currentoperationstatus.currentoperationstatus.int__content = 0) ) ) }
-  ensures {  ( ( (Movement__currentdepth.currentdepth.int__content <= 2000) /\ (Movement__currentdepth.currentdepth.int__content >= 100) ) /\ (Movement__depthmonitor___axiom.dynamic_invariant Movement__currentdepth.currentdepth.int__content True True True True) ) }
-  reads {Movement__currentdepth.currentdepth, Movement__currentoperationstatus.currentoperationstatus}
-  writes {Movement__currentdepth.currentdepth}
+ val divethesubmarine 
+   (diveby : int) (currentdepth : int__ref) (currentoperationstatus : int) : unit
+  requires {  ( ((currentdepth.int__content + diveby) <= 2000) /\ ( (currentdepth.int__content >= 0) /\ ( (currentoperationstatus = 0) /\ (diveby > 0) ) ) ) }
+  ensures {  ( ( (currentdepth.int__content <= 2000) /\ (currentdepth.int__content > 0) ) /\ (Movement__depthmonitor___axiom.dynamic_invariant currentdepth.int__content True True True True) ) }
+  writes {currentdepth}
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "divethesubmarinetomaxdepth" defined at movement.ads:26, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
-module Movement__divethesubmarinetomaxdepth___axiom
- use        Movement__currentoperationstatus
- use        Movement__currentdepth
+(* Module for declaring a program function (and possibly an axiom) for "raisethesubmarine" defined at movement.ads:30, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Movement__raisethesubmarine___axiom
  use import "_gnatprove_standard".Main
  use import "int".Int
  use        Movement__depthmonitor___axiom
- use        Movement__currentdepth
- use        Movement__currentoperationstatus
 
- val divethesubmarinetomaxdepth 
-   (__void_param : unit) : unit
-  requires {  ( (Movement__currentdepth.currentdepth.int__content < 2000) /\ (Movement__currentoperationstatus.currentoperationstatus.int__content = 0) ) }
-  ensures {  ( (Movement__currentdepth.currentdepth.int__content = 2000) /\ (Movement__depthmonitor___axiom.dynamic_invariant Movement__currentdepth.currentdepth.int__content True True True True) ) }
-  reads {Movement__currentdepth.currentdepth, Movement__currentoperationstatus.currentoperationstatus}
-  writes {Movement__currentdepth.currentdepth}
+ val raisethesubmarine 
+   (riseby : int) (currentdepth : int__ref) : unit
+  requires {  ( ((currentdepth.int__content - riseby) >= 0) /\ ( (currentdepth.int__content > 0) /\ (riseby > 0) ) ) }
+  ensures {  ( (currentdepth.int__content >= 0) /\ (Movement__depthmonitor___axiom.dynamic_invariant currentdepth.int__content True True True True) ) }
+  writes {currentdepth}
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "raisethesubmarine100ft" defined at movement.ads:32, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
-module Movement__raisethesubmarine100ft___axiom
- use        Movement__currentdepth
- use import "_gnatprove_standard".Main
- use import "int".Int
- use        Movement__maxdepthinvariant
- use        Movement__depthmonitor___axiom
- use        Movement__currentdepth
-
- val raisethesubmarine100ft 
-   (__void_param : unit) : unit
-  requires {  ( (Movement__currentdepth.currentdepth.int__content >= 100) /\ ((epsilon temp___result_168 : bool.
-   ( (temp___result_168 = (Movement__maxdepthinvariant.maxdepthinvariant Movement__currentdepth.currentdepth.int__content)) /\ (Movement__maxdepthinvariant.maxdepthinvariant__function_guard temp___result_168 Movement__currentdepth.currentdepth.int__content) )) = True) ) }
-  ensures {  ( ( (Movement__currentdepth.currentdepth.int__content <= 1900) /\ (Movement__currentdepth.currentdepth.int__content >= 0) ) /\ (Movement__depthmonitor___axiom.dynamic_invariant Movement__currentdepth.currentdepth.int__content True True True True) ) }
-  reads {Movement__currentdepth.currentdepth}
-  writes {Movement__currentdepth.currentdepth}
-
-end
-
-(* Module for declaring a program function (and possibly an axiom) for "surfacethesubmarine" defined at movement.ads:38, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "surfacethesubmarine" defined at movement.ads:39, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Movement__surfacethesubmarine___axiom
- use        Movement__currentdepth
  use import "_gnatprove_standard".Main
  use import "int".Int
- use        Movement__maxdepthinvariant
- use        Movement__notsurfacedinvariant
  use        Movement__depthmonitor___axiom
- use        Movement__currentdepth
 
  val surfacethesubmarine 
-   (__void_param : unit) : unit
-  requires {  ( ((epsilon temp___result_170 : bool.
-   ( (temp___result_170 = (Movement__notsurfacedinvariant.notsurfacedinvariant Movement__currentdepth.currentdepth.int__content)) /\ (Movement__notsurfacedinvariant.notsurfacedinvariant__function_guard temp___result_170 Movement__currentdepth.currentdepth.int__content) )) = True) /\ ((epsilon temp___result_169 : bool.
-   ( (temp___result_169 = (Movement__maxdepthinvariant.maxdepthinvariant Movement__currentdepth.currentdepth.int__content)) /\ (Movement__maxdepthinvariant.maxdepthinvariant__function_guard temp___result_169 Movement__currentdepth.currentdepth.int__content) )) = True) ) }
-  ensures {  ( (Movement__currentdepth.currentdepth.int__content = 0) /\ (Movement__depthmonitor___axiom.dynamic_invariant Movement__currentdepth.currentdepth.int__content True True True True) ) }
-  reads {Movement__currentdepth.currentdepth}
-  writes {Movement__currentdepth.currentdepth}
+   (currentdepth : int__ref) : unit
+  requires {  (currentdepth.int__content > 0) }
+  ensures {  ( (currentdepth.int__content = 0) /\ (Movement__depthmonitor___axiom.dynamic_invariant currentdepth.int__content True True True True) ) }
+  writes {currentdepth}
 
 end
 
 (* Module for declaring a program function (and possibly an axiom) for "reactortempoverheats" defined at reactor.ads:13, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Reactor__reactortempoverheats___axiom
- use        Movement__currentdepth
- use        Reactor__reactortemp
  use import "_gnatprove_standard".Main
  use import "int".Int
  use        Movement__depthmonitor___axiom
- use        Movement__currentdepth
+ use        Movement__operationstatus___axiom
  use        Reactor__reactortemprange___axiom
- use        Reactor__reactortemp
+ use        Reactor__reactortempstatus___axiom
 
  val reactortempoverheats 
-   (__void_param : unit) : unit
-  requires {  ( (Reactor__reactortemp.reactortemp.int__content < 100) /\ (Movement__currentdepth.currentdepth.int__content > 0) ) }
-  ensures {  ( ( (Reactor__reactortemp.reactortemp.int__content = 100) /\ (Movement__currentdepth.currentdepth.int__content = 0) ) /\ ( (Movement__depthmonitor___axiom.dynamic_invariant Movement__currentdepth.currentdepth.int__content True True True True) /\ (Reactor__reactortemprange___axiom.dynamic_invariant Reactor__reactortemp.reactortemp.int__content True True True True) ) ) }
-  reads {Movement__currentdepth.currentdepth, Reactor__reactortemp.reactortemp}
-  writes {Movement__currentdepth.currentdepth, Reactor__reactortemp.reactortemp}
+   (reactortemp : int__ref) (currentdepth : int__ref) (currentoperationstatus : int__ref) (reactorstatus : int__ref) : unit
+  requires {  ( (reactortemp.int__content < 2400) /\ (currentdepth.int__content > 0) ) }
+  ensures {  ( ( (reactortemp.int__content = 2400) /\ ( (currentoperationstatus.int__content = 1) /\ ( (currentdepth.int__content = 0) /\ (reactorstatus.int__content = 0) ) ) ) /\ ( ( ( (Reactor__reactortemprange___axiom.dynamic_invariant reactortemp.int__content True True True True) /\ (Movement__depthmonitor___axiom.dynamic_invariant currentdepth.int__content True True True True) ) /\ (Movement__operationstatus___axiom.dynamic_invariant currentoperationstatus.int__content True True True True) ) /\ (Reactor__reactortempstatus___axiom.dynamic_invariant reactorstatus.int__content True True True True) ) ) }
+  writes {reactortemp, currentdepth, currentoperationstatus, reactorstatus}
+
+end
+
+(* Module for declaring a program function (and possibly an axiom) for "reactortempcoolsdown" defined at reactor.ads:26, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Reactor__reactortempcoolsdown___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Movement__operationstatus___axiom
+ use        Reactor__reactortemprange___axiom
+ use        Reactor__reactortempstatus___axiom
+
+ val reactortempcoolsdown 
+   (reactortemp : int__ref) (currentdepth : int) (currentoperationstatus : int__ref) (reactorstatus : int__ref) : unit
+  requires {  ( (reactortemp.int__content = 2400) /\ ( (currentdepth = 0) /\ (currentoperationstatus.int__content = 1) ) ) }
+  ensures {  ( ( (currentoperationstatus.int__content = 0) /\ (reactorstatus.int__content = 1) ) /\ ( ( (Reactor__reactortemprange___axiom.dynamic_invariant reactortemp.int__content True True True True) /\ (Movement__operationstatus___axiom.dynamic_invariant currentoperationstatus.int__content True True True True) ) /\ (Reactor__reactortempstatus___axiom.dynamic_invariant reactorstatus.int__content True True True True) ) ) }
+  writes {reactortemp, currentoperationstatus, reactorstatus}
 
 end
 
 (* Module for checking absence of run-time errors and package initial condition on package elaboration of "reactor" defined at reactor.ads:4, created in Gnat2Why.Subprograms.Generate_VCs_For_Package_Elaboration *)
 module Reactor__package_def
  use import "_gnatprove_standard".Main
- use import "int".Int
- use        Reactor__reactortemprange___axiom
- use        Reactor__reactortemp
- use        Reactor__reactortemprange___axiom
- use        Reactor__reactortemp___axiom
 
  let def #"reactor.ads" 4 0 0#"GP_Subp:reactor.ads:4" "W:diverges:N" 
    (__void_param : unit)
@@ -2694,19 +3017,29 @@ module Reactor__package_def
    =
   ( (#"reactor.ads" 4 0 0# ());
   (#"reactor.ads" 9 0 0# ());
-  (#"reactor.ads" 10 0 0# ());
-  (#"reactor.ads" 10 0 0# ());
-  (#"reactor.ads" 10 0 0# ( #"reactor.ads" 10 0 0# Reactor__reactortemp.reactortemp.int__content <- ( 0 );
-  #"reactor.ads" 10 0 0# assume { #"reactor.ads" 10 0 0# (Reactor__reactortemprange___axiom.dynamic_invariant Reactor__reactortemp.reactortemp.int__content True False True True) } ));
+  (#"reactor.ads" 11 0 0# ());
   (#"reactor.ads" 13 0 0# ());
-  (#"reactor.ads" 16 0 0# ());
-  (#"reactor.ads" 16 0 0# ());
-  (#"reactor.ads" 15 0 0# ());
-  (#"reactor.ads" 15 0 0# ());
-  (#"reactor.ads" 14 0 0# ());
+  (#"reactor.ads" 20 0 0# ());
+  (#"reactor.ads" 21 0 0# ());
+  (#"reactor.ads" 22 0 0# ());
+  (#"reactor.ads" 20 0 0# ());
+  (#"reactor.ads" 17 0 0# ());
+  (#"reactor.ads" 17 0 0# ());
+  (#"reactor.ads" 26 0 0# ());
+  (#"reactor.ads" 34 0 0# ());
+  (#"reactor.ads" 34 0 0# ());
+  (#"reactor.ads" 30 0 0# ());
+  (#"reactor.ads" 31 0 0# ());
+  (#"reactor.ads" 30 0 0# ());
+  (#"reactor.ads" 30 0 0# ());
+  (#"reactor.ads" 30 0 0# ());
+  (#"reactor.ads" 30 0 0# ());
+  (#"reactor.ads" 30 0 0# ());
+  (#"reactor.ads" 30 0 0# ());
   (#"reactor.adb" 4 0 0# ());
-  (#"reactor.adb" 11 0 0# ());
-  ( "GP_Sloc:reactor.adb:19:1" (#"reactor.adb" 19 0 0# ()) ) )
+  (#"reactor.adb" 10 0 0# ());
+  (#"reactor.adb" 27 0 0# ());
+  ( "GP_Sloc:reactor.adb:46:1" (#"reactor.adb" 46 0 0# ()) ) )
 end
 
 (* Module for checking contracts and absence of run-time errors in subprogram "reactortempoverheats" defined at reactor.ads:13, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
@@ -2716,76 +3049,89 @@ module Reactor__reactortempoverheats__subprogram_def
  use        "_gnatprove_standard".Boolean
  use        Movement__surfacethesubmarine___axiom
  use        Movement__depthmonitor___axiom
- use        Movement__currentdepth
+ use        Movement__operationstatus___axiom
  use        Reactor__reactortemprange___axiom
- use        Reactor__reactortemp
+ use        Reactor__reactortempstatus___axiom
+ use        Reactor__reactortempoverheats__reactortemp
+ use        Reactor__reactortempoverheats__currentdepth
+ use        Reactor__reactortempoverheats__currentoperationstatus
+ use        Reactor__reactortempoverheats__reactorstatus
+ use        Reactor__reactortempoverheats__L_1__R1b
  use        Reactor__reactortempoverheats__L_1
- use        Reactor__reactortempoverheats__L_1__a
- use        Reactor__reactortempoverheats__L_1__a___axiom
+ use        Reactor__reactortempoverheats__L_1__i
+ use        Reactor__reactortempoverheats__L_1__i___axiom
  use        Reactor__reactortempoverheats__L_1___axiom
  use        Reactor__reactortemprange___axiom
- use        Reactor__reactortemp___axiom
+ use        Reactor__reactortempstatus___axiom
+ use        Reactor__reactortempoverheats__reactortemp___axiom
+ use        Reactor__reactortempoverheats__currentdepth___axiom
+ use        Reactor__reactortempoverheats__currentoperationstatus___axiom
+ use        Reactor__reactortempoverheats__reactorstatus___axiom
  use        Movement__depthmonitor___axiom
- use        Movement__currentdepth___axiom
- use        Movement__maxdepthinvariant___axiom
- use        Movement__notsurfacedinvariant___axiom
+ use        Movement__operationstatus___axiom
  use        Movement__surfacethesubmarine___axiom
+ use        Reactor__reactortempoverheats__L_1__R1b___axiom
 
  let def #"reactor.ads" 13 0 0#"W:diverges:N" "GP_Subp:reactor.ads:13" 
    (__void_param : unit)
   requires { #"reactor.ads" 13 0 0# true }
-  ensures { #"reactor.ads" 13 0 0# (#"reactor.ads" 16 0 0# ( "model_vc_post" "keep_on_simp" "GP_Sloc:reactor.ads:16:14" "GP_Reason:VC_POSTCONDITION" "GP_Id:1" "comment:     Post => reactorTemp = ReactorTempRange'Last and then currentDepth = 0;
-             ^ reactor.ads:16:14:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" ( ( "GP_Pretty_Ada:3170" "GP_Sloc:reactor.ads:16:14" (Reactor__reactortemp.reactortemp.int__content = 100) ) /\ ( "GP_Pretty_Ada:2435" "GP_Sloc:reactor.ads:16:72" (Movement__currentdepth.currentdepth.int__content = 0) ) ) )) }
+  ensures { #"reactor.ads" 13 0 0# (#"reactor.ads" 20 0 0# ( "model_vc_post" "keep_on_simp" "GP_Sloc:reactor.ads:20:14" "GP_Reason:VC_POSTCONDITION" "GP_Id:1" "comment:     Post => reactorTemp = ReactorTempRange'Last
+             ^ reactor.ads:20:14:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" ( ( "GP_Pretty_Ada:3398" "GP_Sloc:reactor.ads:20:14" (Reactor__reactortempoverheats__reactortemp.reactortemp.int__content = 2400) ) /\ ( ( "GP_Pretty_Ada:2628" "GP_Sloc:reactor.ads:21:38" (Reactor__reactortempoverheats__currentoperationstatus.currentoperationstatus.int__content = 1) ) /\ ( ( "GP_Pretty_Ada:2632" "GP_Sloc:reactor.ads:22:28" (Reactor__reactortempoverheats__currentdepth.currentdepth.int__content = 0) ) /\ ( "GP_Pretty_Ada:2638" "GP_Sloc:reactor.ads:23:29" (Reactor__reactortempoverheats__reactorstatus.reactorstatus.int__content = 0) ) ) ) ) )) }
    =
   ( () (* Assume dynamic invariants of inputs of the subprogram reactor.ads:13 *)
   ;
-   assume {  (Reactor__reactortemprange___axiom.dynamic_invariant Reactor__reactortemp.reactortemp.int__content True False True True) };
-   assume {  (Movement__depthmonitor___axiom.dynamic_invariant Movement__currentdepth.currentdepth.int__content True False True True) };
+   assume {  (Reactor__reactortemprange___axiom.dynamic_invariant Reactor__reactortempoverheats__reactortemp.reactortemp.int__content True False True True) };
+   assume {  (Movement__depthmonitor___axiom.dynamic_invariant Reactor__reactortempoverheats__currentdepth.currentdepth.int__content True False True True) };
+   assume {  (Movement__operationstatus___axiom.dynamic_invariant Reactor__reactortempoverheats__currentoperationstatus.currentoperationstatus.int__content True False True True) };
+   assume {  (Reactor__reactortempstatus___axiom.dynamic_invariant Reactor__reactortempoverheats__reactorstatus.reactorstatus.int__content True False True True) };
    assume {  true };
   () (* Declarations introduced by the compiler at the beginning of the subprogram reactor.ads:13 *)
   ;
   () (* Check for RTE in the Pre of the subprogram reactor.ads:13 *)
   ;
-   abstract ensures {true}(let _ = ( (Reactor__reactortemp.reactortemp.int__content < 100) && (Movement__currentdepth.currentdepth.int__content > 0) ) in (
+   abstract ensures {true}(let _ = ( (Reactor__reactortempoverheats__reactortemp.reactortemp.int__content < 2400) && (Reactor__reactortempoverheats__currentdepth.currentdepth.int__content > 0) ) in (
    ()))
    end ;
   () (* Assume Pre of the subprogram reactor.ads:13 *)
   ;
-   assume {  ( (Reactor__reactortemp.reactortemp.int__content < 100) /\ (Movement__currentdepth.currentdepth.int__content > 0) ) };
+   assume {  ( (Reactor__reactortempoverheats__reactortemp.reactortemp.int__content < 2400) /\ (Reactor__reactortempoverheats__currentdepth.currentdepth.int__content > 0) ) };
    try
-   ( (#"reactor.adb" 13 0 0# ());
-   ( "GP_Sloc:reactor.adb:13:33" (#"reactor.adb" 13 0 0# (let temp___178 = 0 in (
-   (let temp___179 = 100 in (
-    ( #"reactor.adb" 13 0 0# Reactor__reactortempoverheats__L_1__a.a.int__content <- ( temp___178 );
-    () (* Translation of an Ada loop from reactor.adb:13 *)
+   ( (#"reactor.adb" 15 0 0# ());
+   ( "GP_Sloc:reactor.adb:15:16" (#"reactor.adb" 15 0 0# (#"reactor.adb" 15 0 0# ( (let reactor__reactortempoverheats__L_1__R1b__assume = Reactor__reactortempoverheats__reactortemp.reactortemp.int__content in (
+    #"reactor.adb" 15 0 0# assume { #"reactor.adb" 15 0 0# (reactor__reactortempoverheats__L_1__R1b__assume = Reactor__reactortempoverheats__L_1__R1b.r1b) }))
+   ;
+   #"reactor.adb" 15 0 0# assume { #"reactor.adb" 15 0 0# (Reactor__reactortemprange___axiom.dynamic_invariant Reactor__reactortempoverheats__L_1__R1b.r1b True False True True) } ))) );
+   ( "GP_Sloc:reactor.adb:15:51" (#"reactor.adb" 15 0 0# (let temp___182 = Reactor__reactortempoverheats__L_1__R1b.r1b in (
+   (let temp___183 = 2400 in (
+    ( #"reactor.adb" 15 0 0# Reactor__reactortempoverheats__L_1__i.i.int__content <- ( temp___182 );
+    () (* Translation of an Ada loop from reactor.adb:15 *)
     ;
-    (if ((Boolean.andb((temp___178 <= Reactor__reactortempoverheats__L_1__a.a.int__content)) ((Reactor__reactortempoverheats__L_1__a.a.int__content <= temp___179)))) then (
-     #"reactor.adb" 13 0 0# try
-      ( #"reactor.adb" 13 0 0# abstract ensures {true}(let _ = Reactor__reactortemp.reactortemp.int__content in (
+    (if ((Boolean.andb((temp___182 <= Reactor__reactortempoverheats__L_1__i.i.int__content)) ((Reactor__reactortempoverheats__L_1__i.i.int__content <= temp___183)))) then (
+     #"reactor.adb" 15 0 0# try
+      ( #"reactor.adb" 15 0 0# abstract ensures {true}(let _ = Reactor__reactortempoverheats__reactortemp.reactortemp.int__content in (
        ()))
        end ;
-      (let temp___180 = #"reactor.adb" 13 0 0# (any int
-      ensures {#"reactor.adb" 13 0 0# (result = Reactor__reactortemp.reactortemp.int__content)} 
+      (let temp___184 = #"reactor.adb" 15 0 0# (any int
+      ensures {#"reactor.adb" 15 0 0# (result = Reactor__reactortempoverheats__reactortemp.reactortemp.int__content)} 
       ) in (
-       ( () (* First unroling of the loop statements appearing before the loop invariant of loop reactor.adb:13 *)
+       ( () (* First unroling of the loop statements appearing before the loop invariant of loop reactor.adb:15 *)
        ;
-       () (* While loop translating the Ada loop from reactor.adb:13 *)
+       () (* While loop translating the Ada loop from reactor.adb:15 *)
        ;
-       #"reactor.adb" 13 0 0# while True do
-        ( () (* Assume implicit invariants from the loop reactor.adb:13 *)
+       #"reactor.adb" 15 0 0# while True do
+        ( () (* Assume implicit invariants from the loop reactor.adb:15 *)
         ;
-        #"reactor.adb" 13 0 0# assume { #"reactor.adb" 13 0 0# (Boolean.andb(( ( true /\ (Reactor__reactortemprange___axiom.dynamic_invariant Reactor__reactortemp.reactortemp.int__content True True True True) ) /\ true )) (( (0 <= Reactor__reactortempoverheats__L_1__a.a.int__content) /\ (Reactor__reactortempoverheats__L_1__a.a.int__content <= 100) ))) };
-        () (* Check for absence of RTE in the invariant of loop reactor.adb:13 *)
+        #"reactor.adb" 15 0 0# assume { #"reactor.adb" 15 0 0# (Boolean.andb(( ( true /\ (Reactor__reactortemprange___axiom.dynamic_invariant Reactor__reactortempoverheats__reactortemp.reactortemp.int__content True True True True) ) /\ true )) (( (Reactor__reactortempoverheats__L_1__R1b.r1b <= Reactor__reactortempoverheats__L_1__i.i.int__content) /\ (Reactor__reactortempoverheats__L_1__i.i.int__content <= 2400) ))) };
+        () (* Check for absence of RTE in the invariant of loop reactor.adb:15 *)
         ;
-        () (* Loop statements appearing after the loop invariant of loop reactor.adb:13 *)
+        () (* Loop statements appearing after the loop invariant of loop reactor.adb:15 *)
         ;
-        ( "GP_Sloc:reactor.adb:14:10" (#"reactor.adb" 14 0 0# ()) );
-        ( "GP_Sloc:reactor.adb:14:22" (#"reactor.adb" 14 0 0# #"reactor.adb" 14 0 0# Reactor__reactortemp.reactortemp.int__content <- ( Reactor__reactortempoverheats__L_1__a.a.int__content )) );
-        () (* Check for the exit condition and loop statements appearing before the loop invariant of loop reactor.adb:13 *)
+        ( "GP_Sloc:reactor.adb:16:22" (#"reactor.adb" 16 0 0# #"reactor.adb" 16 0 0# Reactor__reactortempoverheats__reactortemp.reactortemp.int__content <- ( Reactor__reactortempoverheats__L_1__i.i.int__content )) );
+        () (* Check for the exit condition and loop statements appearing before the loop invariant of loop reactor.adb:15 *)
         ;
-        (if ((Reactor__reactortempoverheats__L_1__a.a.int__content = temp___179)) then (
+        (if ((Reactor__reactortempoverheats__L_1__i.i.int__content = temp___183)) then (
           raise Reactor__reactortempoverheats__L_1.L_1));
-         Reactor__reactortempoverheats__L_1__a.a.int__content <- ( (Reactor__reactortempoverheats__L_1__a.a.int__content + 1) ) )
+         Reactor__reactortempoverheats__L_1__i.i.int__content <- ( (Reactor__reactortempoverheats__L_1__i.i.int__content + 1) ) )
        done )))
        )
      with
@@ -2793,14 +3139,110 @@ module Reactor__reactortempoverheats__subprogram_def
      end)) )))
    ))
    ) );
-   ( "GP_Sloc:reactor.adb:16:7" (#"reactor.adb" 16 0 0# ()) );
-   ( "GP_Sloc:reactor.adb:16:7" (#"reactor.adb" 16 0 0# ( (#"reactor.adb" 16 0 0# ( "model_vc" "keep_on_simp" "GP_Sloc:reactor.adb:16:7" "GP_Reason:VC_PRECONDITION" "GP_Id:0" "comment:      SurfaceTheSubmarine;
-      ^ reactor.adb:16:7:VC_PRECONDITION" "GP_Shape:call_surfacethesubmarine" (Movement__surfacethesubmarine___axiom.surfacethesubmarine(())) )) )) );
+   ( "GP_Sloc:reactor.adb:19:7" (#"reactor.adb" 19 0 0# (if ((Reactor__reactortempoverheats__reactortemp.reactortemp.int__content = 2400)) then (
+    ( ( "GP_Sloc:reactor.adb:20:33" (#"reactor.adb" 20 0 0# #"reactor.adb" 20 0 0# Reactor__reactortempoverheats__currentoperationstatus.currentoperationstatus.int__content <- ( 1 )) );
+    ( "GP_Sloc:reactor.adb:21:10" (#"reactor.adb" 21 0 0# ()) );
+    ( "GP_Sloc:reactor.adb:21:10" (#"reactor.adb" 21 0 0# ( (#"reactor.adb" 21 0 0# ( "model_vc" "keep_on_simp" "GP_Sloc:reactor.adb:21:10" "GP_Reason:VC_PRECONDITION" "GP_Id:0" "comment:         SurfaceTheSubmarine(currentDepth);
+         ^ reactor.adb:21:10:VC_PRECONDITION" "GP_Shape:if__call_surfacethesubmarine" (Movement__surfacethesubmarine___axiom.surfacethesubmarine(Reactor__reactortempoverheats__currentdepth.currentdepth)) )) )) );
+    ( "GP_Sloc:reactor.adb:22:24" (#"reactor.adb" 22 0 0# #"reactor.adb" 22 0 0# Reactor__reactortempoverheats__reactorstatus.reactorstatus.int__content <- ( 0 )) ) )) else (
+    ()))) );
     raise Return__exc )
   with
    Return__exc -> ()
   end;
-   abstract ensures {true}(let _ = ( (Reactor__reactortemp.reactortemp.int__content = 100) && (Movement__currentdepth.currentdepth.int__content = 0) ) in (
+   abstract ensures {true}(let _ = ( (Reactor__reactortempoverheats__reactortemp.reactortemp.int__content = 2400) && ( (Reactor__reactortempoverheats__currentoperationstatus.currentoperationstatus.int__content = 1) && ( (Reactor__reactortempoverheats__currentdepth.currentdepth.int__content = 0) && (Reactor__reactortempoverheats__reactorstatus.reactorstatus.int__content = 0) ) ) ) in (
+   ()))
+   end  )
+end
+
+(* Module for checking contracts and absence of run-time errors in subprogram "reactortempcoolsdown" defined at reactor.ads:26, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+module Reactor__reactortempcoolsdown__subprogram_def
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        "_gnatprove_standard".Boolean
+ use        Movement__depthmonitor___axiom
+ use        Movement__operationstatus___axiom
+ use        Reactor__reactortemprange___axiom
+ use        Reactor__reactortempstatus___axiom
+ use        Reactor__reactortempcoolsdown__reactortemp
+ use        Reactor__reactortempcoolsdown__currentdepth
+ use        Reactor__reactortempcoolsdown__currentoperationstatus
+ use        Reactor__reactortempcoolsdown__reactorstatus
+ use        Reactor__reactortempcoolsdown__L_2__R3b
+ use        Reactor__reactortempcoolsdown__L_2
+ use        Reactor__reactortempcoolsdown__L_2__i
+ use        Reactor__reactortempcoolsdown__L_2__i___axiom
+ use        Reactor__reactortempcoolsdown__L_2___axiom
+ use        Reactor__reactortemprange___axiom
+ use        Reactor__reactortempstatus___axiom
+ use        Reactor__reactortempcoolsdown__reactortemp___axiom
+ use        Reactor__reactortempcoolsdown__currentdepth___axiom
+ use        Reactor__reactortempcoolsdown__currentoperationstatus___axiom
+ use        Reactor__reactortempcoolsdown__reactorstatus___axiom
+ use        Movement__depthmonitor___axiom
+ use        Movement__operationstatus___axiom
+ use        Reactor__reactortempcoolsdown__L_2__R3b___axiom
+
+ let def #"reactor.ads" 26 0 0#"W:diverges:N" "GP_Subp:reactor.ads:26" 
+   (__void_param : unit)
+  requires { #"reactor.ads" 26 0 0# true }
+  ensures { #"reactor.ads" 26 0 0# (#"reactor.ads" 34 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:reactor.ads:34:14" "GP_Id:2" "comment:     Post => currentOperationStatus = Allowed
+             ^ reactor.ads:34:14:VC_POSTCONDITION" ( ( "GP_Pretty_Ada:3524" "GP_Sloc:reactor.ads:34:14" (Reactor__reactortempcoolsdown__currentoperationstatus.currentoperationstatus.int__content = 0) ) /\ ( "GP_Pretty_Ada:2712" "GP_Sloc:reactor.ads:35:29" (Reactor__reactortempcoolsdown__reactorstatus.reactorstatus.int__content = 1) ) ) )) }
+   =
+  ( () (* Assume dynamic invariants of inputs of the subprogram reactor.ads:26 *)
+  ;
+   assume {  (Reactor__reactortemprange___axiom.dynamic_invariant Reactor__reactortempcoolsdown__reactortemp.reactortemp.int__content True False True True) };
+   assume {  (Movement__depthmonitor___axiom.dynamic_invariant Reactor__reactortempcoolsdown__currentdepth.currentdepth True False True True) };
+   assume {  (Movement__operationstatus___axiom.dynamic_invariant Reactor__reactortempcoolsdown__currentoperationstatus.currentoperationstatus.int__content True False True True) };
+   assume {  (Reactor__reactortempstatus___axiom.dynamic_invariant Reactor__reactortempcoolsdown__reactorstatus.reactorstatus.int__content True False True True) };
+   assume {  true };
+  () (* Declarations introduced by the compiler at the beginning of the subprogram reactor.ads:26 *)
+  ;
+  () (* Check for RTE in the Pre of the subprogram reactor.ads:26 *)
+  ;
+   abstract ensures {true}(let _ = ( (Reactor__reactortempcoolsdown__reactortemp.reactortemp.int__content = 2400) && ( (Reactor__reactortempcoolsdown__currentdepth.currentdepth = 0) && (Reactor__reactortempcoolsdown__currentoperationstatus.currentoperationstatus.int__content = 1) ) ) in (
+   ()))
+   end ;
+  () (* Assume Pre of the subprogram reactor.ads:26 *)
+  ;
+   assume {  ( (Reactor__reactortempcoolsdown__reactortemp.reactortemp.int__content = 2400) /\ ( (Reactor__reactortempcoolsdown__currentdepth.currentdepth = 0) /\ (Reactor__reactortempcoolsdown__currentoperationstatus.currentoperationstatus.int__content = 1) ) ) };
+   try
+   ( (#"reactor.adb" 35 0 0# ());
+   ( "GP_Sloc:reactor.adb:32:7" (#"reactor.adb" 32 0 0# (if ((Boolean.andb((Boolean.andb((Reactor__reactortempcoolsdown__reactorstatus.reactorstatus.int__content = 0)) ((Reactor__reactortempcoolsdown__currentdepth.currentdepth = 0)))) ((Reactor__reactortempcoolsdown__currentoperationstatus.currentoperationstatus.int__content = 1)))) then (
+    ( ( "GP_Sloc:reactor.adb:35:19" (#"reactor.adb" 35 0 0# (#"reactor.adb" 35 0 0# ( (let reactor__reactortempcoolsdown__L_2__R3b__assume = Reactor__reactortempcoolsdown__reactortemp.reactortemp.int__content in (
+     #"reactor.adb" 35 0 0# assume { #"reactor.adb" 35 0 0# (reactor__reactortempcoolsdown__L_2__R3b__assume = Reactor__reactortempcoolsdown__L_2__R3b.r3b) }))
+    ;
+    #"reactor.adb" 35 0 0# assume { #"reactor.adb" 35 0 0# (Reactor__reactortemprange___axiom.dynamic_invariant Reactor__reactortempcoolsdown__L_2__R3b.r3b True False True True) } ))) );
+    ( "GP_Sloc:reactor.adb:35:55" (#"reactor.adb" 35 0 0# (let temp___185 = Reactor__reactortempcoolsdown__L_2__R3b.r3b in (
+    (let temp___186 = 0 in (
+     ( () (* Translation of an Ada loop from reactor.adb:35 *)
+     ;
+     #"reactor.adb" 35 0 0# try
+      ( #"reactor.adb" 35 0 0# abstract ensures {true}(let _ = Reactor__reactortempcoolsdown__reactortemp.reactortemp.int__content in (
+       ()))
+       end ;
+      (let temp___187 = #"reactor.adb" 35 0 0# (any int
+      ensures {#"reactor.adb" 35 0 0# (result = Reactor__reactortempcoolsdown__reactortemp.reactortemp.int__content)} 
+      ) in (
+       ( () (* Unrolling of the loop statements of loop reactor.adb:35 *)
+       ;
+       #"reactor.adb" 35 0 0# Reactor__reactortempcoolsdown__L_2__i.i.int__content <- ( 0 );
+       (if ((Boolean.andb((temp___185 <= Reactor__reactortempcoolsdown__L_2__i.i.int__content)) ((Reactor__reactortempcoolsdown__L_2__i.i.int__content <= temp___186)))) then (
+        ( "GP_Sloc:reactor.adb:36:25" (#"reactor.adb" 36 0 0# #"reactor.adb" 36 0 0# Reactor__reactortempcoolsdown__reactortemp.reactortemp.int__content <- ( Reactor__reactortempcoolsdown__L_2__i.i.int__content )) ))) )))
+       )
+     with
+      Reactor__reactortempcoolsdown__L_2.L_2 -> ()
+     end )))
+    ))
+    ) ) )) else (
+    ()))) );
+   ( "GP_Sloc:reactor.adb:39:30" (#"reactor.adb" 39 0 0# #"reactor.adb" 39 0 0# Reactor__reactortempcoolsdown__currentoperationstatus.currentoperationstatus.int__content <- ( 0 )) );
+   ( "GP_Sloc:reactor.adb:40:21" (#"reactor.adb" 40 0 0# #"reactor.adb" 40 0 0# Reactor__reactortempcoolsdown__reactorstatus.reactorstatus.int__content <- ( 1 )) );
+    raise Return__exc )
+  with
+   Return__exc -> ()
+  end;
+   abstract ensures {true}(let _ = ( (Reactor__reactortempcoolsdown__currentoperationstatus.currentoperationstatus.int__content = 0) && (Reactor__reactortempcoolsdown__reactorstatus.reactorstatus.int__content = 1) ) in (
    ()))
    end  )
 end

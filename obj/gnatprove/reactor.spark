@@ -19,6 +19,16 @@
         }
       ],
       "spark": "all"
+    },
+    {
+      "name": "Reactor.ReactorTempCoolsdown",
+      "sloc": [
+        {
+          "file": "reactor.ads",
+          "line": 26
+        }
+      ],
+      "spark": "all"
     }
   ],
   "flow": [
@@ -26,60 +36,9 @@
   "proof": [
     {
       "file": "reactor.adb",
-      "line": 16,
-      "col": 7,
+      "line": 21,
+      "col": 10,
       "rule": "VC_PRECONDITION",
-      "severity": "info",
-      "entity": {
-        "name": "Reactor.ReactorTempOverheats",
-        "sloc": [
-          {
-            "file": "reactor.ads",
-            "line": 13
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 22,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        },
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 22,
-              "time": 0
-            }
-          },
-          "transformations": {
-          }
-        }
-      ],
-      "check_file": "reactor.adb",
-      "check_line": 16,
-      "check_col": 7,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 2,
-          "max_steps": 1,
-          "max_time": 0.00000000000000E+00
-        }
-      }
-    },
-    {
-      "file": "reactor.ads",
-      "line": 16,
-      "col": 14,
-      "rule": "VC_POSTCONDITION",
       "severity": "info",
       "entity": {
         "name": "Reactor.ReactorTempOverheats",
@@ -101,6 +60,94 @@
           },
           "transformations": {
           }
+        }
+      ],
+      "check_file": "reactor.adb",
+      "check_line": 21,
+      "check_col": 10,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "reactor.ads",
+      "line": 20,
+      "col": 14,
+      "rule": "VC_POSTCONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "Reactor.ReactorTempOverheats",
+        "sloc": [
+          {
+            "file": "reactor.ads",
+            "line": 13
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 18,
+              "time": 0
+            }
+          },
+          "transformations": {
+            "split_disj": [
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              }
+            ]
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 18,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 13,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
         },
         {
           "proof_attempts": {
@@ -115,7 +162,115 @@
         }
       ],
       "check_file": "reactor.ads",
-      "check_line": 16,
+      "check_line": 20,
+      "check_col": 14,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 4,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "reactor.ads",
+      "line": 34,
+      "col": 14,
+      "rule": "VC_POSTCONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "Reactor.ReactorTempCoolsdown",
+        "sloc": [
+          {
+            "file": "reactor.ads",
+            "line": 26
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+            "split_disj": [
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              }
+            ]
+          }
+        },
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 0
+            }
+          },
+          "transformations": {
+            "split_disj": [
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                  "CVC4_CE": {
+                    "result": "Unknown (none)",
+                    "steps": 14,
+                    "time": 0
+                  }
+                },
+                "transformations": {
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "check_file": "reactor.ads",
+      "check_line": 34,
       "check_col": 14,
       "how_proved": "prover",
       "stats": {
@@ -130,22 +285,6 @@
   "assumptions": [
     {
       "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_AORTE",
-        "arg": {
-          "name": "Reactor",
-          "sloc": [
-            {
-              "file": "reactor.ads",
-              "line": 4
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
         {
           "predicate": "CLAIM_POST",
           "arg": {
@@ -153,7 +292,7 @@
             "sloc": [
               {
                 "file": "movement.ads",
-                "line": 38
+                "line": 39
               }
             ]
           }
@@ -165,7 +304,7 @@
             "sloc": [
               {
                 "file": "movement.ads",
-                "line": 38
+                "line": 39
               }
             ]
           }
@@ -177,7 +316,7 @@
             "sloc": [
               {
                 "file": "movement.ads",
-                "line": 38
+                "line": 39
               }
             ]
           }
@@ -205,7 +344,7 @@
             "sloc": [
               {
                 "file": "movement.ads",
-                "line": 38
+                "line": 39
               }
             ]
           }
@@ -233,7 +372,7 @@
             "sloc": [
               {
                 "file": "movement.ads",
-                "line": 38
+                "line": 39
               }
             ]
           }
@@ -245,7 +384,7 @@
             "sloc": [
               {
                 "file": "movement.ads",
-                "line": 38
+                "line": 39
               }
             ]
           }
@@ -257,7 +396,7 @@
             "sloc": [
               {
                 "file": "movement.ads",
-                "line": 38
+                "line": 39
               }
             ]
           }
@@ -275,17 +414,81 @@
           ]
         }
       }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_POST",
+        "arg": {
+          "name": "Reactor.ReactorTempCoolsdown",
+          "sloc": [
+            {
+              "file": "reactor.ads",
+              "line": 26
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Reactor.ReactorTempCoolsdown",
+          "sloc": [
+            {
+              "file": "reactor.ads",
+              "line": 26
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Reactor.ReactorTempCoolsdown",
+          "sloc": [
+            {
+              "file": "reactor.ads",
+              "line": 26
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Reactor",
+          "sloc": [
+            {
+              "file": "reactor.ads",
+              "line": 4
+            }
+          ]
+        }
+      }
     }
   ],
   "timings": {
-    "marking": 2.20100002479739E-04,
-    "globals (basic)": 1.09130004420877E-03,
-    "globals/properties (advanced)": 2.62079993262887E-03,
-    "flow analysis": 3.84990009479225E-03,
-    "codepeer results": 5.70000020161388E-06,
-    "init_why_sections": 4.53699991339818E-04,
-    "translation of standard": 4.91099990904331E-03,
-    "translation of compilation unit": 4.81049995869398E-03,
-    "proof": 8.38939011096954E-01
+    "marking": 3.40900005539879E-04,
+    "globals (basic)": 1.19069998618215E-03,
+    "globals/properties (advanced)": 1.86560000292957E-03,
+    "flow analysis": 4.60979994386435E-03,
+    "codepeer results": 5.20000003234600E-06,
+    "init_why_sections": 2.64600006630644E-04,
+    "translation of standard": 4.26199985668063E-03,
+    "translation of compilation unit": 3.64680006168783E-03,
+    "proof": 6.27773404121399E-01
   }
 }

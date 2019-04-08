@@ -7,13 +7,40 @@ is
    ------------------------------------------------------------
    -- If the reactor overheats, the submarine has to surface --
    ------------------------------------------------------------
-
-   procedure ReactorTempOverheats is
+   procedure ReactorTempOverheats (reactorTemp : in out ReactorTempRange;
+                                   currentDepth : in out DepthMonitor;
+                                   currentOperationStatus : in out OperationStatus;
+                                   reactorStatus : in out ReactorTempStatus) is
    begin
-      for A in ReactorTempRange loop
-         reactorTemp := A;
+      for I in reactorTemp..ReactorTempRange'Last loop
+         reactorTemp := I;
       end loop;
-      SurfaceTheSubmarine;
+
+      if (reactorTemp = ReactorTempRange'Last) then
+         currentOperationStatus := Prohibited;
+         SurfaceTheSubmarine(currentDepth);
+         reactorStatus := Overheating;
+      end if;
    end ReactorTempOverheats;
+
+
+   procedure ReactorTempCoolsdown (reactorTemp : in out ReactorTempRange;
+                                   currentDepth : in DepthMonitor;
+                                   currentOperationStatus : in out OperationStatus;
+                                   reactorStatus : in out ReactorTempStatus) is
+   begin
+      if (reactorStatus = Overheating
+          and currentDepth = DepthMonitor'First
+          and currentOperationStatus = Prohibited) then
+         for I in reactorTemp..ReactorTempRange'First loop
+            reactorTemp := I;
+         end loop;
+      end if;
+      currentOperationStatus := Allowed;
+      reactorStatus := Cool;
+   end ReactorTempCoolsdown;
+
+
+
 
 end Reactor;

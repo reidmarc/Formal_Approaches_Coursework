@@ -1764,7 +1764,7 @@ module Movement__depthmonitor__rep
 
 end
 
-(* Module for axiomatizing type "operationstatus" defined at movement.ads:7, created in Gnat2Why.Types.Translate_Type *)
+(* Module for axiomatizing type "operationstatus" defined at movement.ads:5, created in Gnat2Why.Types.Translate_Type *)
 module Movement__operationstatus
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -1806,7 +1806,7 @@ module Movement__operationstatus
 
 end
 
-(* Module defining to_rep/of_rep for type "operationstatus" defined at movement.ads:7, created in Gnat2Why.Types.Translate_Type *)
+(* Module defining to_rep/of_rep for type "operationstatus" defined at movement.ads:5, created in Gnat2Why.Types.Translate_Type *)
 module Movement__operationstatus__rep
  use        Movement__operationstatus
  use import "_gnatprove_standard".Main
@@ -1821,7 +1821,64 @@ module Movement__operationstatus__rep
 
 end
 
-(* Module for axiomatizing type "doorstatus" defined at airlockdoors.ads:9, created in Gnat2Why.Types.Translate_Type *)
+(* Module for defining the constant "diveby" defined at movement.ads:18, created in Gnat2Why.Decls.Translate_Constant *)
+module Movement__divethesubmarine__diveby
+ use import "_gnatprove_standard".Main
+
+ function diveby #"movement.ads" 18 0 0#"model" "model_trace:2887" "name:diveBy" 
+   : int
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "diveby" defined at movement.ads:18, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Movement__divethesubmarine__diveby___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining the constant "currentoperationstatus" defined at movement.ads:20, created in Gnat2Why.Decls.Translate_Constant *)
+module Movement__divethesubmarine__currentoperationstatus
+ use import "_gnatprove_standard".Main
+
+ function currentoperationstatus #"movement.ads" 20 0 0#"model" "model_trace:2905" "name:currentOperationStatus" 
+   : int
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "currentoperationstatus" defined at movement.ads:20, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Movement__divethesubmarine__currentoperationstatus___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining the constant "riseby" defined at movement.ads:30, created in Gnat2Why.Decls.Translate_Constant *)
+module Movement__raisethesubmarine__riseby
+ use import "_gnatprove_standard".Main
+
+ function riseby #"movement.ads" 30 0 0#"model" "model_trace:2962" "name:riseBy" 
+   : int
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "riseby" defined at movement.ads:30, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Movement__raisethesubmarine__riseby___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for axiomatizing type "doorstatus" defined at airlockdoors.ads:5, created in Gnat2Why.Types.Translate_Type *)
 module Airlockdoors__doorstatus
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -1863,7 +1920,7 @@ module Airlockdoors__doorstatus
 
 end
 
-(* Module defining to_rep/of_rep for type "doorstatus" defined at airlockdoors.ads:9, created in Gnat2Why.Types.Translate_Type *)
+(* Module defining to_rep/of_rep for type "doorstatus" defined at airlockdoors.ads:5, created in Gnat2Why.Types.Translate_Type *)
 module Airlockdoors__doorstatus__rep
  use        Airlockdoors__doorstatus
  use import "_gnatprove_standard".Main
@@ -1878,7 +1935,7 @@ module Airlockdoors__doorstatus__rep
 
 end
 
-(* Module for axiomatizing type "lockstatus" defined at airlockdoors.ads:10, created in Gnat2Why.Types.Translate_Type *)
+(* Module for axiomatizing type "lockstatus" defined at airlockdoors.ads:6, created in Gnat2Why.Types.Translate_Type *)
 module Airlockdoors__lockstatus
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -1920,7 +1977,7 @@ module Airlockdoors__lockstatus
 
 end
 
-(* Module defining to_rep/of_rep for type "lockstatus" defined at airlockdoors.ads:10, created in Gnat2Why.Types.Translate_Type *)
+(* Module defining to_rep/of_rep for type "lockstatus" defined at airlockdoors.ads:6, created in Gnat2Why.Types.Translate_Type *)
 module Airlockdoors__lockstatus__rep
  use        Airlockdoors__lockstatus
  use import "_gnatprove_standard".Main
@@ -1935,7 +1992,7 @@ module Airlockdoors__lockstatus__rep
 
 end
 
-(* Module for axiomatizing the record theory associated to type "airlockdoor" defined at airlockdoors.ads:12, created in Why.Gen.Records.Create_Rep_Record_Theory_If_Needed *)
+(* Module for axiomatizing the record theory associated to type "airlockdoor" defined at airlockdoors.ads:8, created in Why.Gen.Records.Create_Rep_Record_Theory_If_Needed *)
 module Airlockdoors__airlockdoor__rep
  use import "_gnatprove_standard".Main
  use        Airlockdoors__doorstatus
@@ -1944,9 +2001,9 @@ module Airlockdoors__airlockdoor__rep
  use        Airlockdoors__lockstatus__rep
 
  type __split_fields =
-  { rec__airlockdoors__airlockdoor__door "model_trace:.2633" "name:door" : Airlockdoors__doorstatus.doorstatus; rec__airlockdoors__airlockdoor__lock "model_trace:.2643" "name:lock" : Airlockdoors__lockstatus.lockstatus }
+  { rec__airlockdoors__airlockdoor__door "model_trace:.2594" "name:door" : Airlockdoors__doorstatus.doorstatus; rec__airlockdoors__airlockdoor__lock "model_trace:.2604" "name:lock" : Airlockdoors__lockstatus.lockstatus }
  
- function __split_fields_door__projection "model_trace:.2633" "name:door" 
+ function __split_fields_door__projection "model_trace:.2594" "name:door" 
    (a : __split_fields) : Airlockdoors__doorstatus.doorstatus =
   a.rec__airlockdoors__airlockdoor__door
  
@@ -1954,7 +2011,7 @@ module Airlockdoors__airlockdoor__rep
  
  meta "inline : no" function __split_fields_door__projection
  
- function __split_fields_lock__projection "model_trace:.2643" "name:lock" 
+ function __split_fields_lock__projection "model_trace:.2604" "name:lock" 
    (a : __split_fields) : Airlockdoors__lockstatus.lockstatus =
   a.rec__airlockdoors__airlockdoor__lock
  
@@ -2022,7 +2079,7 @@ module Airlockdoors__airlockdoor__rep
 
 end
 
-(* Module for axiomatizing type "airlockdoor" defined at airlockdoors.ads:12, created in Gnat2Why.Types.Translate_Type *)
+(* Module for axiomatizing type "airlockdoor" defined at airlockdoors.ads:8, created in Gnat2Why.Types.Translate_Type *)
 module Airlockdoors__airlockdoor
  use export Airlockdoors__airlockdoor__rep
  use import "_gnatprove_standard".Main
@@ -2115,75 +2172,226 @@ module Airlockdoors__airlockdoor
   writes {x}
 
 end
-(* Module for defining a ref holding the value of variable "currentdepth" defined at movement.ads:5, created in Gnat2Why.Decls.Translate_Variable *)
-module Movement__currentdepth
- use import "_gnatprove_standard".Main
 
- val currentdepth #"movement.ads" 5 0 0#"model_projected" "model_trace:3049" "name:currentDepth"  : int__ref 
- 
- function attr__ATTRIBUTE_ADDRESS 
-   : int
-
-end
-
-(* Module giving an empty axiom for the entity "currentdepth" defined at movement.ads:5, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
-module Movement__currentdepth___axiom
- use import "_gnatprove_standard".Main
-
-
-end
-
-(* Module for defining a ref holding the value of variable "currentoperationstatus" defined at movement.ads:8, created in Gnat2Why.Decls.Translate_Variable *)
-module Movement__currentoperationstatus
- use import "_gnatprove_standard".Main
-
- val currentoperationstatus #"movement.ads" 8 0 0#"model_projected" "model_trace:3082" "name:currentOperationStatus"  : int__ref 
- 
- function attr__ATTRIBUTE_ADDRESS 
-   : int
-
-end
-
-(* Module giving an empty axiom for the entity "currentoperationstatus" defined at movement.ads:8, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
-module Movement__currentoperationstatus___axiom
- use import "_gnatprove_standard".Main
-
-
-end
-
-(* Module for defining a ref holding the value of variable "outerdoor" defined at airlockdoors.ads:17, created in Gnat2Why.Decls.Translate_Variable *)
-module Airlockdoors__outerdoor
+(* Module for defining the constant "doortwo" defined at airlockdoors.ads:17, created in Gnat2Why.Decls.Translate_Constant *)
+module Airlockdoors__openairlockdoor__doortwo
  use import "_gnatprove_standard".Main
  use        Airlockdoors__airlockdoor
 
- val outerdoor__split_fields #"airlockdoors.ads" 17 0 0#"model_projected" "model_trace:2655" "name:outerDoor"  : Airlockdoors__airlockdoor.__split_fields__ref 
+ function doortwo #"airlockdoors.ads" 17 0 0#"model_projected" "model_trace:2632" "name:doorTwo" 
+   : Airlockdoors__airlockdoor.airlockdoor
  
  function attr__ATTRIBUTE_ADDRESS 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "outerdoor" defined at airlockdoors.ads:17, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
-module Airlockdoors__outerdoor___axiom
+(* Module giving an empty axiom for the entity "doortwo" defined at airlockdoors.ads:17, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Airlockdoors__openairlockdoor__doortwo___axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining a ref holding the value of variable "innerdoor" defined at airlockdoors.ads:18, created in Gnat2Why.Decls.Translate_Variable *)
-module Airlockdoors__innerdoor
+(* Module for defining the constant "doortwo" defined at airlockdoors.ads:34, created in Gnat2Why.Decls.Translate_Constant *)
+module Airlockdoors__lockairlockdoor__doortwo
  use import "_gnatprove_standard".Main
  use        Airlockdoors__airlockdoor
 
- val innerdoor__split_fields #"airlockdoors.ads" 18 0 0#"model_projected" "model_trace:2671" "name:innerDoor"  : Airlockdoors__airlockdoor.__split_fields__ref 
+ function doortwo #"airlockdoors.ads" 34 0 0#"model_projected" "name:doorTwo" "model_trace:2731" 
+   : Airlockdoors__airlockdoor.airlockdoor
  
  function attr__ATTRIBUTE_ADDRESS 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "innerdoor" defined at airlockdoors.ads:18, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
-module Airlockdoors__innerdoor___axiom
+(* Module giving an empty axiom for the entity "doortwo" defined at airlockdoors.ads:34, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Airlockdoors__lockairlockdoor__doortwo___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining the constant "currentdepth" defined at airlockdoors.ads:43, created in Gnat2Why.Decls.Translate_Constant *)
+module Airlockdoors__unlockairlockdoor__currentdepth
+ use import "_gnatprove_standard".Main
+
+ function currentdepth #"airlockdoors.ads" 43 0 0#"model" "name:currentDepth" "model_trace:2790" 
+   : int
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "currentdepth" defined at airlockdoors.ads:43, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Airlockdoors__unlockairlockdoor__currentdepth___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+(* Module for defining a ref holding the value of variable "currentdepth" defined at movement.ads:19, created in Gnat2Why.Decls.Translate_Variable *)
+module Movement__divethesubmarine__currentdepth
+ use import "_gnatprove_standard".Main
+
+ val currentdepth #"movement.ads" 19 0 0#"model_projected" "model_trace:2896" "name:currentDepth"  : int__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "currentdepth" defined at movement.ads:19, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Movement__divethesubmarine__currentdepth___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining a ref holding the value of variable "currentdepth" defined at movement.ads:31, created in Gnat2Why.Decls.Translate_Variable *)
+module Movement__raisethesubmarine__currentdepth
+ use import "_gnatprove_standard".Main
+
+ val currentdepth #"movement.ads" 31 0 0#"model_projected" "name:currentDepth" "model_trace:2971"  : int__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "currentdepth" defined at movement.ads:31, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Movement__raisethesubmarine__currentdepth___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining a ref holding the value of variable "currentdepth" defined at movement.ads:39, created in Gnat2Why.Decls.Translate_Variable *)
+module Movement__surfacethesubmarine__currentdepth
+ use import "_gnatprove_standard".Main
+
+ val currentdepth #"movement.ads" 39 0 0#"model_projected" "name:currentDepth" "model_trace:3018"  : int__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "currentdepth" defined at movement.ads:39, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Movement__surfacethesubmarine__currentdepth___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining a ref holding the value of variable "doorone" defined at airlockdoors.ads:16, created in Gnat2Why.Decls.Translate_Variable *)
+module Airlockdoors__openairlockdoor__doorone
+ use import "_gnatprove_standard".Main
+ use        Airlockdoors__airlockdoor
+
+ val doorone__split_fields #"airlockdoors.ads" 16 0 0#"model_projected" "model_trace:2623" "name:doorOne"  : Airlockdoors__airlockdoor.__split_fields__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "doorone" defined at airlockdoors.ads:16, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Airlockdoors__openairlockdoor__doorone___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining a ref holding the value of variable "doorone" defined at airlockdoors.ads:24, created in Gnat2Why.Decls.Translate_Variable *)
+module Airlockdoors__closeairlockdoor__doorone
+ use import "_gnatprove_standard".Main
+ use        Airlockdoors__airlockdoor
+
+ val doorone__split_fields #"airlockdoors.ads" 24 0 0#"model_projected" "name:doorOne" "model_trace:2679"  : Airlockdoors__airlockdoor.__split_fields__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "doorone" defined at airlockdoors.ads:24, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Airlockdoors__closeairlockdoor__doorone___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining a ref holding the value of variable "doorone" defined at airlockdoors.ads:32, created in Gnat2Why.Decls.Translate_Variable *)
+module Airlockdoors__lockairlockdoor__doorone
+ use import "_gnatprove_standard".Main
+ use        Airlockdoors__airlockdoor
+
+ val doorone__split_fields #"airlockdoors.ads" 32 0 0#"model_projected" "name:doorOne" "model_trace:2713"  : Airlockdoors__airlockdoor.__split_fields__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "doorone" defined at airlockdoors.ads:32, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Airlockdoors__lockairlockdoor__doorone___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining a ref holding the value of variable "currentoperationstatus" defined at airlockdoors.ads:33, created in Gnat2Why.Decls.Translate_Variable *)
+module Airlockdoors__lockairlockdoor__currentoperationstatus
+ use import "_gnatprove_standard".Main
+
+ val currentoperationstatus #"airlockdoors.ads" 33 0 0#"model_projected" "name:currentOperationStatus" "model_trace:2722"  : int__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "currentoperationstatus" defined at airlockdoors.ads:33, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Airlockdoors__lockairlockdoor__currentoperationstatus___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining a ref holding the value of variable "doorone" defined at airlockdoors.ads:41, created in Gnat2Why.Decls.Translate_Variable *)
+module Airlockdoors__unlockairlockdoor__doorone
+ use import "_gnatprove_standard".Main
+ use        Airlockdoors__airlockdoor
+
+ val doorone__split_fields #"airlockdoors.ads" 41 0 0#"model_projected" "name:doorOne" "model_trace:2772"  : Airlockdoors__airlockdoor.__split_fields__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "doorone" defined at airlockdoors.ads:41, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Airlockdoors__unlockairlockdoor__doorone___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining a ref holding the value of variable "currentoperationstatus" defined at airlockdoors.ads:42, created in Gnat2Why.Decls.Translate_Variable *)
+module Airlockdoors__unlockairlockdoor__currentoperationstatus
+ use import "_gnatprove_standard".Main
+
+ val currentoperationstatus #"airlockdoors.ads" 42 0 0#"model_projected" "name:currentOperationStatus" "model_trace:2781"  : int__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "currentoperationstatus" defined at airlockdoors.ads:42, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Airlockdoors__unlockairlockdoor__currentoperationstatus___axiom
  use import "_gnatprove_standard".Main
 
 
@@ -2551,111 +2759,50 @@ module Standard__universal_integer___axiom
 
 end
 
-(* Module for possibly declaring a logic function for "maxdepthinvariant" defined at movement.ads:11, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Movement__maxdepthinvariant
- use        Movement__currentdepth
- use import "_gnatprove_standard".Main
-
- function maxdepthinvariant 
-   (movement__currentdepth : int) : bool
- 
- predicate maxdepthinvariant__function_guard 
-   (result : bool) (movement__currentdepth : int) 
-
-end
-
-(* Module for possibly declaring a logic function for "notsurfacedinvariant" defined at movement.ads:14, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Movement__notsurfacedinvariant
- use        Movement__currentdepth
- use import "_gnatprove_standard".Main
-
- function notsurfacedinvariant 
-   (movement__currentdepth : int) : bool
- 
- predicate notsurfacedinvariant__function_guard 
-   (result : bool) (movement__currentdepth : int) 
-
-end
-
-(* Module for possibly declaring a logic function for "divethesubmarine100ft" defined at movement.ads:20, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Movement__divethesubmarine100ft
+(* Module for possibly declaring a logic function for "divethesubmarine" defined at movement.ads:18, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Movement__divethesubmarine
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "divethesubmarinetomaxdepth" defined at movement.ads:26, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Movement__divethesubmarinetomaxdepth
+(* Module for possibly declaring a logic function for "raisethesubmarine" defined at movement.ads:30, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Movement__raisethesubmarine
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "raisethesubmarine100ft" defined at movement.ads:32, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Movement__raisethesubmarine100ft
- use import "_gnatprove_standard".Main
-
-
-end
-
-(* Module for possibly declaring a logic function for "surfacethesubmarine" defined at movement.ads:38, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "surfacethesubmarine" defined at movement.ads:39, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Movement__surfacethesubmarine
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "openouterairlockdoor" defined at airlockdoors.ads:20, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Airlockdoors__openouterairlockdoor
+(* Module for possibly declaring a logic function for "openairlockdoor" defined at airlockdoors.ads:16, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Airlockdoors__openairlockdoor
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "openinnerairlockdoor" defined at airlockdoors.ads:26, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Airlockdoors__openinnerairlockdoor
+(* Module for possibly declaring a logic function for "closeairlockdoor" defined at airlockdoors.ads:24, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Airlockdoors__closeairlockdoor
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "closeouterairlockdoor" defined at airlockdoors.ads:33, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Airlockdoors__closeouterairlockdoor
+(* Module for possibly declaring a logic function for "lockairlockdoor" defined at airlockdoors.ads:32, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Airlockdoors__lockairlockdoor
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "closeinnerairlockdoor" defined at airlockdoors.ads:39, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Airlockdoors__closeinnerairlockdoor
- use import "_gnatprove_standard".Main
-
-
-end
-
-(* Module for possibly declaring a logic function for "lockouterdoor" defined at airlockdoors.ads:48, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Airlockdoors__lockouterdoor
- use import "_gnatprove_standard".Main
-
-
-end
-
-(* Module for possibly declaring a logic function for "unlockouterdoor" defined at airlockdoors.ads:54, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Airlockdoors__unlockouterdoor
- use import "_gnatprove_standard".Main
-
-
-end
-
-(* Module for possibly declaring a logic function for "lockinnerdoor" defined at airlockdoors.ads:60, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Airlockdoors__lockinnerdoor
- use import "_gnatprove_standard".Main
-
-
-end
-
-(* Module for possibly declaring a logic function for "unlockinnerdoor" defined at airlockdoors.ads:66, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Airlockdoors__unlockinnerdoor
+(* Module for possibly declaring a logic function for "unlockairlockdoor" defined at airlockdoors.ads:41, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Airlockdoors__unlockairlockdoor
  use import "_gnatprove_standard".Main
 
 
@@ -2685,7 +2832,7 @@ module Movement__depthmonitor___axiom
 
 end
 
-(* Module giving axioms for type "operationstatus" defined at movement.ads:7, created in Gnat2Why.Types.Generate_Type_Completion *)
+(* Module giving axioms for type "operationstatus" defined at movement.ads:5, created in Gnat2Why.Types.Generate_Type_Completion *)
 module Movement__operationstatus___axiom
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -2702,196 +2849,98 @@ module Movement__operationstatus___axiom
 
 end
 
-(* Module giving axioms for type "doorstatus" defined at airlockdoors.ads:9, created in Gnat2Why.Types.Generate_Type_Completion *)
+(* Module giving axioms for type "doorstatus" defined at airlockdoors.ads:5, created in Gnat2Why.Types.Generate_Type_Completion *)
 module Airlockdoors__doorstatus___axiom
  use import "_gnatprove_standard".Main
  use import "int".Int
  use        Airlockdoors__doorstatus
 
  predicate dynamic_invariant "inline" 
-   (temp___expr_175 : int) (temp___is_init_171 : bool) (temp___skip_constant_172 : bool) (temp___do_toplevel_173 : bool) (temp___do_typ_inv_174 : bool)  =
-  (if (( temp___is_init_171 \/ (Airlockdoors__doorstatus.first <= Airlockdoors__doorstatus.last) )) then (
-   (Airlockdoors__doorstatus.dynamic_property Airlockdoors__doorstatus.first Airlockdoors__doorstatus.last temp___expr_175)) else true)
+   (temp___expr_172 : int) (temp___is_init_168 : bool) (temp___skip_constant_169 : bool) (temp___do_toplevel_170 : bool) (temp___do_typ_inv_171 : bool)  =
+  (if (( temp___is_init_168 \/ (Airlockdoors__doorstatus.first <= Airlockdoors__doorstatus.last) )) then (
+   (Airlockdoors__doorstatus.dynamic_property Airlockdoors__doorstatus.first Airlockdoors__doorstatus.last temp___expr_172)) else true)
  
  predicate default_initial_assumption "inline" 
-   (temp___expr_176 : int) (temp___skip_top_level_177 : bool)  =
+   (temp___expr_173 : int) (temp___skip_top_level_174 : bool)  =
   true
 
 end
 
-(* Module giving axioms for type "lockstatus" defined at airlockdoors.ads:10, created in Gnat2Why.Types.Generate_Type_Completion *)
+(* Module giving axioms for type "lockstatus" defined at airlockdoors.ads:6, created in Gnat2Why.Types.Generate_Type_Completion *)
 module Airlockdoors__lockstatus___axiom
  use import "_gnatprove_standard".Main
  use import "int".Int
  use        Airlockdoors__lockstatus
 
  predicate dynamic_invariant "inline" 
-   (temp___expr_182 : int) (temp___is_init_178 : bool) (temp___skip_constant_179 : bool) (temp___do_toplevel_180 : bool) (temp___do_typ_inv_181 : bool)  =
-  (if (( temp___is_init_178 \/ (Airlockdoors__lockstatus.first <= Airlockdoors__lockstatus.last) )) then (
-   (Airlockdoors__lockstatus.dynamic_property Airlockdoors__lockstatus.first Airlockdoors__lockstatus.last temp___expr_182)) else true)
+   (temp___expr_179 : int) (temp___is_init_175 : bool) (temp___skip_constant_176 : bool) (temp___do_toplevel_177 : bool) (temp___do_typ_inv_178 : bool)  =
+  (if (( temp___is_init_175 \/ (Airlockdoors__lockstatus.first <= Airlockdoors__lockstatus.last) )) then (
+   (Airlockdoors__lockstatus.dynamic_property Airlockdoors__lockstatus.first Airlockdoors__lockstatus.last temp___expr_179)) else true)
  
  predicate default_initial_assumption "inline" 
-   (temp___expr_183 : int) (temp___skip_top_level_184 : bool)  =
+   (temp___expr_180 : int) (temp___skip_top_level_181 : bool)  =
   true
 
 end
 
-(* Module giving axioms for type "airlockdoor" defined at airlockdoors.ads:12, created in Gnat2Why.Types.Generate_Type_Completion *)
+(* Module giving axioms for type "airlockdoor" defined at airlockdoors.ads:8, created in Gnat2Why.Types.Generate_Type_Completion *)
 module Airlockdoors__airlockdoor___axiom
  use import "_gnatprove_standard".Main
  use        Airlockdoors__airlockdoor
 
  predicate dynamic_invariant "inline" 
-   (temp___expr_189 : Airlockdoors__airlockdoor.airlockdoor) (temp___is_init_185 : bool) (temp___skip_constant_186 : bool) (temp___do_toplevel_187 : bool) (temp___do_typ_inv_188 : bool)  =
+   (temp___expr_186 : Airlockdoors__airlockdoor.airlockdoor) (temp___is_init_182 : bool) (temp___skip_constant_183 : bool) (temp___do_toplevel_184 : bool) (temp___do_typ_inv_185 : bool)  =
   true
  
  predicate default_initial_assumption "inline" 
-   (temp___expr_190 : Airlockdoors__airlockdoor.airlockdoor) (temp___skip_top_level_191 : bool)  =
+   (temp___expr_187 : Airlockdoors__airlockdoor.airlockdoor) (temp___skip_top_level_188 : bool)  =
   true
 
 end
-(* Module giving a program function and a defining axiom for the expression function "maxdepthinvariant" defined at movement.ads:11, created in Gnat2Why.Subprograms.Translate_Expression_Function_Body *)
-module Movement__maxdepthinvariant___axiom
- use        Movement__currentdepth
- use import "_gnatprove_standard".Main
- use import "int".Int
- use        Movement__maxdepthinvariant
- use        Movement__depthmonitor___axiom
- use        Movement__currentdepth
-
- val maxdepthinvariant 
-   (__void_param : unit) : bool
-  requires {  true }
-  ensures {  ( ( (result = (Movement__maxdepthinvariant.maxdepthinvariant Movement__currentdepth.currentdepth.int__content)) /\ (Movement__maxdepthinvariant.maxdepthinvariant__function_guard result Movement__currentdepth.currentdepth.int__content) ) /\ ( (result = True) <-> (Movement__currentdepth.currentdepth.int__content <= 2000) ) ) }
-  reads {Movement__currentdepth.currentdepth}
- 
- axiom maxdepthinvariant__post_axiom :
-  (forall movement__currentdepth   : int [(Movement__maxdepthinvariant.maxdepthinvariant movement__currentdepth)].
-   ( (Movement__depthmonitor___axiom.dynamic_invariant movement__currentdepth True True True True) -> (let result = (Movement__maxdepthinvariant.maxdepthinvariant movement__currentdepth) in (
-    (if ((Movement__maxdepthinvariant.maxdepthinvariant__function_guard result movement__currentdepth)) then (
-     ( ( true /\ true ) /\ true )) else true)))
-    ))
- 
- axiom maxdepthinvariant__def_axiom :
-  (forall movement__currentdepth   : int [(Movement__maxdepthinvariant.maxdepthinvariant movement__currentdepth)].
-   ( (let result = (Movement__maxdepthinvariant.maxdepthinvariant movement__currentdepth) in (
-    (Movement__maxdepthinvariant.maxdepthinvariant__function_guard result movement__currentdepth)))
-    -> ( ((Movement__maxdepthinvariant.maxdepthinvariant movement__currentdepth) = True) <-> (movement__currentdepth <= 2000) ) ))
-
-end
-
-(* Module giving a program function and a defining axiom for the expression function "notsurfacedinvariant" defined at movement.ads:14, created in Gnat2Why.Subprograms.Translate_Expression_Function_Body *)
-module Movement__notsurfacedinvariant___axiom
- use        Movement__currentdepth
- use import "_gnatprove_standard".Main
- use import "int".Int
- use        Movement__notsurfacedinvariant
- use        Movement__depthmonitor___axiom
- use        Movement__currentdepth
-
- val notsurfacedinvariant 
-   (__void_param : unit) : bool
-  requires {  true }
-  ensures {  ( ( (result = (Movement__notsurfacedinvariant.notsurfacedinvariant Movement__currentdepth.currentdepth.int__content)) /\ (Movement__notsurfacedinvariant.notsurfacedinvariant__function_guard result Movement__currentdepth.currentdepth.int__content) ) /\ ( (result = True) <-> (Movement__currentdepth.currentdepth.int__content > 0) ) ) }
-  reads {Movement__currentdepth.currentdepth}
- 
- axiom notsurfacedinvariant__post_axiom :
-  (forall movement__currentdepth   : int [(Movement__notsurfacedinvariant.notsurfacedinvariant movement__currentdepth)].
-   ( (Movement__depthmonitor___axiom.dynamic_invariant movement__currentdepth True True True True) -> (let result = (Movement__notsurfacedinvariant.notsurfacedinvariant movement__currentdepth) in (
-    (if ((Movement__notsurfacedinvariant.notsurfacedinvariant__function_guard result movement__currentdepth)) then (
-     ( ( true /\ true ) /\ true )) else true)))
-    ))
- 
- axiom notsurfacedinvariant__def_axiom :
-  (forall movement__currentdepth   : int [(Movement__notsurfacedinvariant.notsurfacedinvariant movement__currentdepth)].
-   ( (let result = (Movement__notsurfacedinvariant.notsurfacedinvariant movement__currentdepth) in (
-    (Movement__notsurfacedinvariant.notsurfacedinvariant__function_guard result movement__currentdepth)))
-    -> ( ((Movement__notsurfacedinvariant.notsurfacedinvariant movement__currentdepth) = True) <-> (movement__currentdepth > 0) ) ))
-
-end
-
-(* Module for declaring a program function (and possibly an axiom) for "divethesubmarine100ft" defined at movement.ads:20, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
-module Movement__divethesubmarine100ft___axiom
- use        Movement__currentoperationstatus
- use        Movement__currentdepth
+(* Module for declaring a program function (and possibly an axiom) for "divethesubmarine" defined at movement.ads:18, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Movement__divethesubmarine___axiom
  use import "_gnatprove_standard".Main
  use import "int".Int
  use        Movement__depthmonitor___axiom
- use        Movement__currentdepth
- use        Movement__currentoperationstatus
 
- val divethesubmarine100ft 
-   (__void_param : unit) : unit
-  requires {  ( (Movement__currentdepth.currentdepth.int__content <= 1900) /\ ( (Movement__currentdepth.currentdepth.int__content >= 0) /\ (Movement__currentoperationstatus.currentoperationstatus.int__content = 0) ) ) }
-  ensures {  ( ( (Movement__currentdepth.currentdepth.int__content <= 2000) /\ (Movement__currentdepth.currentdepth.int__content >= 100) ) /\ (Movement__depthmonitor___axiom.dynamic_invariant Movement__currentdepth.currentdepth.int__content True True True True) ) }
-  reads {Movement__currentdepth.currentdepth, Movement__currentoperationstatus.currentoperationstatus}
-  writes {Movement__currentdepth.currentdepth}
+ val divethesubmarine 
+   (diveby : int) (currentdepth : int__ref) (currentoperationstatus : int) : unit
+  requires {  ( ((currentdepth.int__content + diveby) <= 2000) /\ ( (currentdepth.int__content >= 0) /\ ( (currentoperationstatus = 0) /\ (diveby > 0) ) ) ) }
+  ensures {  ( ( (currentdepth.int__content <= 2000) /\ (currentdepth.int__content > 0) ) /\ (Movement__depthmonitor___axiom.dynamic_invariant currentdepth.int__content True True True True) ) }
+  writes {currentdepth}
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "divethesubmarinetomaxdepth" defined at movement.ads:26, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
-module Movement__divethesubmarinetomaxdepth___axiom
- use        Movement__currentoperationstatus
- use        Movement__currentdepth
+(* Module for declaring a program function (and possibly an axiom) for "raisethesubmarine" defined at movement.ads:30, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Movement__raisethesubmarine___axiom
  use import "_gnatprove_standard".Main
  use import "int".Int
  use        Movement__depthmonitor___axiom
- use        Movement__currentdepth
- use        Movement__currentoperationstatus
 
- val divethesubmarinetomaxdepth 
-   (__void_param : unit) : unit
-  requires {  ( (Movement__currentdepth.currentdepth.int__content < 2000) /\ (Movement__currentoperationstatus.currentoperationstatus.int__content = 0) ) }
-  ensures {  ( (Movement__currentdepth.currentdepth.int__content = 2000) /\ (Movement__depthmonitor___axiom.dynamic_invariant Movement__currentdepth.currentdepth.int__content True True True True) ) }
-  reads {Movement__currentdepth.currentdepth, Movement__currentoperationstatus.currentoperationstatus}
-  writes {Movement__currentdepth.currentdepth}
+ val raisethesubmarine 
+   (riseby : int) (currentdepth : int__ref) : unit
+  requires {  ( ((currentdepth.int__content - riseby) >= 0) /\ ( (currentdepth.int__content > 0) /\ (riseby > 0) ) ) }
+  ensures {  ( (currentdepth.int__content >= 0) /\ (Movement__depthmonitor___axiom.dynamic_invariant currentdepth.int__content True True True True) ) }
+  writes {currentdepth}
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "raisethesubmarine100ft" defined at movement.ads:32, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
-module Movement__raisethesubmarine100ft___axiom
- use        Movement__currentdepth
- use import "_gnatprove_standard".Main
- use import "int".Int
- use        Movement__maxdepthinvariant
- use        Movement__depthmonitor___axiom
- use        Movement__currentdepth
-
- val raisethesubmarine100ft 
-   (__void_param : unit) : unit
-  requires {  ( (Movement__currentdepth.currentdepth.int__content >= 100) /\ ((epsilon temp___result_168 : bool.
-   ( (temp___result_168 = (Movement__maxdepthinvariant.maxdepthinvariant Movement__currentdepth.currentdepth.int__content)) /\ (Movement__maxdepthinvariant.maxdepthinvariant__function_guard temp___result_168 Movement__currentdepth.currentdepth.int__content) )) = True) ) }
-  ensures {  ( ( (Movement__currentdepth.currentdepth.int__content <= 1900) /\ (Movement__currentdepth.currentdepth.int__content >= 0) ) /\ (Movement__depthmonitor___axiom.dynamic_invariant Movement__currentdepth.currentdepth.int__content True True True True) ) }
-  reads {Movement__currentdepth.currentdepth}
-  writes {Movement__currentdepth.currentdepth}
-
-end
-
-(* Module for declaring a program function (and possibly an axiom) for "surfacethesubmarine" defined at movement.ads:38, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "surfacethesubmarine" defined at movement.ads:39, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Movement__surfacethesubmarine___axiom
- use        Movement__currentdepth
  use import "_gnatprove_standard".Main
  use import "int".Int
- use        Movement__maxdepthinvariant
- use        Movement__notsurfacedinvariant
  use        Movement__depthmonitor___axiom
- use        Movement__currentdepth
 
  val surfacethesubmarine 
-   (__void_param : unit) : unit
-  requires {  ( ((epsilon temp___result_170 : bool.
-   ( (temp___result_170 = (Movement__notsurfacedinvariant.notsurfacedinvariant Movement__currentdepth.currentdepth.int__content)) /\ (Movement__notsurfacedinvariant.notsurfacedinvariant__function_guard temp___result_170 Movement__currentdepth.currentdepth.int__content) )) = True) /\ ((epsilon temp___result_169 : bool.
-   ( (temp___result_169 = (Movement__maxdepthinvariant.maxdepthinvariant Movement__currentdepth.currentdepth.int__content)) /\ (Movement__maxdepthinvariant.maxdepthinvariant__function_guard temp___result_169 Movement__currentdepth.currentdepth.int__content) )) = True) ) }
-  ensures {  ( (Movement__currentdepth.currentdepth.int__content = 0) /\ (Movement__depthmonitor___axiom.dynamic_invariant Movement__currentdepth.currentdepth.int__content True True True True) ) }
-  reads {Movement__currentdepth.currentdepth}
-  writes {Movement__currentdepth.currentdepth}
+   (currentdepth : int__ref) : unit
+  requires {  (currentdepth.int__content > 0) }
+  ensures {  ( (currentdepth.int__content = 0) /\ (Movement__depthmonitor___axiom.dynamic_invariant currentdepth.int__content True True True True) ) }
+  writes {currentdepth}
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "openouterairlockdoor" defined at airlockdoors.ads:20, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
-module Airlockdoors__openouterairlockdoor___axiom
- use        Airlockdoors__outerdoor
- use        Airlockdoors__innerdoor
+(* Module for declaring a program function (and possibly an axiom) for "openairlockdoor" defined at airlockdoors.ads:16, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Airlockdoors__openairlockdoor___axiom
  use import "_gnatprove_standard".Main
  use import "int".Int
  use        Airlockdoors__doorstatus
@@ -2900,280 +2949,117 @@ module Airlockdoors__openouterairlockdoor___axiom
  use        Airlockdoors__lockstatus__rep
  use        Airlockdoors__airlockdoor
  use        Airlockdoors__airlockdoor___axiom
- use        Airlockdoors__outerdoor
- use        Airlockdoors__innerdoor
 
- val openouterairlockdoor 
-   (__void_param : unit) : unit
-  requires {  ( ((Airlockdoors__doorstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 1) /\ ( ((Airlockdoors__lockstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 1) /\ ((Airlockdoors__doorstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 1) ) ) }
-  ensures {  ( ((Airlockdoors__doorstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 0) /\ (Airlockdoors__airlockdoor___axiom.dynamic_invariant { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content } True True True True) ) }
-  reads {Airlockdoors__outerdoor.outerdoor__split_fields, Airlockdoors__innerdoor.innerdoor__split_fields}
-  writes {Airlockdoors__outerdoor.outerdoor__split_fields}
+ val openairlockdoor 
+   (doorone__split_fields : Airlockdoors__airlockdoor.__split_fields__ref) (doortwo : Airlockdoors__airlockdoor.airlockdoor) : unit
+  requires {  ( ((Airlockdoors__doorstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door (Airlockdoors__airlockdoor.__split_fields doortwo))) = 1) /\ ( ((Airlockdoors__lockstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 1) /\ ((Airlockdoors__doorstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 1) ) ) }
+  ensures {  ( ((Airlockdoors__doorstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 0) /\ (Airlockdoors__airlockdoor___axiom.dynamic_invariant { Airlockdoors__airlockdoor.__split_fields = doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content } True True True True) ) }
+  writes {doorone__split_fields}
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "openinnerairlockdoor" defined at airlockdoors.ads:26, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
-module Airlockdoors__openinnerairlockdoor___axiom
- use        Airlockdoors__outerdoor
- use        Airlockdoors__innerdoor
- use import "_gnatprove_standard".Main
- use import "int".Int
- use        Airlockdoors__doorstatus
- use        Airlockdoors__doorstatus__rep
- use        Airlockdoors__lockstatus
- use        Airlockdoors__lockstatus__rep
- use        Airlockdoors__airlockdoor
- use        Airlockdoors__airlockdoor___axiom
- use        Airlockdoors__outerdoor
- use        Airlockdoors__innerdoor
-
- val openinnerairlockdoor 
-   (__void_param : unit) : unit
-  requires {  ( ((Airlockdoors__doorstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 1) /\ ( ((Airlockdoors__lockstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 1) /\ ((Airlockdoors__doorstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 1) ) ) }
-  ensures {  ( ((Airlockdoors__doorstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 0) /\ (Airlockdoors__airlockdoor___axiom.dynamic_invariant { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content } True True True True) ) }
-  reads {Airlockdoors__outerdoor.outerdoor__split_fields, Airlockdoors__innerdoor.innerdoor__split_fields}
-  writes {Airlockdoors__innerdoor.innerdoor__split_fields}
-
-end
-
-(* Module for declaring a program function (and possibly an axiom) for "closeouterairlockdoor" defined at airlockdoors.ads:33, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
-module Airlockdoors__closeouterairlockdoor___axiom
- use        Airlockdoors__outerdoor
+(* Module for declaring a program function (and possibly an axiom) for "closeairlockdoor" defined at airlockdoors.ads:24, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Airlockdoors__closeairlockdoor___axiom
  use import "_gnatprove_standard".Main
  use import "int".Int
  use        Airlockdoors__doorstatus
  use        Airlockdoors__doorstatus__rep
  use        Airlockdoors__airlockdoor
  use        Airlockdoors__airlockdoor___axiom
- use        Airlockdoors__outerdoor
 
- val closeouterairlockdoor 
-   (__void_param : unit) : unit
-  requires {  ((Airlockdoors__doorstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 0) }
-  ensures {  ( ((Airlockdoors__doorstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 1) /\ (Airlockdoors__airlockdoor___axiom.dynamic_invariant { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content } True True True True) ) }
-  reads {Airlockdoors__outerdoor.outerdoor__split_fields}
-  writes {Airlockdoors__outerdoor.outerdoor__split_fields}
+ val closeairlockdoor 
+   (doorone__split_fields : Airlockdoors__airlockdoor.__split_fields__ref) : unit
+  requires {  ((Airlockdoors__doorstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 0) }
+  ensures {  ( ((Airlockdoors__doorstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 1) /\ (Airlockdoors__airlockdoor___axiom.dynamic_invariant { Airlockdoors__airlockdoor.__split_fields = doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content } True True True True) ) }
+  writes {doorone__split_fields}
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "closeinnerairlockdoor" defined at airlockdoors.ads:39, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
-module Airlockdoors__closeinnerairlockdoor___axiom
- use        Airlockdoors__innerdoor
- use import "_gnatprove_standard".Main
- use import "int".Int
- use        Airlockdoors__doorstatus
- use        Airlockdoors__doorstatus__rep
- use        Airlockdoors__airlockdoor
- use        Airlockdoors__airlockdoor___axiom
- use        Airlockdoors__innerdoor
-
- val closeinnerairlockdoor 
-   (__void_param : unit) : unit
-  requires {  ((Airlockdoors__doorstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 0) }
-  ensures {  ( ((Airlockdoors__doorstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 1) /\ (Airlockdoors__airlockdoor___axiom.dynamic_invariant { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content } True True True True) ) }
-  reads {Airlockdoors__innerdoor.innerdoor__split_fields}
-  writes {Airlockdoors__innerdoor.innerdoor__split_fields}
-
-end
-
-(* Module for declaring a program function (and possibly an axiom) for "lockouterdoor" defined at airlockdoors.ads:48, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
-module Airlockdoors__lockouterdoor___axiom
- use        Airlockdoors__outerdoor
- use        Movement__currentoperationstatus
- use        Airlockdoors__innerdoor
+(* Module for declaring a program function (and possibly an axiom) for "lockairlockdoor" defined at airlockdoors.ads:32, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Airlockdoors__lockairlockdoor___axiom
  use import "_gnatprove_standard".Main
  use import "int".Int
  use        Movement__operationstatus___axiom
- use        Movement__currentoperationstatus
  use        Airlockdoors__doorstatus
  use        Airlockdoors__doorstatus__rep
  use        Airlockdoors__lockstatus
  use        Airlockdoors__lockstatus__rep
  use        Airlockdoors__airlockdoor
  use        Airlockdoors__airlockdoor___axiom
- use        Airlockdoors__outerdoor
- use        Airlockdoors__innerdoor
 
- val lockouterdoor 
-   (__void_param : unit) : unit
-  requires {  ( ((Airlockdoors__doorstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 1) /\ ((Airlockdoors__lockstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 1) ) }
-  ensures {  ( ((Airlockdoors__lockstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 0) /\ ( (Airlockdoors__airlockdoor___axiom.dynamic_invariant { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content } True True True True) /\ (Movement__operationstatus___axiom.dynamic_invariant Movement__currentoperationstatus.currentoperationstatus.int__content True True True True) ) ) }
-  reads {Movement__currentoperationstatus.currentoperationstatus, Airlockdoors__outerdoor.outerdoor__split_fields, Airlockdoors__innerdoor.innerdoor__split_fields}
-  writes {Movement__currentoperationstatus.currentoperationstatus, Airlockdoors__outerdoor.outerdoor__split_fields}
+ val lockairlockdoor 
+   (doorone__split_fields : Airlockdoors__airlockdoor.__split_fields__ref) (currentoperationstatus : int__ref) (doortwo : Airlockdoors__airlockdoor.airlockdoor) : unit
+  requires {  ( ((Airlockdoors__doorstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 1) /\ ((Airlockdoors__lockstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 1) ) }
+  ensures {  ( ((Airlockdoors__lockstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 0) /\ ( (Airlockdoors__airlockdoor___axiom.dynamic_invariant { Airlockdoors__airlockdoor.__split_fields = doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content } True True True True) /\ (Movement__operationstatus___axiom.dynamic_invariant currentoperationstatus.int__content True True True True) ) ) }
+  writes {doorone__split_fields, currentoperationstatus}
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "unlockouterdoor" defined at airlockdoors.ads:54, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
-module Airlockdoors__unlockouterdoor___axiom
- use        Airlockdoors__outerdoor
- use        Movement__currentoperationstatus
- use        Movement__currentdepth
+(* Module for declaring a program function (and possibly an axiom) for "unlockairlockdoor" defined at airlockdoors.ads:41, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Airlockdoors__unlockairlockdoor___axiom
  use import "_gnatprove_standard".Main
  use import "int".Int
- use        Movement__currentdepth
  use        Movement__operationstatus___axiom
- use        Movement__currentoperationstatus
  use        Airlockdoors__lockstatus
  use        Airlockdoors__lockstatus__rep
  use        Airlockdoors__airlockdoor
  use        Airlockdoors__airlockdoor___axiom
- use        Airlockdoors__outerdoor
 
- val unlockouterdoor 
-   (__void_param : unit) : unit
-  requires {  ( (Movement__currentdepth.currentdepth.int__content = 0) /\ ((Airlockdoors__lockstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 0) ) }
-  ensures {  ( ( ((Airlockdoors__lockstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 1) /\ (Movement__currentoperationstatus.currentoperationstatus.int__content = 1) ) /\ ( (Airlockdoors__airlockdoor___axiom.dynamic_invariant { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content } True True True True) /\ (Movement__operationstatus___axiom.dynamic_invariant Movement__currentoperationstatus.currentoperationstatus.int__content True True True True) ) ) }
-  reads {Movement__currentdepth.currentdepth, Movement__currentoperationstatus.currentoperationstatus, Airlockdoors__outerdoor.outerdoor__split_fields}
-  writes {Movement__currentoperationstatus.currentoperationstatus, Airlockdoors__outerdoor.outerdoor__split_fields}
+ val unlockairlockdoor 
+   (doorone__split_fields : Airlockdoors__airlockdoor.__split_fields__ref) (currentoperationstatus : int__ref) (currentdepth : int) : unit
+  requires {  ( (currentdepth = 0) /\ ((Airlockdoors__lockstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 0) ) }
+  ensures {  ( ( ((Airlockdoors__lockstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 1) /\ (currentoperationstatus.int__content = 1) ) /\ ( (Airlockdoors__airlockdoor___axiom.dynamic_invariant { Airlockdoors__airlockdoor.__split_fields = doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content } True True True True) /\ (Movement__operationstatus___axiom.dynamic_invariant currentoperationstatus.int__content True True True True) ) ) }
+  writes {doorone__split_fields, currentoperationstatus}
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "lockinnerdoor" defined at airlockdoors.ads:60, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
-module Airlockdoors__lockinnerdoor___axiom
- use        Airlockdoors__outerdoor
- use        Movement__currentoperationstatus
- use        Airlockdoors__innerdoor
- use import "_gnatprove_standard".Main
- use import "int".Int
- use        Movement__operationstatus___axiom
- use        Movement__currentoperationstatus
- use        Airlockdoors__doorstatus
- use        Airlockdoors__doorstatus__rep
- use        Airlockdoors__lockstatus
- use        Airlockdoors__lockstatus__rep
- use        Airlockdoors__airlockdoor
- use        Airlockdoors__airlockdoor___axiom
- use        Airlockdoors__outerdoor
- use        Airlockdoors__innerdoor
-
- val lockinnerdoor 
-   (__void_param : unit) : unit
-  requires {  ( ((Airlockdoors__doorstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 1) /\ ((Airlockdoors__lockstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 1) ) }
-  ensures {  ( ((Airlockdoors__lockstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 0) /\ ( (Movement__operationstatus___axiom.dynamic_invariant Movement__currentoperationstatus.currentoperationstatus.int__content True True True True) /\ (Airlockdoors__airlockdoor___axiom.dynamic_invariant { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content } True True True True) ) ) }
-  reads {Movement__currentoperationstatus.currentoperationstatus, Airlockdoors__outerdoor.outerdoor__split_fields, Airlockdoors__innerdoor.innerdoor__split_fields}
-  writes {Movement__currentoperationstatus.currentoperationstatus, Airlockdoors__innerdoor.innerdoor__split_fields}
-
-end
-
-(* Module for declaring a program function (and possibly an axiom) for "unlockinnerdoor" defined at airlockdoors.ads:66, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
-module Airlockdoors__unlockinnerdoor___axiom
- use        Movement__currentoperationstatus
- use        Airlockdoors__innerdoor
- use        Movement__currentdepth
- use import "_gnatprove_standard".Main
- use import "int".Int
- use        Movement__currentdepth
- use        Movement__operationstatus___axiom
- use        Movement__currentoperationstatus
- use        Airlockdoors__lockstatus
- use        Airlockdoors__lockstatus__rep
- use        Airlockdoors__airlockdoor
- use        Airlockdoors__airlockdoor___axiom
- use        Airlockdoors__innerdoor
-
- val unlockinnerdoor 
-   (__void_param : unit) : unit
-  requires {  ( (Movement__currentdepth.currentdepth.int__content = 0) /\ ((Airlockdoors__lockstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 0) ) }
-  ensures {  ( ( ((Airlockdoors__lockstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 1) /\ (Movement__currentoperationstatus.currentoperationstatus.int__content = 1) ) /\ ( (Movement__operationstatus___axiom.dynamic_invariant Movement__currentoperationstatus.currentoperationstatus.int__content True True True True) /\ (Airlockdoors__airlockdoor___axiom.dynamic_invariant { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content } True True True True) ) ) }
-  reads {Movement__currentdepth.currentdepth, Movement__currentoperationstatus.currentoperationstatus, Airlockdoors__innerdoor.innerdoor__split_fields}
-  writes {Movement__currentoperationstatus.currentoperationstatus, Airlockdoors__innerdoor.innerdoor__split_fields}
-
-end
-
-(* Module for checking absence of run-time errors and package initial condition on package elaboration of "airlockdoors" defined at airlockdoors.ads:4, created in Gnat2Why.Subprograms.Generate_VCs_For_Package_Elaboration *)
+(* Module for checking absence of run-time errors and package initial condition on package elaboration of "airlockdoors" defined at airlockdoors.ads:3, created in Gnat2Why.Subprograms.Generate_VCs_For_Package_Elaboration *)
 module Airlockdoors__package_def
  use import "_gnatprove_standard".Main
- use import "int".Int
- use        Airlockdoors__doorstatus
- use        Airlockdoors__doorstatus__rep
- use        Airlockdoors__lockstatus
- use        Airlockdoors__lockstatus__rep
- use        Airlockdoors__airlockdoor
- use        Airlockdoors__airlockdoor___axiom
- use        Airlockdoors__outerdoor
- use        Airlockdoors__innerdoor
- use        Airlockdoors__doorstatus___axiom
- use        Airlockdoors__lockstatus___axiom
- use        Airlockdoors__airlockdoor___axiom
- use        Airlockdoors__outerdoor___axiom
- use        Airlockdoors__innerdoor___axiom
 
- let def #"airlockdoors.ads" 4 0 0#"GP_Subp:airlockdoors.ads:4" "W:diverges:N" 
+ let def #"airlockdoors.ads" 3 0 0#"GP_Subp:airlockdoors.ads:3" "W:diverges:N" 
    (__void_param : unit)
-  requires { #"airlockdoors.ads" 4 0 0# true }
-  ensures { #"airlockdoors.ads" 4 0 0# true }
+  requires { #"airlockdoors.ads" 3 0 0# true }
+  ensures { #"airlockdoors.ads" 3 0 0# true }
    =
-  ( (#"airlockdoors.ads" 4 0 0# ());
-  (#"airlockdoors.ads" 9 0 0# ());
-  (#"airlockdoors.ads" 10 0 0# ());
-  (#"airlockdoors.ads" 12 0 0# ());
-  (#"airlockdoors.ads" 17 0 0# ());
-  (#"airlockdoors.ads" 17 0 0# ());
-  (#"airlockdoors.ads" 17 0 0# ());
-  (#"airlockdoors.ads" 17 0 0# ( (let airlockdoors__outerdoor__assume = { Airlockdoors__airlockdoor.__split_fields = { Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door = (Airlockdoors__doorstatus__rep.of_rep(1)); Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock = (Airlockdoors__lockstatus__rep.of_rep(0)) } } in (
-   #"airlockdoors.ads" 17 0 0# Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content <- ( (Airlockdoors__airlockdoor.__split_fields(airlockdoors__outerdoor__assume)) )))
-  ;
-  #"airlockdoors.ads" 17 0 0# assume { #"airlockdoors.ads" 17 0 0# (Airlockdoors__airlockdoor___axiom.dynamic_invariant { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content } True False True True) } ));
-  (#"airlockdoors.ads" 18 0 0# ( (let airlockdoors__innerdoor__assume = { Airlockdoors__airlockdoor.__split_fields = { Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door = (Airlockdoors__doorstatus__rep.of_rep(1)); Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock = (Airlockdoors__lockstatus__rep.of_rep(0)) } } in (
-   #"airlockdoors.ads" 18 0 0# Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content <- ( (Airlockdoors__airlockdoor.__split_fields(airlockdoors__innerdoor__assume)) )))
-  ;
-  #"airlockdoors.ads" 18 0 0# assume { #"airlockdoors.ads" 18 0 0# (Airlockdoors__airlockdoor___axiom.dynamic_invariant { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content } True False True True) } ));
-  (#"airlockdoors.ads" 20 0 0# ());
-  (#"airlockdoors.ads" 23 0 0# ());
-  (#"airlockdoors.ads" 22 0 0# ());
-  (#"airlockdoors.ads" 22 0 0# ());
-  (#"airlockdoors.ads" 22 0 0# ());
+  ( (#"airlockdoors.ads" 3 0 0# ());
+  (#"airlockdoors.ads" 5 0 0# ());
+  (#"airlockdoors.ads" 6 0 0# ());
+  (#"airlockdoors.ads" 8 0 0# ());
+  (#"airlockdoors.ads" 16 0 0# ());
   (#"airlockdoors.ads" 21 0 0# ());
+  (#"airlockdoors.ads" 18 0 0# ());
+  (#"airlockdoors.ads" 19 0 0# ());
+  (#"airlockdoors.ads" 18 0 0# ());
+  (#"airlockdoors.ads" 24 0 0# ());
   (#"airlockdoors.ads" 26 0 0# ());
-  (#"airlockdoors.ads" 30 0 0# ());
-  (#"airlockdoors.ads" 29 0 0# ());
-  (#"airlockdoors.ads" 29 0 0# ());
-  (#"airlockdoors.ads" 29 0 0# ());
-  (#"airlockdoors.ads" 28 0 0# ());
-  (#"airlockdoors.ads" 33 0 0# ());
-  (#"airlockdoors.ads" 36 0 0# ());
+  (#"airlockdoors.ads" 25 0 0# ());
+  (#"airlockdoors.ads" 32 0 0# ());
+  (#"airlockdoors.ads" 38 0 0# ());
   (#"airlockdoors.ads" 35 0 0# ());
-  (#"airlockdoors.ads" 34 0 0# ());
-  (#"airlockdoors.ads" 39 0 0# ());
-  (#"airlockdoors.ads" 42 0 0# ());
+  (#"airlockdoors.ads" 35 0 0# ());
   (#"airlockdoors.ads" 41 0 0# ());
-  (#"airlockdoors.ads" 40 0 0# ());
-  (#"airlockdoors.ads" 48 0 0# ());
-  (#"airlockdoors.ads" 51 0 0# ());
-  (#"airlockdoors.ads" 50 0 0# ());
-  (#"airlockdoors.ads" 50 0 0# ());
-  (#"airlockdoors.ads" 49 0 0# ());
-  (#"airlockdoors.ads" 54 0 0# ());
-  (#"airlockdoors.ads" 57 0 0# ());
-  (#"airlockdoors.ads" 57 0 0# ());
-  (#"airlockdoors.ads" 56 0 0# ());
-  (#"airlockdoors.ads" 56 0 0# ());
-  (#"airlockdoors.ads" 55 0 0# ());
-  (#"airlockdoors.ads" 60 0 0# ());
-  (#"airlockdoors.ads" 63 0 0# ());
-  (#"airlockdoors.ads" 62 0 0# ());
-  (#"airlockdoors.ads" 62 0 0# ());
-  (#"airlockdoors.ads" 61 0 0# ());
-  (#"airlockdoors.ads" 66 0 0# ());
-  (#"airlockdoors.ads" 69 0 0# ());
-  (#"airlockdoors.ads" 69 0 0# ());
-  (#"airlockdoors.ads" 68 0 0# ());
-  (#"airlockdoors.ads" 68 0 0# ());
-  (#"airlockdoors.ads" 67 0 0# ());
-  (#"airlockdoors.adb" 5 0 0# ());
-  (#"airlockdoors.adb" 11 0 0# ());
+  (#"airlockdoors.ads" 47 0 0# ());
+  (#"airlockdoors.ads" 47 0 0# ());
+  (#"airlockdoors.ads" 44 0 0# ());
+  (#"airlockdoors.ads" 44 0 0# ());
+  (#"airlockdoors.ads" 44 0 0# ());
+  (#"airlockdoors.ads" 44 0 0# ());
+  (#"airlockdoors.ads" 44 0 0# ());
+  (#"airlockdoors.ads" 44 0 0# ());
+  (#"airlockdoors.ads" 44 0 0# ());
+  (#"airlockdoors.ads" 44 0 0# ());
+  (#"airlockdoors.ads" 44 0 0# ());
+  (#"airlockdoors.adb" 3 0 0# ());
+  (#"airlockdoors.adb" 9 0 0# ());
   (#"airlockdoors.adb" 19 0 0# ());
-  (#"airlockdoors.adb" 27 0 0# ());
-  (#"airlockdoors.adb" 35 0 0# ());
-  (#"airlockdoors.adb" 46 0 0# ());
-  (#"airlockdoors.adb" 57 0 0# ());
-  (#"airlockdoors.adb" 66 0 0# ());
-  (#"airlockdoors.adb" 77 0 0# ());
-  ( "GP_Sloc:airlockdoors.adb:85:1" (#"airlockdoors.adb" 85 0 0# ()) ) )
+  (#"airlockdoors.adb" 30 0 0# ());
+  (#"airlockdoors.adb" 43 0 0# ());
+  ( "GP_Sloc:airlockdoors.adb:52:1" (#"airlockdoors.adb" 52 0 0# ()) ) )
 end
 
-(* Module for checking contracts and absence of run-time errors in subprogram "openouterairlockdoor" defined at airlockdoors.ads:20, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
-module Airlockdoors__openouterairlockdoor__subprogram_def
+(* Module for checking contracts and absence of run-time errors in subprogram "openairlockdoor" defined at airlockdoors.ads:16, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+module Airlockdoors__openairlockdoor__subprogram_def
  use import "_gnatprove_standard".Main
  use import "int".Int
  use        "_gnatprove_standard".Boolean
@@ -3183,515 +3069,239 @@ module Airlockdoors__openouterairlockdoor__subprogram_def
  use        Airlockdoors__lockstatus__rep
  use        Airlockdoors__airlockdoor
  use        Airlockdoors__airlockdoor___axiom
- use        Airlockdoors__outerdoor
- use        Airlockdoors__innerdoor
+ use        Airlockdoors__openairlockdoor__doorone
+ use        Airlockdoors__openairlockdoor__doortwo
  use        Airlockdoors__doorstatus___axiom
  use        Airlockdoors__lockstatus___axiom
  use        Airlockdoors__airlockdoor___axiom
- use        Airlockdoors__outerdoor___axiom
- use        Airlockdoors__innerdoor___axiom
+ use        Airlockdoors__openairlockdoor__doorone___axiom
+ use        Airlockdoors__openairlockdoor__doortwo___axiom
 
- let def #"airlockdoors.ads" 20 0 0#"W:diverges:N" "GP_Subp:airlockdoors.ads:20" 
+ let def #"airlockdoors.ads" 16 0 0#"W:diverges:N" "GP_Subp:airlockdoors.ads:16" 
    (__void_param : unit)
-  requires { #"airlockdoors.ads" 20 0 0# true }
-  ensures { #"airlockdoors.ads" 20 0 0# (#"airlockdoors.ads" 23 0 0# ( "model_vc_post" "keep_on_simp" "GP_Sloc:airlockdoors.ads:23:14" "GP_Reason:VC_POSTCONDITION" "GP_Id:0" "comment:     Post => outerDoor.door = Open;
-             ^ airlockdoors.ads:23:14:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" ( "GP_Pretty_Ada:3784" "GP_Sloc:airlockdoors.ads:23:14" ((Airlockdoors__doorstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 0) ) )) }
+  requires { #"airlockdoors.ads" 16 0 0# true }
+  ensures { #"airlockdoors.ads" 16 0 0# (#"airlockdoors.ads" 21 0 0# ( "model_vc_post" "keep_on_simp" "GP_Sloc:airlockdoors.ads:21:14" "GP_Reason:VC_POSTCONDITION" "GP_Id:0" "comment:     Post => doorOne.door = Open;
+             ^ airlockdoors.ads:21:14:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" ( "GP_Pretty_Ada:3467" "GP_Sloc:airlockdoors.ads:21:14" ((Airlockdoors__doorstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__openairlockdoor__doorone.doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 0) ) )) }
    =
-  ( () (* Assume dynamic invariants of inputs of the subprogram airlockdoors.ads:20 *)
+  ( () (* Assume dynamic invariants of inputs of the subprogram airlockdoors.ads:16 *)
   ;
-   assume {  (Airlockdoors__airlockdoor___axiom.dynamic_invariant { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content } True False True True) };
-   assume {  (Airlockdoors__airlockdoor___axiom.dynamic_invariant { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content } True False True True) };
+   assume {  (Airlockdoors__airlockdoor___axiom.dynamic_invariant { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__openairlockdoor__doorone.doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content } True False True True) };
+   assume {  (Airlockdoors__airlockdoor___axiom.dynamic_invariant Airlockdoors__openairlockdoor__doortwo.doortwo True False True True) };
    assume {  true };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram airlockdoors.ads:20 *)
+  () (* Declarations introduced by the compiler at the beginning of the subprogram airlockdoors.ads:16 *)
   ;
-  () (* Check for RTE in the Pre of the subprogram airlockdoors.ads:20 *)
+  () (* Check for RTE in the Pre of the subprogram airlockdoors.ads:16 *)
   ;
-   abstract ensures {true}(let _ = ( ((Airlockdoors__doorstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 1) && ( ((Airlockdoors__lockstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 1) && ((Airlockdoors__doorstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 1) ) ) in (
+   abstract ensures {true}(let _ = ( ((Airlockdoors__doorstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door((Airlockdoors__airlockdoor.__split_fields(Airlockdoors__openairlockdoor__doortwo.doortwo)))))) = 1) && ( ((Airlockdoors__lockstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__openairlockdoor__doorone.doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 1) && ((Airlockdoors__doorstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__openairlockdoor__doorone.doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 1) ) ) in (
    ()))
    end ;
-  () (* Assume Pre of the subprogram airlockdoors.ads:20 *)
+  () (* Assume Pre of the subprogram airlockdoors.ads:16 *)
   ;
-   assume {  ( ((Airlockdoors__doorstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 1) /\ ( ((Airlockdoors__lockstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 1) /\ ((Airlockdoors__doorstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 1) ) ) };
+   assume {  ( ((Airlockdoors__doorstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door (Airlockdoors__airlockdoor.__split_fields Airlockdoors__openairlockdoor__doortwo.doortwo))) = 1) /\ ( ((Airlockdoors__lockstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__openairlockdoor__doorone.doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 1) /\ ((Airlockdoors__doorstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__openairlockdoor__doorone.doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 1) ) ) };
    try
-   ( ( "GP_Sloc:airlockdoors.adb:13:11" (#"airlockdoors.adb" 13 0 0# ()) );
-   ( "GP_Sloc:airlockdoors.adb:13:39" (#"airlockdoors.adb" 13 0 0# ()) );
-   ( "GP_Sloc:airlockdoors.adb:13:7" (#"airlockdoors.adb" 13 0 0# (if ((Boolean.andb(((Airlockdoors__doorstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 1)) (((Airlockdoors__lockstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 1)))) then (
-    ( ( "GP_Sloc:airlockdoors.adb:14:10" (#"airlockdoors.adb" 14 0 0# ()) );
-    ( "GP_Sloc:airlockdoors.adb:14:25" (#"airlockdoors.adb" 14 0 0# (let temp___195 = (let temp___194 = { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content } in (
-     ( #"airlockdoors.adb" 14 0 0# abstract ensures {true}(let _ = (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door((Airlockdoors__airlockdoor.__split_fields(temp___194)))) in (
+   ( ( "GP_Sloc:airlockdoors.adb:12:7" (#"airlockdoors.adb" 12 0 0# (if ((Boolean.andb(((Airlockdoors__doorstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door((Airlockdoors__airlockdoor.__split_fields(Airlockdoors__openairlockdoor__doortwo.doortwo)))))) = 1)) (((Airlockdoors__lockstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__openairlockdoor__doorone.doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 1)))) then (
+    ( "GP_Sloc:airlockdoors.adb:14:23" (#"airlockdoors.adb" 14 0 0# (let temp___192 = (let temp___191 = { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__openairlockdoor__doorone.doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content } in (
+     ( #"airlockdoors.adb" 14 0 0# abstract ensures {true}(let _ = (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door((Airlockdoors__airlockdoor.__split_fields(temp___191)))) in (
       ()))
       end ;
-     { ( temp___194 ) with Airlockdoors__airlockdoor.__split_fields = { ( (Airlockdoors__airlockdoor.__split_fields(temp___194)) ) with Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door = (Airlockdoors__doorstatus__rep.of_rep(0)) } } )))
+     { ( temp___191 ) with Airlockdoors__airlockdoor.__split_fields = { ( (Airlockdoors__airlockdoor.__split_fields(temp___191)) ) with Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door = (Airlockdoors__doorstatus__rep.of_rep(0)) } } )))
      in (
-     #"airlockdoors.adb" 14 0 0# Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content <- ( (Airlockdoors__airlockdoor.__split_fields(temp___195)) )))
-    ) ) )) else (
+     #"airlockdoors.adb" 14 0 0# Airlockdoors__openairlockdoor__doorone.doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content <- ( (Airlockdoors__airlockdoor.__split_fields(temp___192)) )))
+    ) )) else (
     ()))) );
     raise Return__exc )
   with
    Return__exc -> ()
   end;
-   abstract ensures {true}(let _ = ((Airlockdoors__doorstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 0) in (
+   abstract ensures {true}(let _ = ((Airlockdoors__doorstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__openairlockdoor__doorone.doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 0) in (
    ()))
    end  )
 end
 
-(* Module for checking contracts and absence of run-time errors in subprogram "openinnerairlockdoor" defined at airlockdoors.ads:26, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
-module Airlockdoors__openinnerairlockdoor__subprogram_def
- use import "_gnatprove_standard".Main
- use import "int".Int
- use        "_gnatprove_standard".Boolean
- use        Airlockdoors__doorstatus
- use        Airlockdoors__doorstatus__rep
- use        Airlockdoors__lockstatus
- use        Airlockdoors__lockstatus__rep
- use        Airlockdoors__airlockdoor
- use        Airlockdoors__airlockdoor___axiom
- use        Airlockdoors__outerdoor
- use        Airlockdoors__innerdoor
- use        Airlockdoors__doorstatus___axiom
- use        Airlockdoors__lockstatus___axiom
- use        Airlockdoors__airlockdoor___axiom
- use        Airlockdoors__outerdoor___axiom
- use        Airlockdoors__innerdoor___axiom
-
- let def #"airlockdoors.ads" 26 0 0#"W:diverges:N" "GP_Subp:airlockdoors.ads:26" 
-   (__void_param : unit)
-  requires { #"airlockdoors.ads" 26 0 0# true }
-  ensures { #"airlockdoors.ads" 26 0 0# (#"airlockdoors.ads" 30 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:airlockdoors.ads:30:14" "GP_Id:1" "comment:     Post => innerDoor.door = Open;
-             ^ airlockdoors.ads:30:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:3899" "GP_Sloc:airlockdoors.ads:30:14" ((Airlockdoors__doorstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 0) ) )) }
-   =
-  ( () (* Assume dynamic invariants of inputs of the subprogram airlockdoors.ads:26 *)
-  ;
-   assume {  (Airlockdoors__airlockdoor___axiom.dynamic_invariant { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content } True False True True) };
-   assume {  (Airlockdoors__airlockdoor___axiom.dynamic_invariant { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content } True False True True) };
-   assume {  true };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram airlockdoors.ads:26 *)
-  ;
-  () (* Check for RTE in the Pre of the subprogram airlockdoors.ads:26 *)
-  ;
-   abstract ensures {true}(let _ = ( ((Airlockdoors__doorstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 1) && ( ((Airlockdoors__lockstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 1) && ((Airlockdoors__doorstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 1) ) ) in (
-   ()))
-   end ;
-  () (* Assume Pre of the subprogram airlockdoors.ads:26 *)
-  ;
-   assume {  ( ((Airlockdoors__doorstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 1) /\ ( ((Airlockdoors__lockstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 1) /\ ((Airlockdoors__doorstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 1) ) ) };
-   try
-   ( ( "GP_Sloc:airlockdoors.adb:21:11" (#"airlockdoors.adb" 21 0 0# ()) );
-   ( "GP_Sloc:airlockdoors.adb:21:39" (#"airlockdoors.adb" 21 0 0# ()) );
-   ( "GP_Sloc:airlockdoors.adb:21:7" (#"airlockdoors.adb" 21 0 0# (if ((Boolean.andb(((Airlockdoors__doorstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 1)) (((Airlockdoors__lockstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 1)))) then (
-    ( ( "GP_Sloc:airlockdoors.adb:22:10" (#"airlockdoors.adb" 22 0 0# ()) );
-    ( "GP_Sloc:airlockdoors.adb:22:25" (#"airlockdoors.adb" 22 0 0# (let temp___197 = (let temp___196 = { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content } in (
-     ( #"airlockdoors.adb" 22 0 0# abstract ensures {true}(let _ = (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door((Airlockdoors__airlockdoor.__split_fields(temp___196)))) in (
-      ()))
-      end ;
-     { ( temp___196 ) with Airlockdoors__airlockdoor.__split_fields = { ( (Airlockdoors__airlockdoor.__split_fields(temp___196)) ) with Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door = (Airlockdoors__doorstatus__rep.of_rep(0)) } } )))
-     in (
-     #"airlockdoors.adb" 22 0 0# Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content <- ( (Airlockdoors__airlockdoor.__split_fields(temp___197)) )))
-    ) ) )) else (
-    ()))) );
-    raise Return__exc )
-  with
-   Return__exc -> ()
-  end;
-   abstract ensures {true}(let _ = ((Airlockdoors__doorstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 0) in (
-   ()))
-   end  )
-end
-
-(* Module for checking contracts and absence of run-time errors in subprogram "closeouterairlockdoor" defined at airlockdoors.ads:33, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
-module Airlockdoors__closeouterairlockdoor__subprogram_def
+(* Module for checking contracts and absence of run-time errors in subprogram "closeairlockdoor" defined at airlockdoors.ads:24, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+module Airlockdoors__closeairlockdoor__subprogram_def
  use import "_gnatprove_standard".Main
  use import "int".Int
  use        Airlockdoors__doorstatus
  use        Airlockdoors__doorstatus__rep
  use        Airlockdoors__airlockdoor
  use        Airlockdoors__airlockdoor___axiom
- use        Airlockdoors__outerdoor
+ use        Airlockdoors__closeairlockdoor__doorone
  use        Airlockdoors__doorstatus___axiom
  use        Airlockdoors__lockstatus___axiom
  use        Airlockdoors__airlockdoor___axiom
- use        Airlockdoors__outerdoor___axiom
+ use        Airlockdoors__closeairlockdoor__doorone___axiom
 
- let def #"airlockdoors.ads" 33 0 0#"W:diverges:N" "GP_Subp:airlockdoors.ads:33" 
+ let def #"airlockdoors.ads" 24 0 0#"W:diverges:N" "GP_Subp:airlockdoors.ads:24" 
    (__void_param : unit)
-  requires { #"airlockdoors.ads" 33 0 0# true }
-  ensures { #"airlockdoors.ads" 33 0 0# (#"airlockdoors.ads" 36 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:airlockdoors.ads:36:14" "GP_Id:2" "comment:     Post => outerDoor.door = Closed;
-             ^ airlockdoors.ads:36:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:3961" "GP_Sloc:airlockdoors.ads:36:14" ((Airlockdoors__doorstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 1) ) )) }
+  requires { #"airlockdoors.ads" 24 0 0# true }
+  ensures { #"airlockdoors.ads" 24 0 0# (#"airlockdoors.ads" 26 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:airlockdoors.ads:26:14" "GP_Id:1" "comment:     Post => doorOne.door = Closed;
+             ^ airlockdoors.ads:26:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:3520" "GP_Sloc:airlockdoors.ads:26:14" ((Airlockdoors__doorstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__closeairlockdoor__doorone.doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 1) ) )) }
    =
-  ( () (* Assume dynamic invariants of inputs of the subprogram airlockdoors.ads:33 *)
+  ( () (* Assume dynamic invariants of inputs of the subprogram airlockdoors.ads:24 *)
   ;
-   assume {  (Airlockdoors__airlockdoor___axiom.dynamic_invariant { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content } True False True True) };
+   assume {  (Airlockdoors__airlockdoor___axiom.dynamic_invariant { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__closeairlockdoor__doorone.doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content } True False True True) };
    assume {  true };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram airlockdoors.ads:33 *)
+  () (* Declarations introduced by the compiler at the beginning of the subprogram airlockdoors.ads:24 *)
   ;
-  () (* Check for RTE in the Pre of the subprogram airlockdoors.ads:33 *)
+  () (* Check for RTE in the Pre of the subprogram airlockdoors.ads:24 *)
   ;
-   abstract ensures {true}(let _ = ((Airlockdoors__doorstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 0) in (
+   abstract ensures {true}(let _ = ((Airlockdoors__doorstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__closeairlockdoor__doorone.doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 0) in (
    ()))
    end ;
-  () (* Assume Pre of the subprogram airlockdoors.ads:33 *)
+  () (* Assume Pre of the subprogram airlockdoors.ads:24 *)
   ;
-   assume {  ((Airlockdoors__doorstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 0) };
+   assume {  ((Airlockdoors__doorstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__closeairlockdoor__doorone.doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 0) };
    try
-   ( ( "GP_Sloc:airlockdoors.adb:29:11" (#"airlockdoors.adb" 29 0 0# ()) );
-   ( "GP_Sloc:airlockdoors.adb:29:7" (#"airlockdoors.adb" 29 0 0# (if (((Airlockdoors__doorstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 0)) then (
-    ( ( "GP_Sloc:airlockdoors.adb:30:10" (#"airlockdoors.adb" 30 0 0# ()) );
-    ( "GP_Sloc:airlockdoors.adb:30:25" (#"airlockdoors.adb" 30 0 0# (let temp___199 = (let temp___198 = { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content } in (
-     ( #"airlockdoors.adb" 30 0 0# abstract ensures {true}(let _ = (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door((Airlockdoors__airlockdoor.__split_fields(temp___198)))) in (
+   ( ( "GP_Sloc:airlockdoors.adb:21:7" (#"airlockdoors.adb" 21 0 0# (if (((Airlockdoors__doorstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__closeairlockdoor__doorone.doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 0)) then (
+    ( "GP_Sloc:airlockdoors.adb:22:23" (#"airlockdoors.adb" 22 0 0# (let temp___194 = (let temp___193 = { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__closeairlockdoor__doorone.doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content } in (
+     ( #"airlockdoors.adb" 22 0 0# abstract ensures {true}(let _ = (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door((Airlockdoors__airlockdoor.__split_fields(temp___193)))) in (
       ()))
       end ;
-     { ( temp___198 ) with Airlockdoors__airlockdoor.__split_fields = { ( (Airlockdoors__airlockdoor.__split_fields(temp___198)) ) with Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door = (Airlockdoors__doorstatus__rep.of_rep(1)) } } )))
+     { ( temp___193 ) with Airlockdoors__airlockdoor.__split_fields = { ( (Airlockdoors__airlockdoor.__split_fields(temp___193)) ) with Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door = (Airlockdoors__doorstatus__rep.of_rep(1)) } } )))
      in (
-     #"airlockdoors.adb" 30 0 0# Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content <- ( (Airlockdoors__airlockdoor.__split_fields(temp___199)) )))
-    ) ) )) else (
+     #"airlockdoors.adb" 22 0 0# Airlockdoors__closeairlockdoor__doorone.doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content <- ( (Airlockdoors__airlockdoor.__split_fields(temp___194)) )))
+    ) )) else (
     ()))) );
     raise Return__exc )
   with
    Return__exc -> ()
   end;
-   abstract ensures {true}(let _ = ((Airlockdoors__doorstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 1) in (
+   abstract ensures {true}(let _ = ((Airlockdoors__doorstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__closeairlockdoor__doorone.doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 1) in (
    ()))
    end  )
 end
 
-(* Module for checking contracts and absence of run-time errors in subprogram "closeinnerairlockdoor" defined at airlockdoors.ads:39, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
-module Airlockdoors__closeinnerairlockdoor__subprogram_def
- use import "_gnatprove_standard".Main
- use import "int".Int
- use        Airlockdoors__doorstatus
- use        Airlockdoors__doorstatus__rep
- use        Airlockdoors__airlockdoor
- use        Airlockdoors__airlockdoor___axiom
- use        Airlockdoors__innerdoor
- use        Airlockdoors__doorstatus___axiom
- use        Airlockdoors__lockstatus___axiom
- use        Airlockdoors__airlockdoor___axiom
- use        Airlockdoors__innerdoor___axiom
-
- let def #"airlockdoors.ads" 39 0 0#"W:diverges:N" "GP_Subp:airlockdoors.ads:39" 
-   (__void_param : unit)
-  requires { #"airlockdoors.ads" 39 0 0# true }
-  ensures { #"airlockdoors.ads" 39 0 0# (#"airlockdoors.ads" 42 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:airlockdoors.ads:42:14" "GP_Id:3" "comment:     Post => innerDoor.door = Closed;
-             ^ airlockdoors.ads:42:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:4009" "GP_Sloc:airlockdoors.ads:42:14" ((Airlockdoors__doorstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 1) ) )) }
-   =
-  ( () (* Assume dynamic invariants of inputs of the subprogram airlockdoors.ads:39 *)
-  ;
-   assume {  (Airlockdoors__airlockdoor___axiom.dynamic_invariant { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content } True False True True) };
-   assume {  true };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram airlockdoors.ads:39 *)
-  ;
-  () (* Check for RTE in the Pre of the subprogram airlockdoors.ads:39 *)
-  ;
-   abstract ensures {true}(let _ = ((Airlockdoors__doorstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 0) in (
-   ()))
-   end ;
-  () (* Assume Pre of the subprogram airlockdoors.ads:39 *)
-  ;
-   assume {  ((Airlockdoors__doorstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 0) };
-   try
-   ( ( "GP_Sloc:airlockdoors.adb:37:11" (#"airlockdoors.adb" 37 0 0# ()) );
-   ( "GP_Sloc:airlockdoors.adb:37:7" (#"airlockdoors.adb" 37 0 0# (if (((Airlockdoors__doorstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 0)) then (
-    ( ( "GP_Sloc:airlockdoors.adb:38:10" (#"airlockdoors.adb" 38 0 0# ()) );
-    ( "GP_Sloc:airlockdoors.adb:38:25" (#"airlockdoors.adb" 38 0 0# (let temp___201 = (let temp___200 = { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content } in (
-     ( #"airlockdoors.adb" 38 0 0# abstract ensures {true}(let _ = (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door((Airlockdoors__airlockdoor.__split_fields(temp___200)))) in (
-      ()))
-      end ;
-     { ( temp___200 ) with Airlockdoors__airlockdoor.__split_fields = { ( (Airlockdoors__airlockdoor.__split_fields(temp___200)) ) with Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door = (Airlockdoors__doorstatus__rep.of_rep(1)) } } )))
-     in (
-     #"airlockdoors.adb" 38 0 0# Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content <- ( (Airlockdoors__airlockdoor.__split_fields(temp___201)) )))
-    ) ) )) else (
-    ()))) );
-    raise Return__exc )
-  with
-   Return__exc -> ()
-  end;
-   abstract ensures {true}(let _ = ((Airlockdoors__doorstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 1) in (
-   ()))
-   end  )
-end
-
-(* Module for checking contracts and absence of run-time errors in subprogram "lockouterdoor" defined at airlockdoors.ads:48, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
-module Airlockdoors__lockouterdoor__subprogram_def
+(* Module for checking contracts and absence of run-time errors in subprogram "lockairlockdoor" defined at airlockdoors.ads:32, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+module Airlockdoors__lockairlockdoor__subprogram_def
  use import "_gnatprove_standard".Main
  use import "int".Int
  use        "_gnatprove_standard".Boolean
  use        Movement__operationstatus___axiom
- use        Movement__currentoperationstatus
  use        Airlockdoors__doorstatus
  use        Airlockdoors__doorstatus__rep
  use        Airlockdoors__lockstatus
  use        Airlockdoors__lockstatus__rep
  use        Airlockdoors__airlockdoor
  use        Airlockdoors__airlockdoor___axiom
- use        Airlockdoors__outerdoor
- use        Airlockdoors__innerdoor
+ use        Airlockdoors__lockairlockdoor__doorone
+ use        Airlockdoors__lockairlockdoor__currentoperationstatus
+ use        Airlockdoors__lockairlockdoor__doortwo
  use        Airlockdoors__doorstatus___axiom
  use        Airlockdoors__lockstatus___axiom
  use        Airlockdoors__airlockdoor___axiom
- use        Airlockdoors__outerdoor___axiom
- use        Airlockdoors__innerdoor___axiom
+ use        Airlockdoors__lockairlockdoor__doorone___axiom
+ use        Airlockdoors__lockairlockdoor__currentoperationstatus___axiom
+ use        Airlockdoors__lockairlockdoor__doortwo___axiom
  use        Movement__operationstatus___axiom
- use        Movement__currentoperationstatus___axiom
 
- let def #"airlockdoors.ads" 48 0 0#"W:diverges:N" "GP_Subp:airlockdoors.ads:48" 
+ let def #"airlockdoors.ads" 32 0 0#"W:diverges:N" "GP_Subp:airlockdoors.ads:32" 
    (__void_param : unit)
-  requires { #"airlockdoors.ads" 48 0 0# true }
-  ensures { #"airlockdoors.ads" 48 0 0# (#"airlockdoors.ads" 51 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:airlockdoors.ads:51:14" "GP_Id:4" "comment:     Post => outerDoor.lock = Locked;
-             ^ airlockdoors.ads:51:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:4084" "GP_Sloc:airlockdoors.ads:51:14" ((Airlockdoors__lockstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 0) ) )) }
+  requires { #"airlockdoors.ads" 32 0 0# true }
+  ensures { #"airlockdoors.ads" 32 0 0# (#"airlockdoors.ads" 38 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:airlockdoors.ads:38:14" "GP_Id:2" "comment:     Post => doorOne.lock = Locked;
+             ^ airlockdoors.ads:38:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:3581" "GP_Sloc:airlockdoors.ads:38:14" ((Airlockdoors__lockstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__lockairlockdoor__doorone.doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 0) ) )) }
    =
-  ( () (* Assume dynamic invariants of inputs of the subprogram airlockdoors.ads:48 *)
+  ( () (* Assume dynamic invariants of inputs of the subprogram airlockdoors.ads:32 *)
   ;
-   assume {  (Airlockdoors__airlockdoor___axiom.dynamic_invariant { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content } True False True True) };
-   assume {  (Airlockdoors__airlockdoor___axiom.dynamic_invariant { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content } True False True True) };
-   assume {  (Movement__operationstatus___axiom.dynamic_invariant Movement__currentoperationstatus.currentoperationstatus.int__content True False True True) };
+   assume {  (Airlockdoors__airlockdoor___axiom.dynamic_invariant { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__lockairlockdoor__doorone.doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content } True False True True) };
+   assume {  (Movement__operationstatus___axiom.dynamic_invariant Airlockdoors__lockairlockdoor__currentoperationstatus.currentoperationstatus.int__content True False True True) };
+   assume {  (Airlockdoors__airlockdoor___axiom.dynamic_invariant Airlockdoors__lockairlockdoor__doortwo.doortwo True False True True) };
    assume {  true };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram airlockdoors.ads:48 *)
+  () (* Declarations introduced by the compiler at the beginning of the subprogram airlockdoors.ads:32 *)
   ;
-  () (* Check for RTE in the Pre of the subprogram airlockdoors.ads:48 *)
+  () (* Check for RTE in the Pre of the subprogram airlockdoors.ads:32 *)
   ;
-   abstract ensures {true}(let _ = ( ((Airlockdoors__doorstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 1) && ((Airlockdoors__lockstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 1) ) in (
+   abstract ensures {true}(let _ = ( ((Airlockdoors__doorstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__lockairlockdoor__doorone.doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 1) && ((Airlockdoors__lockstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__lockairlockdoor__doorone.doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 1) ) in (
    ()))
    end ;
-  () (* Assume Pre of the subprogram airlockdoors.ads:48 *)
+  () (* Assume Pre of the subprogram airlockdoors.ads:32 *)
   ;
-   assume {  ( ((Airlockdoors__doorstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 1) /\ ((Airlockdoors__lockstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 1) ) };
+   assume {  ( ((Airlockdoors__doorstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__lockairlockdoor__doorone.doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 1) /\ ((Airlockdoors__lockstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__lockairlockdoor__doorone.doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 1) ) };
    try
-   ( ( "GP_Sloc:airlockdoors.adb:48:11" (#"airlockdoors.adb" 48 0 0# ()) );
-   ( "GP_Sloc:airlockdoors.adb:48:39" (#"airlockdoors.adb" 48 0 0# ()) );
-   ( "GP_Sloc:airlockdoors.adb:48:7" (#"airlockdoors.adb" 48 0 0# (if ((Boolean.andb(((Airlockdoors__doorstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 1)) (((Airlockdoors__lockstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 1)))) then (
-    ( ( "GP_Sloc:airlockdoors.adb:49:10" (#"airlockdoors.adb" 49 0 0# ()) );
-    ( "GP_Sloc:airlockdoors.adb:49:25" (#"airlockdoors.adb" 49 0 0# (let temp___203 = (let temp___202 = { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content } in (
-     ( #"airlockdoors.adb" 49 0 0# abstract ensures {true}(let _ = (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock((Airlockdoors__airlockdoor.__split_fields(temp___202)))) in (
+   ( ( "GP_Sloc:airlockdoors.adb:34:7" (#"airlockdoors.adb" 34 0 0# (if ((Boolean.andb(((Airlockdoors__doorstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__lockairlockdoor__doorone.doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 1)) (((Airlockdoors__lockstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__lockairlockdoor__doorone.doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 1)))) then (
+    ( ( "GP_Sloc:airlockdoors.adb:35:23" (#"airlockdoors.adb" 35 0 0# (let temp___196 = (let temp___195 = { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__lockairlockdoor__doorone.doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content } in (
+     ( #"airlockdoors.adb" 35 0 0# abstract ensures {true}(let _ = (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock((Airlockdoors__airlockdoor.__split_fields(temp___195)))) in (
       ()))
       end ;
-     { ( temp___202 ) with Airlockdoors__airlockdoor.__split_fields = { ( (Airlockdoors__airlockdoor.__split_fields(temp___202)) ) with Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock = (Airlockdoors__lockstatus__rep.of_rep(0)) } } )))
+     { ( temp___195 ) with Airlockdoors__airlockdoor.__split_fields = { ( (Airlockdoors__airlockdoor.__split_fields(temp___195)) ) with Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock = (Airlockdoors__lockstatus__rep.of_rep(0)) } } )))
      in (
-     #"airlockdoors.adb" 49 0 0# Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content <- ( (Airlockdoors__airlockdoor.__split_fields(temp___203)) )))
+     #"airlockdoors.adb" 35 0 0# Airlockdoors__lockairlockdoor__doorone.doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content <- ( (Airlockdoors__airlockdoor.__split_fields(temp___196)) )))
     ) );
-    ( "GP_Sloc:airlockdoors.adb:50:14" (#"airlockdoors.adb" 50 0 0# ()) );
-    ( "GP_Sloc:airlockdoors.adb:50:10" (#"airlockdoors.adb" 50 0 0# (if (((Airlockdoors__lockstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 0)) then (
-     ( ( "GP_Sloc:airlockdoors.adb:51:13" (#"airlockdoors.adb" 51 0 0# ()) );
-     ( "GP_Sloc:airlockdoors.adb:51:36" (#"airlockdoors.adb" 51 0 0# #"airlockdoors.adb" 51 0 0# Movement__currentoperationstatus.currentoperationstatus.int__content <- ( 0 )) ) )) else (
+    ( "GP_Sloc:airlockdoors.adb:36:10" (#"airlockdoors.adb" 36 0 0# (if (((Airlockdoors__lockstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock((Airlockdoors__airlockdoor.__split_fields(Airlockdoors__lockairlockdoor__doortwo.doortwo)))))) = 0)) then (
+     ( "GP_Sloc:airlockdoors.adb:37:36" (#"airlockdoors.adb" 37 0 0# #"airlockdoors.adb" 37 0 0# Airlockdoors__lockairlockdoor__currentoperationstatus.currentoperationstatus.int__content <- ( 0 )) )) else (
      ()))) ) )) else (
     ()))) );
     raise Return__exc )
   with
    Return__exc -> ()
   end;
-   abstract ensures {true}(let _ = ((Airlockdoors__lockstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 0) in (
+   abstract ensures {true}(let _ = ((Airlockdoors__lockstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__lockairlockdoor__doorone.doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 0) in (
    ()))
    end  )
 end
 
-(* Module for checking contracts and absence of run-time errors in subprogram "unlockouterdoor" defined at airlockdoors.ads:54, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
-module Airlockdoors__unlockouterdoor__subprogram_def
+(* Module for checking contracts and absence of run-time errors in subprogram "unlockairlockdoor" defined at airlockdoors.ads:41, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+module Airlockdoors__unlockairlockdoor__subprogram_def
  use import "_gnatprove_standard".Main
  use import "int".Int
  use        "_gnatprove_standard".Boolean
  use        Movement__depthmonitor___axiom
- use        Movement__currentdepth
  use        Movement__operationstatus___axiom
- use        Movement__currentoperationstatus
  use        Airlockdoors__lockstatus
  use        Airlockdoors__lockstatus__rep
  use        Airlockdoors__airlockdoor
  use        Airlockdoors__airlockdoor___axiom
- use        Airlockdoors__outerdoor
+ use        Airlockdoors__unlockairlockdoor__doorone
+ use        Airlockdoors__unlockairlockdoor__currentoperationstatus
+ use        Airlockdoors__unlockairlockdoor__currentdepth
  use        Airlockdoors__doorstatus___axiom
  use        Airlockdoors__lockstatus___axiom
  use        Airlockdoors__airlockdoor___axiom
- use        Airlockdoors__outerdoor___axiom
+ use        Airlockdoors__unlockairlockdoor__doorone___axiom
+ use        Airlockdoors__unlockairlockdoor__currentoperationstatus___axiom
+ use        Airlockdoors__unlockairlockdoor__currentdepth___axiom
  use        Movement__depthmonitor___axiom
- use        Movement__currentdepth___axiom
  use        Movement__operationstatus___axiom
- use        Movement__currentoperationstatus___axiom
 
- let def #"airlockdoors.ads" 54 0 0#"W:diverges:N" "GP_Subp:airlockdoors.ads:54" 
+ let def #"airlockdoors.ads" 41 0 0#"W:diverges:N" "GP_Subp:airlockdoors.ads:41" 
    (__void_param : unit)
-  requires { #"airlockdoors.ads" 54 0 0# true }
-  ensures { #"airlockdoors.ads" 54 0 0# (#"airlockdoors.ads" 57 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:airlockdoors.ads:57:14" "GP_Id:5" "comment:     Post => outerDoor.lock = Unlocked and then currentOperationStatus = Prohibited;
-             ^ airlockdoors.ads:57:14:VC_POSTCONDITION" ( ( "GP_Pretty_Ada:4182" "GP_Sloc:airlockdoors.ads:57:14" ((Airlockdoors__lockstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 1) ) /\ ( "GP_Pretty_Ada:2930" "GP_Sloc:airlockdoors.ads:57:72" (Movement__currentoperationstatus.currentoperationstatus.int__content = 1) ) ) )) }
+  requires { #"airlockdoors.ads" 41 0 0# true }
+  ensures { #"airlockdoors.ads" 41 0 0# (#"airlockdoors.ads" 47 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:airlockdoors.ads:47:14" "GP_Id:3" "comment:     Post => doorOne.lock = Unlocked
+             ^ airlockdoors.ads:47:14:VC_POSTCONDITION" ( ( "GP_Pretty_Ada:3665" "GP_Sloc:airlockdoors.ads:47:14" ((Airlockdoors__lockstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__unlockairlockdoor__doorone.doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 1) ) /\ ( "GP_Pretty_Ada:2825" "GP_Sloc:airlockdoors.ads:48:38" (Airlockdoors__unlockairlockdoor__currentoperationstatus.currentoperationstatus.int__content = 1) ) ) )) }
    =
-  ( () (* Assume dynamic invariants of inputs of the subprogram airlockdoors.ads:54 *)
+  ( () (* Assume dynamic invariants of inputs of the subprogram airlockdoors.ads:41 *)
   ;
-   assume {  (Airlockdoors__airlockdoor___axiom.dynamic_invariant { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content } True False True True) };
-   assume {  (Movement__depthmonitor___axiom.dynamic_invariant Movement__currentdepth.currentdepth.int__content True False True True) };
-   assume {  (Movement__operationstatus___axiom.dynamic_invariant Movement__currentoperationstatus.currentoperationstatus.int__content True False True True) };
+   assume {  (Airlockdoors__airlockdoor___axiom.dynamic_invariant { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__unlockairlockdoor__doorone.doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content } True False True True) };
+   assume {  (Movement__operationstatus___axiom.dynamic_invariant Airlockdoors__unlockairlockdoor__currentoperationstatus.currentoperationstatus.int__content True False True True) };
+   assume {  (Movement__depthmonitor___axiom.dynamic_invariant Airlockdoors__unlockairlockdoor__currentdepth.currentdepth True False True True) };
    assume {  true };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram airlockdoors.ads:54 *)
+  () (* Declarations introduced by the compiler at the beginning of the subprogram airlockdoors.ads:41 *)
   ;
-  () (* Check for RTE in the Pre of the subprogram airlockdoors.ads:54 *)
+  () (* Check for RTE in the Pre of the subprogram airlockdoors.ads:41 *)
   ;
-   abstract ensures {true}(let _ = ( (Movement__currentdepth.currentdepth.int__content = 0) && ((Airlockdoors__lockstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 0) ) in (
+   abstract ensures {true}(let _ = ( (Airlockdoors__unlockairlockdoor__currentdepth.currentdepth = 0) && ((Airlockdoors__lockstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__unlockairlockdoor__doorone.doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 0) ) in (
    ()))
    end ;
-  () (* Assume Pre of the subprogram airlockdoors.ads:54 *)
+  () (* Assume Pre of the subprogram airlockdoors.ads:41 *)
   ;
-   assume {  ( (Movement__currentdepth.currentdepth.int__content = 0) /\ ((Airlockdoors__lockstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 0) ) };
+   assume {  ( (Airlockdoors__unlockairlockdoor__currentdepth.currentdepth = 0) /\ ((Airlockdoors__lockstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__unlockairlockdoor__doorone.doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 0) ) };
    try
-   ( ( "GP_Sloc:airlockdoors.adb:59:11" (#"airlockdoors.adb" 59 0 0# ()) );
-   ( "GP_Sloc:airlockdoors.adb:59:39" (#"airlockdoors.adb" 59 0 0# ()) );
-   ( "GP_Sloc:airlockdoors.adb:59:7" (#"airlockdoors.adb" 59 0 0# (if ((Boolean.andb(((Airlockdoors__lockstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 0)) ((Movement__currentdepth.currentdepth.int__content = 0)))) then (
-    ( ( "GP_Sloc:airlockdoors.adb:60:10" (#"airlockdoors.adb" 60 0 0# ()) );
-    ( "GP_Sloc:airlockdoors.adb:60:25" (#"airlockdoors.adb" 60 0 0# (let temp___205 = (let temp___204 = { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content } in (
-     ( #"airlockdoors.adb" 60 0 0# abstract ensures {true}(let _ = (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock((Airlockdoors__airlockdoor.__split_fields(temp___204)))) in (
+   ( ( "GP_Sloc:airlockdoors.adb:47:7" (#"airlockdoors.adb" 47 0 0# (if ((Boolean.andb(((Airlockdoors__lockstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__unlockairlockdoor__doorone.doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 0)) ((Airlockdoors__unlockairlockdoor__currentdepth.currentdepth = 0)))) then (
+    ( ( "GP_Sloc:airlockdoors.adb:48:23" (#"airlockdoors.adb" 48 0 0# (let temp___198 = (let temp___197 = { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__unlockairlockdoor__doorone.doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content } in (
+     ( #"airlockdoors.adb" 48 0 0# abstract ensures {true}(let _ = (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock((Airlockdoors__airlockdoor.__split_fields(temp___197)))) in (
       ()))
       end ;
-     { ( temp___204 ) with Airlockdoors__airlockdoor.__split_fields = { ( (Airlockdoors__airlockdoor.__split_fields(temp___204)) ) with Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock = (Airlockdoors__lockstatus__rep.of_rep(1)) } } )))
+     { ( temp___197 ) with Airlockdoors__airlockdoor.__split_fields = { ( (Airlockdoors__airlockdoor.__split_fields(temp___197)) ) with Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock = (Airlockdoors__lockstatus__rep.of_rep(1)) } } )))
      in (
-     #"airlockdoors.adb" 60 0 0# Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content <- ( (Airlockdoors__airlockdoor.__split_fields(temp___205)) )))
+     #"airlockdoors.adb" 48 0 0# Airlockdoors__unlockairlockdoor__doorone.doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content <- ( (Airlockdoors__airlockdoor.__split_fields(temp___198)) )))
     ) );
-    ( "GP_Sloc:airlockdoors.adb:61:10" (#"airlockdoors.adb" 61 0 0# ()) );
-    ( "GP_Sloc:airlockdoors.adb:61:33" (#"airlockdoors.adb" 61 0 0# #"airlockdoors.adb" 61 0 0# Movement__currentoperationstatus.currentoperationstatus.int__content <- ( 1 )) ) )) else (
+    ( "GP_Sloc:airlockdoors.adb:49:33" (#"airlockdoors.adb" 49 0 0# #"airlockdoors.adb" 49 0 0# Airlockdoors__unlockairlockdoor__currentoperationstatus.currentoperationstatus.int__content <- ( 1 )) ) )) else (
     ()))) );
     raise Return__exc )
   with
    Return__exc -> ()
   end;
-   abstract ensures {true}(let _ = ( ((Airlockdoors__lockstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 1) && (Movement__currentoperationstatus.currentoperationstatus.int__content = 1) ) in (
-   ()))
-   end  )
-end
-
-(* Module for checking contracts and absence of run-time errors in subprogram "lockinnerdoor" defined at airlockdoors.ads:60, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
-module Airlockdoors__lockinnerdoor__subprogram_def
- use import "_gnatprove_standard".Main
- use import "int".Int
- use        "_gnatprove_standard".Boolean
- use        Movement__operationstatus___axiom
- use        Movement__currentoperationstatus
- use        Airlockdoors__doorstatus
- use        Airlockdoors__doorstatus__rep
- use        Airlockdoors__lockstatus
- use        Airlockdoors__lockstatus__rep
- use        Airlockdoors__airlockdoor
- use        Airlockdoors__airlockdoor___axiom
- use        Airlockdoors__outerdoor
- use        Airlockdoors__innerdoor
- use        Airlockdoors__doorstatus___axiom
- use        Airlockdoors__lockstatus___axiom
- use        Airlockdoors__airlockdoor___axiom
- use        Airlockdoors__outerdoor___axiom
- use        Airlockdoors__innerdoor___axiom
- use        Movement__operationstatus___axiom
- use        Movement__currentoperationstatus___axiom
-
- let def #"airlockdoors.ads" 60 0 0#"W:diverges:N" "GP_Subp:airlockdoors.ads:60" 
-   (__void_param : unit)
-  requires { #"airlockdoors.ads" 60 0 0# true }
-  ensures { #"airlockdoors.ads" 60 0 0# (#"airlockdoors.ads" 63 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:airlockdoors.ads:63:14" "GP_Id:6" "comment:     Post => innerDoor.lock = Locked;
-             ^ airlockdoors.ads:63:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:4271" "GP_Sloc:airlockdoors.ads:63:14" ((Airlockdoors__lockstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 0) ) )) }
-   =
-  ( () (* Assume dynamic invariants of inputs of the subprogram airlockdoors.ads:60 *)
-  ;
-   assume {  (Airlockdoors__airlockdoor___axiom.dynamic_invariant { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content } True False True True) };
-   assume {  (Airlockdoors__airlockdoor___axiom.dynamic_invariant { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content } True False True True) };
-   assume {  (Movement__operationstatus___axiom.dynamic_invariant Movement__currentoperationstatus.currentoperationstatus.int__content True False True True) };
-   assume {  true };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram airlockdoors.ads:60 *)
-  ;
-  () (* Check for RTE in the Pre of the subprogram airlockdoors.ads:60 *)
-  ;
-   abstract ensures {true}(let _ = ( ((Airlockdoors__doorstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 1) && ((Airlockdoors__lockstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 1) ) in (
-   ()))
-   end ;
-  () (* Assume Pre of the subprogram airlockdoors.ads:60 *)
-  ;
-   assume {  ( ((Airlockdoors__doorstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 1) /\ ((Airlockdoors__lockstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 1) ) };
-   try
-   ( ( "GP_Sloc:airlockdoors.adb:68:11" (#"airlockdoors.adb" 68 0 0# ()) );
-   ( "GP_Sloc:airlockdoors.adb:68:39" (#"airlockdoors.adb" 68 0 0# ()) );
-   ( "GP_Sloc:airlockdoors.adb:68:7" (#"airlockdoors.adb" 68 0 0# (if ((Boolean.andb(((Airlockdoors__doorstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__door((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 1)) (((Airlockdoors__lockstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 1)))) then (
-    ( ( "GP_Sloc:airlockdoors.adb:69:10" (#"airlockdoors.adb" 69 0 0# ()) );
-    ( "GP_Sloc:airlockdoors.adb:69:25" (#"airlockdoors.adb" 69 0 0# (let temp___207 = (let temp___206 = { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content } in (
-     ( #"airlockdoors.adb" 69 0 0# abstract ensures {true}(let _ = (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock((Airlockdoors__airlockdoor.__split_fields(temp___206)))) in (
-      ()))
-      end ;
-     { ( temp___206 ) with Airlockdoors__airlockdoor.__split_fields = { ( (Airlockdoors__airlockdoor.__split_fields(temp___206)) ) with Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock = (Airlockdoors__lockstatus__rep.of_rep(0)) } } )))
-     in (
-     #"airlockdoors.adb" 69 0 0# Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content <- ( (Airlockdoors__airlockdoor.__split_fields(temp___207)) )))
-    ) );
-    ( "GP_Sloc:airlockdoors.adb:70:14" (#"airlockdoors.adb" 70 0 0# ()) );
-    ( "GP_Sloc:airlockdoors.adb:70:10" (#"airlockdoors.adb" 70 0 0# (if (((Airlockdoors__lockstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__outerdoor.outerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 0)) then (
-     ( ( "GP_Sloc:airlockdoors.adb:71:13" (#"airlockdoors.adb" 71 0 0# ()) );
-     ( "GP_Sloc:airlockdoors.adb:71:36" (#"airlockdoors.adb" 71 0 0# #"airlockdoors.adb" 71 0 0# Movement__currentoperationstatus.currentoperationstatus.int__content <- ( 0 )) ) )) else (
-     ()))) ) )) else (
-    ()))) );
-    raise Return__exc )
-  with
-   Return__exc -> ()
-  end;
-   abstract ensures {true}(let _ = ((Airlockdoors__lockstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 0) in (
-   ()))
-   end  )
-end
-
-(* Module for checking contracts and absence of run-time errors in subprogram "unlockinnerdoor" defined at airlockdoors.ads:66, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
-module Airlockdoors__unlockinnerdoor__subprogram_def
- use import "_gnatprove_standard".Main
- use import "int".Int
- use        "_gnatprove_standard".Boolean
- use        Movement__depthmonitor___axiom
- use        Movement__currentdepth
- use        Movement__operationstatus___axiom
- use        Movement__currentoperationstatus
- use        Airlockdoors__lockstatus
- use        Airlockdoors__lockstatus__rep
- use        Airlockdoors__airlockdoor
- use        Airlockdoors__airlockdoor___axiom
- use        Airlockdoors__innerdoor
- use        Airlockdoors__doorstatus___axiom
- use        Airlockdoors__lockstatus___axiom
- use        Airlockdoors__airlockdoor___axiom
- use        Airlockdoors__innerdoor___axiom
- use        Movement__depthmonitor___axiom
- use        Movement__currentdepth___axiom
- use        Movement__operationstatus___axiom
- use        Movement__currentoperationstatus___axiom
-
- let def #"airlockdoors.ads" 66 0 0#"W:diverges:N" "GP_Subp:airlockdoors.ads:66" 
-   (__void_param : unit)
-  requires { #"airlockdoors.ads" 66 0 0# true }
-  ensures { #"airlockdoors.ads" 66 0 0# (#"airlockdoors.ads" 69 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:airlockdoors.ads:69:14" "GP_Id:7" "comment:     Post => innerDoor.lock = Unlocked and then currentOperationStatus = Prohibited;
-             ^ airlockdoors.ads:69:14:VC_POSTCONDITION" ( ( "GP_Pretty_Ada:4369" "GP_Sloc:airlockdoors.ads:69:14" ((Airlockdoors__lockstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 1) ) /\ ( "GP_Pretty_Ada:3018" "GP_Sloc:airlockdoors.ads:69:72" (Movement__currentoperationstatus.currentoperationstatus.int__content = 1) ) ) )) }
-   =
-  ( () (* Assume dynamic invariants of inputs of the subprogram airlockdoors.ads:66 *)
-  ;
-   assume {  (Airlockdoors__airlockdoor___axiom.dynamic_invariant { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content } True False True True) };
-   assume {  (Movement__depthmonitor___axiom.dynamic_invariant Movement__currentdepth.currentdepth.int__content True False True True) };
-   assume {  (Movement__operationstatus___axiom.dynamic_invariant Movement__currentoperationstatus.currentoperationstatus.int__content True False True True) };
-   assume {  true };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram airlockdoors.ads:66 *)
-  ;
-  () (* Check for RTE in the Pre of the subprogram airlockdoors.ads:66 *)
-  ;
-   abstract ensures {true}(let _ = ( (Movement__currentdepth.currentdepth.int__content = 0) && ((Airlockdoors__lockstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 0) ) in (
-   ()))
-   end ;
-  () (* Assume Pre of the subprogram airlockdoors.ads:66 *)
-  ;
-   assume {  ( (Movement__currentdepth.currentdepth.int__content = 0) /\ ((Airlockdoors__lockstatus__rep.to_rep (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock (Airlockdoors__airlockdoor.__split_fields { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content }))) = 0) ) };
-   try
-   ( ( "GP_Sloc:airlockdoors.adb:79:11" (#"airlockdoors.adb" 79 0 0# ()) );
-   ( "GP_Sloc:airlockdoors.adb:79:39" (#"airlockdoors.adb" 79 0 0# ()) );
-   ( "GP_Sloc:airlockdoors.adb:79:7" (#"airlockdoors.adb" 79 0 0# (if ((Boolean.andb(((Airlockdoors__lockstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 0)) ((Movement__currentdepth.currentdepth.int__content = 0)))) then (
-    ( ( "GP_Sloc:airlockdoors.adb:80:10" (#"airlockdoors.adb" 80 0 0# ()) );
-    ( "GP_Sloc:airlockdoors.adb:80:25" (#"airlockdoors.adb" 80 0 0# (let temp___209 = (let temp___208 = { Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content } in (
-     ( #"airlockdoors.adb" 80 0 0# abstract ensures {true}(let _ = (Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock((Airlockdoors__airlockdoor.__split_fields(temp___208)))) in (
-      ()))
-      end ;
-     { ( temp___208 ) with Airlockdoors__airlockdoor.__split_fields = { ( (Airlockdoors__airlockdoor.__split_fields(temp___208)) ) with Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock = (Airlockdoors__lockstatus__rep.of_rep(1)) } } )))
-     in (
-     #"airlockdoors.adb" 80 0 0# Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content <- ( (Airlockdoors__airlockdoor.__split_fields(temp___209)) )))
-    ) );
-    ( "GP_Sloc:airlockdoors.adb:81:10" (#"airlockdoors.adb" 81 0 0# ()) );
-    ( "GP_Sloc:airlockdoors.adb:81:33" (#"airlockdoors.adb" 81 0 0# #"airlockdoors.adb" 81 0 0# Movement__currentoperationstatus.currentoperationstatus.int__content <- ( 1 )) ) )) else (
-    ()))) );
-    raise Return__exc )
-  with
-   Return__exc -> ()
-  end;
-   abstract ensures {true}(let _ = ( ((Airlockdoors__lockstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__innerdoor.innerdoor__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 1) && (Movement__currentoperationstatus.currentoperationstatus.int__content = 1) ) in (
+   abstract ensures {true}(let _ = ( ((Airlockdoors__lockstatus__rep.to_rep((Airlockdoors__airlockdoor.rec__airlockdoors__airlockdoor__lock((Airlockdoors__airlockdoor.__split_fields({ Airlockdoors__airlockdoor.__split_fields = Airlockdoors__unlockairlockdoor__doorone.doorone__split_fields.Airlockdoors__airlockdoor.__split_fields__content })))))) = 1) && (Airlockdoors__unlockairlockdoor__currentoperationstatus.currentoperationstatus.int__content = 1) ) in (
    ()))
    end  )
 end
