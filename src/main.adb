@@ -249,65 +249,138 @@ begin
 
    -----------------------------------------------------------------------------
 
---     Put_Line("Load the launcher...");
---     LoadLauncher(torpedoeTube, torpedoeStorage, Torp);
---
---     Put_Line("The launcher is...");
---     Put_Line(torpedoeTube'Image);
---
---     Put_Line("Fire torpedoe...");
---     FireTorpedoe(torpedoeTube, currentDepth);
---
---     Put_Line("The launcher is still...");
---     Put_Line(torpedoeTube'Image);
---
---     Put_Line("Submarine dives to 2000ft");
---     DiveTheSubmarine(2000, currentDepth, currentOperationStatus);
---
---     Put_Line("Current depth of the submarine:");
---     Put_Line(currentDepth'Image);
---
---     Put_Line("Fire torpedoe...");
---     FireTorpedoe(torpedoeTube, currentDepth);
---
---     Put_Line("The launcher is...");
---     Put_Line(torpedoeTube'Image);
---
---     Put_Line("Next torpedoe is in slot");
---     Put_Line(torpLocation(torpedoeStorage, torp)'Image);
---
---     Put_Line("Load the launcher...");
---     LoadLauncher(torpedoeTube, torpedoeStorage, Torp);
---
---     Put_Line("The launcher is...");
---     Put_Line(torpedoeTube'Image);
---
---     Put_Line("Fire torpedoe...");
---     FireTorpedoe(torpedoeTube, currentDepth);
---
---     Put_Line("The launcher is...");
---     Put_Line(torpedoeTube'Image);
---
---     Put_Line("Next torpedoe is in slot");
---     Put_Line(torpLocation(torpedoeStorage, torp)'Image);
---
---     Put_Line("Torpedoe storage check...");
---     Put_Line(CountTorps(torpedoeStorage, torp)'Image);
---
---     Put_Line("Surface the submarine to restock on torpedoes");
---     SurfaceTheSubmarine(currentDepth);
---
---     Put_Line("Current depth of the submarine:");
---     Put_Line(currentDepth'Image);
---
---     Put_Line("Fill torpedo storage..");
---     FillTorpedoeStorage(torpedoeStorage, currentDepth);
---
---     Put_Line("Torpedoe storage check...");
---     Put_Line(CountTorps(torpedoeStorage, torp)'Image);
---
---     Put_Line("Next torpedoe is in slot");
---     Put_Line(torpLocation(torpedoeStorage, torp)'Image);
+   Put_Line("Load the launcher...");
+   LoadLauncher(torpedoeTube, torpedoeStorage, torpLocation(torpedoeStorage, torp));
+
+   Put_Line("The launcher is...");
+   Put_Line(torpedoeTube'Image);
+
+   Put_Line("Fire torpedoe...");
+   FireTorpedoe(torpedoeTube, currentDepth);
+
+   Put_Line("The launcher is still...");
+   Put_Line(torpedoeTube'Image);
+
+   Put_Line("Submarine dives to 2000ft");
+   DiveTheSubmarine(2000, currentDepth, currentOperationStatus);
+
+   Put_Line("Current depth of the submarine:");
+   Put_Line(currentDepth'Image);
+
+   Put_Line("Fire torpedoe...");
+   FireTorpedoe(torpedoeTube, currentDepth);
+
+   Put_Line("The launcher is...");
+   Put_Line(torpedoeTube'Image);
+
+   Put_Line("Next torpedoe is in slot");
+   Put_Line(torpLocation(torpedoeStorage, torp)'Image);
+
+   Put_Line("Load the launcher...");
+   LoadLauncher(torpedoeTube, torpedoeStorage, torpLocation(torpedoeStorage, torp));
+
+   Put_Line("The launcher is...");
+   Put_Line(torpedoeTube'Image);
+
+   Put_Line("Fire torpedoe...");
+   FireTorpedoe(torpedoeTube, currentDepth);
+
+   Put_Line("The launcher is...");
+   Put_Line(torpedoeTube'Image);
+
+   Put_Line("Next torpedoe is in slot");
+   Put_Line(torpLocation(torpedoeStorage, torp)'Image);
+
+   ---
+
+   Put_Line("Load the launcher...");
+   LoadLauncher(torpedoeTube, torpedoeStorage, torpLocation(torpedoeStorage, torp));
+
+   Put_Line("The launcher is...");
+   Put_Line(torpedoeTube'Image);
+
+   Put_Line("Fire torpedoe...");
+   FireTorpedoe(torpedoeTube, currentDepth);
+
+   Put_Line("The launcher is...");
+   Put_Line(torpedoeTube'Image);
+
+   Put_Line("Next torpedoe is in slot");
+   Put_Line(torpLocation(torpedoeStorage, torp)'Image);
+
+   ---
+
+   Put_Line("Load the launcher...");
+   LoadLauncher(torpedoeTube, torpedoeStorage, torpLocation(torpedoeStorage, torp));
+
+   Put_Line("The launcher is...");
+   Put_Line(torpedoeTube'Image);
+
+   Put_Line("Fire torpedoe...");
+   FireTorpedoe(torpedoeTube, currentDepth);
+
+   Put_Line("The launcher is...");
+   Put_Line(torpedoeTube'Image);
+
+   Put_Line("Next torpedoe is in slot");
+   Put_Line(torpLocation(torpedoeStorage, torp)'Image);
+
+   ---
+
+   Put_Line("Load the launcher...");
+   LoadLauncher(torpedoeTube, torpedoeStorage, torpLocation(torpedoeStorage, torp));
+
+   Put_Line("The launcher is...");
+   Put_Line(torpedoeTube'Image);
+
+   Put_Line("Fire torpedoe...");
+   FireTorpedoe(torpedoeTube, currentDepth);
+
+   Put_Line("The launcher is...");
+   Put_Line(torpedoeTube'Image);
+
+   Put_Line("Next torpedoe is in slot");
+   Put_Line(torpLocation(torpedoeStorage, torp)'Image);
+
+   ---
+
+   Put_Line("Load the launcher...");
+   LoadLauncher(torpedoeTube, torpedoeStorage, torpLocation(torpedoeStorage, torp));
+
+   Put_Line("The launcher is...");
+   Put_Line(torpedoeTube'Image);
+
+   Put_Line("Fire torpedoe...");
+   FireTorpedoe(torpedoeTube, currentDepth);
+
+   Put_Line("The launcher is...");
+   Put_Line(torpedoeTube'Image);
+
+
+   Put_Line("Load the launcher...");
+   LoadLauncher(torpedoeTube, torpedoeStorage, torpLocation(torpedoeStorage, torp));
+
+   Put_Line("The launcher is...");
+   Put_Line(torpedoeTube'Image);
+
+
+   Put_Line("Torpedoe storage check...");
+   Put_Line(CountTorps(torpedoeStorage, torp)'Image);
+
+   Put_Line("Surface the submarine to restock on torpedoes");
+   SurfaceTheSubmarine(currentDepth);
+
+   Put_Line("Current depth of the submarine:");
+   Put_Line(currentDepth'Image);
+
+   Put_Line("Fill torpedo storage..");
+   FillTorpedoeStorage(torpedoeStorage, currentDepth);
+
+   Put_Line("Torpedoe storage check...");
+   Put_Line(CountTorps(torpedoeStorage, torp)'Image);
+
+   Put_Line("Next torpedoe is in slot");
+   Put_Line(torpLocation(torpedoeStorage, torp)'Image);
 
    -----------------------------------------------------------------------------
 

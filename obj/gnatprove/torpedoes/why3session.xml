@@ -43,11 +43,17 @@
   <proof prover="0"><result status="valid" steps="14"/></proof>
   </goal>
   <goal name="WP_parameter def.5" expl="loop invariant preservation" proved="true">
-  <proof prover="0"><result status="valid" steps="190"/></proof>
+  <proof prover="0"><result status="valid" steps="204"/></proof>
   </goal>
   <goal name="WP_parameter def.6" expl="postcondition" proved="true">
-  <proof prover="0"><result status="valid" steps="245"/></proof>
+  <proof prover="0"><result status="valid" steps="280"/></proof>
   </goal>
+ </transf>
+ </goal>
+</theory>
+<theory name="Torpedoes__storageisempty__subprogram_def" proved="true">
+ <goal name="WP_parameter def" expl="VC for def" proved="true">
+ <transf name="split_goal_wp_conj" proved="true" >
  </transf>
  </goal>
 </theory>
@@ -118269,6 +118275,39 @@
    <proof prover="1"><result status="unknown" steps="77"/></proof>
    </goal>
   </transf>
+  </goal>
+ </transf>
+ </goal>
+</theory>
+<theory name="Torpedoes__loadlauncher__subprogram_def" proved="true">
+ <goal name="WP_parameter def" expl="VC for def" proved="true">
+ <transf name="split_goal_wp_conj" proved="true" >
+  <goal name="WP_parameter def.0" expl="postcondition" proved="true">
+  <proof prover="0"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="WP_parameter def.1" expl="postcondition" proved="true">
+  <proof prover="0"><result status="valid" steps="21"/></proof>
+  <proof prover="1" obsolete="true"><result status="unknown" steps="97"/></proof>
+  </goal>
+  <goal name="WP_parameter def.2" expl="postcondition" proved="true">
+  <proof prover="0"><result status="valid" steps="42"/></proof>
+  <proof prover="1" obsolete="true"><result status="unknown" steps="129"/></proof>
+  <transf name="split_disj" >
+   <goal name="WP_parameter def.2.0" expl="postcondition">
+   </goal>
+   <goal name="WP_parameter def.2.1" expl="postcondition">
+   <proof prover="1" obsolete="true"><result status="unknown" steps="129"/></proof>
+   </goal>
+  </transf>
+  </goal>
+ </transf>
+ </goal>
+</theory>
+<theory name="Torpedoes__firetorpedoe__subprogram_def" proved="true">
+ <goal name="WP_parameter def" expl="VC for def" proved="true">
+ <transf name="split_goal_wp_conj" proved="true" >
+  <goal name="WP_parameter def.0" expl="postcondition" proved="true">
+  <proof prover="0"><result status="valid" steps="5"/></proof>
   </goal>
  </transf>
  </goal>

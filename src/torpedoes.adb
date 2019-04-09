@@ -50,8 +50,6 @@ is
    -----------------------
    -- Load the launcher --
    -----------------------
-
-
    function TorpLocation (torpedoeStorage : Storage; torp : Torps) return StorageCapacity
    is
       position : StorageCapacity := torpedoeStorage'First;
@@ -69,30 +67,30 @@ is
 
 
 ----------------------------------------------------------------------------------------------
---     procedure LoadLauncher (torpedoeTube : in out Launcher; torpedoeStorage : in out Storage; torp : Torps)
---     is
---     begin
---        if (torpedoeTube = Empty) then
---           torpedoeStorage(TorpLocation(torpedoeStorage, torp)) := Nothing;
---           torpedoeTube := Loaded;
---        end if;
---     end LoadLauncher;
---
---
---
---     -----------------------
---     -- Fire the launcher --
---     -----------------------
---
---     procedure FireTorpedoe (torpedoeTube : in out Launcher; currentDepth : in DepthMonitor)
---     is
---     begin
---        if (currentDepth > DepthMonitor'First) then
---           torpedoeTube := Empty;
---        end if;
---
---     end FireTorpedoe;
---
+   procedure LoadLauncher (torpedoeTube : in out Launcher;
+                           torpedoeStorage : in out Storage;
+                           slot : StorageCapacity)
+   is
+   begin
+      if (torpedoeTube = Empty and StorageIsEmpty(torpedoeStorage) = False) then
+         torpedoeStorage(slot) := Nothing;
+         torpedoeTube := Loaded;
+      end if;
+   end LoadLauncher;
+
+
+   -----------------------
+   -- Fire the launcher --
+   -----------------------
+   procedure FireTorpedoe (torpedoeTube : in out Launcher; currentDepth : in DepthMonitor)
+   is
+   begin
+      if (currentDepth > DepthMonitor'First) then
+         torpedoeTube := Empty;
+      end if;
+
+   end FireTorpedoe;
+
 ------------------------------------------------------------------------------------------------
 
 

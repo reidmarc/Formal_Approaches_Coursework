@@ -1821,11 +1821,11 @@ module Movement__operationstatus__rep
 
 end
 
-(* Module for defining the constant "diveby" defined at movement.ads:18, created in Gnat2Why.Decls.Translate_Constant *)
+(* Module for defining the constant "diveby" defined at movement.ads:10, created in Gnat2Why.Decls.Translate_Constant *)
 module Movement__divethesubmarine__diveby
  use import "_gnatprove_standard".Main
 
- function diveby #"movement.ads" 18 0 0#"model" "model_trace:3027" "name:diveBy" 
+ function diveby #"movement.ads" 10 0 0#"model" "model_trace:3288" "name:diveBy" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS 
@@ -1833,18 +1833,18 @@ module Movement__divethesubmarine__diveby
 
 end
 
-(* Module giving an empty axiom for the entity "diveby" defined at movement.ads:18, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "diveby" defined at movement.ads:10, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Movement__divethesubmarine__diveby___axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining the constant "currentoperationstatus" defined at movement.ads:20, created in Gnat2Why.Decls.Translate_Constant *)
+(* Module for defining the constant "currentoperationstatus" defined at movement.ads:12, created in Gnat2Why.Decls.Translate_Constant *)
 module Movement__divethesubmarine__currentoperationstatus
  use import "_gnatprove_standard".Main
 
- function currentoperationstatus #"movement.ads" 20 0 0#"model" "model_trace:3045" "name:currentOperationStatus" 
+ function currentoperationstatus #"movement.ads" 12 0 0#"model" "model_trace:3306" "name:currentOperationStatus" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS 
@@ -1852,18 +1852,18 @@ module Movement__divethesubmarine__currentoperationstatus
 
 end
 
-(* Module giving an empty axiom for the entity "currentoperationstatus" defined at movement.ads:20, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "currentoperationstatus" defined at movement.ads:12, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Movement__divethesubmarine__currentoperationstatus___axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining the constant "riseby" defined at movement.ads:30, created in Gnat2Why.Decls.Translate_Constant *)
+(* Module for defining the constant "riseby" defined at movement.ads:22, created in Gnat2Why.Decls.Translate_Constant *)
 module Movement__raisethesubmarine__riseby
  use import "_gnatprove_standard".Main
 
- function riseby #"movement.ads" 30 0 0#"model" "model_trace:3102" "name:riseBy" 
+ function riseby #"movement.ads" 22 0 0#"model" "model_trace:3363" "name:riseBy" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS 
@@ -1871,7 +1871,7 @@ module Movement__raisethesubmarine__riseby
 
 end
 
-(* Module giving an empty axiom for the entity "riseby" defined at movement.ads:30, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "riseby" defined at movement.ads:22, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Movement__raisethesubmarine__riseby___axiom
  use import "_gnatprove_standard".Main
 
@@ -2303,7 +2303,7 @@ end
 module Torpedoes__filltorpedoestorage__currentdepth
  use import "_gnatprove_standard".Main
 
- function currentdepth #"torpedoes.ads" 25 0 0#"model" "name:currentDepth" "model_trace:2734" 
+ function currentdepth #"torpedoes.ads" 25 0 0#"model" "name:currentDepth" "model_trace:2828" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS 
@@ -2323,7 +2323,7 @@ module Torpedoes__storagehasemptyslots__torpedoestorage
  use import "_gnatprove_standard".Main
  use        Array__Int__Torpedoes__torps
 
- function torpedoestorage #"torpedoes.ads" 34 0 0#"model_projected" "name:torpedoeStorage" "model_trace:2804" 
+ function torpedoestorage #"torpedoes.ads" 34 0 0#"model_projected" "name:torpedoeStorage" "model_trace:2898" 
    : Array__Int__Torpedoes__torps.map
  
  function attr__ATTRIBUTE_ADDRESS 
@@ -2356,7 +2356,7 @@ module Torpedoes__storageisfull__torpedoestorage
  use import "_gnatprove_standard".Main
  use        Array__Int__Torpedoes__torps
 
- function torpedoestorage #"torpedoes.ads" 30 0 0#"model_projected" "name:torpedoeStorage" "model_trace:2769" 
+ function torpedoestorage #"torpedoes.ads" 30 0 0#"model_projected" "name:torpedoeStorage" "model_trace:2863" 
    : Array__Int__Torpedoes__torps.map
  
  function attr__ATTRIBUTE_ADDRESS 
@@ -2384,12 +2384,12 @@ module Torpedoes__storageisfull
 
 end
 
-(* Module for axiomatizing type "T17s" defined at torpedoes.ads:31, created in Gnat2Why.Types.Translate_Type *)
-module Torpedoes__storageisfull__L16s__T17s
+(* Module for axiomatizing type "T27s" defined at torpedoes.ads:31, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__storageisfull__L26s__T27s
  use import "_gnatprove_standard".Main
  use import "int".Int
 
- type t17s =
+ type t27s =
   < range 0 5 >
  
  function first 
@@ -2405,40 +2405,40 @@ module Torpedoes__storageisfull__L16s__T17s
   ( (first <= x) /\ (x <= last) )
  
  clone export "ada__model".Static_Discrete with
- type t = t17s, 
+ type t = t27s, 
  function first = first, 
  function last = last, 
  predicate in_range = in_range
  
- type t17s__ref =
-  { mutable t17s__content "model_trace:" "name:" : t17s }
+ type t27s__ref =
+  { mutable t27s__content "model_trace:" "name:" : t27s }
  
- function t17s__ref___projection 
-   (a : t17s__ref) : t17s =
-  a.t17s__content
+ function t27s__ref___projection 
+   (a : t27s__ref) : t27s =
+  a.t27s__content
  
- meta "model_projection" function t17s__ref___projection
+ meta "model_projection" function t27s__ref___projection
  
- meta "inline : no" function t17s__ref___projection
+ meta "inline : no" function t27s__ref___projection
  
- val t17s__havoc 
-   (x : t17s__ref) : unit
+ val t27s__havoc 
+   (x : t27s__ref) : unit
   writes {x}
 
 end
 
-(* Module defining to_rep/of_rep for type "T17s" defined at torpedoes.ads:31, created in Gnat2Why.Types.Translate_Type *)
-module Torpedoes__storageisfull__L16s__T17s__rep
- use        Torpedoes__storageisfull__L16s__T17s
+(* Module defining to_rep/of_rep for type "T27s" defined at torpedoes.ads:31, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__storageisfull__L26s__T27s__rep
+ use        Torpedoes__storageisfull__L26s__T27s
  use import "_gnatprove_standard".Main
 
  function to_rep 
-   (x : Torpedoes__storageisfull__L16s__T17s.t17s) : int =
-  (Torpedoes__storageisfull__L16s__T17s.t17s'int x)
+   (x : Torpedoes__storageisfull__L26s__T27s.t27s) : int =
+  (Torpedoes__storageisfull__L26s__T27s.t27s'int x)
  
  clone export "ada__model".Rep_Proj_Int with
- type t = Torpedoes__storageisfull__L16s__T17s.t17s, 
- predicate in_range = Torpedoes__storageisfull__L16s__T17s.in_range, 
+ type t = Torpedoes__storageisfull__L26s__T27s.t27s, 
+ predicate in_range = Torpedoes__storageisfull__L26s__T27s.in_range, 
  function to_rep = to_rep
  
  meta "model_projection" function to_rep
@@ -2510,12 +2510,12 @@ module Torpedoes__storageisfull__L6s__T7s__rep
 
 end
 
-(* Module for axiomatizing type "T20s" defined at torpedoes.ads:35, created in Gnat2Why.Types.Translate_Type *)
-module Torpedoes__storagehasemptyslots__L19s__T20s
+(* Module for axiomatizing type "T30s" defined at torpedoes.ads:35, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__storagehasemptyslots__L29s__T30s
  use import "_gnatprove_standard".Main
  use import "int".Int
 
- type t20s =
+ type t30s =
   < range 0 5 >
  
  function first 
@@ -2531,40 +2531,40 @@ module Torpedoes__storagehasemptyslots__L19s__T20s
   ( (first <= x) /\ (x <= last) )
  
  clone export "ada__model".Static_Discrete with
- type t = t20s, 
+ type t = t30s, 
  function first = first, 
  function last = last, 
  predicate in_range = in_range
  
- type t20s__ref =
-  { mutable t20s__content "model_trace:" "name:" : t20s }
+ type t30s__ref =
+  { mutable t30s__content "model_trace:" "name:" : t30s }
  
- function t20s__ref___projection 
-   (a : t20s__ref) : t20s =
-  a.t20s__content
+ function t30s__ref___projection 
+   (a : t30s__ref) : t30s =
+  a.t30s__content
  
- meta "model_projection" function t20s__ref___projection
+ meta "model_projection" function t30s__ref___projection
  
- meta "inline : no" function t20s__ref___projection
+ meta "inline : no" function t30s__ref___projection
  
- val t20s__havoc 
-   (x : t20s__ref) : unit
+ val t30s__havoc 
+   (x : t30s__ref) : unit
   writes {x}
 
 end
 
-(* Module defining to_rep/of_rep for type "T20s" defined at torpedoes.ads:35, created in Gnat2Why.Types.Translate_Type *)
-module Torpedoes__storagehasemptyslots__L19s__T20s__rep
- use        Torpedoes__storagehasemptyslots__L19s__T20s
+(* Module defining to_rep/of_rep for type "T30s" defined at torpedoes.ads:35, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__storagehasemptyslots__L29s__T30s__rep
+ use        Torpedoes__storagehasemptyslots__L29s__T30s
  use import "_gnatprove_standard".Main
 
  function to_rep 
-   (x : Torpedoes__storagehasemptyslots__L19s__T20s.t20s) : int =
-  (Torpedoes__storagehasemptyslots__L19s__T20s.t20s'int x)
+   (x : Torpedoes__storagehasemptyslots__L29s__T30s.t30s) : int =
+  (Torpedoes__storagehasemptyslots__L29s__T30s.t30s'int x)
  
  clone export "ada__model".Rep_Proj_Int with
- type t = Torpedoes__storagehasemptyslots__L19s__T20s.t20s, 
- predicate in_range = Torpedoes__storagehasemptyslots__L19s__T20s.in_range, 
+ type t = Torpedoes__storagehasemptyslots__L29s__T30s.t30s, 
+ predicate in_range = Torpedoes__storagehasemptyslots__L29s__T30s.in_range, 
  function to_rep = to_rep
  
  meta "model_projection" function to_rep
@@ -2636,12 +2636,12 @@ module Torpedoes__storagehasemptyslots__L8s__T9s__rep
 
 end
 
-(* Module for defining the constant "torpedoestorage" defined at torpedoes.ads:39, created in Gnat2Why.Decls.Translate_Constant *)
-module Torpedoes__counttorps__torpedoestorage
+(* Module for defining the constant "torpedoestorage" defined at torpedoes.ads:38, created in Gnat2Why.Decls.Translate_Constant *)
+module Torpedoes__storageisempty__torpedoestorage
  use import "_gnatprove_standard".Main
  use        Array__Int__Torpedoes__torps
 
- function torpedoestorage #"torpedoes.ads" 39 0 0#"model_projected" "name:torpedoeStorage" "model_trace:2839" 
+ function torpedoestorage #"torpedoes.ads" 38 0 0#"model_projected" "name:torpedoeStorage" "model_trace:2933" 
    : Array__Int__Torpedoes__torps.map
  
  function attr__ATTRIBUTE_ADDRESS 
@@ -2649,18 +2649,177 @@ module Torpedoes__counttorps__torpedoestorage
 
 end
 
-(* Module giving an empty axiom for the entity "torpedoestorage" defined at torpedoes.ads:39, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "torpedoestorage" defined at torpedoes.ads:38, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Torpedoes__storageisempty__torpedoestorage___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for possibly declaring a logic function for "storageisempty" defined at torpedoes.ads:38, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Torpedoes__storageisempty
+ use import "_gnatprove_standard".Main
+ use        Array__Int__Torpedoes__torps
+
+ function storageisempty 
+   (torpedoestorage : Array__Int__Torpedoes__torps.map) : bool
+ 
+ predicate storageisempty__function_guard 
+   (result : bool) (torpedoestorage : Array__Int__Torpedoes__torps.map) 
+
+end
+
+(* Module for axiomatizing type "T33s" defined at torpedoes.ads:39, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__storageisempty__L32s__T33s
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type t33s =
+  < range 0 5 >
+ 
+ function first 
+   : int =
+  0
+ 
+ function last 
+   : int =
+  5
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = t33s, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type t33s__ref =
+  { mutable t33s__content "model_trace:" "name:" : t33s }
+ 
+ function t33s__ref___projection 
+   (a : t33s__ref) : t33s =
+  a.t33s__content
+ 
+ meta "model_projection" function t33s__ref___projection
+ 
+ meta "inline : no" function t33s__ref___projection
+ 
+ val t33s__havoc 
+   (x : t33s__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "T33s" defined at torpedoes.ads:39, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__storageisempty__L32s__T33s__rep
+ use        Torpedoes__storageisempty__L32s__T33s
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Torpedoes__storageisempty__L32s__T33s.t33s) : int =
+  (Torpedoes__storageisempty__L32s__T33s.t33s'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Torpedoes__storageisempty__L32s__T33s.t33s, 
+ predicate in_range = Torpedoes__storageisempty__L32s__T33s.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "T11s" defined at torpedoes.ads:39, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__storageisempty__L10s__T11s
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type t11s =
+  < range 0 5 >
+ 
+ function first 
+   : int =
+  0
+ 
+ function last 
+   : int =
+  5
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = t11s, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type t11s__ref =
+  { mutable t11s__content "model_trace:" "name:" : t11s }
+ 
+ function t11s__ref___projection 
+   (a : t11s__ref) : t11s =
+  a.t11s__content
+ 
+ meta "model_projection" function t11s__ref___projection
+ 
+ meta "inline : no" function t11s__ref___projection
+ 
+ val t11s__havoc 
+   (x : t11s__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "T11s" defined at torpedoes.ads:39, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__storageisempty__L10s__T11s__rep
+ use        Torpedoes__storageisempty__L10s__T11s
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Torpedoes__storageisempty__L10s__T11s.t11s) : int =
+  (Torpedoes__storageisempty__L10s__T11s.t11s'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Torpedoes__storageisempty__L10s__T11s.t11s, 
+ predicate in_range = Torpedoes__storageisempty__L10s__T11s.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for defining the constant "torpedoestorage" defined at torpedoes.ads:42, created in Gnat2Why.Decls.Translate_Constant *)
+module Torpedoes__counttorps__torpedoestorage
+ use import "_gnatprove_standard".Main
+ use        Array__Int__Torpedoes__torps
+
+ function torpedoestorage #"torpedoes.ads" 42 0 0#"model_projected" "name:torpedoeStorage" "model_trace:2968" 
+   : Array__Int__Torpedoes__torps.map
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "torpedoestorage" defined at torpedoes.ads:42, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Torpedoes__counttorps__torpedoestorage___axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining the constant "torp" defined at torpedoes.ads:39, created in Gnat2Why.Decls.Translate_Constant *)
+(* Module for defining the constant "torp" defined at torpedoes.ads:42, created in Gnat2Why.Decls.Translate_Constant *)
 module Torpedoes__counttorps__torp
  use import "_gnatprove_standard".Main
 
- function torp #"torpedoes.ads" 39 0 0#"model" "model_trace:2848" "name:torp" 
+ function torp #"torpedoes.ads" 42 0 0#"model" "model_trace:2977" "name:torp" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS 
@@ -2668,14 +2827,14 @@ module Torpedoes__counttorps__torp
 
 end
 
-(* Module giving an empty axiom for the entity "torp" defined at torpedoes.ads:39, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "torp" defined at torpedoes.ads:42, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Torpedoes__counttorps__torp___axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "counttorps" defined at torpedoes.ads:39, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "counttorps" defined at torpedoes.ads:42, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Torpedoes__counttorps
  use import "_gnatprove_standard".Main
  use        Array__Int__Torpedoes__torps
@@ -2688,12 +2847,12 @@ module Torpedoes__counttorps
 
 end
 
-(* Module for defining the constant "torpedoestorage" defined at torpedoes.ads:48, created in Gnat2Why.Decls.Translate_Constant *)
+(* Module for defining the constant "torpedoestorage" defined at torpedoes.ads:50, created in Gnat2Why.Decls.Translate_Constant *)
 module Torpedoes__torpexists__torpedoestorage
  use import "_gnatprove_standard".Main
  use        Array__Int__Torpedoes__torps
 
- function torpedoestorage #"torpedoes.ads" 48 0 0#"model_projected" "name:torpedoeStorage" "model_trace:2884" 
+ function torpedoestorage #"torpedoes.ads" 50 0 0#"model_projected" "name:torpedoeStorage" "model_trace:3013" 
    : Array__Int__Torpedoes__torps.map
  
  function attr__ATTRIBUTE_ADDRESS 
@@ -2701,18 +2860,18 @@ module Torpedoes__torpexists__torpedoestorage
 
 end
 
-(* Module giving an empty axiom for the entity "torpedoestorage" defined at torpedoes.ads:48, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "torpedoestorage" defined at torpedoes.ads:50, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Torpedoes__torpexists__torpedoestorage___axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining the constant "torp" defined at torpedoes.ads:48, created in Gnat2Why.Decls.Translate_Constant *)
+(* Module for defining the constant "torp" defined at torpedoes.ads:50, created in Gnat2Why.Decls.Translate_Constant *)
 module Torpedoes__torpexists__torp
  use import "_gnatprove_standard".Main
 
- function torp #"torpedoes.ads" 48 0 0#"model" "name:torp" "model_trace:2893" 
+ function torp #"torpedoes.ads" 50 0 0#"model" "name:torp" "model_trace:3022" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS 
@@ -2720,14 +2879,14 @@ module Torpedoes__torpexists__torp
 
 end
 
-(* Module giving an empty axiom for the entity "torp" defined at torpedoes.ads:48, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "torp" defined at torpedoes.ads:50, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Torpedoes__torpexists__torp___axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "torpexists" defined at torpedoes.ads:48, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "torpexists" defined at torpedoes.ads:50, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Torpedoes__torpexists
  use import "_gnatprove_standard".Main
  use        Array__Int__Torpedoes__torps
@@ -2740,12 +2899,12 @@ module Torpedoes__torpexists
 
 end
 
-(* Module for axiomatizing type "T23s" defined at torpedoes.ads:49, created in Gnat2Why.Types.Translate_Type *)
-module Torpedoes__torpexists__L22s__T23s
+(* Module for axiomatizing type "T36s" defined at torpedoes.ads:51, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__torpexists__L35s__T36s
  use import "_gnatprove_standard".Main
  use import "int".Int
 
- type t23s =
+ type t36s =
   < range 0 5 >
  
  function first 
@@ -2761,40 +2920,40 @@ module Torpedoes__torpexists__L22s__T23s
   ( (first <= x) /\ (x <= last) )
  
  clone export "ada__model".Static_Discrete with
- type t = t23s, 
+ type t = t36s, 
  function first = first, 
  function last = last, 
  predicate in_range = in_range
  
- type t23s__ref =
-  { mutable t23s__content "model_trace:" "name:" : t23s }
+ type t36s__ref =
+  { mutable t36s__content "model_trace:" "name:" : t36s }
  
- function t23s__ref___projection 
-   (a : t23s__ref) : t23s =
-  a.t23s__content
+ function t36s__ref___projection 
+   (a : t36s__ref) : t36s =
+  a.t36s__content
  
- meta "model_projection" function t23s__ref___projection
+ meta "model_projection" function t36s__ref___projection
  
- meta "inline : no" function t23s__ref___projection
+ meta "inline : no" function t36s__ref___projection
  
- val t23s__havoc 
-   (x : t23s__ref) : unit
+ val t36s__havoc 
+   (x : t36s__ref) : unit
   writes {x}
 
 end
 
-(* Module defining to_rep/of_rep for type "T23s" defined at torpedoes.ads:49, created in Gnat2Why.Types.Translate_Type *)
-module Torpedoes__torpexists__L22s__T23s__rep
- use        Torpedoes__torpexists__L22s__T23s
+(* Module defining to_rep/of_rep for type "T36s" defined at torpedoes.ads:51, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__torpexists__L35s__T36s__rep
+ use        Torpedoes__torpexists__L35s__T36s
  use import "_gnatprove_standard".Main
 
  function to_rep 
-   (x : Torpedoes__torpexists__L22s__T23s.t23s) : int =
-  (Torpedoes__torpexists__L22s__T23s.t23s'int x)
+   (x : Torpedoes__torpexists__L35s__T36s.t36s) : int =
+  (Torpedoes__torpexists__L35s__T36s.t36s'int x)
  
  clone export "ada__model".Rep_Proj_Int with
- type t = Torpedoes__torpexists__L22s__T23s.t23s, 
- predicate in_range = Torpedoes__torpexists__L22s__T23s.in_range, 
+ type t = Torpedoes__torpexists__L35s__T36s.t36s, 
+ predicate in_range = Torpedoes__torpexists__L35s__T36s.in_range, 
  function to_rep = to_rep
  
  meta "model_projection" function to_rep
@@ -2803,12 +2962,12 @@ module Torpedoes__torpexists__L22s__T23s__rep
 
 end
 
-(* Module for axiomatizing type "T12s" defined at torpedoes.ads:49, created in Gnat2Why.Types.Translate_Type *)
-module Torpedoes__torpexists__L11s__T12s
+(* Module for axiomatizing type "T14s" defined at torpedoes.ads:51, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__torpexists__L13s__T14s
  use import "_gnatprove_standard".Main
  use import "int".Int
 
- type t12s =
+ type t14s =
   < range 0 5 >
  
  function first 
@@ -2824,40 +2983,40 @@ module Torpedoes__torpexists__L11s__T12s
   ( (first <= x) /\ (x <= last) )
  
  clone export "ada__model".Static_Discrete with
- type t = t12s, 
+ type t = t14s, 
  function first = first, 
  function last = last, 
  predicate in_range = in_range
  
- type t12s__ref =
-  { mutable t12s__content "model_trace:" "name:" : t12s }
+ type t14s__ref =
+  { mutable t14s__content "model_trace:" "name:" : t14s }
  
- function t12s__ref___projection 
-   (a : t12s__ref) : t12s =
-  a.t12s__content
+ function t14s__ref___projection 
+   (a : t14s__ref) : t14s =
+  a.t14s__content
  
- meta "model_projection" function t12s__ref___projection
+ meta "model_projection" function t14s__ref___projection
  
- meta "inline : no" function t12s__ref___projection
+ meta "inline : no" function t14s__ref___projection
  
- val t12s__havoc 
-   (x : t12s__ref) : unit
+ val t14s__havoc 
+   (x : t14s__ref) : unit
   writes {x}
 
 end
 
-(* Module defining to_rep/of_rep for type "T12s" defined at torpedoes.ads:49, created in Gnat2Why.Types.Translate_Type *)
-module Torpedoes__torpexists__L11s__T12s__rep
- use        Torpedoes__torpexists__L11s__T12s
+(* Module defining to_rep/of_rep for type "T14s" defined at torpedoes.ads:51, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__torpexists__L13s__T14s__rep
+ use        Torpedoes__torpexists__L13s__T14s
  use import "_gnatprove_standard".Main
 
  function to_rep 
-   (x : Torpedoes__torpexists__L11s__T12s.t12s) : int =
-  (Torpedoes__torpexists__L11s__T12s.t12s'int x)
+   (x : Torpedoes__torpexists__L13s__T14s.t14s) : int =
+  (Torpedoes__torpexists__L13s__T14s.t14s'int x)
  
  clone export "ada__model".Rep_Proj_Int with
- type t = Torpedoes__torpexists__L11s__T12s.t12s, 
- predicate in_range = Torpedoes__torpexists__L11s__T12s.in_range, 
+ type t = Torpedoes__torpexists__L13s__T14s.t14s, 
+ predicate in_range = Torpedoes__torpexists__L13s__T14s.in_range, 
  function to_rep = to_rep
  
  meta "model_projection" function to_rep
@@ -2866,12 +3025,12 @@ module Torpedoes__torpexists__L11s__T12s__rep
 
 end
 
-(* Module for defining the constant "torpedoestorage" defined at torpedoes.ads:51, created in Gnat2Why.Decls.Translate_Constant *)
+(* Module for defining the constant "torpedoestorage" defined at torpedoes.ads:53, created in Gnat2Why.Decls.Translate_Constant *)
 module Torpedoes__torplocation__torpedoestorage
  use import "_gnatprove_standard".Main
  use        Array__Int__Torpedoes__torps
 
- function torpedoestorage #"torpedoes.ads" 51 0 0#"model_projected" "name:torpedoeStorage" "model_trace:2928" 
+ function torpedoestorage #"torpedoes.ads" 53 0 0#"model_projected" "name:torpedoeStorage" "model_trace:3057" 
    : Array__Int__Torpedoes__torps.map
  
  function attr__ATTRIBUTE_ADDRESS 
@@ -2879,18 +3038,18 @@ module Torpedoes__torplocation__torpedoestorage
 
 end
 
-(* Module giving an empty axiom for the entity "torpedoestorage" defined at torpedoes.ads:51, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "torpedoestorage" defined at torpedoes.ads:53, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Torpedoes__torplocation__torpedoestorage___axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining the constant "torp" defined at torpedoes.ads:51, created in Gnat2Why.Decls.Translate_Constant *)
+(* Module for defining the constant "torp" defined at torpedoes.ads:53, created in Gnat2Why.Decls.Translate_Constant *)
 module Torpedoes__torplocation__torp
  use import "_gnatprove_standard".Main
 
- function torp #"torpedoes.ads" 51 0 0#"model" "name:torp" "model_trace:2937" 
+ function torp #"torpedoes.ads" 53 0 0#"model" "name:torp" "model_trace:3066" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS 
@@ -2898,14 +3057,14 @@ module Torpedoes__torplocation__torp
 
 end
 
-(* Module giving an empty axiom for the entity "torp" defined at torpedoes.ads:51, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "torp" defined at torpedoes.ads:53, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Torpedoes__torplocation__torp___axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "torplocation" defined at torpedoes.ads:51, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "torplocation" defined at torpedoes.ads:53, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Torpedoes__torplocation
  use import "_gnatprove_standard".Main
  use        Array__Int__Torpedoes__torps
@@ -2915,6 +3074,107 @@ module Torpedoes__torplocation
  
  predicate torplocation__function_guard 
    (result : int) (torpedoestorage : Array__Int__Torpedoes__torps.map) (torp : int) 
+
+end
+
+(* Module for defining the constant "slot" defined at torpedoes.ads:72, created in Gnat2Why.Decls.Translate_Constant *)
+module Torpedoes__loadlauncher__slot
+ use import "_gnatprove_standard".Main
+
+ function slot #"torpedoes.ads" 72 0 0#"model" "model_trace:3120" "name:slot" 
+   : int
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "slot" defined at torpedoes.ads:72, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Torpedoes__loadlauncher__slot___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for axiomatizing type "T38s" defined at torpedoes.ads:76, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__loadlauncher__L37s__T38s
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type t38s =
+  < range 0 5 >
+ 
+ function first 
+   : int =
+  0
+ 
+ function last 
+   : int =
+  5
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = t38s, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type t38s__ref =
+  { mutable t38s__content "model_trace:" "name:" : t38s }
+ 
+ function t38s__ref___projection 
+   (a : t38s__ref) : t38s =
+  a.t38s__content
+ 
+ meta "model_projection" function t38s__ref___projection
+ 
+ meta "inline : no" function t38s__ref___projection
+ 
+ val t38s__havoc 
+   (x : t38s__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "T38s" defined at torpedoes.ads:76, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__loadlauncher__L37s__T38s__rep
+ use        Torpedoes__loadlauncher__L37s__T38s
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Torpedoes__loadlauncher__L37s__T38s.t38s) : int =
+  (Torpedoes__loadlauncher__L37s__T38s.t38s'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Torpedoes__loadlauncher__L37s__T38s.t38s, 
+ predicate in_range = Torpedoes__loadlauncher__L37s__T38s.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for defining the constant "currentdepth" defined at torpedoes.ads:84, created in Gnat2Why.Decls.Translate_Constant *)
+module Torpedoes__firetorpedoe__currentdepth
+ use import "_gnatprove_standard".Main
+
+ function currentdepth #"torpedoes.ads" 84 0 0#"model" "name:currentDepth" "model_trace:3197" 
+   : int
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "currentdepth" defined at torpedoes.ads:84, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Torpedoes__firetorpedoe__currentdepth___axiom
+ use import "_gnatprove_standard".Main
+
 
 end
 
@@ -3056,7 +3316,7 @@ module Torpedoes__counttorps__L_2__T7b
 
 end
 
-(* Module for axiomatizing type "T13b" defined at torpedoes.adb:64, created in Gnat2Why.Types.Translate_Type *)
+(* Module for axiomatizing type "T13b" defined at torpedoes.adb:62, created in Gnat2Why.Types.Translate_Type *)
 module Torpedoes__torplocation__L_3__L12b__T13b
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -3094,7 +3354,7 @@ module Torpedoes__torplocation__L_3__L12b__T13b
 
 end
 
-(* Module for axiomatizing type "T11b" defined at torpedoes.adb:64, created in Gnat2Why.Types.Translate_Type *)
+(* Module for axiomatizing type "T11b" defined at torpedoes.adb:62, created in Gnat2Why.Types.Translate_Type *)
 module Torpedoes__torplocation__L_3__L10b__T11b
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -3131,29 +3391,47 @@ module Torpedoes__torplocation__L_3__L10b__T11b
   writes {x}
 
 end
-(* Module for defining a ref holding the value of variable "currentdepth" defined at movement.ads:19, created in Gnat2Why.Decls.Translate_Variable *)
+(* Module for defining a ref holding the value of variable "currentdepth" defined at movement.ads:11, created in Gnat2Why.Decls.Translate_Variable *)
 module Movement__divethesubmarine__currentdepth
  use import "_gnatprove_standard".Main
 
- val currentdepth #"movement.ads" 19 0 0#"model_projected" "model_trace:3036" "name:currentDepth"  : int__ref 
+ val currentdepth #"movement.ads" 11 0 0#"model_projected" "model_trace:3297" "name:currentDepth"  : int__ref 
  
  function attr__ATTRIBUTE_ADDRESS 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "currentdepth" defined at movement.ads:19, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "currentdepth" defined at movement.ads:11, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Movement__divethesubmarine__currentdepth___axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining a ref holding the value of variable "currentdepth" defined at movement.ads:31, created in Gnat2Why.Decls.Translate_Variable *)
+(* Module for defining a ref holding the value of variable "currentdepth" defined at movement.ads:23, created in Gnat2Why.Decls.Translate_Variable *)
 module Movement__raisethesubmarine__currentdepth
  use import "_gnatprove_standard".Main
 
- val currentdepth #"movement.ads" 31 0 0#"model_projected" "name:currentDepth" "model_trace:3111"  : int__ref 
+ val currentdepth #"movement.ads" 23 0 0#"model_projected" "name:currentDepth" "model_trace:3372"  : int__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "currentdepth" defined at movement.ads:23, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Movement__raisethesubmarine__currentdepth___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining a ref holding the value of variable "currentdepth" defined at movement.ads:31, created in Gnat2Why.Decls.Translate_Variable *)
+module Movement__surfacethesubmarine__currentdepth
+ use import "_gnatprove_standard".Main
+
+ val currentdepth #"movement.ads" 31 0 0#"model_projected" "name:currentDepth" "model_trace:3419"  : int__ref 
  
  function attr__ATTRIBUTE_ADDRESS 
    : int
@@ -3161,24 +3439,6 @@ module Movement__raisethesubmarine__currentdepth
 end
 
 (* Module giving an empty axiom for the entity "currentdepth" defined at movement.ads:31, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
-module Movement__raisethesubmarine__currentdepth___axiom
- use import "_gnatprove_standard".Main
-
-
-end
-
-(* Module for defining a ref holding the value of variable "currentdepth" defined at movement.ads:39, created in Gnat2Why.Decls.Translate_Variable *)
-module Movement__surfacethesubmarine__currentdepth
- use import "_gnatprove_standard".Main
-
- val currentdepth #"movement.ads" 39 0 0#"model_projected" "name:currentDepth" "model_trace:3158"  : int__ref 
- 
- function attr__ATTRIBUTE_ADDRESS 
-   : int
-
-end
-
-(* Module giving an empty axiom for the entity "currentdepth" defined at movement.ads:39, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Movement__surfacethesubmarine__currentdepth___axiom
  use import "_gnatprove_standard".Main
 
@@ -3190,7 +3450,7 @@ module Torpedoes__filltorpedoestorage__torpedoestorage
  use import "_gnatprove_standard".Main
  use        Array__Int__Torpedoes__torps
 
- val torpedoestorage #"torpedoes.ads" 24 0 0#"model_projected" "model_trace:2725" "name:torpedoeStorage"  : Array__Int__Torpedoes__torps.map__ref 
+ val torpedoestorage #"torpedoes.ads" 24 0 0#"model_projected" "model_trace:2819" "name:torpedoeStorage"  : Array__Int__Torpedoes__torps.map__ref 
  
  function attr__ATTRIBUTE_ADDRESS 
    : int
@@ -3199,6 +3459,61 @@ end
 
 (* Module giving an empty axiom for the entity "torpedoestorage" defined at torpedoes.ads:24, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Torpedoes__filltorpedoestorage__torpedoestorage___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining a ref holding the value of variable "torpedoetube" defined at torpedoes.ads:70, created in Gnat2Why.Decls.Translate_Variable *)
+module Torpedoes__loadlauncher__torpedoetube
+ use import "_gnatprove_standard".Main
+
+ val torpedoetube #"torpedoes.ads" 70 0 0#"model_projected" "model_trace:3102" "name:torpedoeTube"  : int__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "torpedoetube" defined at torpedoes.ads:70, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Torpedoes__loadlauncher__torpedoetube___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining a ref holding the value of variable "torpedoestorage" defined at torpedoes.ads:71, created in Gnat2Why.Decls.Translate_Variable *)
+module Torpedoes__loadlauncher__torpedoestorage
+ use import "_gnatprove_standard".Main
+ use        Array__Int__Torpedoes__torps
+
+ val torpedoestorage #"torpedoes.ads" 71 0 0#"model_projected" "name:torpedoeStorage" "model_trace:3111"  : Array__Int__Torpedoes__torps.map__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "torpedoestorage" defined at torpedoes.ads:71, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Torpedoes__loadlauncher__torpedoestorage___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining a ref holding the value of variable "torpedoetube" defined at torpedoes.ads:84, created in Gnat2Why.Decls.Translate_Variable *)
+module Torpedoes__firetorpedoe__torpedoetube
+ use import "_gnatprove_standard".Main
+
+ val torpedoetube #"torpedoes.ads" 84 0 0#"model_projected" "name:torpedoeTube" "model_trace:3188"  : int__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "torpedoetube" defined at torpedoes.ads:84, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Torpedoes__firetorpedoe__torpedoetube___axiom
  use import "_gnatprove_standard".Main
 
 
@@ -3294,18 +3609,18 @@ module Torpedoes__counttorps__L_2__i___axiom
 
 end
 
-(* Module for defining a ref holding the value of variable "position" defined at torpedoes.adb:57, created in Gnat2Why.Decls.Translate_Variable *)
+(* Module for defining a ref holding the value of variable "position" defined at torpedoes.adb:55, created in Gnat2Why.Decls.Translate_Variable *)
 module Torpedoes__torplocation__position
  use import "_gnatprove_standard".Main
 
- val position #"torpedoes.adb" 57 0 0#"model_projected" "model_trace:2538" "name:position"  : int__ref 
+ val position #"torpedoes.adb" 55 0 0#"model_projected" "model_trace:2538" "name:position"  : int__ref 
  
  function attr__ATTRIBUTE_ADDRESS 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "position" defined at torpedoes.adb:57, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "position" defined at torpedoes.adb:55, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Torpedoes__torplocation__position___axiom
  use import "_gnatprove_standard".Main
 
@@ -3674,21 +3989,21 @@ module Standard__universal_integer___axiom
 
 end
 
-(* Module for possibly declaring a logic function for "divethesubmarine" defined at movement.ads:18, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "divethesubmarine" defined at movement.ads:10, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Movement__divethesubmarine
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "raisethesubmarine" defined at movement.ads:30, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "raisethesubmarine" defined at movement.ads:22, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Movement__raisethesubmarine
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "surfacethesubmarine" defined at movement.ads:39, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "surfacethesubmarine" defined at movement.ads:31, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Movement__surfacethesubmarine
  use import "_gnatprove_standard".Main
 
@@ -3697,6 +4012,20 @@ end
 
 (* Module for possibly declaring a logic function for "filltorpedoestorage" defined at torpedoes.ads:24, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Torpedoes__filltorpedoestorage
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for possibly declaring a logic function for "loadlauncher" defined at torpedoes.ads:70, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Torpedoes__loadlauncher
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for possibly declaring a logic function for "firetorpedoe" defined at torpedoes.ads:84, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Torpedoes__firetorpedoe
  use import "_gnatprove_standard".Main
 
 
@@ -3732,7 +4061,7 @@ module Torpedoes__counttorps__L_2___axiom
 
 end
 
-(* Module for defining the loop exit exception for the loop "L_3" defined at torpedoes.adb:59, created in Gnat2Why.Decls.Translate_Loop_Entity *)
+(* Module for defining the loop exit exception for the loop "L_3" defined at torpedoes.adb:57, created in Gnat2Why.Decls.Translate_Loop_Entity *)
 module Torpedoes__torplocation__L_3
  use import "_gnatprove_standard".Main
 
@@ -3740,7 +4069,7 @@ module Torpedoes__torplocation__L_3
 
 end
 
-(* Module giving an empty axiom for the entity "L_3" defined at torpedoes.adb:59, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "L_3" defined at torpedoes.adb:57, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Torpedoes__torplocation__L_3___axiom
  use import "_gnatprove_standard".Main
 
@@ -3869,8 +4198,8 @@ module Torpedoes__launcher___axiom
 
 end
 
-(* Module giving axioms for type "T17s" defined at torpedoes.ads:31, created in Gnat2Why.Types.Generate_Type_Completion *)
-module Torpedoes__storageisfull__L16s__T17s___axiom
+(* Module giving axioms for type "T27s" defined at torpedoes.ads:31, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Torpedoes__storageisfull__L26s__T27s___axiom
  use import "_gnatprove_standard".Main
 
 
@@ -3883,8 +4212,8 @@ module Torpedoes__storageisfull__L6s__T7s___axiom
 
 end
 
-(* Module giving axioms for type "T20s" defined at torpedoes.ads:35, created in Gnat2Why.Types.Generate_Type_Completion *)
-module Torpedoes__storagehasemptyslots__L19s__T20s___axiom
+(* Module giving axioms for type "T30s" defined at torpedoes.ads:35, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Torpedoes__storagehasemptyslots__L29s__T30s___axiom
  use import "_gnatprove_standard".Main
 
 
@@ -3897,15 +4226,36 @@ module Torpedoes__storagehasemptyslots__L8s__T9s___axiom
 
 end
 
-(* Module giving axioms for type "T23s" defined at torpedoes.ads:49, created in Gnat2Why.Types.Generate_Type_Completion *)
-module Torpedoes__torpexists__L22s__T23s___axiom
+(* Module giving axioms for type "T33s" defined at torpedoes.ads:39, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Torpedoes__storageisempty__L32s__T33s___axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module giving axioms for type "T12s" defined at torpedoes.ads:49, created in Gnat2Why.Types.Generate_Type_Completion *)
-module Torpedoes__torpexists__L11s__T12s___axiom
+(* Module giving axioms for type "T11s" defined at torpedoes.ads:39, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Torpedoes__storageisempty__L10s__T11s___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module giving axioms for type "T36s" defined at torpedoes.ads:51, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Torpedoes__torpexists__L35s__T36s___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module giving axioms for type "T14s" defined at torpedoes.ads:51, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Torpedoes__torpexists__L13s__T14s___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module giving axioms for type "T38s" defined at torpedoes.ads:76, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Torpedoes__loadlauncher__L37s__T38s___axiom
  use import "_gnatprove_standard".Main
 
 
@@ -3932,14 +4282,14 @@ module Torpedoes__counttorps__L_2__T7b___axiom
 
 end
 
-(* Module giving axioms for type "T13b" defined at torpedoes.adb:64, created in Gnat2Why.Types.Generate_Type_Completion *)
+(* Module giving axioms for type "T13b" defined at torpedoes.adb:62, created in Gnat2Why.Types.Generate_Type_Completion *)
 module Torpedoes__torplocation__L_3__L12b__T13b___axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module giving axioms for type "T11b" defined at torpedoes.adb:64, created in Gnat2Why.Types.Generate_Type_Completion *)
+(* Module giving axioms for type "T11b" defined at torpedoes.adb:62, created in Gnat2Why.Types.Generate_Type_Completion *)
 module Torpedoes__torplocation__L_3__L10b__T11b___axiom
  use import "_gnatprove_standard".Main
 
@@ -3959,7 +4309,7 @@ module Torpedoes__counttorps__L_2__R6b___axiom
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "divethesubmarine" defined at movement.ads:18, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "divethesubmarine" defined at movement.ads:10, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Movement__divethesubmarine___axiom
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -3973,7 +4323,7 @@ module Movement__divethesubmarine___axiom
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "raisethesubmarine" defined at movement.ads:30, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "raisethesubmarine" defined at movement.ads:22, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Movement__raisethesubmarine___axiom
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -3987,7 +4337,7 @@ module Movement__raisethesubmarine___axiom
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "surfacethesubmarine" defined at movement.ads:39, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "surfacethesubmarine" defined at movement.ads:31, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Movement__surfacethesubmarine___axiom
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -4018,7 +4368,7 @@ module Torpedoes__storagehasemptyslots___axiom
    (torpedoestorage : Array__Int__Torpedoes__torps.map) : bool
   requires {  true }
   ensures {  ( ( (result = (Torpedoes__storagehasemptyslots.storagehasemptyslots torpedoestorage)) /\ (Torpedoes__storagehasemptyslots.storagehasemptyslots__function_guard result torpedoestorage) ) /\ ( (result = True) <-> (exists i  : int.
-   ( ( (0 <= i) /\ (i <= 5) ) /\ ((Torpedoes__torps__rep.to_rep (Array__Int__Torpedoes__torps.get torpedoestorage i)) <> 0) )) ) ) }
+   ( ( (0 <= i) /\ (i <= 5) ) /\ ((Torpedoes__torps__rep.to_rep (Array__Int__Torpedoes__torps.get torpedoestorage i)) = 1) )) ) ) }
  
  axiom storagehasemptyslots__post_axiom :
   (forall torpedoestorage   : Array__Int__Torpedoes__torps.map [(Torpedoes__storagehasemptyslots.storagehasemptyslots torpedoestorage)].
@@ -4032,7 +4382,7 @@ module Torpedoes__storagehasemptyslots___axiom
    ( (let result = (Torpedoes__storagehasemptyslots.storagehasemptyslots torpedoestorage) in (
     (Torpedoes__storagehasemptyslots.storagehasemptyslots__function_guard result torpedoestorage)))
     -> ( ((Torpedoes__storagehasemptyslots.storagehasemptyslots torpedoestorage) = True) <-> (exists i  : int.
-    ( ( (0 <= i) /\ (i <= 5) ) /\ ((Torpedoes__torps__rep.to_rep (Array__Int__Torpedoes__torps.get torpedoestorage i)) <> 0) )) ) ))
+    ( ( (0 <= i) /\ (i <= 5) ) /\ ((Torpedoes__torps__rep.to_rep (Array__Int__Torpedoes__torps.get torpedoestorage i)) = 1) )) ) ))
 
 end
 
@@ -4052,7 +4402,7 @@ module Torpedoes__storageisfull___axiom
  val storageisfull 
    (torpedoestorage : Array__Int__Torpedoes__torps.map) : bool
   requires {  true }
-  ensures {  ( ( (result = (Torpedoes__storageisfull.storageisfull torpedoestorage)) /\ (Torpedoes__storageisfull.storageisfull__function_guard result torpedoestorage) ) /\ ( (result = True) <-> (forall i   "model" "name:I" "model_trace:2782"  : int.
+  ensures {  ( ( (result = (Torpedoes__storageisfull.storageisfull torpedoestorage)) /\ (Torpedoes__storageisfull.storageisfull__function_guard result torpedoestorage) ) /\ ( (result = True) <-> (forall i   "model" "name:I" "model_trace:2876"  : int.
    ( ( (0 <= i) /\ (i <= 5) ) -> ((Torpedoes__torps__rep.to_rep (Array__Int__Torpedoes__torps.get torpedoestorage i)) = 0) )) ) ) }
  
  axiom storageisfull__post_axiom :
@@ -4066,7 +4416,7 @@ module Torpedoes__storageisfull___axiom
   (forall torpedoestorage   : Array__Int__Torpedoes__torps.map [(Torpedoes__storageisfull.storageisfull torpedoestorage)].
    ( (let result = (Torpedoes__storageisfull.storageisfull torpedoestorage) in (
     (Torpedoes__storageisfull.storageisfull__function_guard result torpedoestorage)))
-    -> ( ((Torpedoes__storageisfull.storageisfull torpedoestorage) = True) <-> (forall i   "model" "name:I" "model_trace:2782"  : int.
+    -> ( ((Torpedoes__storageisfull.storageisfull torpedoestorage) = True) <-> (forall i   "model" "name:I" "model_trace:2876"  : int.
     ( ( (0 <= i) /\ (i <= 5) ) -> ((Torpedoes__torps__rep.to_rep (Array__Int__Torpedoes__torps.get torpedoestorage i)) = 0) )) ) ))
 
 end
@@ -4090,7 +4440,42 @@ module Torpedoes__filltorpedoestorage___axiom
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "counttorps" defined at torpedoes.ads:39, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module giving a program function and a defining axiom for the expression function "storageisempty" defined at torpedoes.ads:38, created in Gnat2Why.Subprograms.Translate_Expression_Function_Body *)
+module Torpedoes__storageisempty___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Torpedoes__storageisempty
+ use        Torpedoes__torps
+ use        Torpedoes__torps__rep
+ use        Array__Int__Torpedoes__torps
+ use        Torpedoes__storage___axiom
+ use        Array__Int__Torpedoes__torps
+ use        Array__Int__Torpedoes__torps
+ use        Array__Int__Torpedoes__torps
+
+ val storageisempty 
+   (torpedoestorage : Array__Int__Torpedoes__torps.map) : bool
+  requires {  true }
+  ensures {  ( ( (result = (Torpedoes__storageisempty.storageisempty torpedoestorage)) /\ (Torpedoes__storageisempty.storageisempty__function_guard result torpedoestorage) ) /\ ( (result = True) <-> (forall i   "model" "name:I" "model_trace:2946"  : int.
+   ( ( (0 <= i) /\ (i <= 5) ) -> ((Torpedoes__torps__rep.to_rep (Array__Int__Torpedoes__torps.get torpedoestorage i)) = 1) )) ) ) }
+ 
+ axiom storageisempty__post_axiom :
+  (forall torpedoestorage   : Array__Int__Torpedoes__torps.map [(Torpedoes__storageisempty.storageisempty torpedoestorage)].
+   ( (Torpedoes__storage___axiom.dynamic_invariant torpedoestorage True True True True) -> (let result = (Torpedoes__storageisempty.storageisempty torpedoestorage) in (
+    (if ((Torpedoes__storageisempty.storageisempty__function_guard result torpedoestorage)) then (
+     ( ( true /\ true ) /\ true )) else true)))
+    ))
+ 
+ axiom storageisempty__def_axiom :
+  (forall torpedoestorage   : Array__Int__Torpedoes__torps.map [(Torpedoes__storageisempty.storageisempty torpedoestorage)].
+   ( (let result = (Torpedoes__storageisempty.storageisempty torpedoestorage) in (
+    (Torpedoes__storageisempty.storageisempty__function_guard result torpedoestorage)))
+    -> ( ((Torpedoes__storageisempty.storageisempty torpedoestorage) = True) <-> (forall i   "model" "name:I" "model_trace:2946"  : int.
+    ( ( (0 <= i) /\ (i <= 5) ) -> ((Torpedoes__torps__rep.to_rep (Array__Int__Torpedoes__torps.get torpedoestorage i)) = 1) )) ) ))
+
+end
+
+(* Module for declaring a program function (and possibly an axiom) for "counttorps" defined at torpedoes.ads:42, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Torpedoes__counttorps___axiom
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -4116,7 +4501,7 @@ module Torpedoes__counttorps___axiom
 
 end
 
-(* Module giving a program function and a defining axiom for the expression function "torpexists" defined at torpedoes.ads:48, created in Gnat2Why.Subprograms.Translate_Expression_Function_Body *)
+(* Module giving a program function and a defining axiom for the expression function "torpexists" defined at torpedoes.ads:50, created in Gnat2Why.Subprograms.Translate_Expression_Function_Body *)
 module Torpedoes__torpexists___axiom
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -4154,7 +4539,7 @@ module Torpedoes__torpexists___axiom
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "torplocation" defined at torpedoes.ads:51, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "torplocation" defined at torpedoes.ads:53, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Torpedoes__torplocation___axiom
  use import "_gnatprove_standard".Main
  use        Torpedoes__torpexists
@@ -4167,9 +4552,49 @@ module Torpedoes__torplocation___axiom
 
  val torplocation 
    (torpedoestorage : Array__Int__Torpedoes__torps.map) (torp : int) : int
-  requires {  ((epsilon temp___result_212 : bool.
-   ( (temp___result_212 = (Torpedoes__torpexists.torpexists torpedoestorage torp)) /\ (Torpedoes__torpexists.torpexists__function_guard temp___result_212 torpedoestorage torp) )) = True) }
+  requires {  ((epsilon temp___result_214 : bool.
+   ( (temp___result_214 = (Torpedoes__torpexists.torpexists torpedoestorage torp)) /\ (Torpedoes__torpexists.torpexists__function_guard temp___result_214 torpedoestorage torp) )) = True) }
   ensures {  ( ( (result = (Torpedoes__torplocation.torplocation torpedoestorage torp)) /\ (Torpedoes__torplocation.torplocation__function_guard result torpedoestorage torp) ) /\ ( (Torpedoes__storagecapacity___axiom.dynamic_invariant result True False True True) /\ ((Torpedoes__torps__rep.to_rep (Array__Int__Torpedoes__torps.get torpedoestorage result)) = torp) ) ) }
+
+end
+
+(* Module for declaring a program function (and possibly an axiom) for "loadlauncher" defined at torpedoes.ads:70, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Torpedoes__loadlauncher___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Torpedoes__storageisempty
+ use        Torpedoes__torps
+ use        Torpedoes__torps__rep
+ use        Array__Int__Torpedoes__torps
+ use        Torpedoes__storage___axiom
+ use        Torpedoes__launcher___axiom
+ use        Array__Int__Torpedoes__torps
+
+ val loadlauncher 
+   (torpedoetube : int__ref) (torpedoestorage : Array__Int__Torpedoes__torps.map__ref) (slot : int) : unit
+  requires {  ( (torpedoetube.int__content = 1) /\ ( ((epsilon temp___result_216 : bool.
+   ( (temp___result_216 = (Torpedoes__storageisempty.storageisempty torpedoestorage.Array__Int__Torpedoes__torps.map__content)) /\ (Torpedoes__storageisempty.storageisempty__function_guard temp___result_216 torpedoestorage.Array__Int__Torpedoes__torps.map__content) )) = True) <-> false ) ) }
+  ensures {  ( ( (torpedoetube.int__content = 0) /\ ( ((Torpedoes__torps__rep.to_rep (Array__Int__Torpedoes__torps.get torpedoestorage.Array__Int__Torpedoes__torps.map__content slot)) = 1) /\ (forall i   "model" "name:I" "model_trace:3158"  : int.
+   ( ( (0 <= i) /\ (i <= 5) ) -> (if ((i <> slot)) then (
+    ((Torpedoes__torps__rep.to_rep (Array__Int__Torpedoes__torps.get torpedoestorage.Array__Int__Torpedoes__torps.map__content i)) = (Torpedoes__torps__rep.to_rep (let temp___217 = (old torpedoestorage.Array__Int__Torpedoes__torps.map__content ) in (
+     (Array__Int__Torpedoes__torps.get temp___217 i)))
+    ))) else (
+    true)) )) ) ) /\ ( (Torpedoes__launcher___axiom.dynamic_invariant torpedoetube.int__content True True True True) /\ (Torpedoes__storage___axiom.dynamic_invariant torpedoestorage.Array__Int__Torpedoes__torps.map__content True True True True) ) ) }
+  writes {torpedoetube, torpedoestorage}
+
+end
+
+(* Module for declaring a program function (and possibly an axiom) for "firetorpedoe" defined at torpedoes.ads:84, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Torpedoes__firetorpedoe___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Torpedoes__launcher___axiom
+
+ val firetorpedoe 
+   (torpedoetube : int__ref) (currentdepth : int) : unit
+  requires {  ( (torpedoetube.int__content = 0) /\ (currentdepth > 0) ) }
+  ensures {  ( (torpedoetube.int__content = 1) /\ (Torpedoes__launcher___axiom.dynamic_invariant torpedoetube.int__content True True True True) ) }
+  writes {torpedoetube}
 
 end
 
@@ -4196,29 +4621,46 @@ module Torpedoes__package_def
   (#"torpedoes.ads" 31 0 0# ());
   (#"torpedoes.ads" 30 0 0# ());
   (#"torpedoes.ads" 34 0 0# ());
-  (#"torpedoes.ads" 39 0 0# ());
-  (#"torpedoes.ads" 41 0 0# ());
-  (#"torpedoes.ads" 48 0 0# ());
-  (#"torpedoes.ads" 51 0 0# ());
+  (#"torpedoes.ads" 38 0 0# ());
+  (#"torpedoes.ads" 42 0 0# ());
+  (#"torpedoes.ads" 44 0 0# ());
+  (#"torpedoes.ads" 50 0 0# ());
   (#"torpedoes.ads" 53 0 0# ());
-  (#"torpedoes.ads" 52 0 0# ());
-  (#"torpedoes.ads" 52 0 0# ());
-  (#"torpedoes.ads" 52 0 0# ());
-  (#"torpedoes.ads" 52 0 0# ());
-  (#"torpedoes.ads" 52 0 0# ());
-  (#"torpedoes.ads" 52 0 0# ());
-  (#"torpedoes.ads" 52 0 0# ());
-  (#"torpedoes.ads" 52 0 0# ());
-  (#"torpedoes.ads" 52 0 0# ());
-  (#"torpedoes.ads" 52 0 0# ());
+  (#"torpedoes.ads" 55 0 0# ());
+  (#"torpedoes.ads" 54 0 0# ());
+  (#"torpedoes.ads" 70 0 0# ());
+  (#"torpedoes.ads" 74 0 0# ());
+  (#"torpedoes.ads" 75 0 0# ());
+  (#"torpedoes.ads" 74 0 0# ());
+  (#"torpedoes.ads" 73 0 0# ());
+  (#"torpedoes.ads" 73 0 0# ());
+  (#"torpedoes.ads" 84 0 0# ());
+  (#"torpedoes.ads" 86 0 0# ());
+  (#"torpedoes.ads" 85 0 0# ());
+  (#"torpedoes.ads" 85 0 0# ());
+  (#"torpedoes.ads" 85 0 0# ());
+  (#"torpedoes.ads" 85 0 0# ());
+  (#"torpedoes.ads" 85 0 0# ());
+  (#"torpedoes.ads" 85 0 0# ());
+  (#"torpedoes.ads" 85 0 0# ());
+  (#"torpedoes.ads" 85 0 0# ());
+  (#"torpedoes.ads" 85 0 0# ());
+  (#"torpedoes.ads" 85 0 0# ());
+  (#"torpedoes.ads" 85 0 0# ());
+  (#"torpedoes.ads" 85 0 0# ());
+  (#"torpedoes.ads" 85 0 0# ());
+  (#"torpedoes.ads" 85 0 0# ());
   (#"torpedoes.ads" 30 0 0# ());
   (#"torpedoes.ads" 34 0 0# ());
-  (#"torpedoes.ads" 48 0 0# ());
+  (#"torpedoes.ads" 38 0 0# ());
+  (#"torpedoes.ads" 50 0 0# ());
   (#"torpedoes.adb" 4 0 0# ());
   (#"torpedoes.adb" 14 0 0# ());
   (#"torpedoes.adb" 33 0 0# ());
-  (#"torpedoes.adb" 55 0 0# ());
-  ( "GP_Sloc:torpedoes.adb:108:1" (#"torpedoes.adb" 108 0 0# ()) ) )
+  (#"torpedoes.adb" 53 0 0# ());
+  (#"torpedoes.adb" 70 0 0# ());
+  (#"torpedoes.adb" 85 0 0# ());
+  ( "GP_Sloc:torpedoes.adb:106:1" (#"torpedoes.adb" 106 0 0# ()) ) )
 end
 
 (* Module for checking contracts and absence of run-time errors in subprogram "storagehasemptyslots" defined at torpedoes.ads:34, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
@@ -4235,7 +4677,7 @@ module Torpedoes__storagehasemptyslots__subprogram_def
  use        Torpedoes__storage___axiom
  use        Torpedoes__storagehasemptyslots__torpedoestorage___axiom
 
- val torpedoes__storagehasemptyslots__result "model_projected" "model_trace:2797@result" "name:StorageHasEmptySlots"  : bool__ref 
+ val torpedoes__storagehasemptyslots__result "model_projected" "model_trace:2891@result" "name:StorageHasEmptySlots"  : bool__ref 
  
  let def #"torpedoes.ads" 34 0 0#"W:diverges:N" "GP_Subp:torpedoes.ads:34" 
    (__void_param : unit)
@@ -4260,14 +4702,14 @@ module Torpedoes__storagehasemptyslots__subprogram_def
    ( ( "GP_Sloc:torpedoes.ads:35:7" (#"torpedoes.ads" 35 0 0# ( #"torpedoes.ads" 35 0 0# torpedoes__storagehasemptyslots__result.bool__content <- ( ( (let i = #"torpedoes.ads" 35 0 0# (any int
    ) in (
     (if ((Boolean.andb((0 <= i)) ((i <= 5)))) then (
-     #"torpedoes.ads" 35 0 0# abstract ensures {true}(let _ = ((Torpedoes__torps__rep.to_rep((Array__Int__Torpedoes__torps.get(Torpedoes__storagehasemptyslots__torpedoestorage.torpedoestorage) (i)))) <> 0) in (
+     #"torpedoes.ads" 35 0 0# abstract ensures {true}(let _ = ((Torpedoes__torps__rep.to_rep((Array__Int__Torpedoes__torps.get(Torpedoes__storagehasemptyslots__torpedoestorage.torpedoestorage) (i)))) = 1) in (
       ()))
       end ))))
    ;
    #"torpedoes.ads" 35 0 0# (any bool
    requires {#"torpedoes.ads" 35 0 0# true} 
    ensures {#"torpedoes.ads" 35 0 0# ( (result = True) <-> (exists i  : int.
-    ( ( (0 <= i) /\ (i <= 5) ) /\ ((Torpedoes__torps__rep.to_rep (Array__Int__Torpedoes__torps.get Torpedoes__storagehasemptyslots__torpedoestorage.torpedoestorage i)) <> 0) )) )} 
+    ( ( (0 <= i) /\ (i <= 5) ) /\ ((Torpedoes__torps__rep.to_rep (Array__Int__Torpedoes__torps.get Torpedoes__storagehasemptyslots__torpedoestorage.torpedoestorage i)) = 1) )) )} 
    ) ) );
    #"torpedoes.ads" 35 0 0# raise Return__exc )) );
     raise Return__exc )
@@ -4294,7 +4736,7 @@ module Torpedoes__storageisfull__subprogram_def
  use        Torpedoes__storage___axiom
  use        Torpedoes__storageisfull__torpedoestorage___axiom
 
- val torpedoes__storageisfull__result "model_projected" "model_trace:2762@result" "name:StorageIsFull"  : bool__ref 
+ val torpedoes__storageisfull__result "model_projected" "model_trace:2856@result" "name:StorageIsFull"  : bool__ref 
  
  let def #"torpedoes.ads" 30 0 0#"W:diverges:N" "GP_Subp:torpedoes.ads:30" 
    (__void_param : unit)
@@ -4325,7 +4767,7 @@ module Torpedoes__storageisfull__subprogram_def
    ;
    #"torpedoes.ads" 31 0 0# (any bool
    requires {#"torpedoes.ads" 31 0 0# true} 
-   ensures {#"torpedoes.ads" 31 0 0# ( (result = True) <-> (forall i #"torpedoes.ads" 31 0 0#  "model" "name:I" "model_trace:2782"  : int.
+   ensures {#"torpedoes.ads" 31 0 0# ( (result = True) <-> (forall i #"torpedoes.ads" 31 0 0#  "model" "name:I" "model_trace:2876"  : int.
     ( ( (0 <= i) /\ (i <= 5) ) -> ((Torpedoes__torps__rep.to_rep (Array__Int__Torpedoes__torps.get Torpedoes__storageisfull__torpedoestorage.torpedoestorage i)) = 0) )) )} 
    ) ) );
    #"torpedoes.ads" 31 0 0# raise Return__exc )) );
@@ -4375,8 +4817,8 @@ module Torpedoes__filltorpedoestorage__subprogram_def
    (__void_param : unit)
   requires { #"torpedoes.ads" 24 0 0# true }
   ensures { #"torpedoes.ads" 24 0 0# (#"torpedoes.ads" 27 0 0# ( "model_vc_post" "keep_on_simp" "GP_Sloc:torpedoes.ads:27:14" "GP_Reason:VC_POSTCONDITION" "GP_Id:3" "comment:     Post => StorageIsFull(torpedoeStorage);
-             ^ torpedoes.ads:27:14:VC_POSTCONDITION" "GP_Shape:pragargs__call_storageisfull" ( "GP_Pretty_Ada:3608" "GP_Sloc:torpedoes.ads:27:14" ((epsilon temp___result_222 : bool.
-   ( (temp___result_222 = (Torpedoes__storageisfull.storageisfull Torpedoes__filltorpedoestorage__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__torps.map__content)) /\ (Torpedoes__storageisfull.storageisfull__function_guard temp___result_222 Torpedoes__filltorpedoestorage__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__torps.map__content) )) = True) ) )) }
+             ^ torpedoes.ads:27:14:VC_POSTCONDITION" "GP_Shape:pragargs__call_storageisfull" ( "GP_Pretty_Ada:3869" "GP_Sloc:torpedoes.ads:27:14" ((epsilon temp___result_228 : bool.
+   ( (temp___result_228 = (Torpedoes__storageisfull.storageisfull Torpedoes__filltorpedoestorage__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__torps.map__content)) /\ (Torpedoes__storageisfull.storageisfull__function_guard temp___result_228 Torpedoes__filltorpedoestorage__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__torps.map__content) )) = True) ) )) }
    =
   ( () (* Assume dynamic invariants of inputs of the subprogram torpedoes.ads:24 *)
   ;
@@ -4392,8 +4834,8 @@ module Torpedoes__filltorpedoestorage__subprogram_def
    end ;
   () (* Assume Pre of the subprogram torpedoes.ads:24 *)
   ;
-   assume {  ( (Torpedoes__filltorpedoestorage__currentdepth.currentdepth = 0) /\ ((epsilon temp___result_221 : bool.
-   ( (temp___result_221 = (Torpedoes__storagehasemptyslots.storagehasemptyslots Torpedoes__filltorpedoestorage__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__torps.map__content)) /\ (Torpedoes__storagehasemptyslots.storagehasemptyslots__function_guard temp___result_221 Torpedoes__filltorpedoestorage__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__torps.map__content) )) = True) ) };
+   assume {  ( (Torpedoes__filltorpedoestorage__currentdepth.currentdepth = 0) /\ ((epsilon temp___result_227 : bool.
+   ( (temp___result_227 = (Torpedoes__storagehasemptyslots.storagehasemptyslots Torpedoes__filltorpedoestorage__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__torps.map__content)) /\ (Torpedoes__storagehasemptyslots.storagehasemptyslots__function_guard temp___result_227 Torpedoes__filltorpedoestorage__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__torps.map__content) )) = True) ) };
    try
    ( (#"torpedoes.adb" 16 0 0# ( #"torpedoes.adb" 16 0 0# Torpedoes__filltorpedoestorage__position.position.int__content <- ( 0 );
    #"torpedoes.adb" 16 0 0# assume { #"torpedoes.adb" 16 0 0# (Torpedoes__storagecapacity___axiom.dynamic_invariant Torpedoes__filltorpedoestorage__position.position.int__content True False True True) } ));
@@ -4406,13 +4848,13 @@ module Torpedoes__filltorpedoestorage__subprogram_def
       ( #"torpedoes.adb" 20 0 0# abstract ensures {true}(let _ = Torpedoes__filltorpedoestorage__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__torps.map__content in (
        ()))
        end ;
-      (let temp___217 = #"torpedoes.adb" 20 0 0# (any Array__Int__Torpedoes__torps.map
+      (let temp___223 = #"torpedoes.adb" 20 0 0# (any Array__Int__Torpedoes__torps.map
       ensures {#"torpedoes.adb" 20 0 0# (result = Torpedoes__filltorpedoestorage__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__torps.map__content)} 
       ) in (
        ( #"torpedoes.adb" 20 0 0# abstract ensures {true}(let _ = Torpedoes__filltorpedoestorage__position.position.int__content in (
         ()))
         end ;
-       (let temp___216 = #"torpedoes.adb" 20 0 0# (any int
+       (let temp___222 = #"torpedoes.adb" 20 0 0# (any int
        ensures {#"torpedoes.adb" 20 0 0# (result = Torpedoes__filltorpedoestorage__position.position.int__content)} 
        ) in (
         ( () (* First unroling of the loop statements appearing before the loop invariant of loop torpedoes.adb:20 *)
@@ -4492,7 +4934,66 @@ module Torpedoes__filltorpedoestorage__subprogram_def
    end  )
 end
 
-(* Module for checking contracts and absence of run-time errors in subprogram "counttorps" defined at torpedoes.ads:39, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+(* Module for checking contracts and absence of run-time errors in subprogram "storageisempty" defined at torpedoes.ads:38, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+module Torpedoes__storageisempty__subprogram_def
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        "_gnatprove_standard".Boolean
+ use        Torpedoes__torps
+ use        Torpedoes__torps__rep
+ use        Array__Int__Torpedoes__torps
+ use        Torpedoes__storage___axiom
+ use        Torpedoes__storageisempty__torpedoestorage
+ use        Torpedoes__torps___axiom
+ use        Torpedoes__storage___axiom
+ use        Torpedoes__storageisempty__torpedoestorage___axiom
+
+ val torpedoes__storageisempty__result "model_projected" "model_trace:2926@result" "name:StorageIsEmpty"  : bool__ref 
+ 
+ let def #"torpedoes.ads" 38 0 0#"W:diverges:N" "GP_Subp:torpedoes.ads:38" 
+   (__void_param : unit)
+  requires { #"torpedoes.ads" 38 0 0# true }
+  ensures { #"torpedoes.ads" 38 0 0# true }
+   =
+  ( () (* Assume dynamic invariants of inputs of the subprogram torpedoes.ads:38 *)
+  ;
+  #"torpedoes.ads" 38 0 0# assume { #"torpedoes.ads" 38 0 0# (Torpedoes__storage___axiom.dynamic_invariant Torpedoes__storageisempty__torpedoestorage.torpedoestorage True False True True) };
+  #"torpedoes.ads" 38 0 0# assume { #"torpedoes.ads" 38 0 0# true };
+  () (* Declarations introduced by the compiler at the beginning of the subprogram torpedoes.ads:38 *)
+  ;
+  () (* Check for RTE in the Pre of the subprogram torpedoes.ads:38 *)
+  ;
+  #"torpedoes.ads" 38 0 0# abstract ensures {true}(let _ = True in (
+   ()))
+   end ;
+  () (* Assume Pre of the subprogram torpedoes.ads:38 *)
+  ;
+  #"torpedoes.ads" 38 0 0# assume { #"torpedoes.ads" 38 0 0# true };
+  #"torpedoes.ads" 38 0 0# try
+   ( ( "GP_Sloc:torpedoes.ads:39:7" (#"torpedoes.ads" 39 0 0# ( #"torpedoes.ads" 39 0 0# torpedoes__storageisempty__result.bool__content <- ( ( (let i = #"torpedoes.ads" 39 0 0# (any int
+   ) in (
+    (if ((Boolean.andb((0 <= i)) ((i <= 5)))) then (
+     #"torpedoes.ads" 39 0 0# abstract ensures {true}(let _ = ((Torpedoes__torps__rep.to_rep((Array__Int__Torpedoes__torps.get(Torpedoes__storageisempty__torpedoestorage.torpedoestorage) (i)))) = 1) in (
+      ()))
+      end ))))
+   ;
+   #"torpedoes.ads" 39 0 0# (any bool
+   requires {#"torpedoes.ads" 39 0 0# true} 
+   ensures {#"torpedoes.ads" 39 0 0# ( (result = True) <-> (forall i #"torpedoes.ads" 39 0 0#  "model" "name:I" "model_trace:2946"  : int.
+    ( ( (0 <= i) /\ (i <= 5) ) -> ((Torpedoes__torps__rep.to_rep (Array__Int__Torpedoes__torps.get Torpedoes__storageisempty__torpedoestorage.torpedoestorage i)) = 1) )) )} 
+   ) ) );
+   #"torpedoes.ads" 39 0 0# raise Return__exc )) );
+    raise Return__exc )
+  with
+   Return__exc -> ()
+  end;
+   abstract ensures {true}(let _ = True in (
+   ()))
+   end ;
+  torpedoes__storageisempty__result.bool__content )
+end
+
+(* Module for checking contracts and absence of run-time errors in subprogram "counttorps" defined at torpedoes.ads:42, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
 module Torpedoes__counttorps__subprogram_def
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -4529,27 +5030,27 @@ module Torpedoes__counttorps__subprogram_def
  use        Torpedoes__counttorps__L_2__R5b___axiom
  use        Torpedoes__counttorps__L_2__R6b___axiom
 
- val torpedoes__counttorps__result "model_projected" "model_trace:2832@result" "name:CountTorps"  : int__ref 
+ val torpedoes__counttorps__result "model_projected" "model_trace:2961@result" "name:CountTorps"  : int__ref 
  
- let def #"torpedoes.ads" 39 0 0#"W:diverges:N" "GP_Subp:torpedoes.ads:39" 
+ let def #"torpedoes.ads" 42 0 0#"W:diverges:N" "GP_Subp:torpedoes.ads:42" 
    (__void_param : unit)
-  requires { #"torpedoes.ads" 39 0 0# true }
-  ensures { #"torpedoes.ads" 39 0 0# (#"torpedoes.ads" 41 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Sloc:torpedoes.ads:41:16" "GP_Id:5" "comment:       Post => CountTorps'Result >= 0 and CountTorps'Result <= torpedoeStorage'Length;
-               ^ torpedoes.ads:41:16:VC_POSTCONDITION" "GP_Shape:pragargs__and" ( ( "GP_Pretty_Ada:2868" "GP_Sloc:torpedoes.ads:41:16" (torpedoes__counttorps__result.int__content >= 0) ) /\ ( "GP_Pretty_Ada:2874" "GP_Sloc:torpedoes.ads:41:43" (torpedoes__counttorps__result.int__content <= 6) ) ) )) }
+  requires { #"torpedoes.ads" 42 0 0# true }
+  ensures { #"torpedoes.ads" 42 0 0# (#"torpedoes.ads" 44 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Sloc:torpedoes.ads:44:16" "GP_Id:5" "comment:       Post => CountTorps'Result >= 0 and CountTorps'Result <= torpedoeStorage'Length;
+               ^ torpedoes.ads:44:16:VC_POSTCONDITION" "GP_Shape:pragargs__and" ( ( "GP_Pretty_Ada:2997" "GP_Sloc:torpedoes.ads:44:16" (torpedoes__counttorps__result.int__content >= 0) ) /\ ( "GP_Pretty_Ada:3003" "GP_Sloc:torpedoes.ads:44:43" (torpedoes__counttorps__result.int__content <= 6) ) ) )) }
    =
-  ( () (* Assume dynamic invariants of inputs of the subprogram torpedoes.ads:39 *)
+  ( () (* Assume dynamic invariants of inputs of the subprogram torpedoes.ads:42 *)
   ;
    assume {  (Torpedoes__storage___axiom.dynamic_invariant Torpedoes__counttorps__torpedoestorage.torpedoestorage True False True True) };
    assume {  (Torpedoes__torps___axiom.dynamic_invariant Torpedoes__counttorps__torp.torp True False True True) };
    assume {  true };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram torpedoes.ads:39 *)
+  () (* Declarations introduced by the compiler at the beginning of the subprogram torpedoes.ads:42 *)
   ;
-  () (* Check for RTE in the Pre of the subprogram torpedoes.ads:39 *)
+  () (* Check for RTE in the Pre of the subprogram torpedoes.ads:42 *)
   ;
    abstract ensures {true}(let _ = True in (
    ()))
    end ;
-  () (* Assume Pre of the subprogram torpedoes.ads:39 *)
+  () (* Assume Pre of the subprogram torpedoes.ads:42 *)
   ;
    assume {  true };
    try
@@ -4570,21 +5071,21 @@ module Torpedoes__counttorps__subprogram_def
     #"torpedoes.adb" 38 0 0# assume { #"torpedoes.adb" 38 0 0# (torpedoes__counttorps__L_2__R6b__assume = Torpedoes__counttorps__L_2__R6b.r6b) }))
    ;
    #"torpedoes.adb" 38 0 0# assume { #"torpedoes.adb" 38 0 0# (Torpedoes__storagecapacity___axiom.dynamic_invariant Torpedoes__counttorps__L_2__R6b.r6b True False True True) } ))) );
-   ( "GP_Sloc:torpedoes.adb:38:28" (#"torpedoes.adb" 38 0 0# (let temp___223 = Torpedoes__counttorps__L_2__R5b.r5b in (
-   (let temp___224 = Torpedoes__counttorps__L_2__R6b.r6b in (
+   ( "GP_Sloc:torpedoes.adb:38:28" (#"torpedoes.adb" 38 0 0# (let temp___230 = Torpedoes__counttorps__L_2__R5b.r5b in (
+   (let temp___231 = Torpedoes__counttorps__L_2__R6b.r6b in (
     ( () (* Translation of an Ada loop from torpedoes.adb:38 *)
     ;
     #"torpedoes.adb" 38 0 0# try
      ( #"torpedoes.adb" 38 0 0# abstract ensures {true}(let _ = Torpedoes__counttorps__count.count.int__content in (
       ()))
       end ;
-     (let temp___225 = #"torpedoes.adb" 38 0 0# (any int
+     (let temp___232 = #"torpedoes.adb" 38 0 0# (any int
      ensures {#"torpedoes.adb" 38 0 0# (result = Torpedoes__counttorps__count.count.int__content)} 
      ) in (
       ( () (* Unrolling of the loop statements of loop torpedoes.adb:38 *)
       ;
       #"torpedoes.adb" 38 0 0# Torpedoes__counttorps__L_2__i.i.int__content <- ( 0 );
-      (if ((Boolean.andb((temp___223 <= Torpedoes__counttorps__L_2__i.i.int__content)) ((Torpedoes__counttorps__L_2__i.i.int__content <= temp___224)))) then (
+      (if ((Boolean.andb((temp___230 <= Torpedoes__counttorps__L_2__i.i.int__content)) ((Torpedoes__counttorps__L_2__i.i.int__content <= temp___231)))) then (
        ( "GP_Sloc:torpedoes.adb:39:10" (#"torpedoes.adb" 39 0 0# (if (((Torpedoes__torps__rep.to_rep((Array__Int__Torpedoes__torps.get(Torpedoes__counttorps__torpedoestorage.torpedoestorage) (Torpedoes__counttorps__L_2__i.i.int__content)))) = Torpedoes__counttorps__torp.torp)) then (
         ( ( "GP_Sloc:torpedoes.adb:40:13" (#"torpedoes.adb" 40 0 0# ()) );
         ( "GP_Sloc:torpedoes.adb:40:22" (#"torpedoes.adb" 40 0 0# ()) );
@@ -4594,7 +5095,7 @@ module Torpedoes__counttorps__subprogram_def
         ( "GP_Sloc:torpedoes.adb:42:22" (#"torpedoes.adb" 42 0 0# ()) );
         ( "GP_Sloc:torpedoes.adb:42:19" (#"torpedoes.adb" 42 0 0# #"torpedoes.adb" 42 0 0# Torpedoes__counttorps__count.count.int__content <- ( Torpedoes__counttorps__count.count.int__content )) ) )))) )));
        Torpedoes__counttorps__L_2__i.i.int__content <- ( 1 );
-      (if ((Boolean.andb((temp___223 <= Torpedoes__counttorps__L_2__i.i.int__content)) ((Torpedoes__counttorps__L_2__i.i.int__content <= temp___224)))) then (
+      (if ((Boolean.andb((temp___230 <= Torpedoes__counttorps__L_2__i.i.int__content)) ((Torpedoes__counttorps__L_2__i.i.int__content <= temp___231)))) then (
        ( "GP_Sloc:torpedoes.adb:39:10" (#"torpedoes.adb" 39 0 0# (if (((Torpedoes__torps__rep.to_rep((Array__Int__Torpedoes__torps.get(Torpedoes__counttorps__torpedoestorage.torpedoestorage) (Torpedoes__counttorps__L_2__i.i.int__content)))) = Torpedoes__counttorps__torp.torp)) then (
         ( ( "GP_Sloc:torpedoes.adb:40:13" (#"torpedoes.adb" 40 0 0# ()) );
         ( "GP_Sloc:torpedoes.adb:40:22" (#"torpedoes.adb" 40 0 0# ()) );
@@ -4604,7 +5105,7 @@ module Torpedoes__counttorps__subprogram_def
         ( "GP_Sloc:torpedoes.adb:42:22" (#"torpedoes.adb" 42 0 0# ()) );
         ( "GP_Sloc:torpedoes.adb:42:19" (#"torpedoes.adb" 42 0 0# #"torpedoes.adb" 42 0 0# Torpedoes__counttorps__count.count.int__content <- ( Torpedoes__counttorps__count.count.int__content )) ) )))) )));
        Torpedoes__counttorps__L_2__i.i.int__content <- ( 2 );
-      (if ((Boolean.andb((temp___223 <= Torpedoes__counttorps__L_2__i.i.int__content)) ((Torpedoes__counttorps__L_2__i.i.int__content <= temp___224)))) then (
+      (if ((Boolean.andb((temp___230 <= Torpedoes__counttorps__L_2__i.i.int__content)) ((Torpedoes__counttorps__L_2__i.i.int__content <= temp___231)))) then (
        ( "GP_Sloc:torpedoes.adb:39:10" (#"torpedoes.adb" 39 0 0# (if (((Torpedoes__torps__rep.to_rep((Array__Int__Torpedoes__torps.get(Torpedoes__counttorps__torpedoestorage.torpedoestorage) (Torpedoes__counttorps__L_2__i.i.int__content)))) = Torpedoes__counttorps__torp.torp)) then (
         ( ( "GP_Sloc:torpedoes.adb:40:13" (#"torpedoes.adb" 40 0 0# ()) );
         ( "GP_Sloc:torpedoes.adb:40:22" (#"torpedoes.adb" 40 0 0# ()) );
@@ -4614,7 +5115,7 @@ module Torpedoes__counttorps__subprogram_def
         ( "GP_Sloc:torpedoes.adb:42:22" (#"torpedoes.adb" 42 0 0# ()) );
         ( "GP_Sloc:torpedoes.adb:42:19" (#"torpedoes.adb" 42 0 0# #"torpedoes.adb" 42 0 0# Torpedoes__counttorps__count.count.int__content <- ( Torpedoes__counttorps__count.count.int__content )) ) )))) )));
        Torpedoes__counttorps__L_2__i.i.int__content <- ( 3 );
-      (if ((Boolean.andb((temp___223 <= Torpedoes__counttorps__L_2__i.i.int__content)) ((Torpedoes__counttorps__L_2__i.i.int__content <= temp___224)))) then (
+      (if ((Boolean.andb((temp___230 <= Torpedoes__counttorps__L_2__i.i.int__content)) ((Torpedoes__counttorps__L_2__i.i.int__content <= temp___231)))) then (
        ( "GP_Sloc:torpedoes.adb:39:10" (#"torpedoes.adb" 39 0 0# (if (((Torpedoes__torps__rep.to_rep((Array__Int__Torpedoes__torps.get(Torpedoes__counttorps__torpedoestorage.torpedoestorage) (Torpedoes__counttorps__L_2__i.i.int__content)))) = Torpedoes__counttorps__torp.torp)) then (
         ( ( "GP_Sloc:torpedoes.adb:40:13" (#"torpedoes.adb" 40 0 0# ()) );
         ( "GP_Sloc:torpedoes.adb:40:22" (#"torpedoes.adb" 40 0 0# ()) );
@@ -4624,7 +5125,7 @@ module Torpedoes__counttorps__subprogram_def
         ( "GP_Sloc:torpedoes.adb:42:22" (#"torpedoes.adb" 42 0 0# ()) );
         ( "GP_Sloc:torpedoes.adb:42:19" (#"torpedoes.adb" 42 0 0# #"torpedoes.adb" 42 0 0# Torpedoes__counttorps__count.count.int__content <- ( Torpedoes__counttorps__count.count.int__content )) ) )))) )));
        Torpedoes__counttorps__L_2__i.i.int__content <- ( 4 );
-      (if ((Boolean.andb((temp___223 <= Torpedoes__counttorps__L_2__i.i.int__content)) ((Torpedoes__counttorps__L_2__i.i.int__content <= temp___224)))) then (
+      (if ((Boolean.andb((temp___230 <= Torpedoes__counttorps__L_2__i.i.int__content)) ((Torpedoes__counttorps__L_2__i.i.int__content <= temp___231)))) then (
        ( "GP_Sloc:torpedoes.adb:39:10" (#"torpedoes.adb" 39 0 0# (if (((Torpedoes__torps__rep.to_rep((Array__Int__Torpedoes__torps.get(Torpedoes__counttorps__torpedoestorage.torpedoestorage) (Torpedoes__counttorps__L_2__i.i.int__content)))) = Torpedoes__counttorps__torp.torp)) then (
         ( ( "GP_Sloc:torpedoes.adb:40:13" (#"torpedoes.adb" 40 0 0# ()) );
         ( "GP_Sloc:torpedoes.adb:40:22" (#"torpedoes.adb" 40 0 0# ()) );
@@ -4634,7 +5135,7 @@ module Torpedoes__counttorps__subprogram_def
         ( "GP_Sloc:torpedoes.adb:42:22" (#"torpedoes.adb" 42 0 0# ()) );
         ( "GP_Sloc:torpedoes.adb:42:19" (#"torpedoes.adb" 42 0 0# #"torpedoes.adb" 42 0 0# Torpedoes__counttorps__count.count.int__content <- ( Torpedoes__counttorps__count.count.int__content )) ) )))) )));
        Torpedoes__counttorps__L_2__i.i.int__content <- ( 5 );
-      (if ((Boolean.andb((temp___223 <= Torpedoes__counttorps__L_2__i.i.int__content)) ((Torpedoes__counttorps__L_2__i.i.int__content <= temp___224)))) then (
+      (if ((Boolean.andb((temp___230 <= Torpedoes__counttorps__L_2__i.i.int__content)) ((Torpedoes__counttorps__L_2__i.i.int__content <= temp___231)))) then (
        ( "GP_Sloc:torpedoes.adb:39:10" (#"torpedoes.adb" 39 0 0# (if (((Torpedoes__torps__rep.to_rep((Array__Int__Torpedoes__torps.get(Torpedoes__counttorps__torpedoestorage.torpedoestorage) (Torpedoes__counttorps__L_2__i.i.int__content)))) = Torpedoes__counttorps__torp.torp)) then (
         ( ( "GP_Sloc:torpedoes.adb:40:13" (#"torpedoes.adb" 40 0 0# ()) );
         ( "GP_Sloc:torpedoes.adb:40:22" (#"torpedoes.adb" 40 0 0# ()) );
@@ -4662,7 +5163,7 @@ module Torpedoes__counttorps__subprogram_def
   torpedoes__counttorps__result.int__content )
 end
 
-(* Module for checking contracts and absence of run-time errors in subprogram "torpexists" defined at torpedoes.ads:48, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+(* Module for checking contracts and absence of run-time errors in subprogram "torpexists" defined at torpedoes.ads:50, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
 module Torpedoes__torpexists__subprogram_def
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -4679,42 +5180,42 @@ module Torpedoes__torpexists__subprogram_def
  use        Torpedoes__torpexists__torpedoestorage___axiom
  use        Torpedoes__torpexists__torp___axiom
 
- val torpedoes__torpexists__result "model_projected" "model_trace:2877@result" "name:TorpExists"  : bool__ref 
+ val torpedoes__torpexists__result "model_projected" "model_trace:3006@result" "name:TorpExists"  : bool__ref 
  
- let def #"torpedoes.ads" 48 0 0#"W:diverges:N" "GP_Subp:torpedoes.ads:48" 
+ let def #"torpedoes.ads" 50 0 0#"W:diverges:N" "GP_Subp:torpedoes.ads:50" 
    (__void_param : unit)
-  requires { #"torpedoes.ads" 48 0 0# true }
-  ensures { #"torpedoes.ads" 48 0 0# true }
+  requires { #"torpedoes.ads" 50 0 0# true }
+  ensures { #"torpedoes.ads" 50 0 0# true }
    =
-  ( () (* Assume dynamic invariants of inputs of the subprogram torpedoes.ads:48 *)
+  ( () (* Assume dynamic invariants of inputs of the subprogram torpedoes.ads:50 *)
   ;
-  #"torpedoes.ads" 48 0 0# assume { #"torpedoes.ads" 48 0 0# (Torpedoes__storage___axiom.dynamic_invariant Torpedoes__torpexists__torpedoestorage.torpedoestorage True False True True) };
-  #"torpedoes.ads" 48 0 0# assume { #"torpedoes.ads" 48 0 0# (Torpedoes__torps___axiom.dynamic_invariant Torpedoes__torpexists__torp.torp True False True True) };
-  #"torpedoes.ads" 48 0 0# assume { #"torpedoes.ads" 48 0 0# true };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram torpedoes.ads:48 *)
+  #"torpedoes.ads" 50 0 0# assume { #"torpedoes.ads" 50 0 0# (Torpedoes__storage___axiom.dynamic_invariant Torpedoes__torpexists__torpedoestorage.torpedoestorage True False True True) };
+  #"torpedoes.ads" 50 0 0# assume { #"torpedoes.ads" 50 0 0# (Torpedoes__torps___axiom.dynamic_invariant Torpedoes__torpexists__torp.torp True False True True) };
+  #"torpedoes.ads" 50 0 0# assume { #"torpedoes.ads" 50 0 0# true };
+  () (* Declarations introduced by the compiler at the beginning of the subprogram torpedoes.ads:50 *)
   ;
-  () (* Check for RTE in the Pre of the subprogram torpedoes.ads:48 *)
+  () (* Check for RTE in the Pre of the subprogram torpedoes.ads:50 *)
   ;
-  #"torpedoes.ads" 48 0 0# abstract ensures {true}(let _ = True in (
+  #"torpedoes.ads" 50 0 0# abstract ensures {true}(let _ = True in (
    ()))
    end ;
-  () (* Assume Pre of the subprogram torpedoes.ads:48 *)
+  () (* Assume Pre of the subprogram torpedoes.ads:50 *)
   ;
-  #"torpedoes.ads" 48 0 0# assume { #"torpedoes.ads" 48 0 0# true };
-  #"torpedoes.ads" 48 0 0# try
-   ( ( "GP_Sloc:torpedoes.ads:49:7" (#"torpedoes.ads" 49 0 0# ( #"torpedoes.ads" 49 0 0# torpedoes__torpexists__result.bool__content <- ( ( (let i = #"torpedoes.ads" 49 0 0# (any int
+  #"torpedoes.ads" 50 0 0# assume { #"torpedoes.ads" 50 0 0# true };
+  #"torpedoes.ads" 50 0 0# try
+   ( ( "GP_Sloc:torpedoes.ads:51:7" (#"torpedoes.ads" 51 0 0# ( #"torpedoes.ads" 51 0 0# torpedoes__torpexists__result.bool__content <- ( ( (let i = #"torpedoes.ads" 51 0 0# (any int
    ) in (
     (if ((Boolean.andb((0 <= i)) ((i <= 5)))) then (
-     #"torpedoes.ads" 49 0 0# abstract ensures {true}(let _ = ((Torpedoes__torps__rep.to_rep((Array__Int__Torpedoes__torps.get(Torpedoes__torpexists__torpedoestorage.torpedoestorage) (i)))) = Torpedoes__torpexists__torp.torp) in (
+     #"torpedoes.ads" 51 0 0# abstract ensures {true}(let _ = ((Torpedoes__torps__rep.to_rep((Array__Int__Torpedoes__torps.get(Torpedoes__torpexists__torpedoestorage.torpedoestorage) (i)))) = Torpedoes__torpexists__torp.torp) in (
       ()))
       end ))))
    ;
-   #"torpedoes.ads" 49 0 0# (any bool
-   requires {#"torpedoes.ads" 49 0 0# true} 
-   ensures {#"torpedoes.ads" 49 0 0# ( (result = True) <-> (exists i  : int.
+   #"torpedoes.ads" 51 0 0# (any bool
+   requires {#"torpedoes.ads" 51 0 0# true} 
+   ensures {#"torpedoes.ads" 51 0 0# ( (result = True) <-> (exists i  : int.
     ( ( (0 <= i) /\ (i <= 5) ) /\ ((Torpedoes__torps__rep.to_rep (Array__Int__Torpedoes__torps.get Torpedoes__torpexists__torpedoestorage.torpedoestorage i)) = Torpedoes__torpexists__torp.torp) )) )} 
    ) ) );
-   #"torpedoes.ads" 49 0 0# raise Return__exc )) );
+   #"torpedoes.ads" 51 0 0# raise Return__exc )) );
     raise Return__exc )
   with
    Return__exc -> ()
@@ -4725,7 +5226,7 @@ module Torpedoes__torpexists__subprogram_def
   torpedoes__torpexists__result.bool__content )
 end
 
-(* Module for checking contracts and absence of run-time errors in subprogram "torplocation" defined at torpedoes.ads:51, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+(* Module for checking contracts and absence of run-time errors in subprogram "torplocation" defined at torpedoes.ads:53, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
 module Torpedoes__torplocation__subprogram_def
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -4752,70 +5253,70 @@ module Torpedoes__torplocation__subprogram_def
  use        Torpedoes__torplocation__torpedoestorage___axiom
  use        Torpedoes__torplocation__torp___axiom
 
- val torpedoes__torplocation__result "model_projected" "model_trace:2921@result" "name:TorpLocation"  : int__ref 
+ val torpedoes__torplocation__result "model_projected" "model_trace:3050@result" "name:TorpLocation"  : int__ref 
  
- let def #"torpedoes.ads" 51 0 0#"W:diverges:N" "GP_Subp:torpedoes.ads:51" 
+ let def #"torpedoes.ads" 53 0 0#"W:diverges:N" "GP_Subp:torpedoes.ads:53" 
    (__void_param : unit)
-  requires { #"torpedoes.ads" 51 0 0# true }
-  ensures { #"torpedoes.ads" 51 0 0# (#"torpedoes.ads" 53 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Sloc:torpedoes.ads:53:14" "GP_Id:9" "comment:     Post => torpedoeStorage(torpLocation'Result) = torp;
-             ^ torpedoes.ads:53:14:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" ( "GP_Pretty_Ada:3861" "GP_Sloc:torpedoes.ads:53:14" ((Torpedoes__torps__rep.to_rep (Array__Int__Torpedoes__torps.get Torpedoes__torplocation__torpedoestorage.torpedoestorage torpedoes__torplocation__result.int__content)) = Torpedoes__torplocation__torp.torp) ) )) }
+  requires { #"torpedoes.ads" 53 0 0# true }
+  ensures { #"torpedoes.ads" 53 0 0# (#"torpedoes.ads" 55 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Sloc:torpedoes.ads:55:14" "GP_Id:9" "comment:     Post => torpedoeStorage(torpLocation'Result) = torp;
+             ^ torpedoes.ads:55:14:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" ( "GP_Pretty_Ada:4179" "GP_Sloc:torpedoes.ads:55:14" ((Torpedoes__torps__rep.to_rep (Array__Int__Torpedoes__torps.get Torpedoes__torplocation__torpedoestorage.torpedoestorage torpedoes__torplocation__result.int__content)) = Torpedoes__torplocation__torp.torp) ) )) }
    =
-  ( () (* Assume dynamic invariants of inputs of the subprogram torpedoes.ads:51 *)
+  ( () (* Assume dynamic invariants of inputs of the subprogram torpedoes.ads:53 *)
   ;
    assume {  (Torpedoes__storage___axiom.dynamic_invariant Torpedoes__torplocation__torpedoestorage.torpedoestorage True False True True) };
    assume {  (Torpedoes__torps___axiom.dynamic_invariant Torpedoes__torplocation__torp.torp True False True True) };
    assume {  true };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram torpedoes.ads:51 *)
+  () (* Declarations introduced by the compiler at the beginning of the subprogram torpedoes.ads:53 *)
   ;
-  () (* Check for RTE in the Pre of the subprogram torpedoes.ads:51 *)
+  () (* Check for RTE in the Pre of the subprogram torpedoes.ads:53 *)
   ;
    abstract ensures {true}(let _ = (Torpedoes__torpexists___axiom.torpexists(Torpedoes__torplocation__torpedoestorage.torpedoestorage) (Torpedoes__torplocation__torp.torp)) in (
    ()))
    end ;
-  () (* Assume Pre of the subprogram torpedoes.ads:51 *)
+  () (* Assume Pre of the subprogram torpedoes.ads:53 *)
   ;
-   assume {  ((epsilon temp___result_230 : bool.
-   ( (temp___result_230 = (Torpedoes__torpexists.torpexists Torpedoes__torplocation__torpedoestorage.torpedoestorage Torpedoes__torplocation__torp.torp)) /\ (Torpedoes__torpexists.torpexists__function_guard temp___result_230 Torpedoes__torplocation__torpedoestorage.torpedoestorage Torpedoes__torplocation__torp.torp) )) = True) };
+   assume {  ((epsilon temp___result_237 : bool.
+   ( (temp___result_237 = (Torpedoes__torpexists.torpexists Torpedoes__torplocation__torpedoestorage.torpedoestorage Torpedoes__torplocation__torp.torp)) /\ (Torpedoes__torpexists.torpexists__function_guard temp___result_237 Torpedoes__torplocation__torpedoestorage.torpedoestorage Torpedoes__torplocation__torp.torp) )) = True) };
    try
-   ( (#"torpedoes.adb" 57 0 0# ( #"torpedoes.adb" 57 0 0# Torpedoes__torplocation__position.position.int__content <- ( 0 );
-   #"torpedoes.adb" 57 0 0# assume { #"torpedoes.adb" 57 0 0# (Torpedoes__storagecapacity___axiom.dynamic_invariant Torpedoes__torplocation__position.position.int__content True False True True) } ));
-   (#"torpedoes.adb" 59 0 0# ());
-   ( "GP_Sloc:torpedoes.adb:59:46" (#"torpedoes.adb" 59 0 0# ( () (* Translation of an Ada loop from torpedoes.adb:59 *)
+   ( (#"torpedoes.adb" 55 0 0# ( #"torpedoes.adb" 55 0 0# Torpedoes__torplocation__position.position.int__content <- ( 0 );
+   #"torpedoes.adb" 55 0 0# assume { #"torpedoes.adb" 55 0 0# (Torpedoes__storagecapacity___axiom.dynamic_invariant Torpedoes__torplocation__position.position.int__content True False True True) } ));
+   (#"torpedoes.adb" 57 0 0# ());
+   ( "GP_Sloc:torpedoes.adb:57:46" (#"torpedoes.adb" 57 0 0# ( () (* Translation of an Ada loop from torpedoes.adb:57 *)
    ;
    (if ((Torpedoes__torplocation__position.position.int__content < 5)) then (
-    #"torpedoes.adb" 59 0 0# try
-     ( #"torpedoes.adb" 59 0 0# abstract ensures {true}(let _ = Torpedoes__torplocation__position.position.int__content in (
+    #"torpedoes.adb" 57 0 0# try
+     ( #"torpedoes.adb" 57 0 0# abstract ensures {true}(let _ = Torpedoes__torplocation__position.position.int__content in (
       ()))
       end ;
-     (let temp___228 = #"torpedoes.adb" 59 0 0# (any int
-     ensures {#"torpedoes.adb" 59 0 0# (result = Torpedoes__torplocation__position.position.int__content)} 
+     (let temp___235 = #"torpedoes.adb" 57 0 0# (any int
+     ensures {#"torpedoes.adb" 57 0 0# (result = Torpedoes__torplocation__position.position.int__content)} 
      ) in (
-      ( () (* First unroling of the loop statements appearing before the loop invariant of loop torpedoes.adb:59 *)
+      ( () (* First unroling of the loop statements appearing before the loop invariant of loop torpedoes.adb:57 *)
       ;
-      ( "GP_Sloc:torpedoes.adb:60:30" (#"torpedoes.adb" 60 0 0# ()) );
-      ( "GP_Sloc:torpedoes.adb:60:10" (#"torpedoes.adb" 60 0 0# (if (((Torpedoes__torps__rep.to_rep((Array__Int__Torpedoes__torps.get(Torpedoes__torplocation__torpedoestorage.torpedoestorage) (Torpedoes__torplocation__position.position.int__content)))) = Torpedoes__torplocation__torp.torp)) then (
-       ( ( "GP_Sloc:torpedoes.adb:61:20" (#"torpedoes.adb" 61 0 0# ()) );
-       ( "GP_Sloc:torpedoes.adb:61:13" (#"torpedoes.adb" 61 0 0# ( #"torpedoes.adb" 61 0 0# torpedoes__torplocation__result.int__content <- ( Torpedoes__torplocation__position.position.int__content );
-       #"torpedoes.adb" 61 0 0# raise Return__exc )) ) )) else (
+      ( "GP_Sloc:torpedoes.adb:58:30" (#"torpedoes.adb" 58 0 0# ()) );
+      ( "GP_Sloc:torpedoes.adb:58:10" (#"torpedoes.adb" 58 0 0# (if (((Torpedoes__torps__rep.to_rep((Array__Int__Torpedoes__torps.get(Torpedoes__torplocation__torpedoestorage.torpedoestorage) (Torpedoes__torplocation__position.position.int__content)))) = Torpedoes__torplocation__torp.torp)) then (
+       ( ( "GP_Sloc:torpedoes.adb:59:20" (#"torpedoes.adb" 59 0 0# ()) );
+       ( "GP_Sloc:torpedoes.adb:59:13" (#"torpedoes.adb" 59 0 0# ( #"torpedoes.adb" 59 0 0# torpedoes__torplocation__result.int__content <- ( Torpedoes__torplocation__position.position.int__content );
+       #"torpedoes.adb" 59 0 0# raise Return__exc )) ) )) else (
        ()))) );
-      () (* While loop translating the Ada loop from torpedoes.adb:59 *)
+      () (* While loop translating the Ada loop from torpedoes.adb:57 *)
       ;
        while True do
        invariant { 
-        (#"torpedoes.adb" 64 0 0# ( "model_vc" "keep_on_simp" "GP_Reason:VC_LOOP_INVARIANT" "GP_Sloc:torpedoes.adb:64:13" "GP_Id:8" "comment:           (for all I in torpedoeStorage'First..position => torpedoeStorage(I) /= torp);
-            ^ torpedoes.adb:64:13:VC_LOOP_INVARIANT" "GP_Shape:L_3_while__pragargs__forall" (forall i #"torpedoes.adb" 64 0 0#  "model" "name:I" "model_trace:2571"  : int.
-         ( ( (0 <= i) /\ (i <= Torpedoes__torplocation__position.position.int__content) ) -> ( "GP_Pretty_Ada:2588" "GP_Sloc:torpedoes.adb:64:61" ((Torpedoes__torps__rep.to_rep (Array__Int__Torpedoes__torps.get Torpedoes__torplocation__torpedoestorage.torpedoestorage i)) <> Torpedoes__torplocation__torp.torp) ) )) ))
+        (#"torpedoes.adb" 62 0 0# ( "model_vc" "keep_on_simp" "GP_Reason:VC_LOOP_INVARIANT" "GP_Sloc:torpedoes.adb:62:13" "GP_Id:8" "comment:           (for all I in torpedoeStorage'First..position => torpedoeStorage(I) /= torp);
+            ^ torpedoes.adb:62:13:VC_LOOP_INVARIANT" "GP_Shape:L_3_while__pragargs__forall" (forall i #"torpedoes.adb" 62 0 0#  "model" "name:I" "model_trace:2571"  : int.
+         ( ( (0 <= i) /\ (i <= Torpedoes__torplocation__position.position.int__content) ) -> ( "GP_Pretty_Ada:2588" "GP_Sloc:torpedoes.adb:62:61" ((Torpedoes__torps__rep.to_rep (Array__Int__Torpedoes__torps.get Torpedoes__torplocation__torpedoestorage.torpedoestorage i)) <> Torpedoes__torplocation__torp.torp) ) )) ))
         }
-       ( () (* Assume implicit invariants from the loop torpedoes.adb:59 *)
+       ( () (* Assume implicit invariants from the loop torpedoes.adb:57 *)
        ;
         assume {  ( ( true /\ (Torpedoes__storagecapacity___axiom.dynamic_invariant Torpedoes__torplocation__position.position.int__content False True True True) ) /\ true ) };
-       () (* Check for absence of RTE in the invariant of loop torpedoes.adb:59 *)
+       () (* Check for absence of RTE in the invariant of loop torpedoes.adb:57 *)
        ;
         abstract ensures {true}(let _ = ( (let i =  (any int
        ) in (
         (if ((Boolean.andb((0 <= i)) ((i <= Torpedoes__torplocation__position.position.int__content)))) then (
-          abstract ensures {true}(let _ = ((Torpedoes__torps__rep.to_rep((Array__Int__Torpedoes__torps.get(Torpedoes__torplocation__torpedoestorage.torpedoestorage) ((  assert {  (#"torpedoes.adb" 64 0 0# ( "model_vc" "keep_on_simp" "GP_Reason:VC_INDEX_CHECK" "GP_Sloc:torpedoes.adb:64:77" "GP_Id:7" "comment:           (for all I in torpedoeStorage'First..position => torpedoeStorage(I) /= torp);
-                                                                            ^ torpedoes.adb:64:77:VC_INDEX_CHECK" "GP_Shape:L_3_while__pragargs__forall__cmp__ixdcomp" ( (Torpedoes__storagecapacity.first <= i) /\ (i <= Torpedoes__storagecapacity.last) ) )) };
+          abstract ensures {true}(let _ = ((Torpedoes__torps__rep.to_rep((Array__Int__Torpedoes__torps.get(Torpedoes__torplocation__torpedoestorage.torpedoestorage) ((  assert {  (#"torpedoes.adb" 62 0 0# ( "model_vc" "keep_on_simp" "GP_Reason:VC_INDEX_CHECK" "GP_Sloc:torpedoes.adb:62:77" "GP_Id:7" "comment:           (for all I in torpedoeStorage'First..position => torpedoeStorage(I) /= torp);
+                                                                            ^ torpedoes.adb:62:77:VC_INDEX_CHECK" "GP_Shape:L_3_while__pragargs__forall__cmp__ixdcomp" ( (Torpedoes__storagecapacity.first <= i) /\ (i <= Torpedoes__storagecapacity.last) ) )) };
          i ))))) <> Torpedoes__torplocation__torp.torp) in (
           ()))
           end ))))
@@ -4827,30 +5328,30 @@ module Torpedoes__torplocation__subprogram_def
        ) ) in (
         ()))
         end ;
-       () (* Loop statements appearing after the loop invariant of loop torpedoes.adb:59 *)
+       () (* Loop statements appearing after the loop invariant of loop torpedoes.adb:57 *)
        ;
-       ( "GP_Sloc:torpedoes.adb:65:10" (#"torpedoes.adb" 65 0 0# ()) );
-       ( "GP_Sloc:torpedoes.adb:65:22" (#"torpedoes.adb" 65 0 0# ()) );
-       ( "GP_Sloc:torpedoes.adb:65:19" (#"torpedoes.adb" 65 0 0# #"torpedoes.adb" 65 0 0# Torpedoes__torplocation__position.position.int__content <- ( (#"torpedoes.adb" 65 0 0# ( "model_vc" "keep_on_simp" "GP_Reason:VC_RANGE_CHECK" "GP_Sloc:torpedoes.adb:65:31" "GP_Id:6" "comment:         position := position + 1;
-                              ^ torpedoes.adb:65:31:VC_RANGE_CHECK" "GP_Shape:L_3_while__position_assign__add" (Torpedoes__storagecapacity.range_check_((Torpedoes__torplocation__position.position.int__content + 1))) )) )) );
-       () (* Check for the exit condition and loop statements appearing before the loop invariant of loop torpedoes.adb:59 *)
+       ( "GP_Sloc:torpedoes.adb:63:10" (#"torpedoes.adb" 63 0 0# ()) );
+       ( "GP_Sloc:torpedoes.adb:63:22" (#"torpedoes.adb" 63 0 0# ()) );
+       ( "GP_Sloc:torpedoes.adb:63:19" (#"torpedoes.adb" 63 0 0# #"torpedoes.adb" 63 0 0# Torpedoes__torplocation__position.position.int__content <- ( (#"torpedoes.adb" 63 0 0# ( "model_vc" "keep_on_simp" "GP_Reason:VC_RANGE_CHECK" "GP_Sloc:torpedoes.adb:63:31" "GP_Id:6" "comment:         position := position + 1;
+                              ^ torpedoes.adb:63:31:VC_RANGE_CHECK" "GP_Shape:L_3_while__position_assign__add" (Torpedoes__storagecapacity.range_check_((Torpedoes__torplocation__position.position.int__content + 1))) )) )) );
+       () (* Check for the exit condition and loop statements appearing before the loop invariant of loop torpedoes.adb:57 *)
        ;
        (if (not ( (Torpedoes__torplocation__position.position.int__content < 5) )) then (
          raise Torpedoes__torplocation__L_3.L_3));
-       ( "GP_Sloc:torpedoes.adb:60:30" (#"torpedoes.adb" 60 0 0# ()) );
-       ( "GP_Sloc:torpedoes.adb:60:10" (#"torpedoes.adb" 60 0 0# (if (((Torpedoes__torps__rep.to_rep((Array__Int__Torpedoes__torps.get(Torpedoes__torplocation__torpedoestorage.torpedoestorage) (Torpedoes__torplocation__position.position.int__content)))) = Torpedoes__torplocation__torp.torp)) then (
-        ( ( "GP_Sloc:torpedoes.adb:61:20" (#"torpedoes.adb" 61 0 0# ()) );
-        ( "GP_Sloc:torpedoes.adb:61:13" (#"torpedoes.adb" 61 0 0# ( #"torpedoes.adb" 61 0 0# torpedoes__torplocation__result.int__content <- ( Torpedoes__torplocation__position.position.int__content );
-        #"torpedoes.adb" 61 0 0# raise Return__exc )) ) )) else (
+       ( "GP_Sloc:torpedoes.adb:58:30" (#"torpedoes.adb" 58 0 0# ()) );
+       ( "GP_Sloc:torpedoes.adb:58:10" (#"torpedoes.adb" 58 0 0# (if (((Torpedoes__torps__rep.to_rep((Array__Int__Torpedoes__torps.get(Torpedoes__torplocation__torpedoestorage.torpedoestorage) (Torpedoes__torplocation__position.position.int__content)))) = Torpedoes__torplocation__torp.torp)) then (
+        ( ( "GP_Sloc:torpedoes.adb:59:20" (#"torpedoes.adb" 59 0 0# ()) );
+        ( "GP_Sloc:torpedoes.adb:59:13" (#"torpedoes.adb" 59 0 0# ( #"torpedoes.adb" 59 0 0# torpedoes__torplocation__result.int__content <- ( Torpedoes__torplocation__position.position.int__content );
+        #"torpedoes.adb" 59 0 0# raise Return__exc )) ) )) else (
         ()))) ) )
       done )))
       )
     with
      Torpedoes__torplocation__L_3.L_3 -> ()
     end)) )) );
-   ( "GP_Sloc:torpedoes.adb:67:14" (#"torpedoes.adb" 67 0 0# ()) );
-   ( "GP_Sloc:torpedoes.adb:67:7" (#"torpedoes.adb" 67 0 0# ( #"torpedoes.adb" 67 0 0# torpedoes__torplocation__result.int__content <- ( Torpedoes__torplocation__position.position.int__content );
-   #"torpedoes.adb" 67 0 0# raise Return__exc )) );
+   ( "GP_Sloc:torpedoes.adb:65:14" (#"torpedoes.adb" 65 0 0# ()) );
+   ( "GP_Sloc:torpedoes.adb:65:7" (#"torpedoes.adb" 65 0 0# ( #"torpedoes.adb" 65 0 0# torpedoes__torplocation__result.int__content <- ( Torpedoes__torplocation__position.position.int__content );
+   #"torpedoes.adb" 65 0 0# raise Return__exc )) );
     raise Return__exc )
   with
    Return__exc -> ()
@@ -4859,4 +5360,142 @@ module Torpedoes__torplocation__subprogram_def
    ()))
    end ;
   torpedoes__torplocation__result.int__content )
+end
+
+(* Module for checking contracts and absence of run-time errors in subprogram "loadlauncher" defined at torpedoes.ads:70, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+module Torpedoes__loadlauncher__subprogram_def
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        "_gnatprove_standard".Boolean
+ use        Torpedoes__storageisempty
+ use        Torpedoes__storageisempty___axiom
+ use        Torpedoes__torps
+ use        Torpedoes__torps__rep
+ use        Torpedoes__storagecapacity___axiom
+ use        Array__Int__Torpedoes__torps
+ use        Torpedoes__storage___axiom
+ use        Torpedoes__launcher___axiom
+ use        Torpedoes__loadlauncher__torpedoetube
+ use        Array__Int__Torpedoes__torps
+ use        Torpedoes__loadlauncher__torpedoestorage
+ use        Torpedoes__loadlauncher__slot
+ use        Torpedoes__torps___axiom
+ use        Torpedoes__storagecapacity___axiom
+ use        Torpedoes__storage___axiom
+ use        Torpedoes__launcher___axiom
+ use        Torpedoes__storageisempty___axiom
+ use        Torpedoes__loadlauncher__torpedoetube___axiom
+ use        Torpedoes__loadlauncher__torpedoestorage___axiom
+ use        Torpedoes__loadlauncher__slot___axiom
+
+ let def #"torpedoes.ads" 70 0 0#"W:diverges:N" "GP_Subp:torpedoes.ads:70" 
+   (__void_param : unit)
+  requires { #"torpedoes.ads" 70 0 0# true }
+  ensures { #"torpedoes.ads" 70 0 0# (#"torpedoes.ads" 74 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:torpedoes.ads:74:14" "GP_Id:10" "comment:     Post => torpedoeTube = Loaded
+             ^ torpedoes.ads:74:14:VC_POSTCONDITION" ( ( "GP_Pretty_Ada:4291" "GP_Sloc:torpedoes.ads:74:14" (Torpedoes__loadlauncher__torpedoetube.torpedoetube.int__content = 0) ) /\ ( ( "GP_Pretty_Ada:3155" "GP_Sloc:torpedoes.ads:75:37" ((Torpedoes__torps__rep.to_rep (Array__Int__Torpedoes__torps.get Torpedoes__loadlauncher__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__torps.map__content Torpedoes__loadlauncher__slot.slot)) = 1) ) /\ (forall i #"torpedoes.ads" 74 0 0#  "model" "name:I" "model_trace:3158"  : int.
+   ( ( (0 <= i) /\ (i <= 5) ) -> (if ((i <> Torpedoes__loadlauncher__slot.slot)) then (
+    ( "GP_Pretty_Ada:3175" "GP_Sloc:torpedoes.ads:76:73" ((Torpedoes__torps__rep.to_rep (Array__Int__Torpedoes__torps.get Torpedoes__loadlauncher__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__torps.map__content i)) = (Torpedoes__torps__rep.to_rep (let temp___242 = (old Torpedoes__loadlauncher__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__torps.map__content ) in (
+     (Array__Int__Torpedoes__torps.get temp___242 i)))
+    )) )) else (
+    ( "GP_Pretty_Ada:4539" "GP_Sloc:torpedoes.ads:76:55" true ))) )) ) ) )) }
+   =
+  ( () (* Assume dynamic invariants of inputs of the subprogram torpedoes.ads:70 *)
+  ;
+   assume {  (Torpedoes__launcher___axiom.dynamic_invariant Torpedoes__loadlauncher__torpedoetube.torpedoetube.int__content True False True True) };
+   assume {  (Torpedoes__storage___axiom.dynamic_invariant Torpedoes__loadlauncher__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__torps.map__content True False True True) };
+   assume {  (Torpedoes__storagecapacity___axiom.dynamic_invariant Torpedoes__loadlauncher__slot.slot True False True True) };
+   assume {  true };
+  () (* Declarations introduced by the compiler at the beginning of the subprogram torpedoes.ads:70 *)
+  ;
+  () (* Check for RTE in the Pre of the subprogram torpedoes.ads:70 *)
+  ;
+   abstract ensures {true}(let _ = ( (Torpedoes__loadlauncher__torpedoetube.torpedoetube.int__content = 1) && ((Boolean.to_int((Torpedoes__storageisempty___axiom.storageisempty(Torpedoes__loadlauncher__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__torps.map__content)))) = (Boolean.to_int((Boolean.of_int(0))))) ) in (
+   ()))
+   end ;
+  () (* Assume Pre of the subprogram torpedoes.ads:70 *)
+  ;
+   assume {  ( (Torpedoes__loadlauncher__torpedoetube.torpedoetube.int__content = 1) /\ ( ((epsilon temp___result_241 : bool.
+   ( (temp___result_241 = (Torpedoes__storageisempty.storageisempty Torpedoes__loadlauncher__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__torps.map__content)) /\ (Torpedoes__storageisempty.storageisempty__function_guard temp___result_241 Torpedoes__loadlauncher__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__torps.map__content) )) = True) <-> false ) ) };
+   abstract ensures {true}(let _ = Torpedoes__loadlauncher__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__torps.map__content in (
+   ()))
+   end ;
+  (let temp___old_239 =  (any Array__Int__Torpedoes__torps.map
+  ensures { (result = Torpedoes__loadlauncher__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__torps.map__content)} 
+  ) in (
+   (  try
+    ( ( "GP_Sloc:torpedoes.adb:75:36" (#"torpedoes.adb" 75 0 0# ()) );
+    ( "GP_Sloc:torpedoes.adb:75:7" (#"torpedoes.adb" 75 0 0# (if ((Boolean.andb((Torpedoes__loadlauncher__torpedoetube.torpedoetube.int__content = 1)) (((Boolean.to_int((Torpedoes__storageisempty___axiom.storageisempty(Torpedoes__loadlauncher__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__torps.map__content)))) = (Boolean.to_int((Boolean.of_int(0)))))))) then (
+     ( ( "GP_Sloc:torpedoes.adb:76:32" (#"torpedoes.adb" 76 0 0# #"torpedoes.adb" 76 0 0# Torpedoes__loadlauncher__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__torps.map__content <- ( (Array__Int__Torpedoes__torps.set(Torpedoes__loadlauncher__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__torps.map__content) (Torpedoes__loadlauncher__slot.slot) ((Torpedoes__torps__rep.of_rep(1)))) )) );
+     ( "GP_Sloc:torpedoes.adb:77:23" (#"torpedoes.adb" 77 0 0# #"torpedoes.adb" 77 0 0# Torpedoes__loadlauncher__torpedoetube.torpedoetube.int__content <- ( 0 )) ) )) else (
+     ()))) );
+     raise Return__exc )
+   with
+    Return__exc -> ()
+   end;
+    abstract ensures {true}(let _ = ( (Torpedoes__loadlauncher__torpedoetube.torpedoetube.int__content = 0) && ( ((Torpedoes__torps__rep.to_rep((Array__Int__Torpedoes__torps.get(Torpedoes__loadlauncher__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__torps.map__content) (Torpedoes__loadlauncher__slot.slot)))) = 1) && ( (let i =  (any int
+   ) in (
+    (if ((Boolean.andb((0 <= i)) ((i <= 5)))) then (
+      abstract ensures {true}(let _ = (if ((i <> Torpedoes__loadlauncher__slot.slot)) then (
+      ((Torpedoes__torps__rep.to_rep((Array__Int__Torpedoes__torps.get(Torpedoes__loadlauncher__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__torps.map__content) (i)))) = (Torpedoes__torps__rep.to_rep((Array__Int__Torpedoes__torps.get(temp___old_239) (i)))))) else (
+      (Boolean.of_int(1)))) in (
+      ()))
+      end ))))
+   ;
+    (any bool
+   requires { true} 
+   ensures { ( (result = True) <-> (forall i   "model" "name:I" "model_trace:3158"  : int.
+    ( ( (0 <= i) /\ (i <= 5) ) -> (if ((i <> Torpedoes__loadlauncher__slot.slot)) then (
+     ((Torpedoes__torps__rep.to_rep (Array__Int__Torpedoes__torps.get Torpedoes__loadlauncher__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__torps.map__content i)) = (Torpedoes__torps__rep.to_rep (Array__Int__Torpedoes__torps.get temp___old_239 i)))) else (
+     true)) )) )} 
+   ) ) ) ) in (
+    ()))
+    end  )))
+   )
+end
+
+(* Module for checking contracts and absence of run-time errors in subprogram "firetorpedoe" defined at torpedoes.ads:84, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+module Torpedoes__firetorpedoe__subprogram_def
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Movement__depthmonitor___axiom
+ use        Torpedoes__launcher___axiom
+ use        Torpedoes__firetorpedoe__torpedoetube
+ use        Torpedoes__firetorpedoe__currentdepth
+ use        Torpedoes__launcher___axiom
+ use        Torpedoes__firetorpedoe__torpedoetube___axiom
+ use        Torpedoes__firetorpedoe__currentdepth___axiom
+ use        Movement__depthmonitor___axiom
+
+ let def #"torpedoes.ads" 84 0 0#"W:diverges:N" "GP_Subp:torpedoes.ads:84" 
+   (__void_param : unit)
+  requires { #"torpedoes.ads" 84 0 0# true }
+  ensures { #"torpedoes.ads" 84 0 0# (#"torpedoes.ads" 86 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" "GP_Sloc:torpedoes.ads:86:14" "GP_Id:11" "comment:     Post => torpedoeTube = Empty;
+             ^ torpedoes.ads:86:14:VC_POSTCONDITION" ( "GP_Pretty_Ada:4366" "GP_Sloc:torpedoes.ads:86:14" (Torpedoes__firetorpedoe__torpedoetube.torpedoetube.int__content = 1) ) )) }
+   =
+  ( () (* Assume dynamic invariants of inputs of the subprogram torpedoes.ads:84 *)
+  ;
+   assume {  (Torpedoes__launcher___axiom.dynamic_invariant Torpedoes__firetorpedoe__torpedoetube.torpedoetube.int__content True False True True) };
+   assume {  (Movement__depthmonitor___axiom.dynamic_invariant Torpedoes__firetorpedoe__currentdepth.currentdepth True False True True) };
+   assume {  true };
+  () (* Declarations introduced by the compiler at the beginning of the subprogram torpedoes.ads:84 *)
+  ;
+  () (* Check for RTE in the Pre of the subprogram torpedoes.ads:84 *)
+  ;
+   abstract ensures {true}(let _ = ( (Torpedoes__firetorpedoe__torpedoetube.torpedoetube.int__content = 0) && (Torpedoes__firetorpedoe__currentdepth.currentdepth > 0) ) in (
+   ()))
+   end ;
+  () (* Assume Pre of the subprogram torpedoes.ads:84 *)
+  ;
+   assume {  ( (Torpedoes__firetorpedoe__torpedoetube.torpedoetube.int__content = 0) /\ (Torpedoes__firetorpedoe__currentdepth.currentdepth > 0) ) };
+   try
+   ( ( "GP_Sloc:torpedoes.adb:88:7" (#"torpedoes.adb" 88 0 0# (if ((Torpedoes__firetorpedoe__currentdepth.currentdepth > 0)) then (
+    ( "GP_Sloc:torpedoes.adb:89:23" (#"torpedoes.adb" 89 0 0# #"torpedoes.adb" 89 0 0# Torpedoes__firetorpedoe__torpedoetube.torpedoetube.int__content <- ( 1 )) )) else (
+    ()))) );
+    raise Return__exc )
+  with
+   Return__exc -> ()
+  end;
+   abstract ensures {true}(let _ = (Torpedoes__firetorpedoe__torpedoetube.torpedoetube.int__content = 1) in (
+   ()))
+   end  )
 end

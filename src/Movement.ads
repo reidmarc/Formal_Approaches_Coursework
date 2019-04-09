@@ -4,14 +4,6 @@ is
    type DepthMonitor is range 0..2000;
    type OperationStatus is (Allowed, Prohibited);
 
-
-
---     function MaxDepthInvariant return Boolean is
---       (currentDepth <= 2000);
---
---     function NotSurfacedInvariant return Boolean is
---        (currentDepth > 0);
-
    -------------------------------------------------------
    -- The submarine cannot dive beneath a certain depth --
    -------------------------------------------------------

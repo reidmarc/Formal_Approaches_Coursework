@@ -32,8 +32,11 @@ is
 
 
    function StorageHasEmptySlots (torpedoeStorage : Storage) return Boolean is
-     (for some I in torpedoeStorage'Range => torpedoeStorage(I) /= Torp);
+     (for some I in torpedoeStorage'Range => torpedoeStorage(I) = Nothing);
 
+
+   function StorageIsEmpty (torpedoeStorage : Storage) return Boolean is
+     (for all I in torpedoeStorage'Range => torpedoeStorage(I) = Nothing);
 
 
    function CountTorps (torpedoeStorage : Storage; torp : Torps) return Integer
@@ -44,40 +47,43 @@ is
    -----------------------
    -- Load the launcher --
    -----------------------
-
    function TorpExists (torpedoeStorage : Storage; torp : Torps) return Boolean is
      (for some I in torpedoeStorage'Range => torpedoeStorage(I) = torp);
 
    function TorpLocation (torpedoeStorage : Storage; torp : Torps) return StorageCapacity with
      Pre => torpExists(torpedoeStorage, torp),
      Post => torpedoeStorage(torpLocation'Result) = torp;
---------------------------------------------------------------------------------------------------
---
---
---
---  --       Contract_Cases =>
---  --         (torpedoeStorage(1) = torp and then (for some J in 2..torpedoeStorage'Last => torpedoeStorage(J) = torp) => torpLocation'Result = 1,
---  --         torpedoeStorage(1) /= torp => torpLocation'Result > 1);
---
---
---
---
---
---     procedure LoadLauncher (torpedoeTube : in out Launcher; torpedoeStorage : in out Storage; torp : Torps) with
---       Pre => torpedoeTube = Empty and then StorageHasEmptySlots(torpedoeStorage) /= True,
---       Post => torpedoeTube = Loaded;
---
---
---
---
---
---     -----------------------
---     -- Fire the launcher --
---     -----------------------
---
---     procedure FireTorpedoe (torpedoeTube : in out Launcher; currentDepth : in DepthMonitor) with
---       Pre => torpedoeTube = Loaded and then currentDepth > DepthMonitor'First,
---       Post => torpedoeTube = Empty;
+
+
+
+
+---------------------------------------------------------------------------------------------------
+--       Contract_Cases =>
+--         (torpedoeStorage(1) = torp and then (for some J in 2..torpedoeStorage'Last => torpedoeStorage(J) = torp) => torpLocation'Result = 1,
+--         torpedoeStorage(1) /= torp => torpLocation'Result > 1);
+
+
+
+
+
+
+   procedure LoadLauncher (torpedoeTube : in out Launcher;
+                           torpedoeStorage : in out Storage;
+                           slot : StorageCapacity) with
+     Pre => torpedoeTube = Empty and then StorageIsEmpty(torpedoeStorage) = False,
+     Post => torpedoeTube = Loaded
+     and then torpedoeStorage(slot) = Nothing
+     and then (for all I in torpedoeStorage'Range => (if I /= slot then torpedoeStorage(I) = torpedoeStorage'Old(I)));
+
+
+
+
+   -----------------------
+   -- Fire the launcher --
+   -----------------------
+   procedure FireTorpedoe (torpedoeTube : in out Launcher; currentDepth : in DepthMonitor) with
+     Pre => torpedoeTube = Loaded and then currentDepth > DepthMonitor'First,
+     Post => torpedoeTube = Empty;
 -----------------------------------------------------------------------------------------------------
 
 

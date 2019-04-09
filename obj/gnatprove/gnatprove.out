@@ -10,10 +10,10 @@ Initialization                   17          17          .          .           
 Non-Aliasing                      .           .          .          .            .           .          .
 Run-time Checks                   8           .          .          .     8 (CVC4)           .          .
 Assertions                        4           .          .          .     4 (CVC4)           .          .
-Functional Contracts             17           .          .          .    17 (CVC4)           .          .
+Functional Contracts             19           .          .          .    19 (CVC4)           .          .
 LSP Verification                  .           .          .          .            .           .          .
 ---------------------------------------------------------------------------------------------------------
-Total                            46    17 (37%)          .          .     29 (63%)           .          .
+Total                            48    17 (35%)          .          .     31 (65%)           .          .
 
 
 Analyzed 6 units
@@ -27,9 +27,9 @@ in unit main, 0 subprograms and packages out of 1 analyzed
   Main at main.adb:9 skipped
 in unit movement, 4 subprograms and packages out of 4 analyzed
   Movement at movement.ads:1 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
-  Movement.DiveTheSubmarine at movement.ads:18 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (2 checks)
-  Movement.RaiseTheSubmarine at movement.ads:30 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (2 checks)
-  Movement.SurfaceTheSubmarine at movement.ads:39 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (2 checks)
+  Movement.DiveTheSubmarine at movement.ads:10 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (2 checks)
+  Movement.RaiseTheSubmarine at movement.ads:22 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (2 checks)
+  Movement.SurfaceTheSubmarine at movement.ads:31 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (2 checks)
 in unit oxygen, 4 subprograms and packages out of 4 analyzed
   Oxygen at oxygen.ads:4 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
   Oxygen.FillOxygenTank at oxygen.ads:23 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
@@ -39,11 +39,14 @@ in unit reactor, 3 subprograms and packages out of 3 analyzed
   Reactor at reactor.ads:4 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
   Reactor.ReactorTempCoolsdown at reactor.ads:26 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
   Reactor.ReactorTempOverheats at reactor.ads:13 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (2 checks)
-in unit torpedoes, 7 subprograms and packages out of 7 analyzed
+in unit torpedoes, 10 subprograms and packages out of 10 analyzed
   Torpedoes at torpedoes.ads:4 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
-  Torpedoes.CountTorps at torpedoes.ads:39 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (2 checks)
+  Torpedoes.CountTorps at torpedoes.ads:42 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (2 checks)
   Torpedoes.FillTorpedoeStorage at torpedoes.ads:24 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (5 checks)
+  Torpedoes.FireTorpedoe at torpedoes.ads:84 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  Torpedoes.LoadLauncher at torpedoes.ads:70 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
   Torpedoes.StorageHasEmptySlots at torpedoes.ads:34 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  Torpedoes.StorageIsEmpty at torpedoes.ads:38 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
   Torpedoes.StorageIsFull at torpedoes.ads:30 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
-  Torpedoes.TorpExists at torpedoes.ads:48 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
-  Torpedoes.TorpLocation at torpedoes.ads:51 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (5 checks)
+  Torpedoes.TorpExists at torpedoes.ads:50 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  Torpedoes.TorpLocation at torpedoes.ads:53 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (5 checks)
