@@ -1,646 +1,238 @@
 <?xml version="1.0"?>
 <Locations >
   <Project>
-    <vfs_file />
-    <file_marker column=" 1" line=" 1" >
+    <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_file>
+    <file_marker column=" 1" line=" 33" >
       <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.adb</vfs_file>
+      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\torpedoes.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 1" >
+    <file_marker column=" 37" line=" 12" >
       <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.ads</vfs_file>
+      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\torpedoes.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 1" >
+    <file_marker column=" 1" line=" 39" >
       <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\main.adb</vfs_file>
+      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\torpedoes.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 18" line=" 50" >
+    <file_marker column=" 4" line=" 10" >
       <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.ads</vfs_file>
+      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\torpedoes.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 19" >
+    <file_marker column=" 46" line=" 14" >
       <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\main.adb</vfs_file>
+      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\torpedoes.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 6" line=" 17" >
+    <file_marker column=" 4" line=" 72" >
       <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\main.adb</vfs_file>
+      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\torpedoes.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 16" >
+    <file_marker column=" 1" line=" 33" >
       <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\main.adb</vfs_file>
+      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\torpedoes.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 6" line=" 17" >
+    <file_marker column=" 1" line=" 39" >
       <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\main.adb</vfs_file>
+      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\torpedoes.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 64" line=" 10" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 3" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 18" line=" 9" >
+    <file_marker column=" 1" line=" 241" >
       <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
       <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\main.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 225" >
+    <file_marker column=" 1" line=" 241" >
       <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
       <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\main.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 79" line=" 8" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 79" line=" 8" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 225" >
+    <file_marker column=" 4" line=" 25" >
       <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
       <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\main.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 224" >
+    <file_marker column=" 1" line=" 39" >
       <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\main.adb</vfs_file>
+      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\torpedoes.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 14" line=" 3" >
+    <file_marker column=" 1" line=" 33" >
       <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 79" line=" 8" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 79" line=" 8" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 79" line=" 8" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 79" line=" 8" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 3" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 79" line=" 8" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 13" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 150" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 19" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 8" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 33" line=" 34" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 6" line=" 17" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 33" line=" 34" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 79" line=" 15" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 39" line=" 37" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 79" line=" 15" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 33" line=" 34" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 63" line=" 31" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 33" line=" 34" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 13" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 33" line=" 34" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 63" line=" 33" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 39" line=" 37" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 150" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 39" line=" 37" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 79" line=" 15" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 3" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 63" line=" 33" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 8" line=" 69" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 16" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 49" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 3" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 49" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 31" line=" 32" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 31" line=" 30" >
-      <vfs_project />
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 31" line=" 32" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 31" line=" 30" >
-      <vfs_project />
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 31" line=" 32" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 31" line=" 30" >
-      <vfs_project />
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 31" line=" 32" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 31" line=" 30" >
-      <vfs_project />
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 31" line=" 32" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 31" line=" 30" >
-      <vfs_project />
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 31" line=" 32" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 31" line=" 30" >
-      <vfs_project />
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 31" line=" 32" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 31" line=" 30" >
-      <vfs_project />
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 31" line=" 32" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 31" line=" 30" >
-      <vfs_project />
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 31" line=" 32" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 31" line=" 30" >
-      <vfs_project />
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 31" line=" 32" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 31" line=" 30" >
-      <vfs_project />
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 31" line=" 32" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 31" line=" 30" >
-      <vfs_project />
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 31" line=" 32" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 31" line=" 30" >
-      <vfs_project />
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 17" line=" 48" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 59" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 20" line=" 43" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 40" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 34" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 3" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 15" line=" 11" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 6" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\movement.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 15" line=" 11" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 9" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\movement.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 30" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\movement.ads</vfs_file>
+      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\torpedoes.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\movement.adb</vfs_file>
+      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\torpedoes.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 45" line=" 16" >
+    <file_marker column=" 1" line=" 33" >
       <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\movement.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 36" line=" 8" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\movement.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 57" line=" 20" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\movement.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 9" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\movement.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 14" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\movement.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 39" line=" 37" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 50" line=" 5" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\movement.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 25" line=" 18" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\movement.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 3" line=" 11" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\movement.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 15" line=" 11" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 29" line=" 13" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 29" line=" 1" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 39" line=" 16" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\movement.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 43" line=" 18" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\movement.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 8" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\movement.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 39" line=" 16" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\movement.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 43" line=" 18" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\movement.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\movement.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 25" line=" 18" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\movement.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 39" line=" 16" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\movement.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 29" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\movement.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 15" line=" 27" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\movement.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 31" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\movement.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 29" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\movement.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 19" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\movement.adb</vfs_file>
+      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\torpedoes.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
       <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\main.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 39" line=" 118" >
+    <file_marker column=" 4" line=" 244" >
       <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
       <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\main.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 13" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\movement.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 37" line=" 20" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 29" >
+    <file_marker column=" 41" line=" 242" >
       <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
       <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\main.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 38" line=" 13" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 55" line=" 10" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 48" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\reactor.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 52" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\reactor.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
+    <file_marker column=" 4" line=" 244" >
       <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
       <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\main.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 58" line=" 12" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\reactor.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\movement.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 4" >
+    <file_marker column=" 4" line=" 26" >
       <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
       <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\main.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 1" >
+    <file_marker column=" 13" line=" 14" >
       <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\movement.adb</vfs_file>
+      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\torpedoes.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 48" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\reactor.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\movement.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 52" line=" 18" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\reactor.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 43" line=" 9" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\reactor.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 25" line=" 212" >
+    <file_marker column=" 4" line=" 26" >
       <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
       <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\main.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 20" line=" 21" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\reactor.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 93" line=" 12" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\reactor.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 41" line=" 18" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\reactor.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 93" line=" 12" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\reactor.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 50" line=" 14" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\reactor.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 47" line=" 19" >
-      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\reactor.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 212" >
+    <file_marker column=" 54" line=" 245" >
       <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
       <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\main.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 36" line=" 13" >
+    <file_marker column=" 32" line=" 239" >
       <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\reactor.ads</vfs_file>
+      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\main.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 3" >
+    <file_marker column=" 43" line=" 25" >
       <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\reactor.adb</vfs_file>
+      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\torpedoes.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 1" >
+    <file_marker column=" 17" line=" 21" >
       <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.adb</vfs_file>
+      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\torpedoes.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 4" line=" 22" >
+    <file_marker column=" 4" line=" 69" >
       <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\reactor.ads</vfs_file>
+      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\torpedoes.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 1" >
+    <file_marker column=" 28" line=" 61" >
       <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\airlockdoors.ads</vfs_file>
+      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\torpedoes.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 37" >
+    <file_marker column=" 89" line=" 64" >
       <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\reactor.ads</vfs_file>
+      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\torpedoes.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 37" >
+    <file_marker column=" 57" line=" 53" >
       <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\reactor.ads</vfs_file>
+      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\torpedoes.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 36" >
+    <file_marker column=" 57" line=" 53" >
       <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\reactor.adb</vfs_file>
+      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\torpedoes.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 37" >
+    <file_marker column=" 4" line=" 63" >
       <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\reactor.ads</vfs_file>
+      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\torpedoes.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 36" >
+    <file_marker column=" 57" line=" 53" >
       <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\reactor.adb</vfs_file>
+      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\torpedoes.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 36" >
+    <file_marker column=" 39" line=" 12" >
       <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\reactor.adb</vfs_file>
+      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\torpedoes.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 37" >
+    <file_marker column=" 57" line=" 53" >
       <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\reactor.ads</vfs_file>
+      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\torpedoes.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 37" >
+    <file_marker column=" 57" line=" 53" >
       <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\reactor.ads</vfs_file>
+      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\torpedoes.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 36" >
+    <file_marker column=" 56" line=" 248" >
       <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\reactor.adb</vfs_file>
+      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\main.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 37" >
+    <file_marker column=" 27" line=" 65" >
       <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\reactor.ads</vfs_file>
+      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\torpedoes.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 37" >
+    <file_marker column=" 33" line=" 77" >
       <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\reactor.ads</vfs_file>
+      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\torpedoes.adb</vfs_file>
     </file_marker>
-    <file_marker current="true" column=" 35" line=" 19" >
+    <file_marker column=" 14" line=" 4" >
       <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
-      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\oxygen.ads</vfs_file>
+      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\torpedoes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 76" >
+      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
+      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\torpedoes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 4" >
+      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
+      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\torpedoes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 112" line=" 65" >
+      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
+      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\torpedoes.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 4" >
+      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
+      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\torpedoes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 23" line=" 10" >
+      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
+      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\torpedoes.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 4" >
+      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
+      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\torpedoes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 76" >
+      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
+      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\torpedoes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 4" >
+      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
+      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\torpedoes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 27" line=" 65" >
+      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
+      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\torpedoes.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 72" line=" 76" >
+      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
+      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\torpedoes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 106" line=" 72" >
+      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
+      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\torpedoes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 4" >
+      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
+      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\torpedoes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 107" line=" 65" >
+      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
+      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\torpedoes.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 26" line=" 76" >
+      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
+      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\torpedoes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 57" line=" 53" >
+      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
+      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\torpedoes.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 26" line=" 76" >
+      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
+      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\torpedoes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 60" >
+      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
+      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\torpedoes.ads</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 26" line=" 76" >
+      <vfs_project>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\coursework.gpr</vfs_project>
+      <vfs_file>C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\src\torpedoes.adb</vfs_file>
     </file_marker>
   </Project>
 </Locations>

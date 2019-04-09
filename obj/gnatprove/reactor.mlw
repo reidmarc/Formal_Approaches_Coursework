@@ -3039,7 +3039,7 @@ module Reactor__package_def
   (#"reactor.adb" 4 0 0# ());
   (#"reactor.adb" 10 0 0# ());
   (#"reactor.adb" 27 0 0# ());
-  ( "GP_Sloc:reactor.adb:46:1" (#"reactor.adb" 46 0 0# ()) ) )
+  ( "GP_Sloc:reactor.adb:47:1" (#"reactor.adb" 47 0 0# ()) ) )
 end
 
 (* Module for checking contracts and absence of run-time errors in subprogram "reactortempoverheats" defined at reactor.ads:13, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
@@ -3209,35 +3209,51 @@ module Reactor__reactortempcoolsdown__subprogram_def
    try
    ( (#"reactor.adb" 35 0 0# ());
    ( "GP_Sloc:reactor.adb:32:7" (#"reactor.adb" 32 0 0# (if ((Boolean.andb((Boolean.andb((Reactor__reactortempcoolsdown__reactorstatus.reactorstatus.int__content = 0)) ((Reactor__reactortempcoolsdown__currentdepth.currentdepth = 0)))) ((Reactor__reactortempcoolsdown__currentoperationstatus.currentoperationstatus.int__content = 1)))) then (
-    ( ( "GP_Sloc:reactor.adb:35:19" (#"reactor.adb" 35 0 0# (#"reactor.adb" 35 0 0# ( (let reactor__reactortempcoolsdown__L_2__R3b__assume = Reactor__reactortempcoolsdown__reactortemp.reactortemp.int__content in (
+    ( ( "GP_Sloc:reactor.adb:35:51" (#"reactor.adb" 35 0 0# (#"reactor.adb" 35 0 0# ( (let reactor__reactortempcoolsdown__L_2__R3b__assume = Reactor__reactortempcoolsdown__reactortemp.reactortemp.int__content in (
      #"reactor.adb" 35 0 0# assume { #"reactor.adb" 35 0 0# (reactor__reactortempcoolsdown__L_2__R3b__assume = Reactor__reactortempcoolsdown__L_2__R3b.r3b) }))
     ;
     #"reactor.adb" 35 0 0# assume { #"reactor.adb" 35 0 0# (Reactor__reactortemprange___axiom.dynamic_invariant Reactor__reactortempcoolsdown__L_2__R3b.r3b True False True True) } ))) );
-    ( "GP_Sloc:reactor.adb:35:55" (#"reactor.adb" 35 0 0# (let temp___185 = Reactor__reactortempcoolsdown__L_2__R3b.r3b in (
-    (let temp___186 = 0 in (
-     ( () (* Translation of an Ada loop from reactor.adb:35 *)
+    ( "GP_Sloc:reactor.adb:35:63" (#"reactor.adb" 35 0 0# (let temp___185 = 0 in (
+    (let temp___186 = Reactor__reactortempcoolsdown__L_2__R3b.r3b in (
+     ( #"reactor.adb" 35 0 0# Reactor__reactortempcoolsdown__L_2__i.i.int__content <- ( temp___186 );
+     () (* Translation of an Ada loop from reactor.adb:35 *)
      ;
-     #"reactor.adb" 35 0 0# try
-      ( #"reactor.adb" 35 0 0# abstract ensures {true}(let _ = Reactor__reactortempcoolsdown__reactortemp.reactortemp.int__content in (
-       ()))
-       end ;
-      (let temp___187 = #"reactor.adb" 35 0 0# (any int
-      ensures {#"reactor.adb" 35 0 0# (result = Reactor__reactortempcoolsdown__reactortemp.reactortemp.int__content)} 
-      ) in (
-       ( () (* Unrolling of the loop statements of loop reactor.adb:35 *)
-       ;
-       #"reactor.adb" 35 0 0# Reactor__reactortempcoolsdown__L_2__i.i.int__content <- ( 0 );
-       (if ((Boolean.andb((temp___185 <= Reactor__reactortempcoolsdown__L_2__i.i.int__content)) ((Reactor__reactortempcoolsdown__L_2__i.i.int__content <= temp___186)))) then (
-        ( "GP_Sloc:reactor.adb:36:25" (#"reactor.adb" 36 0 0# #"reactor.adb" 36 0 0# Reactor__reactortempcoolsdown__reactortemp.reactortemp.int__content <- ( Reactor__reactortempcoolsdown__L_2__i.i.int__content )) ))) )))
-       )
-     with
-      Reactor__reactortempcoolsdown__L_2.L_2 -> ()
-     end )))
+     (if ((Boolean.andb((temp___185 <= Reactor__reactortempcoolsdown__L_2__i.i.int__content)) ((Reactor__reactortempcoolsdown__L_2__i.i.int__content <= temp___186)))) then (
+      #"reactor.adb" 35 0 0# try
+       ( #"reactor.adb" 35 0 0# abstract ensures {true}(let _ = Reactor__reactortempcoolsdown__reactortemp.reactortemp.int__content in (
+        ()))
+        end ;
+       (let temp___187 = #"reactor.adb" 35 0 0# (any int
+       ensures {#"reactor.adb" 35 0 0# (result = Reactor__reactortempcoolsdown__reactortemp.reactortemp.int__content)} 
+       ) in (
+        ( () (* First unroling of the loop statements appearing before the loop invariant of loop reactor.adb:35 *)
+        ;
+        () (* While loop translating the Ada loop from reactor.adb:35 *)
+        ;
+        #"reactor.adb" 35 0 0# while True do
+         ( () (* Assume implicit invariants from the loop reactor.adb:35 *)
+         ;
+         #"reactor.adb" 35 0 0# assume { #"reactor.adb" 35 0 0# (Boolean.andb(( ( true /\ (Reactor__reactortemprange___axiom.dynamic_invariant Reactor__reactortempcoolsdown__reactortemp.reactortemp.int__content True True True True) ) /\ true )) (( (0 <= Reactor__reactortempcoolsdown__L_2__i.i.int__content) /\ (Reactor__reactortempcoolsdown__L_2__i.i.int__content <= Reactor__reactortempcoolsdown__L_2__R3b.r3b) ))) };
+         () (* Check for absence of RTE in the invariant of loop reactor.adb:35 *)
+         ;
+         () (* Loop statements appearing after the loop invariant of loop reactor.adb:35 *)
+         ;
+         ( "GP_Sloc:reactor.adb:36:25" (#"reactor.adb" 36 0 0# #"reactor.adb" 36 0 0# Reactor__reactortempcoolsdown__reactortemp.reactortemp.int__content <- ( Reactor__reactortempcoolsdown__L_2__i.i.int__content )) );
+         () (* Check for the exit condition and loop statements appearing before the loop invariant of loop reactor.adb:35 *)
+         ;
+         (if ((Reactor__reactortempcoolsdown__L_2__i.i.int__content = temp___185)) then (
+           raise Reactor__reactortempcoolsdown__L_2.L_2));
+          Reactor__reactortempcoolsdown__L_2__i.i.int__content <- ( (Reactor__reactortempcoolsdown__L_2__i.i.int__content - 1) ) )
+        done )))
+        )
+      with
+       Reactor__reactortempcoolsdown__L_2.L_2 -> ()
+      end)) )))
     ))
     ) ) )) else (
     ()))) );
-   ( "GP_Sloc:reactor.adb:39:30" (#"reactor.adb" 39 0 0# #"reactor.adb" 39 0 0# Reactor__reactortempcoolsdown__currentoperationstatus.currentoperationstatus.int__content <- ( 0 )) );
-   ( "GP_Sloc:reactor.adb:40:21" (#"reactor.adb" 40 0 0# #"reactor.adb" 40 0 0# Reactor__reactortempcoolsdown__reactorstatus.reactorstatus.int__content <- ( 1 )) );
+   ( "GP_Sloc:reactor.adb:40:30" (#"reactor.adb" 40 0 0# #"reactor.adb" 40 0 0# Reactor__reactortempcoolsdown__currentoperationstatus.currentoperationstatus.int__content <- ( 0 )) );
+   ( "GP_Sloc:reactor.adb:41:21" (#"reactor.adb" 41 0 0# #"reactor.adb" 41 0 0# Reactor__reactortempcoolsdown__reactorstatus.reactorstatus.int__content <- ( 1 )) );
     raise Return__exc )
   with
    Return__exc -> ()

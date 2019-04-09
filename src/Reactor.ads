@@ -34,4 +34,5 @@ is
      Post => currentOperationStatus = Allowed
      and then reactorStatus = Cool;
 
+
 end Reactor;

@@ -32,6 +32,7 @@ package body ada_main is
    E115 : Short_Integer; pragma Import (Ada, E115, "airlockdoors_E");
    E119 : Short_Integer; pragma Import (Ada, E119, "oxygen_E");
    E121 : Short_Integer; pragma Import (Ada, E121, "reactor_E");
+   E125 : Short_Integer; pragma Import (Ada, E125, "torpedoes_E");
 
    Sec_Default_Sized_Stacks : array (1 .. 1) of aliased System.Secondary_Stack.SS_Stack (System.Parameters.Runtime_Default_Sec_Stack_Size);
 
@@ -207,6 +208,7 @@ package body ada_main is
       E115 := E115 + 1;
       E119 := E119 + 1;
       E121 := E121 + 1;
+      E125 := E125 + 1;
    end adainit;
 
    procedure Ada_Main_Program;
@@ -246,6 +248,7 @@ package body ada_main is
    --   C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\obj\airlockdoors.o
    --   C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\obj\oxygen.o
    --   C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\obj\reactor.o
+   --   C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\obj\torpedoes.o
    --   C:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\obj\main.o
    --   -LC:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\obj\
    --   -LC:\Users\reidm\Desktop\Formal Approaches to SE - Code\Formal_Approaches_Coursework\Formal_Approaches_Coursework\obj\

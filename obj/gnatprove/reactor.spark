@@ -222,6 +222,23 @@
                 },
                 "transformations": {
                 }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                  "CVC4_CE": {
+                    "result": "Unknown (none)",
+                    "steps": 20,
+                    "time": 0
+                  }
+                },
+                "transformations": {
+                }
               }
             ]
           }
@@ -258,9 +275,21 @@
                 "proof_attempts": {
                   "CVC4_CE": {
                     "result": "Unknown (none)",
-                    "steps": 14,
+                    "steps": 20,
                     "time": 0
                   }
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
+                },
+                "transformations": {
+                }
+              },
+              {
+                "proof_attempts": {
                 },
                 "transformations": {
                 }
@@ -481,14 +510,14 @@
     }
   ],
   "timings": {
-    "marking": 3.40900005539879E-04,
-    "globals (basic)": 1.19069998618215E-03,
-    "globals/properties (advanced)": 1.86560000292957E-03,
-    "flow analysis": 4.60979994386435E-03,
-    "codepeer results": 5.20000003234600E-06,
-    "init_why_sections": 2.64600006630644E-04,
-    "translation of standard": 4.26199985668063E-03,
-    "translation of compilation unit": 3.64680006168783E-03,
-    "proof": 6.27773404121399E-01
+    "marking": 4.84599993797019E-04,
+    "globals (basic)": 1.13069999497384E-03,
+    "globals/properties (advanced)": 1.66800001170486E-03,
+    "flow analysis": 4.24979999661446E-03,
+    "codepeer results": 3.80000005861802E-06,
+    "init_why_sections": 1.93999992916360E-04,
+    "translation of standard": 4.51639993116260E-03,
+    "translation of compilation unit": 5.57520007714629E-03,
+    "proof": 8.36945474147797E-01
   }
 }

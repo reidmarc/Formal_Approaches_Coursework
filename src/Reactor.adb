@@ -32,10 +32,11 @@ is
       if (reactorStatus = Overheating
           and currentDepth = DepthMonitor'First
           and currentOperationStatus = Prohibited) then
-         for I in reactorTemp..ReactorTempRange'First loop
+         for I in reverse ReactorTempRange'First..reactorTemp loop
             reactorTemp := I;
          end loop;
       end if;
+
       currentOperationStatus := Allowed;
       reactorStatus := Cool;
    end ReactorTempCoolsdown;

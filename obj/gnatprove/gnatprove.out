@@ -1,22 +1,22 @@
 Summary of SPARK analysis
 =========================
 
--------------------------------------------------------------------------------------------------------
-SPARK Analysis results        Total      Flow   Interval   CodePeer      Provers   Justified   Unproved
--------------------------------------------------------------------------------------------------------
-Data Dependencies                 .         .          .          .            .           .          .
-Flow Dependencies                 .         .          .          .            .           .          .
-Initialization                    .         .          .          .            .           .          .
-Non-Aliasing                      .         .          .          .            .           .          .
-Run-time Checks                   3         .          .          .     3 (CVC4)           .          .
-Assertions                        .         .          .          .            .           .          .
-Functional Contracts             14         .          .          .    14 (CVC4)           .          .
-LSP Verification                  .         .          .          .            .           .          .
--------------------------------------------------------------------------------------------------------
-Total                            17         .          .          .    17 (100%)           .          .
+---------------------------------------------------------------------------------------------------------
+SPARK Analysis results        Total        Flow   Interval   CodePeer      Provers   Justified   Unproved
+---------------------------------------------------------------------------------------------------------
+Data Dependencies                 .           .          .          .            .           .          .
+Flow Dependencies                 .           .          .          .            .           .          .
+Initialization                   17          17          .          .            .           .          .
+Non-Aliasing                      .           .          .          .            .           .          .
+Run-time Checks                   8           .          .          .     8 (CVC4)           .          .
+Assertions                        4           .          .          .     4 (CVC4)           .          .
+Functional Contracts             17           .          .          .    17 (CVC4)           .          .
+LSP Verification                  .           .          .          .            .           .          .
+---------------------------------------------------------------------------------------------------------
+Total                            46    17 (37%)          .          .     29 (63%)           .          .
 
 
-Analyzed 5 units
+Analyzed 6 units
 in unit airlockdoors, 5 subprograms and packages out of 5 analyzed
   AirLockDoors at airlockdoors.ads:3 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
   AirLockDoors.CloseAirLockDoor at airlockdoors.ads:24 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
@@ -39,3 +39,11 @@ in unit reactor, 3 subprograms and packages out of 3 analyzed
   Reactor at reactor.ads:4 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
   Reactor.ReactorTempCoolsdown at reactor.ads:26 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
   Reactor.ReactorTempOverheats at reactor.ads:13 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (2 checks)
+in unit torpedoes, 7 subprograms and packages out of 7 analyzed
+  Torpedoes at torpedoes.ads:4 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  Torpedoes.CountTorps at torpedoes.ads:39 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (2 checks)
+  Torpedoes.FillTorpedoeStorage at torpedoes.ads:24 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (5 checks)
+  Torpedoes.StorageHasEmptySlots at torpedoes.ads:34 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  Torpedoes.StorageIsFull at torpedoes.ads:30 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  Torpedoes.TorpExists at torpedoes.ads:48 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  Torpedoes.TorpLocation at torpedoes.ads:51 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (5 checks)

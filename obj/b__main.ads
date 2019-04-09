@@ -37,7 +37,7 @@ package ada_main is
    pragma Export (C, main, "main");
 
    type Version_32 is mod 2 ** 32;
-   u00001 : constant Version_32 := 16#0f906cea#;
+   u00001 : constant Version_32 := 16#6b426b61#;
    pragma Export (C, u00001, "mainB");
    u00002 : constant Version_32 := 16#050ff2f0#;
    pragma Export (C, u00002, "system__standard_libraryB");
@@ -271,22 +271,26 @@ package ada_main is
    pragma Export (C, u00116, "movementB");
    u00117 : constant Version_32 := 16#c73d8ce0#;
    pragma Export (C, u00117, "movementS");
-   u00118 : constant Version_32 := 16#bcb2b109#;
+   u00118 : constant Version_32 := 16#0f94889b#;
    pragma Export (C, u00118, "oxygenB");
-   u00119 : constant Version_32 := 16#9cfec77d#;
+   u00119 : constant Version_32 := 16#880c950d#;
    pragma Export (C, u00119, "oxygenS");
-   u00120 : constant Version_32 := 16#3197c385#;
+   u00120 : constant Version_32 := 16#c577aa00#;
    pragma Export (C, u00120, "reactorB");
-   u00121 : constant Version_32 := 16#85665faa#;
+   u00121 : constant Version_32 := 16#b7d765ce#;
    pragma Export (C, u00121, "reactorS");
    u00122 : constant Version_32 := 16#273384e4#;
    pragma Export (C, u00122, "system__img_enum_newB");
    u00123 : constant Version_32 := 16#53ec87f8#;
    pragma Export (C, u00123, "system__img_enum_newS");
-   u00124 : constant Version_32 := 16#5dc07a5a#;
-   pragma Export (C, u00124, "system__memoryB");
-   u00125 : constant Version_32 := 16#6bdde70c#;
-   pragma Export (C, u00125, "system__memoryS");
+   u00124 : constant Version_32 := 16#95591ec8#;
+   pragma Export (C, u00124, "torpedoesB");
+   u00125 : constant Version_32 := 16#56a8d9ed#;
+   pragma Export (C, u00125, "torpedoesS");
+   u00126 : constant Version_32 := 16#5dc07a5a#;
+   pragma Export (C, u00126, "system__memoryB");
+   u00127 : constant Version_32 := 16#6bdde70c#;
+   pragma Export (C, u00127, "system__memoryS");
 
    --  BEGIN ELABORATION ORDER
    --  ada%s
@@ -413,6 +417,8 @@ package ada_main is
    --  oxygen%b
    --  reactor%s
    --  reactor%b
+   --  torpedoes%s
+   --  torpedoes%b
    --  main%b
    --  END ELABORATION ORDER
 

@@ -1,0 +1,4862 @@
+(* Module for axiomatizing type "short_short_integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__short_short_integer
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type short_short_integer =
+  < range -128 127 >
+ 
+ function first 
+   : int =
+  ( -128 )
+ 
+ function last 
+   : int =
+  127
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = short_short_integer, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type short_short_integer__ref =
+  { mutable short_short_integer__content "model_trace:" "name:" : short_short_integer }
+ 
+ function short_short_integer__ref___projection 
+   (a : short_short_integer__ref) : short_short_integer =
+  a.short_short_integer__content
+ 
+ meta "model_projection" function short_short_integer__ref___projection
+ 
+ meta "inline : no" function short_short_integer__ref___projection
+ 
+ val short_short_integer__havoc 
+   (x : short_short_integer__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "short_short_integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__short_short_integer__rep
+ use        Standard__short_short_integer
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Standard__short_short_integer.short_short_integer) : int =
+  (Standard__short_short_integer.short_short_integer'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Standard__short_short_integer.short_short_integer, 
+ predicate in_range = Standard__short_short_integer.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "short_integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__short_integer
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type short_integer =
+  < range -32768 32767 >
+ 
+ function first 
+   : int =
+  ( -32768 )
+ 
+ function last 
+   : int =
+  32767
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = short_integer, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type short_integer__ref =
+  { mutable short_integer__content "model_trace:" "name:" : short_integer }
+ 
+ function short_integer__ref___projection 
+   (a : short_integer__ref) : short_integer =
+  a.short_integer__content
+ 
+ meta "model_projection" function short_integer__ref___projection
+ 
+ meta "inline : no" function short_integer__ref___projection
+ 
+ val short_integer__havoc 
+   (x : short_integer__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "short_integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__short_integer__rep
+ use        Standard__short_integer
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Standard__short_integer.short_integer) : int =
+  (Standard__short_integer.short_integer'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Standard__short_integer.short_integer, 
+ predicate in_range = Standard__short_integer.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__integer
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type integer =
+  < range -2147483648 2147483647 >
+ 
+ function first 
+   : int =
+  ( -2147483648 )
+ 
+ function last 
+   : int =
+  2147483647
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = integer, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type integer__ref =
+  { mutable integer__content "model_trace:" "name:" : integer }
+ 
+ function integer__ref___projection 
+   (a : integer__ref) : integer =
+  a.integer__content
+ 
+ meta "model_projection" function integer__ref___projection
+ 
+ meta "inline : no" function integer__ref___projection
+ 
+ val integer__havoc 
+   (x : integer__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__integer__rep
+ use        Standard__integer
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Standard__integer.integer) : int =
+  (Standard__integer.integer'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Standard__integer.integer, 
+ predicate in_range = Standard__integer.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "long_integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__long_integer
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type long_integer =
+  < range -2147483648 2147483647 >
+ 
+ function first 
+   : int =
+  ( -2147483648 )
+ 
+ function last 
+   : int =
+  2147483647
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = long_integer, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type long_integer__ref =
+  { mutable long_integer__content "model_trace:" "name:" : long_integer }
+ 
+ function long_integer__ref___projection 
+   (a : long_integer__ref) : long_integer =
+  a.long_integer__content
+ 
+ meta "model_projection" function long_integer__ref___projection
+ 
+ meta "inline : no" function long_integer__ref___projection
+ 
+ val long_integer__havoc 
+   (x : long_integer__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "long_integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__long_integer__rep
+ use        Standard__long_integer
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Standard__long_integer.long_integer) : int =
+  (Standard__long_integer.long_integer'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Standard__long_integer.long_integer, 
+ predicate in_range = Standard__long_integer.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "long_long_integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__long_long_integer
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type long_long_integer =
+  < range -9223372036854775808 9223372036854775807 >
+ 
+ function first 
+   : int =
+  ( -9223372036854775808 )
+ 
+ function last 
+   : int =
+  9223372036854775807
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = long_long_integer, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type long_long_integer__ref =
+  { mutable long_long_integer__content "model_trace:" "name:" : long_long_integer }
+ 
+ function long_long_integer__ref___projection 
+   (a : long_long_integer__ref) : long_long_integer =
+  a.long_long_integer__content
+ 
+ meta "model_projection" function long_long_integer__ref___projection
+ 
+ meta "inline : no" function long_long_integer__ref___projection
+ 
+ val long_long_integer__havoc 
+   (x : long_long_integer__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "long_long_integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__long_long_integer__rep
+ use        Standard__long_long_integer
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Standard__long_long_integer.long_long_integer) : int =
+  (Standard__long_long_integer.long_long_integer'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Standard__long_long_integer.long_long_integer, 
+ predicate in_range = Standard__long_long_integer.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "natural", created in Gnat2Why.Types.Translate_Type *)
+module Standard__natural
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type natural =
+  < range 0 2147483647 >
+ 
+ function first 
+   : int =
+  0
+ 
+ function last 
+   : int =
+  2147483647
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = natural, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type natural__ref =
+  { mutable natural__content "model_trace:" "name:" : natural }
+ 
+ function natural__ref___projection 
+   (a : natural__ref) : natural =
+  a.natural__content
+ 
+ meta "model_projection" function natural__ref___projection
+ 
+ meta "inline : no" function natural__ref___projection
+ 
+ val natural__havoc 
+   (x : natural__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "natural", created in Gnat2Why.Types.Translate_Type *)
+module Standard__natural__rep
+ use        Standard__natural
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Standard__natural.natural) : int =
+  (Standard__natural.natural'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Standard__natural.natural, 
+ predicate in_range = Standard__natural.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "positive", created in Gnat2Why.Types.Translate_Type *)
+module Standard__positive
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type positive =
+  < range 1 2147483647 >
+ 
+ function first 
+   : int =
+  1
+ 
+ function last 
+   : int =
+  2147483647
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = positive, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type positive__ref =
+  { mutable positive__content "model_trace:" "name:" : positive }
+ 
+ function positive__ref___projection 
+   (a : positive__ref) : positive =
+  a.positive__content
+ 
+ meta "model_projection" function positive__ref___projection
+ 
+ meta "inline : no" function positive__ref___projection
+ 
+ val positive__havoc 
+   (x : positive__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "positive", created in Gnat2Why.Types.Translate_Type *)
+module Standard__positive__rep
+ use        Standard__positive
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Standard__positive.positive) : int =
+  (Standard__positive.positive'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Standard__positive.positive, 
+ predicate in_range = Standard__positive.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "short_float", created in Gnat2Why.Types.Translate_Type *)
+module Standard__short_float
+ use import "_gnatprove_standard".Main
+ use        "_gnatprove_standard".Float32
+
+ type short_float 
+ 
+ function first 
+   : Float32.t =
+  (Float32.neg (340282346638528859811704183484516925440.0:Float32.t))
+ 
+ function last 
+   : Float32.t =
+  (340282346638528859811704183484516925440.0:Float32.t)
+ 
+ predicate in_range 
+   (x : Float32.t)  =
+  (Float32.t'isFinite x)
+ 
+ clone export "ada__model".Static_Float32 with
+ type t = short_float, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type short_float__ref =
+  { mutable short_float__content "model_trace:" "name:" : short_float }
+ 
+ function short_float__ref___projection 
+   (a : short_float__ref) : short_float =
+  a.short_float__content
+ 
+ meta "model_projection" function short_float__ref___projection
+ 
+ meta "inline : no" function short_float__ref___projection
+ 
+ val short_float__havoc 
+   (x : short_float__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "short_float", created in Gnat2Why.Types.Translate_Type *)
+module Standard__short_float__rep
+ use        Standard__short_float
+ use        "_gnatprove_standard".Float32
+ use import "_gnatprove_standard".Main
+
+ clone export "ada__model".Rep_Proj_Float32 with
+ type t = Standard__short_float.short_float, 
+ predicate in_range = Standard__short_float.in_range
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "float", created in Gnat2Why.Types.Translate_Type *)
+module Standard__float
+ use import "_gnatprove_standard".Main
+ use        "_gnatprove_standard".Float32
+
+ type float 
+ 
+ function first 
+   : Float32.t =
+  (Float32.neg (340282346638528859811704183484516925440.0:Float32.t))
+ 
+ function last 
+   : Float32.t =
+  (340282346638528859811704183484516925440.0:Float32.t)
+ 
+ predicate in_range 
+   (x : Float32.t)  =
+  (Float32.t'isFinite x)
+ 
+ clone export "ada__model".Static_Float32 with
+ type t = float, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type float__ref =
+  { mutable float__content "model_trace:" "name:" : float }
+ 
+ function float__ref___projection 
+   (a : float__ref) : float =
+  a.float__content
+ 
+ meta "model_projection" function float__ref___projection
+ 
+ meta "inline : no" function float__ref___projection
+ 
+ val float__havoc 
+   (x : float__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "float", created in Gnat2Why.Types.Translate_Type *)
+module Standard__float__rep
+ use        Standard__float
+ use        "_gnatprove_standard".Float32
+ use import "_gnatprove_standard".Main
+
+ clone export "ada__model".Rep_Proj_Float32 with
+ type t = Standard__float.float, 
+ predicate in_range = Standard__float.in_range
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "long_float", created in Gnat2Why.Types.Translate_Type *)
+module Standard__long_float
+ use import "_gnatprove_standard".Main
+ use        "_gnatprove_standard".Float64
+
+ type long_float 
+ 
+ function first 
+   : Float64.t =
+  (Float64.neg (179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.0:Float64.t))
+ 
+ function last 
+   : Float64.t =
+  (179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.0:Float64.t)
+ 
+ predicate in_range 
+   (x : Float64.t)  =
+  (Float64.t'isFinite x)
+ 
+ clone export "ada__model".Static_Float64 with
+ type t = long_float, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type long_float__ref =
+  { mutable long_float__content "model_trace:" "name:" : long_float }
+ 
+ function long_float__ref___projection 
+   (a : long_float__ref) : long_float =
+  a.long_float__content
+ 
+ meta "model_projection" function long_float__ref___projection
+ 
+ meta "inline : no" function long_float__ref___projection
+ 
+ val long_float__havoc 
+   (x : long_float__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "long_float", created in Gnat2Why.Types.Translate_Type *)
+module Standard__long_float__rep
+ use        Standard__long_float
+ use        "_gnatprove_standard".Float64
+ use import "_gnatprove_standard".Main
+
+ clone export "ada__model".Rep_Proj_Float64 with
+ type t = Standard__long_float.long_float, 
+ predicate in_range = Standard__long_float.in_range
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "character", created in Gnat2Why.Types.Translate_Type *)
+module Standard__character
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type character 
+ 
+ function first 
+   : int =
+  0
+ 
+ function last 
+   : int =
+  255
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = character, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type character__ref =
+  { mutable character__content "model_trace:" "name:" : character }
+ 
+ function character__ref___projection 
+   (a : character__ref) : character =
+  a.character__content
+ 
+ meta "model_projection" function character__ref___projection
+ 
+ meta "inline : no" function character__ref___projection
+ 
+ val character__havoc 
+   (x : character__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "character", created in Gnat2Why.Types.Translate_Type *)
+module Standard__character__rep
+ use        Standard__character
+ use import "_gnatprove_standard".Main
+
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Standard__character.character, 
+ predicate in_range = Standard__character.in_range
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "wide_character", created in Gnat2Why.Types.Translate_Type *)
+module Standard__wide_character
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type wide_character 
+ 
+ function first 
+   : int =
+  0
+ 
+ function last 
+   : int =
+  65535
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = wide_character, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type wide_character__ref =
+  { mutable wide_character__content "model_trace:" "name:" : wide_character }
+ 
+ function wide_character__ref___projection 
+   (a : wide_character__ref) : wide_character =
+  a.wide_character__content
+ 
+ meta "model_projection" function wide_character__ref___projection
+ 
+ meta "inline : no" function wide_character__ref___projection
+ 
+ val wide_character__havoc 
+   (x : wide_character__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "wide_character", created in Gnat2Why.Types.Translate_Type *)
+module Standard__wide_character__rep
+ use        Standard__wide_character
+ use import "_gnatprove_standard".Main
+
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Standard__wide_character.wide_character, 
+ predicate in_range = Standard__wide_character.in_range
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "wide_wide_character", created in Gnat2Why.Types.Translate_Type *)
+module Standard__wide_wide_character
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type wide_wide_character 
+ 
+ function first 
+   : int =
+  0
+ 
+ function last 
+   : int =
+  2147483647
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = wide_wide_character, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type wide_wide_character__ref =
+  { mutable wide_wide_character__content "model_trace:" "name:" : wide_wide_character }
+ 
+ function wide_wide_character__ref___projection 
+   (a : wide_wide_character__ref) : wide_wide_character =
+  a.wide_wide_character__content
+ 
+ meta "model_projection" function wide_wide_character__ref___projection
+ 
+ meta "inline : no" function wide_wide_character__ref___projection
+ 
+ val wide_wide_character__havoc 
+   (x : wide_wide_character__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "wide_wide_character", created in Gnat2Why.Types.Translate_Type *)
+module Standard__wide_wide_character__rep
+ use        Standard__wide_wide_character
+ use import "_gnatprove_standard".Main
+
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Standard__wide_wide_character.wide_wide_character, 
+ predicate in_range = Standard__wide_wide_character.in_range
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing the array theory associated to type "string", created in Why.Gen.Arrays.Create_Rep_Array_Theory *)
+module Array__Int__Standard__character
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__character
+ use        Standard__character__rep
+
+ function index_I1_one 
+   : int =
+  1
+ 
+ type component_type =
+  Standard__character.character
+ 
+ clone export "_gnatprove_standard".Array__1 with
+ type I1.t = int, 
+ predicate I1.le = Int.(<=), 
+ predicate I1.lt = Int.(<), 
+ predicate I1.gt = Int.(>), 
+ function I1.add = Int.(+), 
+ function I1.sub = Int.(-), 
+ function I1.one = index_I1_one, 
+ type component_type = component_type
+ 
+ function bool_eq 
+   (a : map) (a__first : int) (a__last : int) (b : map) (b__first : int) (b__last : int) : bool =
+  ( (if ((a__first <= a__last)) then (
+   ( (b__first <= b__last) /\ ((a__last - a__first) = (b__last - b__first)) )) else (
+   (b__first > b__last))) /\ (forall temp___idx_91   : int.
+   (if (( (a__first <= temp___idx_91) /\ (temp___idx_91 <= a__last) )) then (
+    ((Standard__character__rep.to_rep (get a temp___idx_91)) = (Standard__character__rep.to_rep (get b ((b__first - a__first) + temp___idx_91))))) else true)) )
+ 
+ axiom bool_eq_rev :
+  (forall a   b   : map.
+  (forall a__first   a__last   b__first   b__last   : int.
+   ( ((bool_eq b b__first b__last a a__first a__last) = True) -> ( (if ((a__first <= a__last)) then (
+    ( (b__first <= b__last) /\ ((a__last - a__first) = (b__last - b__first)) )) else (
+    (b__first > b__last))) /\ (forall temp___idx_91   : int.
+    (if (( (a__first <= temp___idx_91) /\ (temp___idx_91 <= a__last) )) then (
+     ((Standard__character__rep.to_rep (get a temp___idx_91)) = (Standard__character__rep.to_rep (get b ((b__first - a__first) + temp___idx_91))))) else true)) ) )))
+
+end
+
+(* Module for axiomatizing concatenation for the array theory associated to type "string", created in Why.Gen.Arrays.Declare_Concatenation_Symbols *)
+module Array__Int__Standard__character__Concat
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Array__Int__Standard__character
+
+ function index_Index_one 
+   : int =
+  1
+ 
+ clone export "_gnatprove_standard".Array__1__Concat with
+ type component_type = Array__Int__Standard__character.component_type, 
+ type map = Array__Int__Standard__character.map, 
+ type Index.t = int, 
+ predicate Index.le = Int.(<=), 
+ predicate Index.lt = Int.(<), 
+ predicate Index.gt = Int.(>), 
+ function Index.add = Int.(+), 
+ function Index.sub = Int.(-), 
+ function Index.one = index_Index_one, 
+ function get = Array__Int__Standard__character.get
+
+end
+
+(* Module for axiomatizing comparison for the array theory associated to type "string", created in Why.Gen.Arrays.Declare_Comparison_Symbols *)
+module Array__Int__Standard__character_Comp
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__character__rep
+ use        Array__Int__Standard__character
+
+ function index_Index_one 
+   : int =
+  1
+ 
+ clone export "ada__model".Array_Int_Rep_Comparison_Axiom with
+ type component_type = Array__Int__Standard__character.component_type, 
+ function to_rep = Standard__character__rep.to_rep, 
+ type map = Array__Int__Standard__character.map, 
+ type Index.t = int, 
+ predicate Index.le = Int.(<=), 
+ predicate Index.lt = Int.(<), 
+ predicate Index.gt = Int.(>), 
+ function Index.add = Int.(+), 
+ function Index.sub = Int.(-), 
+ function Index.one = index_Index_one, 
+ function get = Array__Int__Standard__character.get, 
+ function bool_eq = Array__Int__Standard__character.bool_eq
+
+end
+
+(* Module for axiomatizing type "string", created in Gnat2Why.Types.Translate_Type *)
+module Standard__string
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        "_gnatprove_standard".Main
+ use        Standard__integer
+ use        Standard__positive
+ use        Standard__character
+ use        Array__Int__Standard__character
+ use        Standard__integer__rep
+
+ type component_type =
+  Standard__character.character
+ 
+ function index_1_id 
+   (x : int) : int =
+  x
+ 
+ clone export "ada__model".Unconstr_Array with
+ type map = Array__Int__Standard__character.map, 
+ function array_bool_eq = Array__Int__Standard__character.bool_eq, 
+ type index_base_type = Standard__integer.integer, 
+ type index_rep_type = int, 
+ function to_rep = Standard__integer__rep.to_rep, 
+ function rep_to_int = index_1_id, 
+ predicate in_range_base = Standard__integer.in_range, 
+ predicate index_dynamic_property = Standard__positive.dynamic_property, 
+ predicate index_rep_le = Int.(<=)
+ 
+ type string =
+  __t
+ 
+ meta "model_projection" function to_array
+ 
+ meta "inline : no" function to_array
+ 
+ meta "model_projection" function first
+ 
+ meta "inline : no" function first
+ 
+ meta "model_projection" function last
+ 
+ meta "inline : no" function last
+ 
+ function to_string 
+   (x : Main.__image) : string
+ 
+ function from_string 
+   (x : string) : Main.__image
+ 
+ type string__ref =
+  { mutable string__content "model_trace:" "name:" : string }
+ 
+ function string__ref___projection 
+   (a : string__ref) : string =
+  a.string__content
+ 
+ meta "model_projection" function string__ref___projection
+ 
+ meta "inline : no" function string__ref___projection
+ 
+ val string__havoc 
+   (x : string__ref) : unit
+  writes {x}
+
+end
+
+(* Module for axiomatizing the array theory associated to type "wide_string", created in Why.Gen.Arrays.Create_Rep_Array_Theory *)
+module Array__Int__Standard__wide_character
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__wide_character
+ use        Standard__wide_character__rep
+
+ function index_I1_one 
+   : int =
+  1
+ 
+ type component_type =
+  Standard__wide_character.wide_character
+ 
+ clone export "_gnatprove_standard".Array__1 with
+ type I1.t = int, 
+ predicate I1.le = Int.(<=), 
+ predicate I1.lt = Int.(<), 
+ predicate I1.gt = Int.(>), 
+ function I1.add = Int.(+), 
+ function I1.sub = Int.(-), 
+ function I1.one = index_I1_one, 
+ type component_type = component_type
+ 
+ function bool_eq 
+   (a : map) (a__first : int) (a__last : int) (b : map) (b__first : int) (b__last : int) : bool =
+  ( (if ((a__first <= a__last)) then (
+   ( (b__first <= b__last) /\ ((a__last - a__first) = (b__last - b__first)) )) else (
+   (b__first > b__last))) /\ (forall temp___idx_98   : int.
+   (if (( (a__first <= temp___idx_98) /\ (temp___idx_98 <= a__last) )) then (
+    ((Standard__wide_character__rep.to_rep (get a temp___idx_98)) = (Standard__wide_character__rep.to_rep (get b ((b__first - a__first) + temp___idx_98))))) else true)) )
+ 
+ axiom bool_eq_rev :
+  (forall a   b   : map.
+  (forall a__first   a__last   b__first   b__last   : int.
+   ( ((bool_eq b b__first b__last a a__first a__last) = True) -> ( (if ((a__first <= a__last)) then (
+    ( (b__first <= b__last) /\ ((a__last - a__first) = (b__last - b__first)) )) else (
+    (b__first > b__last))) /\ (forall temp___idx_98   : int.
+    (if (( (a__first <= temp___idx_98) /\ (temp___idx_98 <= a__last) )) then (
+     ((Standard__wide_character__rep.to_rep (get a temp___idx_98)) = (Standard__wide_character__rep.to_rep (get b ((b__first - a__first) + temp___idx_98))))) else true)) ) )))
+
+end
+
+(* Module for axiomatizing concatenation for the array theory associated to type "wide_string", created in Why.Gen.Arrays.Declare_Concatenation_Symbols *)
+module Array__Int__Standard__wide_character__Concat
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Array__Int__Standard__wide_character
+
+ function index_Index_one 
+   : int =
+  1
+ 
+ clone export "_gnatprove_standard".Array__1__Concat with
+ type component_type = Array__Int__Standard__wide_character.component_type, 
+ type map = Array__Int__Standard__wide_character.map, 
+ type Index.t = int, 
+ predicate Index.le = Int.(<=), 
+ predicate Index.lt = Int.(<), 
+ predicate Index.gt = Int.(>), 
+ function Index.add = Int.(+), 
+ function Index.sub = Int.(-), 
+ function Index.one = index_Index_one, 
+ function get = Array__Int__Standard__wide_character.get
+
+end
+
+(* Module for axiomatizing comparison for the array theory associated to type "wide_string", created in Why.Gen.Arrays.Declare_Comparison_Symbols *)
+module Array__Int__Standard__wide_character_Comp
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__wide_character__rep
+ use        Array__Int__Standard__wide_character
+
+ function index_Index_one 
+   : int =
+  1
+ 
+ clone export "ada__model".Array_Int_Rep_Comparison_Axiom with
+ type component_type = Array__Int__Standard__wide_character.component_type, 
+ function to_rep = Standard__wide_character__rep.to_rep, 
+ type map = Array__Int__Standard__wide_character.map, 
+ type Index.t = int, 
+ predicate Index.le = Int.(<=), 
+ predicate Index.lt = Int.(<), 
+ predicate Index.gt = Int.(>), 
+ function Index.add = Int.(+), 
+ function Index.sub = Int.(-), 
+ function Index.one = index_Index_one, 
+ function get = Array__Int__Standard__wide_character.get, 
+ function bool_eq = Array__Int__Standard__wide_character.bool_eq
+
+end
+
+(* Module for axiomatizing type "wide_string", created in Gnat2Why.Types.Translate_Type *)
+module Standard__wide_string
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__integer
+ use        Standard__positive
+ use        Standard__wide_character
+ use        Standard__integer__rep
+ use        Array__Int__Standard__wide_character
+
+ type component_type =
+  Standard__wide_character.wide_character
+ 
+ function index_1_id 
+   (x : int) : int =
+  x
+ 
+ clone export "ada__model".Unconstr_Array with
+ type map = Array__Int__Standard__wide_character.map, 
+ function array_bool_eq = Array__Int__Standard__wide_character.bool_eq, 
+ type index_base_type = Standard__integer.integer, 
+ type index_rep_type = int, 
+ function to_rep = Standard__integer__rep.to_rep, 
+ function rep_to_int = index_1_id, 
+ predicate in_range_base = Standard__integer.in_range, 
+ predicate index_dynamic_property = Standard__positive.dynamic_property, 
+ predicate index_rep_le = Int.(<=)
+ 
+ type wide_string =
+  __t
+ 
+ meta "model_projection" function to_array
+ 
+ meta "inline : no" function to_array
+ 
+ meta "model_projection" function first
+ 
+ meta "inline : no" function first
+ 
+ meta "model_projection" function last
+ 
+ meta "inline : no" function last
+ 
+ type wide_string__ref =
+  { mutable wide_string__content "model_trace:" "name:" : wide_string }
+ 
+ function wide_string__ref___projection 
+   (a : wide_string__ref) : wide_string =
+  a.wide_string__content
+ 
+ meta "model_projection" function wide_string__ref___projection
+ 
+ meta "inline : no" function wide_string__ref___projection
+ 
+ val wide_string__havoc 
+   (x : wide_string__ref) : unit
+  writes {x}
+
+end
+
+(* Module for axiomatizing the array theory associated to type "wide_wide_string", created in Why.Gen.Arrays.Create_Rep_Array_Theory *)
+module Array__Int__Standard__wide_wide_character
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__wide_wide_character
+ use        Standard__wide_wide_character__rep
+
+ function index_I1_one 
+   : int =
+  1
+ 
+ type component_type =
+  Standard__wide_wide_character.wide_wide_character
+ 
+ clone export "_gnatprove_standard".Array__1 with
+ type I1.t = int, 
+ predicate I1.le = Int.(<=), 
+ predicate I1.lt = Int.(<), 
+ predicate I1.gt = Int.(>), 
+ function I1.add = Int.(+), 
+ function I1.sub = Int.(-), 
+ function I1.one = index_I1_one, 
+ type component_type = component_type
+ 
+ function bool_eq 
+   (a : map) (a__first : int) (a__last : int) (b : map) (b__first : int) (b__last : int) : bool =
+  ( (if ((a__first <= a__last)) then (
+   ( (b__first <= b__last) /\ ((a__last - a__first) = (b__last - b__first)) )) else (
+   (b__first > b__last))) /\ (forall temp___idx_105   : int.
+   (if (( (a__first <= temp___idx_105) /\ (temp___idx_105 <= a__last) )) then (
+    ((Standard__wide_wide_character__rep.to_rep (get a temp___idx_105)) = (Standard__wide_wide_character__rep.to_rep (get b ((b__first - a__first) + temp___idx_105))))) else true)) )
+ 
+ axiom bool_eq_rev :
+  (forall a   b   : map.
+  (forall a__first   a__last   b__first   b__last   : int.
+   ( ((bool_eq b b__first b__last a a__first a__last) = True) -> ( (if ((a__first <= a__last)) then (
+    ( (b__first <= b__last) /\ ((a__last - a__first) = (b__last - b__first)) )) else (
+    (b__first > b__last))) /\ (forall temp___idx_105   : int.
+    (if (( (a__first <= temp___idx_105) /\ (temp___idx_105 <= a__last) )) then (
+     ((Standard__wide_wide_character__rep.to_rep (get a temp___idx_105)) = (Standard__wide_wide_character__rep.to_rep (get b ((b__first - a__first) + temp___idx_105))))) else true)) ) )))
+
+end
+
+(* Module for axiomatizing concatenation for the array theory associated to type "wide_wide_string", created in Why.Gen.Arrays.Declare_Concatenation_Symbols *)
+module Array__Int__Standard__wide_wide_character__Concat
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Array__Int__Standard__wide_wide_character
+
+ function index_Index_one 
+   : int =
+  1
+ 
+ clone export "_gnatprove_standard".Array__1__Concat with
+ type component_type = Array__Int__Standard__wide_wide_character.component_type, 
+ type map = Array__Int__Standard__wide_wide_character.map, 
+ type Index.t = int, 
+ predicate Index.le = Int.(<=), 
+ predicate Index.lt = Int.(<), 
+ predicate Index.gt = Int.(>), 
+ function Index.add = Int.(+), 
+ function Index.sub = Int.(-), 
+ function Index.one = index_Index_one, 
+ function get = Array__Int__Standard__wide_wide_character.get
+
+end
+
+(* Module for axiomatizing comparison for the array theory associated to type "wide_wide_string", created in Why.Gen.Arrays.Declare_Comparison_Symbols *)
+module Array__Int__Standard__wide_wide_character_Comp
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__wide_wide_character__rep
+ use        Array__Int__Standard__wide_wide_character
+
+ function index_Index_one 
+   : int =
+  1
+ 
+ clone export "ada__model".Array_Int_Rep_Comparison_Axiom with
+ type component_type = Array__Int__Standard__wide_wide_character.component_type, 
+ function to_rep = Standard__wide_wide_character__rep.to_rep, 
+ type map = Array__Int__Standard__wide_wide_character.map, 
+ type Index.t = int, 
+ predicate Index.le = Int.(<=), 
+ predicate Index.lt = Int.(<), 
+ predicate Index.gt = Int.(>), 
+ function Index.add = Int.(+), 
+ function Index.sub = Int.(-), 
+ function Index.one = index_Index_one, 
+ function get = Array__Int__Standard__wide_wide_character.get, 
+ function bool_eq = Array__Int__Standard__wide_wide_character.bool_eq
+
+end
+
+(* Module for axiomatizing type "wide_wide_string", created in Gnat2Why.Types.Translate_Type *)
+module Standard__wide_wide_string
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__integer
+ use        Standard__positive
+ use        Standard__wide_wide_character
+ use        Standard__integer__rep
+ use        Array__Int__Standard__wide_wide_character
+
+ type component_type =
+  Standard__wide_wide_character.wide_wide_character
+ 
+ function index_1_id 
+   (x : int) : int =
+  x
+ 
+ clone export "ada__model".Unconstr_Array with
+ type map = Array__Int__Standard__wide_wide_character.map, 
+ function array_bool_eq = Array__Int__Standard__wide_wide_character.bool_eq, 
+ type index_base_type = Standard__integer.integer, 
+ type index_rep_type = int, 
+ function to_rep = Standard__integer__rep.to_rep, 
+ function rep_to_int = index_1_id, 
+ predicate in_range_base = Standard__integer.in_range, 
+ predicate index_dynamic_property = Standard__positive.dynamic_property, 
+ predicate index_rep_le = Int.(<=)
+ 
+ type wide_wide_string =
+  __t
+ 
+ meta "model_projection" function to_array
+ 
+ meta "inline : no" function to_array
+ 
+ meta "model_projection" function first
+ 
+ meta "inline : no" function first
+ 
+ meta "model_projection" function last
+ 
+ meta "inline : no" function last
+ 
+ type wide_wide_string__ref =
+  { mutable wide_wide_string__content "model_trace:" "name:" : wide_wide_string }
+ 
+ function wide_wide_string__ref___projection 
+   (a : wide_wide_string__ref) : wide_wide_string =
+  a.wide_wide_string__content
+ 
+ meta "model_projection" function wide_wide_string__ref___projection
+ 
+ meta "inline : no" function wide_wide_string__ref___projection
+ 
+ val wide_wide_string__havoc 
+   (x : wide_wide_string__ref) : unit
+  writes {x}
+
+end
+
+(* Module for fixed-point operation for type at system.ads:1, created in Why.Gen.Scalars.Create_Fixed_Point_Theory_If_Needed *)
+module Fixed_Point__1_1000000000
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ function num_small 
+   : int =
+  1
+ 
+ function den_small 
+   : int =
+  1000000000
+ 
+ clone export "ada__model".Fixed_Point_Rep with
+ function num_small = num_small, 
+ function den_small = den_small
+
+end
+
+(* Module for axiomatizing type "duration", created in Gnat2Why.Types.Translate_Type *)
+module Standard__duration
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        "_gnatprove_standard".Main
+
+ type duration 
+ 
+ function num_small 
+   : Main.__fixed =
+  1
+ 
+ function den_small 
+   : Main.__fixed =
+  1000000000
+ 
+ function first 
+   : Main.__fixed =
+  ( -9223372036854775808 )
+ 
+ function last 
+   : Main.__fixed =
+  9223372036854775807
+ 
+ predicate in_range 
+   (x : Main.__fixed)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Fixed_Point with
+ type t = duration, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type duration__ref =
+  { mutable duration__content "model_trace:" "name:" : duration }
+ 
+ function duration__ref___projection 
+   (a : duration__ref) : duration =
+  a.duration__content
+ 
+ meta "model_projection" function duration__ref___projection
+ 
+ meta "inline : no" function duration__ref___projection
+ 
+ val duration__havoc 
+   (x : duration__ref) : unit
+  writes {x}
+
+end
+
+(* Module for axiomatizing type "integer_8", created in Gnat2Why.Types.Translate_Type *)
+module Standard__integer_8
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type integer_8 =
+  < range -128 127 >
+ 
+ function first 
+   : int =
+  ( -128 )
+ 
+ function last 
+   : int =
+  127
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = integer_8, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type integer_8__ref =
+  { mutable integer_8__content "model_trace:" "name:" : integer_8 }
+ 
+ function integer_8__ref___projection 
+   (a : integer_8__ref) : integer_8 =
+  a.integer_8__content
+ 
+ meta "model_projection" function integer_8__ref___projection
+ 
+ meta "inline : no" function integer_8__ref___projection
+ 
+ val integer_8__havoc 
+   (x : integer_8__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "integer_8", created in Gnat2Why.Types.Translate_Type *)
+module Standard__integer_8__rep
+ use        Standard__integer_8
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Standard__integer_8.integer_8) : int =
+  (Standard__integer_8.integer_8'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Standard__integer_8.integer_8, 
+ predicate in_range = Standard__integer_8.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "integer_16", created in Gnat2Why.Types.Translate_Type *)
+module Standard__integer_16
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type integer_16 =
+  < range -32768 32767 >
+ 
+ function first 
+   : int =
+  ( -32768 )
+ 
+ function last 
+   : int =
+  32767
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = integer_16, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type integer_16__ref =
+  { mutable integer_16__content "model_trace:" "name:" : integer_16 }
+ 
+ function integer_16__ref___projection 
+   (a : integer_16__ref) : integer_16 =
+  a.integer_16__content
+ 
+ meta "model_projection" function integer_16__ref___projection
+ 
+ meta "inline : no" function integer_16__ref___projection
+ 
+ val integer_16__havoc 
+   (x : integer_16__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "integer_16", created in Gnat2Why.Types.Translate_Type *)
+module Standard__integer_16__rep
+ use        Standard__integer_16
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Standard__integer_16.integer_16) : int =
+  (Standard__integer_16.integer_16'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Standard__integer_16.integer_16, 
+ predicate in_range = Standard__integer_16.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "integer_32", created in Gnat2Why.Types.Translate_Type *)
+module Standard__integer_32
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type integer_32 =
+  < range -2147483648 2147483647 >
+ 
+ function first 
+   : int =
+  ( -2147483648 )
+ 
+ function last 
+   : int =
+  2147483647
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = integer_32, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type integer_32__ref =
+  { mutable integer_32__content "model_trace:" "name:" : integer_32 }
+ 
+ function integer_32__ref___projection 
+   (a : integer_32__ref) : integer_32 =
+  a.integer_32__content
+ 
+ meta "model_projection" function integer_32__ref___projection
+ 
+ meta "inline : no" function integer_32__ref___projection
+ 
+ val integer_32__havoc 
+   (x : integer_32__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "integer_32", created in Gnat2Why.Types.Translate_Type *)
+module Standard__integer_32__rep
+ use        Standard__integer_32
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Standard__integer_32.integer_32) : int =
+  (Standard__integer_32.integer_32'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Standard__integer_32.integer_32, 
+ predicate in_range = Standard__integer_32.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "integer_64", created in Gnat2Why.Types.Translate_Type *)
+module Standard__integer_64
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type integer_64 =
+  < range -9223372036854775808 9223372036854775807 >
+ 
+ function first 
+   : int =
+  ( -9223372036854775808 )
+ 
+ function last 
+   : int =
+  9223372036854775807
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = integer_64, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type integer_64__ref =
+  { mutable integer_64__content "model_trace:" "name:" : integer_64 }
+ 
+ function integer_64__ref___projection 
+   (a : integer_64__ref) : integer_64 =
+  a.integer_64__content
+ 
+ meta "model_projection" function integer_64__ref___projection
+ 
+ meta "inline : no" function integer_64__ref___projection
+ 
+ val integer_64__havoc 
+   (x : integer_64__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "integer_64", created in Gnat2Why.Types.Translate_Type *)
+module Standard__integer_64__rep
+ use        Standard__integer_64
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Standard__integer_64.integer_64) : int =
+  (Standard__integer_64.integer_64'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Standard__integer_64.integer_64, 
+ predicate in_range = Standard__integer_64.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "universal_integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__universal_integer
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type universal_integer =
+  < range -9223372036854775808 9223372036854775807 >
+ 
+ function first 
+   : int =
+  ( -9223372036854775808 )
+ 
+ function last 
+   : int =
+  9223372036854775807
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = universal_integer, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type universal_integer__ref =
+  { mutable universal_integer__content "model_trace:" "name:" : universal_integer }
+ 
+ function universal_integer__ref___projection 
+   (a : universal_integer__ref) : universal_integer =
+  a.universal_integer__content
+ 
+ meta "model_projection" function universal_integer__ref___projection
+ 
+ meta "inline : no" function universal_integer__ref___projection
+ 
+ val universal_integer__havoc 
+   (x : universal_integer__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "universal_integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__universal_integer__rep
+ use        Standard__universal_integer
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Standard__universal_integer.universal_integer) : int =
+  (Standard__universal_integer.universal_integer'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Standard__universal_integer.universal_integer, 
+ predicate in_range = Standard__universal_integer.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "TdepthmonitorB" defined at movement.ads:4, created in Gnat2Why.Types.Translate_Type *)
+module Movement__TdepthmonitorB
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type tdepthmonitorB =
+  < range -32768 32767 >
+ 
+ function first 
+   : int =
+  ( -32768 )
+ 
+ function last 
+   : int =
+  32767
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = tdepthmonitorB, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type tdepthmonitorB__ref =
+  { mutable tdepthmonitorB__content "model_trace:" "name:" : tdepthmonitorB }
+ 
+ function tdepthmonitorB__ref___projection 
+   (a : tdepthmonitorB__ref) : tdepthmonitorB =
+  a.tdepthmonitorB__content
+ 
+ meta "model_projection" function tdepthmonitorB__ref___projection
+ 
+ meta "inline : no" function tdepthmonitorB__ref___projection
+ 
+ val tdepthmonitorB__havoc 
+   (x : tdepthmonitorB__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "TdepthmonitorB" defined at movement.ads:4, created in Gnat2Why.Types.Translate_Type *)
+module Movement__TdepthmonitorB__rep
+ use        Movement__TdepthmonitorB
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Movement__TdepthmonitorB.tdepthmonitorB) : int =
+  (Movement__TdepthmonitorB.tdepthmonitorB'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Movement__TdepthmonitorB.tdepthmonitorB, 
+ predicate in_range = Movement__TdepthmonitorB.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "depthmonitor" defined at movement.ads:4, created in Gnat2Why.Types.Translate_Type *)
+module Movement__depthmonitor
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type depthmonitor =
+  < range 0 2000 >
+ 
+ function first 
+   : int =
+  0
+ 
+ function last 
+   : int =
+  2000
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = depthmonitor, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type depthmonitor__ref =
+  { mutable depthmonitor__content "model_trace:" "name:" : depthmonitor }
+ 
+ function depthmonitor__ref___projection 
+   (a : depthmonitor__ref) : depthmonitor =
+  a.depthmonitor__content
+ 
+ meta "model_projection" function depthmonitor__ref___projection
+ 
+ meta "inline : no" function depthmonitor__ref___projection
+ 
+ val depthmonitor__havoc 
+   (x : depthmonitor__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "depthmonitor" defined at movement.ads:4, created in Gnat2Why.Types.Translate_Type *)
+module Movement__depthmonitor__rep
+ use        Movement__depthmonitor
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Movement__depthmonitor.depthmonitor) : int =
+  (Movement__depthmonitor.depthmonitor'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Movement__depthmonitor.depthmonitor, 
+ predicate in_range = Movement__depthmonitor.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "operationstatus" defined at movement.ads:5, created in Gnat2Why.Types.Translate_Type *)
+module Movement__operationstatus
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type operationstatus 
+ 
+ function first 
+   : int =
+  0
+ 
+ function last 
+   : int =
+  1
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = operationstatus, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type operationstatus__ref =
+  { mutable operationstatus__content "model_trace:" "name:" : operationstatus }
+ 
+ function operationstatus__ref___projection 
+   (a : operationstatus__ref) : operationstatus =
+  a.operationstatus__content
+ 
+ meta "model_projection" function operationstatus__ref___projection
+ 
+ meta "inline : no" function operationstatus__ref___projection
+ 
+ val operationstatus__havoc 
+   (x : operationstatus__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "operationstatus" defined at movement.ads:5, created in Gnat2Why.Types.Translate_Type *)
+module Movement__operationstatus__rep
+ use        Movement__operationstatus
+ use import "_gnatprove_standard".Main
+
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Movement__operationstatus.operationstatus, 
+ predicate in_range = Movement__operationstatus.in_range
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for defining the constant "diveby" defined at movement.ads:18, created in Gnat2Why.Decls.Translate_Constant *)
+module Movement__divethesubmarine__diveby
+ use import "_gnatprove_standard".Main
+
+ function diveby #"movement.ads" 18 0 0#"model" "model_trace:3027" "name:diveBy" 
+   : int
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "diveby" defined at movement.ads:18, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Movement__divethesubmarine__diveby___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining the constant "currentoperationstatus" defined at movement.ads:20, created in Gnat2Why.Decls.Translate_Constant *)
+module Movement__divethesubmarine__currentoperationstatus
+ use import "_gnatprove_standard".Main
+
+ function currentoperationstatus #"movement.ads" 20 0 0#"model" "model_trace:3045" "name:currentOperationStatus" 
+   : int
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "currentoperationstatus" defined at movement.ads:20, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Movement__divethesubmarine__currentoperationstatus___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining the constant "riseby" defined at movement.ads:30, created in Gnat2Why.Decls.Translate_Constant *)
+module Movement__raisethesubmarine__riseby
+ use import "_gnatprove_standard".Main
+
+ function riseby #"movement.ads" 30 0 0#"model" "model_trace:3102" "name:riseBy" 
+   : int
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "riseby" defined at movement.ads:30, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Movement__raisethesubmarine__riseby___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for axiomatizing type "torps" defined at torpedoes.ads:10, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__torps
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type torps 
+ 
+ function first 
+   : int =
+  0
+ 
+ function last 
+   : int =
+  1
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = torps, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type torps__ref =
+  { mutable torps__content "model_trace:" "name:" : torps }
+ 
+ function torps__ref___projection 
+   (a : torps__ref) : torps =
+  a.torps__content
+ 
+ meta "model_projection" function torps__ref___projection
+ 
+ meta "inline : no" function torps__ref___projection
+ 
+ val torps__havoc 
+   (x : torps__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "torps" defined at torpedoes.ads:10, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__torps__rep
+ use        Torpedoes__torps
+ use import "_gnatprove_standard".Main
+
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Torpedoes__torps.torps, 
+ predicate in_range = Torpedoes__torps.in_range
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "TstoragecapacityB" defined at torpedoes.ads:12, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__TstoragecapacityB
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type tstoragecapacityB =
+  < range -128 127 >
+ 
+ function first 
+   : int =
+  ( -128 )
+ 
+ function last 
+   : int =
+  127
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = tstoragecapacityB, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type tstoragecapacityB__ref =
+  { mutable tstoragecapacityB__content "model_trace:" "name:" : tstoragecapacityB }
+ 
+ function tstoragecapacityB__ref___projection 
+   (a : tstoragecapacityB__ref) : tstoragecapacityB =
+  a.tstoragecapacityB__content
+ 
+ meta "model_projection" function tstoragecapacityB__ref___projection
+ 
+ meta "inline : no" function tstoragecapacityB__ref___projection
+ 
+ val tstoragecapacityB__havoc 
+   (x : tstoragecapacityB__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "TstoragecapacityB" defined at torpedoes.ads:12, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__TstoragecapacityB__rep
+ use        Torpedoes__TstoragecapacityB
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Torpedoes__TstoragecapacityB.tstoragecapacityB) : int =
+  (Torpedoes__TstoragecapacityB.tstoragecapacityB'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Torpedoes__TstoragecapacityB.tstoragecapacityB, 
+ predicate in_range = Torpedoes__TstoragecapacityB.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "storagecapacity" defined at torpedoes.ads:12, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__storagecapacity
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type storagecapacity =
+  < range 0 5 >
+ 
+ function first 
+   : int =
+  0
+ 
+ function last 
+   : int =
+  5
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = storagecapacity, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type storagecapacity__ref =
+  { mutable storagecapacity__content "model_trace:" "name:" : storagecapacity }
+ 
+ function storagecapacity__ref___projection 
+   (a : storagecapacity__ref) : storagecapacity =
+  a.storagecapacity__content
+ 
+ meta "model_projection" function storagecapacity__ref___projection
+ 
+ meta "inline : no" function storagecapacity__ref___projection
+ 
+ val storagecapacity__havoc 
+   (x : storagecapacity__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "storagecapacity" defined at torpedoes.ads:12, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__storagecapacity__rep
+ use        Torpedoes__storagecapacity
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Torpedoes__storagecapacity.storagecapacity) : int =
+  (Torpedoes__storagecapacity.storagecapacity'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Torpedoes__storagecapacity.storagecapacity, 
+ predicate in_range = Torpedoes__storagecapacity.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing the array theory associated to type "TstorageB" defined at torpedoes.ads:14, created in Why.Gen.Arrays.Create_Rep_Array_Theory *)
+module Array__Int__Torpedoes__torps
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Torpedoes__torps
+ use        Torpedoes__torps__rep
+
+ function index_I1_one 
+   : int =
+  1
+ 
+ type component_type =
+  Torpedoes__torps.torps
+ 
+ clone export "_gnatprove_standard".Array__1 with
+ type I1.t = int, 
+ predicate I1.le = Int.(<=), 
+ predicate I1.lt = Int.(<), 
+ predicate I1.gt = Int.(>), 
+ function I1.add = Int.(+), 
+ function I1.sub = Int.(-), 
+ function I1.one = index_I1_one, 
+ type component_type = component_type
+ 
+ function bool_eq 
+   (a : map) (a__first : int) (a__last : int) (b : map) (b__first : int) (b__last : int) : bool =
+  ( (if ((a__first <= a__last)) then (
+   ( (b__first <= b__last) /\ ((a__last - a__first) = (b__last - b__first)) )) else (
+   (b__first > b__last))) /\ (forall temp___idx_154   : int.
+   (if (( (a__first <= temp___idx_154) /\ (temp___idx_154 <= a__last) )) then (
+    ((Torpedoes__torps__rep.to_rep (get a temp___idx_154)) = (Torpedoes__torps__rep.to_rep (get b ((b__first - a__first) + temp___idx_154))))) else true)) )
+ 
+ axiom bool_eq_rev :
+  (forall a   b   : map.
+  (forall a__first   a__last   b__first   b__last   : int.
+   ( ((bool_eq b b__first b__last a a__first a__last) = True) -> ( (if ((a__first <= a__last)) then (
+    ( (b__first <= b__last) /\ ((a__last - a__first) = (b__last - b__first)) )) else (
+    (b__first > b__last))) /\ (forall temp___idx_154   : int.
+    (if (( (a__first <= temp___idx_154) /\ (temp___idx_154 <= a__last) )) then (
+     ((Torpedoes__torps__rep.to_rep (get a temp___idx_154)) = (Torpedoes__torps__rep.to_rep (get b ((b__first - a__first) + temp___idx_154))))) else true)) ) )))
+
+end
+
+(* Module for axiomatizing concatenation for the array theory associated to type "TstorageB" defined at torpedoes.ads:14, created in Why.Gen.Arrays.Declare_Concatenation_Symbols *)
+module Array__Int__Torpedoes__torps__Concat
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Array__Int__Torpedoes__torps
+
+ function index_Index_one 
+   : int =
+  1
+ 
+ clone export "_gnatprove_standard".Array__1__Concat with
+ type component_type = Array__Int__Torpedoes__torps.component_type, 
+ type map = Array__Int__Torpedoes__torps.map, 
+ type Index.t = int, 
+ predicate Index.le = Int.(<=), 
+ predicate Index.lt = Int.(<), 
+ predicate Index.gt = Int.(>), 
+ function Index.add = Int.(+), 
+ function Index.sub = Int.(-), 
+ function Index.one = index_Index_one, 
+ function get = Array__Int__Torpedoes__torps.get
+
+end
+
+(* Module for axiomatizing comparison for the array theory associated to type "TstorageB" defined at torpedoes.ads:14, created in Why.Gen.Arrays.Declare_Comparison_Symbols *)
+module Array__Int__Torpedoes__torps_Comp
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Torpedoes__torps__rep
+ use        Array__Int__Torpedoes__torps
+
+ function index_Index_one 
+   : int =
+  1
+ 
+ clone export "ada__model".Array_Int_Rep_Comparison_Axiom with
+ type component_type = Array__Int__Torpedoes__torps.component_type, 
+ function to_rep = Torpedoes__torps__rep.to_rep, 
+ type map = Array__Int__Torpedoes__torps.map, 
+ type Index.t = int, 
+ predicate Index.le = Int.(<=), 
+ predicate Index.lt = Int.(<), 
+ predicate Index.gt = Int.(>), 
+ function Index.add = Int.(+), 
+ function Index.sub = Int.(-), 
+ function Index.one = index_Index_one, 
+ function get = Array__Int__Torpedoes__torps.get, 
+ function bool_eq = Array__Int__Torpedoes__torps.bool_eq
+
+end
+
+(* Module for axiomatizing type "TstorageB" defined at torpedoes.ads:14, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__TstorageB
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Torpedoes__torps
+ use        Torpedoes__TstoragecapacityB
+ use        Torpedoes__TstoragecapacityB__rep
+ use        Torpedoes__storagecapacity
+ use        Array__Int__Torpedoes__torps
+
+ type component_type =
+  Torpedoes__torps.torps
+ 
+ function index_1_id 
+   (x : int) : int =
+  x
+ 
+ clone export "ada__model".Unconstr_Array with
+ type map = Array__Int__Torpedoes__torps.map, 
+ function array_bool_eq = Array__Int__Torpedoes__torps.bool_eq, 
+ type index_base_type = Torpedoes__TstoragecapacityB.tstoragecapacityB, 
+ type index_rep_type = int, 
+ function to_rep = Torpedoes__TstoragecapacityB__rep.to_rep, 
+ function rep_to_int = index_1_id, 
+ predicate in_range_base = Torpedoes__TstoragecapacityB.in_range, 
+ predicate index_dynamic_property = Torpedoes__storagecapacity.dynamic_property, 
+ predicate index_rep_le = Int.(<=)
+ 
+ type tstorageB =
+  __t
+ 
+ meta "model_projection" function to_array
+ 
+ meta "inline : no" function to_array
+ 
+ meta "model_projection" function first
+ 
+ meta "inline : no" function first
+ 
+ meta "model_projection" function last
+ 
+ meta "inline : no" function last
+ 
+ type tstorageB__ref =
+  { mutable tstorageB__content "model_trace:" "name:" : tstorageB }
+ 
+ function tstorageB__ref___projection 
+   (a : tstorageB__ref) : tstorageB =
+  a.tstorageB__content
+ 
+ meta "model_projection" function tstorageB__ref___projection
+ 
+ meta "inline : no" function tstorageB__ref___projection
+ 
+ val tstorageB__havoc 
+   (x : tstorageB__ref) : unit
+  writes {x}
+
+end
+
+(* Module for axiomatizing type "storage" defined at torpedoes.ads:14, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__storage
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Torpedoes__torps
+ use        Array__Int__Torpedoes__torps
+
+ type component_type =
+  Torpedoes__torps.torps
+ 
+ function first 
+   : int =
+  0
+ 
+ function last 
+   : int =
+  5
+ 
+ clone export "ada__model".Constr_Array with
+ type map = Array__Int__Torpedoes__torps.map, 
+ function array_bool_eq = Array__Int__Torpedoes__torps.bool_eq, 
+ function first = first, 
+ function last = last, 
+ type index_rep_type = int
+
+end
+
+(* Module for axiomatizing type "launcher" defined at torpedoes.ads:16, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__launcher
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type launcher 
+ 
+ function first 
+   : int =
+  0
+ 
+ function last 
+   : int =
+  1
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = launcher, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type launcher__ref =
+  { mutable launcher__content "model_trace:" "name:" : launcher }
+ 
+ function launcher__ref___projection 
+   (a : launcher__ref) : launcher =
+  a.launcher__content
+ 
+ meta "model_projection" function launcher__ref___projection
+ 
+ meta "inline : no" function launcher__ref___projection
+ 
+ val launcher__havoc 
+   (x : launcher__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "launcher" defined at torpedoes.ads:16, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__launcher__rep
+ use        Torpedoes__launcher
+ use import "_gnatprove_standard".Main
+
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Torpedoes__launcher.launcher, 
+ predicate in_range = Torpedoes__launcher.in_range
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for defining the constant "currentdepth" defined at torpedoes.ads:25, created in Gnat2Why.Decls.Translate_Constant *)
+module Torpedoes__filltorpedoestorage__currentdepth
+ use import "_gnatprove_standard".Main
+
+ function currentdepth #"torpedoes.ads" 25 0 0#"model" "name:currentDepth" "model_trace:2734" 
+   : int
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "currentdepth" defined at torpedoes.ads:25, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Torpedoes__filltorpedoestorage__currentdepth___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining the constant "torpedoestorage" defined at torpedoes.ads:34, created in Gnat2Why.Decls.Translate_Constant *)
+module Torpedoes__storagehasemptyslots__torpedoestorage
+ use import "_gnatprove_standard".Main
+ use        Array__Int__Torpedoes__torps
+
+ function torpedoestorage #"torpedoes.ads" 34 0 0#"model_projected" "name:torpedoeStorage" "model_trace:2804" 
+   : Array__Int__Torpedoes__torps.map
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "torpedoestorage" defined at torpedoes.ads:34, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Torpedoes__storagehasemptyslots__torpedoestorage___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for possibly declaring a logic function for "storagehasemptyslots" defined at torpedoes.ads:34, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Torpedoes__storagehasemptyslots
+ use import "_gnatprove_standard".Main
+ use        Array__Int__Torpedoes__torps
+
+ function storagehasemptyslots 
+   (torpedoestorage : Array__Int__Torpedoes__torps.map) : bool
+ 
+ predicate storagehasemptyslots__function_guard 
+   (result : bool) (torpedoestorage : Array__Int__Torpedoes__torps.map) 
+
+end
+
+(* Module for defining the constant "torpedoestorage" defined at torpedoes.ads:30, created in Gnat2Why.Decls.Translate_Constant *)
+module Torpedoes__storageisfull__torpedoestorage
+ use import "_gnatprove_standard".Main
+ use        Array__Int__Torpedoes__torps
+
+ function torpedoestorage #"torpedoes.ads" 30 0 0#"model_projected" "name:torpedoeStorage" "model_trace:2769" 
+   : Array__Int__Torpedoes__torps.map
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "torpedoestorage" defined at torpedoes.ads:30, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Torpedoes__storageisfull__torpedoestorage___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for possibly declaring a logic function for "storageisfull" defined at torpedoes.ads:30, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Torpedoes__storageisfull
+ use import "_gnatprove_standard".Main
+ use        Array__Int__Torpedoes__torps
+
+ function storageisfull 
+   (torpedoestorage : Array__Int__Torpedoes__torps.map) : bool
+ 
+ predicate storageisfull__function_guard 
+   (result : bool) (torpedoestorage : Array__Int__Torpedoes__torps.map) 
+
+end
+
+(* Module for axiomatizing type "T17s" defined at torpedoes.ads:31, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__storageisfull__L16s__T17s
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type t17s =
+  < range 0 5 >
+ 
+ function first 
+   : int =
+  0
+ 
+ function last 
+   : int =
+  5
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = t17s, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type t17s__ref =
+  { mutable t17s__content "model_trace:" "name:" : t17s }
+ 
+ function t17s__ref___projection 
+   (a : t17s__ref) : t17s =
+  a.t17s__content
+ 
+ meta "model_projection" function t17s__ref___projection
+ 
+ meta "inline : no" function t17s__ref___projection
+ 
+ val t17s__havoc 
+   (x : t17s__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "T17s" defined at torpedoes.ads:31, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__storageisfull__L16s__T17s__rep
+ use        Torpedoes__storageisfull__L16s__T17s
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Torpedoes__storageisfull__L16s__T17s.t17s) : int =
+  (Torpedoes__storageisfull__L16s__T17s.t17s'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Torpedoes__storageisfull__L16s__T17s.t17s, 
+ predicate in_range = Torpedoes__storageisfull__L16s__T17s.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "T7s" defined at torpedoes.ads:31, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__storageisfull__L6s__T7s
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type t7s =
+  < range 0 5 >
+ 
+ function first 
+   : int =
+  0
+ 
+ function last 
+   : int =
+  5
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = t7s, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type t7s__ref =
+  { mutable t7s__content "model_trace:" "name:" : t7s }
+ 
+ function t7s__ref___projection 
+   (a : t7s__ref) : t7s =
+  a.t7s__content
+ 
+ meta "model_projection" function t7s__ref___projection
+ 
+ meta "inline : no" function t7s__ref___projection
+ 
+ val t7s__havoc 
+   (x : t7s__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "T7s" defined at torpedoes.ads:31, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__storageisfull__L6s__T7s__rep
+ use        Torpedoes__storageisfull__L6s__T7s
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Torpedoes__storageisfull__L6s__T7s.t7s) : int =
+  (Torpedoes__storageisfull__L6s__T7s.t7s'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Torpedoes__storageisfull__L6s__T7s.t7s, 
+ predicate in_range = Torpedoes__storageisfull__L6s__T7s.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "T20s" defined at torpedoes.ads:35, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__storagehasemptyslots__L19s__T20s
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type t20s =
+  < range 0 5 >
+ 
+ function first 
+   : int =
+  0
+ 
+ function last 
+   : int =
+  5
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = t20s, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type t20s__ref =
+  { mutable t20s__content "model_trace:" "name:" : t20s }
+ 
+ function t20s__ref___projection 
+   (a : t20s__ref) : t20s =
+  a.t20s__content
+ 
+ meta "model_projection" function t20s__ref___projection
+ 
+ meta "inline : no" function t20s__ref___projection
+ 
+ val t20s__havoc 
+   (x : t20s__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "T20s" defined at torpedoes.ads:35, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__storagehasemptyslots__L19s__T20s__rep
+ use        Torpedoes__storagehasemptyslots__L19s__T20s
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Torpedoes__storagehasemptyslots__L19s__T20s.t20s) : int =
+  (Torpedoes__storagehasemptyslots__L19s__T20s.t20s'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Torpedoes__storagehasemptyslots__L19s__T20s.t20s, 
+ predicate in_range = Torpedoes__storagehasemptyslots__L19s__T20s.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "T9s" defined at torpedoes.ads:35, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__storagehasemptyslots__L8s__T9s
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type t9s =
+  < range 0 5 >
+ 
+ function first 
+   : int =
+  0
+ 
+ function last 
+   : int =
+  5
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = t9s, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type t9s__ref =
+  { mutable t9s__content "model_trace:" "name:" : t9s }
+ 
+ function t9s__ref___projection 
+   (a : t9s__ref) : t9s =
+  a.t9s__content
+ 
+ meta "model_projection" function t9s__ref___projection
+ 
+ meta "inline : no" function t9s__ref___projection
+ 
+ val t9s__havoc 
+   (x : t9s__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "T9s" defined at torpedoes.ads:35, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__storagehasemptyslots__L8s__T9s__rep
+ use        Torpedoes__storagehasemptyslots__L8s__T9s
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Torpedoes__storagehasemptyslots__L8s__T9s.t9s) : int =
+  (Torpedoes__storagehasemptyslots__L8s__T9s.t9s'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Torpedoes__storagehasemptyslots__L8s__T9s.t9s, 
+ predicate in_range = Torpedoes__storagehasemptyslots__L8s__T9s.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for defining the constant "torpedoestorage" defined at torpedoes.ads:39, created in Gnat2Why.Decls.Translate_Constant *)
+module Torpedoes__counttorps__torpedoestorage
+ use import "_gnatprove_standard".Main
+ use        Array__Int__Torpedoes__torps
+
+ function torpedoestorage #"torpedoes.ads" 39 0 0#"model_projected" "name:torpedoeStorage" "model_trace:2839" 
+   : Array__Int__Torpedoes__torps.map
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "torpedoestorage" defined at torpedoes.ads:39, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Torpedoes__counttorps__torpedoestorage___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining the constant "torp" defined at torpedoes.ads:39, created in Gnat2Why.Decls.Translate_Constant *)
+module Torpedoes__counttorps__torp
+ use import "_gnatprove_standard".Main
+
+ function torp #"torpedoes.ads" 39 0 0#"model" "model_trace:2848" "name:torp" 
+   : int
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "torp" defined at torpedoes.ads:39, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Torpedoes__counttorps__torp___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for possibly declaring a logic function for "counttorps" defined at torpedoes.ads:39, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Torpedoes__counttorps
+ use import "_gnatprove_standard".Main
+ use        Array__Int__Torpedoes__torps
+
+ function counttorps 
+   (torpedoestorage : Array__Int__Torpedoes__torps.map) (torp : int) : int
+ 
+ predicate counttorps__function_guard 
+   (result : int) (torpedoestorage : Array__Int__Torpedoes__torps.map) (torp : int) 
+
+end
+
+(* Module for defining the constant "torpedoestorage" defined at torpedoes.ads:48, created in Gnat2Why.Decls.Translate_Constant *)
+module Torpedoes__torpexists__torpedoestorage
+ use import "_gnatprove_standard".Main
+ use        Array__Int__Torpedoes__torps
+
+ function torpedoestorage #"torpedoes.ads" 48 0 0#"model_projected" "name:torpedoeStorage" "model_trace:2884" 
+   : Array__Int__Torpedoes__torps.map
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "torpedoestorage" defined at torpedoes.ads:48, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Torpedoes__torpexists__torpedoestorage___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining the constant "torp" defined at torpedoes.ads:48, created in Gnat2Why.Decls.Translate_Constant *)
+module Torpedoes__torpexists__torp
+ use import "_gnatprove_standard".Main
+
+ function torp #"torpedoes.ads" 48 0 0#"model" "name:torp" "model_trace:2893" 
+   : int
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "torp" defined at torpedoes.ads:48, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Torpedoes__torpexists__torp___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for possibly declaring a logic function for "torpexists" defined at torpedoes.ads:48, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Torpedoes__torpexists
+ use import "_gnatprove_standard".Main
+ use        Array__Int__Torpedoes__torps
+
+ function torpexists 
+   (torpedoestorage : Array__Int__Torpedoes__torps.map) (torp : int) : bool
+ 
+ predicate torpexists__function_guard 
+   (result : bool) (torpedoestorage : Array__Int__Torpedoes__torps.map) (torp : int) 
+
+end
+
+(* Module for axiomatizing type "T23s" defined at torpedoes.ads:49, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__torpexists__L22s__T23s
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type t23s =
+  < range 0 5 >
+ 
+ function first 
+   : int =
+  0
+ 
+ function last 
+   : int =
+  5
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = t23s, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type t23s__ref =
+  { mutable t23s__content "model_trace:" "name:" : t23s }
+ 
+ function t23s__ref___projection 
+   (a : t23s__ref) : t23s =
+  a.t23s__content
+ 
+ meta "model_projection" function t23s__ref___projection
+ 
+ meta "inline : no" function t23s__ref___projection
+ 
+ val t23s__havoc 
+   (x : t23s__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "T23s" defined at torpedoes.ads:49, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__torpexists__L22s__T23s__rep
+ use        Torpedoes__torpexists__L22s__T23s
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Torpedoes__torpexists__L22s__T23s.t23s) : int =
+  (Torpedoes__torpexists__L22s__T23s.t23s'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Torpedoes__torpexists__L22s__T23s.t23s, 
+ predicate in_range = Torpedoes__torpexists__L22s__T23s.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for axiomatizing type "T12s" defined at torpedoes.ads:49, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__torpexists__L11s__T12s
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+
+ type t12s =
+  < range 0 5 >
+ 
+ function first 
+   : int =
+  0
+ 
+ function last 
+   : int =
+  5
+ 
+ predicate in_range 
+   (x : int)  =
+  ( (first <= x) /\ (x <= last) )
+ 
+ clone export "ada__model".Static_Discrete with
+ type t = t12s, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type t12s__ref =
+  { mutable t12s__content "model_trace:" "name:" : t12s }
+ 
+ function t12s__ref___projection 
+   (a : t12s__ref) : t12s =
+  a.t12s__content
+ 
+ meta "model_projection" function t12s__ref___projection
+ 
+ meta "inline : no" function t12s__ref___projection
+ 
+ val t12s__havoc 
+   (x : t12s__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "T12s" defined at torpedoes.ads:49, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__torpexists__L11s__T12s__rep
+ use        Torpedoes__torpexists__L11s__T12s
+ use import "_gnatprove_standard".Main
+
+ function to_rep 
+   (x : Torpedoes__torpexists__L11s__T12s.t12s) : int =
+  (Torpedoes__torpexists__L11s__T12s.t12s'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with
+ type t = Torpedoes__torpexists__L11s__T12s.t12s, 
+ predicate in_range = Torpedoes__torpexists__L11s__T12s.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline : no" function to_rep
+
+end
+
+(* Module for defining the constant "torpedoestorage" defined at torpedoes.ads:51, created in Gnat2Why.Decls.Translate_Constant *)
+module Torpedoes__torplocation__torpedoestorage
+ use import "_gnatprove_standard".Main
+ use        Array__Int__Torpedoes__torps
+
+ function torpedoestorage #"torpedoes.ads" 51 0 0#"model_projected" "name:torpedoeStorage" "model_trace:2928" 
+   : Array__Int__Torpedoes__torps.map
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "torpedoestorage" defined at torpedoes.ads:51, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Torpedoes__torplocation__torpedoestorage___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining the constant "torp" defined at torpedoes.ads:51, created in Gnat2Why.Decls.Translate_Constant *)
+module Torpedoes__torplocation__torp
+ use import "_gnatprove_standard".Main
+
+ function torp #"torpedoes.ads" 51 0 0#"model" "name:torp" "model_trace:2937" 
+   : int
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "torp" defined at torpedoes.ads:51, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Torpedoes__torplocation__torp___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for possibly declaring a logic function for "torplocation" defined at torpedoes.ads:51, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Torpedoes__torplocation
+ use import "_gnatprove_standard".Main
+ use        Array__Int__Torpedoes__torps
+
+ function torplocation 
+   (torpedoestorage : Array__Int__Torpedoes__torps.map) (torp : int) : int
+ 
+ predicate torplocation__function_guard 
+   (result : int) (torpedoestorage : Array__Int__Torpedoes__torps.map) (torp : int) 
+
+end
+
+(* Module for axiomatizing type "T4b" defined at torpedoes.adb:27, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__filltorpedoestorage__L_1__L3b__T4b
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Torpedoes__TstoragecapacityB
+ use        Torpedoes__TstoragecapacityB__rep
+
+ type t4b =
+  Torpedoes__TstoragecapacityB.tstoragecapacityB
+ 
+ predicate dynamic_property 
+   (first_int : int) (last_int : int) (x : int)  =
+  ( (first_int <= x) /\ (x <= last_int) )
+ 
+ clone export "ada__model".Dynamic_Discrete with
+ type t = t4b, 
+ type rep_type = int, 
+ function base_to_rep = Torpedoes__TstoragecapacityB__rep.to_rep, 
+ function base_of_rep = Torpedoes__TstoragecapacityB__rep.of_rep, 
+ predicate dynamic_property = dynamic_property
+ 
+ type t4b__ref =
+  { mutable t4b__content "model_trace:" "name:" : t4b }
+ 
+ function t4b__ref___projection 
+   (a : t4b__ref) : t4b =
+  a.t4b__content
+ 
+ meta "model_projection" function t4b__ref___projection
+ 
+ meta "inline : no" function t4b__ref___projection
+ 
+ val t4b__havoc 
+   (x : t4b__ref) : unit
+  writes {x}
+
+end
+
+(* Module for axiomatizing type "T2b" defined at torpedoes.adb:27, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__filltorpedoestorage__L_1__L1b__T2b
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Torpedoes__TstoragecapacityB
+ use        Torpedoes__TstoragecapacityB__rep
+
+ type t2b =
+  Torpedoes__TstoragecapacityB.tstoragecapacityB
+ 
+ predicate dynamic_property 
+   (first_int : int) (last_int : int) (x : int)  =
+  ( (first_int <= x) /\ (x <= last_int) )
+ 
+ clone export "ada__model".Dynamic_Discrete with
+ type t = t2b, 
+ type rep_type = int, 
+ function base_to_rep = Torpedoes__TstoragecapacityB__rep.to_rep, 
+ function base_of_rep = Torpedoes__TstoragecapacityB__rep.of_rep, 
+ predicate dynamic_property = dynamic_property
+ 
+ type t2b__ref =
+  { mutable t2b__content "model_trace:" "name:" : t2b }
+ 
+ function t2b__ref___projection 
+   (a : t2b__ref) : t2b =
+  a.t2b__content
+ 
+ meta "model_projection" function t2b__ref___projection
+ 
+ meta "inline : no" function t2b__ref___projection
+ 
+ val t2b__havoc 
+   (x : t2b__ref) : unit
+  writes {x}
+
+end
+
+(* Module for defining the constant "R5b" defined at torpedoes.adb:38, created in Gnat2Why.Decls.Translate_Constant *)
+module Torpedoes__counttorps__L_2__R5b
+ use import "_gnatprove_standard".Main
+
+ function r5b #"torpedoes.adb" 38 0 0#
+   : int
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module for defining the constant "R6b" defined at torpedoes.adb:38, created in Gnat2Why.Decls.Translate_Constant *)
+module Torpedoes__counttorps__L_2__R6b
+ use import "_gnatprove_standard".Main
+
+ function r6b #"torpedoes.adb" 38 0 0#
+   : int
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module for axiomatizing type "T7b" defined at torpedoes.adb:38, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__counttorps__L_2__T7b
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Torpedoes__TstoragecapacityB
+ use        Torpedoes__TstoragecapacityB__rep
+
+ type t7b =
+  Torpedoes__TstoragecapacityB.tstoragecapacityB
+ 
+ predicate dynamic_property 
+   (first_int : int) (last_int : int) (x : int)  =
+  ( (first_int <= x) /\ (x <= last_int) )
+ 
+ clone export "ada__model".Dynamic_Discrete with
+ type t = t7b, 
+ type rep_type = int, 
+ function base_to_rep = Torpedoes__TstoragecapacityB__rep.to_rep, 
+ function base_of_rep = Torpedoes__TstoragecapacityB__rep.of_rep, 
+ predicate dynamic_property = dynamic_property
+ 
+ type t7b__ref =
+  { mutable t7b__content "model_trace:" "name:" : t7b }
+ 
+ function t7b__ref___projection 
+   (a : t7b__ref) : t7b =
+  a.t7b__content
+ 
+ meta "model_projection" function t7b__ref___projection
+ 
+ meta "inline : no" function t7b__ref___projection
+ 
+ val t7b__havoc 
+   (x : t7b__ref) : unit
+  writes {x}
+
+end
+
+(* Module for axiomatizing type "T13b" defined at torpedoes.adb:64, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__torplocation__L_3__L12b__T13b
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Torpedoes__TstoragecapacityB
+ use        Torpedoes__TstoragecapacityB__rep
+
+ type t13b =
+  Torpedoes__TstoragecapacityB.tstoragecapacityB
+ 
+ predicate dynamic_property 
+   (first_int : int) (last_int : int) (x : int)  =
+  ( (first_int <= x) /\ (x <= last_int) )
+ 
+ clone export "ada__model".Dynamic_Discrete with
+ type t = t13b, 
+ type rep_type = int, 
+ function base_to_rep = Torpedoes__TstoragecapacityB__rep.to_rep, 
+ function base_of_rep = Torpedoes__TstoragecapacityB__rep.of_rep, 
+ predicate dynamic_property = dynamic_property
+ 
+ type t13b__ref =
+  { mutable t13b__content "model_trace:" "name:" : t13b }
+ 
+ function t13b__ref___projection 
+   (a : t13b__ref) : t13b =
+  a.t13b__content
+ 
+ meta "model_projection" function t13b__ref___projection
+ 
+ meta "inline : no" function t13b__ref___projection
+ 
+ val t13b__havoc 
+   (x : t13b__ref) : unit
+  writes {x}
+
+end
+
+(* Module for axiomatizing type "T11b" defined at torpedoes.adb:64, created in Gnat2Why.Types.Translate_Type *)
+module Torpedoes__torplocation__L_3__L10b__T11b
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Torpedoes__TstoragecapacityB
+ use        Torpedoes__TstoragecapacityB__rep
+
+ type t11b =
+  Torpedoes__TstoragecapacityB.tstoragecapacityB
+ 
+ predicate dynamic_property 
+   (first_int : int) (last_int : int) (x : int)  =
+  ( (first_int <= x) /\ (x <= last_int) )
+ 
+ clone export "ada__model".Dynamic_Discrete with
+ type t = t11b, 
+ type rep_type = int, 
+ function base_to_rep = Torpedoes__TstoragecapacityB__rep.to_rep, 
+ function base_of_rep = Torpedoes__TstoragecapacityB__rep.of_rep, 
+ predicate dynamic_property = dynamic_property
+ 
+ type t11b__ref =
+  { mutable t11b__content "model_trace:" "name:" : t11b }
+ 
+ function t11b__ref___projection 
+   (a : t11b__ref) : t11b =
+  a.t11b__content
+ 
+ meta "model_projection" function t11b__ref___projection
+ 
+ meta "inline : no" function t11b__ref___projection
+ 
+ val t11b__havoc 
+   (x : t11b__ref) : unit
+  writes {x}
+
+end
+(* Module for defining a ref holding the value of variable "currentdepth" defined at movement.ads:19, created in Gnat2Why.Decls.Translate_Variable *)
+module Movement__divethesubmarine__currentdepth
+ use import "_gnatprove_standard".Main
+
+ val currentdepth #"movement.ads" 19 0 0#"model_projected" "model_trace:3036" "name:currentDepth"  : int__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "currentdepth" defined at movement.ads:19, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Movement__divethesubmarine__currentdepth___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining a ref holding the value of variable "currentdepth" defined at movement.ads:31, created in Gnat2Why.Decls.Translate_Variable *)
+module Movement__raisethesubmarine__currentdepth
+ use import "_gnatprove_standard".Main
+
+ val currentdepth #"movement.ads" 31 0 0#"model_projected" "name:currentDepth" "model_trace:3111"  : int__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "currentdepth" defined at movement.ads:31, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Movement__raisethesubmarine__currentdepth___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining a ref holding the value of variable "currentdepth" defined at movement.ads:39, created in Gnat2Why.Decls.Translate_Variable *)
+module Movement__surfacethesubmarine__currentdepth
+ use import "_gnatprove_standard".Main
+
+ val currentdepth #"movement.ads" 39 0 0#"model_projected" "name:currentDepth" "model_trace:3158"  : int__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "currentdepth" defined at movement.ads:39, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Movement__surfacethesubmarine__currentdepth___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining a ref holding the value of variable "torpedoestorage" defined at torpedoes.ads:24, created in Gnat2Why.Decls.Translate_Variable *)
+module Torpedoes__filltorpedoestorage__torpedoestorage
+ use import "_gnatprove_standard".Main
+ use        Array__Int__Torpedoes__torps
+
+ val torpedoestorage #"torpedoes.ads" 24 0 0#"model_projected" "model_trace:2725" "name:torpedoeStorage"  : Array__Int__Torpedoes__torps.map__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "torpedoestorage" defined at torpedoes.ads:24, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Torpedoes__filltorpedoestorage__torpedoestorage___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining a ref holding the value of variable "position" defined at torpedoes.adb:16, created in Gnat2Why.Decls.Translate_Variable *)
+module Torpedoes__filltorpedoestorage__position
+ use import "_gnatprove_standard".Main
+
+ val position #"torpedoes.adb" 16 0 0#"model_projected" "model_trace:2338" "name:Position"  : int__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "position" defined at torpedoes.adb:16, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Torpedoes__filltorpedoestorage__position___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining a ref holding the value of variable "count" defined at torpedoes.adb:34, created in Gnat2Why.Decls.Translate_Variable *)
+module Torpedoes__counttorps__count
+ use import "_gnatprove_standard".Main
+
+ val count #"torpedoes.adb" 34 0 0#"model_projected" "model_trace:2441" "name:count"  : int__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "count" defined at torpedoes.adb:34, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Torpedoes__counttorps__count___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining a ref holding the value of variable "first" defined at torpedoes.adb:35, created in Gnat2Why.Decls.Translate_Variable *)
+module Torpedoes__counttorps__first
+ use import "_gnatprove_standard".Main
+
+ val first #"torpedoes.adb" 35 0 0#"model_projected" "model_trace:2451" "name:first"  : int__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "first" defined at torpedoes.adb:35, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Torpedoes__counttorps__first___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining a ref holding the value of variable "last" defined at torpedoes.adb:36, created in Gnat2Why.Decls.Translate_Variable *)
+module Torpedoes__counttorps__last
+ use import "_gnatprove_standard".Main
+
+ val last #"torpedoes.adb" 36 0 0#"model_projected" "model_trace:2463" "name:last"  : int__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "last" defined at torpedoes.adb:36, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Torpedoes__counttorps__last___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining a ref holding the value of variable "i" defined at torpedoes.adb:38, created in Gnat2Why.Decls.Translate_Variable *)
+module Torpedoes__counttorps__L_2__i
+ use import "_gnatprove_standard".Main
+
+ val i #"torpedoes.adb" 38 0 0#"model_projected" "model_trace:2478" "name:I"  : int__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "i" defined at torpedoes.adb:38, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Torpedoes__counttorps__L_2__i___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining a ref holding the value of variable "position" defined at torpedoes.adb:57, created in Gnat2Why.Decls.Translate_Variable *)
+module Torpedoes__torplocation__position
+ use import "_gnatprove_standard".Main
+
+ val position #"torpedoes.adb" 57 0 0#"model_projected" "model_trace:2538" "name:position"  : int__ref 
+ 
+ function attr__ATTRIBUTE_ADDRESS 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "position" defined at torpedoes.adb:57, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Torpedoes__torplocation__position___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+(* Module giving axioms for type "short_short_integer", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__short_short_integer___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__short_short_integer
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_4 : int) (temp___is_init_0 : bool) (temp___skip_constant_1 : bool) (temp___do_toplevel_2 : bool) (temp___do_typ_inv_3 : bool)  =
+  (if (( temp___is_init_0 \/ (Standard__short_short_integer.first <= Standard__short_short_integer.last) )) then (
+   (Standard__short_short_integer.dynamic_property Standard__short_short_integer.first Standard__short_short_integer.last temp___expr_4)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_5 : int) (temp___skip_top_level_6 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "short_integer", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__short_integer___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__short_integer
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_11 : int) (temp___is_init_7 : bool) (temp___skip_constant_8 : bool) (temp___do_toplevel_9 : bool) (temp___do_typ_inv_10 : bool)  =
+  (if (( temp___is_init_7 \/ (Standard__short_integer.first <= Standard__short_integer.last) )) then (
+   (Standard__short_integer.dynamic_property Standard__short_integer.first Standard__short_integer.last temp___expr_11)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_12 : int) (temp___skip_top_level_13 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "integer", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__integer___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__integer
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_18 : int) (temp___is_init_14 : bool) (temp___skip_constant_15 : bool) (temp___do_toplevel_16 : bool) (temp___do_typ_inv_17 : bool)  =
+  (if (( temp___is_init_14 \/ (Standard__integer.first <= Standard__integer.last) )) then (
+   (Standard__integer.dynamic_property Standard__integer.first Standard__integer.last temp___expr_18)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_19 : int) (temp___skip_top_level_20 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "long_integer", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__long_integer___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__long_integer
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_25 : int) (temp___is_init_21 : bool) (temp___skip_constant_22 : bool) (temp___do_toplevel_23 : bool) (temp___do_typ_inv_24 : bool)  =
+  (if (( temp___is_init_21 \/ (Standard__long_integer.first <= Standard__long_integer.last) )) then (
+   (Standard__long_integer.dynamic_property Standard__long_integer.first Standard__long_integer.last temp___expr_25)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_26 : int) (temp___skip_top_level_27 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "long_long_integer", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__long_long_integer___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__long_long_integer
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_32 : int) (temp___is_init_28 : bool) (temp___skip_constant_29 : bool) (temp___do_toplevel_30 : bool) (temp___do_typ_inv_31 : bool)  =
+  (if (( temp___is_init_28 \/ (Standard__long_long_integer.first <= Standard__long_long_integer.last) )) then (
+   (Standard__long_long_integer.dynamic_property Standard__long_long_integer.first Standard__long_long_integer.last temp___expr_32)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_33 : int) (temp___skip_top_level_34 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "natural", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__natural___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__natural
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_39 : int) (temp___is_init_35 : bool) (temp___skip_constant_36 : bool) (temp___do_toplevel_37 : bool) (temp___do_typ_inv_38 : bool)  =
+  (if (( temp___is_init_35 \/ (Standard__natural.first <= Standard__natural.last) )) then (
+   (Standard__natural.dynamic_property Standard__natural.first Standard__natural.last temp___expr_39)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_40 : int) (temp___skip_top_level_41 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "positive", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__positive___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__positive
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_46 : int) (temp___is_init_42 : bool) (temp___skip_constant_43 : bool) (temp___do_toplevel_44 : bool) (temp___do_typ_inv_45 : bool)  =
+  (if (( temp___is_init_42 \/ (Standard__positive.first <= Standard__positive.last) )) then (
+   (Standard__positive.dynamic_property Standard__positive.first Standard__positive.last temp___expr_46)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_47 : int) (temp___skip_top_level_48 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "short_float", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__short_float___axiom
+ use import "_gnatprove_standard".Main
+ use        "_gnatprove_standard".Float32
+ use        Standard__short_float
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_53 : Float32.t) (temp___is_init_49 : bool) (temp___skip_constant_50 : bool) (temp___do_toplevel_51 : bool) (temp___do_typ_inv_52 : bool)  =
+  (if (( temp___is_init_49 \/ (Float32.le Standard__short_float.first Standard__short_float.last) )) then (
+   (Standard__short_float.dynamic_property Standard__short_float.first Standard__short_float.last temp___expr_53)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_54 : Float32.t) (temp___skip_top_level_55 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "float", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__float___axiom
+ use import "_gnatprove_standard".Main
+ use        "_gnatprove_standard".Float32
+ use        Standard__float
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_60 : Float32.t) (temp___is_init_56 : bool) (temp___skip_constant_57 : bool) (temp___do_toplevel_58 : bool) (temp___do_typ_inv_59 : bool)  =
+  (if (( temp___is_init_56 \/ (Float32.le Standard__float.first Standard__float.last) )) then (
+   (Standard__float.dynamic_property Standard__float.first Standard__float.last temp___expr_60)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_61 : Float32.t) (temp___skip_top_level_62 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "long_float", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__long_float___axiom
+ use import "_gnatprove_standard".Main
+ use        "_gnatprove_standard".Float64
+ use        Standard__long_float
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_67 : Float64.t) (temp___is_init_63 : bool) (temp___skip_constant_64 : bool) (temp___do_toplevel_65 : bool) (temp___do_typ_inv_66 : bool)  =
+  (if (( temp___is_init_63 \/ (Float64.le Standard__long_float.first Standard__long_float.last) )) then (
+   (Standard__long_float.dynamic_property Standard__long_float.first Standard__long_float.last temp___expr_67)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_68 : Float64.t) (temp___skip_top_level_69 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "character", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__character___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__character
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_74 : int) (temp___is_init_70 : bool) (temp___skip_constant_71 : bool) (temp___do_toplevel_72 : bool) (temp___do_typ_inv_73 : bool)  =
+  (if (( temp___is_init_70 \/ (Standard__character.first <= Standard__character.last) )) then (
+   (Standard__character.dynamic_property Standard__character.first Standard__character.last temp___expr_74)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_75 : int) (temp___skip_top_level_76 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "wide_character", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__wide_character___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__wide_character
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_81 : int) (temp___is_init_77 : bool) (temp___skip_constant_78 : bool) (temp___do_toplevel_79 : bool) (temp___do_typ_inv_80 : bool)  =
+  (if (( temp___is_init_77 \/ (Standard__wide_character.first <= Standard__wide_character.last) )) then (
+   (Standard__wide_character.dynamic_property Standard__wide_character.first Standard__wide_character.last temp___expr_81)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_82 : int) (temp___skip_top_level_83 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "wide_wide_character", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__wide_wide_character___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__wide_wide_character
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_88 : int) (temp___is_init_84 : bool) (temp___skip_constant_85 : bool) (temp___do_toplevel_86 : bool) (temp___do_typ_inv_87 : bool)  =
+  (if (( temp___is_init_84 \/ (Standard__wide_wide_character.first <= Standard__wide_wide_character.last) )) then (
+   (Standard__wide_wide_character.dynamic_property Standard__wide_wide_character.first Standard__wide_wide_character.last temp___expr_88)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_89 : int) (temp___skip_top_level_90 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "string", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__string___axiom
+ use import "_gnatprove_standard".Main
+ use        Standard__string
+ use        Standard__positive
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_96 : Standard__string.string) (temp___is_init_92 : bool) (temp___skip_constant_93 : bool) (temp___do_toplevel_94 : bool) (temp___do_typ_inv_95 : bool)  =
+  (if (temp___skip_constant_93) then (
+   true) else (
+   (Standard__string.dynamic_property Standard__positive.first Standard__positive.last (Standard__string.first temp___expr_96) (Standard__string.last temp___expr_96))))
+
+end
+
+(* Module giving axioms for type "wide_string", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__wide_string___axiom
+ use import "_gnatprove_standard".Main
+ use        Standard__positive
+ use        Standard__wide_string
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_103 : Standard__wide_string.wide_string) (temp___is_init_99 : bool) (temp___skip_constant_100 : bool) (temp___do_toplevel_101 : bool) (temp___do_typ_inv_102 : bool)  =
+  (if (temp___skip_constant_100) then (
+   true) else (
+   (Standard__wide_string.dynamic_property Standard__positive.first Standard__positive.last (Standard__wide_string.first temp___expr_103) (Standard__wide_string.last temp___expr_103))))
+
+end
+
+(* Module giving axioms for type "wide_wide_string", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__wide_wide_string___axiom
+ use import "_gnatprove_standard".Main
+ use        Standard__positive
+ use        Standard__wide_wide_string
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_110 : Standard__wide_wide_string.wide_wide_string) (temp___is_init_106 : bool) (temp___skip_constant_107 : bool) (temp___do_toplevel_108 : bool) (temp___do_typ_inv_109 : bool)  =
+  (if (temp___skip_constant_107) then (
+   true) else (
+   (Standard__wide_wide_string.dynamic_property Standard__positive.first Standard__positive.last (Standard__wide_wide_string.first temp___expr_110) (Standard__wide_wide_string.last temp___expr_110))))
+
+end
+
+(* Module giving axioms for type "duration", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__duration___axiom
+ use import "_gnatprove_standard".Main
+ use        Standard__duration
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_116 : Standard__duration.duration) (temp___is_init_112 : bool) (temp___skip_constant_113 : bool) (temp___do_toplevel_114 : bool) (temp___do_typ_inv_115 : bool)  =
+  true
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_117 : Standard__duration.duration) (temp___skip_top_level_118 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "integer_8", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__integer_8___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__integer_8
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_123 : int) (temp___is_init_119 : bool) (temp___skip_constant_120 : bool) (temp___do_toplevel_121 : bool) (temp___do_typ_inv_122 : bool)  =
+  (if (( temp___is_init_119 \/ (Standard__integer_8.first <= Standard__integer_8.last) )) then (
+   (Standard__integer_8.dynamic_property Standard__integer_8.first Standard__integer_8.last temp___expr_123)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_124 : int) (temp___skip_top_level_125 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "integer_16", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__integer_16___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__integer_16
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_130 : int) (temp___is_init_126 : bool) (temp___skip_constant_127 : bool) (temp___do_toplevel_128 : bool) (temp___do_typ_inv_129 : bool)  =
+  (if (( temp___is_init_126 \/ (Standard__integer_16.first <= Standard__integer_16.last) )) then (
+   (Standard__integer_16.dynamic_property Standard__integer_16.first Standard__integer_16.last temp___expr_130)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_131 : int) (temp___skip_top_level_132 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "integer_32", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__integer_32___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__integer_32
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_137 : int) (temp___is_init_133 : bool) (temp___skip_constant_134 : bool) (temp___do_toplevel_135 : bool) (temp___do_typ_inv_136 : bool)  =
+  (if (( temp___is_init_133 \/ (Standard__integer_32.first <= Standard__integer_32.last) )) then (
+   (Standard__integer_32.dynamic_property Standard__integer_32.first Standard__integer_32.last temp___expr_137)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_138 : int) (temp___skip_top_level_139 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "integer_64", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__integer_64___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__integer_64
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_144 : int) (temp___is_init_140 : bool) (temp___skip_constant_141 : bool) (temp___do_toplevel_142 : bool) (temp___do_typ_inv_143 : bool)  =
+  (if (( temp___is_init_140 \/ (Standard__integer_64.first <= Standard__integer_64.last) )) then (
+   (Standard__integer_64.dynamic_property Standard__integer_64.first Standard__integer_64.last temp___expr_144)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_145 : int) (temp___skip_top_level_146 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "universal_integer", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__universal_integer___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__universal_integer
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_151 : int) (temp___is_init_147 : bool) (temp___skip_constant_148 : bool) (temp___do_toplevel_149 : bool) (temp___do_typ_inv_150 : bool)  =
+  (if (( temp___is_init_147 \/ (Standard__universal_integer.first <= Standard__universal_integer.last) )) then (
+   (Standard__universal_integer.dynamic_property Standard__universal_integer.first Standard__universal_integer.last temp___expr_151)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_152 : int) (temp___skip_top_level_153 : bool)  =
+  true
+
+end
+
+(* Module for possibly declaring a logic function for "divethesubmarine" defined at movement.ads:18, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Movement__divethesubmarine
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for possibly declaring a logic function for "raisethesubmarine" defined at movement.ads:30, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Movement__raisethesubmarine
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for possibly declaring a logic function for "surfacethesubmarine" defined at movement.ads:39, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Movement__surfacethesubmarine
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for possibly declaring a logic function for "filltorpedoestorage" defined at torpedoes.ads:24, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Torpedoes__filltorpedoestorage
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining the loop exit exception for the loop "L_1" defined at torpedoes.adb:20, created in Gnat2Why.Decls.Translate_Loop_Entity *)
+module Torpedoes__filltorpedoestorage__L_1
+ use import "_gnatprove_standard".Main
+
+ exception L_1
+
+end
+
+(* Module giving an empty axiom for the entity "L_1" defined at torpedoes.adb:20, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Torpedoes__filltorpedoestorage__L_1___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining the loop exit exception for the loop "L_2" defined at torpedoes.adb:38, created in Gnat2Why.Decls.Translate_Loop_Entity *)
+module Torpedoes__counttorps__L_2
+ use import "_gnatprove_standard".Main
+
+ exception L_2
+
+end
+
+(* Module giving an empty axiom for the entity "L_2" defined at torpedoes.adb:38, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Torpedoes__counttorps__L_2___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining the loop exit exception for the loop "L_3" defined at torpedoes.adb:59, created in Gnat2Why.Decls.Translate_Loop_Entity *)
+module Torpedoes__torplocation__L_3
+ use import "_gnatprove_standard".Main
+
+ exception L_3
+
+end
+
+(* Module giving an empty axiom for the entity "L_3" defined at torpedoes.adb:59, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Torpedoes__torplocation__L_3___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module giving axioms for type "TdepthmonitorB" defined at movement.ads:4, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Movement__TdepthmonitorB___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module giving axioms for type "depthmonitor" defined at movement.ads:4, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Movement__depthmonitor___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Movement__depthmonitor
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_159 : int) (temp___is_init_155 : bool) (temp___skip_constant_156 : bool) (temp___do_toplevel_157 : bool) (temp___do_typ_inv_158 : bool)  =
+  (if (( temp___is_init_155 \/ (Movement__depthmonitor.first <= Movement__depthmonitor.last) )) then (
+   (Movement__depthmonitor.dynamic_property Movement__depthmonitor.first Movement__depthmonitor.last temp___expr_159)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_160 : int) (temp___skip_top_level_161 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "operationstatus" defined at movement.ads:5, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Movement__operationstatus___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Movement__operationstatus
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_166 : int) (temp___is_init_162 : bool) (temp___skip_constant_163 : bool) (temp___do_toplevel_164 : bool) (temp___do_typ_inv_165 : bool)  =
+  (if (( temp___is_init_162 \/ (Movement__operationstatus.first <= Movement__operationstatus.last) )) then (
+   (Movement__operationstatus.dynamic_property Movement__operationstatus.first Movement__operationstatus.last temp___expr_166)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_167 : int) (temp___skip_top_level_168 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "torps" defined at torpedoes.ads:10, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Torpedoes__torps___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Torpedoes__torps
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_173 : int) (temp___is_init_169 : bool) (temp___skip_constant_170 : bool) (temp___do_toplevel_171 : bool) (temp___do_typ_inv_172 : bool)  =
+  (if (( temp___is_init_169 \/ (Torpedoes__torps.first <= Torpedoes__torps.last) )) then (
+   (Torpedoes__torps.dynamic_property Torpedoes__torps.first Torpedoes__torps.last temp___expr_173)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_174 : int) (temp___skip_top_level_175 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "TstoragecapacityB" defined at torpedoes.ads:12, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Torpedoes__TstoragecapacityB___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module giving axioms for type "storagecapacity" defined at torpedoes.ads:12, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Torpedoes__storagecapacity___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Torpedoes__storagecapacity
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_180 : int) (temp___is_init_176 : bool) (temp___skip_constant_177 : bool) (temp___do_toplevel_178 : bool) (temp___do_typ_inv_179 : bool)  =
+  (if (( temp___is_init_176 \/ (Torpedoes__storagecapacity.first <= Torpedoes__storagecapacity.last) )) then (
+   (Torpedoes__storagecapacity.dynamic_property Torpedoes__storagecapacity.first Torpedoes__storagecapacity.last temp___expr_180)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_181 : int) (temp___skip_top_level_182 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "TstorageB" defined at torpedoes.ads:14, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Torpedoes__TstorageB___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module giving axioms for type "storage" defined at torpedoes.ads:14, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Torpedoes__storage___axiom
+ use import "_gnatprove_standard".Main
+ use        Array__Int__Torpedoes__torps
+ use        Array__Int__Torpedoes__torps
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_187 : Array__Int__Torpedoes__torps.map) (temp___is_init_183 : bool) (temp___skip_constant_184 : bool) (temp___do_toplevel_185 : bool) (temp___do_typ_inv_186 : bool)  =
+  true
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_189 : Array__Int__Torpedoes__torps.map) (temp___skip_top_level_190 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "launcher" defined at torpedoes.ads:16, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Torpedoes__launcher___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Torpedoes__launcher
+
+ predicate dynamic_invariant "inline" 
+   (temp___expr_197 : int) (temp___is_init_193 : bool) (temp___skip_constant_194 : bool) (temp___do_toplevel_195 : bool) (temp___do_typ_inv_196 : bool)  =
+  (if (( temp___is_init_193 \/ (Torpedoes__launcher.first <= Torpedoes__launcher.last) )) then (
+   (Torpedoes__launcher.dynamic_property Torpedoes__launcher.first Torpedoes__launcher.last temp___expr_197)) else true)
+ 
+ predicate default_initial_assumption "inline" 
+   (temp___expr_198 : int) (temp___skip_top_level_199 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "T17s" defined at torpedoes.ads:31, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Torpedoes__storageisfull__L16s__T17s___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module giving axioms for type "T7s" defined at torpedoes.ads:31, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Torpedoes__storageisfull__L6s__T7s___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module giving axioms for type "T20s" defined at torpedoes.ads:35, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Torpedoes__storagehasemptyslots__L19s__T20s___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module giving axioms for type "T9s" defined at torpedoes.ads:35, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Torpedoes__storagehasemptyslots__L8s__T9s___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module giving axioms for type "T23s" defined at torpedoes.ads:49, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Torpedoes__torpexists__L22s__T23s___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module giving axioms for type "T12s" defined at torpedoes.ads:49, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Torpedoes__torpexists__L11s__T12s___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module giving axioms for type "T4b" defined at torpedoes.adb:27, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Torpedoes__filltorpedoestorage__L_1__L3b__T4b___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module giving axioms for type "T2b" defined at torpedoes.adb:27, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Torpedoes__filltorpedoestorage__L_1__L1b__T2b___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module giving axioms for type "T7b" defined at torpedoes.adb:38, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Torpedoes__counttorps__L_2__T7b___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module giving axioms for type "T13b" defined at torpedoes.adb:64, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Torpedoes__torplocation__L_3__L12b__T13b___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module giving axioms for type "T11b" defined at torpedoes.adb:64, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Torpedoes__torplocation__L_3__L10b__T11b___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+(* Module for defining the value of constant "R5b" defined at torpedoes.adb:38, created in Gnat2Why.Decls.Translate_Constant_Value *)
+module Torpedoes__counttorps__L_2__R5b___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining the value of constant "R6b" defined at torpedoes.adb:38, created in Gnat2Why.Decls.Translate_Constant_Value *)
+module Torpedoes__counttorps__L_2__R6b___axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for declaring a program function (and possibly an axiom) for "divethesubmarine" defined at movement.ads:18, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Movement__divethesubmarine___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Movement__depthmonitor___axiom
+
+ val divethesubmarine 
+   (diveby : int) (currentdepth : int__ref) (currentoperationstatus : int) : unit
+  requires {  ( ((currentdepth.int__content + diveby) <= 2000) /\ ( (currentdepth.int__content >= 0) /\ ( (currentoperationstatus = 0) /\ (diveby > 0) ) ) ) }
+  ensures {  ( ( (currentdepth.int__content <= 2000) /\ (currentdepth.int__content > 0) ) /\ (Movement__depthmonitor___axiom.dynamic_invariant currentdepth.int__content True True True True) ) }
+  writes {currentdepth}
+
+end
+
+(* Module for declaring a program function (and possibly an axiom) for "raisethesubmarine" defined at movement.ads:30, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Movement__raisethesubmarine___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Movement__depthmonitor___axiom
+
+ val raisethesubmarine 
+   (riseby : int) (currentdepth : int__ref) : unit
+  requires {  ( ((currentdepth.int__content - riseby) >= 0) /\ ( (currentdepth.int__content > 0) /\ (riseby > 0) ) ) }
+  ensures {  ( (currentdepth.int__content >= 0) /\ (Movement__depthmonitor___axiom.dynamic_invariant currentdepth.int__content True True True True) ) }
+  writes {currentdepth}
+
+end
+
+(* Module for declaring a program function (and possibly an axiom) for "surfacethesubmarine" defined at movement.ads:39, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Movement__surfacethesubmarine___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Movement__depthmonitor___axiom
+
+ val surfacethesubmarine 
+   (currentdepth : int__ref) : unit
+  requires {  (currentdepth.int__content > 0) }
+  ensures {  ( (currentdepth.int__content = 0) /\ (Movement__depthmonitor___axiom.dynamic_invariant currentdepth.int__content True True True True) ) }
+  writes {currentdepth}
+
+end
+
+(* Module giving a program function and a defining axiom for the expression function "storagehasemptyslots" defined at torpedoes.ads:34, created in Gnat2Why.Subprograms.Translate_Expression_Function_Body *)
+module Torpedoes__storagehasemptyslots___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Torpedoes__storagehasemptyslots
+ use        Torpedoes__torps
+ use        Torpedoes__torps__rep
+ use        Array__Int__Torpedoes__torps
+ use        Torpedoes__storage___axiom
+ use        Array__Int__Torpedoes__torps
+ use        Array__Int__Torpedoes__torps
+ use        Array__Int__Torpedoes__torps
+
+ val storagehasemptyslots 
+   (torpedoestorage : Array__Int__Torpedoes__torps.map) : bool
+  requires {  true }
+  ensures {  ( ( (result = (Torpedoes__storagehasemptyslots.storagehasemptyslots torpedoestorage)) /\ (Torpedoes__storagehasemptyslots.storagehasemptyslots__function_guard result torpedoestorage) ) /\ ( (result = True) <-> (exists i  : int.
+   ( ( (0 <= i) /\ (i <= 5) ) /\ ((Torpedoes__torps__rep.to_rep (Array__Int__Torpedoes__torps.get torpedoestorage i)) <> 0) )) ) ) }
+ 
+ axiom storagehasemptyslots__post_axiom :
+  (forall torpedoestorage   : Array__Int__Torpedoes__torps.map [(Torpedoes__storagehasemptyslots.storagehasemptyslots torpedoestorage)].
+   ( (Torpedoes__storage___axiom.dynamic_invariant torpedoestorage True True True True) -> (let result = (Torpedoes__storagehasemptyslots.storagehasemptyslots torpedoestorage) in (
+    (if ((Torpedoes__storagehasemptyslots.storagehasemptyslots__function_guard result torpedoestorage)) then (
+     ( ( true /\ true ) /\ true )) else true)))
+    ))
+ 
+ axiom storagehasemptyslots__def_axiom :
+  (forall torpedoestorage   : Array__Int__Torpedoes__torps.map [(Torpedoes__storagehasemptyslots.storagehasemptyslots torpedoestorage)].
+   ( (let result = (Torpedoes__storagehasemptyslots.storagehasemptyslots torpedoestorage) in (
+    (Torpedoes__storagehasemptyslots.storagehasemptyslots__function_guard result torpedoestorage)))
+    -> ( ((Torpedoes__storagehasemptyslots.storagehasemptyslots torpedoestorage) = True) <-> (exists i  : int.
+    ( ( (0 <= i) /\ (i <= 5) ) /\ ((Torpedoes__torps__rep.to_rep (Array__Int__Torpedoes__torps.get torpedoestorage i)) <> 0) )) ) ))
+
+end
+
+(* Module giving a program function and a defining axiom for the expression function "storageisfull" defined at torpedoes.ads:30, created in Gnat2Why.Subprograms.Translate_Expression_Function_Body *)
+module Torpedoes__storageisfull___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Torpedoes__storageisfull
+ use        Torpedoes__torps
+ use        Torpedoes__torps__rep
+ use        Array__Int__Torpedoes__torps
+ use        Torpedoes__storage___axiom
+ use        Array__Int__Torpedoes__torps
+ use        Array__Int__Torpedoes__torps
+ use        Array__Int__Torpedoes__torps
+
+ val storageisfull 
+   (torpedoestorage : Array__Int__Torpedoes__torps.map) : bool
+  requires {  true }
+  ensures {  ( ( (result = (Torpedoes__storageisfull.storageisfull torpedoestorage)) /\ (Torpedoes__storageisfull.storageisfull__function_guard result torpedoestorage) ) /\ ( (result = True) <-> (forall i   "model" "name:I" "model_trace:2782"  : int.
+   ( ( (0 <= i) /\ (i <= 5) ) -> ((Torpedoes__torps__rep.to_rep (Array__Int__Torpedoes__torps.get torpedoestorage i)) = 0) )) ) ) }
+ 
+ axiom storageisfull__post_axiom :
+  (forall torpedoestorage   : Array__Int__Torpedoes__torps.map [(Torpedoes__storageisfull.storageisfull torpedoestorage)].
+   ( (Torpedoes__storage___axiom.dynamic_invariant torpedoestorage True True True True) -> (let result = (Torpedoes__storageisfull.storageisfull torpedoestorage) in (
+    (if ((Torpedoes__storageisfull.storageisfull__function_guard result torpedoestorage)) then (
+     ( ( true /\ true ) /\ true )) else true)))
+    ))
+ 
+ axiom storageisfull__def_axiom :
+  (forall torpedoestorage   : Array__Int__Torpedoes__torps.map [(Torpedoes__storageisfull.storageisfull torpedoestorage)].
+   ( (let result = (Torpedoes__storageisfull.storageisfull torpedoestorage) in (
+    (Torpedoes__storageisfull.storageisfull__function_guard result torpedoestorage)))
+    -> ( ((Torpedoes__storageisfull.storageisfull torpedoestorage) = True) <-> (forall i   "model" "name:I" "model_trace:2782"  : int.
+    ( ( (0 <= i) /\ (i <= 5) ) -> ((Torpedoes__torps__rep.to_rep (Array__Int__Torpedoes__torps.get torpedoestorage i)) = 0) )) ) ))
+
+end
+
+(* Module for declaring a program function (and possibly an axiom) for "filltorpedoestorage" defined at torpedoes.ads:24, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Torpedoes__filltorpedoestorage___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Torpedoes__storagehasemptyslots
+ use        Torpedoes__storageisfull
+ use        Torpedoes__storage___axiom
+ use        Array__Int__Torpedoes__torps
+
+ val filltorpedoestorage 
+   (torpedoestorage : Array__Int__Torpedoes__torps.map__ref) (currentdepth : int) : unit
+  requires {  ( (currentdepth = 0) /\ ((epsilon temp___result_204 : bool.
+   ( (temp___result_204 = (Torpedoes__storagehasemptyslots.storagehasemptyslots torpedoestorage.Array__Int__Torpedoes__torps.map__content)) /\ (Torpedoes__storagehasemptyslots.storagehasemptyslots__function_guard temp___result_204 torpedoestorage.Array__Int__Torpedoes__torps.map__content) )) = True) ) }
+  ensures {  ( ((epsilon temp___result_205 : bool.
+   ( (temp___result_205 = (Torpedoes__storageisfull.storageisfull torpedoestorage.Array__Int__Torpedoes__torps.map__content)) /\ (Torpedoes__storageisfull.storageisfull__function_guard temp___result_205 torpedoestorage.Array__Int__Torpedoes__torps.map__content) )) = True) /\ (Torpedoes__storage___axiom.dynamic_invariant torpedoestorage.Array__Int__Torpedoes__torps.map__content True True True True) ) }
+  writes {torpedoestorage}
+
+end
+
+(* Module for declaring a program function (and possibly an axiom) for "counttorps" defined at torpedoes.ads:39, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Torpedoes__counttorps___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Standard__integer___axiom
+ use        Torpedoes__counttorps
+ use        Torpedoes__torps___axiom
+ use        Torpedoes__storage___axiom
+ use        Array__Int__Torpedoes__torps
+ use        Array__Int__Torpedoes__torps
+
+ val counttorps 
+   (torpedoestorage : Array__Int__Torpedoes__torps.map) (torp : int) : int
+  requires {  true }
+  ensures {  ( ( (result = (Torpedoes__counttorps.counttorps torpedoestorage torp)) /\ (Torpedoes__counttorps.counttorps__function_guard result torpedoestorage torp) ) /\ ( (Standard__integer___axiom.dynamic_invariant result True False True True) /\ ( (result >= 0) /\ (result <= 6) ) ) ) }
+ 
+ axiom counttorps__post_axiom :
+  (forall torpedoestorage   : Array__Int__Torpedoes__torps.map.
+  (forall torp   : int [(Torpedoes__counttorps.counttorps torpedoestorage torp)].
+   ( ( (Torpedoes__storage___axiom.dynamic_invariant torpedoestorage True True True True) /\ (Torpedoes__torps___axiom.dynamic_invariant torp True True True True) ) -> (let result = (Torpedoes__counttorps.counttorps torpedoestorage torp) in (
+    (if ((Torpedoes__counttorps.counttorps__function_guard result torpedoestorage torp)) then (
+     ( ( ( (result >= 0) /\ (result <= 6) ) /\ (Standard__integer___axiom.dynamic_invariant result True False True True) ) /\ true )) else true)))
+    )))
+
+end
+
+(* Module giving a program function and a defining axiom for the expression function "torpexists" defined at torpedoes.ads:48, created in Gnat2Why.Subprograms.Translate_Expression_Function_Body *)
+module Torpedoes__torpexists___axiom
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Torpedoes__torpexists
+ use        Torpedoes__torps
+ use        Torpedoes__torps___axiom
+ use        Torpedoes__torps__rep
+ use        Array__Int__Torpedoes__torps
+ use        Torpedoes__storage___axiom
+ use        Array__Int__Torpedoes__torps
+ use        Array__Int__Torpedoes__torps
+ use        Array__Int__Torpedoes__torps
+
+ val torpexists 
+   (torpedoestorage : Array__Int__Torpedoes__torps.map) (torp : int) : bool
+  requires {  true }
+  ensures {  ( ( (result = (Torpedoes__torpexists.torpexists torpedoestorage torp)) /\ (Torpedoes__torpexists.torpexists__function_guard result torpedoestorage torp) ) /\ ( (result = True) <-> (exists i  : int.
+   ( ( (0 <= i) /\ (i <= 5) ) /\ ((Torpedoes__torps__rep.to_rep (Array__Int__Torpedoes__torps.get torpedoestorage i)) = torp) )) ) ) }
+ 
+ axiom torpexists__post_axiom :
+  (forall torpedoestorage   : Array__Int__Torpedoes__torps.map.
+  (forall torp   : int [(Torpedoes__torpexists.torpexists torpedoestorage torp)].
+   ( ( (Torpedoes__storage___axiom.dynamic_invariant torpedoestorage True True True True) /\ (Torpedoes__torps___axiom.dynamic_invariant torp True True True True) ) -> (let result = (Torpedoes__torpexists.torpexists torpedoestorage torp) in (
+    (if ((Torpedoes__torpexists.torpexists__function_guard result torpedoestorage torp)) then (
+     ( ( true /\ true ) /\ true )) else true)))
+    )))
+ 
+ axiom torpexists__def_axiom :
+  (forall torpedoestorage   : Array__Int__Torpedoes__torps.map.
+  (forall torp   : int [(Torpedoes__torpexists.torpexists torpedoestorage torp)].
+   ( (let result = (Torpedoes__torpexists.torpexists torpedoestorage torp) in (
+    (Torpedoes__torpexists.torpexists__function_guard result torpedoestorage torp)))
+    -> ( ((Torpedoes__torpexists.torpexists torpedoestorage torp) = True) <-> (exists i  : int.
+    ( ( (0 <= i) /\ (i <= 5) ) /\ ((Torpedoes__torps__rep.to_rep (Array__Int__Torpedoes__torps.get torpedoestorage i)) = torp) )) ) )))
+
+end
+
+(* Module for declaring a program function (and possibly an axiom) for "torplocation" defined at torpedoes.ads:51, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Torpedoes__torplocation___axiom
+ use import "_gnatprove_standard".Main
+ use        Torpedoes__torpexists
+ use        Torpedoes__torplocation
+ use        Torpedoes__torps
+ use        Torpedoes__torps__rep
+ use        Torpedoes__storagecapacity___axiom
+ use        Array__Int__Torpedoes__torps
+ use        Array__Int__Torpedoes__torps
+
+ val torplocation 
+   (torpedoestorage : Array__Int__Torpedoes__torps.map) (torp : int) : int
+  requires {  ((epsilon temp___result_212 : bool.
+   ( (temp___result_212 = (Torpedoes__torpexists.torpexists torpedoestorage torp)) /\ (Torpedoes__torpexists.torpexists__function_guard temp___result_212 torpedoestorage torp) )) = True) }
+  ensures {  ( ( (result = (Torpedoes__torplocation.torplocation torpedoestorage torp)) /\ (Torpedoes__torplocation.torplocation__function_guard result torpedoestorage torp) ) /\ ( (Torpedoes__storagecapacity___axiom.dynamic_invariant result True False True True) /\ ((Torpedoes__torps__rep.to_rep (Array__Int__Torpedoes__torps.get torpedoestorage result)) = torp) ) ) }
+
+end
+
+(* Module for checking absence of run-time errors and package initial condition on package elaboration of "torpedoes" defined at torpedoes.ads:4, created in Gnat2Why.Subprograms.Generate_VCs_For_Package_Elaboration *)
+module Torpedoes__package_def
+ use import "_gnatprove_standard".Main
+
+ let def #"torpedoes.ads" 4 0 0#"GP_Subp:torpedoes.ads:4" "W:diverges:N" 
+   (__void_param : unit)
+  requires { #"torpedoes.ads" 4 0 0# true }
+  ensures { #"torpedoes.ads" 4 0 0# true }
+   =
+  ( (#"torpedoes.ads" 4 0 0# ());
+  (#"torpedoes.ads" 10 0 0# ());
+  (#"torpedoes.ads" 12 0 0# ());
+  (#"torpedoes.ads" 14 0 0# ());
+  (#"torpedoes.ads" 16 0 0# ());
+  (#"torpedoes.ads" 24 0 0# ());
+  (#"torpedoes.ads" 27 0 0# ());
+  (#"torpedoes.ads" 26 0 0# ());
+  (#"torpedoes.ads" 26 0 0# ());
+  (#"torpedoes.ads" 31 0 0# ());
+  (#"torpedoes.ads" 31 0 0# ());
+  (#"torpedoes.ads" 31 0 0# ());
+  (#"torpedoes.ads" 30 0 0# ());
+  (#"torpedoes.ads" 34 0 0# ());
+  (#"torpedoes.ads" 39 0 0# ());
+  (#"torpedoes.ads" 41 0 0# ());
+  (#"torpedoes.ads" 48 0 0# ());
+  (#"torpedoes.ads" 51 0 0# ());
+  (#"torpedoes.ads" 53 0 0# ());
+  (#"torpedoes.ads" 52 0 0# ());
+  (#"torpedoes.ads" 52 0 0# ());
+  (#"torpedoes.ads" 52 0 0# ());
+  (#"torpedoes.ads" 52 0 0# ());
+  (#"torpedoes.ads" 52 0 0# ());
+  (#"torpedoes.ads" 52 0 0# ());
+  (#"torpedoes.ads" 52 0 0# ());
+  (#"torpedoes.ads" 52 0 0# ());
+  (#"torpedoes.ads" 52 0 0# ());
+  (#"torpedoes.ads" 52 0 0# ());
+  (#"torpedoes.ads" 30 0 0# ());
+  (#"torpedoes.ads" 34 0 0# ());
+  (#"torpedoes.ads" 48 0 0# ());
+  (#"torpedoes.adb" 4 0 0# ());
+  (#"torpedoes.adb" 14 0 0# ());
+  (#"torpedoes.adb" 33 0 0# ());
+  (#"torpedoes.adb" 55 0 0# ());
+  ( "GP_Sloc:torpedoes.adb:108:1" (#"torpedoes.adb" 108 0 0# ()) ) )
+end
+
+(* Module for checking contracts and absence of run-time errors in subprogram "storagehasemptyslots" defined at torpedoes.ads:34, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+module Torpedoes__storagehasemptyslots__subprogram_def
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        "_gnatprove_standard".Boolean
+ use        Torpedoes__torps
+ use        Torpedoes__torps__rep
+ use        Array__Int__Torpedoes__torps
+ use        Torpedoes__storage___axiom
+ use        Torpedoes__storagehasemptyslots__torpedoestorage
+ use        Torpedoes__torps___axiom
+ use        Torpedoes__storage___axiom
+ use        Torpedoes__storagehasemptyslots__torpedoestorage___axiom
+
+ val torpedoes__storagehasemptyslots__result "model_projected" "model_trace:2797@result" "name:StorageHasEmptySlots"  : bool__ref 
+ 
+ let def #"torpedoes.ads" 34 0 0#"W:diverges:N" "GP_Subp:torpedoes.ads:34" 
+   (__void_param : unit)
+  requires { #"torpedoes.ads" 34 0 0# true }
+  ensures { #"torpedoes.ads" 34 0 0# true }
+   =
+  ( () (* Assume dynamic invariants of inputs of the subprogram torpedoes.ads:34 *)
+  ;
+  #"torpedoes.ads" 34 0 0# assume { #"torpedoes.ads" 34 0 0# (Torpedoes__storage___axiom.dynamic_invariant Torpedoes__storagehasemptyslots__torpedoestorage.torpedoestorage True False True True) };
+  #"torpedoes.ads" 34 0 0# assume { #"torpedoes.ads" 34 0 0# true };
+  () (* Declarations introduced by the compiler at the beginning of the subprogram torpedoes.ads:34 *)
+  ;
+  () (* Check for RTE in the Pre of the subprogram torpedoes.ads:34 *)
+  ;
+  #"torpedoes.ads" 34 0 0# abstract ensures {true}(let _ = True in (
+   ()))
+   end ;
+  () (* Assume Pre of the subprogram torpedoes.ads:34 *)
+  ;
+  #"torpedoes.ads" 34 0 0# assume { #"torpedoes.ads" 34 0 0# true };
+  #"torpedoes.ads" 34 0 0# try
+   ( ( "GP_Sloc:torpedoes.ads:35:7" (#"torpedoes.ads" 35 0 0# ( #"torpedoes.ads" 35 0 0# torpedoes__storagehasemptyslots__result.bool__content <- ( ( (let i = #"torpedoes.ads" 35 0 0# (any int
+   ) in (
+    (if ((Boolean.andb((0 <= i)) ((i <= 5)))) then (
+     #"torpedoes.ads" 35 0 0# abstract ensures {true}(let _ = ((Torpedoes__torps__rep.to_rep((Array__Int__Torpedoes__torps.get(Torpedoes__storagehasemptyslots__torpedoestorage.torpedoestorage) (i)))) <> 0) in (
+      ()))
+      end ))))
+   ;
+   #"torpedoes.ads" 35 0 0# (any bool
+   requires {#"torpedoes.ads" 35 0 0# true} 
+   ensures {#"torpedoes.ads" 35 0 0# ( (result = True) <-> (exists i  : int.
+    ( ( (0 <= i) /\ (i <= 5) ) /\ ((Torpedoes__torps__rep.to_rep (Array__Int__Torpedoes__torps.get Torpedoes__storagehasemptyslots__torpedoestorage.torpedoestorage i)) <> 0) )) )} 
+   ) ) );
+   #"torpedoes.ads" 35 0 0# raise Return__exc )) );
+    raise Return__exc )
+  with
+   Return__exc -> ()
+  end;
+   abstract ensures {true}(let _ = True in (
+   ()))
+   end ;
+  torpedoes__storagehasemptyslots__result.bool__content )
+end
+
+(* Module for checking contracts and absence of run-time errors in subprogram "storageisfull" defined at torpedoes.ads:30, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+module Torpedoes__storageisfull__subprogram_def
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        "_gnatprove_standard".Boolean
+ use        Torpedoes__torps
+ use        Torpedoes__torps__rep
+ use        Array__Int__Torpedoes__torps
+ use        Torpedoes__storage___axiom
+ use        Torpedoes__storageisfull__torpedoestorage
+ use        Torpedoes__torps___axiom
+ use        Torpedoes__storage___axiom
+ use        Torpedoes__storageisfull__torpedoestorage___axiom
+
+ val torpedoes__storageisfull__result "model_projected" "model_trace:2762@result" "name:StorageIsFull"  : bool__ref 
+ 
+ let def #"torpedoes.ads" 30 0 0#"W:diverges:N" "GP_Subp:torpedoes.ads:30" 
+   (__void_param : unit)
+  requires { #"torpedoes.ads" 30 0 0# true }
+  ensures { #"torpedoes.ads" 30 0 0# true }
+   =
+  ( () (* Assume dynamic invariants of inputs of the subprogram torpedoes.ads:30 *)
+  ;
+  #"torpedoes.ads" 30 0 0# assume { #"torpedoes.ads" 30 0 0# (Torpedoes__storage___axiom.dynamic_invariant Torpedoes__storageisfull__torpedoestorage.torpedoestorage True False True True) };
+  #"torpedoes.ads" 30 0 0# assume { #"torpedoes.ads" 30 0 0# true };
+  () (* Declarations introduced by the compiler at the beginning of the subprogram torpedoes.ads:30 *)
+  ;
+  () (* Check for RTE in the Pre of the subprogram torpedoes.ads:30 *)
+  ;
+  #"torpedoes.ads" 30 0 0# abstract ensures {true}(let _ = True in (
+   ()))
+   end ;
+  () (* Assume Pre of the subprogram torpedoes.ads:30 *)
+  ;
+  #"torpedoes.ads" 30 0 0# assume { #"torpedoes.ads" 30 0 0# true };
+  #"torpedoes.ads" 30 0 0# try
+   ( ( "GP_Sloc:torpedoes.ads:31:7" (#"torpedoes.ads" 31 0 0# ( #"torpedoes.ads" 31 0 0# torpedoes__storageisfull__result.bool__content <- ( ( (let i = #"torpedoes.ads" 31 0 0# (any int
+   ) in (
+    (if ((Boolean.andb((0 <= i)) ((i <= 5)))) then (
+     #"torpedoes.ads" 31 0 0# abstract ensures {true}(let _ = ((Torpedoes__torps__rep.to_rep((Array__Int__Torpedoes__torps.get(Torpedoes__storageisfull__torpedoestorage.torpedoestorage) (i)))) = 0) in (
+      ()))
+      end ))))
+   ;
+   #"torpedoes.ads" 31 0 0# (any bool
+   requires {#"torpedoes.ads" 31 0 0# true} 
+   ensures {#"torpedoes.ads" 31 0 0# ( (result = True) <-> (forall i #"torpedoes.ads" 31 0 0#  "model" "name:I" "model_trace:2782"  : int.
+    ( ( (0 <= i) /\ (i <= 5) ) -> ((Torpedoes__torps__rep.to_rep (Array__Int__Torpedoes__torps.get Torpedoes__storageisfull__torpedoestorage.torpedoestorage i)) = 0) )) )} 
+   ) ) );
+   #"torpedoes.ads" 31 0 0# raise Return__exc )) );
+    raise Return__exc )
+  with
+   Return__exc -> ()
+  end;
+   abstract ensures {true}(let _ = True in (
+   ()))
+   end ;
+  torpedoes__storageisfull__result.bool__content )
+end
+
+(* Module for checking contracts and absence of run-time errors in subprogram "filltorpedoestorage" defined at torpedoes.ads:24, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+module Torpedoes__filltorpedoestorage__subprogram_def
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        "_gnatprove_standard".Boolean
+ use        Torpedoes__storagehasemptyslots
+ use        Torpedoes__storagehasemptyslots___axiom
+ use        Torpedoes__storageisfull
+ use        Torpedoes__storageisfull___axiom
+ use        Movement__depthmonitor___axiom
+ use        Torpedoes__torps
+ use        Torpedoes__torps__rep
+ use        Torpedoes__storagecapacity
+ use        Torpedoes__storagecapacity___axiom
+ use        Array__Int__Torpedoes__torps
+ use        Torpedoes__storage___axiom
+ use        Array__Int__Torpedoes__torps
+ use        Torpedoes__filltorpedoestorage__torpedoestorage
+ use        Torpedoes__filltorpedoestorage__currentdepth
+ use        Torpedoes__filltorpedoestorage__position
+ use        Torpedoes__filltorpedoestorage__L_1
+ use        Torpedoes__filltorpedoestorage__position___axiom
+ use        Torpedoes__filltorpedoestorage__L_1___axiom
+ use        Torpedoes__torps___axiom
+ use        Torpedoes__storagecapacity___axiom
+ use        Torpedoes__storage___axiom
+ use        Torpedoes__filltorpedoestorage__torpedoestorage___axiom
+ use        Torpedoes__filltorpedoestorage__currentdepth___axiom
+ use        Torpedoes__storageisfull___axiom
+ use        Torpedoes__storagehasemptyslots___axiom
+ use        Movement__depthmonitor___axiom
+
+ let def #"torpedoes.ads" 24 0 0#"W:diverges:N" "GP_Subp:torpedoes.ads:24" 
+   (__void_param : unit)
+  requires { #"torpedoes.ads" 24 0 0# true }
+  ensures { #"torpedoes.ads" 24 0 0# (#"torpedoes.ads" 27 0 0# ( "model_vc_post" "keep_on_simp" "GP_Sloc:torpedoes.ads:27:14" "GP_Reason:VC_POSTCONDITION" "GP_Id:3" "comment:     Post => StorageIsFull(torpedoeStorage);
+             ^ torpedoes.ads:27:14:VC_POSTCONDITION" "GP_Shape:pragargs__call_storageisfull" ( "GP_Pretty_Ada:3608" "GP_Sloc:torpedoes.ads:27:14" ((epsilon temp___result_222 : bool.
+   ( (temp___result_222 = (Torpedoes__storageisfull.storageisfull Torpedoes__filltorpedoestorage__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__torps.map__content)) /\ (Torpedoes__storageisfull.storageisfull__function_guard temp___result_222 Torpedoes__filltorpedoestorage__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__torps.map__content) )) = True) ) )) }
+   =
+  ( () (* Assume dynamic invariants of inputs of the subprogram torpedoes.ads:24 *)
+  ;
+   assume {  (Torpedoes__storage___axiom.dynamic_invariant Torpedoes__filltorpedoestorage__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__torps.map__content True False True True) };
+   assume {  (Movement__depthmonitor___axiom.dynamic_invariant Torpedoes__filltorpedoestorage__currentdepth.currentdepth True False True True) };
+   assume {  true };
+  () (* Declarations introduced by the compiler at the beginning of the subprogram torpedoes.ads:24 *)
+  ;
+  () (* Check for RTE in the Pre of the subprogram torpedoes.ads:24 *)
+  ;
+   abstract ensures {true}(let _ = ( (Torpedoes__filltorpedoestorage__currentdepth.currentdepth = 0) && (Torpedoes__storagehasemptyslots___axiom.storagehasemptyslots(Torpedoes__filltorpedoestorage__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__torps.map__content)) ) in (
+   ()))
+   end ;
+  () (* Assume Pre of the subprogram torpedoes.ads:24 *)
+  ;
+   assume {  ( (Torpedoes__filltorpedoestorage__currentdepth.currentdepth = 0) /\ ((epsilon temp___result_221 : bool.
+   ( (temp___result_221 = (Torpedoes__storagehasemptyslots.storagehasemptyslots Torpedoes__filltorpedoestorage__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__torps.map__content)) /\ (Torpedoes__storagehasemptyslots.storagehasemptyslots__function_guard temp___result_221 Torpedoes__filltorpedoestorage__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__torps.map__content) )) = True) ) };
+   try
+   ( (#"torpedoes.adb" 16 0 0# ( #"torpedoes.adb" 16 0 0# Torpedoes__filltorpedoestorage__position.position.int__content <- ( 0 );
+   #"torpedoes.adb" 16 0 0# assume { #"torpedoes.adb" 16 0 0# (Torpedoes__storagecapacity___axiom.dynamic_invariant Torpedoes__filltorpedoestorage__position.position.int__content True False True True) } ));
+   (#"torpedoes.adb" 20 0 0# ());
+   ( "GP_Sloc:torpedoes.adb:19:7" (#"torpedoes.adb" 19 0 0# (if ((Torpedoes__filltorpedoestorage__currentdepth.currentdepth = 0)) then (
+    ( "GP_Sloc:torpedoes.adb:20:49" (#"torpedoes.adb" 20 0 0# ( () (* Translation of an Ada loop from torpedoes.adb:20 *)
+    ;
+    (if ((Torpedoes__filltorpedoestorage__position.position.int__content <= 5)) then (
+     #"torpedoes.adb" 20 0 0# try
+      ( #"torpedoes.adb" 20 0 0# abstract ensures {true}(let _ = Torpedoes__filltorpedoestorage__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__torps.map__content in (
+       ()))
+       end ;
+      (let temp___217 = #"torpedoes.adb" 20 0 0# (any Array__Int__Torpedoes__torps.map
+      ensures {#"torpedoes.adb" 20 0 0# (result = Torpedoes__filltorpedoestorage__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__torps.map__content)} 
+      ) in (
+       ( #"torpedoes.adb" 20 0 0# abstract ensures {true}(let _ = Torpedoes__filltorpedoestorage__position.position.int__content in (
+        ()))
+        end ;
+       (let temp___216 = #"torpedoes.adb" 20 0 0# (any int
+       ensures {#"torpedoes.adb" 20 0 0# (result = Torpedoes__filltorpedoestorage__position.position.int__content)} 
+       ) in (
+        ( () (* First unroling of the loop statements appearing before the loop invariant of loop torpedoes.adb:20 *)
+        ;
+        ( "GP_Sloc:torpedoes.adb:21:33" (#"torpedoes.adb" 21 0 0# ()) );
+        ( "GP_Sloc:torpedoes.adb:21:13" (#"torpedoes.adb" 21 0 0# (if (((Torpedoes__torps__rep.to_rep((Array__Int__Torpedoes__torps.get(Torpedoes__filltorpedoestorage__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__torps.map__content) (Torpedoes__filltorpedoestorage__position.position.int__content)))) <> 0)) then (
+         ( ( "GP_Sloc:torpedoes.adb:22:32" (#"torpedoes.adb" 22 0 0# ()) );
+         ( "GP_Sloc:torpedoes.adb:22:42" (#"torpedoes.adb" 22 0 0# #"torpedoes.adb" 22 0 0# Torpedoes__filltorpedoestorage__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__torps.map__content <- ( (Array__Int__Torpedoes__torps.set(Torpedoes__filltorpedoestorage__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__torps.map__content) (Torpedoes__filltorpedoestorage__position.position.int__content) ((Torpedoes__torps__rep.of_rep(0)))) )) ) )) else (
+         ()))) );
+        ( "GP_Sloc:torpedoes.adb:24:16" (#"torpedoes.adb" 24 0 0# ()) );
+        ( "GP_Sloc:torpedoes.adb:24:13" (#"torpedoes.adb" 24 0 0# (if ((Torpedoes__filltorpedoestorage__position.position.int__content = 5)) then (
+         ( "GP_Sloc:torpedoes.adb:24:53" (#"torpedoes.adb" 24 0 0# #"torpedoes.adb" 24 0 0# raise Torpedoes__filltorpedoestorage__L_1.L_1) )) else (
+         ( ( "GP_Sloc:torpedoes.adb:25:18" (#"torpedoes.adb" 25 0 0# ()) );
+         ( "GP_Sloc:torpedoes.adb:25:30" (#"torpedoes.adb" 25 0 0# ()) );
+         ( "GP_Sloc:torpedoes.adb:25:27" (#"torpedoes.adb" 25 0 0# #"torpedoes.adb" 25 0 0# Torpedoes__filltorpedoestorage__position.position.int__content <- ( (#"torpedoes.adb" 25 0 0# ( "model_vc" "keep_on_simp" "GP_Sloc:torpedoes.adb:25:39" "GP_Reason:VC_RANGE_CHECK" "GP_Id:0" "comment:            else Position := Position + 1;
+                                      ^ torpedoes.adb:25:39:VC_RANGE_CHECK" "GP_Shape:if__L_1_while__if__position_assign__add" (Torpedoes__storagecapacity.range_check_((Torpedoes__filltorpedoestorage__position.position.int__content + 1))) )) )) ) )))) );
+        () (* While loop translating the Ada loop from torpedoes.adb:20 *)
+        ;
+         while True do
+         invariant { 
+          (#"torpedoes.adb" 27 0 0# ( "model_vc" "keep_on_simp" "GP_Sloc:torpedoes.adb:27:36" "GP_Reason:VC_LOOP_INVARIANT" "GP_Id:2" "comment:            pragma Loop_Invariant (for all J in torpedoeStorage'First..(Position - 1) => torpedoeStorage(J) = Torp);
+                                   ^ torpedoes.adb:27:36:VC_LOOP_INVARIANT" "GP_Shape:if__L_1_while__pragargs__forall" (forall j #"torpedoes.adb" 27 0 0#  "model" "model_trace:2390" "name:J"  : int.
+           ( ( (0 <= j) /\ (j <= (Torpedoes__filltorpedoestorage__position.position.int__content - 1)) ) -> ( "GP_Pretty_Ada:2409" "GP_Sloc:torpedoes.adb:27:90" ((Torpedoes__torps__rep.to_rep (Array__Int__Torpedoes__torps.get Torpedoes__filltorpedoestorage__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__torps.map__content j)) = 0) ) )) ))
+          }
+         ( () (* Assume implicit invariants from the loop torpedoes.adb:20 *)
+         ;
+          assume {  ( ( ( ( true /\ (Torpedoes__storagecapacity___axiom.dynamic_invariant Torpedoes__filltorpedoestorage__position.position.int__content False True True True) ) /\ true ) /\ (Torpedoes__storage___axiom.dynamic_invariant Torpedoes__filltorpedoestorage__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__torps.map__content True True True True) ) /\ true ) };
+         () (* Check for absence of RTE in the invariant of loop torpedoes.adb:20 *)
+         ;
+          abstract ensures {true}(let _ = ( (let j =  (any int
+         ) in (
+          (if ((Boolean.andb((0 <= j)) ((j <= (Torpedoes__filltorpedoestorage__position.position.int__content - 1))))) then (
+            abstract ensures {true}(let _ = ((Torpedoes__torps__rep.to_rep((Array__Int__Torpedoes__torps.get(Torpedoes__filltorpedoestorage__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__torps.map__content) ((  assert {  (#"torpedoes.adb" 27 0 0# ( "model_vc" "keep_on_simp" "GP_Sloc:torpedoes.adb:27:106" "GP_Reason:VC_INDEX_CHECK" "GP_Id:1" "comment:            pragma Loop_Invariant (for all J in torpedoeStorage'First..(Position - 1) => torpedoeStorage(J) = Torp);
+                                                                                                         ^ torpedoes.adb:27:106:VC_INDEX_CHECK" "GP_Shape:if__L_1_while__pragargs__forall__cmp__ixdcomp" ( (Torpedoes__storagecapacity.first <= j) /\ (j <= Torpedoes__storagecapacity.last) ) )) };
+           j ))))) = 0) in (
+            ()))
+            end ))))
+         ;
+          (any bool
+         requires { true} 
+         ensures { ( (result = True) <-> (forall j   "model" "model_trace:2390" "name:J"  : int.
+          ( ( (0 <= j) /\ (j <= (Torpedoes__filltorpedoestorage__position.position.int__content - 1)) ) -> ((Torpedoes__torps__rep.to_rep (Array__Int__Torpedoes__torps.get Torpedoes__filltorpedoestorage__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__torps.map__content j)) = 0) )) )} 
+         ) ) in (
+          ()))
+          end ;
+         () (* Loop statements appearing after the loop invariant of loop torpedoes.adb:20 *)
+         ;
+         () (* Check for the exit condition and loop statements appearing before the loop invariant of loop torpedoes.adb:20 *)
+         ;
+         (if (not ( (Torpedoes__filltorpedoestorage__position.position.int__content <= 5) )) then (
+           raise Torpedoes__filltorpedoestorage__L_1.L_1));
+         ( "GP_Sloc:torpedoes.adb:21:33" (#"torpedoes.adb" 21 0 0# ()) );
+         ( "GP_Sloc:torpedoes.adb:21:13" (#"torpedoes.adb" 21 0 0# (if (((Torpedoes__torps__rep.to_rep((Array__Int__Torpedoes__torps.get(Torpedoes__filltorpedoestorage__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__torps.map__content) (Torpedoes__filltorpedoestorage__position.position.int__content)))) <> 0)) then (
+          ( ( "GP_Sloc:torpedoes.adb:22:32" (#"torpedoes.adb" 22 0 0# ()) );
+          ( "GP_Sloc:torpedoes.adb:22:42" (#"torpedoes.adb" 22 0 0# #"torpedoes.adb" 22 0 0# Torpedoes__filltorpedoestorage__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__torps.map__content <- ( (Array__Int__Torpedoes__torps.set(Torpedoes__filltorpedoestorage__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__torps.map__content) (Torpedoes__filltorpedoestorage__position.position.int__content) ((Torpedoes__torps__rep.of_rep(0)))) )) ) )) else (
+          ()))) );
+         ( "GP_Sloc:torpedoes.adb:24:16" (#"torpedoes.adb" 24 0 0# ()) );
+         ( "GP_Sloc:torpedoes.adb:24:13" (#"torpedoes.adb" 24 0 0# (if ((Torpedoes__filltorpedoestorage__position.position.int__content = 5)) then (
+          ( "GP_Sloc:torpedoes.adb:24:53" (#"torpedoes.adb" 24 0 0# #"torpedoes.adb" 24 0 0# raise Torpedoes__filltorpedoestorage__L_1.L_1) )) else (
+          ( ( "GP_Sloc:torpedoes.adb:25:18" (#"torpedoes.adb" 25 0 0# ()) );
+          ( "GP_Sloc:torpedoes.adb:25:30" (#"torpedoes.adb" 25 0 0# ()) );
+          ( "GP_Sloc:torpedoes.adb:25:27" (#"torpedoes.adb" 25 0 0# #"torpedoes.adb" 25 0 0# Torpedoes__filltorpedoestorage__position.position.int__content <- ( (#"torpedoes.adb" 25 0 0# ( "model_vc" "keep_on_simp" "GP_Sloc:torpedoes.adb:25:39" "GP_Reason:VC_RANGE_CHECK" "GP_Id:0" "comment:            else Position := Position + 1;
+                                      ^ torpedoes.adb:25:39:VC_RANGE_CHECK" "GP_Shape:if__L_1_while__if__position_assign__add" (Torpedoes__storagecapacity.range_check_((Torpedoes__filltorpedoestorage__position.position.int__content + 1))) )) )) ) )))) ) )
+        done )))
+        )))
+       )
+     with
+      Torpedoes__filltorpedoestorage__L_1.L_1 -> ()
+     end)) )) )) else (
+    ()))) );
+    raise Return__exc )
+  with
+   Return__exc -> ()
+  end;
+   abstract ensures {true}(let _ = (Torpedoes__storageisfull___axiom.storageisfull(Torpedoes__filltorpedoestorage__torpedoestorage.torpedoestorage.Array__Int__Torpedoes__torps.map__content)) in (
+   ()))
+   end  )
+end
+
+(* Module for checking contracts and absence of run-time errors in subprogram "counttorps" defined at torpedoes.ads:39, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+module Torpedoes__counttorps__subprogram_def
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        "_gnatprove_standard".Boolean
+ use        Standard__integer
+ use        Standard__integer___axiom
+ use        Torpedoes__torps
+ use        Torpedoes__torps___axiom
+ use        Torpedoes__torps__rep
+ use        Torpedoes__storagecapacity___axiom
+ use        Array__Int__Torpedoes__torps
+ use        Torpedoes__storage___axiom
+ use        Torpedoes__counttorps__torpedoestorage
+ use        Torpedoes__counttorps__torp
+ use        Torpedoes__counttorps__count
+ use        Torpedoes__counttorps__first
+ use        Torpedoes__counttorps__last
+ use        Torpedoes__counttorps__L_2__R5b
+ use        Torpedoes__counttorps__L_2__R6b
+ use        Torpedoes__counttorps__L_2
+ use        Torpedoes__counttorps__L_2__i
+ use        Standard__integer___axiom
+ use        Standard__integer___axiom
+ use        Torpedoes__counttorps__count___axiom
+ use        Torpedoes__counttorps__first___axiom
+ use        Torpedoes__counttorps__last___axiom
+ use        Torpedoes__counttorps__L_2__i___axiom
+ use        Torpedoes__counttorps__L_2___axiom
+ use        Torpedoes__torps___axiom
+ use        Torpedoes__storagecapacity___axiom
+ use        Torpedoes__storage___axiom
+ use        Torpedoes__counttorps__torpedoestorage___axiom
+ use        Torpedoes__counttorps__torp___axiom
+ use        Torpedoes__counttorps__L_2__R5b___axiom
+ use        Torpedoes__counttorps__L_2__R6b___axiom
+
+ val torpedoes__counttorps__result "model_projected" "model_trace:2832@result" "name:CountTorps"  : int__ref 
+ 
+ let def #"torpedoes.ads" 39 0 0#"W:diverges:N" "GP_Subp:torpedoes.ads:39" 
+   (__void_param : unit)
+  requires { #"torpedoes.ads" 39 0 0# true }
+  ensures { #"torpedoes.ads" 39 0 0# (#"torpedoes.ads" 41 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Sloc:torpedoes.ads:41:16" "GP_Id:5" "comment:       Post => CountTorps'Result >= 0 and CountTorps'Result <= torpedoeStorage'Length;
+               ^ torpedoes.ads:41:16:VC_POSTCONDITION" "GP_Shape:pragargs__and" ( ( "GP_Pretty_Ada:2868" "GP_Sloc:torpedoes.ads:41:16" (torpedoes__counttorps__result.int__content >= 0) ) /\ ( "GP_Pretty_Ada:2874" "GP_Sloc:torpedoes.ads:41:43" (torpedoes__counttorps__result.int__content <= 6) ) ) )) }
+   =
+  ( () (* Assume dynamic invariants of inputs of the subprogram torpedoes.ads:39 *)
+  ;
+   assume {  (Torpedoes__storage___axiom.dynamic_invariant Torpedoes__counttorps__torpedoestorage.torpedoestorage True False True True) };
+   assume {  (Torpedoes__torps___axiom.dynamic_invariant Torpedoes__counttorps__torp.torp True False True True) };
+   assume {  true };
+  () (* Declarations introduced by the compiler at the beginning of the subprogram torpedoes.ads:39 *)
+  ;
+  () (* Check for RTE in the Pre of the subprogram torpedoes.ads:39 *)
+  ;
+   abstract ensures {true}(let _ = True in (
+   ()))
+   end ;
+  () (* Assume Pre of the subprogram torpedoes.ads:39 *)
+  ;
+   assume {  true };
+   try
+   ( (#"torpedoes.adb" 34 0 0# ( #"torpedoes.adb" 34 0 0# Torpedoes__counttorps__count.count.int__content <- ( 0 );
+   #"torpedoes.adb" 34 0 0# assume { #"torpedoes.adb" 34 0 0# (Standard__integer___axiom.dynamic_invariant Torpedoes__counttorps__count.count.int__content True False True True) } ));
+   (#"torpedoes.adb" 35 0 0# ( #"torpedoes.adb" 35 0 0# Torpedoes__counttorps__first.first.int__content <- ( 0 );
+   #"torpedoes.adb" 35 0 0# assume { #"torpedoes.adb" 35 0 0# (Torpedoes__storagecapacity___axiom.dynamic_invariant Torpedoes__counttorps__first.first.int__content True False True True) } ));
+   (#"torpedoes.adb" 36 0 0# ( #"torpedoes.adb" 36 0 0# Torpedoes__counttorps__last.last.int__content <- ( 5 );
+   #"torpedoes.adb" 36 0 0# assume { #"torpedoes.adb" 36 0 0# (Torpedoes__storagecapacity___axiom.dynamic_invariant Torpedoes__counttorps__last.last.int__content True False True True) } ));
+   (#"torpedoes.adb" 38 0 0# ());
+   ( "GP_Sloc:torpedoes.adb:38:16" (#"torpedoes.adb" 38 0 0# ()) );
+   ( "GP_Sloc:torpedoes.adb:38:23" (#"torpedoes.adb" 38 0 0# ()) );
+   ( "GP_Sloc:torpedoes.adb:38:16" (#"torpedoes.adb" 38 0 0# (#"torpedoes.adb" 38 0 0# ( (let torpedoes__counttorps__L_2__R5b__assume = Torpedoes__counttorps__first.first.int__content in (
+    #"torpedoes.adb" 38 0 0# assume { #"torpedoes.adb" 38 0 0# (torpedoes__counttorps__L_2__R5b__assume = Torpedoes__counttorps__L_2__R5b.r5b) }))
+   ;
+   #"torpedoes.adb" 38 0 0# assume { #"torpedoes.adb" 38 0 0# (Torpedoes__storagecapacity___axiom.dynamic_invariant Torpedoes__counttorps__L_2__R5b.r5b True False True True) } ))) );
+   ( "GP_Sloc:torpedoes.adb:38:23" (#"torpedoes.adb" 38 0 0# (#"torpedoes.adb" 38 0 0# ( (let torpedoes__counttorps__L_2__R6b__assume = Torpedoes__counttorps__last.last.int__content in (
+    #"torpedoes.adb" 38 0 0# assume { #"torpedoes.adb" 38 0 0# (torpedoes__counttorps__L_2__R6b__assume = Torpedoes__counttorps__L_2__R6b.r6b) }))
+   ;
+   #"torpedoes.adb" 38 0 0# assume { #"torpedoes.adb" 38 0 0# (Torpedoes__storagecapacity___axiom.dynamic_invariant Torpedoes__counttorps__L_2__R6b.r6b True False True True) } ))) );
+   ( "GP_Sloc:torpedoes.adb:38:28" (#"torpedoes.adb" 38 0 0# (let temp___223 = Torpedoes__counttorps__L_2__R5b.r5b in (
+   (let temp___224 = Torpedoes__counttorps__L_2__R6b.r6b in (
+    ( () (* Translation of an Ada loop from torpedoes.adb:38 *)
+    ;
+    #"torpedoes.adb" 38 0 0# try
+     ( #"torpedoes.adb" 38 0 0# abstract ensures {true}(let _ = Torpedoes__counttorps__count.count.int__content in (
+      ()))
+      end ;
+     (let temp___225 = #"torpedoes.adb" 38 0 0# (any int
+     ensures {#"torpedoes.adb" 38 0 0# (result = Torpedoes__counttorps__count.count.int__content)} 
+     ) in (
+      ( () (* Unrolling of the loop statements of loop torpedoes.adb:38 *)
+      ;
+      #"torpedoes.adb" 38 0 0# Torpedoes__counttorps__L_2__i.i.int__content <- ( 0 );
+      (if ((Boolean.andb((temp___223 <= Torpedoes__counttorps__L_2__i.i.int__content)) ((Torpedoes__counttorps__L_2__i.i.int__content <= temp___224)))) then (
+       ( "GP_Sloc:torpedoes.adb:39:10" (#"torpedoes.adb" 39 0 0# (if (((Torpedoes__torps__rep.to_rep((Array__Int__Torpedoes__torps.get(Torpedoes__counttorps__torpedoestorage.torpedoestorage) (Torpedoes__counttorps__L_2__i.i.int__content)))) = Torpedoes__counttorps__torp.torp)) then (
+        ( ( "GP_Sloc:torpedoes.adb:40:13" (#"torpedoes.adb" 40 0 0# ()) );
+        ( "GP_Sloc:torpedoes.adb:40:22" (#"torpedoes.adb" 40 0 0# ()) );
+        ( "GP_Sloc:torpedoes.adb:40:19" (#"torpedoes.adb" 40 0 0# #"torpedoes.adb" 40 0 0# Torpedoes__counttorps__count.count.int__content <- ( (#"torpedoes.adb" 40 0 0# ( "model_vc" "keep_on_simp" "GP_Sloc:torpedoes.adb:40:28" "GP_Reason:VC_OVERFLOW_CHECK" "GP_Id:4" "comment:            count := count + 1;
+                           ^ torpedoes.adb:40:28:VC_OVERFLOW_CHECK" "GP_Shape:L_2_while__if__count_assign__add" (Standard__integer.range_check_((Torpedoes__counttorps__count.count.int__content + 1))) )) )) ) )) else (
+        ( ( "GP_Sloc:torpedoes.adb:42:13" (#"torpedoes.adb" 42 0 0# ()) );
+        ( "GP_Sloc:torpedoes.adb:42:22" (#"torpedoes.adb" 42 0 0# ()) );
+        ( "GP_Sloc:torpedoes.adb:42:19" (#"torpedoes.adb" 42 0 0# #"torpedoes.adb" 42 0 0# Torpedoes__counttorps__count.count.int__content <- ( Torpedoes__counttorps__count.count.int__content )) ) )))) )));
+       Torpedoes__counttorps__L_2__i.i.int__content <- ( 1 );
+      (if ((Boolean.andb((temp___223 <= Torpedoes__counttorps__L_2__i.i.int__content)) ((Torpedoes__counttorps__L_2__i.i.int__content <= temp___224)))) then (
+       ( "GP_Sloc:torpedoes.adb:39:10" (#"torpedoes.adb" 39 0 0# (if (((Torpedoes__torps__rep.to_rep((Array__Int__Torpedoes__torps.get(Torpedoes__counttorps__torpedoestorage.torpedoestorage) (Torpedoes__counttorps__L_2__i.i.int__content)))) = Torpedoes__counttorps__torp.torp)) then (
+        ( ( "GP_Sloc:torpedoes.adb:40:13" (#"torpedoes.adb" 40 0 0# ()) );
+        ( "GP_Sloc:torpedoes.adb:40:22" (#"torpedoes.adb" 40 0 0# ()) );
+        ( "GP_Sloc:torpedoes.adb:40:19" (#"torpedoes.adb" 40 0 0# #"torpedoes.adb" 40 0 0# Torpedoes__counttorps__count.count.int__content <- ( (#"torpedoes.adb" 40 0 0# ( "model_vc" "keep_on_simp" "GP_Sloc:torpedoes.adb:40:28" "GP_Reason:VC_OVERFLOW_CHECK" "GP_Id:4" "comment:            count := count + 1;
+                           ^ torpedoes.adb:40:28:VC_OVERFLOW_CHECK" "GP_Shape:L_2_while__if__count_assign__add" (Standard__integer.range_check_((Torpedoes__counttorps__count.count.int__content + 1))) )) )) ) )) else (
+        ( ( "GP_Sloc:torpedoes.adb:42:13" (#"torpedoes.adb" 42 0 0# ()) );
+        ( "GP_Sloc:torpedoes.adb:42:22" (#"torpedoes.adb" 42 0 0# ()) );
+        ( "GP_Sloc:torpedoes.adb:42:19" (#"torpedoes.adb" 42 0 0# #"torpedoes.adb" 42 0 0# Torpedoes__counttorps__count.count.int__content <- ( Torpedoes__counttorps__count.count.int__content )) ) )))) )));
+       Torpedoes__counttorps__L_2__i.i.int__content <- ( 2 );
+      (if ((Boolean.andb((temp___223 <= Torpedoes__counttorps__L_2__i.i.int__content)) ((Torpedoes__counttorps__L_2__i.i.int__content <= temp___224)))) then (
+       ( "GP_Sloc:torpedoes.adb:39:10" (#"torpedoes.adb" 39 0 0# (if (((Torpedoes__torps__rep.to_rep((Array__Int__Torpedoes__torps.get(Torpedoes__counttorps__torpedoestorage.torpedoestorage) (Torpedoes__counttorps__L_2__i.i.int__content)))) = Torpedoes__counttorps__torp.torp)) then (
+        ( ( "GP_Sloc:torpedoes.adb:40:13" (#"torpedoes.adb" 40 0 0# ()) );
+        ( "GP_Sloc:torpedoes.adb:40:22" (#"torpedoes.adb" 40 0 0# ()) );
+        ( "GP_Sloc:torpedoes.adb:40:19" (#"torpedoes.adb" 40 0 0# #"torpedoes.adb" 40 0 0# Torpedoes__counttorps__count.count.int__content <- ( (#"torpedoes.adb" 40 0 0# ( "model_vc" "keep_on_simp" "GP_Sloc:torpedoes.adb:40:28" "GP_Reason:VC_OVERFLOW_CHECK" "GP_Id:4" "comment:            count := count + 1;
+                           ^ torpedoes.adb:40:28:VC_OVERFLOW_CHECK" "GP_Shape:L_2_while__if__count_assign__add" (Standard__integer.range_check_((Torpedoes__counttorps__count.count.int__content + 1))) )) )) ) )) else (
+        ( ( "GP_Sloc:torpedoes.adb:42:13" (#"torpedoes.adb" 42 0 0# ()) );
+        ( "GP_Sloc:torpedoes.adb:42:22" (#"torpedoes.adb" 42 0 0# ()) );
+        ( "GP_Sloc:torpedoes.adb:42:19" (#"torpedoes.adb" 42 0 0# #"torpedoes.adb" 42 0 0# Torpedoes__counttorps__count.count.int__content <- ( Torpedoes__counttorps__count.count.int__content )) ) )))) )));
+       Torpedoes__counttorps__L_2__i.i.int__content <- ( 3 );
+      (if ((Boolean.andb((temp___223 <= Torpedoes__counttorps__L_2__i.i.int__content)) ((Torpedoes__counttorps__L_2__i.i.int__content <= temp___224)))) then (
+       ( "GP_Sloc:torpedoes.adb:39:10" (#"torpedoes.adb" 39 0 0# (if (((Torpedoes__torps__rep.to_rep((Array__Int__Torpedoes__torps.get(Torpedoes__counttorps__torpedoestorage.torpedoestorage) (Torpedoes__counttorps__L_2__i.i.int__content)))) = Torpedoes__counttorps__torp.torp)) then (
+        ( ( "GP_Sloc:torpedoes.adb:40:13" (#"torpedoes.adb" 40 0 0# ()) );
+        ( "GP_Sloc:torpedoes.adb:40:22" (#"torpedoes.adb" 40 0 0# ()) );
+        ( "GP_Sloc:torpedoes.adb:40:19" (#"torpedoes.adb" 40 0 0# #"torpedoes.adb" 40 0 0# Torpedoes__counttorps__count.count.int__content <- ( (#"torpedoes.adb" 40 0 0# ( "model_vc" "keep_on_simp" "GP_Sloc:torpedoes.adb:40:28" "GP_Reason:VC_OVERFLOW_CHECK" "GP_Id:4" "comment:            count := count + 1;
+                           ^ torpedoes.adb:40:28:VC_OVERFLOW_CHECK" "GP_Shape:L_2_while__if__count_assign__add" (Standard__integer.range_check_((Torpedoes__counttorps__count.count.int__content + 1))) )) )) ) )) else (
+        ( ( "GP_Sloc:torpedoes.adb:42:13" (#"torpedoes.adb" 42 0 0# ()) );
+        ( "GP_Sloc:torpedoes.adb:42:22" (#"torpedoes.adb" 42 0 0# ()) );
+        ( "GP_Sloc:torpedoes.adb:42:19" (#"torpedoes.adb" 42 0 0# #"torpedoes.adb" 42 0 0# Torpedoes__counttorps__count.count.int__content <- ( Torpedoes__counttorps__count.count.int__content )) ) )))) )));
+       Torpedoes__counttorps__L_2__i.i.int__content <- ( 4 );
+      (if ((Boolean.andb((temp___223 <= Torpedoes__counttorps__L_2__i.i.int__content)) ((Torpedoes__counttorps__L_2__i.i.int__content <= temp___224)))) then (
+       ( "GP_Sloc:torpedoes.adb:39:10" (#"torpedoes.adb" 39 0 0# (if (((Torpedoes__torps__rep.to_rep((Array__Int__Torpedoes__torps.get(Torpedoes__counttorps__torpedoestorage.torpedoestorage) (Torpedoes__counttorps__L_2__i.i.int__content)))) = Torpedoes__counttorps__torp.torp)) then (
+        ( ( "GP_Sloc:torpedoes.adb:40:13" (#"torpedoes.adb" 40 0 0# ()) );
+        ( "GP_Sloc:torpedoes.adb:40:22" (#"torpedoes.adb" 40 0 0# ()) );
+        ( "GP_Sloc:torpedoes.adb:40:19" (#"torpedoes.adb" 40 0 0# #"torpedoes.adb" 40 0 0# Torpedoes__counttorps__count.count.int__content <- ( (#"torpedoes.adb" 40 0 0# ( "model_vc" "keep_on_simp" "GP_Sloc:torpedoes.adb:40:28" "GP_Reason:VC_OVERFLOW_CHECK" "GP_Id:4" "comment:            count := count + 1;
+                           ^ torpedoes.adb:40:28:VC_OVERFLOW_CHECK" "GP_Shape:L_2_while__if__count_assign__add" (Standard__integer.range_check_((Torpedoes__counttorps__count.count.int__content + 1))) )) )) ) )) else (
+        ( ( "GP_Sloc:torpedoes.adb:42:13" (#"torpedoes.adb" 42 0 0# ()) );
+        ( "GP_Sloc:torpedoes.adb:42:22" (#"torpedoes.adb" 42 0 0# ()) );
+        ( "GP_Sloc:torpedoes.adb:42:19" (#"torpedoes.adb" 42 0 0# #"torpedoes.adb" 42 0 0# Torpedoes__counttorps__count.count.int__content <- ( Torpedoes__counttorps__count.count.int__content )) ) )))) )));
+       Torpedoes__counttorps__L_2__i.i.int__content <- ( 5 );
+      (if ((Boolean.andb((temp___223 <= Torpedoes__counttorps__L_2__i.i.int__content)) ((Torpedoes__counttorps__L_2__i.i.int__content <= temp___224)))) then (
+       ( "GP_Sloc:torpedoes.adb:39:10" (#"torpedoes.adb" 39 0 0# (if (((Torpedoes__torps__rep.to_rep((Array__Int__Torpedoes__torps.get(Torpedoes__counttorps__torpedoestorage.torpedoestorage) (Torpedoes__counttorps__L_2__i.i.int__content)))) = Torpedoes__counttorps__torp.torp)) then (
+        ( ( "GP_Sloc:torpedoes.adb:40:13" (#"torpedoes.adb" 40 0 0# ()) );
+        ( "GP_Sloc:torpedoes.adb:40:22" (#"torpedoes.adb" 40 0 0# ()) );
+        ( "GP_Sloc:torpedoes.adb:40:19" (#"torpedoes.adb" 40 0 0# #"torpedoes.adb" 40 0 0# Torpedoes__counttorps__count.count.int__content <- ( (#"torpedoes.adb" 40 0 0# ( "model_vc" "keep_on_simp" "GP_Sloc:torpedoes.adb:40:28" "GP_Reason:VC_OVERFLOW_CHECK" "GP_Id:4" "comment:            count := count + 1;
+                           ^ torpedoes.adb:40:28:VC_OVERFLOW_CHECK" "GP_Shape:L_2_while__if__count_assign__add" (Standard__integer.range_check_((Torpedoes__counttorps__count.count.int__content + 1))) )) )) ) )) else (
+        ( ( "GP_Sloc:torpedoes.adb:42:13" (#"torpedoes.adb" 42 0 0# ()) );
+        ( "GP_Sloc:torpedoes.adb:42:22" (#"torpedoes.adb" 42 0 0# ()) );
+        ( "GP_Sloc:torpedoes.adb:42:19" (#"torpedoes.adb" 42 0 0# #"torpedoes.adb" 42 0 0# Torpedoes__counttorps__count.count.int__content <- ( Torpedoes__counttorps__count.count.int__content )) ) )))) ))) )))
+      )
+    with
+     Torpedoes__counttorps__L_2.L_2 -> ()
+    end )))
+   ))
+   ) );
+   ( "GP_Sloc:torpedoes.adb:45:14" (#"torpedoes.adb" 45 0 0# ()) );
+   ( "GP_Sloc:torpedoes.adb:45:7" (#"torpedoes.adb" 45 0 0# ( #"torpedoes.adb" 45 0 0# torpedoes__counttorps__result.int__content <- ( Torpedoes__counttorps__count.count.int__content );
+   #"torpedoes.adb" 45 0 0# raise Return__exc )) );
+    raise Return__exc )
+  with
+   Return__exc -> ()
+  end;
+   abstract ensures {true}(let _ = (Boolean.andb((torpedoes__counttorps__result.int__content >= 0)) ((torpedoes__counttorps__result.int__content <= 6))) in (
+   ()))
+   end ;
+  torpedoes__counttorps__result.int__content )
+end
+
+(* Module for checking contracts and absence of run-time errors in subprogram "torpexists" defined at torpedoes.ads:48, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+module Torpedoes__torpexists__subprogram_def
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        "_gnatprove_standard".Boolean
+ use        Torpedoes__torps
+ use        Torpedoes__torps___axiom
+ use        Torpedoes__torps__rep
+ use        Array__Int__Torpedoes__torps
+ use        Torpedoes__storage___axiom
+ use        Torpedoes__torpexists__torpedoestorage
+ use        Torpedoes__torpexists__torp
+ use        Torpedoes__torps___axiom
+ use        Torpedoes__storage___axiom
+ use        Torpedoes__torpexists__torpedoestorage___axiom
+ use        Torpedoes__torpexists__torp___axiom
+
+ val torpedoes__torpexists__result "model_projected" "model_trace:2877@result" "name:TorpExists"  : bool__ref 
+ 
+ let def #"torpedoes.ads" 48 0 0#"W:diverges:N" "GP_Subp:torpedoes.ads:48" 
+   (__void_param : unit)
+  requires { #"torpedoes.ads" 48 0 0# true }
+  ensures { #"torpedoes.ads" 48 0 0# true }
+   =
+  ( () (* Assume dynamic invariants of inputs of the subprogram torpedoes.ads:48 *)
+  ;
+  #"torpedoes.ads" 48 0 0# assume { #"torpedoes.ads" 48 0 0# (Torpedoes__storage___axiom.dynamic_invariant Torpedoes__torpexists__torpedoestorage.torpedoestorage True False True True) };
+  #"torpedoes.ads" 48 0 0# assume { #"torpedoes.ads" 48 0 0# (Torpedoes__torps___axiom.dynamic_invariant Torpedoes__torpexists__torp.torp True False True True) };
+  #"torpedoes.ads" 48 0 0# assume { #"torpedoes.ads" 48 0 0# true };
+  () (* Declarations introduced by the compiler at the beginning of the subprogram torpedoes.ads:48 *)
+  ;
+  () (* Check for RTE in the Pre of the subprogram torpedoes.ads:48 *)
+  ;
+  #"torpedoes.ads" 48 0 0# abstract ensures {true}(let _ = True in (
+   ()))
+   end ;
+  () (* Assume Pre of the subprogram torpedoes.ads:48 *)
+  ;
+  #"torpedoes.ads" 48 0 0# assume { #"torpedoes.ads" 48 0 0# true };
+  #"torpedoes.ads" 48 0 0# try
+   ( ( "GP_Sloc:torpedoes.ads:49:7" (#"torpedoes.ads" 49 0 0# ( #"torpedoes.ads" 49 0 0# torpedoes__torpexists__result.bool__content <- ( ( (let i = #"torpedoes.ads" 49 0 0# (any int
+   ) in (
+    (if ((Boolean.andb((0 <= i)) ((i <= 5)))) then (
+     #"torpedoes.ads" 49 0 0# abstract ensures {true}(let _ = ((Torpedoes__torps__rep.to_rep((Array__Int__Torpedoes__torps.get(Torpedoes__torpexists__torpedoestorage.torpedoestorage) (i)))) = Torpedoes__torpexists__torp.torp) in (
+      ()))
+      end ))))
+   ;
+   #"torpedoes.ads" 49 0 0# (any bool
+   requires {#"torpedoes.ads" 49 0 0# true} 
+   ensures {#"torpedoes.ads" 49 0 0# ( (result = True) <-> (exists i  : int.
+    ( ( (0 <= i) /\ (i <= 5) ) /\ ((Torpedoes__torps__rep.to_rep (Array__Int__Torpedoes__torps.get Torpedoes__torpexists__torpedoestorage.torpedoestorage i)) = Torpedoes__torpexists__torp.torp) )) )} 
+   ) ) );
+   #"torpedoes.ads" 49 0 0# raise Return__exc )) );
+    raise Return__exc )
+  with
+   Return__exc -> ()
+  end;
+   abstract ensures {true}(let _ = True in (
+   ()))
+   end ;
+  torpedoes__torpexists__result.bool__content )
+end
+
+(* Module for checking contracts and absence of run-time errors in subprogram "torplocation" defined at torpedoes.ads:51, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+module Torpedoes__torplocation__subprogram_def
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        "_gnatprove_standard".Boolean
+ use        Torpedoes__torpexists
+ use        Torpedoes__torpexists___axiom
+ use        Torpedoes__torps
+ use        Torpedoes__torps___axiom
+ use        Torpedoes__torps__rep
+ use        Torpedoes__storagecapacity
+ use        Torpedoes__storagecapacity___axiom
+ use        Array__Int__Torpedoes__torps
+ use        Torpedoes__storage___axiom
+ use        Torpedoes__torplocation__torpedoestorage
+ use        Torpedoes__torplocation__torp
+ use        Torpedoes__torplocation__position
+ use        Torpedoes__torplocation__L_3
+ use        Torpedoes__torplocation__position___axiom
+ use        Torpedoes__torplocation__L_3___axiom
+ use        Torpedoes__torps___axiom
+ use        Torpedoes__storagecapacity___axiom
+ use        Torpedoes__storage___axiom
+ use        Torpedoes__torpexists___axiom
+ use        Torpedoes__torplocation__torpedoestorage___axiom
+ use        Torpedoes__torplocation__torp___axiom
+
+ val torpedoes__torplocation__result "model_projected" "model_trace:2921@result" "name:TorpLocation"  : int__ref 
+ 
+ let def #"torpedoes.ads" 51 0 0#"W:diverges:N" "GP_Subp:torpedoes.ads:51" 
+   (__void_param : unit)
+  requires { #"torpedoes.ads" 51 0 0# true }
+  ensures { #"torpedoes.ads" 51 0 0# (#"torpedoes.ads" 53 0 0# ( "model_vc_post" "keep_on_simp" "GP_Reason:VC_POSTCONDITION" "GP_Sloc:torpedoes.ads:53:14" "GP_Id:9" "comment:     Post => torpedoeStorage(torpLocation'Result) = torp;
+             ^ torpedoes.ads:53:14:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" ( "GP_Pretty_Ada:3861" "GP_Sloc:torpedoes.ads:53:14" ((Torpedoes__torps__rep.to_rep (Array__Int__Torpedoes__torps.get Torpedoes__torplocation__torpedoestorage.torpedoestorage torpedoes__torplocation__result.int__content)) = Torpedoes__torplocation__torp.torp) ) )) }
+   =
+  ( () (* Assume dynamic invariants of inputs of the subprogram torpedoes.ads:51 *)
+  ;
+   assume {  (Torpedoes__storage___axiom.dynamic_invariant Torpedoes__torplocation__torpedoestorage.torpedoestorage True False True True) };
+   assume {  (Torpedoes__torps___axiom.dynamic_invariant Torpedoes__torplocation__torp.torp True False True True) };
+   assume {  true };
+  () (* Declarations introduced by the compiler at the beginning of the subprogram torpedoes.ads:51 *)
+  ;
+  () (* Check for RTE in the Pre of the subprogram torpedoes.ads:51 *)
+  ;
+   abstract ensures {true}(let _ = (Torpedoes__torpexists___axiom.torpexists(Torpedoes__torplocation__torpedoestorage.torpedoestorage) (Torpedoes__torplocation__torp.torp)) in (
+   ()))
+   end ;
+  () (* Assume Pre of the subprogram torpedoes.ads:51 *)
+  ;
+   assume {  ((epsilon temp___result_230 : bool.
+   ( (temp___result_230 = (Torpedoes__torpexists.torpexists Torpedoes__torplocation__torpedoestorage.torpedoestorage Torpedoes__torplocation__torp.torp)) /\ (Torpedoes__torpexists.torpexists__function_guard temp___result_230 Torpedoes__torplocation__torpedoestorage.torpedoestorage Torpedoes__torplocation__torp.torp) )) = True) };
+   try
+   ( (#"torpedoes.adb" 57 0 0# ( #"torpedoes.adb" 57 0 0# Torpedoes__torplocation__position.position.int__content <- ( 0 );
+   #"torpedoes.adb" 57 0 0# assume { #"torpedoes.adb" 57 0 0# (Torpedoes__storagecapacity___axiom.dynamic_invariant Torpedoes__torplocation__position.position.int__content True False True True) } ));
+   (#"torpedoes.adb" 59 0 0# ());
+   ( "GP_Sloc:torpedoes.adb:59:46" (#"torpedoes.adb" 59 0 0# ( () (* Translation of an Ada loop from torpedoes.adb:59 *)
+   ;
+   (if ((Torpedoes__torplocation__position.position.int__content < 5)) then (
+    #"torpedoes.adb" 59 0 0# try
+     ( #"torpedoes.adb" 59 0 0# abstract ensures {true}(let _ = Torpedoes__torplocation__position.position.int__content in (
+      ()))
+      end ;
+     (let temp___228 = #"torpedoes.adb" 59 0 0# (any int
+     ensures {#"torpedoes.adb" 59 0 0# (result = Torpedoes__torplocation__position.position.int__content)} 
+     ) in (
+      ( () (* First unroling of the loop statements appearing before the loop invariant of loop torpedoes.adb:59 *)
+      ;
+      ( "GP_Sloc:torpedoes.adb:60:30" (#"torpedoes.adb" 60 0 0# ()) );
+      ( "GP_Sloc:torpedoes.adb:60:10" (#"torpedoes.adb" 60 0 0# (if (((Torpedoes__torps__rep.to_rep((Array__Int__Torpedoes__torps.get(Torpedoes__torplocation__torpedoestorage.torpedoestorage) (Torpedoes__torplocation__position.position.int__content)))) = Torpedoes__torplocation__torp.torp)) then (
+       ( ( "GP_Sloc:torpedoes.adb:61:20" (#"torpedoes.adb" 61 0 0# ()) );
+       ( "GP_Sloc:torpedoes.adb:61:13" (#"torpedoes.adb" 61 0 0# ( #"torpedoes.adb" 61 0 0# torpedoes__torplocation__result.int__content <- ( Torpedoes__torplocation__position.position.int__content );
+       #"torpedoes.adb" 61 0 0# raise Return__exc )) ) )) else (
+       ()))) );
+      () (* While loop translating the Ada loop from torpedoes.adb:59 *)
+      ;
+       while True do
+       invariant { 
+        (#"torpedoes.adb" 64 0 0# ( "model_vc" "keep_on_simp" "GP_Reason:VC_LOOP_INVARIANT" "GP_Sloc:torpedoes.adb:64:13" "GP_Id:8" "comment:           (for all I in torpedoeStorage'First..position => torpedoeStorage(I) /= torp);
+            ^ torpedoes.adb:64:13:VC_LOOP_INVARIANT" "GP_Shape:L_3_while__pragargs__forall" (forall i #"torpedoes.adb" 64 0 0#  "model" "name:I" "model_trace:2571"  : int.
+         ( ( (0 <= i) /\ (i <= Torpedoes__torplocation__position.position.int__content) ) -> ( "GP_Pretty_Ada:2588" "GP_Sloc:torpedoes.adb:64:61" ((Torpedoes__torps__rep.to_rep (Array__Int__Torpedoes__torps.get Torpedoes__torplocation__torpedoestorage.torpedoestorage i)) <> Torpedoes__torplocation__torp.torp) ) )) ))
+        }
+       ( () (* Assume implicit invariants from the loop torpedoes.adb:59 *)
+       ;
+        assume {  ( ( true /\ (Torpedoes__storagecapacity___axiom.dynamic_invariant Torpedoes__torplocation__position.position.int__content False True True True) ) /\ true ) };
+       () (* Check for absence of RTE in the invariant of loop torpedoes.adb:59 *)
+       ;
+        abstract ensures {true}(let _ = ( (let i =  (any int
+       ) in (
+        (if ((Boolean.andb((0 <= i)) ((i <= Torpedoes__torplocation__position.position.int__content)))) then (
+          abstract ensures {true}(let _ = ((Torpedoes__torps__rep.to_rep((Array__Int__Torpedoes__torps.get(Torpedoes__torplocation__torpedoestorage.torpedoestorage) ((  assert {  (#"torpedoes.adb" 64 0 0# ( "model_vc" "keep_on_simp" "GP_Reason:VC_INDEX_CHECK" "GP_Sloc:torpedoes.adb:64:77" "GP_Id:7" "comment:           (for all I in torpedoeStorage'First..position => torpedoeStorage(I) /= torp);
+                                                                            ^ torpedoes.adb:64:77:VC_INDEX_CHECK" "GP_Shape:L_3_while__pragargs__forall__cmp__ixdcomp" ( (Torpedoes__storagecapacity.first <= i) /\ (i <= Torpedoes__storagecapacity.last) ) )) };
+         i ))))) <> Torpedoes__torplocation__torp.torp) in (
+          ()))
+          end ))))
+       ;
+        (any bool
+       requires { true} 
+       ensures { ( (result = True) <-> (forall i   "model" "name:I" "model_trace:2571"  : int.
+        ( ( (0 <= i) /\ (i <= Torpedoes__torplocation__position.position.int__content) ) -> ((Torpedoes__torps__rep.to_rep (Array__Int__Torpedoes__torps.get Torpedoes__torplocation__torpedoestorage.torpedoestorage i)) <> Torpedoes__torplocation__torp.torp) )) )} 
+       ) ) in (
+        ()))
+        end ;
+       () (* Loop statements appearing after the loop invariant of loop torpedoes.adb:59 *)
+       ;
+       ( "GP_Sloc:torpedoes.adb:65:10" (#"torpedoes.adb" 65 0 0# ()) );
+       ( "GP_Sloc:torpedoes.adb:65:22" (#"torpedoes.adb" 65 0 0# ()) );
+       ( "GP_Sloc:torpedoes.adb:65:19" (#"torpedoes.adb" 65 0 0# #"torpedoes.adb" 65 0 0# Torpedoes__torplocation__position.position.int__content <- ( (#"torpedoes.adb" 65 0 0# ( "model_vc" "keep_on_simp" "GP_Reason:VC_RANGE_CHECK" "GP_Sloc:torpedoes.adb:65:31" "GP_Id:6" "comment:         position := position + 1;
+                              ^ torpedoes.adb:65:31:VC_RANGE_CHECK" "GP_Shape:L_3_while__position_assign__add" (Torpedoes__storagecapacity.range_check_((Torpedoes__torplocation__position.position.int__content + 1))) )) )) );
+       () (* Check for the exit condition and loop statements appearing before the loop invariant of loop torpedoes.adb:59 *)
+       ;
+       (if (not ( (Torpedoes__torplocation__position.position.int__content < 5) )) then (
+         raise Torpedoes__torplocation__L_3.L_3));
+       ( "GP_Sloc:torpedoes.adb:60:30" (#"torpedoes.adb" 60 0 0# ()) );
+       ( "GP_Sloc:torpedoes.adb:60:10" (#"torpedoes.adb" 60 0 0# (if (((Torpedoes__torps__rep.to_rep((Array__Int__Torpedoes__torps.get(Torpedoes__torplocation__torpedoestorage.torpedoestorage) (Torpedoes__torplocation__position.position.int__content)))) = Torpedoes__torplocation__torp.torp)) then (
+        ( ( "GP_Sloc:torpedoes.adb:61:20" (#"torpedoes.adb" 61 0 0# ()) );
+        ( "GP_Sloc:torpedoes.adb:61:13" (#"torpedoes.adb" 61 0 0# ( #"torpedoes.adb" 61 0 0# torpedoes__torplocation__result.int__content <- ( Torpedoes__torplocation__position.position.int__content );
+        #"torpedoes.adb" 61 0 0# raise Return__exc )) ) )) else (
+        ()))) ) )
+      done )))
+      )
+    with
+     Torpedoes__torplocation__L_3.L_3 -> ()
+    end)) )) );
+   ( "GP_Sloc:torpedoes.adb:67:14" (#"torpedoes.adb" 67 0 0# ()) );
+   ( "GP_Sloc:torpedoes.adb:67:7" (#"torpedoes.adb" 67 0 0# ( #"torpedoes.adb" 67 0 0# torpedoes__torplocation__result.int__content <- ( Torpedoes__torplocation__position.position.int__content );
+   #"torpedoes.adb" 67 0 0# raise Return__exc )) );
+    raise Return__exc )
+  with
+   Return__exc -> ()
+  end;
+   abstract ensures {true}(let _ = ((Torpedoes__torps__rep.to_rep((Array__Int__Torpedoes__torps.get(Torpedoes__torplocation__torpedoestorage.torpedoestorage) (torpedoes__torplocation__result.int__content)))) = Torpedoes__torplocation__torp.torp) in (
+   ()))
+   end ;
+  torpedoes__torplocation__result.int__content )
+end
